@@ -1092,9 +1092,20 @@ throws Exception
 		    	          maximum = rs.getString("MAXIMUM");
 		    	          minimum = rs.getString("MINIMUM");
 		    	          String niKey = bdni.get(unit+"_ranges");
-		    	          niBuffer.append(maximum+Constants.AUDELIMITER);	
-		    	          niBuffer.append(minimum+Constants.AUDELIMITER);
+		    	          niBuffer.append(maximum.replace("-", "minus").replace("+", "plus" )+Constants.AUDELIMITER);	
+		    	          niBuffer.append(minimum.replace("-", "minus").replace("+", "plus" )+Constants.AUDELIMITER);
+		    	          
+		    	          /*
+		    	          //to test if we need to add/minus a small value at 11/14/2016 by hmo
+		    	          Double doubleMaximum = Double.parseDouble(maximum);
+		    	          doubleMaximum = doubleMaximum+doubleMaximum/1000.0;
+		    	          Double doubleMinimum = Double.parseDouble(minimum);
+		    	          doubleMinimum = doubleMinimum - doubleMinimum/1000.0;
+		    	          String ranges = doubleMinimum+" "+doubleMaximum;
+		    	          */
+		    	          
 		    	          String ranges = minimum+" "+maximum;
+		    	          
 		    	          if(niKey!=null)
 		    	          {
 		    	       			String oldRanges = rec.getString(niKey);

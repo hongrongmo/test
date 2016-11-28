@@ -23,7 +23,6 @@ import java.lang.Process;
 import java.util.regex.*;
 
 import org.ei.util.GUID;
-
 import org.ei.common.*;
 
 public class INSCorrection
@@ -48,6 +47,7 @@ public class INSCorrection
     static String tempTable="ins_correction_temp";
     static String lookupTable="deleted_lookupIndex";
     static String backupTable="ins_temp_backup";
+    static String numericalTable="ins_master_numerical_temp";
     static String sqlldrFileName="InspecSqlLoaderFile.sh";
 
     String [] ipccode = null;
@@ -59,7 +59,7 @@ public class INSCorrection
         String fileToBeLoaded   = null;
         int updateNumber        = 0;
         String input;
-        String tableToBeTruncated = "ins_correction_temp,deleted_lookupIndex,ins_temp_backup";
+        String tableToBeTruncated = "ins_correction_temp,deleted_lookupIndex,ins_temp_backup,numericalTable";
         int iThisChar; // To read individual chars with System.in.read()
 
         try
@@ -205,7 +205,7 @@ public class INSCorrection
 
             INSCorrection bdc = new INSCorrection();
             con = bdc.getConnection(url,driver,username,password);
-            if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete")||action.equals("lookupindex")))
+            if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete")||action.equals("lookupindex")||action.equalsIgnoreCase("extractnumerical")))
             {
                 /**********delete all data from temp table *************/
 
@@ -330,12 +330,12 @@ public class INSCorrection
                 bdc.outputLookupIndex(bdc.getLookupData("lookupIndex",updateNumber),updateNumber);
                 System.out.println(database+" "+updateNumber+" lookup index is done.");
             }
-            else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete"))
+            else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete")||action.equalsIgnoreCase("extractnumerical"))
             {
 
                 bdc.doFastExtract(updateNumber,database,action);
                 System.out.println(database+" "+updateNumber+" fast extract is done.");
-            }
+            }        
             else
             {
                 System.out.println(database+" "+updateNumber+" correction is done.");
@@ -556,7 +556,7 @@ public class INSCorrection
                 System.out.println("updateQuery= "+	sqlQuery);
                 rs = stmt.executeQuery(sqlQuery);
 
-                c.writeRecs(rs);
+                c.writeRecs(rs,con);
 
                 //System.out.println("DoFastExtract: ResultSet size now is :"+rs.getFetchSize());
 
@@ -570,6 +570,22 @@ public class INSCorrection
                 rs = stmt.executeQuery(sqlQuery);
                 creatDeleteFile(rs,dbname,updateNumber);
                 writer.zipBatch();
+            }
+            else if(action.equalsIgnoreCase("extractnumerical"))
+            {
+                System.out.println("Running the query...");
+                writer.setOperation("add");
+                INSPECCombiner c = new INSPECCombiner(writer);
+                if(updateNumber==0)
+                {
+                	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc  from ins_master_orig where m_id in (select distinct mid from ins_master_numerical where mid is not null)");
+                	
+                }
+                else
+                {
+                	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc  from ins_master_orig where m_id in (select distinct mid from ins_master_numerical where mid is not null and loadnumber='"+updateNumber+"')");
+                }
+                c.writeRecs(rs,con);
             }
             writer.end();
             writer.flush();
@@ -728,6 +744,17 @@ public class INSCorrection
                     Thread.currentThread().sleep(1000);
                 }
                 pstmt = con.prepareCall("{ call update_ins_master_table(?)}");
+                pstmt.setInt(1,updateNumber);
+                pstmt.executeUpdate();
+                
+                if(test)
+                {
+                    System.out.println("begin to execute stored procedure update_ins_master_numerical_table");
+                    System.out.println("press enter to continue");
+                    System.in.read();
+                    Thread.currentThread().sleep(1000);
+                }
+                pstmt = con.prepareCall("{ call update_ins_numerical_table(?)}");
                 pstmt.setInt(1,updateNumber);
                 pstmt.executeUpdate();
             }
@@ -893,6 +920,12 @@ public class INSCorrection
                 {
                     this.backupTable=tableName[i];
                     System.out.println("truncate backup table "+this.backupTable);
+                }
+                
+                if(i==3)
+                {
+                    this.numericalTable=tableName[i];
+                    System.out.println("truncate numerical temp table "+this.numericalTable);
                 }
 
                 stmt.executeUpdate("truncate table "+tableName[i]);

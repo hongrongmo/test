@@ -50,7 +50,7 @@ public class AuthorProfileCorrection
 	        
 		String fileToBeLoaded   = null;
 		String input;
-		String tableToBeTruncated = "au_profile_correction_temp,au_profile_correction_insert,au_profile_correction_delete";
+		String tableToBeTruncated = "au_profile_correction_temp,au_profile_correction_insert,au_profile_correction_delete,author_aff_temp";
 		int iThisChar; // To read individual chars with System.in.read()
 
 		try
@@ -241,8 +241,8 @@ public class AuthorProfileCorrection
 	                AuthorProfile c = new AuthorProfile(updateNumber);
 	                String outFileName = filename.toLowerCase().replace(".xml","").replace(".zip","");
 	                String deleteFile = outFileName+"_Delete_"+updateNumber+".out";
-	                   	   outFileName= outFileName+"au"+updateNumber+".out";
-	                String affOutFileName = outFileName+"_af_"+updateNumber+".out";
+	                   	   outFileName= "au_"+outFileName+"_"+updateNumber+".out";
+	                String affOutFileName = "af_"+outFileName;
 	                FileWriter outFile = new FileWriter(outFileName);
 	                FileWriter affOutFile = new FileWriter(affOutFileName);
 	                
@@ -458,6 +458,10 @@ public class AuthorProfileCorrection
                 pstmt.setString(2,fileName);
                 pstmt.executeUpdate();
 
+                pstmt = con.prepareCall("{ call update_author_aff_temp_table(?,?)}");
+                pstmt.setInt(1,updateNumber);
+                pstmt.setString(2,fileName);
+                pstmt.executeUpdate();
                 
                 endTime = System.currentTimeMillis();
                 System.out.println("time for update_au_profile_temp_table "+(endTime-midTime)/1000.0+" seconds");
@@ -471,11 +475,15 @@ public class AuthorProfileCorrection
                     System.in.read();
                     Thread.currentThread().sleep(1000);
                 }
+                
                 pstmt = con.prepareCall("{ call update_au_profile_master_table(?)}");
-                pstmt.setInt(1,updateNumber);
-              
+                pstmt.setInt(1,updateNumber);              
                 pstmt.executeUpdate();
-                              
+                
+                pstmt = con.prepareCall("{ call update_author_aff_master_table(?)}");
+                pstmt.setInt(1,updateNumber);                
+                pstmt.executeUpdate();
+                
                 endTime = System.currentTimeMillis();
                 System.out.println("time for update_authorprofile_master_table "+(endTime-midTime)/1000.0+" seconds");
                 midTime = endTime;
