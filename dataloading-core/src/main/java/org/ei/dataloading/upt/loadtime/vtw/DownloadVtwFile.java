@@ -172,7 +172,7 @@ public class DownloadVtwFile {
 
 
 			// sleep for 1 millisecond to avoid overloading network, and so decrease percentage of receiving "502" error or other non "200" errors
-			Thread.currentThread().sleep(1000);
+			//Thread.currentThread().sleep(1000);
 			
 			
 			// Generate the request
@@ -191,7 +191,7 @@ public class DownloadVtwFile {
 					}
 					else
 					{
-						Thread.currentThread().sleep(1000);		// sleep for "1 s" before re-try
+						Thread.currentThread().sleep(500);		// sleep for "1/2 ms" before re-try
 						System.out.println("Retry downloading file.....");
 						
 					}
