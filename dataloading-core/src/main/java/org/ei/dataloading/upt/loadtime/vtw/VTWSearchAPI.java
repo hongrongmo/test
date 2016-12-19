@@ -173,13 +173,14 @@ public class VTWSearchAPI {
 									}
 									else
 									{
+										Thread.currentThread().sleep(500);	   //sleep 1/2 ms  before re-try
 										System.out.println("Retry get Metadata.....");
 										
 									}															
 								}	
 								
-								// sleep for 1 millisecond to avoid overloading network, and so decrease percentage of receiving "502" error or other non "200" errors
-								Thread.currentThread().sleep(1000);		
+								// sleep for 1/2 millisecond to avoid overloading network, and so decrease percentage of receiving "502" error or other non "200" errors
+								Thread.currentThread().sleep(500);		
 							}
 							
 						}
