@@ -355,6 +355,9 @@ public class AuthorCombiner {
 				
 				
 				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
+						" and AUTHORID = '35610162600'";*/
+						
+				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
 						" and rownum<2";
 						*/
 				
@@ -1202,9 +1205,10 @@ public class AuthorCombiner {
 		for(String afhistid: affiliation_historyIds_List)
 		{
 			parent_histaffids.append("'"+afhistid+"'");
-			i++;
 			if(i<affiliation_historyIds_List.size()-1)
-				parent_histaffids.append(",");	
+				parent_histaffids.append(",");
+			
+			i++;
 		}
 	
 		try
