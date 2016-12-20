@@ -208,7 +208,6 @@ public class DownloadVtwFile {
 	}
 
 
-
 	public static class MyHttpResponseHandler<T> implements ResponseHandler<String> {
 
 		@Override
