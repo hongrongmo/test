@@ -48,7 +48,7 @@ import io.searchbox.core.SearchResult.Hit;
 
 public class NewDataTesting
 {
-	//public static String URL="jdbc:oracle:thin:@127.0.0.1:5521:EID";
+	
 	//public static String URL="jdbc:oracle:thin:@127.0.0.1:5523:EIA";
 	public static String URL="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	public static String driver="oracle.jdbc.driver.OracleDriver";
