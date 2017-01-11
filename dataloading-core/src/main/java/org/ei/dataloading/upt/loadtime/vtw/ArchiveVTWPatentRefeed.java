@@ -496,7 +496,7 @@ public class ArchiveVTWPatentRefeed {
 
 					if(exitWaitingID >2)
 					{
-						System.out.println("no Messages after " + exitWaitingID + " attempts, exit loop to onctinue rest of process...");
+						System.out.println("no Messages after " + (exitWaitingID+1) + " attempts, exit loop to onctinue rest of process...");
 						break;
 					}
 					exitWaitingID ++;
