@@ -153,6 +153,7 @@ public class archiveEVCafeRefeed {
 	private void receiveMessage(MessageConsumer consumer, boolean acknowledge) throws InterruptedException 
 	{
 		String bucketName = "";
+		int exitWaitingID = 0;
 		
 		ChangeMessageVisibilityRequest msgVisibilityReq;
 		String msgReciptHandle = null;
@@ -300,6 +301,16 @@ public class archiveEVCafeRefeed {
 					// Wait for for few seconds before next run
 					System.out.println("Waiting for visibility timeout...");
 					Thread.sleep(TimeUnit.SECONDS.toMillis(TIME_OUT_SECONDS));
+					
+					// HH 01/11/2017 exit after 2 attempts to get messages if queue is still empty
+
+					if(exitWaitingID >2)
+					{
+						System.out.println("no Messages after " + exitWaitingID + " attempts, exit loop to continue rest of process...");
+						break;
+					}
+					exitWaitingID ++;
+					
 
 				}
 			}
