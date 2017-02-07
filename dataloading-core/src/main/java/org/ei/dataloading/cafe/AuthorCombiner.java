@@ -56,6 +56,7 @@ public class AuthorCombiner {
 	static String action = "new";
 	int updateNumber;
 	static int recsPerEsbulk;
+	private static String esDomain = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";
 	
 	static int ESdirSeq_ID = 1;
 	
@@ -93,7 +94,7 @@ public class AuthorCombiner {
 	
 	public static void main(String args[])
 	{
-		if(args.length >9)
+		if(args.length >10)
 		{
 			if(args[0] !=null)
 			{
@@ -153,6 +154,13 @@ public class AuthorCombiner {
 					recsPerEsbulk = 10;
 				}
 			}
+			
+			if(args[10] !=null)
+			{
+				esDomain = args[10];
+				
+				System.out.println("ES Domain name: " + esDomain);
+			}
 
 		}
 		else
@@ -167,7 +175,7 @@ public class AuthorCombiner {
 			writer.init(ESdirSeq_ID);
 			//s3upload = new AuAfESIndex(doc_type);  for ES index using Jest
 			
-			esIndex = new AusAffESIndex(recsPerEsbulk);
+			esIndex = new AusAffESIndex(recsPerEsbulk, esDomain);
 			
 
 			AuthorCombiner c = new AuthorCombiner();
@@ -347,6 +355,7 @@ public class AuthorCombiner {
 				updateNumber=loadNumber;
 				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
 				
+								
 				// for testing
 				
 				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
@@ -484,6 +493,13 @@ public class AuthorCombiner {
 						rec.put(AuAfCombinedRec.LOAD_NUMBER, Integer.toString(rs.getInt("LOADNUMBER")));
 					}
 
+					//UPDATENUMBER
+					if(rs.getString("UPDATENUMBER") !=null)
+					{
+						rec.put(AuAfCombinedRec.UPDATE_NUMBER, Integer.toString(rs.getInt("UPDATENUMBER")));
+					}
+					
+					
 					//EID
 					if(rs.getString("EID") !=null)
 					{
@@ -867,9 +883,14 @@ public class AuthorCombiner {
 		for(int i=0; i<subjabbrs.length; i++)
 		{
 			single_subjabbr = subjabbrs[i].split(Constants.IDDELIMITER);
-			subjabbrCode.append(single_subjabbr[1]);
-			if(i< subjabbrs.length -1)
-				subjabbrCode.append(Constants.IDDELIMITER);
+			
+			if(single_subjabbr !=null && single_subjabbr.length>1)
+			{
+				subjabbrCode.append(single_subjabbr[1]);
+				if(i< subjabbrs.length -1)
+					subjabbrCode.append(Constants.IDDELIMITER);
+			}
+			
 		}
 			
 		rec.put(AuAfCombinedRec.SUBJECT_CLUSTER, subjabbrCode.toString());

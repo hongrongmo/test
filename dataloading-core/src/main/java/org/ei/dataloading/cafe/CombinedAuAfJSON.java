@@ -121,6 +121,7 @@ public class CombinedAuAfJSON {
 						.add("indexeddate",notNull(rec.getString(AuAfCombinedRec.INDEXEDDATE)))
 						.add("esindextime", replaceDot(notNull(rec.getString(AuAfCombinedRec.ESINDEXTIME))))
 						.add("loadnumber",notNull(rec.getString(AuAfCombinedRec.LOAD_NUMBER)))
+						.add("updatenumber",notNull(rec.getString(AuAfCombinedRec.UPDATE_NUMBER)))
 						)
 						.add("afdoc",factory.createObjectBuilder()
 								.add("doc_id",notNull(rec.getString(AuAfCombinedRec.DOCID)))
@@ -166,6 +167,7 @@ public class CombinedAuAfJSON {
 						.add("indexeddate", notNull(rec.getString(AuAfCombinedRec.INDEXEDDATE)))
 						.add("esindextime", replaceDot(notNull(rec.getString(AuAfCombinedRec.ESINDEXTIME))))
 						.add("loadnumber", notNull(rec.getString(AuAfCombinedRec.LOAD_NUMBER)))
+						.add("updatenumber", notNull(rec.getString(AuAfCombinedRec.UPDATE_NUMBER)))
 						)
 						.add("audoc", factory.createObjectBuilder()
 								.add("doc_id", notNull(rec.getString(AuAfCombinedRec.DOCID)))
@@ -320,8 +322,15 @@ public class CombinedAuAfJSON {
 			{
 				single_pair = composit_pairs[i].split(Constants.IDDELIMITER);
 				
-				pairs.add(single_pair[0] + " " + single_pair[1]);
-							
+				if(single_pair.length >1)
+				{
+					pairs.add(single_pair[0] + " " + single_pair[1]);
+				}
+				else
+				{
+					pairs.add(single_pair[0]);
+				}
+						
 			}
 		}
 		return pairs.build();
