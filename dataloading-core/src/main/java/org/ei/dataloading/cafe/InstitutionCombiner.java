@@ -44,6 +44,7 @@ public class InstitutionCombiner{
 	static String metadataTableName = "hh_af_metadata";
 	static String action = "new";
 	static int recsPerEsbulk;
+	private static String esDomain = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";
 
 	// get CurrentData and Time for ESIndexTime
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -67,7 +68,7 @@ public class InstitutionCombiner{
 
 	public static void main(String args[])
 	{
-		if(args.length >9)
+		if(args.length >10)
 		{
 			if(args[0] !=null)
 			{
@@ -127,6 +128,12 @@ public class InstitutionCombiner{
 					recsPerEsbulk = 10;
 				}
 			}
+			if(args[10] !=null)
+			{
+				esDomain = args[10];
+				
+				System.out.println("ES Domain name: " + esDomain);
+			}
 
 		}
 		else
@@ -141,7 +148,7 @@ public class InstitutionCombiner{
 			writer.init(1);
 
 			//s3upload = new AuAfESIndex(doc_type);
-			esIndex = new AusAffESIndex(recsPerEsbulk);
+			esIndex = new AusAffESIndex(recsPerEsbulk, esDomain);
 
 			InstitutionCombiner c = new InstitutionCombiner();
 			c.con = c.getConnection(url,driver,username,password);
@@ -294,6 +301,7 @@ public class InstitutionCombiner{
 				updateNumber=loadNumber;
 				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
 
+				
 				//for testing
 				//query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx') and rownum<2";
 
@@ -412,7 +420,12 @@ public class InstitutionCombiner{
 					{
 						rec.put(AuAfCombinedRec.LOAD_NUMBER, Integer.toString(rs.getInt("LOADNUMBER")));
 					}
-
+					//UPDATENUMBER
+					if(rs.getString("UPDATENUMBER") !=null)
+					{
+						rec.put(AuAfCombinedRec.UPDATE_NUMBER, Integer.toString(rs.getInt("UPDATENUMBER")));
+					}
+					
 					//EID
 					if(rs.getString("EID") !=null)
 					{
