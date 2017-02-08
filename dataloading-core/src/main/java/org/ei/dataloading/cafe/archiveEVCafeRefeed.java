@@ -486,6 +486,8 @@ public class archiveEVCafeRefeed {
 
             Process p = r.exec("./"+sqlldrFileName+" "+filename);
             int t = p.waitFor();
+            
+            System.out.println("sqlldoder completed with exist status: " + t);
 
 			} 
 		catch (Exception e) {

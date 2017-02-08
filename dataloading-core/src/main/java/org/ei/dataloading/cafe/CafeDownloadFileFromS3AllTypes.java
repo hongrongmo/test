@@ -118,6 +118,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			if(args[5] !=null)
 			{
 				// date to select which archived messages to process
+				System.out.println("archive_date= " +args[5]);
 				if(isValidDate(args[5]))
 				{
 					archive_date = args[5];
@@ -939,6 +940,15 @@ public class CafeDownloadFileFromS3AllTypes {
 			columnName = "AFFID";
 
 			type = "affiliation";
+
+		}
+		
+		else if(doc_type.equalsIgnoreCase("apr"))
+		{
+			profileTable = "author_profile";
+			columnName = "AUTHORID";
+
+			type = "author";
 
 		}
 		

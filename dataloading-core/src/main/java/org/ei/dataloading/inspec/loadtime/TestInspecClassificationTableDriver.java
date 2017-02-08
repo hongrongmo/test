@@ -150,36 +150,40 @@ public class TestInspecClassificationTableDriver {
                     {
                         String nodeName = cNode.getNodeName().trim();
 
+                        
+                        //HH 01/12/2016 take off all casting to "(Concept)" away, it is not needed when move "JDK 1.8.0_45" to be at top in order&export of build path
                         if(nodeName.equalsIgnoreCase(STATUS))
                         {
-                            record.setClassStatus(((Concept) cNode).getTextContent().trim());
+                            //record.setClassStatus(((Concept) cNode).getTextContent().trim());  // when JDK order at the end in build path
+                        	
+                        	record.setClassStatus(cNode.getTextContent().trim());
                         }
 
 
                         if(nodeName.equalsIgnoreCase(CLASS_CODE))
                         {
-                            record.setSingleClassCodes(((Concept) cNode).getTextContent().trim());
+                            record.setSingleClassCodes(cNode.getTextContent().trim());
 
                         }
 
                         if(nodeName.equalsIgnoreCase(CLASS_LEVEL))
                         {
-                            record.setClassLevel(((Concept) cNode).getTextContent().trim());
+                            record.setClassLevel(cNode.getTextContent().trim());
                         }
 
                         if(nodeName.equalsIgnoreCase(CLASS_TITLE))
                         {
-                            record.setClassTitle(((Concept) cNode).getTextContent().trim());
+                            record.setClassTitle(cNode.getTextContent().trim());
                         }
 
                         if(nodeName.equalsIgnoreCase(SCOPE_NOTES))
                         {
-                            record.setClassScopeNotes(((Concept) cNode).getTextContent().trim());
+                            record.setClassScopeNotes(cNode.getTextContent().trim());
                         }
 
                         if(nodeName.equalsIgnoreCase(SEE_ALSO_CROSS_REF))
                         {
-                            record.setClassSeeAlsoRef(((Concept) cNode).getTextContent().trim().replaceAll(";", ","));
+                            record.setClassSeeAlsoRef(cNode.getTextContent().trim().replaceAll(";", ","));
 
                         }
 
@@ -187,7 +191,7 @@ public class TestInspecClassificationTableDriver {
                         if(nodeName.equalsIgnoreCase(SEE_CROSS_REF))
                         {
 
-                            record.setClassSeeRef(((Concept) cNode).getTextContent().trim());
+                            record.setClassSeeRef(cNode.getTextContent().trim());
                         }
 
 
@@ -521,7 +525,7 @@ public class TestInspecClassificationTableDriver {
                         {
                             if(cNode.item(j).getNodeType()==Node.ELEMENT_NODE)
                             {
-                                mainTermStringBuffer.append(((Concept) cNode.item(j)).getTextContent().trim());
+                                mainTermStringBuffer.append(cNode.item(j).getTextContent().trim());
 
                                 if(j<cNode.getLength()-1){
                                     mainTermStringBuffer.append(", ");
@@ -534,7 +538,7 @@ public class TestInspecClassificationTableDriver {
 
                 else
                 {
-                 mainTermStringBuffer.append(((Concept) tNode.item(k)).getTextContent());  //H 03-07-2014 Original
+                 mainTermStringBuffer.append(tNode.item(k).getTextContent());  //H 03-07-2014 Original
 
                 }
 
