@@ -43,12 +43,14 @@ public class AusAffESIndex {
 
 	private final String SERVICE_NAME = "es";
 	private final String REGION = "us-east-1";
-	private final String HOST = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";  // for dataloading Ec2
+	
+	//private String HOST = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";  // for dataloading Ec2
+	//private final String HOST = "localhost:8060";    // for Prod from localhost
 	//private final String HOST = "search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com";  // for testing
-	//private final String HOST = "localhost:8060";    // evauaf cluster using tunnel, localhost
-	private final String ENDPOINT_ROOT = "http://" + HOST;
-	private final String PATH = "/cafe/_bulk";
-	private final String ENDPOINT = ENDPOINT_ROOT + PATH;
+	private String HOST = "localhost:8050";    // evauaf cluster using tunnel, localhost
+	private String ENDPOINT_ROOT = "http://" + HOST;
+	private String PATH = "/cafe/_bulk";
+	private String ENDPOINT = ENDPOINT_ROOT + PATH;
 	
 	private final int REQUEST_TIMEOUT = 100 * 1000;		//Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out
 
@@ -77,9 +79,14 @@ public class AusAffESIndex {
 		
 	}
 	
-	public AusAffESIndex(int bulkSize)
+	public AusAffESIndex(int bulkSize, String esDomain)
 	{
 		recsPerbulk = bulkSize;
+		
+		HOST = esDomain;
+		ENDPOINT_ROOT = "http://" + HOST;
+		PATH = "/cafe/_bulk";
+		ENDPOINT = ENDPOINT_ROOT + PATH;
 		
 		midTime = System.currentTimeMillis();
 		endTime = System.currentTimeMillis();
