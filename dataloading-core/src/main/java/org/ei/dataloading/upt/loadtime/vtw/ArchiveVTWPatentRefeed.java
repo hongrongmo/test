@@ -59,7 +59,10 @@ import com.amazonaws.services.sqs.model.ReceiveMessageResult;
  * 
  * NOTE:
  * 	Each SQS message should be processed once, Amazon SQS distributed nature may result in Message deuplication, so the our application should handle this
- *  Each SQS message contains a unique message "@id", so need to set unique index on this field in oracle table to avoid duplication. 
+ *  Each SQS message contains a unique message "@id", so need to set unique index on this field in oracle table to avoid duplication.
+ *  
+ *   NOTE2: 
+ *   this class is used SearchAPI
  */
 
 public class ArchiveVTWPatentRefeed {
