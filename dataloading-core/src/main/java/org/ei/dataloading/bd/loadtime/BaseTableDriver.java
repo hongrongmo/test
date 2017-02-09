@@ -36,7 +36,9 @@ public class BaseTableDriver
     private static String driver = "oracle.jdbc.driver.OracleDriver";
     private static String username = "ba_loading";
     private static String password = "ny5av";
-    private static List<String> blockedIssnList;
+    private static List<String> blockedCpxIssnList;
+    private static List<String> blockedPchIssnList;
+    private static List<String> blockedGeoIssnList;
     //HH 02/2016 for Cafe Processing
     BufferedReader bfReader = null;
     boolean cafe = false;
@@ -119,18 +121,34 @@ public class BaseTableDriver
     {
     	Statement stmt = null;
         ResultSet rs = null;
-        List<String> issnList = new ArrayList<>();
+        List<String> cpxIssnList = new ArrayList<>();
+        List<String> pchIssnList = new ArrayList<>();
+        List<String> geoIssnList = new ArrayList<>();
+        String issn = null;
+        String database = null;
         try
         {
             stmt = con.createStatement();
 
-            rs = stmt.executeQuery("select sn from blocked_issn");
+            rs = stmt.executeQuery("select sn,database from blocked_issn");
             while (rs.next())
             {
-                String issn = rs.getString("sn");
+                issn = rs.getString("sn");
+                database = rs.getString("database");
                 if(issn != null)
                 {
-                	issnList.add(issn);
+                	if(database.equals("cpx"))
+                	{
+                		cpxIssnList.add(issn);
+                	}
+                	else if(database.equals("pch"))
+                	{
+                		pchIssnList.add(issn);
+                	}
+                	else if(database.equals("geo"))
+                	{
+                		geoIssnList.add(issn);
+                	}
                 }
             }
 
@@ -166,7 +184,9 @@ public class BaseTableDriver
                 }
             }
         }
-        this.blockedIssnList=issnList;
+        this.blockedCpxIssnList=cpxIssnList;
+        this.blockedPchIssnList=pchIssnList;
+        this.blockedGeoIssnList=geoIssnList;
        
     }
 
@@ -520,60 +540,32 @@ public class BaseTableDriver
 	                        sBuffer = new StringBuffer();
                     }
 
-                  //pre frank request, block certain issns just for cpx and pch 8/3/2015
+                  //pre frank request, block certain issns just for cpx and pch 8/3/2015 by hmo
+                  //pre frank request, block certain issns just for geo  2/6/2017 by hmo
                     if(r.getRecordTable()!=null)
                     {
                     	Hashtable ht=r.getRecordTable();
-                    	//System.out.println("ACCESSNUMBER:"+ht.get("ACCESSNUMBER"));
-                    	if((ht.get("DATABASE")!=null && (((String)ht.get("DATABASE")).equals("cpx") || ((String)ht.get("DATABASE")).equals("pch"))))
+                    	String database = (String)ht.get("DATABASE");
+                    	
+                    	if(ht.get("DATABASE")!=null && (database.equalsIgnoreCase("cpx") || 
+                    									database.equalsIgnoreCase("pch") || 
+                    									database.equalsIgnoreCase("geo")))
                 		{
                     		boolean issnFlag=false;
                     		
-                    		if(blockedIssnList!=null)
+                    		if(blockedCpxIssnList!=null && database.equalsIgnoreCase("cpx"))
                     		{
-		                    	for(int i=0;i<blockedIssnList.size();i++)
-		                    	{
-		                    		  String blockedIssn = blockedIssnList.get(i);
-		                    		  
-		                    		  if(blockedIssn.indexOf("EISSN")>-1)
-		                    		  {
-		                    			 
-		                    			  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
-		                    			  if(ht.get("EISSN")!=null)
-		                    			  {
-			                    			  String eissn = (String)ht.get("EISSN");
-			                    			  eissn=eissn.replaceAll("-", "");
-			                    			  if (eissn.equals(blockedIssn))
-					                		   {			       
-					                			   System.out.println("block record "+ht.get("ACCESSNUMBER")+" for eissn="+blockedIssn+" from BaseTableDriver");
-					                			   issnFlag=true;
-					                			   break;
-					                		   }
-		                    			  }
-		                    		  }
-		                    		  else if(blockedIssn.indexOf("ISSN")>-1)
-		                    		  {
-		                    			  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
-		                    			  if (ht.get("ISSN")!=null)
-		                    			  {	                   
-		                    				  String issn = (String)ht.get("ISSN");
-		                    				  issn=issn.replaceAll("-", "");
-					                		  if (issn.equals(blockedIssn))
-					                		  {			                			   
-					                			   System.out.println("block record "+ht.get("ACCESSNUMBER")+" for issn="+blockedIssn+" from BaseTableDriver");
-					                			   issnFlag=true;
-					                			   break;
-					                		  }
-		                    			  }
-		                    		  }	
-		                    		  else
-		                    		  {
-		                    			  System.out.println("incorrect issn format, check blocked_issn table");
-		                    		  }
-		                    	  }
+		                    	issnFlag = checkBlockedIssn(blockedCpxIssnList,ht);
                     		}
-                    		
-	                    	if(issnFlag==true)
+                    		else if(blockedPchIssnList!=null && database.equalsIgnoreCase("pch"))
+                    		{
+		                    	issnFlag = checkBlockedIssn(blockedPchIssnList,ht);
+                    		}
+                    		else if(blockedGeoIssnList!=null && database.equalsIgnoreCase("geo"))
+                    		{
+		                    	issnFlag = checkBlockedIssn(blockedGeoIssnList,ht);
+                    		}
+                    		if(issnFlag==true && !action.equalsIgnoreCase("delete"))
 							{
 	                    		continue;
 							}
@@ -590,6 +582,52 @@ public class BaseTableDriver
             return null;
         }
        
+    }
+    
+    private boolean checkBlockedIssn(List blockedIssnList, Hashtable ht)
+    {
+    	boolean issnFlag = false;
+	    for(int i=0;i<blockedIssnList.size();i++)
+		{
+			  String blockedIssn = (String)blockedIssnList.get(i);
+			  
+			  if(blockedIssn.indexOf("EISSN")>-1)
+			  {
+				 
+				  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
+				  if(ht.get("EISSN")!=null)
+				  {
+	    			  String eissn = (String)ht.get("EISSN");
+	    			  eissn=eissn.replaceAll("-", "");
+	    			  if (eissn.equals(blockedIssn))
+	        		   {			       
+	        			   System.out.println("block record "+ht.get("ACCESSNUMBER")+" for eissn="+blockedIssn+" from BaseTableDriver");
+	        			   issnFlag=true;
+	        			   break;
+	        		   }
+				  }
+			  }
+			  else if(blockedIssn.indexOf("ISSN")>-1)
+			  {
+				  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
+				  if (ht.get("ISSN")!=null)
+				  {	                   
+					  String issn = (String)ht.get("ISSN");
+					  issn=issn.replaceAll("-", "");
+	        		  if (issn.equals(blockedIssn))
+	        		  {			                			   
+	        			   System.out.println("block record "+ht.get("ACCESSNUMBER")+" for issn="+blockedIssn+" from BaseTableDriver");
+	        			   issnFlag=true;
+	        			   break;
+	        		  }
+				  }
+			  }	
+			  else
+			  {
+				  System.out.println("incorrect issn format, check blocked_issn table");
+			  }
+		  }
+	    return issnFlag;
     }
 
 

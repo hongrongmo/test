@@ -129,12 +129,12 @@ public class BdCorrection
             if(args[8]!=null)
             {
                 username = args[8];
-                System.out.println("username= "+username);
+                System.out.println("username1= "+username);
             }
             if(args[9]!=null)
             {
                 password = args[9];
-                System.out.println("password= "+password);
+                System.out.println("password1= "+password);
             }
             if(args[10]!=null)
             {
