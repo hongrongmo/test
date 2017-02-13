@@ -472,7 +472,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 		try
 		{
 			
-			DownloadVtwFile instance = new DownloadVtwFile();
+			//DownloadVtwFile instance = new DownloadVtwFile();  //uncomment this for old way of using "Search API" only
 			
 			JSONParser parser = new JSONParser();
 			Object obj = parser.parse(message);
@@ -516,12 +516,14 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 					else
 					{
 						logger.error("Unknown Message Type: " + msgType + "!");
-						//System.out.println("Unknown Message Type: " + msgType + "!");
 						System.exit(1);
 					}
 					
 					
-					// get Asset Pre-signed url for each of eventNotification/ServiceCall for later download
+					/* get Asset Pre-signed url for each of eventNotification/ServiceCall for later download directly instead of Asset API 
+						pre-signed url is provided only for backfill (unless url expired, so will need to download as forward flow),
+						but for forwardflow need to use Asset API, unl
+					*/
 					
 					//Assets
 					JSONObject assets = (JSONObject)jsonObject.get(message_type);
@@ -543,12 +545,20 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 					while(resourceIterator.hasNext())
 					{
 						Patent_resourceUrl = resourceIterator.next();
-						System.out.println(prefix + " Resource: " + Patent_resourceUrl);
+						//System.out.println(prefix + " Resource: " + Patent_resourceUrl);  // only for debugging
 						
 						messageFieldKeys.put("resource", Patent_resourceUrl);
 						
-						patentId = Patent_resourceUrl.substring(Patent_resourceUrl.indexOf("pat/") + 4, Patent_resourceUrl.lastIndexOf("/"));
-						messageFieldKeys.put("patentid", patentId);
+						if(Patent_resourceUrl !=null && Patent_resourceUrl.contains("pat"))
+						{
+							patentId = Patent_resourceUrl.substring(Patent_resourceUrl.indexOf("pat/") + 4, Patent_resourceUrl.lastIndexOf("/"));
+							messageFieldKeys.put("patentid", patentId);
+						}
+						else
+						{
+							System.out.println("resource does not contain patent id!!!");
+						}
+						
 					}
 					
 					//evt:detailes or svc:detailes
@@ -601,10 +611,6 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			logger.error("AWS Error Code:   " + ase.getErrorCode());
 			logger.error("Error Type:       " + ase.getErrorType());
 			logger.error("Request ID:       " + ase.getRequestId());
-			
-			
-			// download status
-			messageFieldKeys.put("status", VTWSearchAPI.status);
 			
 		}
 		catch(Exception e)
