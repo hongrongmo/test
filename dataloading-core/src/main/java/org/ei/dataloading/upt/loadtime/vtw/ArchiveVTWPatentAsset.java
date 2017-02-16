@@ -81,7 +81,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	private static final int MESSAGE_VISIBILITY_TIME_OUT_SECONDS = 1200;   // 20 minutes to give time upload the Asset/File to S3 bucket
 	private static final int NUM_OF_MESSAGES_TO_FETCH = 10;
 
-	
+
 	private final static Logger logger = Logger.getLogger(ArchiveVTWPatentAsset.class);
 
 	private int numberOfRuns = 0;
@@ -92,10 +92,10 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	int recsPerSingleConnection = 2000;
 	long epoch;
 	String threadName;
-	
+
 	Thread th = null;
-	
-	
+
+
 	DateFormat dateFormat,msgSentDateFormat;
 	private String filename;
 	private PrintWriter out;
@@ -106,7 +106,6 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	private static String myQueueUrl;
 
 
-	private ReceiveAmazonSQSMessage obj = null;   // for parsing/checking Message Metadata
 	private ReceiveMessageResult receiveMessageResult = null;
 	private DeleteMessageRequest deleteRequest = null;
 	private String messageBody;
@@ -138,7 +137,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		epoch = rawDir;
 		threadName = thread_name;
 		System.out.println("Creating Thread: " + threadName);
-		
+
 	}
 
 
@@ -161,7 +160,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 		// get the list of Patent-Ids; with their signedAssetURL if any;  to download 
 		Map<String,String> patentIds = null;
-		
+
 		try
 		{
 			midTime = System.currentTimeMillis();
@@ -171,8 +170,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 
 			patentIds = new LinkedHashMap<String,String>();
-		
-			
+
+
 			// access VTW QUEUE 
 			begin();
 			SQSCreationAndSetting();
@@ -182,15 +181,15 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			patentIds = receiveMessage();
 			end();
 
-		
+
 			if(!(patentIds.isEmpty()))
 			{
 				/*DateFormat dateFormat = new SimpleDateFormat("E, MM/dd/yyyy-hh:mm:ss a");
 				Date date = dateFormat.parse(dateFormat.format(new Date()));
 				long epoch;
 				epoch = date.getTime();		// for US/EUP
-*/
-				
+				 */
+
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println(threadName + " :time before downloading files "+(endTime-midTime)/1000.0+" seconds");
@@ -209,9 +208,9 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 
 				//Zip downloaded files (each in it's corresponding dir)
-			
+
 				zipDownloads(loadNumber, Long.toString(epoch));
-				
+
 
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
@@ -232,7 +231,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	// create text file to hold original message & partial parsed fields
@@ -251,7 +250,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 
 		filename = sqsArchiveDir+"/"+threadName+"vtw_feed-"+dateFormat.format(date)+".txt";
-	
+
 		try {
 			out = new PrintWriter(new FileWriter(filename));
 		} catch (IOException e) {
@@ -342,13 +341,14 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	{
 		int exitWaitingCount = 0;
 		String msgReciptHandle = null;
-		
+		ReceiveAmazonSQSMessage obj = null;   // for parsing/checking Message Metadata
+
 		Map<String,String> patentIds = new LinkedHashMap<String,String>();
-		
+
 		// get current dateTime in epoch (in seconds) to compare with Pre-Signed URL
 		long now = java.time.Instant.now().getEpochSecond();
 		long signedUrlExpiration = 0;
-		
+
 
 		obj = new ReceiveAmazonSQSMessage(loadNumber);
 		msgSentDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -365,7 +365,6 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 		try
 		{
-
 			//while(true)
 			for(int i = 0; i<numberOfRuns;i++)
 			{				
@@ -405,14 +404,14 @@ public class ArchiveVTWPatentAsset implements Runnable{
 								{
 									recordBuf.append(obj.getMessageField("patentid"));
 
-										if(obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
-												obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP"))
+									if(obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP"))
 
-											patentIds.put(obj.getMessageField("patentid"), "");
+										patentIds.put(obj.getMessageField("patentid"), "");
 
-										else
-											System.out.println("Skip downloading Patent : "+ obj.getMessageField("patentid") + " of type: " + obj.getMessageField("patentid").substring(0, 2));
-									
+									else
+										System.out.println("Skip downloading Patent : "+ obj.getMessageField("patentid") + " of type: " + obj.getMessageField("patentid").substring(0, 2));
+
 									recordBuf.append(FIELDDELIM);
 
 
@@ -422,71 +421,75 @@ public class ArchiveVTWPatentAsset implements Runnable{
 										//signed Asset URL's Expiration Date
 										if(obj.getMessageField("urlExpirationDate") !=null)
 										{
-											signedUrlExpiration = Long.parseLong(convertMillisecondsToFormattedDate(obj.getMessageField("urlExpirationDate")));
+											signedUrlExpiration = Long.parseLong(obj.getMessageField("urlExpirationDate"));
+											//recordBuf.append(convertMillisecondsToFormattedDate(obj.getMessageField("urlExpirationDate"))); // human readable format
 											recordBuf.append(signedUrlExpiration);
+
 										}
 										recordBuf.append(FIELDDELIM);
-										
-										
-										
+
+
+
 										recordBuf.append(obj.getMessageField("signedAssetUrl"));
-										
+
 										// add preSigned-URL only if it is valid (expirationdate > currentDateTime by ~27 hrs)
-										if(signedUrlExpiration > now  && ((signedUrlExpiration - now) > 100000000))
+										if(signedUrlExpiration > now  && ((signedUrlExpiration - now) > 100000))
 										{
 											if(patentIds.containsKey(obj.getMessageField("patentid")))
 											{
 												patentIds.put(obj.getMessageField("patentid"), obj.getMessageField("signedAssetUrl"));
 											}
 										}
-										
+										else
+										{
+											System.out.println("Pre-signed URL " + signedUrlExpiration + " expired, download Patent with Asset API");
+										}
+
 									}
 
 									recordBuf.append(FIELDDELIM);
 
+
+
+
+									//message To
+									if(obj.getMessageField("message_to") !=null)
+									{
+										recordBuf.append(obj.getMessageField("message_to"));
+									}
+									recordBuf.append(FIELDDELIM);
+
+
+									//Resource (URL containing Patent ID  and Generation# [i.e. http://acc.vtw.elsevier.com/content/pat/EP1412238A1/10] )
+									if(obj.getMessageField("resource") !=null)
+									{
+										recordBuf.append(obj.getMessageField("resource"));
+									}
+									recordBuf.append(FIELDDELIM);
+
+
+									//Archive_Date, Date when message was read from SQS & archived
+									recordBuf.append(msgSentDateFormat.format(new Date()));
+									recordBuf.append(FIELDDELIM);
+
+
+									//Body
+									recordBuf.append(messageBody);
+									recordBuf.append(FIELDDELIM);
+
+
+									//Sent (the time when the message was sent to the queue )
+									if(msgAttributes !=null && ! (msgAttributes.isEmpty()))
+									{	
+										recordBuf.append(msgSentDateFormat.format(new Date(Long.parseLong(msgAttributes.get("SentTimestamp")))).toString());
+									}
+									// write the message to out file
+									out.println(recordBuf.toString().trim());
 								}
-
-
-								//message To
-								if(obj.getMessageField("message_to") !=null)
-								{
-									recordBuf.append(obj.getMessageField("message_to"));
-								}
-								recordBuf.append(FIELDDELIM);
-
-
-								//Resource (URL containing Patent ID  and Generation# [i.e. http://acc.vtw.elsevier.com/content/pat/EP1412238A1/10] )
-								if(obj.getMessageField("resource") !=null)
-								{
-									recordBuf.append(obj.getMessageField("resource"));
-								}
-								recordBuf.append(FIELDDELIM);
-
-
-								//Archive_Date, Date when message was read from SQS & archived
-								recordBuf.append(msgSentDateFormat.format(new Date()));
-								recordBuf.append(FIELDDELIM);
-
-
-								//Body
-								recordBuf.append(messageBody);
-								recordBuf.append(FIELDDELIM);
-
-
-								//Sent (the time when the message was sent to the queue )
-								if(msgAttributes !=null && ! (msgAttributes.isEmpty()))
-								{	
-									recordBuf.append(msgSentDateFormat.format(new Date(Long.parseLong(msgAttributes.get("SentTimestamp")))).toString());
-								}
-
-
-
-								// write the message to out file
-								out.println(recordBuf.toString().trim());
 							}
 
 							// delete the message
-							//deleteMessage(msgReciptHandle);   
+							deleteMessage(msgReciptHandle);   
 						}
 					}
 				}
@@ -535,7 +538,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			System.err.println("Error receiving from SQS: " + sqsex.getMessage());
 			sqsex.printStackTrace();
 		}
-		
+
 		return patentIds;
 
 	}
@@ -567,10 +570,10 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		}
 	}
 
-	//HH 09/20/2016 Convert Milliseconds to formatted date
-	public String convertMillisecondsToFormattedDate(String milliSeconds)
+	//HH 09/20/2016 Convert DateTime in seconds to formatted date in MilliSeconds
+	public String convertMillisecondsToFormattedDate(String seconds)
 	{
-		Long epoch = Long.parseLong(milliSeconds) * 1000;
+		Long epoch = Long.parseLong(seconds) * 1000;
 		Calendar calendar = new java.util.GregorianCalendar(java.util.TimeZone.getTimeZone("US/Central"));
 		calendar.setTimeInMillis(epoch);
 		return msgSentDateFormat.format(calendar.getTime());
@@ -622,7 +625,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		int curRecNum = 0;
 
 		System.out.println(threadName + ": Zip downloaded files");
-		
+
 		// read latest zipfilename from zipFileNames file as the start point for Sequence generation
 		readZipFileNameFromFile(loadNumber);
 
@@ -688,10 +691,10 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 				++curRecNum;
 			}
-			
-				outZip.close();
-				downDir.delete();
-			}
+
+			outZip.close();
+			downDir.delete();
+		}
 
 
 	}
@@ -850,9 +853,9 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		return Integer.parseInt(zipFileName);
 	}
 
-	
 
 
-		
+
+
 
 }
