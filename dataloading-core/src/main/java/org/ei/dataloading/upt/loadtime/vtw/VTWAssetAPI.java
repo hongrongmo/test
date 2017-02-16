@@ -67,10 +67,10 @@ public class VTWAssetAPI {
 
 	private String Url = null;
 
-	
+
 	int recsPerSingleConnection = 100;
-	
-	
+
+
 	static RequestConfig requestConfig = null;
 
 
@@ -93,14 +93,14 @@ public class VTWAssetAPI {
 
 	public VTWAssetAPI(String downloadDir_Name, int recsPerConnection, String thread_name)
 	{
-		
+
 		recsPerSingleConnection = recsPerConnection;
 		//init(downloadDir_Name,thread_name);
 	}
 
 	public VTWAssetAPI(String downloadDir_Name, int recsPerConnection)
 	{
-		
+
 		recsPerSingleConnection = recsPerConnection;
 		//init(downloadDir_Name,"thread1");
 	}
@@ -110,7 +110,7 @@ public class VTWAssetAPI {
 	{
 		DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");		 
 		Date date = new Date();
-		
+
 		File downloadDir = null;
 
 
@@ -129,7 +129,7 @@ public class VTWAssetAPI {
 			}
 
 			//responseHandler = new MyHttpResponseHandler<String>();
-			
+
 			// create Apache HttpClient
 			//client = getInstance();
 
@@ -161,7 +161,7 @@ public class VTWAssetAPI {
 		{
 			ex.printStackTrace();
 		}
-		
+
 		return downloadDir.getAbsolutePath();
 	}
 
@@ -173,7 +173,7 @@ public class VTWAssetAPI {
 		String[] response = new String[2];
 		String threadName = thread_name;
 		ResponseHandler<String[]> responseHandler = null;
-		
+
 		String downloadDir = init(downloadDirName,thread_name);
 
 		if(patentIds.size() >0)
@@ -185,11 +185,11 @@ public class VTWAssetAPI {
 				{
 					synchronized(VTWAssetAPI.class)
 					{
-						responseHandler = new MyHttpResponseHandler<String[]>(key, downloadDir);
-						
+						responseHandler = new MyHttpResponseHandler<String[]>(key, downloadDir, thread_name);
+
 						//patentId = key;
 					}
-						
+
 					try
 					{
 						if(patentIds.get(key) !=null && !(patentIds.get(key).isEmpty()))
@@ -210,26 +210,32 @@ public class VTWAssetAPI {
 						// Send the request to the server
 						if(request !=null)
 						{
-							response = sendRequest(request, client, responseHandler);
-							// if URL was Pre-signed URL & response error was due to time has expired, re-try download using AssetAPI instead of Pre-Signed URL
-							if(!(Url.contains("/asset/pat/")) && response[1] !=null && response[1].contains("Request has expired"))
+							// retry download two times in case it is failed the 1st time
+							for(int i=1;i<=2;i++)
 							{
-								System.out.println("Pre-signed URL expired, download Patent with Asset API");
-								Url = ENDPOINT_ROOT + PATH + key + "?type=" + TYPE + "&fmt=" + FORMAT;
-								// Generate the request
-								request = generateRequest(key, Url);
+								// send the request
 								response = sendRequest(request, client, responseHandler);
-							}
-							else if(Integer.parseInt(response[0]) !=200)
-							{
-								System.out.println("download response code " + response[0]  + " is not 200, so skip this file:" +  key);
-								out.println(key);
+								if(Integer.parseInt(response[0]) ==200)
+								{
+									break;
+								}
+								else if(Integer.parseInt(response[0]) !=200 && i<2)
+								{
+									System.out.println("download response code " + response[0]  + " is not 200, re-try download:" +  key);
+									Thread.sleep(500);
+								}
+								else
+								{
+									System.out.println("download response code " + response[0]  + " is not 200, so skip this file:" +  key);
+									out.println(key);
+								}
+
 							}
 
+							//Thread.sleep(50);
 						}
-						//Thread.sleep(50);
-					}
 
+					}
 					catch(Exception e)
 					{
 						e.printStackTrace();
@@ -245,7 +251,7 @@ public class VTWAssetAPI {
 		{
 			// close the connection
 			end(client, threadName);
-			
+
 		}
 		catch(Exception e)
 		{
@@ -253,27 +259,27 @@ public class VTWAssetAPI {
 			logger.error("Reason: " + e.getMessage());
 			e.printStackTrace();
 		}
-		
+
 	}
 
 
-	
+
 	// Set up the request
 	private static HttpGet generateRequest(String patentId, String URL) {
 
 		HttpGet request = null;
 		URIBuilder uriBuilder = null;
-		
-		System.out.println("Download Patent ID: " +  patentId);
+
+		//System.out.println("Download Patent ID: " +  patentId);  // only for debugging
 		try {
 
 
 			uriBuilder = new URIBuilder(URL);  
 			uriBuilder.setParameter("Content-Type", "application/xml");
-			
+
 			request = new HttpGet(uriBuilder.build());
 			request.setConfig(requestConfig);
-			
+
 
 		} catch (URISyntaxException e) {
 
@@ -334,17 +340,20 @@ public class VTWAssetAPI {
 
 		private String patentId = "";
 		private String downloadDir = null;
+		private String threadName = null;
+		
 		public MyHttpResponseHandler()
 		{
-			
+
 		}
-		
-		public MyHttpResponseHandler(String patent_id, String downloadDirName)
+
+		public MyHttpResponseHandler(String patent_id, String downloadDirName, String thread_name)
 		{
 			patentId = patent_id;
 			downloadDir = downloadDirName;
+			threadName = thread_name;
 		}
-		
+
 		@Override
 		public String[] handleResponse(HttpResponse response)
 		{
@@ -361,98 +370,98 @@ public class VTWAssetAPI {
 			/*synchronized (VTWAssetAPI.class)
 			{*/
 
-				try
+			try
+			{
+				responseStream = response.getEntity().getContent();
+				responseCode = response.getStatusLine().getStatusCode();
+
+				System.out.println(threadName + " :download Respons Code for PatnetID: " + patentId + " is :" + responseCode);
+				ResponseResult[0] = Integer.toString(responseCode);
+
+
+				if(responseCode ==200)
 				{
-					responseStream = response.getEntity().getContent();
-					responseCode = response.getStatusLine().getStatusCode();
+					out = new FileOutputStream(new File(downloadDir + "/" + patentId + ".xml"));
 
-					System.out.println("download Respons Code for PatnetID: " + patentId + " is :" + responseCode);
-					ResponseResult[0] = Integer.toString(responseCode);
+					/**
+					 * This class is used to wrap a stream that includes an encoded ByteOrderMark as its first bytes. 
+					 * This class detects these bytes and, if required, can automatically skip them and return the subsequent byte as the first byte in the stream. 
+					 */
+					//BOMInputStream  bomStream = new BOMInputStream(responseStream,false);
+					bomStream = new BOMInputStream(responseStream,false,
+							ByteOrderMark.UTF_8, ByteOrderMark.UTF_16BE,
+							ByteOrderMark.UTF_16LE, ByteOrderMark.UTF_32BE, ByteOrderMark.UTF_32LE);
+
+					IOUtils.copy(bomStream, out);
+
+				}
+				else
+				{
+					//System.out.println("download response code " + responseCode  + " is not 200, so skip this file:" +  patentId);
+					responseErrorMessage = IOUtils.toString(response.getEntity().getContent());
+					System.out.println("Response Message: " + responseErrorMessage);
+					ResponseResult[1] = responseErrorMessage;
+				}
+
+			}
+
+			catch(ClientProtocolException e)
+			{
+				e.printStackTrace();
+			}
+			catch(IOException e)
+			{
+				e.printStackTrace();
+			}
 
 
-					if(responseCode ==200)
+			finally
+			{
+				if(responseStream !=null)
+				{
+					try
 					{
-						out = new FileOutputStream(new File(downloadDir + "/" + patentId + ".xml"));
-
-						/**
-						 * This class is used to wrap a stream that includes an encoded ByteOrderMark as its first bytes. 
-						 * This class detects these bytes and, if required, can automatically skip them and return the subsequent byte as the first byte in the stream. 
-						 */
-						//BOMInputStream  bomStream = new BOMInputStream(responseStream,false);
-						bomStream = new BOMInputStream(responseStream,false,
-								ByteOrderMark.UTF_8, ByteOrderMark.UTF_16BE,
-								ByteOrderMark.UTF_16LE, ByteOrderMark.UTF_32BE, ByteOrderMark.UTF_32LE);
-
-						IOUtils.copy(bomStream, out);
-
+						responseStream.close();
 					}
-					else
+					catch(IOException ex)
 					{
-						//System.out.println("download response code " + responseCode  + " is not 200, so skip this file:" +  patentId);
-						responseErrorMessage = IOUtils.toString(response.getEntity().getContent());
-						System.out.println("Response Message: " + responseErrorMessage);
-						ResponseResult[1] = responseErrorMessage;
+						logger.error("Failed to close inputstream");
+						ex.printStackTrace();
 					}
 
 				}
 
-				catch(ClientProtocolException e)
+				if(bomStream !=null)
 				{
-					e.printStackTrace();
-				}
-				catch(IOException e)
-				{
-					e.printStackTrace();
-				}
-
-
-				finally
-				{
-					if(responseStream !=null)
+					try
 					{
-						try
-						{
-							responseStream.close();
-						}
-						catch(IOException ex)
-						{
-							logger.error("Failed to close inputstream");
-							ex.printStackTrace();
-						}
-
+						bomStream.close();
+					}
+					catch(IOException ex)
+					{
+						logger.error("Failed to close inputstream");
+						ex.printStackTrace();
 					}
 
-					if(bomStream !=null)
-					{
-						try
-						{
-							bomStream.close();
-						}
-						catch(IOException ex)
-						{
-							logger.error("Failed to close inputstream");
-							ex.printStackTrace();
-						}
-
-					}
-					if(out !=null)
-					{
-						try
-						{
-							out.flush();
-							out.close();
-						}
-						catch(IOException ex)
-						{
-							System.out.println("Failed to close outputstream");
-							ex.printStackTrace();
-						}
-
-					}
-				
 				}
+				if(out !=null)
+				{
+					try
+					{
+						out.flush();
+						out.close();
+					}
+					catch(IOException ex)
+					{
+						System.out.println("Failed to close outputstream");
+						ex.printStackTrace();
+					}
+
+				}
+
+			}
 			//}
-						
+
 			return  ResponseResult;
 
 		}
@@ -463,36 +472,36 @@ public class VTWAssetAPI {
 
 	// get httpClient
 
-		@SuppressWarnings("deprecation")
-		public CloseableHttpClient getInstance() throws Exception
-		{
-			CloseableHttpClient client = null;
-			
-			/*synchronized (VTWAssetAPI.class)
+	@SuppressWarnings("deprecation")
+	public CloseableHttpClient getInstance() throws Exception
+	{
+		CloseableHttpClient client = null;
+
+		/*synchronized (VTWAssetAPI.class)
 			{
-				*/
-				try
-				{
-					CredentialsProvider credsProvider = new BasicCredentialsProvider();
-					credsProvider.setCredentials(new AuthScope(HOST, 443), 
-							new UsernamePasswordCredentials(username, password));
+		 */
+		try
+		{
+			CredentialsProvider credsProvider = new BasicCredentialsProvider();
+			credsProvider.setCredentials(new AuthScope(HOST, 443), 
+					new UsernamePasswordCredentials(username, password));
 
-					client = HttpClients.custom().setDefaultCredentialsProvider(credsProvider)
-							.setHostnameVerifier(SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER).build();   // works well to download Patent XML, as it has redirect
-					
-					
-							
-				}
-				catch(Exception ex)
-				{
-					ex.printStackTrace();
-				}
+			client = HttpClients.custom().setDefaultCredentialsProvider(credsProvider)
+					.setHostnameVerifier(SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER).build();   // works well to download Patent XML, as it has redirect
 
-				//}
 
-			return client;
+
 		}
-		
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+
+		//}
+
+		return client;
+	}
+
 	//private synchronized static void end()
 	private static void end(CloseableHttpClient client, String thread_name)
 	{
@@ -507,7 +516,7 @@ public class VTWAssetAPI {
 		{
 			ex.printStackTrace();
 		}
-		
+
 		try
 		{
 			if(client !=null)
