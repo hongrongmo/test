@@ -44,7 +44,7 @@ public class ReadPatentIdFromFile {
 	{
 		String fileName = null;
 		int loadNumber = 0;
-		int recsPerZipFile = 20000;
+		int recsPerZipFile = 2000;
 
 		if(args[0] !=null)
 		{
