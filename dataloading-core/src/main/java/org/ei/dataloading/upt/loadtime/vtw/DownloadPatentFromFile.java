@@ -10,49 +10,71 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+
 /**
  * 
  * @author TELEBH
- * @Date: 10/14/2016
- *  @Description: if we ever need to re-download Patents from SQS Archive text file (i.e. re-download files that failed to download when got from SQS message, 
+ * @Date: 02/09/2017
+ * @Description: if we ever need to re-download Patents from SQS Archive text file (i.e. re-download files that failed to download when got from SQS message, 
  *  for other reason, for example when 1st downloaded files with Byte Order Marker, and our process failed to convert, we had to modify download program
  *  taking off these BOM, then we need to download these files again, since the message were deleted from the QUEUE, so to get these Patents IDS again to re-download
  *  we can get them form archive file, in this case we use this program to do so
  *  
- *   this class is to read SQS archive text file, get the PatentID, keep it in a list, pass it to VTWSearchAPI for download 
+ *   this class is to read SQS archive text file, get the PatentID, keep it in a list, pass it to VTWAssetAPI for download 
  *   
+ *   NOTE: this class logic same as "ReadPatentIdFromFile.java" except that this class if for
+ *   download file using AssetAPI (not SearchAPI), while "ReadPatentIdFromFile.java" is for SearchAPI 
+ *   
+ *   this class should be run via one single thread. so set default threadname as "Thread1"
  */
-public class ReadPatentIdFromFile {
+public class DownloadPatentFromFile {
 
-	public static final char FIELDDELIM = '\t';
-
-	// get the list of Patent-Ids; with their signedAssetURL if any;  to download 
-	private static Map<String,String> patentIds = new LinkedHashMap<String,String>();
-	private static int recsPerSingleConnection = 1000;
+	public static final String FIELDDELIM = "\t";
 
 	
+	
+	private static String fileName = null;
+	private static int loadNumber = 0;
+	private static int recsPerZipFile = 2000;
+	private static int recsPerSingleConnection = 2000;
+	
+	private static String threadName = "Thread1"; 
+	
+	
+	static CloseableHttpClient client = null;
+	
+	// hold the list of Patent-Ids; with their signedAssetURL if any;  to download
+	private static Map<String,String> patentIds = new LinkedHashMap<String,String>();
+	
+
 	private static long startTime = System.currentTimeMillis();
 	private static long endTime = System.currentTimeMillis();
 	private static long midTime = System.currentTimeMillis();
 	
 
-	public ReadPatentIdFromFile()
+	public DownloadPatentFromFile()
 	{
 
 	}
 	public static void main(String[] args) 
 	{
-		String fileName = null;
-		int loadNumber = 0;
-		int recsPerZipFile = 2000;
-
-		if(args[0] !=null)
+		if(args.length >0)
 		{
-			fileName = args[0];
+			if(args[0] !=null)
+			{
+				fileName = args[0];
 
-			System.out.println("read PatentIDs from file: " +  fileName);
+				System.out.println("read PatentIDs from file: " +  fileName);
+			}
 		}
-
+		
 		if(args.length >3)
 		{
 			if(args[1] !=null)
@@ -92,7 +114,7 @@ public class ReadPatentIdFromFile {
 		System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
 		
 		
-		ReadPatentIdFromFile obj = new ReadPatentIdFromFile();
+		DownloadPatentFromFile obj = new DownloadPatentFromFile();
 		obj.readFile(fileName);
 		
 		
@@ -111,8 +133,8 @@ public class ReadPatentIdFromFile {
 			{
 
 				//Zip downloaded files (each in it's corresponding dir)
-				ArchiveVTWPatentRefeed archivePatent= new ArchiveVTWPatentRefeed();
-				archivePatent.readZipFileNameFromFile(loadNumber);
+				ArchiveVTWPatentAsset archivePatent= new ArchiveVTWPatentAsset();
+				//archivePatent.readZipFileNameFromFile(loadNumber);
 
 				
 				// to make each instance running of this class does not conflict with each other (not using same downloads dir,so can be deleted once zip process is complete)
@@ -127,8 +149,8 @@ public class ReadPatentIdFromFile {
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 				
 				
-				VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(Long.toString(epoch), recsPerSingleConnection);
-				vtwSearchAPI.downloadPatentMetadata(patentIds);
+				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch), recsPerSingleConnection, threadName);
+				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(epoch), "thread1");
 
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
@@ -137,7 +159,7 @@ public class ReadPatentIdFromFile {
 				
 				
 
-				archivePatent.zipDownloads(loadNumber, Long.toString(epoch));
+				//archivePatent.zipDownloads(loadNumber, Long.toString(epoch));
 				
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
@@ -155,9 +177,8 @@ public class ReadPatentIdFromFile {
 
 	private void readFile(String filename)
 	{
-		String patentID = null;
-
-
+		String patentID = null, signedAssetUrl = "";
+		String fields[] = null;
 		if(filename !=null)
 		{
 			try 
@@ -165,12 +186,18 @@ public class ReadPatentIdFromFile {
 				BufferedReader br = new BufferedReader(new FileReader(filename));
 				for(String line; (line = br.readLine()) !=null; )
 				{
-					patentID = line.substring(0, line.indexOf(FIELDDELIM));
-					if(patentID !=null &&
-							(patentID.substring(0, 2).equalsIgnoreCase("US") ||	patentID.substring(0, 2).equalsIgnoreCase("EP")
-									|| patentID.substring(0, 2).equalsIgnoreCase("WO")))
+					// patentID = line.substring(0, line.indexOf(FIELDDELIM));  only to get PatentID
+					fields = line.split(FIELDDELIM);
+					if(fields.length >2)
 					{
-						patentIds.put(patentID, "");
+						patentID = fields[0];
+						signedAssetUrl = fields[1];
+					}
+					
+					if(patentID !=null &&
+							(patentID.substring(0, 2).equalsIgnoreCase("US") ||	patentID.substring(0, 2).equalsIgnoreCase("EP")))
+					{
+						patentIds.put(patentID, signedAssetUrl);
 					}
 
 				}
@@ -184,5 +211,8 @@ public class ReadPatentIdFromFile {
 
 		}
 	}
+	
+
+	
 
 }

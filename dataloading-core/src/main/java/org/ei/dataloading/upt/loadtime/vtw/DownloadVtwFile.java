@@ -239,7 +239,9 @@ public class DownloadVtwFile {
 																	ByteOrderMark.UTF_8, ByteOrderMark.UTF_16BE,
 																	ByteOrderMark.UTF_16LE, ByteOrderMark.UTF_32BE, ByteOrderMark.UTF_32LE);
 					
-					ByteOrderMark bom = bomStream.getBOM();
+					// comment out these as it returns NullPointerException
+					
+					/*ByteOrderMark bom = bomStream.getBOM();
 					String charSet = bom.getCharsetName();
 
 					if(bomStream.hasBOM())
@@ -269,7 +271,7 @@ public class DownloadVtwFile {
 						System.out.println("XML has a UTF_32LE BOM");
 						System.out.println("BOM value is : " + charSet);
 						System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
-					} 
+					} */
 					
 					IOUtils.copy(bomStream, out);
 					
