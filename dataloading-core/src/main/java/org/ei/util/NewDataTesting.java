@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
+import java.sql.ResultSetMetaData;
 import java.util.*;
 import java.net.*;
 import java.util.regex.*;
@@ -176,11 +177,195 @@ public class NewDataTesting
 		{
 			test.validatedXml(updateNumber);
 		}
+		else  if(action.equals("buildxml"))
+		{
+			test.buildXMLFromDATABASE(updateNumber);
+		}
+		else  if(action.equals("readFromUrl"))
+		{
+			test.urlReader();
+		}
 		else
 		{
 			test.getData(database);
 		}
 
+	}
+	
+	public void urlReader() throws Exception
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		String sqlQuery = null;
+		FileWriter out = null;
+		BufferedReader in = null;
+		
+		try
+		{
+			out = new FileWriter("outputFromURL.out");
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			List loadNumberList = new ArrayList();
+	        URL chinese = new URL("http://www.wenxuecity.com/");
+	        in = new BufferedReader(new InputStreamReader(chinese.openStream(), "UTF-8"));
+	
+	        String inputLine;
+	        int i=0;
+	        while ((inputLine = in.readLine()) != null)
+	        {
+	        	i++;
+	            System.out.println(inputLine);
+	            inputLine = inputLine.replaceAll("'", "''''");
+	            out.write(i+"\t"+inputLine+"\n");
+	            //stmt.executeQuery("insert into readFromURL values("+i+",'"+inputLine+"')");
+	            
+	        }
+	        
+	        in.close();
+	        out.close();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	    
+	}
+	
+	private void buildXMLFromDATABASE(String weekNumber)
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		String sqlQuery = null;
+		String m_id = null;
+		String accessnumber = null;
+		String load_number = null;
+		String ndi = null;
+		FileWriter out = null;
+		
+		try
+		{
+
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			List loadNumberList = new ArrayList();
+			if(weekNumber.equals("0"))
+			{
+				sqlQuery="select distinct load_number from c84_master";
+				rs = stmt.executeQuery(sqlQuery);
+				while (rs.next())
+				{	
+					if(rs.getString("load_number")!=null)				
+					loadNumberList.add(rs.getString("load_number"));
+				}
+			}
+			else
+			{
+				loadNumberList.add(weekNumber);
+			}
+			int k = 0;
+			for(int i=0;i<loadNumberList.size();i++)
+			{
+				out = new FileWriter("C84_"+(String)loadNumberList.get(i)+".xml");
+			
+				sqlQuery="select * from C84_master where load_number='"+(String)loadNumberList.get(i)+"'";															
+				System.out.println("QUERY= "+sqlQuery);
+				stmt = con.createStatement();
+				rs = stmt.executeQuery(sqlQuery);
+				ResultSetMetaData rsmd = rs.getMetaData();
+				out.write("<?xml version='1.0'  encoding='UTF-8'?>\n");
+				out.write("<RESULTS>\n");
+				
+				while (rs.next())
+				{
+					out.write("<ROW>\n");
+					for (int j = 1; j <= rsmd.getColumnCount(); j++) 
+					{
+						String name = rsmd.getColumnName(j);
+						m_id = rs.getString("m_id");
+						String value = rs.getString(name);
+						if(value!=null && !(name.equals("SU") || name.equals("PT") || name.equals("JJ") || name.equals("OA") || name.equals("PG")))
+						{					
+							out.write("<COLUMN NAME=\""+name+"\"><![CDATA["+value+"]]></COLUMN>\n");
+						}
+						
+					}
+					
+					out.write("<COLUMN NAME=\"EVLINK\"><![CDATA[https://www.engineeringvillage.com/share/document.url?mid="+m_id+"&database=cpx&view=detailed]]></COLUMN>\n");
+					out.write("</ROW>\n");
+				}
+				out.write("</RESULTS>\n");
+				if(stmt!=null)
+				{
+					stmt.close();
+				}
+				out.flush();
+				out.close();
+			}
+			System.out.println("total count= "+k);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
 	}
 	
 	private void validatedXml(String filename) throws Exception
@@ -844,10 +1029,14 @@ public class NewDataTesting
 		Statement stmt = null;
 		ResultSet rs = null;
 		Connection con = null;
+		FileWriter out = null;
 		try
 		{
+			out = new FileWriter("Georef_GI.out");
 			con = getConnection(this.URL,this.driver,this.username,this.password);
-			String sqlQuery = "select id_number,m_id from georef_master where load_number='"+load_number+"' and document_type='GI'";
+			//String sqlQuery = "select id_number,m_id from georef_master where load_number='"+load_number+"' and document_type='GI'";
+			//String sqlQuery = "select m_id,id_number from georef_master_orig where id_number in (select id_number from georef_master_delete)";
+			String sqlQuery = "select id_number,m_id from georef_master where document_type='GI'";
 			stmt = con.createStatement();
 
 			System.out.println("QUERY= "+sqlQuery);
@@ -862,11 +1051,11 @@ public class NewDataTesting
 
 				//in = new BufferedReader(new FileReader("test.txt"));
 				FastClient client = new FastClient();
-				client.setBaseURL("http://ei-main.nda.fastsearch.net:15100");
+				client.setBaseURL("http://evazure.trafficmanager.net:15100");
 				client.setResultView("ei");
 				client.setOffSet(0);
 				client.setPageSize(50000);
-				client.setQueryString("(ALL:\""+m_id+"\") and (wk:"+load_number+") AND (yr:[1785;2015]) AND (((db:grf)))");
+				client.setQueryString("(AN:\""+accessnumber+"\") AND (((db:grf)))");
 				//client.setQueryString("(ALL:\""+m_id+"\") and db:grf and dt:gi and wk:"+load_number);
 				client.setDoCatCount(true);
 				client.setDoNavigators(true);
@@ -879,34 +1068,47 @@ public class NewDataTesting
 
 				if(count<1)
 				{
-				  System.out.println("MID= "+m_id);
+				  System.out.println("missing record MID= "+m_id+" accessnumber="+accessnumber);
 			    }
 
 				StringBuffer sb=new StringBuffer();
-				/*
+				
 				for(int i=0;i<l.size();i++)
 				{
 					String[] docID = (String[])l.get(i);
-
+					//System.out.println("m_id="+m_id+" docID="+docID[0]+" id_number="+accessnumber);
 					if(!m_id.equals(docID[0]))
 					{
 						System.out.println("m_id="+m_id+" docID="+docID[0]+" id_number="+accessnumber);
+						out.write(docID[0]+"\t"+m_id+"\t"+accessnumber+"\n");
 					}
+					out.flush();
+					/*
 					else
 					{
 						System.out.println("id_number "+accessnumber+" has the same m_id");
 					}
+					*/
 				}
-				*/
+				
 
 			}
 			//getAccessnumber(sb.toString());
 			//System.out.println(sb.toString());
-
+			out.flush();
+			out.close();
 
 		}
 		catch(Exception e)
 		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
 			e.printStackTrace();
 		}
 
