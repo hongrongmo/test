@@ -1487,7 +1487,7 @@ throws Exception
         return pages.getStartPage();
     }
 
-    private String getDedupKey(String issn,
+    public String getDedupKey(String issn,
                                String coden,
                                String volume,
                                String issue,
