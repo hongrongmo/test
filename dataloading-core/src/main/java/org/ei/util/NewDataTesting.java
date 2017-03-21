@@ -23,9 +23,10 @@ import javax.xml.transform.*;
 import javax.xml.validation.*;
 import javax.xml.transform.dom.*;
 
-
 import org.ei.dataloading.inspec.loadtime.*;
+import org.ei.dataloading.cafe.*;
 import org.ei.domain.*;
+
 import org.ei.query.base.*;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.Client;
@@ -45,6 +46,9 @@ import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
 import io.searchbox.core.SearchResult.Hit; 
 
+import org.ei.dataloading.bd.loadtime.XmlCombiner;
+import org.ei.dataloading.CombinedXMLWriter;
+import org.ei.common.bd.*;
 
 
 public class NewDataTesting
@@ -66,6 +70,8 @@ public class NewDataTesting
 	public static void main(String args[]) throws Exception
 	{
 		NewDataTesting test = new NewDataTesting();
+		long startTime = System.currentTimeMillis();
+	    long endTime = System.currentTimeMillis();
 		if(args.length>8)
 		{
 			test.database = args[0];
@@ -185,11 +191,643 @@ public class NewDataTesting
 		{
 			test.urlReader();
 		}
+		else  if(action.equals("dedup"))
+		{
+			test.buildDedupkeyTable(updateNumber);
+		}
+		else  if(action.equals("bdmapping"))
+		{
+			test.buildMappingFromBD(updateNumber);
+		}
+		else  if(action.equals("testmapping"))
+		{
+			HashMap map = test.testMapping();
+		}
+		else  if(action.equals("allfastmid"))
+		{
+			test.getALLCPXMIDFromFast(database);
+		}		
 		else
 		{
 			test.getData(database);
 		}
+		endTime = System.currentTimeMillis();
+		System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
 
+	}
+	
+	public HashMap testMapping()
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		String sqlQuery = null;
+		
+		HashMap mappingMap = new HashMap();
+		try
+		{
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			
+			sqlQuery = "select bd_accessnumber,cafe_accessnumber,bd_pui,cafe_pui from bd_cafe_mapping";
+	        rs = stmt.executeQuery(sqlQuery);
+			int i=0;
+			while (rs.next())
+			{
+		
+				MappingObj mapping = new MappingObj();
+				String pui = rs.getString("bd_pui");
+				mapping.setBdAccessnumber(rs.getString("bd_accessnumber"));
+				mapping.setCafeAccessnumber(rs.getString("cafe_accessnumber"));
+				mapping.setBdPui(pui);
+				mapping.setCafePui(rs.getString("cafe_pui"));
+				mappingMap.put(pui, mapping);
+				//System.out.print(i+",");
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return mappingMap;
+		
+	}
+	
+	public List getMID(Connection con) throws Exception
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		String sqlQuery = null;
+		String m_id = null;
+		List midList = new ArrayList();
+		
+		try
+		{
+			
+			stmt = con.createStatement();			
+			sqlQuery = "select M_id from bd_master_dedupkey";
+	        rs = stmt.executeQuery(sqlQuery);			
+			while (rs.next())
+			{
+				m_id = rs.getString("M_ID");
+				midList.add(m_id);
+			}
+					
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return midList;
+	    
+	}
+					
+	
+	public void buildDedupkeyTable(String loadnumber) throws Exception
+	{
+		Statement stmt = null;
+		Statement addStmt = null;
+		Statement deleteStmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		String sqlQuery = null;
+		BufferedReader in = null;
+		CombinedXMLWriter writer = new CombinedXMLWriter(1,1,"cpx");
+		XmlCombiner c = new XmlCombiner(writer);
+		String m_id = null;
+		String accessnumber = null;
+		String doi = null;
+		String pui = null;
+		String issn = null;
+		String coden = null;
+		String volume = null;
+		String issue = null;
+		String page = null;
+		String articlenumber = null;
+		//String loadnumber = null;
+		String updatenumber = null;
+		String pii = null;
+		String citationtitle = null;
+		String dedupkey = null;
+		
+		try
+		{
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			addStmt = con.createStatement();
+			deleteStmt = con.createStatement();
+			List midList = getMID(con);
+			sqlQuery = "select M_id,accessnumber,doi,pui,issn,coden,volume,issue,page,articlenumber,loadnumber,updatenumber,pii,citationtitle from bd_master where loadnumber="+loadnumber;
+	        rs = stmt.executeQuery(sqlQuery);
+			int i=0;
+			while (rs.next())
+			{
+				i++;
+				try
+				{
+					m_id = rs.getString("M_ID");
+					if(midList.contains(m_id))
+					{
+						deleteStmt.executeQuery("delete from bd_master_dedupkey where m_id='"+m_id+"'");
+						System.out.println("delete m_id "+m_id);
+					}
+					accessnumber = rs.getString("ACCESSNUMBER");
+					doi = rs.getString("DOI");
+					if(doi==null)
+					{
+						doi="";
+					}
+					pui = rs.getString("PUI");
+					issn = rs.getString("ISSN");
+					if(issn==null)
+					{
+						issn="";
+					}
+					coden = rs.getString("CODEN");
+					if(coden==null)
+					{
+						coden="";
+					}
+					volume = rs.getString("VOLUME");
+					if(volume==null)
+					{
+						volume="";
+					}
+					issue = rs.getString("ISSUE");
+					if(issue==null)
+					{
+						issue="";
+					}
+					page = rs.getString("PAGE");
+					if(page==null)
+					{
+						page="";
+					}
+					articlenumber = rs.getString("ARTICLENUMBER");
+					if(articlenumber==null)
+					{
+						articlenumber="";
+					}
+					loadnumber = rs.getString("LOADNUMBER");
+					updatenumber = rs.getString("UPDATENUMBER");
+					pii = rs.getString("PII");
+					citationtitle = rs.getString("CITATIONTITLE");				
+					dedupkey = c.getDedupKey(issn,coden,volume,issue,c.getPage(page,articlenumber));  
+					String insertQuery = "insert into bd_master_dedupkey(M_ID,ACCESSNUMBER,DOI,PUI,ISSN,CODEN,VOLUME,ISSUE,PAGE,ARTICLENUMBER,"
+							+ "LOADNUMBER,UPDATENUMBER,DEDUPKEY,PII,CITATIONTITLE) "
+							+ "values ('"+m_id+"','"+accessnumber+"','"+doi+"','"+pui+"','"+issn+"','"+coden+"','"+volume+"','"+issue+"','"+page+"','"
+							+ articlenumber+"','"+loadnumber+"','"+updatenumber+"','"+dedupkey+"','"+pii+"','"+citationtitle+"')";
+					System.out.println("INSERT QUERY "+insertQuery);
+					addStmt.addBatch(insertQuery);
+					if(i==100)
+					{
+						addStmt.executeBatch();
+						i=0;
+					}      
+					
+				}
+				catch(Exception e1)
+				{
+					e1.printStackTrace();
+				}
+	            
+	        }
+			addStmt.executeBatch();
+	        
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (addStmt != null) {
+				try {
+					addStmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	    
+	}
+	
+	public void buildMappingFromBD(String loadnumber) throws Exception
+	{
+		Statement stmt = null;
+		Statement addStmt = null;
+		Statement checkStmt = null;
+		ResultSet rs = null;
+		ResultSet checkRs = null;
+		Connection con = null;
+		String sqlQuery = null;
+		
+		String mid = null;
+		String accessnumber = null;
+		String doi = null;
+		String pui = null;
+		String issn = null;
+		String coden = null;
+		String volume = null;
+		String issue = null;
+		String page = null;
+		String articlenumber = null;
+		//String loadnumber = null;
+		String updatenumber = null;
+		String pii = null;
+		String citationtitle = null;
+		String dedupkey = null;
+		
+		try
+		{
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			addStmt = con.createStatement();
+			checkStmt = con.createStatement();
+			List midList = getMID(con);
+			sqlQuery = "select M_id,accessnumber,doi,pui,issn,coden,volume,issue,page,articlenumber,loadnumber,updatenumber,pii,citationtitle from bd_master where database='cpx' and loadnumber="+loadnumber;
+	        rs = stmt.executeQuery(sqlQuery);
+			int i=0;
+			while (rs.next())
+			{
+				i++;
+				try
+				{
+					mid = rs.getString("M_ID");
+					accessnumber = rs.getString("ACCESSNUMBER");
+					doi = rs.getString("DOI");
+					if(doi==null)
+					{
+						doi="";
+					}
+					pui = rs.getString("PUI");
+					issn = rs.getString("ISSN");
+					if(issn==null)
+					{
+						issn="";
+					}
+					coden = rs.getString("CODEN");
+					if(coden==null)
+					{
+						coden="";
+					}
+					volume = rs.getString("VOLUME");
+					if(volume==null)
+					{
+						volume="";
+					}
+					issue = rs.getString("ISSUE");
+					if(issue==null)
+					{
+						issue="";
+					}
+					page = rs.getString("PAGE");
+					if(page==null)
+					{
+						page="";
+					}
+					articlenumber = rs.getString("ARTICLENUMBER");
+					if(articlenumber==null)
+					{
+						articlenumber="";
+					}
+					loadnumber = rs.getString("LOADNUMBER");
+					updatenumber = rs.getString("UPDATENUMBER");
+					pii = rs.getString("PII");
+					citationtitle = rs.getString("CITATIONTITLE");				
+					dedupkey = getDedupKey(issn,coden,volume,issue,getPage(page,articlenumber));  
+					String[] mapping = checkCafe(checkStmt,accessnumber,doi,pui,pii,citationtitle,dedupkey);
+					if(mapping!=null && mapping.length==5)
+					{
+						String insertQuery = "insert into HMO_BD_CAFE_MAPPING(BD_ACCESSNUMBER,CAFE_ACCESSNUMBER,BD_PUI,CAFE_PUI,MATCHED_CRITERION,LOADNUMBER)"
+								+ "values("+mapping[0]+","+mapping[1]+","+mapping[2]+","+mapping[3]+",'"+mapping[4]+"',"+Integer.parseInt(loadnumber)+")";
+	 
+						System.out.println("INSERT QUERY "+insertQuery);
+						addStmt.addBatch(insertQuery);
+						if(i==50)
+						{
+							addStmt.executeBatch();
+							i=0;
+						}  
+					
+					
+					}
+				}
+				catch(Exception e1)
+				{
+					e1.printStackTrace();
+				}
+	            
+	        }
+			addStmt.executeBatch();
+	        
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (addStmt != null) {
+				try {
+					addStmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (checkStmt != null) {
+				try {
+					checkStmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	    
+	}
+	
+	private String[] checkCafe(Statement stmt,String accessnumber,String doi,String pui,String pii,String citationtitle,String dedupkey)
+	{
+		
+		ResultSet rs = null;		
+		String[] result = null;
+		try
+		{			
+			String sqlQuery = "select M_id,accessnumber,doi,pui,issn,coden,volume,issue,page,articlenumber,loadnumber,updatenumber,pii,citationtitle from cafe_master where pui='"+pui+"'";
+			String sqlQuery1 = "select M_id,accessnumber,doi,pui,issn,coden,volume,issue,page,articlenumber,loadnumber,updatenumber,pii,citationtitle from cafe_master where accessnumber='"+accessnumber+"'";
+			String sqlQuery2 = "select M_id,accessnumber,doi,pui,issn,coden,volume,issue,page,articlenumber,loadnumber,updatenumber,pii,citationtitle from cafe_master where doi='"+doi+"'";
+			String sqlQuery3 = "select M_id,accessnumber,doi,pui,issn,coden,volume,issue,page,articlenumber,loadnumber,updatenumber,pii,citationtitle from cafe_master where pii='"+pii+"'";
+			String sqlQuery4 = "select M_id,accessnumber,doi,pui,issn,coden,volume,issue,page,articlenumber,loadnumber,updatenumber,pii,citationtitle from cafe_master where citationtitle='"+citationtitle+"'";
+			rs = stmt.executeQuery(sqlQuery);			
+			result=checkResult(rs,"pui",accessnumber,doi,pui,pii,citationtitle,dedupkey);
+			if(result==null)
+			{
+				rs = stmt.executeQuery(sqlQuery1);			
+				result=checkResult(rs,"accessnumber",accessnumber,doi,pui,pii,citationtitle,dedupkey);
+				if(result==null)
+				{
+					rs = stmt.executeQuery(sqlQuery2);			
+					result=checkResult(rs,"doi",accessnumber,doi,pui,pii,citationtitle,dedupkey);
+					if(result==null)
+					{
+						rs = stmt.executeQuery(sqlQuery3);			
+						result=checkResult(rs,"pii",accessnumber,doi,pui,pii,citationtitle,dedupkey);
+						if(result==null)
+						{
+							rs = stmt.executeQuery(sqlQuery4);			
+							result=checkResult(rs,"citationtitle",accessnumber,doi,pui,pii,citationtitle,dedupkey);
+						}
+					}
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) 
+			{
+				try 
+				{
+					rs.close();
+				}
+				catch (Exception e) 
+				{
+					e.printStackTrace();
+				}
+			}		
+		}
+		return result;
+	}
+			
+	private String[] checkResult(ResultSet rs,String checkParameter,String accessnumber,String doi,String pui,String pii,String citationtitle,String dedupkey)
+	{
+		String cafe_mid = null;
+		String cafe_accessnumber = null;
+		String cafe_doi = null;
+		String cafe_pui = null;
+		String cafe_issn = null;
+		String cafe_coden = null;
+		String cafe_volume = null;
+		String cafe_issue = null;
+		String cafe_page = null;
+		String cafe_articlenumber = null;
+		//String loadnumber = null;
+		String cafe_updatenumber = null;
+		String cafe_pii = null;
+		String cafe_citationtitle = null;
+		String cafe_dedupkey = null;
+		boolean mappingFlag = false;
+		String mappingMethod = null;
+		String[] result = null;
+		
+		try
+		{
+			while (rs.next())
+			{			
+				cafe_mid = rs.getString("M_ID");
+				cafe_accessnumber = rs.getString("ACCESSNUMBER");
+				cafe_doi = rs.getString("DOI");
+				if(cafe_doi==null)
+				{
+					cafe_doi="";
+				}
+				cafe_pui = rs.getString("PUI");
+				cafe_issn = rs.getString("ISSN");
+				if(cafe_issn==null)
+				{
+					cafe_issn="";
+				}
+				cafe_coden = rs.getString("CODEN");
+				if(cafe_coden==null)
+				{
+					cafe_coden="";
+				}
+				cafe_volume = rs.getString("VOLUME");
+				if(cafe_volume==null)
+				{
+					cafe_volume="";
+				}
+				cafe_issue = rs.getString("ISSUE");
+				if(cafe_issue==null)
+				{
+					cafe_issue="";
+				}
+				cafe_page = rs.getString("PAGE");
+				if(cafe_page==null)
+				{
+					cafe_page="";
+				}
+				cafe_articlenumber = rs.getString("ARTICLENUMBER");
+				if(cafe_articlenumber==null)
+				{
+					cafe_articlenumber="";
+				}
+				//cafe_loadnumber = rs.getString("LOADNUMBER");
+				//cafe_updatenumber = rs.getString("UPDATENUMBER");
+				cafe_pii = rs.getString("PII");
+				cafe_citationtitle = rs.getString("CITATIONTITLE");				
+				cafe_dedupkey = getDedupKey(cafe_issn,cafe_coden,cafe_volume,cafe_issue,getPage(cafe_page,cafe_articlenumber));  
+				if(!checkParameter.equals("pui") && (cafe_pui.equals(pui)))
+				{
+					mappingMethod=checkParameter+",pui";
+				}
+				else if(!checkParameter.equals("accessnumber") && (cafe_accessnumber.equals(accessnumber)))
+				{
+					mappingMethod=checkParameter+",accessnumber";
+				}
+				else if	(!checkParameter.equals("doi") && cafe_doi!=null && doi!=null && cafe_doi.equals(doi))
+				{
+					mappingMethod=checkParameter+",doi";
+				}
+				else if(!checkParameter.equals("pii") && cafe_pii != null && pii != null && cafe_pii.equals(pii))
+				{
+					mappingMethod=checkParameter+",pii";
+				}
+				else if(!checkParameter.equals("citationtitle") && cafe_citationtitle!= null && citationtitle!= null && cafe_citationtitle.equals(citationtitle))
+				{
+					mappingMethod=checkParameter+",citationtitle";
+				}
+				else if(!checkParameter.equals("dedupkey") && cafe_dedupkey!=null && dedupkey!=null && cafe_dedupkey.equals(dedupkey))
+				{
+					mappingMethod=checkParameter+",dedupkey";
+				}
+				if(mappingMethod!=null)	
+				{
+					result = new String[5];
+					result[0]=accessnumber;
+					result[1]=cafe_accessnumber;
+					result[2]=pui;
+					result[3]=cafe_pui;
+					result[4]=mappingMethod;
+					break;
+				}
+	
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
+		}
+		
+		return result;
+		
 	}
 	
 	public void urlReader() throws Exception
@@ -1095,6 +1733,65 @@ public class NewDataTesting
 			}
 			//getAccessnumber(sb.toString());
 			//System.out.println(sb.toString());
+			out.flush();
+			out.close();
+
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+
+	}
+	
+	private void getALLCPXMIDFromFast(String database)
+	{
+
+		FileWriter out = null;
+		try
+		{
+			out = new FileWriter("delete.txt");
+							
+			FastClient client = new FastClient();
+			client.setBaseURL("http://evprod08.cloudapp.net:15100");
+			client.setResultView("ei");
+			client.setOffSet(0);
+			client.setPageSize(50000);
+			client.setQueryString("db:"+database);
+			client.setDoCatCount(true);
+			client.setDoNavigators(true);
+			client.setPrimarySort("ausort");
+			client.setPrimarySortDirection("+");
+			client.search();
+
+			List l = client.getDocIDs();
+			int count =client.getHitCount();
+
+			if(count<1)
+			{
+			  System.out.println("No records found in fast");
+		    }
+
+			StringBuffer sb=new StringBuffer();
+			
+			for(int i=0;i<l.size();i++)
+			{
+				String[] docID = (String[])l.get(i);				
+				
+				//System.out.println("docID="+docID[0]);
+				out.write(docID[0]+"\n");
+				
+				out.flush();
+				
+			}		
 			out.flush();
 			out.close();
 
@@ -2124,7 +2821,89 @@ public class NewDataTesting
 		 return columnNameList;
 
 	}
+	
+	 public String getPage(String xp,
+             String ar)
+	{
+		String strPage = null;
+		
+		if(ar != null)
+		{
+			strPage = ar;
+		}
+		else
+		{
+			strPage = xp;
+		}
+		
+		return strPage;
+	}
+	
+	public String getDedupKey(String issn,
+            String coden,
+            String volume,
+            String issue,
+            String page)
+	throws Exception
+	{
+		Perl5Util perl = new Perl5Util();
+		String firstVolume = getFirstNumber(volume);
+		String firstIssue = getFirstNumber(issue);
+		String firstPage = getFirstPage(page);
+		
+		if ((issn == null && coden == null) ||
+			firstVolume == null ||
+			firstIssue == null ||
+			firstPage == null)
+		{
+			return null;
+		}
+		
+		StringBuffer buf = new StringBuffer();
+		
+		if (issn != null)
+		{
+			buf.append(perl.substitute("s/-//g", issn));
+		}
+		else
+		{
+			buf.append(BdCoden.convert(coden));
+		}
+		
+		buf.append("vol" + firstVolume);
+		buf.append("is" + firstIssue);
+		buf.append("pa" + firstPage);
+		
+		return buf.toString().toLowerCase();
+	
+	}
+	
+	private String getFirstNumber(String v)
+    {
+		Perl5Util perl = new Perl5Util();
+        MatchResult mResult = null;
+        if (v == null)
+        {
+            return null;
+        }
 
+        if (perl.match("/[1-9][0-9]*/", v))
+        {
+            mResult = perl.getMatch();
+        }
+        else
+        {
+            return null;
+        }
+
+        return mResult.toString();
+    }
+	
+	private String getFirstPage(String v)
+    {
+        BdPage pages = new BdPage(v);
+        return pages.getStartPage();
+    }	 
 
 	protected Connection getConnection(String connectionURL,
 		                               String driver,
