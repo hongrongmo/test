@@ -483,7 +483,7 @@ public class ArchiveVTWPatentRefeed {
 							}
 
 							// delete the message
-							//deleteMessage(msgReciptHandle);
+							deleteMessage(msgReciptHandle);
 						}
 					}
 				}

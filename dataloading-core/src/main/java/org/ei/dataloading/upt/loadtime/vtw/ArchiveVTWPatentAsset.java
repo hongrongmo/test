@@ -209,7 +209,11 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 				//Zip downloaded files (each in it's corresponding dir)
 
-				zipDownloads(loadNumber, Long.toString(epoch));
+				synchronized(this)
+				{
+					zipDownloads(loadNumber, Long.toString(epoch));
+				}
+				
 
 
 				midTime = endTime;
@@ -356,7 +360,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest(myQueueUrl)
 		.withVisibilityTimeout(MESSAGE_VISIBILITY_TIME_OUT_SECONDS)
 		.withWaitTimeSeconds(10).withMaxNumberOfMessages(NUM_OF_MESSAGES_TO_FETCH)
-		.withAttributeNames("SentTimestamp");
+		.withAttributeNames("SentTimestamp")
+		.withAttributeNames("ApproximateReceiveCount");
 
 
 
@@ -404,13 +409,18 @@ public class ArchiveVTWPatentAsset implements Runnable{
 								{
 									recordBuf.append(obj.getMessageField("patentid"));
 
-									if(obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
-											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP"))
+									/* only download New Patents (exclude updates) which has "generation=10". added 03/24/2017 to filter existing messages in queue
+									which has both new & update. start from Monday 03/27/2017 VTW team will apply filter rule on queue level
+									*/
+									if(Integer.parseInt(obj.getMessageField("generation")) == 10 && 
+											(obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP")))
 
 										patentIds.put(obj.getMessageField("patentid"), "");
 
 									else
-										System.out.println("Skip downloading Patent : "+ obj.getMessageField("patentid") + " of type: " + obj.getMessageField("patentid").substring(0, 2));
+										System.out.println("Skip downloading Patent : "+ obj.getMessageField("patentid") + " of generation: " + obj.getMessageField("generation")
+												+ " and type: " + obj.getMessageField("patentid").substring(0, 2));
 
 									recordBuf.append(FIELDDELIM);
 
@@ -424,14 +434,13 @@ public class ArchiveVTWPatentAsset implements Runnable{
 											signedUrlExpiration = Long.parseLong(obj.getMessageField("urlExpirationDate"));
 											//recordBuf.append(convertMillisecondsToFormattedDate(obj.getMessageField("urlExpirationDate"))); // human readable format
 											recordBuf.append(signedUrlExpiration);
+											recordBuf.append(FIELDDELIM);
 
 										}
-										recordBuf.append(FIELDDELIM);
-
-
 
 										recordBuf.append(obj.getMessageField("signedAssetUrl"));
-
+										recordBuf.append(FIELDDELIM);
+										
 										// add preSigned-URL only if it is valid (expirationdate > currentDateTime by ~27 hrs)
 										if(signedUrlExpiration > now  && ((signedUrlExpiration - now) > 100000))
 										{
@@ -446,11 +455,6 @@ public class ArchiveVTWPatentAsset implements Runnable{
 										}
 
 									}
-
-									recordBuf.append(FIELDDELIM);
-
-
-
 
 									//message To
 									if(obj.getMessageField("message_to") !=null)
@@ -482,6 +486,9 @@ public class ArchiveVTWPatentAsset implements Runnable{
 									if(msgAttributes !=null && ! (msgAttributes.isEmpty()))
 									{	
 										recordBuf.append(msgSentDateFormat.format(new Date(Long.parseLong(msgAttributes.get("SentTimestamp")))).toString());
+										
+										// for debugging print the message ApproximateReceiveCount
+										System.out.println("Message receive count: " + msgAttributes.get("ApproximateReceiveCount"));
 									}
 									// write the message to out file
 									out.println(recordBuf.toString().trim());
@@ -624,7 +631,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		int zipFileID = 1;
 		int curRecNum = 0;
 
-		System.out.println(threadName + ": Zip downloaded files");
+		System.out.println(threadName + ": Zip downloaded files for downloadDir: " + downloadDirName);
 
 		// read latest zipfilename from zipFileNames file as the start point for Sequence generation
 		readZipFileNameFromFile(loadNumber);
@@ -644,7 +651,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			zipsDir.mkdir();
 		}
 
-		zipsDir = new File(zipsDir+"/" +loadnumber);
+		//zipsDir = new File(zipsDir+"/" +loadnumber);  // for organizing downloades based on loadnumber
+		zipsDir = new File(zipsDir+"/tmp");
 		if(!(zipsDir.exists()))
 		{
 			zipsDir.mkdir();
