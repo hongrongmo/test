@@ -145,26 +145,30 @@ public class DownloadPatentFromFile {
 				
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
-				System.out.println("time before downloading files "+(endTime-midTime)/1000.0+" seconds");
-				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+				System.out.println(threadName + " :time before downloading files "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println(threadName + " :total time used "+(endTime-startTime)/1000.0+" seconds");
+
 				
-				
-				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch), recsPerSingleConnection, threadName);
-				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(epoch), "thread1");
+				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch),recsPerSingleConnection, threadName);
+				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(epoch), threadName);
+
 
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
-				System.out.println("time after downloading files "+(endTime-midTime)/1000.0+" seconds");
-				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-				
-				
+				System.out.println(threadName + " :time after downloading files "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println(threadName + " :total time used "+(endTime-startTime)/1000.0+" seconds");
 
-				//archivePatent.zipDownloads(loadNumber, Long.toString(epoch));
-				
+
+
+				//Zip downloaded files (each in it's corresponding dir)
+
+				archivePatent.zipDownloads(loadNumber, Long.toString(epoch));
+
+
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
-				System.out.println("time after zip downloaded files "+(endTime-midTime)/1000.0+" seconds");
-				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+				System.out.println(threadName + " :time after zip downloaded files "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println(threadName + " :total time used "+(endTime-startTime)/1000.0+" seconds");
 				
 
 			} 
@@ -177,7 +181,7 @@ public class DownloadPatentFromFile {
 
 	private void readFile(String filename)
 	{
-		String patentID = null, signedAssetUrl = "";
+		String patentID = null, signedAssetUrl = "", generation=null;
 		String fields[] = null;
 		if(filename !=null)
 		{
@@ -192,12 +196,20 @@ public class DownloadPatentFromFile {
 					{
 						patentID = fields[0];
 						signedAssetUrl = fields[1];
+						generation = fields[3].substring(fields[3].lastIndexOf("/")+1, fields[3].length());
 					}
 					
 					if(patentID !=null &&
-							(patentID.substring(0, 2).equalsIgnoreCase("US") ||	patentID.substring(0, 2).equalsIgnoreCase("EP")))
+							(patentID.substring(0, 2).equalsIgnoreCase("US") ||	patentID.substring(0, 2).equalsIgnoreCase("EP"))
+							&& generation.equals("10"))
 					{
 						patentIds.put(patentID, signedAssetUrl);
+						
+					}
+					else
+					{
+						System.out.println("Skip downloading Patent : "+ patentID + " of generation: " + generation
+								+ " and type: " + patentID.substring(0, 2));
 					}
 
 				}

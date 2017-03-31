@@ -50,7 +50,8 @@ https://vtw.elsevier.com/asset/pat/<VTW patent id>?type=MAIN&fmt=application/xml
  */
 public class VTWAssetAPI {
 
-	private static final String HOST = "acc.vtw.elsevier.com";
+	//private static final String HOST = "acc.vtw.elsevier.com";   // VTW UAT env
+	private static final String HOST = "vtw.elsevier.com";     // VTW Prod
 	private static final String ENDPOINT_ROOT = "https://" + HOST;
 
 	private static final String PATH = "/asset/pat/";
@@ -60,10 +61,11 @@ public class VTWAssetAPI {
 
 
 	private static final String username = "engineering-village";
-	private static final String password = "elCome29347";
+	private static final String password = "evVtw!23";         // for Prod Queue
+	//private static final String password = "elCome29347";   //for testing queue, UAT
 
-	private static final int REQUEST_CONNECTION_TIMEOUT = 100 * 1000;		//100 seconds
-	private static final int SOCKET_TIMEOUT = 100 * 1000;
+	private static final int REQUEST_CONNECTION_TIMEOUT = 1000 * 1000;		//1000 seconds
+	private static final int SOCKET_TIMEOUT = 1000 * 1000;
 
 	private String Url = null;
 
@@ -215,21 +217,24 @@ public class VTWAssetAPI {
 							{
 								// send the request
 								response = sendRequest(request, client, responseHandler);
-								if(Integer.parseInt(response[0]) ==200)
+								if(response[0] !=null)
 								{
+									if(Integer.parseInt(response[0]) ==200)
 									break;
-								}
-								else if(Integer.parseInt(response[0]) !=200 && i<2)
-								{
-									System.out.println("download response code " + response[0]  + " is not 200, re-try download:" +  key);
-									Thread.sleep(500);
-								}
-								else
-								{
-									System.out.println("download response code " + response[0]  + " is not 200, so skip this file:" +  key);
-									out.println(key);
-								}
+									
+									else if(Integer.parseInt(response[0]) !=200 && i<2)
+									{
+										System.out.println("download response code " + response[0]  + " is not 200, re-try download:" +  key);
+										Thread.sleep(500);
+									}
+									else
+									{
+										System.out.println("download response code " + response[0]  + " is not 200, so skip this file:" +  key);
+										out.println(key);
+									}
 
+								}
+								
 							}
 
 							//Thread.sleep(50);
@@ -328,6 +333,11 @@ public class VTWAssetAPI {
 			logger.error("Error message: " + e.getMessage());
 			logger.error("Cause: " + e.getCause());
 			e.printStackTrace();
+			e.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			System.out.println("exception: " + e.getMessage());
 			e.printStackTrace();
 		}
 
