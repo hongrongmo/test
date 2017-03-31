@@ -61,6 +61,8 @@ public class CombinedXMLWriter
     private NumberFormat formatter;
     private long starttime = 0;
     private String database;
+    private String pui;
+    private String loadnumber;
 
     public String getDatabase() {
         return database;
@@ -71,7 +73,23 @@ public class CombinedXMLWriter
     }
     public String getDatabaseID() {
         return databaseID;
-      }
+    }
+    
+    public void setLoadnumber(String loadnumber) {
+        this.loadnumber = loadnumber;
+    }
+    
+    public String getLoadnumber() {
+        return loadnumber;
+    }
+    
+    public void setPui(String pui) {
+        this.pui = pui;
+    }
+    
+    public String getPui() {
+        return pui;
+    }
 
     public boolean getIsOpen() {
       return open;
@@ -346,6 +364,8 @@ public class CombinedXMLWriter
     {
 
         setDatabase(rec.getString(EVCombinedRec.DATABASE));
+        setPui(rec.getString(EVCombinedRec.PUI));
+        setLoadnumber(rec.getString(EVCombinedRec.LOAD_NUMBER));
         this.eid = rec.getString(EVCombinedRec.DOCID);
         begin();
         out.println("   <ROW> ");
@@ -1081,7 +1101,7 @@ public class CombinedXMLWriter
                
                     if(oo!=null && getDatabase()!=null && getDatabase().length()>=3)
                     {
-                        indexWriter.println(Entity.prepareString(oo).toUpperCase().trim() + "\t" + getDatabase().substring(0,3) + "\t" + aid);
+                        indexWriter.println(Entity.prepareString(oo).toUpperCase().trim() + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber());
                     }
                     
                     o[i] = oo;

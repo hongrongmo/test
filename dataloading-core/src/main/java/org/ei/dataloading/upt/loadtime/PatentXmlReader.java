@@ -163,29 +163,62 @@ public class PatentXmlReader
 			String path = root.getPath() + File.separator + zipfiles[i];
 			File current_file = new File(path);
 			System.out.println("filename= "+current_file.getName());
-			ZipFile zipFile = new ZipFile(path);
-			/*Enumeration entries = zipFile.entries();*/   // original
-			Enumeration entries = zipFile.getEntries();    
-			while (entries.hasMoreElements())
+			ZipFile zipFile = null;
+			try
 			{
-				BufferedReader xmlReader = null;
-				/*ZipEntry entry = (ZipEntry)entries.nextElement();*/   //original
-				ZipArchiveEntry entry = (ZipArchiveEntry)entries.nextElement();
-				try
+				zipFile = new ZipFile(path);
+				/*Enumeration entries = zipFile.entries();*/   // original
+				Enumeration entries = zipFile.getEntries();    
+				while (entries.hasMoreElements())
 				{
-					xmlReader = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
-					patentXmlParser(xmlReader);
-				}
-				finally
-				{
+					BufferedReader xmlReader = null;
+					/*ZipEntry entry = (ZipEntry)entries.nextElement();*/   //original
+					ZipArchiveEntry entry = null;
 					try
 					{
-						xmlReader.close();
+						entry = (ZipArchiveEntry)entries.nextElement();
+						xmlReader = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
+						patentXmlParser(xmlReader);
+						
 					}
-					catch(Exception e)
+					catch(Exception e1)
 					{
-						e.printStackTrace();
+						e1.printStackTrace();
 					}
+					finally
+					{
+						try
+						{
+							
+							if(xmlReader!=null)
+							{
+								xmlReader.close();
+							}
+						}
+						catch(Exception e)
+						{
+							e.printStackTrace();
+						}
+					}
+				}
+			}
+			catch(Exception e2)
+			{
+				e2.printStackTrace();
+			}
+			finally
+			{
+				try
+				{
+					
+					if(zipFile!=null)
+					{
+						zipFile.close();
+					}
+				}
+				catch(Exception e3)
+				{
+					e3.printStackTrace();
 				}
 			}
 		}
