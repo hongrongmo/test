@@ -370,6 +370,12 @@ public class AuthorCombiner {
 						" and rownum<2";
 						*/
 				
+				// 02/22/2017 to test author with chinees name ( made up chinees name to test)
+				
+				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
+				" and AUTHORID = '6603802631'";*/
+				
+				
 				
 				
 				System.out.println(query);

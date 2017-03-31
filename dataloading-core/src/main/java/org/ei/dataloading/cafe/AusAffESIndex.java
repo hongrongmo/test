@@ -45,9 +45,9 @@ public class AusAffESIndex {
 	private final String REGION = "us-east-1";
 	
 	//private String HOST = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";  // for dataloading Ec2
-	//private final String HOST = "localhost:8060";    // for Prod from localhost
+	private String HOST = "localhost:8060";    // for Prod from localhost
 	//private final String HOST = "search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com";  // for testing
-	private String HOST = "localhost:8050";    // evauaf cluster using tunnel, localhost
+	//private String HOST = "localhost:8050";    // evauaf cluster using tunnel, localhost
 	private String ENDPOINT_ROOT = "http://" + HOST;
 	private String PATH = "/cafe/_bulk";
 	private String ENDPOINT = ENDPOINT_ROOT + PATH;
