@@ -463,7 +463,8 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 		String message_type = null;
 		String prefix = null;
 		String Patent_resourceUrl = null;
-		String patentId = null, urlExpirationDate = null;
+		String patentId = null, urlExpirationDate = null, patGeneration =null;
+		
 		
 		String signedAssetURL = null;
 		
@@ -495,7 +496,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			messageFieldKeys.put("message_to", msgTo);
 			
 			// only process SQS Message that meant to EV ONLY
-			if(msgTo !=null && msgTo.contains("EV"))
+			if(msgTo !=null && msgTo.contains("/EV"))
 			{
 				evContributer = true;
 				
@@ -553,6 +554,10 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 						{
 							patentId = Patent_resourceUrl.substring(Patent_resourceUrl.indexOf("pat/") + 4, Patent_resourceUrl.lastIndexOf("/"));
 							messageFieldKeys.put("patentid", patentId);
+							
+							//Patent generation
+							patGeneration = Patent_resourceUrl.substring(Patent_resourceUrl.lastIndexOf("/")+1, Patent_resourceUrl.length());
+							messageFieldKeys.put("generation", patGeneration);
 						}
 						else
 						{
