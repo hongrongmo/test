@@ -282,6 +282,72 @@ public class NewDataTesting
 		
 	}
 	
+	public HashMap pickFirstMapping()
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		String sqlQuery = null;
+		
+		HashMap mappingMap = new HashMap();
+		try
+		{
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			
+			sqlQuery = "select pui,doi,authorselect bd_accessnumber,cafe_accessnumber,bd_pui,cafe_pui from hmo_cafe_doi";
+	        rs = stmt.executeQuery(sqlQuery);
+			int i=0;
+			while (rs.next())
+			{
+		
+				MappingObj mapping = new MappingObj();
+				String pui = rs.getString("bd_pui");
+				mapping.setBdAccessnumber(rs.getString("bd_accessnumber"));
+				mapping.setCafeAccessnumber(rs.getString("cafe_accessnumber"));
+				mapping.setBdPui(pui);
+				mapping.setCafePui(rs.getString("cafe_pui"));
+				mappingMap.put(pui, mapping);
+				//System.out.print(i+",");
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return mappingMap;
+		
+	}
+	
 	public List getMID(Connection con) throws Exception
 	{
 		Statement stmt = null;
