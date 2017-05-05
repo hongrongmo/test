@@ -44,8 +44,11 @@ public class AusAffESIndex {
 	private final String SERVICE_NAME = "es";
 	private final String REGION = "us-east-1";
 	
-	//private String HOST = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";  // for dataloading Ec2
-	private String HOST = "localhost:8060";    // for Prod from localhost
+	//private String HOST = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";  // for dataloading Ec2 (ES 2.3 no longer exist)
+	  private String HOST = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+	
+	//private String HOST = "localhost:8060";    // for Prod from localhost ES V 2.3
+	//private String HOST = "localhost:8040";    // for Prod from localhost ES V 5.1
 	//private final String HOST = "search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com";  // for testing
 	//private String HOST = "localhost:8050";    // evauaf cluster using tunnel, localhost
 	private String ENDPOINT_ROOT = "http://" + HOST;
@@ -140,7 +143,7 @@ public class AusAffESIndex {
 		request.setEndpoint(URI.create(ENDPOINT));
 		request.setHttpMethod(HttpMethodName.POST);
 		request.addHeader("Content-Type", "application/json");
-
+		
 		return request;
 	}
 
@@ -339,11 +342,36 @@ public class AusAffESIndex {
 	{
 		
 		bulkIndexContents = new StringBuffer();
+		String document_type = null;
+		
+		if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
+		{
+			document_type="author";
+		}
+		else if(doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
+		{
+			document_type="affiliation";
+		}
+		else
+			System.out.println("Invalid document type!!!");
 
 		for(int i=0;i<docIds.size();i++)
 		{
-			bulkIndexContents.append("{ \"delete\" : { \"_type\" : \"" + doc_type + "\", \"_id\" : \"" + docIds.get(i) + "\" } }");
+			
+			if(curRecNum > recsPerbulk)
+			{
+				System.out.println("Starting Delete " + recsPerbulk);
+				// delete
+				ProcessBulk();
+				bulkIndexContents = new StringBuffer();
+				curRecNum = 1;
+			}
+			
+			
+			bulkIndexContents.append("{ \"delete\" : { \"_type\" : \"" + document_type + "\", \"_id\" : \"" + docIds.get(i) + "\" } }");
 			bulkIndexContents.append("\n");
+			
+			curRecNum++;
 		}
 		
 		
