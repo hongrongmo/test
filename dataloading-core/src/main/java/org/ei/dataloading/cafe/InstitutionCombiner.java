@@ -7,8 +7,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
@@ -50,7 +53,7 @@ public class InstitutionCombiner{
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 	String date;
 
-	LinkedHashSet<String> affId_deletion_list;
+	List<String> affId_deletion_list;
 
 	static CombinedAuAfJSON writer;
 	Perl5Util perl = new Perl5Util();
@@ -144,6 +147,14 @@ public class InstitutionCombiner{
 
 		try
 		{
+			// doc_type should be "ipr"
+			if(doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
+			System.out.println("Start ES Extract for Doc_type: " + doc_type);
+			else
+			{
+				System.out.println("Invalid document type!!, please re-run with document type ipr");
+				System.exit(1);
+			}
 			writer = new CombinedAuAfJSON(doc_type,loadNumber);
 			writer.init(1);
 
@@ -305,6 +316,11 @@ public class InstitutionCombiner{
 				//for testing
 				//query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx') and rownum<2";
 
+				// 04/04/2017, only index AU profile that has BD CPX abstract records in fast DEV for Dayton to test EV App
+				
+			/*	query =  "select * from " +  tableName + "  where AFFID in (select INSTITUTE_ID from ap_correction1.Cafe_af_lookup where pui "
+						+ " in (select pui from ap_correction1.AUTHOR_MID))";*/
+				
 				System.out.println(query);
 
 				rs = stmt.executeQuery(query);
@@ -347,6 +363,7 @@ public class InstitutionCombiner{
 				getDeletionList(rs);
 				
 				//deletion part moved to CafeDownloadFileFromS3AllTypes
+				esIndex.createBulkDelete(doc_type, affId_deletion_list);
 
 			}
 
@@ -554,13 +571,14 @@ public class InstitutionCombiner{
 
 	private void getDeletionList(ResultSet rs)
 	{
-		affId_deletion_list = new LinkedHashSet<String>();
+		affId_deletion_list = new ArrayList<String>(); 
 		try {
 			while (rs.next())
 			{
 				if(rs.getString("M_ID") !=null)
 				{
-					affId_deletion_list.add("affiliation/"+rs.getString("M_ID")+".json");
+					//affId_deletion_list.add("affiliation/"+rs.getString("M_ID")+".json");
+					affId_deletion_list.add(rs.getString("M_ID"));  // M_ID list to delete from ES
 				}
 			}
 		} 
