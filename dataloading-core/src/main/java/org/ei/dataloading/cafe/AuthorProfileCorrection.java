@@ -1,5 +1,6 @@
 package org.ei.dataloading.cafe;
 import java.sql.*;
+
 import java.util.*;
 import java.io.*;
 import java.util.regex.*;
@@ -11,6 +12,18 @@ import org.ei.domain.*;
 import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.query.base.FastQueryWriter;
 import org.ei.util.GUID;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.ParseException;
+import org.json.simple.parser.JSONParser;
+import com.amazonaws.util.IOUtils;
 
 public class AuthorProfileCorrection 
 {
@@ -704,8 +717,11 @@ public class AuthorProfileCorrection
 	
 	private void deleteRecord(String authorid,Connection con1)
 	{
-		PreparedStatement stmt = null;
-		String sqlQuery1 = "delete from author_profile where authorid='"+authorid+"'";
+		Statement stmt = null;
+		
+		String sqlQuery1 = "insert into author_profile_deletion select * from author_profile where authorid='"+authorid+"'";
+		String sqlQuery2 = "delete from author_profile where authorid='"+authorid+"'";
+		String sqlQuery3 = "update cafe_au_lookup set status='deleted' where author_id='"+authorid+"'";
 		
 		//Connection con1 = null;
 		try
@@ -714,14 +730,23 @@ public class AuthorProfileCorrection
 			{
 				con1 = getConnection(url,driver,username,password);
 			}
-	
-		    stmt = con1.prepareStatement(sqlQuery1);
-		    stmt.executeUpdate();
+			con1.setAutoCommit(false);
+			stmt = con1.createStatement();		   
+		    stmt.executeUpdate(sqlQuery1);
+		    stmt.executeUpdate(sqlQuery2);
+		    stmt.executeUpdate(sqlQuery3);
 		    con1.commit();
+		    con1.setAutoCommit(true);
 
 		}
 		catch(Exception e)
 		{
+			try
+			{
+				con1.rollback();
+			}
+			catch(Exception e1)
+			{}
 			System.out.println("Exception on AuthorProfileCorrection.deleteRecord "+e.getMessage());
 			e.printStackTrace();
 		}
@@ -750,6 +775,7 @@ public class AuthorProfileCorrection
 		//Connection con1 = null;
 		try
 		{
+			/*
 			if(con1==null)
 			{
 				con1 = getConnection(url,driver,username,password);
@@ -762,23 +788,24 @@ public class AuthorProfileCorrection
 			{
 				auid=rs.getString("authorid");
 			}
-			if(auid != null)
+			*/
+			if(authorid != null)
 			{
 				Thread.currentThread().sleep(250);
-				int inSearchServer = checkSearchServer(auid);
-				if(inSearchServer<1)
+				int inSearchServer = checkSearchServer(authorid);
+				if(inSearchServer<0)
 				{
 					return true;
 				}
 				else
 				{
-					System.out.println("****record "+auid+" is still in Search Server****");
+					System.out.println("****record "+authorid+" is still in Search Server****");
 
 				}
 			}
 			else
 			{
-				System.out.println("****record "+auid+" is not in author_profile table****");
+				System.out.println("****record "+authorid+" is not in author_profile table****");
 			}
 
 		}
@@ -818,12 +845,57 @@ public class AuthorProfileCorrection
 
 	}
 	
-	private int checkSearchServer(String term1)
+	private int checkSearchServer(String auid)
 	{
+		String SERVICE_NAME = "es";
+		String REGION = "us-east-1";
+		String HOST ="search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+		String ENDPOINT_ROOT = "http://" + HOST;
+		int totalHit =0;
+		String PATH = "/cafe/_search";	
+		
+		HttpClient httpClient = HttpClientBuilder.create().build(); 
+		JSONObject json = new JSONObject();
+		JSONParser parser = new JSONParser();		
+		String s = "{\"stored_fields\": [\"audoc.auid\"],\"query\": {\"bool\": {\"must\": [{\"match_phrase\": {\"audoc.auid\": "+auid+"}}]}}}";
+		try {
+			
+			midTime = System.currentTimeMillis();
+			
+			Object obj = parser.parse(s);		
+		    HttpPost request = new HttpPost(ENDPOINT_ROOT + PATH);
+		    
+		    StringEntity params =new StringEntity(obj.toString());
+		    request.addHeader("content-type", "application/json");
+		    request.setEntity(params);
+		    HttpResponse response = httpClient.execute(request);
+		    InputStream responseStream = response.getEntity().getContent();		    
 
-		System.out.println("checking in Search server");
+			String responseString = IOUtils.toString(responseStream);
+			
+			//Standard response {"took":16,"timed_out":false,"_shards":{"total":16,"successful":16,"failed":0},"hits":{"total":1,"max_score":6.5866313,"hits":[{"_index":"evcafe","_type":"author","_id":"aut_M7351e2de156b8ab50beM664e10178163171","_score":6.5866313,"fields":{"audoc.auid":["57104828900"]}}]}}
+			System.out.println("RESPONSE= "+responseString);
+			JSONArray array = new JSONArray();
+			Object responseobj = parser.parse(responseString);
+		    		  
+		    String hits =  ((JSONObject)responseobj).get("hits").toString();		  
+		    Object hitobj = parser.parse(hits);
+		    totalHit =  Integer.parseInt(((JSONObject)hitobj).get("total").toString());
+		    System.out.println("authorId "+auid+" hit= "+totalHit);		  		   
+		    
+		 }catch(ParseException pe){
+				
+	         System.out.println("position: " + pe.getPosition());
+	         System.out.println(pe);	     
+		}catch (Exception ex) {
 
-		return 0;
+		   ex.printStackTrace();
+
+		}
+		if(totalHit>0)
+			return 1;
+		else
+			return 0;
 
 	}
 
