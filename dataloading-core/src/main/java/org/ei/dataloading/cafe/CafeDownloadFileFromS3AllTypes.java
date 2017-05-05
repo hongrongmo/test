@@ -1,13 +1,14 @@
 package org.ei.dataloading.cafe;
 
-import io.searchbox.client.http.JestHttpClient;
+/*import io.searchbox.client.http.JestHttpClient;
 import io.searchbox.core.BulkResult;
 import io.searchbox.core.Delete;
-import io.searchbox.core.BulkResult.BulkResultItem;
+import io.searchbox.core.BulkResult.BulkResultItem;*/
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -33,8 +34,7 @@ import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import org.ei.dataloading.CombinedWriter;
-import org.ei.dataloading.CombinedXMLWriter;
+
 import org.ei.dataloading.awss3.AmazonS3Service;
 
 import com.amazonaws.AmazonClientException;
@@ -58,6 +58,9 @@ public class CafeDownloadFileFromS3AllTypes {
 	static String tableToBeTruncated = "cafe_inventory_temp";
 	static String sqlldrFileName = "cafeInventoryFileLoader.sh";
 	static int updateNumber;
+	static String ani_DeletionTempTable = "cafe_weekly_deletion";
+	static String deletionSqlldrFileName = "cafeANIDeletionFileLoader.sh";
+
 
 	static int curRecNum = 0;
 	static int zipFileID = 1;
@@ -78,7 +81,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	private PrintWriter out;
 
 	//08/01/2016 combine Keys List for action "d" for direct deletion from ES & DB without dowbload from S3 bucket
-	private List<String> keys_to_be_deleted = new ArrayList<String>();
+	private HashMap<String,String> keys_to_be_deleted = new HashMap<String,String>();
 	private List<String> keys_MID_to_be_deleted = new ArrayList<String>();
 
 
@@ -132,7 +135,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 		}
 
-		if(args.length >9)
+		if(args.length >11)
 		{
 			// # of downloaded cafe key files to include in one zip file for later process/convert
 			if(args[6] !=null)
@@ -165,6 +168,18 @@ public class CafeDownloadFileFromS3AllTypes {
 					System.exit(1);
 				}
 			}
+			if(args[10] !=null)
+			{
+				ani_DeletionTempTable = args[10];
+				if(doc_type.equalsIgnoreCase("ani"))
+					System.out.println("cafe ANI Weekly deletion temp table: " + ani_DeletionTempTable);
+			}
+			if(args[11] !=null)
+			{
+				deletionSqlldrFileName = args[11];
+				if(doc_type.equalsIgnoreCase("ani"))
+					System.out.println("ANI deletion sqlldrfile: " + deletionSqlldrFileName);
+			}
 		}
 
 
@@ -196,7 +211,14 @@ public class CafeDownloadFileFromS3AllTypes {
 			//get the list of keys to be deleted & delete from ES & DB
 			if(downloadFile.keys_to_be_deleted.size() >0)
 			{
-				downloadFile.PrepareDeletion();
+				if(doc_type !=null && (doc_type.equalsIgnoreCase("apr") || doc_type.equalsIgnoreCase("ipr")))
+				{
+					downloadFile.PrepareDeletion();
+				}
+				else if (doc_type !=null && doc_type.equalsIgnoreCase("ani"))
+				{
+					downloadFile.deleteANIData();
+				}
 			}
 
 		} 
@@ -339,7 +361,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			stmt = con.createStatement();
 			String snsArchive_UniqueRecentEpoch_List = "SELECT t.KEY,t.EPOCH,t.PUI,t.ACTION,t.BUCKET,t.DOC_TYPE,TO_CHAR(t.ARCHIVE_DATE ,'YYYY-MM-DD HH24:MI:SS') ARCHIVE_DATE FROM("+
 					"SELECT key,max(to_number(epoch)) AS epoch "+
-					"FROM sns_archive "+
+					"FROM sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' "+
 					"GROUP BY key) x "+
 					"JOIN sns_archive t ON x.key =t.key "+
 					"AND x.epoch = t.epoch "+
@@ -347,6 +369,7 @@ public class CafeDownloadFileFromS3AllTypes {
 					"order by x.key";
 
 
+			System.out.println("execute query: " + snsArchive_UniqueRecentEpoch_List);
 			rs = stmt.executeQuery(snsArchive_UniqueRecentEpoch_List);
 
 			getSnsArchiveListToDownload(rs);
@@ -467,6 +490,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	public void getSnsArchiveListToDownload (ResultSet rs2) throws InterruptedException
 	{
 		String key = null;
+		String pui = null;
 		long epoch = 0;
 		String bucket = null;
 
@@ -474,6 +498,8 @@ public class CafeDownloadFileFromS3AllTypes {
 
 		boolean isRecent_epoch = false;
 		String errorCode = null;   // only write keys that were successfully downloaded from s3 bucket (exist in s3 bucket)
+
+		StringBuffer keys = new StringBuffer();
 
 		try 
 		{
@@ -501,6 +527,7 @@ public class CafeDownloadFileFromS3AllTypes {
 				if(rs2.getString("PUI") !=null)
 				{
 					strBuf.append(rs2.getString("PUI"));
+					pui = rs2.getString("PUI");
 				}
 				strBuf.append(FIELDDELIM);
 
@@ -553,7 +580,7 @@ public class CafeDownloadFileFromS3AllTypes {
 							//Only download Keys from S3 having action "a/u", exluding deletion
 							if(rs2.getString("action").equalsIgnoreCase("d"))
 							{
-								keys_to_be_deleted.add(key);
+								keys_to_be_deleted.put(key, pui);
 							}
 							else
 							{
@@ -580,7 +607,7 @@ public class CafeDownloadFileFromS3AllTypes {
 						//Only download Keys from S3 having action "a/u", exluding deletion
 						if(rs2.getString("action").equalsIgnoreCase("d"))
 						{
-							keys_to_be_deleted.add(key);
+							keys_to_be_deleted.put(key,pui);
 						}
 						else
 						{
@@ -599,7 +626,13 @@ public class CafeDownloadFileFromS3AllTypes {
 				}	
 			}
 
-			System.out.println("Total Keys of action 'd'" + keys_to_be_deleted);
+			for(String aniKey: keys_to_be_deleted.keySet())
+			{
+				if(keys.length() >0)
+					keys.append(",");
+				keys.append(aniKey);
+			}
+			System.out.println("Total Keys of action 'd' [" + keys + " ]");
 		} 
 
 		// for resultSet
@@ -764,7 +797,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	}
 
 
-	
+
 
 	public void updateCafeInventory()
 	{
@@ -796,7 +829,7 @@ public class CafeDownloadFileFromS3AllTypes {
 				//the value 0 indicates normal termination.
 				System.out.println("Sqlldr process complete with exit status: " + t);
 
-				int tempTableCount = getTempTableCount();
+				int tempTableCount = getTempTableCount(tableToBeTruncated);
 				System.out.println(tempTableCount+" records was loaded into the temp table");
 
 				if(tempTableCount >0)
@@ -870,7 +903,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	}
 
 
-	private int getTempTableCount()
+	private int getTempTableCount(String tempTable)
 	{
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -880,7 +913,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		{
 			stmt = con.createStatement();
 
-			rs = stmt.executeQuery("select count(*) count from " + tableToBeTruncated + "");
+			rs = stmt.executeQuery("select count(*) count from " + tempTable + "");
 			if(rs.next())
 			{
 				count = rs.getInt("count");
@@ -920,12 +953,16 @@ public class CafeDownloadFileFromS3AllTypes {
 
 	}
 
-	// get the list of M_ID to be deleted from ES & DB based on SQS "Key" field from cafe_inventory
+	// get the list of M_ID to be deleted from ES & DB based on SQS "Key" field from cafe_inventory.
+	/*
+	 * as per team discussion whenever receive AU/AF profile deletion, simply delet it from ES & from database.
+	 */
 
 	public boolean PrepareDeletion()
 	{
 		StringBuffer keys = new StringBuffer();
 		String profileTable = "";
+		String backupTable = "";
 		String columnName = "";
 		int curRec = 0; 
 		int status = 0;
@@ -937,21 +974,23 @@ public class CafeDownloadFileFromS3AllTypes {
 		if(doc_type.equalsIgnoreCase("ipr"))
 		{
 			profileTable = "institute_profile";
+			backupTable = "institute_profile_deleted";
 			columnName = "AFFID";
 
 			type = "affiliation";
 
 		}
-		
+
 		else if(doc_type.equalsIgnoreCase("apr"))
 		{
 			profileTable = "author_profile";
+			backupTable = "author_profile_deleted";
 			columnName = "AUTHORID";
 
 			type = "author";
 
 		}
-		
+
 		else
 		{
 			System.out.println("Invalide Doc_type");
@@ -961,7 +1000,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		try
 		{
 			con = getConnection(url,driver,username,password);
-			for(int i=0;i<keys_to_be_deleted.size();i++)
+			for(String key: keys_to_be_deleted.keySet())
 			{
 				if(curRec>999)
 				{
@@ -978,7 +1017,7 @@ public class CafeDownloadFileFromS3AllTypes {
 						//delete from DB
 						if(status!=0 && (status == 200 || status == 201 || status == 404))
 						{
-							DbBulkDelete(profileTable);  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
+							DbBulkDelete(profileTable,backupTable);  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
 						}
 						else
 						{
@@ -994,7 +1033,7 @@ public class CafeDownloadFileFromS3AllTypes {
 
 				if(keys.length() >0)
 					keys.append(",");
-				keys.append("'" + keys_to_be_deleted.get(i) + "'");
+				keys.append("'" + key + "'");
 				curRec++;
 			}
 
@@ -1012,7 +1051,7 @@ public class CafeDownloadFileFromS3AllTypes {
 				//delete from DB
 				if(status!=0 && (status == 200 || status == 201 || status == 404))
 				{
-					DbBulkDelete(profileTable);  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
+					DbBulkDelete(profileTable,backupTable);  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
 				}
 				else
 				{
@@ -1063,7 +1102,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				query = "select M_ID from " + tableName + " where  " + columnName + " in ("+ keys + ")";
 			}
-			
+
 			else if(document_type !=null && document_type.equalsIgnoreCase("ani"))
 			{
 				query = "select M_ID from " + tableName + " where  substr(" + columnName + ",INSTR(" + columnName + ",'-', 1, 2)+1,length(" + columnName + ")) in ("+ keys + ")";
@@ -1132,8 +1171,63 @@ public class CafeDownloadFileFromS3AllTypes {
 
 	}
 
+	public void DbBulkBackup(String tableName,String backupTable,String keys) throws IOException
+	{ 
+		Statement stmt = null;
+		ResultSet rs = null;
+		String query = "";
 
-	public void DbBulkDelete(String tableName) throws IOException
+		try
+		{
+			//HH 05/03/2017 backup records to backup table before deletion for later QA, then later on need to comment it out to save space
+			//1. backup records
+			query = "insert into " + backupTable + " select * from " + tableName + " where M_ID in ("+ keys.toString() + ")";
+
+			System.out.println("Running query...." + query);
+
+			con.setAutoCommit(false);
+			stmt = con.createStatement();
+			int count = stmt.executeUpdate(query);
+			con.commit();
+			System.out.println("Total Keys backed up before deletion from: " + tableName + " :- " + count);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+		}
+
+
+		
+	}
+	public void DbBulkDelete(String tableName, String backupTable) throws IOException
 	{	
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -1150,6 +1244,12 @@ public class CafeDownloadFileFromS3AllTypes {
 
 				keys.append("'" + key +"'");
 			}
+
+			//1. backup records
+			DbBulkBackup(tableName,backupTable,keys.toString());
+
+
+			//2. delete records from DB
 			query = "delete from " + tableName + " where M_ID in ("+ keys.toString() + ")";
 
 			System.out.println("Running query...." + query);
@@ -1204,50 +1304,61 @@ public class CafeDownloadFileFromS3AllTypes {
 
 	}
 
-/***
+	/***
  	added 11/22/2016 for deleting CAFE ANI records directly from Fast & DB using "EID" 
 	instead of downloading files & process them as deletion (as we do now for BD deletion)
-*/
+
+	 * cafe ani deletion procedures: added 05/02/2017
+	 * - load pui and key to CAFE_weekly_DELETION table
+	 * - backup records from cafe_master into cafe_deleted (similar to BD)
+	 * -  modify "status" in lookup tables (AU/AF) to "deleted" for later ES updated during freezing window
+
+	 */
 	private void deleteANIData()
 	{
-		StringBuffer keys = new StringBuffer();
-		String profileTable = "BD_MASTER_ORIG";
-		String columnName = "EID";
-
-		for(String key: keys_to_be_deleted)
-		{
-			if(keys.length() >0)
-				keys.append(",");
-			keys.append("'" + key + "'");
-		}
+		PrintWriter ani_del_out = null;
+		String fileName = doc_type + "_deletion_" + epoch + "_" + archive_date + ".out";
 
 		try {
 
 			if(doc_type !=null && doc_type.equalsIgnoreCase("ani"))
 			{
-				CombinedXMLWriter writer = new CombinedXMLWriter(50000,updateNumber,database,"dev");
-				writer.setOperation("delete");
-				
-				//get M_ID list from DB for ES deletion & later delete from DB
-				getMidToBeDeleted(keys.toString(), profileTable, columnName, doc_type);
+				ani_del_out = new PrintWriter(new FileWriter(fileName));
+				for(String key: keys_to_be_deleted.keySet())
+				{
+					ani_del_out.println(key + FIELDDELIM + keys_to_be_deleted.get(key));
+				} 
 
 
-				// create fast deletion file
-				creatDeleteFile();
-				writer.zipBatch();
-				writer.end();
-	            writer.flush();
-	            
-	            // upload deletion file to fast
-	            
-	            
-				// delete from DB using "M_ID"
-				DbBulkDelete(profileTable);
+				/************** load data into temp table ****************/
+				System.out.println("about to load data file "+fileName);
+
+				Runtime r = Runtime.getRuntime();
+				Process p = r.exec("./"+ deletionSqlldrFileName + " " + fileName);
+				int t = p.waitFor();
+
+				//the value 0 indicates normal termination.
+				System.out.println("ani deletion Sqlldr process complete with exit status: " + t);
+
+				int tempTableCount = getTempTableCount(ani_DeletionTempTable);
+				System.out.println(tempTableCount+" records was loaded into the " + ani_DeletionTempTable + "  table");
+
+
+				/* 
+				 * backup records, delete from cafe master and update lookup tables's status column to "deleted"
+				 * this will be done in a separte process during the freezing window based on "CAFE_weekly_DELETION" table
+				 */
+
 			}
+		}
+		catch(FileNotFoundException ex)
+		{
+			System.out.println("cafe ani deletion file error message " + ex.getMessage());
+			ex.printStackTrace();
 		}
 		catch (IOException e) 
 		{
-			System.out.println("Error occurred to delete ANI data!!!");
+			System.out.println("Error occurred to load ANI deletion records to temp table!!!");
 			System.out.println("Cause Reason: " + e.getMessage());
 			e.printStackTrace();
 		}
@@ -1256,79 +1367,96 @@ public class CafeDownloadFileFromS3AllTypes {
 		{
 			ex.printStackTrace();
 		}
+		finally
+		{
+			try
+			{
+				if(ani_del_out !=null)
+				{
+					ani_del_out.flush();
+					ani_del_out.close();
+
+				}
+			}
+			catch(Exception e)
+			{
+				System.out.println("Failed to close " + doc_type + " deletion file");
+				e.printStackTrace();
+			}
+		}
 	}
 
 	// create fast deletion file "delete.txt"
-	
-	 private void creatDeleteFile()
-	    {
-	        String batchID = "0001";
-	        
-	        File file=new File("fast");
-	        FileWriter out= null;
-	        
-	        try
-	        {
-	            if(!file.exists())
-	            {
-	                file.mkdir();
-	            }
 
-	            String batchPath = "fast/batch_" + updateNumber+"_"+batchID;
+	private void creatDeleteFile()
+	{
+		String batchID = "0001";
 
-	            file=new File(batchPath);
-	            if(!file.exists())
-	            {
-	                file.mkdir();
-	            }
-	            String root = batchPath +"/EIDATA/tmp";
-	            file=new File(root);
+		File file=new File("fast");
+		FileWriter out= null;
 
-	            if(!file.exists())
-	            {
-	                file.mkdir();
-	            }
+		try
+		{
+			if(!file.exists())
+			{
+				file.mkdir();
+			}
 
-	            file = new File(root+"/delete.txt");
+			String batchPath = "fast/batch_" + updateNumber+"_"+batchID;
 
-	            if(!file.exists())
-	            {
-	                file.createNewFile();
-	            }
-	            out = new FileWriter(file);
-	            
-	            for(String m_id: keys_MID_to_be_deleted)
-	            {
-	                if(m_id != null)
-	                {
-	                    out.write(m_id+"\n");
-	                }
-	            }
-	            out.flush();
-	        }
-	        catch(Exception e)
-	        {
-	            e.printStackTrace();
-	        }
-	        finally
-	        {
-	            if(out !=null)
-	            {
-	                try
-	                {
-	                    out.close();
-	                }
-	                catch (Exception e)
-	                {
-	                    e.printStackTrace();
-	                }
-	            }
+			file=new File(batchPath);
+			if(!file.exists())
+			{
+				file.mkdir();
+			}
+			String root = batchPath +"/EIDATA/tmp";
+			file=new File(root);
 
-	        }
+			if(!file.exists())
+			{
+				file.mkdir();
+			}
 
-	    }
+			file = new File(root+"/delete.txt");
 
-	
+			if(!file.exists())
+			{
+				file.createNewFile();
+			}
+			out = new FileWriter(file);
+
+			for(String m_id: keys_MID_to_be_deleted)
+			{
+				if(m_id != null)
+				{
+					out.write(m_id+"\n");
+				}
+			}
+			out.flush();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(out !=null)
+			{
+				try
+				{
+					out.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+		}
+
+	}
+
+
 	protected Connection getConnection(String connectionURL,
 			String driver,
 			String username,
