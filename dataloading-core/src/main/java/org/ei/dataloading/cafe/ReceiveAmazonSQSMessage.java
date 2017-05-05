@@ -463,7 +463,8 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 		String message_type = null;
 		String prefix = null;
 		String Patent_resourceUrl = null;
-		String patentId = null, urlExpirationDate = null;
+		String patentId = null, urlExpirationDate = null, patGeneration =null;
+		
 		
 		String signedAssetURL = null;
 		
@@ -494,8 +495,8 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			//messageFieldKeys.put("message_type",msgType);
 			messageFieldKeys.put("message_to", msgTo);
 			
-			// only process SQS Message that meant to EV ONLY
-			if(msgTo !=null && msgTo.contains("EV"))
+			// only process SQS Message that meant to EV ONLY, added "E-Village" for WO backfill 04/14/2017
+			if(msgTo !=null && (msgTo.contains("/EV") || msgTo.contains("E-Village"))) 
 			{
 				evContributer = true;
 				
@@ -553,6 +554,10 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 						{
 							patentId = Patent_resourceUrl.substring(Patent_resourceUrl.indexOf("pat/") + 4, Patent_resourceUrl.lastIndexOf("/"));
 							messageFieldKeys.put("patentid", patentId);
+							
+							//Patent generation
+							patGeneration = Patent_resourceUrl.substring(Patent_resourceUrl.lastIndexOf("/")+1, Patent_resourceUrl.length());
+							messageFieldKeys.put("generation", patGeneration);
 						}
 						else
 						{
@@ -565,10 +570,25 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 					
 					if (assets.containsKey(prefix+":details"))
 					{
+						JSONArray detailes = (JSONArray)assets.get(prefix+":details");
+						
+						
+						/* this way when following message in Ruud's documentation
 						JSONObject detailes = (JSONObject)assets.get(prefix+":details");
 						signedAssetURL = (String)detailes.get(prefix+":signedAssetURL");
 						messageFieldKeys.put("signedAssetUrl", signedAssetURL);
 						//System.out.println("SignedAssetURL: " + signedAssetURL);   // only for debugging
+						*/
+						
+						// this way when following real message in SQS
+						@SuppressWarnings("unchecked")
+						Iterator<JSONObject> detailesIterator = (Iterator<JSONObject>)detailes.iterator();
+						while(detailesIterator.hasNext())
+						{
+							JSONObject signedUrl = detailesIterator.next();
+							signedAssetURL = (String)signedUrl.get(prefix+":signedURL");
+							messageFieldKeys.put("signedAssetUrl", signedAssetURL);
+						}
 					}
 					
 					
