@@ -137,10 +137,10 @@ public class InitiateVtwThreads {
 
 				System.out.println("Thread" + i + " epoch: " + epoch);
 
-				ArchiveVTWPatentAsset thread1 = new ArchiveVTWPatentAsset(numberOfRuns,queueName,sqlldrFileName,
+				ArchiveVTWPatentAsset thread = new ArchiveVTWPatentAsset(numberOfRuns,queueName,sqlldrFileName,
 						loadNumber,recsPerZipFile,recsPerSingleConnection,
 						epoch,"Thread" + i);
-				thread1.start();
+				thread.start();
 
 				// to get unique epoch timestamp which used for naming raw_dir
 				Thread.sleep(1000);

@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -76,7 +77,7 @@ public class AuthorCombiner {
 	static AuAffiliation auaf;
 	LinkedHashSet<String> affiliation_historyIds_List;
 	
-	LinkedHashSet<String> auId_deletion_list;
+	List<String> auId_deletion_list;
 
 	
 	AuAfCombinedRec rec;
@@ -171,6 +172,15 @@ public class AuthorCombiner {
 
 		try
 		{
+			// doc_type should be "apr"
+			if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
+				System.out.println("Start ES Extract for Doc_type: " + doc_type);
+			else
+			{
+				System.out.println("Invalid document type!!, please re-run with document type apr");
+				System.exit(1);
+			}
+			
 			writer = new CombinedAuAfJSON(doc_type,loadNumber);
 			writer.init(ESdirSeq_ID);
 			//s3upload = new AuAfESIndex(doc_type);  for ES index using Jest
@@ -370,7 +380,23 @@ public class AuthorCombiner {
 						" and rownum<2";
 						*/
 				
+				// 02/22/2017 to test author with chinees name ( made up chinees name to test)
 				
+				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
+				" and AUTHORID = '6603802631'";*/
+				
+				
+				// 04/03/2017 to test why history_display_name in ES not showing as expected as in DB tables "Author_AFF"
+				
+				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
+						" and AUTHORID = '55820750800'";*/
+			
+				
+				// 04/04/2017, only index AU profile that has BD CPX abstract records in fast DEV for Dayton to test EV App
+				
+				/*query =  "select * from " +  tableName + "  where AUTHORID in (select author_id from ap_correction1.Cafe_au_lookup where pui "
+						+ " in (select pui from ap_correction1.AUTHOR_MID))";*/
+									
 				
 				System.out.println(query);
 
@@ -407,7 +433,7 @@ public class AuthorCombiner {
 				// need to check with Hongrong
 				
 				updateNumber=loadNumber;
-				query = "select M_ID from " +  tableName + " where updatenumber=" + updateNumber;
+				query = "select M_ID from " +  tableName + " where updatenumber=" + updateNumber; 
 				
 				System.out.println(query);
 
@@ -416,7 +442,10 @@ public class AuthorCombiner {
 				System.out.println("Got records... from table: " + tableName);
 				getDeletionList(rs);
 				
-				AuAfESIndex.DeleteFilesFromS3(auId_deletion_list, "evcafe");
+				// used for delete for S3 bucket & ES using Lambda function
+				//AuAfESIndex.DeleteFilesFromS3(auId_deletion_list, "evcafe"); 
+				
+				esIndex.createBulkDelete(doc_type, auId_deletion_list);
 				
 			}
 			
@@ -1208,6 +1237,11 @@ public class AuthorCombiner {
 		}
 		
 		//cafe duplicate current affiliation in affiliation history, so in this case ignore the one in history
+		/* 04/03/2017 after comparing with Scopus Web Interface "SOLR-JSON" link, it shows that "afhistdispname" includes all ParentsID DIsplay Name in Affil-History,
+		 * even including Current ParentID and all it's appearance redundancy (i.e. ParentAFID appear 5 times in AffilHistory for AUID: 55820750800, so comment out below section
+		 * to follow Scopus-Solr link. change this back as it was since Current Parent ID is same one as first ParentID in History, so no need to duplicate same info again,
+		 * specially that the info also in Current Parent ID.
+		*/
 		if(affiliation_historyIds_List.contains(auaf.getAffiliationId()))
 			affiliation_historyIds_List.remove(auaf.getAffiliationId());
 		
@@ -1330,7 +1364,7 @@ public class AuthorCombiner {
 	
 	private void getDeletionList(ResultSet rs)
 	{
-		auId_deletion_list = new LinkedHashSet<String>();
+		auId_deletion_list = new ArrayList<String>(); 
 		try {
 			while (rs.next())
 			{
