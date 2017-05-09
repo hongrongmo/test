@@ -3,6 +3,7 @@ package org.ei.dataloading.cafe;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -210,6 +211,9 @@ public class AuthorCombiner {
 			}
 			
 			
+			// update status = "indexed" for the docs that successfully indexed to ES
+			c.updateAuthorProfileStatus(esIndex.getESIndexedDocsList());
+			
 		}
 		catch(Exception e)
 		{
@@ -303,7 +307,7 @@ public class AuthorCombiner {
 				}
 			}
 
-			if(con !=null)
+			/*if(con !=null)
 			{
 				try
 				{
@@ -313,7 +317,7 @@ public class AuthorCombiner {
 				{
 					e.printStackTrace();
 				}
-			}
+			}*/
 		}
 	}
 
@@ -395,7 +399,7 @@ public class AuthorCombiner {
 				// 04/04/2017, only index AU profile that has BD CPX abstract records in fast DEV for Dayton to test EV App
 				
 				/*query =  "select * from " +  tableName + "  where AUTHORID in (select author_id from ap_correction1.Cafe_au_lookup where pui "
-						+ " in (select pui from ap_correction1.AUTHOR_MID))";*/
+						+ " in (select pui from ap_correction1.AUTHOR_MID)) and rownum<2";*/
 									
 				
 				System.out.println(query);
@@ -425,7 +429,6 @@ public class AuthorCombiner {
 				endTime = System.currentTimeMillis();
 				System.out.println("time for run ES extract & index "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-		
 			}
 			
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("delete"))
@@ -478,7 +481,7 @@ public class AuthorCombiner {
 				}
 			}
 
-			if(con !=null)
+			/*if(con !=null)
 			{
 				try
 				{
@@ -488,7 +491,7 @@ public class AuthorCombiner {
 				{
 					e.printStackTrace();
 				}
-			}
+			}*/
 		}
 
 	}
@@ -1380,6 +1383,80 @@ public class AuthorCombiner {
 
 		System.out.println("Total Aff records to be deleted from S3 & ES: " + auId_deletion_list.size());
 	}
+	
+	// added 05/08/2017 to update status=indexed for the author profiles that have been indexed in ES successfully so do not index again unless it got later update
+	private void updateAuthorProfileStatus(List<String> docsId)
+	{
+		StringBuffer docsMID = new StringBuffer();
+		
+		PreparedStatement stmt = null;
+		String query = null;
+		
+		
+		if(docsId != null && docsId.size() >0)
+		{
+			for(int i=0; i<docsId.size();i++)
+			{
+				if(docsMID.length() >0)
+					docsMID.append(",");
+				
+				docsMID.append("'" + docsId.get(i) + "'");
+			}
+			
+			// update DB
+			
+			
+			try
+			{
+				query = "update " + tableName + " set ES_status='indexed' where m_id in (" + docsMID + ")";
+				System.out.println("running query: " + query);
+
+				stmt = con.prepareStatement(query);
+				int count = stmt.executeUpdate();
+				System.out.println("Total updated author_profile records's ES_status column count: " + count);
+				
+			} 
+			catch (SQLException e) 
+			{
+				System.out.println("failed to update author_profile table setting ES_status='indexed'");
+				System.out.println(e.getMessage());
+				e.printStackTrace();
+			}
+
+			finally
+			{
+				if(stmt !=null)
+				{
+					try
+					{
+						stmt.close();
+					}
+					catch(Exception e)
+					{
+						e.printStackTrace();
+					}
+				}
+
+				if(con !=null)
+				{
+					try
+					{
+						con.close();
+					}
+					catch(Exception e)
+					{
+						e.printStackTrace();
+					}
+				}
+			}
+
+		}
+		else
+		{
+			System.out.println("no Author profile docs to update thier status!");
+		}
+	}
+	
 	
 	
 	/*private String normalize(String str)

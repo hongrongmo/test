@@ -365,8 +365,8 @@ public class CafeDownloadFileFromS3AllTypes {
 					"GROUP BY key) x "+
 					"JOIN sns_archive t ON x.key =t.key "+
 					"AND x.epoch = t.epoch "+
-					"where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' "+
-					"order by x.key";
+					"where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' ";
+					//"order by x.key"; commented out for performance 05/08/2017
 
 
 			System.out.println("execute query: " + snsArchive_UniqueRecentEpoch_List);
