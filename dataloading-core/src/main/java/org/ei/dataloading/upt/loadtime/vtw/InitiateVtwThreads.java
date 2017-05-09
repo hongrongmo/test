@@ -2,7 +2,9 @@ package org.ei.dataloading.upt.loadtime.vtw;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import org.apache.commons.httpclient.HttpClient;
@@ -44,9 +46,13 @@ public class InitiateVtwThreads {
 	static int loadNumber = 0;
 	static int recsPerZipFile = 2000;
 	static int recsPerSingleConnection = 2000;
+	static String type = "forward";
 
 
-
+	// epoch name list for individual dir for each thread in "raw_data" to zip
+	static List<String> raw_Dir_Names;
+	
+	
 	public static void main(String[] args) throws Exception {
 
 		if(args.length >3)
@@ -83,7 +89,7 @@ public class InitiateVtwThreads {
 			}
 		}
 
-		if(args.length >6)
+		if(args.length >7)
 		{
 			if(args[3] !=null)
 			{
@@ -112,6 +118,11 @@ public class InitiateVtwThreads {
 				recsPerSingleConnection = Integer.parseInt(args[6]);
 				System.out.println("Number of keys per one HttpConnection: " + recsPerSingleConnection);
 			}
+			if(args[7] !=null)
+			{
+				type = args[7];
+				System.out.println("Message type: " + type);
+			}
 		}
 		else
 		{
@@ -127,6 +138,13 @@ public class InitiateVtwThreads {
 			long epoch;
 
 
+			/*
+			 * added on Wed 04/05/2017 to fix issue of zipfile check, by zipping downloaded files after all threads finish downloadiong instead of
+			 * executing zipDownload within each thread
+			 */
+
+			raw_Dir_Names = new ArrayList<String>();
+			ArchiveVTWPatentAsset obj = null;
 
 			// create & start Threads
 
@@ -137,16 +155,19 @@ public class InitiateVtwThreads {
 
 				System.out.println("Thread" + i + " epoch: " + epoch);
 
+				raw_Dir_Names.add(Long.toString(epoch));
+				
 				ArchiveVTWPatentAsset thread = new ArchiveVTWPatentAsset(numberOfRuns,queueName,sqlldrFileName,
-						loadNumber,recsPerZipFile,recsPerSingleConnection,
+						loadNumber,recsPerZipFile,recsPerSingleConnection,type,
 						epoch,"Thread" + i);
 				thread.start();
 
 				// to get unique epoch timestamp which used for naming raw_dir
 				Thread.sleep(1000);
+				
+				obj = thread;
 
 			}
-
 
 		}
 

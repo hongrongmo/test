@@ -46,7 +46,7 @@ public class DownloadPatentFromFile {
 	private static int recsPerSingleConnection = 2000;
 	
 	private static String threadName = "Thread1"; 
-	
+	private static String type = "forward";
 	
 	static CloseableHttpClient client = null;
 	
@@ -75,7 +75,7 @@ public class DownloadPatentFromFile {
 			}
 		}
 		
-		if(args.length >3)
+		if(args.length >4)
 		{
 			if(args[1] !=null)
 			{
@@ -98,6 +98,11 @@ public class DownloadPatentFromFile {
 			{
 				recsPerSingleConnection = Integer.parseInt(args[3]);
 				System.out.println("Number of keys per one HttpConnection: " + recsPerSingleConnection);
+			}
+			if(args[4] !=null)
+			{
+				type = args[4];
+				System.out.println("Message type: " + type);
 			}
 		}
 
@@ -150,7 +155,7 @@ public class DownloadPatentFromFile {
 
 				
 				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch),recsPerSingleConnection, threadName);
-				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(epoch), threadName);
+				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(epoch), threadName,type);
 
 
 				midTime = endTime;
