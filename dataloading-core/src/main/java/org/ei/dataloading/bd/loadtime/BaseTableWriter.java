@@ -170,6 +170,9 @@ public class BaseTableWriter
 		   recordBuf.append((String)record.get("UPDATERESOURCE"));
 	    }
 	    recordBuf.append(FIELDDELIM);
+	    recordBuf.append(getPui());
+	    recordBuf.append(FIELDDELIM);
+	    recordBuf.append("PUI");
 	    //*/
 	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
