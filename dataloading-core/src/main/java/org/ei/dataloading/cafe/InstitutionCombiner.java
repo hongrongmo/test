@@ -2,6 +2,7 @@ package org.ei.dataloading.cafe;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -180,6 +181,8 @@ public class InstitutionCombiner{
 			}
 
 
+			// update status = "indexed" for the docs that successfully indexed to ES
+			c.updateInstituteProfileStatus(esIndex.getESIndexedDocsList());
 		}
 		catch(Exception e)
 		{
@@ -251,7 +254,7 @@ public class InstitutionCombiner{
 				}
 			}
 
-			if(con !=null)
+			/*if(con !=null)
 			{
 				try
 				{
@@ -261,7 +264,7 @@ public class InstitutionCombiner{
 				{
 					e.printStackTrace();
 				}
-			}
+			}*/
 		}
 	}
 
@@ -395,7 +398,7 @@ public class InstitutionCombiner{
 				}
 			}
 
-			if(con !=null)
+			/*if(con !=null)
 			{
 				try
 				{
@@ -405,7 +408,7 @@ public class InstitutionCombiner{
 				{
 					e.printStackTrace();
 				}
-			}
+			}*/
 		}
 
 	}
@@ -654,6 +657,81 @@ public class InstitutionCombiner{
 
 		return time_stamp.toString();
 	}
+	
+	// added 05/08/2017 to update status=indexed for the author profiles that have been indexed in ES successfully so do not index again unless it got later update
+	private void updateInstituteProfileStatus(List<String> docsId)
+	{
+		StringBuffer docsMID = new StringBuffer();
+		
+		PreparedStatement stmt = null;
+		String query = null;
+		
+		
+		if(docsId != null && docsId.size() >0)
+		{
+			for(int i=0; i<docsId.size();i++)
+			{
+				if(docsMID.length() >0)
+					docsMID.append(",");
+				
+				docsMID.append("'" + docsId.get(i) + "'");
+			}
+			
+			// update DB
+			
+			
+			try
+			{
+				query = "update " + tableName + " set ES_status='indexed' where m_id in (" + docsMID + ")";
+				System.out.println("running query: " + query);
+
+				stmt = con.prepareStatement(query);
+				int count = stmt.executeUpdate();
+				System.out.println("Total updated institute_profile records's ES_status column count: " + count);
+				
+			} 
+			catch (SQLException e) 
+			{
+				System.out.println("failed to update institute_profile table setting ES_status='indexed'");
+				System.out.println(e.getMessage());
+				e.printStackTrace();
+			}
+
+			finally
+			{
+				if(stmt !=null)
+				{
+					try
+					{
+						stmt.close();
+					}
+					catch(Exception e)
+					{
+						e.printStackTrace();
+					}
+				}
+
+				if(con !=null)
+				{
+					try
+					{
+						con.close();
+					}
+					catch(Exception e)
+					{
+						e.printStackTrace();
+					}
+				}
+			}
+
+		}
+		else
+		{
+			System.out.println("no institute profile docs to update thier status!");
+		}
+	}
+	
+	
 	private Connection getConnection(String connectionURL,
 			String driver,
 			String username,

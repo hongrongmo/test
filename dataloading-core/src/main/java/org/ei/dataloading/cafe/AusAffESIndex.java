@@ -13,12 +13,18 @@ import java.io.InputStream;
 
 import java.io.PrintWriter;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.json.JsonObject;
 
 import org.apache.log4j.Logger;
 import org.ei.dataloading.upt.loadtime.vtw.ArchiveVTWPatentRefeed;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.AmazonWebServiceResponse;
@@ -75,7 +81,7 @@ public class AusAffESIndex {
 	private static long endTime = System.currentTimeMillis();
 	private static long midTime = System.currentTimeMillis();
 		
-		
+	private List<String> esIndexed_docs_list = new ArrayList<String>();	
 	 
 	public AusAffESIndex()
 	{
@@ -268,7 +274,10 @@ public class AusAffESIndex {
 			// set status for DB deletion
 			setStatusCode(Integer.toString(response.getStatusCode()));
 			
-
+			// save list of successfully indexed profiles for lated DB update status="indexed" so do not re-index unless there is later update
+			parseESIndexJSONResponse(responseString);
+			
+			
 			AmazonWebServiceResponse<T> awsResponse = new AmazonWebServiceResponse<T>();
 			return awsResponse;
 		}
@@ -401,4 +410,52 @@ public int getStatusCode()
 {
 	return status;
 }
+
+
+public void parseESIndexJSONResponse(String esResponseString)
+{
+	JSONParser parser = new JSONParser();
+	try
+	{
+		Object obj = parser.parse(esResponseString);
+
+		JSONObject jsonObject = (JSONObject) obj;
+
+		//Items
+		JSONArray items = (JSONArray) jsonObject.get("items");
+
+
+		@SuppressWarnings("unchecked")
+		Iterator<JSONObject> indexesIterator = (Iterator<JSONObject>)items.iterator();
+
+		while(indexesIterator.hasNext())
+		{
+			//indexes list
+			 JSONObject indexes = indexesIterator.next();
+			
+			JSONObject index = (JSONObject)indexes.get("index");
+			String _id = (String)index.get("_id");
+			Long status = (Long)index.get("status");
+			if(status != null && status == 200)
+				esIndexed_docs_list.add(_id);
+			else
+				System.out.print("doc: " + _id + " failed to index to ES!!!!");
+			
+			
+		}
+	}
+	catch (org.json.simple.parser.ParseException e) 
+	{
+		logger.info("Failed to parse AWS ES JSON Response String!!!!");
+		logger.error(e.getMessage());
+		e.printStackTrace();
+	}
+
+}
+
+public List<String> getESIndexedDocsList()
+{
+	return esIndexed_docs_list;
+}
+
 }
