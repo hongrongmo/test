@@ -17,6 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -90,12 +91,17 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	static int loadNumber = 0;
 	int recsPerZipFile = 2000;
 	int recsPerSingleConnection = 2000;
+	String type = "forward";
 	long epoch;
 	String threadName;
 
 	Thread th = null;
 
 
+	// epoch name list for individual dir for each thread in "raw_data" to zip to fix issue that unzip -tq raise soem errors for some zip files
+	LinkedHashMap<String, Long> raw_Dir_Names = new LinkedHashMap<String,Long>();;
+
+			
 	DateFormat dateFormat,msgSentDateFormat;
 	private String filename;
 	private PrintWriter out;
@@ -125,19 +131,22 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 	}
 
-	public ArchiveVTWPatentAsset(int numOfRuns, String qName, String sqlldr_fileName, int loadnum, int numOfRecsPerZip, int numOfRecsPerCon, long rawDir, String thread_name)
+	public ArchiveVTWPatentAsset(int numOfRuns, String qName, String sqlldr_fileName, int loadnum, int numOfRecsPerZip, int numOfRecsPerCon, String msgType, 
+			long rawDir, String thread_name)
 	{
-
+		
 		numberOfRuns = numOfRuns;
 		queueName = qName;
 		sqlldrFileName = sqlldr_fileName;
 		loadNumber = loadnum;
 		recsPerZipFile = numOfRecsPerZip;
 		recsPerSingleConnection = numOfRecsPerCon;
+		type = msgType;
 		epoch = rawDir;
 		threadName = thread_name;
 		System.out.println("Creating Thread: " + threadName);
 
+		raw_Dir_Names.put(thread_name, rawDir);
 	}
 
 
@@ -196,9 +205,15 @@ public class ArchiveVTWPatentAsset implements Runnable{
 				System.out.println(threadName + " :total time used "+(endTime-startTime)/1000.0+" seconds");
 
 
-				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch),recsPerSingleConnection, threadName);
-				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(epoch), threadName);
+				// original that worked well up to 04/14/2017
+				/*VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch),recsPerSingleConnection, threadName);
+				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(epoch), threadName);*/
 
+				// to resolve issue of zipfile check
+				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(raw_Dir_Names.get(th.getName())),recsPerSingleConnection, th.getName());
+				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(raw_Dir_Names.get(th.getName())), th.getName(), type);
+				
+				
 
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
@@ -209,9 +224,13 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 				//Zip downloaded files (each in it's corresponding dir)
 
-				synchronized(this)
+				synchronized(this.th)
 				{
-					zipDownloads(loadNumber, Long.toString(epoch));
+					// original worked well up to 04/14/2017
+					//zipDownloads(loadNumber, Long.toString(epoch));   
+					
+					// to fix issue of zipfile check
+					zipDownloads(loadNumber, Long.toString(raw_Dir_Names.get(th.getName())));
 				}
 				
 
@@ -410,12 +429,22 @@ public class ArchiveVTWPatentAsset implements Runnable{
 									recordBuf.append(obj.getMessageField("patentid"));
 
 									/* only download New Patents (exclude updates) which has "generation=10". added 03/24/2017 to filter existing messages in queue
-									which has both new & update. start from Monday 03/27/2017 VTW team will apply filter rule on queue level
+									which has both new & update. start from Monday 03/27/2017 VTW team will apply filter rule on queue level. added WO on 04/07/2017 
+									as we need to test as preparation for release
 									*/
+									
+									// use it when we start WO in prod
+									/*if(Integer.parseInt(obj.getMessageField("generation")) == 10 && 
+											(obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP") ||
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("WO")))   */
+
+									
 									if(Integer.parseInt(obj.getMessageField("generation")) == 10 && 
 											(obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
-											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP")))
-
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP")))   
+										
+										
 										patentIds.put(obj.getMessageField("patentid"), "");
 
 									else
@@ -659,7 +688,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		}
 
 
-		File downDir = new File(currDir + "/raw_data/"+downloadDirName);
+		File downDir = new File(currDir + "/raw_data/" + type + "_" + downloadDirName);
 
 		String[] xmlFiles = downDir.list();  
 		File[] xmlFilesToDelete = downDir.listFiles();
@@ -748,9 +777,14 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		FileInputStream in = null;
 		String lastLine = "";
 
+		File zipFile = null;
+		
 		try {
 			String currDir = System.getProperty("user.dir");
-			File zipFile = new File(currDir+"/zipFileNames.txt");
+			if(type !=null && type.equalsIgnoreCase("forward"))
+				zipFile = new File(currDir+"/zipFileNames.txt");
+			else if(type !=null & type.equalsIgnoreCase("backfill"))
+				zipFile = new File(currDir+"/backfill_zipFileNames.txt");
 			if(!(zipFile.exists()))
 			{
 				zipFile.createNewFile();
@@ -812,9 +846,15 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	public synchronized void writeZipFileNameToFile(String zipfileName)
 	{
 		PrintWriter pw = null;
+		File zipFile = null;
+		
 		try {
 			String currDir = System.getProperty("user.dir");
-			File zipFile = new File(currDir+"/zipFileNames.txt");
+			if(type !=null && type.equalsIgnoreCase("forward"))
+				zipFile = new File(currDir+"/zipFileNames.txt");
+			else if(type !=null && type.equalsIgnoreCase("backfill"))
+				zipFile = new File(currDir+"/backfill_zipFileNames.txt");
+				
 			if(!(zipFile.exists()))
 			{
 				zipFile.createNewFile();
@@ -860,10 +900,5 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	{
 		return Integer.parseInt(zipFileName);
 	}
-
-
-
-
-
 
 }

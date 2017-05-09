@@ -108,7 +108,7 @@ public class VTWAssetAPI {
 	}
 
 
-	public synchronized String init(String downloadDir_name,String thread_name)
+	public synchronized String init(String downloadDir_name,String thread_name, String type)
 	{
 		DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");		 
 		Date date = new Date();
@@ -124,7 +124,7 @@ public class VTWAssetAPI {
 				downloadDir.mkdir();
 			}
 
-			downloadDir = new File(downloadDir.getAbsolutePath() + "/" + downloadDir_name);
+			downloadDir = new File(downloadDir.getAbsolutePath() + "/" + type + "_" + downloadDir_name);
 			if(!(downloadDir.exists()))
 			{
 				downloadDir.mkdir();
@@ -169,14 +169,14 @@ public class VTWAssetAPI {
 
 	//loop through paten ids, download patent wither with AssetAPI Url or Pre-signed URL
 
-	public void downloadPatent(Map<String,String> patentIds, CloseableHttpClient client, String downloadDirName, String thread_name)
+	public void downloadPatent(Map<String,String> patentIds, CloseableHttpClient client, String downloadDirName, String thread_name, String type)
 	{
 
 		String[] response = new String[2];
 		String threadName = thread_name;
 		ResponseHandler<String[]> responseHandler = null;
 
-		String downloadDir = init(downloadDirName,thread_name);
+		String downloadDir = init(downloadDirName,thread_name, type);
 
 		if(patentIds.size() >0)
 		{
