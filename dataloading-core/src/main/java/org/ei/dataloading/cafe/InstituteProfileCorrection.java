@@ -1,5 +1,6 @@
 package org.ei.dataloading.cafe;
 import java.sql.*;
+
 import java.util.*;
 import java.io.*;
 import java.util.regex.*;
@@ -11,6 +12,18 @@ import org.ei.domain.*;
 import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.query.base.FastQueryWriter;
 import org.ei.util.GUID;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.ParseException;
+import org.json.simple.parser.JSONParser;
+import com.amazonaws.util.IOUtils;
 
 public class InstituteProfileCorrection 
 {
@@ -680,8 +693,10 @@ public class InstituteProfileCorrection
 	
 	private void deleteRecord(String affid,Connection con1)
 	{
-		PreparedStatement stmt = null;
-		String sqlQuery1 = "delete from institute_profile where affid='"+affid+"'";
+		Statement stmt = null;
+		String sqlQuery1 = "insert into institute_profile_deletion select * from institute_profile where affid='"+affid+"'";
+		String sqlQuery2 = "delete from institute_profile where affid='"+affid+"'";
+		String sqlQuery3 = "update cafe_af_lookup set status='deleted' where INSTITUTE_ID='"+affid+"'";
 		
 		
 		try
@@ -691,9 +706,13 @@ public class InstituteProfileCorrection
 				con1 = getConnection(url,driver,username,password);
 			}
 	
-		    stmt = con1.prepareStatement(sqlQuery1);
-		    stmt.executeUpdate();
+			con1.setAutoCommit(false);
+			stmt = con1.createStatement();		   
+		    stmt.executeUpdate(sqlQuery1);
+		    stmt.executeUpdate(sqlQuery2);
+		    stmt.executeUpdate(sqlQuery3);
 		    con1.commit();
+		    con1.setAutoCommit(true);
 
 		}
 		catch(Exception e)
@@ -795,12 +814,57 @@ public class InstituteProfileCorrection
 
 	}
 	
-	private int checkSearchServer(String term1)
+	private int checkSearchServer(String afid)
 	{
+		String SERVICE_NAME = "es";
+		String REGION = "us-east-1";
+		String HOST ="search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+		String ENDPOINT_ROOT = "http://" + HOST;
+		int totalHit =0;
+		String PATH = "/cafe/_search";	
+		
+		HttpClient httpClient = HttpClientBuilder.create().build(); 
+		JSONObject json = new JSONObject();
+		JSONParser parser = new JSONParser();		
+		String s = "{\"stored_fields\": [\"afdoc.afid\"],\"query\": {\"bool\": {\"must\": [{\"match_phrase\": {\"afdoc.afid\": "+afid+"}}]}}}";
+		try {
+			
+			midTime = System.currentTimeMillis();
+			
+			Object obj = parser.parse(s);		
+		    HttpPost request = new HttpPost(ENDPOINT_ROOT + PATH);
+		    
+		    StringEntity params =new StringEntity(obj.toString());
+		    request.addHeader("content-type", "application/json");
+		    request.setEntity(params);
+		    HttpResponse response = httpClient.execute(request);
+		    InputStream responseStream = response.getEntity().getContent();		    
 
-		System.out.println("checking in Search server");
+			String responseString = IOUtils.toString(responseStream);
+			
+			//Standard response {"took":16,"timed_out":false,"_shards":{"total":16,"successful":16,"failed":0},"hits":{"total":1,"max_score":6.5866313,"hits":[{"_index":"evcafe","_type":"author","_id":"aut_M7351e2de156b8ab50beM664e10178163171","_score":6.5866313,"fields":{"audoc.auid":["57104828900"]}}]}}
+			System.out.println("RESPONSE= "+responseString);
+			JSONArray array = new JSONArray();
+			Object responseobj = parser.parse(responseString);
+		    		  
+		    String hits =  ((JSONObject)responseobj).get("hits").toString();		  
+		    Object hitobj = parser.parse(hits);
+		    totalHit =  Integer.parseInt(((JSONObject)hitobj).get("total").toString());
+		    System.out.println("aFFId "+afid+" hit= "+totalHit);		  		   
+		    
+		 }catch(ParseException pe){
+				
+	         System.out.println("position: " + pe.getPosition());
+	         System.out.println(pe);	     
+		}catch (Exception ex) {
 
-		return 0;
+		   ex.printStackTrace();
+
+		}
+		if(totalHit>0)
+			return 1;
+		else
+			return 0;
 
 	}
 
