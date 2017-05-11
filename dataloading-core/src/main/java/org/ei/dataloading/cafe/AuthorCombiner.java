@@ -1,5 +1,8 @@
 package org.ei.dataloading.cafe;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -58,10 +61,12 @@ public class AuthorCombiner {
 	static String action = "new";
 	int updateNumber;
 	static int recsPerEsbulk;
-	private static String esDomain = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";
-	
+	private static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+	private static String tableToBeTruncated = "APR_ES_INDEXED";
+	private static String esIndexedIdsSqlldrFileName = "aprESIndexedIdsFileLoader.sh";
+
 	static int ESdirSeq_ID = 1;
-	
+
 
 	// get CurrentData and Time for ESIndexTime
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -73,30 +78,30 @@ public class AuthorCombiner {
 	HashSet<String> variantInitials = new HashSet<String>();
 	HashSet<String> variantFirst = new HashSet<String>();
 	HashSet<String> variantLast = new HashSet<String>();
-	
+
 	//Author Affiliation
 	static AuAffiliation auaf;
 	LinkedHashSet<String> affiliation_historyIds_List;
-	
+
 	List<String> auId_deletion_list;
 
-	
+
 	AuAfCombinedRec rec;
 	String esDir;
 	static AuAfESIndex s3upload;
 	static AusAffESIndex esIndex;
-	
-	
+
+
 	Connection con = null;
-	
+
 	private static long startTime = System.currentTimeMillis();
 	private static long endTime = System.currentTimeMillis();
 	private static long midTime = System.currentTimeMillis();
-	
-	
+
+
 	public static void main(String args[])
 	{
-		if(args.length >10)
+		if(args.length >12)
 		{
 			if(args[0] !=null)
 			{
@@ -148,7 +153,7 @@ public class AuthorCombiner {
 				try
 				{
 					recsPerEsbulk = Integer.parseInt(args[9]);
-					
+
 					System.out.println("ES Documents per Bulk: " + recsPerEsbulk);
 				}
 				catch(NumberFormatException ex)
@@ -156,12 +161,21 @@ public class AuthorCombiner {
 					recsPerEsbulk = 10;
 				}
 			}
-			
+
 			if(args[10] !=null)
 			{
 				esDomain = args[10];
-				
+
 				System.out.println("ES Domain name: " + esDomain);
+			}
+			if(args[11] !=null)
+			{
+				tableToBeTruncated = args[11];
+			}
+			if(args[12] !=null)
+			{
+				esIndexedIdsSqlldrFileName = args[12];
+				System.out.println("APR ES Indexed IDS sqlldrFileName: " + esIndexedIdsSqlldrFileName);
 			}
 
 		}
@@ -181,26 +195,26 @@ public class AuthorCombiner {
 				System.out.println("Invalid document type!!, please re-run with document type apr");
 				System.exit(1);
 			}
-			
+
 			writer = new CombinedAuAfJSON(doc_type,loadNumber);
 			writer.init(ESdirSeq_ID);
 			//s3upload = new AuAfESIndex(doc_type);  for ES index using Jest
-			
+
 			esIndex = new AusAffESIndex(recsPerEsbulk, esDomain);
-			
+
 
 			AuthorCombiner c = new AuthorCombiner();
 			c.con = c.getConnection(url,driver,username,password);
-		
+
 			c.esDir = writer.getEsDirName();
-			
+
 			midTime = System.currentTimeMillis();
 			endTime = System.currentTimeMillis();
 			System.out.println("Time for finish reading input parameter & ES initialization "+(endTime-startTime)/1000.0+" seconds");
 			System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
 
-			
-						
+
+
 			if(loadNumber ==1)
 			{
 				c.writeCombinedByTable();
@@ -209,11 +223,13 @@ public class AuthorCombiner {
 			{
 				c.writeCombinedByWeekNumber();
 			}
+
 			
 			
-			// update status = "indexed" for the docs that successfully indexed to ES
-			c.updateAuthorProfileStatus(esIndex.getESIndexedDocsList());
-			
+			//added 05/10/2017 to update status = "indexed" for the docs that successfully indexed to ES
+			UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
+			profileESUpdate.writeIndexexRecs(esIndex.getESIndexedDocsList());
+
 		}
 		catch(Exception e)
 		{
@@ -233,7 +249,7 @@ public class AuthorCombiner {
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			
+
 			if(!(action.isEmpty()) && (action.equalsIgnoreCase("new") || action.equalsIgnoreCase("update")))
 			{
 				query = "select * from " +  tableName + " where authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
@@ -242,27 +258,27 @@ public class AuthorCombiner {
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
-				
+
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-				
-				
+
+
 				writeRecs(rs,con);
-				
+
 				esIndex.ProcessBulk();
 				esIndex.end();
-				
-				
+
+
 				System.out.println("Wrote records.");
-				
+
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-				
-				
+
+
 
 			}
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("delete"))
@@ -270,7 +286,7 @@ public class AuthorCombiner {
 				// need to check with Hongrong
 
 				query = "select M_ID from " +  tableName;
-				
+
 				System.out.println(query);
 
 				rs = stmt.executeQuery(query);
@@ -278,7 +294,7 @@ public class AuthorCombiner {
 				System.out.println("Got records... from table: " + tableName);
 				getDeletionList(rs);
 			}
-			
+
 		}
 
 		finally
@@ -307,7 +323,7 @@ public class AuthorCombiner {
 				}
 			}
 
-			/*if(con !=null)
+			if(con !=null)
 			{
 				try
 				{
@@ -317,7 +333,7 @@ public class AuthorCombiner {
 				{
 					e.printStackTrace();
 				}
-			}*/
+			}
 		}
 	}
 
@@ -326,9 +342,9 @@ public class AuthorCombiner {
 	{
 		Statement stmt = null;
 		ResultSet rs = null;
-		
+
 		String query=null;
-		
+
 		try
 		{
 			stmt = con.createStatement();
@@ -336,123 +352,123 @@ public class AuthorCombiner {
 			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
 				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
-				
-				
+
+
 				System.out.println(query);
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
-				
+
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-				
-				
+
+
 				writeRecs(rs,con);
-				
+
 				esIndex.ProcessBulk();
 				esIndex.end();
-				
-				
+
+
 				System.out.println("Wrote records.");
-				
+
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println("time for run ES extract & index "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-				
-				
+
+
 			}
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
 				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
-				
-								
+
+
 				// for testing
-				
+
 				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
 				" and AUTHORID in ('7003368787' , '56274927700', '55341202700', '55184666600', '35314476100', '7006070058' , '55770916500',"
 				+ "'33967479000', '56912187400', '15751442200')";*/
-				
-				
+
+
 				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
 						" and AUTHORID = '35610162600'";*/
-						
+
 				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
 						" and rownum<2";
-						*/
-				
+				 */
+
 				// 02/22/2017 to test author with chinees name ( made up chinees name to test)
-				
+
 				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
 				" and AUTHORID = '6603802631'";*/
-				
-				
+
+
 				// 04/03/2017 to test why history_display_name in ES not showing as expected as in DB tables "Author_AFF"
-				
+
 				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
 						" and AUTHORID = '55820750800'";*/
-			
-				
+
+
 				// 04/04/2017, only index AU profile that has BD CPX abstract records in fast DEV for Dayton to test EV App
-				
+
 				/*query =  "select * from " +  tableName + "  where AUTHORID in (select author_id from ap_correction1.Cafe_au_lookup where pui "
 						+ " in (select pui from ap_correction1.AUTHOR_MID)) and rownum<2";*/
-									
-				
+
+
 				System.out.println(query);
 
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
-				
+
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-				
-				
+
+
 				writeRecs(rs,con);
 				//s3upload.end();
-				
+
 				//upload ES files to S3 buckt for ES index with Lambda Function
 				//UploadAuAfESToS3.UploadFileToS3(esDir,"evcafe");
-				
+
 				esIndex.ProcessBulk();
 				esIndex.end();
-				
+
 				System.out.println("Wrote records.");
-				
+
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println("time for run ES extract & index "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 			}
-			
+
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("delete"))
 			{
 				// need to check with Hongrong
-				
+
 				updateNumber=loadNumber;
 				query = "select M_ID from " +  tableName + " where updatenumber=" + updateNumber; 
-				
+
 				System.out.println(query);
 
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
 				getDeletionList(rs);
-				
+
 				// used for delete for S3 bucket & ES using Lambda function
 				//AuAfESIndex.DeleteFilesFromS3(auId_deletion_list, "evcafe"); 
-				
+
 				esIndex.createBulkDelete(doc_type, auId_deletion_list);
-				
+
 			}
-			
-			
+
+
 		}
 
 		finally
@@ -481,7 +497,7 @@ public class AuthorCombiner {
 				}
 			}
 
-			/*if(con !=null)
+			if(con !=null)
 			{
 				try
 				{
@@ -491,7 +507,7 @@ public class AuthorCombiner {
 				{
 					e.printStackTrace();
 				}
-			}*/
+			}
 		}
 
 	}
@@ -509,9 +525,9 @@ public class AuthorCombiner {
 
 				rec = new AuAfCombinedRec();
 				auaf = new AuAffiliation();
-				
-				 date= dateFormat.format(new Date());
-				
+
+				date= dateFormat.format(new Date());
+
 				if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
 				{
 
@@ -530,8 +546,8 @@ public class AuthorCombiner {
 					{
 						rec.put(AuAfCombinedRec.UPDATE_NUMBER, Integer.toString(rs.getInt("UPDATENUMBER")));
 					}
-					
-					
+
+
 					//EID
 					if(rs.getString("EID") !=null)
 					{
@@ -556,68 +572,68 @@ public class AuthorCombiner {
 						//rec.put(AuAfCombinedRec.TIMESTAMP, timeStampFormat(rs.getString("TIMESTAMP")));
 						rec.put(AuAfCombinedRec.LOADDATE, rs.getString("TIMESTAMP"));
 					}
-					
+
 					//INDEXDATE in DB, in ES called "ITEMTRANSACTIONID"
 					if(rs.getString("INDEXED_DATE") !=null)
 					{
 						rec.put(AuAfCombinedRec.ITEMTRANSACTIONID, rs.getString("INDEXED_DATE"));
 					}
-					
+
 					// EPOCH in DB, in ES called "INDEXEDDATE"
 					if(rs.getString("EPOCH") !=null)
 					{
 						rec.put(AuAfCombinedRec.INDEXEDDATE, rs.getString("EPOCH"));
 					}
-					
+
 					// ES Index Data (Current DateTime)
 					rec.put(AuAfCombinedRec.ESINDEXTIME, date);
-					
+
 					//AUTHORID
 					if(rs.getString("AUTHORID") !=null)
 					{
 						rec.put(AuAfCombinedRec.AUID, rs.getString("AUTHORID"));
 					}
-					
+
 					//ORCID, comment for now bc it is not in author_profile table yet
 					if(rs.getString("ORCID") !=null)
 					{
 						rec.put(AuAfCombinedRec.ORCID, rs.getString("ORCID"));
 					}
-					
+
 					//PREFERRED_INI
 					if(rs.getString("INITIALS") !=null)
 					{
 						rec.put(AuAfCombinedRec.PREFERRED_INI, DataLoadDictionary.mapEntity(rs.getString("INITIALS")));
 					}
-					
+
 					//PREFERRED_FIRST
 					if(rs.getString("GIVENNAME") !=null)
 					{
 						rec.put(AuAfCombinedRec.PREFERRED_FIRST, DataLoadDictionary.mapEntity(rs.getString("GIVENNAME")));
 					}
-					
+
 					//PREFERRED_LAST
 					if(rs.getString("SURENAME") !=null)
 					{
 						rec.put(AuAfCombinedRec.PREFERRED_LAST, DataLoadDictionary.mapEntity(rs.getString("SURENAME")));
 					}
-					
+
 					//NAME_VARAINT (INITIALS, First, Last)
 					if(rs.getString("NAME_VARIANT") !=null)
 					{
 						prepareNameVariant(rs.getString("NAME_VARIANT"));
 					}
-					
-					
+
+
 					//SUBJABBR
 					if(rs.getString("CLASSIFICATION_SUBJABBR") !=null)
 					{
 						rec.put(AuAfCombinedRec.CLASSIFICATION_SUBJABBR, rs.getString("CLASSIFICATION_SUBJABBR"));
-						
+
 						//SUBJECT_CLUSETR
 						prepareSubjabbr(rs.getString("CLASSIFICATION_SUBJABBR"));
 					}
-					
+
 					//PUBLICATION_RANGE
 					if(rs.getString("PUBLICATION_RANGE") !=null)
 					{
@@ -631,11 +647,11 @@ public class AuthorCombiner {
 							rec.put(AuAfCombinedRec.PUBLICATION_RANGE_LAST, ranges[1]);
 						}
 					}
-					
+
 					/*//SOURCE_TITLE & ISSN (from JOURNALS COL, replaced by the one from SOURCE_TITLE)
-					
+
 					String journals = getStringFromClob(rs.getClob("JOURNALS"));
-					
+
 						if(journals !=null)
 						{
 							prepareSourceTitle(journals);
@@ -645,16 +661,16 @@ public class AuthorCombiner {
 						{
 							rec.put(AuAfCombinedRec.SOURCE_TITLE, "undefined");
 						}*/
-					
+
 					//SOURCE_TITLE
-					
+
 					String sourceTitles = getStringFromClob(rs.getClob("SOURCE_TITLE"));
-					
+
 					if(sourceTitles !=null)
 					{
 						rec.put(AuAfCombinedRec.SOURCE_TITLE, sourceTitles);
 					}
-					
+
 					//ISSN
 					String journals = getStringFromClob(rs.getClob("JOURNALS"));	
 					if(journals !=null)
@@ -669,10 +685,10 @@ public class AuthorCombiner {
 						{
 							email = e_mail[1];
 						}
-						
+
 						rec.put(AuAfCombinedRec.EMAIL_ADDRESS, email);
 					}
-					
+
 					//CURRENT_AFFILIATION_ID
 					if(rs.getString("CURRENT_AFF_ID") !=null)
 					{
@@ -684,7 +700,7 @@ public class AuthorCombiner {
 						{
 							currentdept_affid = rs.getString("CURRENT_AFF_ID");
 						}
-						
+
 					}
 					//CURRENT_PARENT_AFFILIATION_ID
 					if(rs.getString("PARENT_AFF_TYPE") !=null && rs.getString("PARENT_AFF_ID") !=null)
@@ -701,124 +717,124 @@ public class AuthorCombiner {
 						//prepareCurrentAffiliation(auaf.getAffiliationId(), currentdept_affid, con);
 						prepareCurrentAffiliation(auaf.getAffiliationId(), currentdept_affid);
 					}
-					
-					
-					
-				//Historical PARENT AFFILIATION INFO
+
+
+
+					//Historical PARENT AFFILIATION INFO
 					String history_affiliationIds = getStringFromClob(rs.getClob("HISTORY_AFFILIATIONID"));
 					if(history_affiliationIds !=null)
 					{
-						
+
 						/*midTime = endTime;
 		                endTime = System.currentTimeMillis();
-						
+
 						System.out.println("*****************");
 						System.out.println("time before preparing HistoryIds "+(endTime-midTime)/1000.0+" seconds");
 			            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 						System.out.println("*****************");*/
-						
+
 						// get AffiliationHistory unique Parent IDS
 						prepareHistoryAffiliationIds(history_affiliationIds);
-						
+
 						/*midTime = endTime;
 		                endTime = System.currentTimeMillis();
-						
+
 						System.out.println("*****************");
 						System.out.println("time after preparing HistoryIds "+(endTime-midTime)/1000.0+" seconds");
 			            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 						System.out.println("*****************");*/
-						
-						
+
+
 						if(affiliation_historyIds_List.size() >0)
 						{
-							
+
 							// only for debugging
 							/*midTime = endTime;
 			                endTime = System.currentTimeMillis();
-							
+
 							System.out.println("*****************");
 							System.out.println("time before preparing HistoryDetails "+(endTime-midTime)/1000.0+" seconds");
 				            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 							System.out.println("*****************");*/
-							
+
 							//prepareHistoryAffiliation(con);
 							prepareHistoryAffiliation();
-							
+
 							/*midTime = endTime;
 			                endTime = System.currentTimeMillis();
-							
+
 							System.out.println("*****************");
 							System.out.println("time after preparing HistoryDetails "+(endTime-midTime)/1000.0+" seconds");
 				            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 							System.out.println("*****************");*/
-							
+
 						}
 					}
-					
+
 					//CITY
 					auaf.setAffiliationCity();
-					
+
 					//COUNTRY
 					auaf.setAffiliationCountry();
-					
+
 					//Parents AFFILIATION ID
 					auaf.setParentAffiliationsId();
-					
-					
+
+
 					//CURRENT PARENT AFFILIATION_ID
 					rec.put(AuAfCombinedRec.AFID, auaf.getAffiliationId());
-					
+
 					//CURRENT PARENT DISPLAY_NAME
 					rec.put(AuAfCombinedRec.DISPLAY_NAME, auaf.getAffiliationDisplayName());
-					
+
 					//CURRENT PARENT DISPLAY_CITY
 					rec.put(AuAfCombinedRec.DISPLAY_CITY, auaf.getAffiliationDisplayCity());
-					
+
 					//CURRENT PARENT DISPLAY_COUNTRY
 					rec.put(AuAfCombinedRec.DISPLAY_COUNTRY, auaf.getAffiliationDisplayCountry());
-					
+
 					//CURRENT PARENT SORT_NAME
 					rec.put(AuAfCombinedRec.AFFILIATION_SORT_NAME, auaf.getAffiliationSortName());
-					
+
 					//PARENT AFFILIATION HISTORY_ID
 					rec.put(AuAfCombinedRec.AFFILIATION_HISTORY_ID, auaf.getHistoryAffid());
-					
+
 					// PARENT AFFILIATION HISTORY_DISPLAY_NAME
 					rec.put(AuAfCombinedRec.HISTORY_DISPLAY_NAME, auaf.getHistoryDisplayName());
-					
+
 					// PARENT AFFILIATION HISTORY_CITY
 					rec.put(AuAfCombinedRec.HISTORY_CITY, auaf.getHistoryCity());
-					
+
 					// PARENT AFFILIATION HISTORY_COUNTRY
 					rec.put(AuAfCombinedRec.HISTORY_COUNTRY, auaf.getHistoryCountry());
-					
+
 					//CURRENT_AND_HiSTORY PARENT AFFILIATION_ID
 					//rec.put(AuAfCombinedRec.PARENT_AFFILIATION_ID,auaf.getParentAffiliationsId());
-					
+
 					//CURRENT_AND_HISTORY PARENT PREFERRED_NAME
 					rec.put(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME, auaf.getParentAffiliationsPreferredName());
-					
+
 					//CURRENT_AND_HOSTORY PARENT NAME_VARIANT
 					rec.put(AuAfCombinedRec.AFFILIATION_VARIANT_NAME, auaf.getParentAffiliationsNameVariant());
-					
+
 					/*//CURRENT_AND_HISTORY PARENT CITY
 					rec.put(AuAfCombinedRec.CITY, auaf.getAffiliationCity());
-					
+
 					//CURRENT_AND_HISTORY PARENT COUNTRY
 					rec.put(AuAfCombinedRec.COUNTRY, auaf.getAffiliationCountry());*/  //HH 07/25/2016 Copied @ ES Profile Level
-					
+
 					//CURRENT_AND_HISTORY PARENT NAMEID
 					rec.put(AuAfCombinedRec.NAME_ID, auaf.getAffiliationNameId());
-					
+
 					//CURRENT DEPT AFFILIATION_ID
 					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_ID, auaf.getCurrentDeptAffiliation_Id());
-					
+
 					//CURRENT DEPT AFFILIATION DISPLAY_NAME
 					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_DISPLAY_NAME, DataLoadDictionary.mapEntity(auaf.getCurrentDeptAffiliation_DisplayName()));
-					
+
 					//CURRENT DEPT AFFILIATION CITY
 					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATIOIN_CITY, auaf.getCurrentDeptAffiliation_City());
-					
+
 					//CURRENT DEPT AFFILIATION COUNTRY
 					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_COUNTRY, auaf.getCurrentDeptAffiliation_Country());
 				}
@@ -829,15 +845,15 @@ public class AuthorCombiner {
 					writer.init(ESdirSeq_ID);
 					//upload ES files to S3 buckt for ES index with Lambda Function
 					//UploadAuAfESToS3.UploadFileToS3(writer.getEsDirName(),"evcafe");
-					
+
 					rec_count = 0;
 				}*/
-				
+
 				writer.writeAuRec(rec);		
 				auaf=null;
 				count ++;
 				//rec_count++;
-				
+
 
 			}
 			catch (SQLException e) 
@@ -846,7 +862,7 @@ public class AuthorCombiner {
 				e.printStackTrace();
 			}
 		}
-		
+
 		System.out.println("Total records count: " +  count);
 	}
 
@@ -855,82 +871,82 @@ public class AuthorCombiner {
 	{
 		String[] name_variants = null;
 		String singleName_Variant = "";
-		
+
 		String [] singleVarainat;
-		
+
 		// add to the record
 		StringBuffer variantNameInit = new StringBuffer();
 		StringBuffer variantNameFirst = new StringBuffer();
 		StringBuffer variantNameLast = new StringBuffer();
 
-		
-			name_variants = name_variant.split(Constants.AUDELIMITER);
-			
-			for(int i=0;i<name_variants.length;i++)
+
+		name_variants = name_variant.split(Constants.AUDELIMITER);
+
+		for(int i=0;i<name_variants.length;i++)
+		{
+			singleName_Variant = name_variants[i].trim();
+			if(singleName_Variant !=null && !(singleName_Variant.isEmpty()))
 			{
-				singleName_Variant = name_variants[i].trim();
-				if(singleName_Variant !=null && !(singleName_Variant.isEmpty()))
+				singleVarainat = singleName_Variant.split(Constants.IDDELIMITER);
+
+				if(singleVarainat.length>0 && singleVarainat[0] != null)
 				{
-					singleVarainat = singleName_Variant.split(Constants.IDDELIMITER);
-					
-						if(singleVarainat.length>0 && singleVarainat[0] != null)
-						{
-							variantNameInit.append(DataLoadDictionary.mapEntity(singleVarainat[0]));
-						}
-						if(singleVarainat.length>2 && singleVarainat[2] != null)
-						{
-							variantNameLast.append(DataLoadDictionary.mapEntity(singleVarainat[2]));
-						}
-						if(singleVarainat.length>3 && singleVarainat[3] !=null)
-						{
-							variantNameFirst.append(DataLoadDictionary.mapEntity(singleVarainat[3]));
-						}
-						if(i<name_variants.length -1)
-						{
-							variantNameInit.append(Constants.IDDELIMITER);
-							variantNameLast.append(Constants.IDDELIMITER);
-							variantNameFirst.append(Constants.IDDELIMITER);
-						}
+					variantNameInit.append(DataLoadDictionary.mapEntity(singleVarainat[0]));
+				}
+				if(singleVarainat.length>2 && singleVarainat[2] != null)
+				{
+					variantNameLast.append(DataLoadDictionary.mapEntity(singleVarainat[2]));
+				}
+				if(singleVarainat.length>3 && singleVarainat[3] !=null)
+				{
+					variantNameFirst.append(DataLoadDictionary.mapEntity(singleVarainat[3]));
+				}
+				if(i<name_variants.length -1)
+				{
+					variantNameInit.append(Constants.IDDELIMITER);
+					variantNameLast.append(Constants.IDDELIMITER);
+					variantNameFirst.append(Constants.IDDELIMITER);
 				}
 			}
-			
-			rec.put(AuAfCombinedRec.VARIANT_INI, variantNameInit.toString());
-			rec.put(AuAfCombinedRec.VARIANT_FIRST, variantNameFirst.toString());
-			rec.put(AuAfCombinedRec.VARIANT_LAST, variantNameLast.toString());
-			
-			//clearout all stringbuffers
-			variantNameInit.delete(0, variantNameInit.length());
-			variantNameFirst.delete(0,variantNameFirst.length());
-			variantNameLast.delete(0, variantNameLast.length());
+		}
+
+		rec.put(AuAfCombinedRec.VARIANT_INI, variantNameInit.toString());
+		rec.put(AuAfCombinedRec.VARIANT_FIRST, variantNameFirst.toString());
+		rec.put(AuAfCombinedRec.VARIANT_LAST, variantNameLast.toString());
+
+		//clearout all stringbuffers
+		variantNameInit.delete(0, variantNameInit.length());
+		variantNameFirst.delete(0,variantNameFirst.length());
+		variantNameLast.delete(0, variantNameLast.length());
 
 	}
-	
+
 	//SUBJABBR LIST
 	public void prepareSubjabbr(String classification_Subjabbr)
 	{
 		StringBuffer subjabbrCode = new StringBuffer();
 		String[]  single_subjabbr;
-		
+
 		String [] subjabbrs = classification_Subjabbr.split(Constants.AUDELIMITER);
 		for(int i=0; i<subjabbrs.length; i++)
 		{
 			single_subjabbr = subjabbrs[i].split(Constants.IDDELIMITER);
-			
+
 			if(single_subjabbr !=null && single_subjabbr.length>1)
 			{
 				subjabbrCode.append(single_subjabbr[1]);
 				if(i< subjabbrs.length -1)
 					subjabbrCode.append(Constants.IDDELIMITER);
 			}
-			
+
 		}
-			
+
 		rec.put(AuAfCombinedRec.SUBJECT_CLUSTER, subjabbrCode.toString());
 		// clearout subjabbr
 		subjabbrCode.delete(0, subjabbrCode.length());
-		
+
 	}
-	
+
 	//Used SOURCE_TITLE from <xocs:srctitles> instead of JOURNALS **/
 	/*//JOURNALS
 	public void prepareSourceTitle(String journals)
@@ -943,7 +959,7 @@ public class AuthorCombiner {
 		StringBuffer issn = new StringBuffer();
 		String mapped_issn = "";
 		LinkedHashSet<String> issn_list = new LinkedHashSet<String>();
-		
+
 
 		author_Journals = journals.split(Constants.AUDELIMITER);
 		for(int i=0; i<author_Journals.length; i++)
@@ -961,7 +977,7 @@ public class AuthorCombiner {
 					{
 						sourceTitles.append(DataLoadDictionary.mapEntity(singleJournal[2]));
 					}
-					
+
 					if(singleJournal.length>3 && singleJournal[3] !=null)
 					{
 						mapped_issn = DataLoadDictionary.mapEntity(singleJournal[3]);
@@ -969,38 +985,38 @@ public class AuthorCombiner {
 						{
 							issn_list.add(mapped_issn);
 						}
-						
+
 					}
-					
-					
-					
+
+
+
 					if(sourceTitles.length() >0)
 					{
 						sourceTitles.append(Constants.IDDELIMITER);
 					}
 				}
 			}
-		
+
 		// Combine unique list of Issn
 		for(String issn_str: issn_list)
 		{
 			issn.append(issn_str);
 			issn.append(Constants.IDDELIMITER);
 		}
-		
+
 		rec.put(AuAfCombinedRec.SOURCE_TITLE, sourceTitles.toString());
 		rec.put(AuAfCombinedRec.ISSN, issn.toString());
-		
+
 		//clearout stringbuffers
 		sourceTitles.delete(0, sourceTitles.length());
 		issn.delete(0, issn.length());
-		
+
 		//clear out the issn List
 		issn_list.clear();
 	}*/   
-	
+
 	//SOURCE_TITLE
-	
+
 	public void prepareISSN(String journals)
 	{
 		String [] author_Journals = null;
@@ -1011,28 +1027,28 @@ public class AuthorCombiner {
 		StringBuffer issn = new StringBuffer();
 		String mapped_issn = "";
 		LinkedHashSet<String> issn_list = new LinkedHashSet<String>();
-		
+
 
 		author_Journals = journals.split(Constants.AUDELIMITER);
 		for(int i=0; i<author_Journals.length; i++)
+		{
+			author_Journal = author_Journals[i].trim();
+			if(author_Journal !=null && !(author_Journal.isEmpty()))
 			{
-				author_Journal = author_Journals[i].trim();
-				if(author_Journal !=null && !(author_Journal.isEmpty()))
-				{
-					singleJournal = author_Journal.split(Constants.IDDELIMITER);
+				singleJournal = author_Journal.split(Constants.IDDELIMITER);
 
-					if(singleJournal.length>3 && singleJournal[3] !=null)
+				if(singleJournal.length>3 && singleJournal[3] !=null)
+				{
+					mapped_issn = DataLoadDictionary.mapEntity(singleJournal[3]);
+					if(!(issn_list.contains(mapped_issn)))
 					{
-						mapped_issn = DataLoadDictionary.mapEntity(singleJournal[3]);
-						if(!(issn_list.contains(mapped_issn)))
-						{
-							issn_list.add(mapped_issn);
-						}
+						issn_list.add(mapped_issn);
 					}
-	
 				}
+
 			}
-		
+		}
+
 		// Combine unique list of Issn
 		for(String issn_str: issn_list)
 		{
@@ -1041,15 +1057,15 @@ public class AuthorCombiner {
 		}
 
 		rec.put(AuAfCombinedRec.ISSN, issn.toString());
-		
+
 		//clearout stringbuffers
 		issn.delete(0, issn.length());
-		
+
 		//clear out the issn List
 		issn_list.clear();
 	}  
-	
-	
+
+
 	private String getStringFromClob(Clob clob)
 	{
 		String str = null;
@@ -1066,20 +1082,20 @@ public class AuthorCombiner {
 		}
 		return str;
 	}
-	
+
 	//private void prepareCurrentAffiliation(String parentAffId, String current_deptId, Connection con)
 	private void prepareCurrentAffiliation(String parentAffId, String current_deptId)
 	{
 		Statement stmt = null;
 		ResultSet rs = null;
 		ResultSet rsDept = null;
-		
+
 		try
 		{
 			stmt = con.createStatement();
 			String query = "select * from AUTHOR_AFF where AFFID='" + parentAffId + "'";
 			rs = stmt.executeQuery(query);
-			
+
 			while(rs.next())
 			{
 				//PREFERRED_NAME
@@ -1087,54 +1103,54 @@ public class AuthorCombiner {
 				{
 					auaf.setAffiliationPreferredName(DataLoadDictionary.mapEntity(rs.getString("PREFERED_NAME")));
 				}
-				
+
 				//NAME_VARIANT
 				String affNameVariants = getStringFromClob(rs.getClob("NAME_VARIANT"));
-				
+
 				if(affNameVariants !=null)
 				{
 					auaf.setParentAffiliationsNameVariant(DataLoadDictionary.mapEntity(affNameVariants));
 				}
-				
+
 				// DISPLAY_NAME
 				if(rs.getString("AFDISPNAME") !=null)
 				{
 					auaf.setAffiliationDisplayName(DataLoadDictionary.mapEntity(rs.getString("AFDISPNAME")));
 				}
-				
+
 				//DISPLAY_CITY
 				if(rs.getString("CITY") !=null)
 				{
 					auaf.setAffiliationDisplayCity(rs.getString("CITY"));
 				}
-				
+
 				//DISPLAY_CITY_GROUP
 				if(rs.getString("CITYGROUP") != null)
 				{
 					auaf.setAffiliationDisplayCity(rs.getString("CITYGROUP"));
 				}
-				
+
 				//DISPLAY_COUNTRY
 				if(rs.getString("COUNTRY") !=null)
 				{
 					auaf.setAffiliationDisplayCountry(rs.getString("COUNTRY"));
 				}
-				
+
 				//CURRENT NAMEID
 				if(rs.getString("AFNAMEID") !=null)
 				{
 					auaf.setAffiliationNameId(DataLoadDictionary.mapEntity(rs.getString("AFNAMEID")));
-					
+
 				}
-				
+
 				//CURRENT PARENT SORTNAME
 				if(rs.getString("SORTED_NAME") !=null)
 				{
 					auaf.setAffiliationSortName(DataLoadDictionary.mapEntity(rs.getString("SORTED_NAME")));
 				}
-					
+
 			}
-			
+
 			//Current DepartmentID, ONLY FOR DISPLAY			
 
 			//dept id
@@ -1142,7 +1158,7 @@ public class AuthorCombiner {
 			{
 				query = "select AFDISPNAME,CITY,COUNTRY from AUTHOR_AFF where AFFID='" + current_deptId + "'";
 				rsDept = stmt.executeQuery(query);
-				
+
 				auaf.setCurrentDeptAffiliation_Id(current_deptId);
 				while(rsDept.next())
 				{
@@ -1191,7 +1207,7 @@ public class AuthorCombiner {
 					e.printStackTrace();
 				}
 			}
-			
+
 			if(stmt !=null)
 			{
 				try
@@ -1203,18 +1219,18 @@ public class AuthorCombiner {
 					e.printStackTrace();
 				}
 			}
-			
+
 		}	
 	}
-	
-	
+
+
 	private void prepareHistoryAffiliationIds(String afhistids)
 	{	
 		affiliation_historyIds_List= new LinkedHashSet<String>();
 		String[] affiliation_historyIds = afhistids.split(Constants.AUDELIMITER);
 		String[] singleAffiliation_history = null;
 		String[] singleAffiliation = null;
-		
+
 		for(int i=0; i<affiliation_historyIds.length;i++)
 		{
 			if(affiliation_historyIds[i] !=null && !(affiliation_historyIds[i].trim().isEmpty()))
@@ -1225,31 +1241,31 @@ public class AuthorCombiner {
 					if(singleAffiliation_history[j] !=null && !(singleAffiliation_history[j].trim().isEmpty()))
 					{
 						singleAffiliation = singleAffiliation_history[j].split(";");
-						
+
 						if(singleAffiliation[1] !=null && singleAffiliation[1].equalsIgnoreCase("parent"))
 						{
 							if(!(affiliation_historyIds_List.contains(singleAffiliation[0].substring(singleAffiliation[0].indexOf(":")+1, singleAffiliation[0].length()))))
 							{
 								affiliation_historyIds_List.add(singleAffiliation[0].substring(singleAffiliation[0].indexOf(":")+1, singleAffiliation[0].length()));
 							}
-							
+
 						}
 					}
 				}
 			}
 		}
-		
+
 		//cafe duplicate current affiliation in affiliation history, so in this case ignore the one in history
 		/* 04/03/2017 after comparing with Scopus Web Interface "SOLR-JSON" link, it shows that "afhistdispname" includes all ParentsID DIsplay Name in Affil-History,
 		 * even including Current ParentID and all it's appearance redundancy (i.e. ParentAFID appear 5 times in AffilHistory for AUID: 55820750800, so comment out below section
 		 * to follow Scopus-Solr link. change this back as it was since Current Parent ID is same one as first ParentID in History, so no need to duplicate same info again,
 		 * specially that the info also in Current Parent ID.
-		*/
+		 */
 		if(affiliation_historyIds_List.contains(auaf.getAffiliationId()))
 			affiliation_historyIds_List.remove(auaf.getAffiliationId());
-		
+
 	}
-	
+
 	//Historical Affiliations
 	//private void prepareHistoryAffiliation(Connection con)
 	private void prepareHistoryAffiliation()
@@ -1257,18 +1273,18 @@ public class AuthorCombiner {
 		ResultSet rs = null;
 		Statement stmt = null;
 		StringBuffer parent_histaffids = new StringBuffer();
-		
+
 		int i=0;
-		
+
 		for(String afhistid: affiliation_historyIds_List)
 		{
 			parent_histaffids.append("'"+afhistid+"'");
 			if(i<affiliation_historyIds_List.size()-1)
 				parent_histaffids.append(",");
-			
+
 			i++;
 		}
-	
+
 		try
 		{
 			stmt = con.createStatement();
@@ -1277,51 +1293,51 @@ public class AuthorCombiner {
 
 			while(rs.next())
 			{
-				
+
 				//HISTORY_AFFILIATION_ID
 				if(rs.getString("AFFID") !=null)
 				{
 					auaf.setHistoryAffid(rs.getString("AFFID"));
 				}
-				
+
 				//HISTORY_DISPLAY_NAME
 				if(rs.getString("AFDISPNAME") !=null)
 				{
 					auaf.setHistoryDisplayName(DataLoadDictionary.mapEntity(rs.getString("AFDISPNAME")));
 				}
-				
+
 				//HISTORY_CITY
 				if(rs.getString("CITY") !=null)
 				{
 					auaf.setHistoryCity(rs.getString("CITY"));
 				}
-				
+
 				//HISTORY_CITYGROUP
 				if(rs.getString("CITYGROUP") !=null)
 				{
 					auaf.setHistoryCity(rs.getString("CITYGROUP"));
 				}
-				
+
 				//HISTORY_COUNTRY
 				if(rs.getString("COUNTRY") !=null)
 				{
 					auaf.setHistoryCountry(rs.getString("COUNTRY"));
 				}
-				
+
 				//PARENTS_AFFILIATION_PREFERRED_NAME
 				if(rs.getString("PREFERED_NAME") !=null)
 				{
 					auaf.setParentAffiliationsPreferredName(DataLoadDictionary.mapEntity(rs.getString("PREFERED_NAME")));
 				}
-				
+
 				//PARENT_AFFILIATION_NAME_VARIANT
 				String affNameVariants = getStringFromClob(rs.getClob("NAME_VARIANT"));
-				
+
 				if(affNameVariants !=null)
 				{
 					auaf.setParentAffiliationsNameVariant(DataLoadDictionary.mapEntity(affNameVariants));
 				}
-				
+
 				//PARENT_AFFILIATION_NAMEID
 
 				if(rs.getString("AFNAMEID") !=null)
@@ -1335,7 +1351,7 @@ public class AuthorCombiner {
 			System.out.println("Error Occurred reading from History Affiliations ... " + ex.getMessage());
 			ex.printStackTrace();
 		}
-		
+
 		finally
 		{
 			if(rs!=null)
@@ -1360,11 +1376,11 @@ public class AuthorCombiner {
 					e.printStackTrace();
 				}
 			}
-			
+
 		}	
 	}
-	
-	
+
+
 	private void getDeletionList(ResultSet rs)
 	{
 		auId_deletion_list = new ArrayList<String>(); 
@@ -1383,98 +1399,25 @@ public class AuthorCombiner {
 
 		System.out.println("Total Aff records to be deleted from S3 & ES: " + auId_deletion_list.size());
 	}
-	
-	// added 05/08/2017 to update status=indexed for the author profiles that have been indexed in ES successfully so do not index again unless it got later update
-	private void updateAuthorProfileStatus(List<String> docsId)
-	{
-		StringBuffer docsMID = new StringBuffer();
-		
-		PreparedStatement stmt = null;
-		String query = null;
-		
-		
-		if(docsId != null && docsId.size() >0)
-		{
-			for(int i=0; i<docsId.size();i++)
-			{
-				if(docsMID.length() >0)
-					docsMID.append(",");
-				
-				docsMID.append("'" + docsId.get(i) + "'");
-			}
-			
-			// update DB
-			
-			
-			try
-			{
-				query = "update " + tableName + " set ES_status='indexed' where m_id in (" + docsMID + ")";
-				System.out.println("running query: " + query);
 
-				stmt = con.prepareStatement(query);
-				int count = stmt.executeUpdate();
-				System.out.println("Total updated author_profile records's ES_status column count: " + count);
-				
-			} 
-			catch (SQLException e) 
-			{
-				System.out.println("failed to update author_profile table setting ES_status='indexed'");
-				System.out.println(e.getMessage());
-				e.printStackTrace();
-			}
 
-			finally
-			{
-				if(stmt !=null)
-				{
-					try
-					{
-						stmt.close();
-					}
-					catch(Exception e)
-					{
-						e.printStackTrace();
-					}
-				}
 
-				if(con !=null)
-				{
-					try
-					{
-						con.close();
-					}
-					catch(Exception e)
-					{
-						e.printStackTrace();
-					}
-				}
-			}
-
-		}
-		else
-		{
-			System.out.println("no Author profile docs to update thier status!");
-		}
-	}
-	
-	
-	
 	/*private String normalize(String str)
 	{
 		String normalized_str = "";
-		
+
 		if(str !=null && !(str.isEmpty()))
 		{
 			normalized_str = CombinedXMLWriter.cafeGetStems(Entity.prepareString(str));  //HH 08/29/2016 toke off this func i created in CombinedXMLWriter away, as i didn ot use it
 																						// in case i need to re-use it then i need to add it back, it is almost same as getStems just added two entries
-				
+
 		}	
-		
+
 	return normalized_str;
 	}*/
-	
-	
-	
+
+
+
 	private Connection getConnection(String connectionURL,
 			String driver,
 			String username,
@@ -1488,5 +1431,5 @@ public class AuthorCombiner {
 		return con;
 	}
 
-	
+
 }
