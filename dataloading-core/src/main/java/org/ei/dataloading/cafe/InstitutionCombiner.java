@@ -48,7 +48,9 @@ public class InstitutionCombiner{
 	static String metadataTableName = "hh_af_metadata";
 	static String action = "new";
 	static int recsPerEsbulk;
-	private static String esDomain = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";
+	private static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+	private static String tableToBeTruncated = "IPR_ES_INDEXED";
+	private static String esIndexedIdsSqlldrFileName = "iprESIndexedIdsFileLoader.sh";
 
 	// get CurrentData and Time for ESIndexTime
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -72,7 +74,7 @@ public class InstitutionCombiner{
 
 	public static void main(String args[])
 	{
-		if(args.length >10)
+		if(args.length >11)
 		{
 			if(args[0] !=null)
 			{
@@ -138,6 +140,15 @@ public class InstitutionCombiner{
 				
 				System.out.println("ES Domain name: " + esDomain);
 			}
+			if(args[11] !=null)
+			{
+				tableToBeTruncated = args[11];
+			}
+			if(args[12] !=null)
+			{
+				esIndexedIdsSqlldrFileName = args[12];
+				System.out.println("APR ES Indexed IDS sqlldrFileName: " + esIndexedIdsSqlldrFileName);
+			}
 
 		}
 		else
@@ -181,8 +192,9 @@ public class InstitutionCombiner{
 			}
 
 
-			// update status = "indexed" for the docs that successfully indexed to ES
-			c.updateInstituteProfileStatus(esIndex.getESIndexedDocsList());
+			//added 05/10/2017 to update status = "indexed" for the docs that successfully indexed to ES
+			UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
+			profileESUpdate.writeIndexexRecs(esIndex.getESIndexedDocsList());
 		}
 		catch(Exception e)
 		{
@@ -658,78 +670,6 @@ public class InstitutionCombiner{
 		return time_stamp.toString();
 	}
 	
-	// added 05/08/2017 to update status=indexed for the author profiles that have been indexed in ES successfully so do not index again unless it got later update
-	private void updateInstituteProfileStatus(List<String> docsId)
-	{
-		StringBuffer docsMID = new StringBuffer();
-		
-		PreparedStatement stmt = null;
-		String query = null;
-		
-		
-		if(docsId != null && docsId.size() >0)
-		{
-			for(int i=0; i<docsId.size();i++)
-			{
-				if(docsMID.length() >0)
-					docsMID.append(",");
-				
-				docsMID.append("'" + docsId.get(i) + "'");
-			}
-			
-			// update DB
-			
-			
-			try
-			{
-				query = "update " + tableName + " set ES_status='indexed' where m_id in (" + docsMID + ")";
-				System.out.println("running query: " + query);
-
-				stmt = con.prepareStatement(query);
-				int count = stmt.executeUpdate();
-				System.out.println("Total updated institute_profile records's ES_status column count: " + count);
-				
-			} 
-			catch (SQLException e) 
-			{
-				System.out.println("failed to update institute_profile table setting ES_status='indexed'");
-				System.out.println(e.getMessage());
-				e.printStackTrace();
-			}
-
-			finally
-			{
-				if(stmt !=null)
-				{
-					try
-					{
-						stmt.close();
-					}
-					catch(Exception e)
-					{
-						e.printStackTrace();
-					}
-				}
-
-				if(con !=null)
-				{
-					try
-					{
-						con.close();
-					}
-					catch(Exception e)
-					{
-						e.printStackTrace();
-					}
-				}
-			}
-
-		}
-		else
-		{
-			System.out.println("no institute profile docs to update thier status!");
-		}
-	}
 	
 	
 	private Connection getConnection(String connectionURL,
