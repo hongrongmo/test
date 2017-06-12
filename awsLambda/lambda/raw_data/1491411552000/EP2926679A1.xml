@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2926679A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151007" time-inserted="093523" date-changed="20151211" time-changed="141322">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121593047">
+        <country>EP</country>
+        <doc-number>2926679</doc-number>
+        <kind>A1</kind>
+        <date>20151007</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>14163518</doc-number>
+        <date>20140404</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>EP</country>
+        <doc-number>14163518</doc-number>
+        <kind>A</kind>
+        <date>20140404</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>EP20140163518</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151008">
+      <gazette-reference>
+        <date>20151007</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151007</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151007</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151211">
+      <classification-ipcr sequence="1">
+        <text>A44B  19/30        20060101AFI20140902BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>44</class>
+        <subclass>B</subclass>
+        <main-group>19</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140902</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A45C  13/10        20060101ALI20140902BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>45</class>
+        <subclass>C</subclass>
+        <main-group>13</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140902</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151211">
+      <classification-cpc sequence="1">
+        <text>A45C  13/103       20130101 FI20140630BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>C</subclass>
+        <main-group>13</main-group>
+        <subgroup>103</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140630</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A44B  19/262       20130101 LA20151102BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>44</class>
+        <subclass>B</subclass>
+        <main-group>19</main-group>
+        <subgroup>262</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151102</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A44B  19/301       20130101 LA20140630BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>44</class>
+        <subclass>B</subclass>
+        <main-group>19</main-group>
+        <subgroup>301</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140630</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A45C   5/14        20130101 LI20151126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A45C  13/18        20130101 LI20151126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>C</subclass>
+        <main-group>13</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A45C2005/035       20130101 LA20151126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>C</subclass>
+        <main-group>2005</main-group>
+        <subgroup>035</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A45C2005/037       20130101 LA20151126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>C</subclass>
+        <main-group>2005</main-group>
+        <subgroup>037</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>E05B  65/52        20130101 LI20151126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>E</section>
+        <class>05</class>
+        <subclass>B</subclass>
+        <main-group>65</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151007" lang="ger" format="original">Gepäck mit ineinandergreifenden Reißverschlusszuglaschen</invention-title>
+    <invention-title id="title_eng" date-changed="20151007" lang="eng" format="original">Luggage with interlocking zipper pull tabs</invention-title>
+    <invention-title id="title_fre" date-changed="20151007" lang="fre" format="original">Bagage à tirettes de fermeture à glissière verrouillable</invention-title>
+    <references-cited date-changed="20151013">
+      <patent-citations name="patcit" date-changed="20151013" />
+      <citation>
+        <patcit num="1" dnum="US4790156A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4790156</doc-number>
+            <kind>A</kind>
+            <name>YANG FU-HSIUNG [TW]</name>
+            <date>19881213</date>
+          </document-id>
+          <application-date>
+            <date>19870828</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO2013037912A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013037912</doc-number>
+            <kind>A1</kind>
+            <name>SAMSONITE IP HOLDINGS SARL [LU], et al</name>
+            <date>20130321</date>
+          </document-id>
+          <application-date>
+            <date>20120913</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="AU2010201766A1" dnum-type="publication number">
+          <document-id>
+            <country>AU</country>
+            <doc-number>2010201766</doc-number>
+            <kind>A1</kind>
+            <name>PAUL SYMONS</name>
+            <date>20101118</date>
+          </document-id>
+          <application-date>
+            <date>20100503</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US4395891A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4395891</doc-number>
+            <kind>A</kind>
+            <name>REMINGTON RICHARD C</name>
+            <date>19830802</date>
+          </document-id>
+          <application-date>
+            <date>19801009</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US2005109072A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050109072</doc-number>
+            <kind>A1</kind>
+            <name>LING RENNY T [TW], et al</name>
+            <date>20050526</date>
+          </document-id>
+          <application-date>
+            <date>20031121</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US4350375A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4350375</doc-number>
+            <kind>A</kind>
+            <name>BAKO LAZLO</name>
+            <date>19820921</date>
+          </document-id>
+          <application-date>
+            <date>19800208</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="CN201403621Y" dnum-type="publication number">
+          <document-id>
+            <country>CN</country>
+            <doc-number>201403621</doc-number>
+            <kind>Y</kind>
+            <name>ZHIHENG ZHENG</name>
+            <date>20100217</date>
+          </document-id>
+          <application-date>
+            <date>20090421</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="8" dnum="US5557954A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5557954</doc-number>
+            <kind>A</kind>
+            <name>LING CHONG-KUAN [TW]</name>
+            <date>19960924</date>
+          </document-id>
+          <application-date>
+            <date>19950605</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="9" dnum="US6807832B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6807832</doc-number>
+            <kind>B1</kind>
+            <name>JENG YUNG-YUAN [TW]</name>
+            <date>20041026</date>
+          </document-id>
+          <application-date>
+            <date>20031210</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="10" dnum="EP1914369A2" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1914369</doc-number>
+            <kind>A2</kind>
+            <name>SUN LOCK CO LTD [CN]</name>
+            <date>20080423</date>
+          </document-id>
+          <application-date>
+            <date>20071003</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="11" dnum="WO2008034006A2" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2008034006</doc-number>
+            <kind>A2</kind>
+            <name>SINOX CO LTD, et al</name>
+            <date>20080320</date>
+          </document-id>
+          <application-date>
+            <date>20070913</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151007">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Samsonite IP Holdings S.a.r.l</orgname>
+            <registered-number>101284636</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>13-15 Avenue de la Liberté</address-1>
+              <city>1931 Luxembourg</city>
+              <country>LU</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Meersschaert, Reinhard</name>
+            <address>
+              <address-1>Lembergsesteenweg 94</address-1>
+              <city>9820 Merelbeke</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Sijmons, Erik</name>
+            <address>
+              <address-1>Tuinwijk 30</address-1>
+              <city>9700 Oudenaarde</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Recchia, Diego</name>
+            <address>
+              <address-1>Via Quadrelle 70</address-1>
+              <city>00036 Palestrina</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Lloyd, Robin et al</name>
+            <registered-number>101302154</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Kilburn &amp; Strode LLP 20 Red Lion Street</address-1>
+              <city>London WC1R 4PJ</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151007">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151207">
+      <main-family family-id="174018749">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150115669</doc-number>
+            <kind>A</kind>
+            <date>20151014</date>
+          </document-id>
+          <application-date>
+            <date>20150403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>204812545</doc-number>
+            <kind>U</kind>
+            <date>20151202</date>
+          </document-id>
+          <application-date>
+            <date>20150403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104970529</doc-number>
+            <kind>A</kind>
+            <date>20151014</date>
+          </document-id>
+          <application-date>
+            <date>20150403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926679</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20140404</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015198937</doc-number>
+            <kind>A</kind>
+            <date>20151112</date>
+          </document-id>
+          <application-date>
+            <date>20150403</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174018748">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150115669</doc-number>
+            <kind>A</kind>
+            <date>20151014</date>
+          </document-id>
+          <application-date>
+            <date>20150403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>204812545</doc-number>
+            <kind>U</kind>
+            <date>20151202</date>
+          </document-id>
+          <application-date>
+            <date>20150403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104970529</doc-number>
+            <kind>A</kind>
+            <date>20151014</date>
+          </document-id>
+          <application-date>
+            <date>20150403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926679</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20140404</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015198937</doc-number>
+            <kind>A</kind>
+            <date>20151112</date>
+          </document-id>
+          <application-date>
+            <date>20150403</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151007" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A luggage article (100, 200, 300) with interlocking zipper pull tabs (146, 148, 246a, 246b) may include one or more opening lines (114, 134, 214, 234, 314) with zippers (130, 136, 230, 236, 330) positioned along peripheries of the opening lines (114, 134, 214, 234, 314). Each zipper (130, 136, 230, 236, 330) may include two zipper sliders (142, 144, 342) with associated zipper pull tabs (146, 148, 246, 346a, 346b). At least one of the zipper pull tabs (146, 246, 346a) may include an engagement feature (162, 362), and at least another of the zipper pull tabs (148, 246, 346b) may include an aperture (178, 378) sized to receive the engagement feature (162, 362) therethough. The engagement feature (162, 362) may be positioned through the aperture (178, 378) and into a zipper pull tab receiver (172, 372) on a lock (166, 366) attached to the luggage article (100, 200, 300) to secure both zipper pull tabs (146, 148, 246, 248, 346a, 346b) to the lock (166, 366). In some articles, four zipper pull tabs (146, 148, 246, 248) may be simultaneously secured to the lock (166) using two zipper pull tab receivers (172) on the lock (166). <img id="imga-00001-en" wi="107" he="81" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <legal-data date-changed="20151016">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926679A1</docdb-publication-number>
+      <docdb-application-id>416747635</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926679A1</docdb-publication-number>
+      <docdb-application-id>416747635</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151007">
+    <heading id="h-00001-en">TECHNICAL FIELD</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a luggage articles, and in particular to interlocking zipper pull tabs for luggage articles.</p>
+    <heading id="h-00002-en">BACKGROUND</heading>
+    <p id="p-00002-en" num="0002">Luggage items, and in particular luggage cases (suitcases), define interior enclosed spaces. Often, the interior enclosed space is accessed from the exterior of the luggage case using a zipper. The zipper provides a convenient mechanism to access the interior of the luggage case but also makes it relatively easy for unauthorized access to items contained within the enclosed space. To counter such unauthorized access, various zipper locking systems for luggage have been developed to prevent the zipper from being operated by an unauthorized user.</p>
+    <p id="p-00003-en" num="0003">One zipper locking system involves locking the zipper sliders to each other. Examples of such systems are shown in <patcit id="pcit-00001" dnum="US4395891A"><text>U.S. Patent Numbers 4,395,891</text></patcit>; <patcit id="pcit-00002" dnum="US20050109072A"><text>2005/0109072</text></patcit>; <patcit id="pcit-00003" dnum="US4350375A"><text>4,350,375</text></patcit>; and Chinese Patent Number <patcit id="pcit-00004" dnum="CN201403621"><text>CN201403621</text></patcit>. In <patcit id="pcit-00005" dnum="US20050109072A"><text>U.S. 2005/0109072</text></patcit> and <patcit id="pcit-00006" dnum="US4395891A"><text>U.S. 4,395,891</text></patcit>, the zipper sliders incorporate locking devices that allow the two zipper sliders along a common opening line to be secured to each other. Such a configuration, however, undesirably requires the zipper sliders to be larger than conventional zipper sliders. Further, these systems undesirably require highly specialized zipper sliders. In <patcit id="pcit-00007" dnum="US4350375A"><text>U.S. 4,350,375</text></patcit>, a lock plate is joined to one of the zipper pull tabs of a zipper and is configured to allow the lock plate to be joined to projection of the other zipper pull tab. This configuration results in an unreasonably large locking plate attached to one zipper, and the projection on the other zipper pull tab presents a potential injury hazard to the user when the user grasps this pull tab to move the zipper slider. Moreover, this arrangement is undesirably limited to locking together zipper sliders on the same opening line. In <patcit id="pcit-00008" dnum="CN210403621"><text>CN210403621</text></patcit>, a conventional padlock is required to secure the zipper sliders to each other. This locking system is undesirable because it requires the user to keep track of the padlock when it is not joined to the pull tabs of the zipper sliders. Further, if the padlock is misplaced, the user is unable to secure the zipper sliders to each other.</p>
+    <p id="p-00004-en" num="0004">Another zipper locking system involves fixedly attaching a lock to the luggage case. In this system, zipper pull tabs are then secured to the lock to prevent the zipper sliders associated with the secured zipper pull tabs from being moved along their respective zipper tracks. Conventionally, the zipper pull tabs are secured to the lock by providing for each zipper pull tab a slot on the lock. An end portion of the zipper pull tab that includes a hole or a slot is then positioned within the slot, and a pin, a hook, or the like contained within the lock is positioned within the hole or the slot of the zipper pull tab. Once the pin or hook is positioned within the hole or slot of the zipper pull tab, movement of the pin or hook out of the hole is prevented unless a user first enters the correct combination on the lock or utilizes a key to unlock the lock. The lock and zipper pull tab are further configured such that the zipper pull tab cannot be removed from the slot in the lock until the pin or hook is removed from the hole or the slot in the zipper pull, thus effectively securing the zipper pull tab to the lock. The detailed construction and operation of various types of this locking arrangement is described in more detail in the following patents and patent applications: <patcit id="pcit-00009" dnum="US5557954A"><text>U.S. 5,557,954</text></patcit>; <patcit id="pcit-00010" dnum="US6807832B"><text>U.S. 6,807,832</text></patcit>; <patcit id="pcit-00011" dnum="EP1914369A"><text>EP 1 914 369</text></patcit>; and <patcit id="pcit-00012" dnum="WO200834006A"><text>WO 2008/34006</text></patcit>.</p>
+    <p id="p-00005-en" num="0005">A problem with this locking system is that each zipper pull tab that is secured to the lock requires a slot and a pin or a hook. Thus, for example, when it is desired to simultaneously secure four zipper pull tabs to a lock, four slots and pins or hooks are required. Further, as the number of simultaneously secured pull tabs increase, the complexity of the lock and the number of parts required for the lock undesirably increases. Yet further, the size of the lock must be increased to accommodate securing all of the zipper pull tabs to the lock, which undesirably increases the weight of the lock. While such a weight increase may appear to be relatively unimportant, every item on the luggage case that is unnecessarily heavier than required cumulatively increases the overall weight of the luggage case, and thus takes away from the weight of items that a user can place within the luggage case to comply with various weight requirements, such as airline weight limits.</p>
+    <p id="p-00006-en" num="0006">It is therefore desirable to provide an improved luggage case, and more specifically an improved zipper locking system for luggage cases that addresses the above described problems and/or which more generally offers improvements or an alternative to existing arrangements.</p>
+    <heading id="h-00003-en">SUMMARY</heading>
+    <p id="p-00007-en" num="0007">According to the present invention there is therefore provided a luggage article as described in the accompanying claims.</p>
+    <p id="p-00008-en" num="0008">In an embodiment of the invention, a luggage article may include at least two zipper sliders and a lock. The lock may be attached to the luggage article, and the lock may include at least one zipper pull tab receiver. One of the at least two zipper sliders may be joined to a first zipper pull tab including an engagement feature joined to an elongated body. Another of the at least two zipper sliders may be joined to a second zipper pull tab including an elongated body with an aperture sized to receive the engagement feature therethrough. The at least one zipper pull tab receiver may be sized to receive the engagement feature. The second zipper pull tab may be secured to the lock by overlaying the first zipper pull tab over the second zipper pull tab and positioning the engagement feature through the aperture and in the at least one zipper pull tab receiver.</p>
+    <p id="p-00009-en" num="0009">In some embodiments, the first zipper pull tab is part of a first zipper that is positioned along a first opening line. Optionally, the first opening line parallels major faces of the luggage article, splits the luggage article along a generally vertical plane, and separates said luggage article into a lid and a base to allow access to the enclosed space within the luggage article.</p>
+    <p id="p-00010-en" num="0010">In some embodiments, the luggage article further includes a pocket, the second zipper pull tab is part of a second zipper that is positioned along a second opening line, and the second opening line provides access to the pocket.</p>
+    <p id="p-00011-en" num="0011">In some embodiments, the second zipper pull tab is part of a second zipper that is positioned along a second opening line, and the second opening line (234) parallels the major faces and splits the luggage article along a second generally vertical plane. Preferably, in such embodiments, the first opening line separates the luggage article into a base and a middle portion to allow access to the enclosed space within the luggage article, and the second opening line separates the luggage article into the middle portion and a lid to allow access to the enclosed space within the luggage article.</p>
+    <p id="p-00012-en" num="0012">In some embodiments, there may be four zipper slider and two zipper pull tab receivers. A third one of the four zipper sliders may be joined to another first zipper pull tab including an engagement feature joined to an elongated body. A fourth one of the four zipper sliders may be joined to another second zipper pull tab including an elongated body with an aperture sized to receive the engagement feature of the another first zipper pull tab therethrough. The another second zipper pull tab may be secured to the lock by overlaying the another first zipper pull tab over the another second zipper pull tab and positioning the engagement feature of the another first zipper pull tab through the aperture of the another second zipper pull tab and in one of the two zipper pull tab receivers. Preferably, the another first zipper pull tab is part of the first zipper, and the another second zipper pull tab is part of the second zipper.</p>
+    <p id="p-00013-en" num="0013">In some embodiments, the second zipper pull tab is also part of the first zipper.</p>
+    <p id="p-00014-en" num="0014">Preferably, the engagement feature includes a loop. The loop may be either a generally U-shaped or arch-shaped that defines a lock opening. Optionally, one of the at least one zipper pull tab receiver is a slot. Preferably, a pin or a hook is operatively associated with the slot and is positioned thorough the lock opening when the loop is positioned within the slot in order to secure the first zipper pull tab, and optionally the second zipper pull tab, to the lock.</p>
+    <p id="p-00015-en" num="0015">In some embodiments of the luggage article, the lock may include at least one of combination dials and a keyhole, and preferably includes both structures.</p>
+    <p id="p-00016-en" num="0016">In some embodiments of the luggage articele, each first zipper pull tab includes an elongated body with generally planar upper and lower surfaces joined by sidewalls of the elongated body that extend between the upper and lower surfaces, and preferably each first zipper pull tab further comprises a slot that is formed in the elongated body of each first zipper pull tab and that generally runs parallel to a length of the elongated body.</p>
+    <p id="p-00017-en" num="0017">The luggage article is preferably either a hardside luggage case wherein front, back, the side, the top end, and the bottom end walls are all rigid and self-supporting or a softside luggage case wherein the at least some portions of at least some of the front, back, side, top end and bottom end walls are a flexible material.</p>
+    <heading id="h-00004-en">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+    <p id="p-00018-en" num="0018">The present invention will now be described by way of example only with reference to the following figures in which: <ul id="ul-00001-en" list-style="none" compact="compact"><li><figref>Fig. 1</figref> is a front perspective view of a luggage case with interlocking zipper pull tabs;</li><li><figref>Fig. 2</figref> is an enlarged perspective view of a top portion of the luggage case shown in <figref>Fig. 1</figref>, showing the interlocking zipper pull tabs prior to being joined to a lock;</li><li><figref>Fig. 3</figref> is an enlarged perspective view of the top portion of the luggage case shown in <figref>Fig. 1</figref>, showing the interlocking zipper pull tabs joined to the lock;</li><li><figref>Fig. 4</figref> is an enlarged perspective view of the top portion of the luggage case shown in <figref>Fig. 1</figref>, showing a single zipper joined to the lock;</li><li><figref>Fig. 5</figref> is a perspective view of a luggage case showing another version of interlocking zipper pull tabs;</li><li><figref>Fig. 6</figref> is a perspective view of a top portion of a luggage case showing yet another version of interlocking zipper pull tabs; and</li><li><figref>Fig. 7</figref> is a another perspective view of the top portion of the luggage case shown in <figref>Fig. 6</figref>, showing the interlocking zipper pull tabs joined to a lock.</li></ul></p>
+    <heading id="h-00005-en">DETAILED DESCRIPTION</heading>
+    <p id="p-00019-en" num="0019">Referring to <figref>Fig. 1</figref>, an embodiment of a luggage article, such a luggage case 100, with interlocking zipper pull tabs includes a generally cuboid structure formed from multiple walls defining an enclosed internal volume of the luggage case 100 in which to contain a user's belongings. The luggage case 100 may include opposing front and back walls 102, 104 forming major front and back faces of the luggage case 100, opposing side walls 106,108 forming side faces of the luggage case 100, and opposing top and bottom end walls 110, 112 forming top and bottom faces of the luggage case 100. Collectively, the walls 102, 104, 106, 108, 110, 112 define an outer structure of the luggage case 100 that, in turn, defines an enclosed internal volume.</p>
+    <p id="p-00020-en" num="0020">The luggage case 100 may be of a type generally known as a soft side case in which the outer structure is generally formed from flexible materials, such as textiles or the like. These flexible materials may be supported by frames and/or boards to maintain the shape of the luggage case 100. The frames may be formed using plastics, composite materials, metals, or other structural materials and the boards may generally be formed using plastics such a polypropylene (PP) or polyethylene (PE). While shown as a soft side case, the luggage case 100 may also be of a type generally known as a hard side case in which the outer structure and walls of the case are relatively rigid. For a hard side case, the outer structure of the luggage case 100 may be, for example, plastic (e.g., composite plastic, acrylonitrile butadiene styrene, polymer, thermoplastic, and so forth) and may be manufactured by extrusion, mold forming, blow molding, and so forth. The luggage case 100 may also be of a hybrid type in which features of a soft side case and a hard side case are combined to create a luggage case 100 that is hard in some areas and soft in other areas. Alternatively the luggage case may also be a business case, laptop case or other similar case type with openings secured by zippers. However preferably the luggage case 100 is a zipper closed suitcase.</p>
+    <p id="p-00021-en" num="0021">The luggage case 100 may be split along a generally vertical plane with a first opening line parallel 114 to the major faces. The luggage case 100 may include a lid 116, which includes the front wall 102, and a base 118, which includes the back wall 104. In the embodiment shown in <figref>Fig. 1</figref>, the first opening line 114 may be located closer to the back face than the front face such that the base 118 includes the back wall 104 and less than one-half of the side, top end, and bottom end walls 106, 108, 110, 112, and the lid 116 includes the front wall 102 and more than one-half of the side, top end, and bottom end walls 106, 108, 110, 112. In other embodiments, the first opening line 114 may be located at other desired positions, such as closer to the middle or closer to the front face. When the first opening line 114 is located closer the middle, the base 118 includes the back wall 104 and approximately one-half of the side, top end, and bottom end walls 106, 108, 110, 112, and the lid 116 includes the front wall 102 and approximately one half of the side, top end, and bottom end walls 106, 108, 110, 112. When the first opening line 114 is located closer to the front face, the lid 116 includes primarily the front wall 102, and the base 118 includes the back wall 104 and the majority of the side, top end, and bottom end walls 106, 108, 110, 112.</p>
+    <p id="p-00022-en" num="0022">The luggage case 100 may include a telescoping handle, which can be extended above the top end wall 110 of the luggage case 100 to an extended position at a convenient height for a user to hold. The telescoping handle may be used to pull, direct, and wheel the luggage case 100. In this embodiment of the luggage case 100, the telescoping handle is oriented to have a grip portion that is parallel to the back face of the luggage case 100 with a user using the handle to push or pull the luggage case 100. The telescoping handle in this embodiment telescopically extends from the luggage case 100 adjacent to, and in the center of, the back face of the luggage case 100 and includes two parallel tubes interconnected at one top end by the grip portion. The telescoping handle can be moved to a retracted position in which it does not substantially extend beyond the top end wall 110 of the luggage case 100 and in which the grip portion is generally flush and /or close to the top end wall 110. The luggage case 100 may also include one or more fixed carry handle(s) to facilitate carrying or lifting the luggage case 100. A top fixed handle 120 may be positioned on the top end wall 110 as shown. Alternatively or additionally, one or more fixed handles may be positioned on the right side wall 108, the left side wall 106, and/or the bottom end wall 112 of the luggage case 100.</p>
+    <p id="p-00023-en" num="0023">Spinner wheel assemblies 122 may be mounted to at least one of the walls, often the bottom end wall 112, near the bottom end of the luggage case 100. Each spinner wheel assembly 122 may be positioned proximate a corner of the luggage case 100. Each spinner wheel assembly 122 may include one or more spinner wheels 124 rotationally mounted to a spinner fork bracket 126 to rotate about a wheel axis. The wheel axis may be generally horizontal and parallel to the bottom end wall 112 of the luggage case 100, and the spinner fork bracket 126 may be rotationally mounted to the bottom end wall 112 of the luggage case 100 to rotate about a generally vertical spinner axis that is perpendicular to the bottom end wall 112 of the luggage case 100. Such an arrangement allows the spinner wheels 124 to rotate about two orthogonal axes: the horizontal wheel axis and the vertical spinner axis.</p>
+    <p id="p-00024-en" num="0024">In alternative embodiments, the spinner wheel assemblies 122 may be replaced by a pair fixed axis wheels mounted respectively near the back wall 104 of the luggage case 100. The fixed axis wheels rotate about a common, generally horizontal fixed axis, which is generally parallel to the back wall 104. Each of the fixed axis wheels may be located at a bottom end corner of the luggage case 100. In other words, each fixed axis wheel may be located near the bottom end and one side wall 106, 108 of the luggage case 100. A peripheral rim and edge of the fixed axis wheels project a predefined distance beyond the bottom end wall 112 of the luggage case 100 to allow the luggage case 100 to be supported on the ground in an upright manner on the fixed axis wheels and on one or more feet that project from the bottom end of the luggage case 100 near the front face of the luggage case 100.</p>
+    <p id="p-00025-en" num="0025">The lid 116 may be connected to the base 118 along on a side wall via a hinge 128 in a conventional manner, and the luggage case 100 may be opened at the first opening line 114 to access the internal volume. The hinge 128 may be formed of a fabric strip, with or without a zipper or in any other known manner. In some examples, the luggage case 100 may be hinged along the left or the right side wall 106, 108, whereas in other examples, the luggage case 100 may be hinged along the bottom, or along any other face, of the luggage case 100. A first zipper 130 positioned along a periphery of the first opening line 114 secures the lid 116 to the base 118 to open and close the luggage case 100.</p>
+    <p id="p-00026-en" num="0026">The luggage case 100 may further include a pocket 132 to separate the luggage case's enclosed interior into smaller spaces. The pocket 132 may be accessed through the outer surface of the luggage case 110 via a second opening line 134. The second opening line 134 can be selectively opened and closed using a second zipper 136 positioned along the second opening line 134.</p>
+    <p id="p-00027-en" num="0027">With reference to Figs. 2-4, the first and second zippers 130, 136 may include first and second zipper tracks 138, 140, respectively. Each of the first and second zipper tracks 138, 140 include a pair of zipper tapes with interlocking teeth that may be selectively interlocked using one or more zipper sliders 142, 144. In the shown embodiment of the luggage case 100, the first zipper 130 includes two first zipper sliders 142 and the second zipper 136 includes two second zipper sliders 144. In alternative embodiments, the first zipper 130 and/or the second zipper 136 may include single first and second zipper sliders 142, 144, respectively. For the first zipper 130, each first zipper slider 142 includes a first zipper pull tab 146 joined to the first zipper slider 142 to facilitate moving the first zipper slider 142 along the first zipper track 140. Similar to the first zipper 130, each second zipper slider 144 for the second zipper 136 includes a second zipper pull tab 148 joined to the second zipper slider 144 to facilitate moving the second zipper slider 144 along the second zipper track 140.</p>
+    <p id="p-00028-en" num="0028">For the first zipper 130, each first zipper pull tab 146 may include a body 150. The body 150 may be an elongated body with upper and lower surfaces 152 joined by side walls 154 of the body that extend between the upper and lower surfaces 152. The upper and lower surfaces 152 may be generally planar and parallel to each other as shown in <figref>Fig 2</figref> or may take other forms, such as upper and lower surfaces 152 that are twisted or curved around a longitudinal axis of the body 150. The body 150 may include a length, which is defined by the distance from the first zipper slider 142 to a free end 156 of the first zipper pull tab 146, and a width, which is defined by the distance between the side walls 154 of the elongated body 150. The length may be greater than the width. Such a configuration for the body 150 provides a relatively easy object for a user to grasp when using the first zipper pull tabs 146 to move their respective first zipper sliders 142 along the first zipper track 138. At the free end of the body 150, the body 150 may optionally be bent to extend generally transversely relative to the longitudinal axis of the elongated body 150. Other configurations are possible so long as the body 150 provides a convenient object for a user to grasp in order to use the first zipper pull tab 146 to move its respective first zipper slider 142 along the first opening line 114.</p>
+    <p id="p-00029-en" num="0029">Optionally, a slot 158 or the like may be formed in the body 150 of each first zipper pull tab 146 to reduce the weight of the first zipper pull tab 146. This slot 158 may generally run parallel to the length of the body 150, and this slot 158 may also be passed through a slider loop 160 or the like on the first zipper slider 142 to join the first zipper pull tab 146 to a respective first zipper slider 142.</p>
+    <p id="p-00030-en" num="0030">Each first zipper pull tab 146 may further include an engagement feature 162 that extends from the body 150. In some embodiments, the engagement feature may extend transversely from the lower planar surface of the body 150 and generally parallel to the side walls 154 of the body 150. In other embodiments, the engagement feature 162 may extend transversely from a sidewall 154 of the body 150 and generally parallel to at least one of the upper and lower surfaces 152 of the body 150. The engagement feature may define a lock opening 164 that can receive therethrough a pin, a hook, or the like of a lock 166 attached to the luggage case 100 to secure the first zipper pull tab 146 to the lock 166.</p>
+    <p id="p-00031-en" num="0031">The engagement feature may be a loop, a projection, or any other suitable structure. When the engagement feature 162 takes the form of a loop, the loop may be generally U-shaped, arch-shaped, or any other suitable shape and may be positioned proximate to the free end 156 of the first zipper pull tab 146. The loop 162, either by itself or collectively with the body 150, may define the lock opening 164.</p>
+    <p id="p-00032-en" num="0032">The lock 166 may include combination dials 168 and a keyhole 170. The lock 166 may further include a zipper pull tab receiver 172 that is defined in a housing 174 of the lock 166 and that receives at least a portion of the engagement feature 162 of the first zipper pull tab 146. The zipper pull tab receiver may take the form of a slot, a hole, or any other suitable structure that can receive at least portion of the engagement feature 162.</p>
+    <p id="p-00033-en" num="0033">In operation, once a sufficient portion of the engagement feature 162 is positioned within the zipper pull tab receiver 172, the pin, hook, or the like contained within the housing 174 of the lock 166 may be positioned through the lock opening 164 to prevent removal of the engagement feature 162 from the zipper pull tab receiver 172, and thus secure the first zipper pull tab 146 to the lock 166. The lock 166 and first zipper pull tab 146 are further configured such that the first zipper pull tab 146 cannot be removed from the zipper pull tab receiver 172 in the lock 166 until the pin, the hook, or the like is removed from the lock opening 164, thus effectively securing the first zipper pull tab 146 to the lock 166. Moreover, once the pin, the hook, or the like is positioned within the lock opening 164, movement of the pin, the hook, or the like out the lock opening 164 is prevented unless a user first enters the correct combination using the lock's combination dials 168 or utilizes a key inserted into the keyhole 170 to unlock the locking mechanism contained within the housing 174 of the lock 166.</p>
+    <p id="p-00034-en" num="0034">There may be a zipper pull tab receiver 172 for each first zipper pull tab 146 that has an engagement feature 162. Thus, since there are two first zipper pull tabs 146 with engagement feature 162 for the embodiment of the luggage case 100 illustrated in <figref>Fig. 1</figref>, the lock 166 includes two zipper pull tab receivers 172. Each zipper pull tab receiver 172 may include a pin, a hook, or the like to secure the respective engagement feature 162 received with each zipper pull tab receiver 172 to the lock 166.</p>
+    <p id="p-00035-en" num="0035">For the second zipper 136, each second zipper pull tab 148 may be generally similar to the first zipper pull tab 146 except each second zipper pull tab 146 does not include an engagement feature 162. Thus, each second zipper pull tab 148 may take of the form a body 176, such as an elongated body, with an aperture 178, such as a slot or the like. For each second zipper pull tab 148, however, the aperture 178 is sized to be sufficiently large to receive the loop 162 of a first zipper pull tab 148 therethough. Further, the lengths of the bodies 150, 176 of the first and second zipper pull tabs 146, 148 are sized to be sufficiently long, and the engagement feature 162 of the first zipper pull tab 146 and the aperture 178 of the second zipper pull tab 148 are positioned on their respective bodies 150, 176, so that the engagement feature 162 extending from the body 150 of the first zipper pull tab 146 passes through the aperture 178 of the second zipper pull tab 148 when the first zipper pull tab 146 overlays the second zipper pull tab 148. This allows each second zipper pull tab 148 to be secured to the lock 166 using a corresponding first zipper pull tab 146 since the second zipper pull tab 148 essentially functions as a hasp.</p>
+    <p id="p-00036-en" num="0036">Specifically, the second zipper pull tab 148 may be positioned between the lock 166 and its corresponding first zipper pull tab 146 so that the first zipper pull tab 146 overlies the second zipper pull tab 148. The engagement feature 162 of the first zipper pull tab 146 may be passed through the aperture 178 in the second zipper pull tab 148 and into the zipper pull tab receiver 172 of the lock 166 to secure the first zipper pull tab 146 to the lock 166. This, in turn, secures the second zipper pull tab 148 to the lock 166 since the engagement feature 162 cannot be removed from the aperture 178 of the second zipper pull tab 148 without first un-securing the first zipper pull tab 146 from the lock 166. The advantage of such a system is that a single zipper pull tab receiver 172 in a lock 166 fixedly attached to the luggage case 100 can be utilized to secure two zipper pull tabs 146, 148 to the lock 166. Thus, for the embodiment of the luggage case 100 shown in Figs. 1-4, two zipper pull tab receivers 172 on the lock 166 can be used to simultaneously secure four zipper pull tabs 146, 148 to the lock 166, with two of the zipper pull tabs 146 associated with the first zipper sliders 142 and the other two zipper pull tabs 148 associated with the second zipper sliders 144.</p>
+    <p id="p-00037-en" num="0037">With reference to <figref>Fig. 4</figref>, the user, if desired, can also secure only the first zipper pull tabs 146 to the lock 166. Specifically, rather than passing the engagement feature 162 of the first zipper pull tab 146 through the aperture 178 of the second zipper pull tab 148, the engagement feature 162 of the first zipper pull tab may simply be inserted into the zipper pull tab receiver 172 of the lock 166. This arrangement will then secure the first zipper pull tab 146 to the lock 166 without also securing the associated second zipper pull tab 148 to the lock 166, thus allowing the user to secure only the first zipper pull tabs 146 to the lock 166 as shown in <figref>Fig. 4</figref>.</p>
+    <p id="p-00038-en" num="0038">While the first zipper pull tabs 146 are described and depicted as having engagement features 162 and the second zipper pull tabs 148 are described and depicted as having apertures 178 sized to receive the engagement features 162, any combination of the first zipper pull tabs 146 and second zipper pull tabs 148 could have the engagement features 162 and the apertures 178 sized for the engagement features 162 so long as there is a zipper pull tab 146, 148 with an engagement feature 162 and another with a suitably sized aperture 178 for each set of corresponding first and second zipper pull tabs 146, 148. For example, both second zipper pull tabs 148 could have the engagement features 162 while both first zipper pull tabs 146 have the apertures 178 sized to receive the engagement features 162 therethrough. As another example, one first zipper pull tab 146 could have engagement features 162 while its corresponding second zipper pull tab 148 has a suitably sized aperture 178, and the other first zipper pull tab 146 could have a suitably sized aperture 178 while its corresponding second zipper pull tab 148 has an engagement feature 162.</p>
+    <p id="p-00039-en" num="0039">
+      <figref>Fig. 5</figref> depicts another embodiment of a luggage article, such as a luggage case 200, with interlocking zipper pull tabs. The second embodiment of the luggage case 200 may be generally similar to the first embodiment of the luggage case 100 except the luggage case 200 includes a middle portion 290 that extends around the periphery of the luggage case along the top, bottom, left side, and right side walls and that separates the lid 216 from the base 218. Further, in this second embodiment, the first opening line 214 is positioned between the middle portion and the base 218 to secure the base 218 to the middle portion 290 to open and close the luggage case 200, and the second opening line 234 is positioned between the middle portion 290 and the lid 216 to secure the lid 216 to the middle portion 290 to open and close the luggage case 200. Thus, in this second embodiment, each of the first and second opening lines 214, 234 may parallel the major faces of the luggage case 200 and split the luggage case 200 along generally vertical planes. Yet further, the first opening line 214 separates the luggage case 200 between the base 218 and the middle portion 290 to allow access to the enclosed space within the luggage case 200, and the second opening line 234 separates the luggage case 200 between the middle portion 290 and the lid 216 to also allow access to the enclosed space within the luggage case 200.</p>
+    <p id="p-00040-en" num="0040">Similar to the first embodiment of the luggage case 200, the second embodiment of the luggage case 200 may include first and second zippers 230, 236 associated with the first and second openings 214, 234, respectively. For the second embodiment of the luggage case 200, the first and second zippers 230, 236 are substantially similar to the first and second zippers 130, 136 of the first embodiment of the luggage case 200 and operate in substantially the same manner. Thus, as with the first embodiment of the luggage case 200, the two zipper pull tabs 246, 248 for each of the first and second zippers 230, 236 can be simultaneously secured to a lock 166 using a single zipper pull tab receiver 172. Further, as with the first embodiment of the luggage case 100, the lock 166 may include two zipper pull tab receivers 172 in order to simultaneously secure four zipper pull tabs 246, 248 to the lock 166, with two of the zipper pull tabs 246 associated with the first zipper 230 and the other two zipper pull tabs 248 associated with the second zipper 236.</p>
+    <p id="p-00041-en" num="0041">
+      <figref>Figs. 6</figref> and <figref>7</figref> depict another embodiment of a luggage article, such as a luggage case 300, with interlocking zipper pull tabs. In this embodiment, the luggage case 300 may be a hard side construction. The luggage case 300 includes a first zipper 330 associated with a first opening line 314 to secure the lid 316 of the luggage case 300 to the base 318 of the luggage case 300. The first zipper 330 may include two first zipper sliders 342. Each zipper slider 342 may include an associated zipper pull tab 346a, 346b, which may be referred to as a first zipper pull tab 346a and a second zipper pull tab 346b. Each zipper pull tab 346a, 346b may include a generally elongated body 350 that curves proximate the zipper pull tab's 346a, 346b associated first zipper slider 342 so that the first zipper pull tab 346a may overlay the second zipper pull tab 346b when the first zipper sliders 342 are positioned next to each other. Further, similar to the previously described embodiments, the first zipper pull tab 346a may include an engagement feature 362 that may define a lock opening 364, which may be received within a zipper pull tab receiver 372 of the lock 366, and the second zipper pull tab 346b may include an aperture 378 that is sized to receive the engagement feature 362 therethough. Thus, in this embodiment, a single zipper pull tab receiver 372 is used to join both zipper pull tabs 346a, 346b associated with the first zipper 330 to the lock 366.</p>
+    <p id="p-00042-en" num="0042">More particularly, the second zipper pull tab 346b may be positioned between the first zipper pull tab 346a. As described above for previous embodiments, the engagement feature 362 may then be passed through the aperture 378 in the second zipper pull tab 346b and positioned within the zipper pull tab receiver 372 of the lock 366 to secure the first zipper pull tab 346a to the lock 366, which then in turn secures the second zipper pull tab 346b to the lock 366. Securing the zipper pull tabs 346a, 346b to the lock 366 prevents movement of the associated first zipper sliders 342 along the first opening line 314. Further, as with the first and second embodiments of the luggage case 100, both zipper pull tabs 346a, 346b remain secured to the lock 366 until the first zipper pull tab 346a is unsecured from the lock 366.</p>
+    <p id="p-00043-en" num="0043">The apparatuses and associated methods in accordance with the present disclosure have been described with reference to particular embodiments thereof in order to illustrate the principles of operation. The above description is thus by way of illustration and not by way of limitation. Various modifications and alterations to the described embodiments will be apparent to those skilled in the art in view of the teachings herein. Those skilled in the art may, for example, be able to devise numerous systems, arrangements and methods which, although not explicitly shown or described herein, embody the principles described and are thus within the spirit and scope of this disclosure. Accordingly, it is intended that all such alterations, variations, and modifications of the disclosed embodiments are within the scope of this disclosure as defined by the appended claims.</p>
+    <p id="p-00044-en" num="0044">Where appropriate, common reference words are used for common structural and method features. However, unique reference words are sometimes used for similar or the same structural or method elements for descriptive purposes. As such, the use of common or different reference words for similar or the same structural or method elements is not intended to imply a similarity or difference beyond that described herein.</p>
+    <p id="p-00045-en" num="0045">All relative and directional references (including: upper, lower, upward, downward, left, right, leftward, rightward, top, bottom, side, above, below, front, middle, back, vertical, horizontal, and so forth) are given by way of example to aid the reader's understanding of the particular embodiments described herein. They should not be read to be requirements or limitations, particularly as to the position, orientation, or use of the invention unless specifically set forth in the claims. Connection references (e.g., attached, coupled, connected, joined, and the like) are to be construed broadly and may include intermediate members between a connection of elements and relative movement between elements. As such, connection references do not necessarily infer that two elements are directly connected and in fixed relation to each other, unless specifically set forth in the claims.</p>
+    <p id="p-00046-en" num="0046">The principle and mode of operation of this invention have been explained and illustrated in its preferred embodiments. However, it must be understood that this invention may be practiced otherwise than as specifically explained and illustrated without departing from its spirit or scope.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151007">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A luggage article comprising:
+<claim-text>at least two zipper sliders (142, 144, 342);</claim-text><claim-text>a lock (166, 366) attached to the luggage article, the lock (166, 366) including at least one zipper pull tab receiver (172, 372); and</claim-text><claim-text><b>characterized by</b> one of said at least two zipper sliders (142, 342) joined to a first zipper pull tab (146, 246, 346a) comprising an engagement feature (162, 362) joined to an elongated body (150, 350);</claim-text><claim-text>another of said at least two zipper sliders (144, 342) joined to a second zipper pull tab (148, 248, 346b) comprising an elongated body (176, 350) with an aperture (178, 378) sized to receive the engagement feature (162, 362) therethrough;</claim-text><claim-text>the at least one zipper pull tab receiver (172, 372) sized to receive the engagement feature (162, 362); and</claim-text><claim-text>said second zipper pull tab (148, 346b) secured to the lock (166, 366) by overlaying said first zipper pull tab (146, 246, 346a) over said second zipper pull tab (148, 248, 346b) and positioning the engagement feature (162, 362) through the aperture (178, 378) and in the at least one zipper pull tab receiver (172, 372).</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>A luggage article as claimed in claim 1, wherein the first zipper pull tab (146, 246, 346a) is part of a first zipper (130, 230, 330) that is positioned along a first opening line (114, 214, 314).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>A luggage article as claimed in claim 2, wherein the first opening line (114, 214, 314) parallels major faces of the luggage article, splits the luggage article along a generally vertical plane, and separates said luggage article into a lid (116) and a base (118) to allow access to the enclosed space within the luggage article.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>A luggage article as claimed in any of claims 2 and 3, wherein the luggage article further includes a pocket (132), the second zipper pull tab (148) is part of a second zipper (136) that is positioned along a second opening line (134), and the second opening line (134) provides access to the pocket (132).</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>A luggage article as claimed in any of claims 2 and 3, the second zipper pull tab (248) is part of a second zipper (236) that is positioned along a second opening line (234), and the second opening line (234) parallels the major faces and splits the luggage article along a second generally vertical plane.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>A luggage article as claimed in claim 5, wherein the first opening line (214) separates the luggage article into a base (218) and a middle portion (290) to allow access to the enclosed space within the luggage article, and the second opening line (234) separates the luggage article into the middle portion (290) and a lid (216) to allow access to the enclosed space within the luggage article.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>A luggage article as claimed in any of claims 4 -6, wherein:
+<claim-text>the at least two zipper sliders (142, 144) comprise four zipper sliders (142, 144);</claim-text><claim-text>a third one of said four zipper sliders (142) is joined to another first zipper pull tab (146, 246) comprising an engagement feature (162) joined to an elongated body (150);</claim-text><claim-text>a fourth one of said four zipper sliders (144) is joined to another second zipper pull tab (148, 248) comprising an elongated body (176) with an aperture (178) sized to receive the engagement feature (162) of said another first zipper pull tab (146, 246) therethrough;</claim-text><claim-text>the at least one zipper pull tab receiver (172) comprises two zipper pull tab receivers (172); and</claim-text><claim-text>said another second zipper pull tab (148) secured to the lock (166) by overlaying said another first zipper pull tab (146, 246) over said another second zipper pull tab (148, 248) and positioning the engagement feature (162) of said another first zipper pull tab (148, 248) through the aperture (178) of said another second zipper pull tab (148) and in one of the two zipper pull tab receivers (172).</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>A luggage article as claim in claim 7, wherein said another first zipper pull tab (146, 246) is part of the first zipper (130, 230), and said another second zipper pull tab (148) is part of the second zipper (136, 246).</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>A luggage article as claimed in any of claims 1 -3, wherein the second zipper pull tab (346b) is also part of the first zipper (330).</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>A luggage article as claimed in any of the preceding claims, wherein the engagement feature (162, 362) comprises a loop, and preferably the loop is either a generally U-shaped or arch-shaped that defines a lock opening (164, 364).</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>A luggage article as claimed in claim 10, wherein one of the at least one zipper pull tab receiver (172, 372) comprises a slot, and preferably a pin or a hook is operatively associated with the slot and is positioned thorough the lock opening (164, 364) when the loop is positioned within the slot in order to secure said first zipper pull tab (146, 246, 346a), and optionally said second zipper pull tab (148, 248, 346b), to the lock (166).</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>A luggage article as claimed in any of the preceding claims, wherein the lock (166, 366) includes at least one of combination dials (168) and a keyhole (170).</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>A luggage article as claimed in any of the preceding claims, wherein each first zipper pull tab (146, 246) comprises an elongated body (150) with generally planar upper and lower surfaces (152) joined by side walls (154) of the elongated body (150) that extend between the upper and lower surfaces (152), and preferably each first zipper pull tab (146, 246) further comprises a slot (158) that is formed in the elongated body (150) of each first zipper pull tab (146, 246) and that generally runs parallel to a length of the elongated body (150).</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>A luggage article as claimed in any preceding claim comprising a hardside luggage case wherein front, back, side, top end and bottom end walls (102, 104, 106, 108, 110, 112) of the luggage case are all rigid and self-supporting.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>A luggage article as claimed in any preceding claim comprising a softside luggage case wherein the at least some portions of at least some of front, back, side, top end, and bottom end walls (102, 104, 106, 108, 110, 112) of the luggage case are a flexible material.</claim-text>
+    </claim>
+  </claims>
+  <image file="EP2926679A1.PDF" type="pdf" size="610854" pages="16" />
+</lexisnexis-patent-document>

@@ -1,0 +1,1789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940095A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091356" date-changed="20160123" time-changed="211017">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121940975">
+        <country>EP</country>
+        <doc-number>2940095</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15168141</doc-number>
+        <date>20111215</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>61423710</doc-number>
+        <date>20101216</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="regional">
+        <country>EP</country>
+        <doc-number>11161261</doc-number>
+        <date>20110406</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>42371010</doc-number>
+        <kind>P</kind>
+        <date>20101216</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>EP</country>
+        <doc-number>11161261</doc-number>
+        <kind>A</kind>
+        <date>20110406</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="docdb">
+        <country>EP</country>
+        <doc-number>11801695</doc-number>
+        <kind>A</kind>
+        <date>20111215</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="4" data-format="docdb">
+        <country>EP</country>
+        <doc-number>15168141</doc-number>
+        <kind>A</kind>
+        <date>20111215</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>423710 P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>11161261</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="original">
+        <doc-number>11801695.5</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US20100423710P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>EP20110161261</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="epodoc">
+        <doc-number>EP20110801695</doc-number>
+      </priority-claim>
+      <priority-claim sequence="4" data-format="epodoc">
+        <doc-number>EP20150168141</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150519</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151105">
+      <classification-ipcr sequence="1">
+        <text>C09K   8/60        20060101AFI20150915BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A01N  25/00        20060101ALI20150915BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>25</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A01N  25/10        20060101ALI20150915BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>25</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61Q  19/00        20060101ALI20150915BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C09K   8/88        20060101ALI20150915BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>88</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C11D   3/37        20060101ALI20150915BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>37</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151105">
+      <classification-cpc sequence="1">
+        <text>C08L  39/00        20130101 FI20131022BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>39</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131022</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   8/8111      20130101 LI20131003BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>8111</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131003</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K   8/8147      20130101 LI20131003BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>8147</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131003</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K   8/84        20130101 LI20131003BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>84</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131003</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K   8/87        20130101 LI20131022BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>87</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131022</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61Q   5/00        20130101 LI20131003BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131003</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61Q   5/02        20130101 LI20131011BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131011</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61Q   5/12        20130101 LI20131011BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131011</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61Q   9/02        20130101 LI20131011BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>9</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131011</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61Q  19/00        20130101 LI20131011BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131011</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61Q  19/10        20130101 LI20131011BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131011</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C08L  33/10        20130101 LI20131010BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>33</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131010</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C08L  33/26        20130101 LI20131010BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>33</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131010</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C09K   8/604       20130101 LI20150302BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>604</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150302</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C09K   8/68        20130101 LI20150302BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150302</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>C09K   8/88        20130101 LI20150302BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>88</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150302</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>C09K2208/30        20130101 LA20150302BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>2208</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150302</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>C11D   1/29        20130101 LA20150302BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>29</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150302</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>C11D   1/92        20130101 LA20150302BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>92</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150302</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="20">
+        <text>C11D   1/94        20130101 LI20150302BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>94</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150302</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="21">
+        <text>C11D   3/3765      20130101 LI20150302BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>3765</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150302</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="22">
+        <text>C11D  17/003       20130101 LI20150302BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>17</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150302</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="23">
+        <text>E21B  43/26        20130101 LI20131010BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>E</section>
+        <class>21</class>
+        <subclass>B</subclass>
+        <main-group>43</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131010</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">KÖRPERPFLEGEZUSAMMENSETZUNGEN MIT WÄSSRIGEN ZUSAMMENSETZUNGEN VISKOELASTISCHER TENSIDE UND HYDROPHOB MODIFIZIERTER POLYMERE</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">PERSONAL CARE COMPOSITIONS INCLUDING AQUEOUS COMPOSITIONS OF VISCOELASTIC SURFACTANTS AND HYDROPHOBICALLY MODIFIED POLYMERS</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">COMPOSITIONS DE SOINS PERSONNELS COMPRENANT DES COMPOSITIONS AQUEUSES DE TENSIOACTIFS VISCOÉLASTIQUES ET DES POLYMÈRES MODIFIÉS DE MANIÈRE HYDROPHOBE</invention-title>
+    <references-cited date-changed="20151110">
+      <patent-citations name="patcit" date-changed="20151110" />
+      <non-patent-citations name="nplcit" date-changed="20151110" />
+      <citation>
+        <patcit num="1" dnum="WO2009036160A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2009036160</doc-number>
+            <kind>A1</kind>
+            <name>NALCO CO [US], et al</name>
+            <date>20090319</date>
+          </document-id>
+          <application-date>
+            <date>20080911</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO2005023970A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2005023970</doc-number>
+            <kind>A1</kind>
+            <name>JOHNSON &amp; JOHNSON CONSUMER [US], et al</name>
+            <date>20050317</date>
+          </document-id>
+          <application-date>
+            <date>20040819</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2006142501A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060142501</doc-number>
+            <kind>A1</kind>
+            <name>BADIGER MANOHAR V [IN], et al</name>
+            <date>20060629</date>
+          </document-id>
+          <application-date>
+            <date>20050906</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2007111896A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070111896</doc-number>
+            <kind>A1</kind>
+            <name>KNOX PAUL W [US], et al</name>
+            <date>20070517</date>
+          </document-id>
+          <application-date>
+            <date>20061114</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="WO03056130A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>03056130</doc-number>
+            <kind>A1</kind>
+            <name>SOFITECH NV [BE], et al</name>
+            <date>20030710</date>
+          </document-id>
+          <application-date>
+            <date>20021220</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US4432881A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4432881</doc-number>
+            <kind>A</kind>
+            <name>EVANI SYAMALARAO [US]</name>
+            <date>19840221</date>
+          </document-id>
+          <application-date>
+            <date>19810206</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="US2486921A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2486921</doc-number>
+            <kind>A</kind>
+            <name>BYERLY DAVID R</name>
+            <date>19491101</date>
+          </document-id>
+          <application-date>
+            <date>19441016</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="8" dnum="US2486922A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2486922</doc-number>
+            <kind>A</kind>
+            <name>BRUCE STRAIN</name>
+            <date>19491101</date>
+          </document-id>
+          <application-date>
+            <date>19451109</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="9" dnum="US2396278A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2396278</doc-number>
+            <kind>A</kind>
+            <name>OTTO LIND</name>
+            <date>19460312</date>
+          </document-id>
+          <application-date>
+            <date>19341110</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="10" dnum="US3332880A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3332880</doc-number>
+            <kind>A</kind>
+            <name>ADRIAAN KESSLER, et al</name>
+            <date>19670725</date>
+          </document-id>
+          <application-date>
+            <date>19660629</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="11" dnum="US3929678A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3929678</doc-number>
+            <kind>A</kind>
+            <name>LAUGHLIN ROBERT GENE, et al</name>
+            <date>19751230</date>
+          </document-id>
+          <application-date>
+            <date>19740801</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="12" dnum="US2528378A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2528378</doc-number>
+            <kind>A</kind>
+            <name>MANNHEIMER HANS S</name>
+            <date>19501031</date>
+          </document-id>
+          <application-date>
+            <date>19470920</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>HOFFMANN ET AL.: "Influence of Ionic Surfactants on the Viscoelastic Properties of Zwitterionic Surfactant Solutions", LANGMUIR, vol. 8, 1992, pages 2140 - 2146</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0026927388&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>BARNES H. A. ET AL.: "An Introduction to Rheology", 1997, ELSEVIER, pages: 45 - 54</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>"McCutcheon's Emulsifiers and Detergents 1989 Annual", 1989, MC PUBLISHING</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="4">
+          <text>PIERRE-GILLES DE GENNES: "Scaling Concept on Polymer Physics", 1979, CORNELL UNIVERSITY PRESS, pages: 76 - 77</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20151104">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>EP</country>
+              <doc-number>11801695.5</doc-number>
+              <date>20111215</date>
+            </document-id>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>EP</country>
+              <doc-number>15168141</doc-number>
+              <date>20111215</date>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Akzo Nobel Chemicals International B.V.</orgname>
+            <registered-number>101099864</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Stationsstraat 77</address-1>
+              <city>3811 MH Amersfoort</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Yuan-Huffman, Qingwen Wendy</name>
+            <address>
+              <address-1>47 Ridgeview Drive</address-1>
+              <city>Belle Mead, NJ New Jersey 08502</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Rodrigues, Klin Aloysius</name>
+            <address>
+              <address-1>109 Grayson Road</address-1>
+              <city>Signal Mountain, TN Tennessee 37377</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Zhou, Jian</name>
+            <address>
+              <address-1>44 Wilridge Road</address-1>
+              <city>Ridgefield, CT Connecticut 06877</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>Holt, Stuart Peter Robert</name>
+            <address>
+              <address-1>3687 Leonard Wood East</address-1>
+              <city>Highland Park, IL Illinois 60035</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>Band, Elliot Isaac</name>
+            <address>
+              <address-1>3 Lake Drive</address-1>
+              <city>Pleasantville, NY New York 10570</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>Vona Jr., Samuel Anthony</name>
+            <address>
+              <address-1>54 Bellevue Road</address-1>
+              <city>Highland, NY New York 12528</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Akzo Nobel IP Department</name>
+            <registered-number>101366829</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Velperweg 76</address-1>
+              <city>6824 BM Arnhem</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151104">
+      <main-family family-id="152065214">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103648589</doc-number>
+            <kind>A</kind>
+            <date>20140319</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014502602</doc-number>
+            <kind>A</kind>
+            <date>20140203</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103261365</doc-number>
+            <kind>A</kind>
+            <date>20130821</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940095</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012080383</doc-number>
+            <kind>A2</kind>
+            <date>20120621</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012080383</doc-number>
+            <kind>A3</kind>
+            <date>20130926</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2652072</doc-number>
+            <kind>A1</kind>
+            <date>20131023</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2652075</doc-number>
+            <kind>A2</kind>
+            <date>20131023</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2652075</doc-number>
+            <kind>B1</kind>
+            <date>20150624</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012080382</doc-number>
+            <kind>A1</kind>
+            <date>20120621</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166918133">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103648589</doc-number>
+            <kind>A</kind>
+            <date>20140319</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014502602</doc-number>
+            <kind>A</kind>
+            <date>20140203</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011343287</doc-number>
+            <kind>B2</kind>
+            <date>20150730</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103261365</doc-number>
+            <kind>A</kind>
+            <date>20130821</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940095</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>4753DELNP2013</doc-number>
+            <kind>A</kind>
+            <date>20141128</date>
+          </document-id>
+          <application-date>
+            <date>20130528</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011343287</doc-number>
+            <kind>A1</kind>
+            <date>20130725</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EA</country>
+            <doc-number>201390807</doc-number>
+            <kind>A1</kind>
+            <date>20131129</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2652072</doc-number>
+            <kind>A1</kind>
+            <date>20131023</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130266531</doc-number>
+            <kind>A1</kind>
+            <date>20131010</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130274170</doc-number>
+            <kind>A1</kind>
+            <date>20131017</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012080382</doc-number>
+            <kind>A1</kind>
+            <date>20120621</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012080383</doc-number>
+            <kind>A2</kind>
+            <date>20120621</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012080383</doc-number>
+            <kind>A3</kind>
+            <date>20130926</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2819565</doc-number>
+            <kind>A1</kind>
+            <date>20120621</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2652075</doc-number>
+            <kind>A2</kind>
+            <date>20131023</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2652075</doc-number>
+            <kind>B1</kind>
+            <date>20150624</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>4887CHENP2013</doc-number>
+            <kind>A</kind>
+            <date>20140725</date>
+          </document-id>
+          <application-date>
+            <date>20130621</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9080043</doc-number>
+            <kind>B2</kind>
+            <date>20150714</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Personal care compositions, methods for making and uses thereof include an aqueous viscoelastic composition and a personal care active ingredient. The viscoelastic composition includes at least one surfactant and at least one hydrophobically-modified polymers with low molecular weights. <img id="imga-00001-en" wi="126" he="83" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">FIELD OF THE INVENTION</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to personal care compositions comprising aqueous viscoelastic compositions comprising at least one viscoelastic surfactant, and at least one hydrophobically modified polymer.</p>
+    <heading id="h-00002-en">BACKGROUND OF THE INVENTION</heading>
+    <p id="p-00002-en" num="0002">It is noted that <patcit id="pcit-00001" dnum="WO2003056130A"><text>WO 2003/056130</text></patcit> proposes an improvement on such existing systems and proposes to use a combination of viscoelastic surfactants and a hydrophobically modified polymer, wherein the concentration of the hydrophobically modified polymer is comprised between its overlap concentration c* and its entanglement concentration c<sub>e</sub>. Although the viscoelastic fluids of <patcit id="pcit-00002" dnum="WO2003056130A"><text>WO 2003/056130</text></patcit> have certain commercial value, they contain high amounts of both surfactant and hydrophobically modified polymer in order to achieve aqueous compositions with the desired viscosity. Further, in the polymer, the hydrophobes are connected to the polymer backbone via a degradable group.</p>
+    <p id="p-00003-en" num="0003">It is noted that also in <patcit id="pcit-00003" dnum="US4432881A"><text>US 4,432,881</text></patcit> liquids are used wherein a water-soluble polymer with hydrophobic groups is used. The polymers that are taught to be used have a weight averaged molecular weight of 200,000 to 5 million Dalton.</p>
+    <p id="p-00004-en" num="0004">The high molecular weight polymers are difficult to dissolve and difficult to distribute homogeneously in aqueous formulations.</p>
+    <p id="p-00005-en" num="0005">Personal cleansing products, such as shampoos, liquid hand soaps and body washes, not only must be able to clean the desired surfaces of the body, but they should also be aesthetically pleasing throughout all aspects of the consumer experience. For example, it is desirable that such cleansers should also provide pleasing experiences when dispensing the product, applying it, creating lather, cleansing, and rinsing the product.</p>
+    <p id="p-00006-en" num="0006">It is desirable that liquid cleansing products to have a rich and luxurious aesthetic upon dispensing and application. Furthermore, consumers often equate a rich and luxurious lather to the cleansing efficacy of the product. Additionally, consumers have grown to expect additional benefits from their liquid cleansing products beyond cleansing. Such additional benefits include moisturization, conditioning, exfoliation, protection, and delivery of beneficial active ingredients to the hair and skin. Often times, these additional benefits are provided to the consumer by suspension or dispersion of active ingredients throughout the liquid cleansing product that are effectively deposited upon application.</p>
+    <p id="p-00007-en" num="0007">Only low levels of surfactant are typically required to effectively clean the desired surfaces and that the level of surfactants in conventional liquid cleansing products vastly exceeds the required level. These high levels of surfactants are included in order to achieve several desirable attributes including: 1) rheological characteristics that are consistent with the rich and luxurious application aesthetic, 2) the rich and luxurious lather that consumers equate to product efficacy, and 3) rheological characteristics that enable shelf stable suspensions/dispersions of active ingredients.</p>
+    <p id="p-00008-en" num="0008">In some cases, however, it is not possible to achieve the desired characteristics solely through increasing the quantity of surfactant. In these cases, the characteristics can be improved by addition of salt. Addition of salt to certain surfactant solutions induces a structural transition from spherical micelles to worm-like micelles. However, not all surfactant systems are sensitive to addition of salt in this way. Where salt is not effective, a variety of other types of components can be added to the surfactant systems to achieve the desired characteristics. Examples of such components include water soluble/dispersible thickeners that effectively thicken the system and chemicals that can crystallize to form complex three dimensional structures, such as PEG150 distearate,</p>
+    <p id="p-00009-en" num="0009">The above thickeners tend to be high molecular weight species that effectively thicken aqueous systems. Some drawbacks to these thickeners are that they can be difficult to handle due to their high viscosity, poor dissolution speed, their relatively high level usage requirement and their negatively impact the clarity.</p>
+    <p id="p-00010-en" num="0010">It is therefore desirable to provide chemicals that can more easily be incorporated into liquid cleansing products that enable rheological characteristics of surfactant systems, that enable suspension of benefit agents and that are consistent with the rich and luxurious aesthetic that consumers demand, while reducing the overall level of surfactant required to achieve these benefits.</p>
+    <heading id="h-00003-en">SUMMARY OF THE INVENTION</heading>
+    <p id="p-00011-en" num="0011">High molecular weight polymers are generally difficult to dissolve and difficult to distribute homogeneously in aqueous formulations. Therefore, another solution is desired. More specifically, there is a need in the art for aqueous surfactant based systems with reduced amount of chemicals to obtain a certain viscosity or compositions with a higher viscosity when the same amount of chemicals are used, the amounts being based on the weight of the chemicals in the final composition, thereby further reducing the costs involved in the use of said fluid and/or expanding the applications wherein the compositions can be used. Also there is a need to be able to use polymers that are more easily dispersible in aqueous formulations.</p>
+    <p id="p-00012-en" num="0012">It has been found that satisfactory aqueous viscoelastic compositions can be produced that do not suffer from the drawbacks of the conventional compositions of the art. More specifically, in an aspect, the invention provides a personal care composition comprising an aqueous viscoelastic composition comprising one or more viscoelastic surfactants in combination with one or more hydrophobically-modified polymers and a personal care active ingredient.</p>
+    <heading id="h-00004-en">BRIEF DESCRIPTION OF THE DRAWING</heading>
+    <p id="p-00013-en" num="0013">The invention is best understood from the following detailed description when read in connection with the accompanying drawings. Included in the drawings are the following figures: <ul id="ul-00001-en" list-style="none"><li><figref>Figure 1</figref> is chart illustrating the rheology profile determined by Steady Strain Sweep test for Example 1 and comparative examples A and B.</li><li><figref>Figure 2</figref> is chart illustrating the rheology profile determined by Steady Strain Sweep test for Example 2 and comparative examples C and D.</li><li><figref>Figure 3</figref> is a chart illustrating the rheology profile determined by Steady Strain Sweep test for comparative examples E and F.</li><li><figref>Figure 4</figref> is a chart illustrating the rheology profile determined by Steady Strain Sweep test for Example 5 and comparative examples H and I.</li><li><figref>Figure 5</figref> is a chart illustrating the rheology profile determined by Steady Strain Sweep test for Example 6 and comparative example J.</li><li><figref>Figure 6</figref> is a chart illustrating the results of steady state sweep measurements to determine zero shear viscosity.</li><li><figref>Figure 7</figref> is a chart illustrating the results of steady state sweep measurements to determine zero shear viscosity comparing fitted data to observed data.</li><li><figref>Figure 8</figref> is a chart showing the results of zero shear viscosity vs. % salt for 8 dilution experiments at various surfactant concentrations, four according to the present invention and four without the polymer-surfactant combination.</li><li><figref>Figure 9</figref> is a chart showing the results showing Elastic Modulus as a function of stress for two compositions prepared according to Examples 10 and 5, respectively.</li></ul></p>
+    <heading id="h-00005-en">DETAILED DESCRIPTION</heading>
+    <p id="p-00014-en" num="0014">The invention generally provides a personal care composition comprising an aqueous viscoelastic composition and a personal care active ingredient. The viscoelastic composition comprises one or more viscoelastic surfactants in combination with one or more hydrophobically-modified polymers.</p>
+    <p id="p-00015-en" num="0015">In an embodiment, the viscoelastic surfactant is of the conventional type and can be selected from amine oxide surfactants including amidoamine oxide surfactants, amphoteric surfactants, zwitterionic surfactants, anionic surfactants, cationic surfactants and mixtures of two or more thereof.</p>
+    <p id="p-00016-en" num="0016">The property of viscoelasticity in general is well known and reference is made to <nplcit id="ncit-00001" npl-type="s"><text>Hoffmann et al., "Influence of Ionic Surfactants on the Viscoelastic Properties of Zwitterionic Surfactant Solutions", Langmuir, 8, 2140-2146, (1992</text></nplcit>). A useful test method for viscoelasticity is to apply sinusoidal shear deformation to the composition and to measure the storage shear modulus (G') and the loss shear modulus (G") at a given temperature. If the elastic component (storage shear modulus G') is at least as large as the viscous component (loss shear modulus G"), that is G' ≥ G", at some point or over some range of points below a frequency of about 10 rad/sec, typically between about 0.001 to about 10 rad/sec, more typically between 0.1 to 10 rad/sec, at a given temperature and if G' &gt; 10<sup>-2</sup> Pascal, preferably more than 10<sup>-1</sup> Pascal, the fluid is considered viscoelastic at that temperature. The definition and rheological measurement of G' and G" are generally described in<nplcit id="ncit-00002" npl-type="b"><text> Barnes H. A. et al., "An Introduction to Rheology", pp.45-54, Elsevier, Amsterdam (1997</text></nplcit>).</p>
+    <p id="p-00017-en" num="0017">The viscoelastic surfactant is of the conventional type. It is well known that viscoelastic surfactants provide viscoelasticity by forming a different type of micelle than the usual spherical micelles formed by most surfactants. Viscoelastic surfactants form elongated, often cylindrical, micelles which can be described as worm-like, thread-like, or rod-like micelles. Typically it is said that the shape and size of a micelle is a function of the molecular geometry of its surfactant molecules and solution conditions such as surfactant concentration, temperature, pH, and ionic strength. The formation of long, cylindrical micelles creates useful rheological properties. Viscoelastic surfactant exhibits shear-thinning behavior, and remain stable despite repeated high shear applications. By comparison, a typical polymeric thickener will irreversibly degrade when subjected to high shear applications. In an embodiment, a viscoelastic surfactant is a surfactant that forms a visocelastic fluid in an aqueous media.</p>
+    <heading id="h-00006-en">
+      <u>Amino Oxide and Amidoamine Oxide Viscoelastic Surfactant</u>
+    </heading>
+    <p id="p-00018-en" num="0018">In an embodiment, amine oxide surfactants contemplated for use in the present invention as viscoelastic surfactants include those of the following structural formula (I): <chemistry id="chem-00001-en" num="0001"><img id="img-00001-en" wi="82" he="28" img-content="chem" file="EP2940095A1_00008.PNG" img-format="png" original="imgb0001.tif" /></chemistry> where R<sub>1</sub> is a hydrophobic moiety of alkyl, alkenyl, cycloalkyl, alkylarylalkyl, alkoxyalkyl, alkylaminoalkyl or alkylamidoalkyl. R<sub>1</sub> has from about 8 to about 30 carbon atoms and may be straight or branched chained and saturated or unsaturated. Examples of long chain alkyl groups include, but not limited to, octadecenyl (oleyl), octadecyl (stearyl), docosenoic (erucyl) and the derivatives of tallow, coco, soy and rapeseed oils.</p>
+    <p id="p-00019-en" num="0019">R<sub>2</sub> and R<sub>3</sub> are, independently, hydrogen or aliphatic group (i.e. as opposed to aromatic) having from 1 to about 30 carbon atoms, preferably from about 1 to about 20 carbon atoms, more preferably from about 1 to about 10 carbon atoms, and most preferably from about 1 to about 6 carbon atoms. Representative aliphatic groups include alkyl, alkenyl, cycloalkyl, alkylaryl, hydroxyalkyl, carboxyalkyl and hydroxyalkyl-polyoxyalkylene. The aliphatic group can be straight or branched chained and saturated or unsaturated.</p>
+    <p id="p-00020-en" num="0020">In an embodiment, amidoamine oxide surfactants contemplated for use as viscoelastic surfactants in the present invention include those of the following structural formula (II): <chemistry id="chem-00002-en" num="0002"><img id="img-00002-en" wi="96" he="28" img-content="chem" file="EP2940095A1_00009.PNG" img-format="png" original="imgb0002.tif" /></chemistry> where R<sub>1</sub> is a straight or branched chained and saturated or unsaturated aliphatic group of from about 8 to about 30 carbon atoms, preferably from about 14 to about 21 carbon atoms. More preferably, R1 is a fatty aliphatic derived from natural fats and oils having an iodine value of from about 1 to about 140, preferably from about 30 to about 90, and more preferably from 40 to about 70. R<sub>1</sub> may be restricted to a single chain length or may be of mixed chain length such as those groups derived from natural fats and oils or petroleum stocks. Preferred are tallow alkyl, hardened tallow alkyl, rapeseed alkyl, hardened rapeseed alkyl, tall oil alkyl, hardened tall oil alkyl, coco alkyl, oleyl, or soya alkyl;</p>
+    <p id="p-00021-en" num="0021">R<sub>2</sub> is a straight or branched-chained, substituted or unsubstituted, divalent alkylene group of from 2 to about 6 carbon atoms, preferably, of 2 to 4 carbon atoms and more preferably of 3 carbon atoms;</p>
+    <p id="p-00022-en" num="0022">R<sub>3</sub> and R<sub>4</sub> are the same or different and are selected from alkyl or hydroxyalkyl groups of from 1 to about 4 carbon atoms and are preferably hydroxyethyl or methyl. Alternatively, R<sub>3</sub> and R<sub>4</sub> in the amidoamine oxide of formula (II) together with the nitrogen atom to which these groups are bonded form a heterocyclic ring of up to 6 members; and</p>
+    <p id="p-00023-en" num="0023">R<sub>5</sub> is hydrogen or a C<sub>1</sub> - C<sub>4</sub> alkyl or hydroxyalkyl group.</p>
+    <p id="p-00024-en" num="0024">Examples of amidoamine oxide contemplated by the present invention include, but are not limited to, those selected from the group consisting of tallow amidoalkylamine oxide, hardened tallow amidoalkylamine oxide, rapeseed amidoalkylamine oxide, hardened rapeseed amidoalkylamine oxide, tall oil amidoalkylamine oxide, hardened amidoalkylamine oxide, coco amidoalkylamine oxide, stearyl amidoalkylamine oxide, oleyl amidoalkylamine oxide, soya amidoalkylamine oxide, and mixtures thereof. Preferred specific examples of the amidoamine oxides of the present invention include, but are not limited to, the following: tallow amidopropyl dimethylamine oxide, hydrogenated tallow amidopropyl dimethylamine oxide, soya amidopropyl dimethylamine oxide, oleyl amidopropyl dimethylamine oxide, erucyl amidopropyl dimethylamine oxide, rapeseed amidopropyl dimethylamine oxide, hydrogenated rapeseed amidopropyl dimethylamine oxide, tall oil amidopropyl dimethylamine oxide, hydrogenated tall oil amidopropyl dimethylamine oxide, C14 - C22 saturated or unsaturated fatty acid amidopropyl dimethylamine oxides, and mixtures thereof.</p>
+    <heading id="h-00007-en">
+      <u>Cationic Viscoelastic Surfactant</u>
+    </heading>
+    <p id="p-00025-en" num="0025">A cationic surfactant has a positively charged moiety regardless of pH. In an embodiment, cationic surfactants contemplated for use as viscoelastic surfactants in the present invention include those selected from quaternary salts, certain amines and combinations thereof.</p>
+    <p id="p-00026-en" num="0026">In an embodiment, the quaternary salts have the structural formula (III) <chemistry id="chem-00003-en" num="0003"><img id="img-00003-en" wi="82" he="33" img-content="chem" file="EP2940095A1_00010.PNG" img-format="png" original="imgb0003.tif" /></chemistry> where R<sub>1</sub> is a hydrophobic moiety of alkyl, alkenyl, cycloalkyl, alkylarylalkyl, alkoxyalkyl, alkylaminoalkyl or alkylamidoalkyl. R<sub>1</sub> has from about 8 to about 30 carbon atoms and may be straight or branched chained and saturated or unsaturated. Examples of long chain alkyl groups include, but are not limited to, octadecenyl (oleyl), octadecyl (stearyl), docosenoic (erucyl) and the derivatives of tallow, coco, soy and rapeseed oils;</p>
+    <p id="p-00027-en" num="0027">R<sub>2</sub>, R<sub>3</sub> and R<sub>4</sub> are, independently, at least partially aliphatic groups having from 1 to about 30 carbon atoms, preferably from about 1 to about 20 carbon atoms, more preferably from about 1 to about 10 carbon atoms, and most preferably from about 1 to about 6 carbon atoms. Representative aliphatic groups include alkyl, alkenyl, alkylaryl, alkoxyalkyl, hydroxyalkyl, carboxyalkyl and hydroxyalkyl-polyoxyalkylene. The aliphatic group can be straight or branched chained and saturated or unsaturated, and;</p>
+    <p id="p-00028-en" num="0028">X<sup>-</sup> is a suitable counter-anion. The counter-anion is typically an inorganic anion such as a sulfate such as (CH<sub>3</sub>)<sub>2</sub>SO<sub>4</sub><sup>-</sup>, a nitrate, a perchlorate or a halide such as Cl<sup>-</sup>, Br<sup>-</sup>, or an aromatic organic anion such as salicylate, naphthalene sulfonate, p- and m-chlorobenzoates, 3,5-, 3,4-, and 2,4-dichlorobenzoates, t-butyl and ethyl phenate, 2,6- and 2,5-dichlorophenates, 2,4,5- trichlorophenate, 2,3,5,6-tetrachlorophenate, p-methyl phenate, m-chlorophenate, 3,5,6-trichloropicolinate, 4-amino- 3,5,6-, 2,4-dichlorophenoxyacetate.</p>
+    <p id="p-00029-en" num="0029">The amines have the following structural formula (IV): <chemistry id="chem-00004-en" num="0004"><img id="img-00004-en" wi="68" he="23" img-content="chem" file="EP2940095A1_00011.PNG" img-format="png" original="imgb0004.tif" /></chemistry> where R<sub>1</sub>, R<sub>2</sub> and R<sub>3</sub> have the meaning as defined above for the quaternary salt residues R<sub>1</sub>, R<sub>2</sub> and R<sub>3</sub>, respectively.</p>
+    <heading id="h-00008-en">
+      <u>Zwitterionic Viscoelastic Surfactant</u>
+    </heading>
+    <p id="p-00030-en" num="0030">The zwitterionic surfactant has a permanently positively charged moiety in the molecule regardless of pH and a negatively charged moiety at alkaline pH. In an embodiment, selected zwitterionic surfactants that are useful as viscoelastic surfactants in the present invention have the following structural formula (V): <chemistry id="chem-00005-en" num="0005"><img id="img-00005-en" wi="71" he="28" img-content="chem" file="EP2940095A1_00012.PNG" img-format="png" original="imgb0005.tif" /></chemistry><ul id="ul-00002-en" list-style="none"><li>where R<sub>1</sub> is hydrophobic moiety of alkyl, alkenyl, cycloalkyl, alkylarylalkyl, alkoxyalkyl, alkylaminoalkyl or alkylamidoalkyl. R<sub>1</sub> has from about 8 to about 30 carbon atoms and may be straight or branched chained and saturated or unsaturated. Examples of long chain alkyl groups include, but are not limited to, octadecenyl (oleyl), octadecyl (stearyl), docosenoic (erucyl) and the derivatives of tallow, coco, soy and rapeseed oils;</li><li>R<sub>2</sub> and R<sub>3</sub> are, independently, at least partially aliphatic groups having from 1 to about 30 carbon atoms, preferably from about 1 to about 20 carbon atoms, more preferably from about 1 to about 10 carbon atoms, and most preferably from about 1 to about 6 carbon atoms. Representative aliphatic groups include alkyl, alkenyl, alkylaryl, alkoxyalkyl, hydroxyalkyl, carboxyalkyl and hydroxyalkyl-polyoxyalkylene. The aliphatic group can be straight or branched chained and saturated or unsaturated, and;</li><li>R<sub>4</sub> is a hydrocarbyl radical (e.g. alkylene) with a chain length of 1 to 4 carbon atoms. Preferred are methylene or ethylene groups.</li></ul></p>
+    <p id="p-00031-en" num="0031">When it is zwitterionic, the surfactant is associated with both negative and positive counter-ions. Anions are typically as defined above for X<sup>-</sup> for the cationic surfactant. In an embodiment any cation is suitably elected from Na<sup>+</sup>, K<sup>+</sup>, NH4+, and amine salts, such as (CH<sub>3</sub>)<sub>2</sub>NH<sub>2</sub><sup>+</sup>.</p>
+    <heading id="h-00009-en">
+      <u>Amphoteric Viscoelastic Surfactant</u>
+    </heading>
+    <p id="p-00032-en" num="0032">An amphoteric surfactant has both a positively charged moiety and a negatively charged moiety over a certain pH range (e.g. typically slightly acidic), only a negatively charged moiety over a certain pH range (e.g. typically slightly alkaline) and only a positively charged moiety at a different pH (e.g. typically moderately acidic).</p>
+    <p id="p-00033-en" num="0033">In an embodiment, amphoteric surfactants suitable for use as viscoelastic surfactants in the present invention are represented by following the structural formula (VI): <chemistry id="chem-00006-en" num="0006"><img id="img-00006-en" wi="72" he="28" img-content="chem" file="EP2940095A1_00013.PNG" img-format="png" original="imgb0006.tif" /></chemistry><ul id="ul-00003-en" list-style="none"><li>where R<sub>1</sub> is a hydrophobic moiety of alkyl, alkenyl, cycloalkyl, alkylarylalkyl, alkoxyalkyl, alkylaminoalkyl or alkylamidoalkyl. R<sub>1</sub> has from about 8 to about 30 carbon atoms and may be straight or branched chained and saturated or unsaturated. Examples of long chain alkyl groups include, but are not limited to, octadecenyl (oleyl), octadecyl (stearyl), docosenoic (erucyl) and the derivatives of tallow, coco, soy and rapeseed oils;</li><li>R<sub>2</sub> has the meaning as defined above for the residue R<sub>2</sub> of the zwitterionic surfactant;</li><li>R<sub>3</sub> is a hydrocarbyl radical (e.g. alkylene) with a chain length of 1 to 4 carbon atoms. Preferred are methylene or ethylene groups.</li></ul></p>
+    <heading id="h-00010-en">
+      <u>Anionic Viscoelastic Surfactant</u>
+    </heading>
+    <p id="p-00034-en" num="0034">An anionic surfactant has a negatively charged moiety regardless of pH. In an embodiment, the anionic surfactants contemplated for use as viscoelastic surfactants in the present invention include those of the following structural formulas (VII), (VIII) and/or (VIIII).          R-Z     (VII)          R-X-Y-Z     (VIII)          R-Y-Z     (VIIII)<ul id="ul-00004-en" list-style="none"><li>where R is the hydrophobic moiety of alkyl, alkenyl, cycloalkyl, alkylarylalkyl, alkoxyalkyl, alkylaminoalkyl or alkylamidoalkyl. Preferably, R is a saturated or unsaturated, straight or branched alkyl chain of at least 8 carbon atoms, and in another embodiment from 8 to 30 carbon atoms. Examples of long alkyl chain groups include, but not limited to, octadecenyl (oleyl), lauryl, octadecyl (stearyl), docosenoic (erucyl) and the derivatives of tallow, coco, soy and rapeseed oils;</li><li>Z is the negatively charged hydrophilic head of the surfactant. Z is suitably selected from the group consisting of carboxylate COO<sup>-</sup>, sulfonate SO<sub>3</sub><sup>-</sup>, sulfate SO<sub>4</sub> phosphonate, phosphate, and combinations thereofln an embodiment, Z may be a carboxylate group COO<sup>-</sup> or a sulfonate group SO<sub>3</sub><sup>-</sup>;</li><li>X is a stabilizing group. X is preferably a cleavable bond. Preferably, X is an ester, amid, reverse ester or reverse amide group;</li><li>Y is a space group, which separates the cleavable group X and the hydrophilic head of the surfactant. Y is preferably a linear, saturated or unsaturated hydrocarbon chain of 1, 2 or 3 carbon atoms or a branched, saturated or unsaturated hydrocarbon chain where the main chain is of 1, 2 or 3 carbon atoms, possibly incorporating an aromatic ring.</li></ul></p>
+    <p id="p-00035-en" num="0035">Optionally, the surfactant of the invention may be dimeric or oligomeric. In such case, the formula of the surfactant is [R-Z]<sub>n</sub> or [R-X-Y-Z]<sub>n</sub>, where n is 2-10, preferably 2 or 3. An example of an oligomeric anionic surfactant is oligomerized oleic acid which generally leads to complex mixtures of dimeric and trimeric products. Commercially available oligomers, such as the Empol™ series of dimmers and trimers are suitable for use in accordance with the present invention.</p>
+    <p id="p-00036-en" num="0036">When the surfactant is anionic, the counter-ion is typically Na<sup>+</sup>, K<sup>+</sup>, NH<sub>4</sub><sup>+</sup>, or amine salt such as (CH<sub>3</sub>)<sub>2</sub>NH<sub>2</sub><sup>+</sup>.</p>
+    <p id="p-00037-en" num="0037">These mono-, di- or oligomeric carboxylates or sulfonates form viscoelastic aqueous compositions in the presence of salt.</p>
+    <p id="p-00038-en" num="0038">Preferably the surfactants that are used are biodegrable, more preferably readily biodegradable, when testing using conventional tests such as OECD 306 A-F.</p>
+    <p id="p-00039-en" num="0039">Surfactants suitable in the present invention include those known in the art for use in personal care compositions, and include nonionic, anionic, cationic, and amphoteric surfactants. Classes of surfactants useful in personal care compositions, such as personal cleansing compositions, of the present invention include the following: alcohols, alkanolamides, alkylaryl sulfonates, alkylaryl sulfonic acids, alkylbenzenes, amine acetates, amine oxides, amines, sulfonated amines and amides, betaines, block polymers, carboxylated alcohol or alkylphenol ethoxylates, diphenyl sulfonate derivatives, ethoxylated alcohols, ethoxylated alkylphenols, ethoxylated amines and/or amides, ethoxylated fatty acids, ethoxylated fatty esters and oils, fatty esters (other than glycol, glycerol, etc.), fluorocarbon-based surfactants, glycerol esters, glycol esters, heterocyclics, imidazolines and imidazoline derivatives, isethionates, lanolin-based derivatives, lecithin and lecithin derivatives, lignin and lignin derivatives, methyl esters, monoglycerides and derivatives, olefin sulfonates, phosphate esters, phosphorous organic derivatives, polymeric (polysaccharides, acrylic acid, acrylamide), propoxylated and ethoxylated fatty acids, propoxylated and ethoxylated fatty alcohols, propoxylated and ethoxylated alkyl phenols, protein-based surfactants, quaternary surfactants, sarcosine derivatives, silicone-based surfactants, soaps, sorbitan derivative, sucrose and glucose esters and derivatives, sulfates and sulfonates of oils and fatty acids, sulfates and sulfonates ethoxylated alkyl phenols, sulfates of alcohols, sulfates of ethoxylated alcohols, sulfates of fatty esters, sulfonates of benzene, cumene, toluene and xylene, sulfonates of condensed naphthalenes, sulfonates of dodecyl and tridecyl benzenes, sulfonates of naphthalene and alkyl naphthalene, sulfonates of petroleum, sulfosuccinamates, sulfosuccinates and derivatives.</p>
+    <p id="p-00040-en" num="0040">Anionic surfactants suitable for use in the personal care compositions are the alkyl and alkyl ether sulfates. These materials have the respective formulae-- ROSO<sub>3</sub>M and RO(C<sub>2</sub>H<sub>4</sub>O)<sub>x</sub>SO<sub>3</sub>M wherein R is alkyl or alkenyl of from about 8 to about 18 carbon atoms, x is an integer having a value of from 1 to 10, and M is a cation, such as ammonium, alkanolamine such as triethanolamine, monovalent metal, such as sodium or potassium, and polyvalent metal cation, such as magnesium or calcium. The cation M should be selected such that the anionic surfactant component is water soluble. Solubility of the surfactant depends upon the particular anionic surfactants and cations chosen.</p>
+    <p id="p-00041-en" num="0041">In an embodiment, R has from about 8 to about 18 carbon atoms in both the alkyl and alkyl ether sulfates. In another embodiment, R has from about 10 to about 16 carbon atoms. In even another embodiment, R has from about 12 to about 14 carbon atoms. The alkyl ether sulfates are typically made as condensation products of ethylene oxide and monohydric alcohols having from about 8 to about 24 carbon atoms. The alcohols can be synthetic or they can be derived from fats (e.g., coconut oil, palm kernel oil, tallow). In an embodiment, lauryl alcohol and straight chain alcohols derived from coconut oil or palm kernel oil are preferred. Such alcohols are reacted with between about 0 and about 10, preferably from about 2 to about 5, more preferably about 3, molar proportions of ethylene oxide, and the resulting mixture of molecular species having, for example, an average of 3 moles of ethylene oxide per mole of alcohol, is sulfated and neutralized.</p>
+    <p id="p-00042-en" num="0042">Specific non-limiting examples of alkyl ether sulfates which can be used in the personal care compositions of the present invention include, but are not limited to, sodium and ammonium salts of coconut alkyl triethylene glycol ether sulfate, tallow alkyl triethylene glycol ether sulfate, and tallow alkyl hexaoxyethylene sulfate. In an embodiment, alkyl ether sulfates are those comprising a mixture of individual compounds, wherein the compounds in the mixture have an average alkyl chain length of from about 10 to about 16 carbon atoms and an average degree of ethoxylation of from about 1 to about 4 moles of ethylene oxide.</p>
+    <p id="p-00043-en" num="0043">Other suitable anionic surfactants are the water-soluble salts of organic/sulfuric acid reaction products conforming to the formula-- [R<sup>1</sup>--SO<sub>3</sub>-M] where R<sub>1</sub> is a straight or branched chain, saturated, aliphatic hydrocarbon radical having from about 8 to about 24, preferably about 10 to about 18, carbon atoms; and M isa cation, such as ammonium, alkanolamine such as triethanolamine, monovalent metal, such as sodium or potassium, and polyvalent metal cation, such as magnesium or calcium. The cation M should be selected such that the anionic surfactant component is water soluble. Non limiting examples of such surfactants are the salts of an organic sulfuric acid reaction product of a hydrocarbon of the methane series, including iso-, neo-, and n-paraffins, having from about 8 to about 24 carbon atoms, preferably about 12 to about 18 carbon atoms and a sulfonating agent (e.g., SO<sub>3</sub>, H<sub>2</sub>SO<sub>4</sub>) obtained by known sulfonation methods such as bleaching and hydrolysis. Preferred are alkali metal and ammonium sulfonated C<sub>10</sub> to C<sub>18</sub> n-paraffins.</p>
+    <p id="p-00044-en" num="0044">Still other suitable anionic surfactants are the reaction products of fatty acids esterified with isethionic acid and neutralized with sodium hydroxide where, for example, the fatty acids are derived from coconut oil or palm kernel oil; sodium or potassium salts of fatty acid amides of methyl tauride in which the fatty acids, for example, are derived from coconut oil or palm kernel oil. Other similar anionic surfactants are described in <patcit id="pcit-00004" dnum="US2486921A"><text>U.S. Pat. Nos. 2,486,921</text></patcit>, <patcit id="pcit-00005" dnum="US2486922A"><text>2,486,922</text></patcit> and<patcit id="pcit-00006" dnum="US2396278A"><text> 2,396,278</text></patcit>, each of which is incorporated by reference in its entirety herein.</p>
+    <p id="p-00045-en" num="0045">Succinates are another type of anionic surfactant suitable for use in the personal care compositions of the present invention. Examples include disodium N-octadecylsulfosuccinnate; disodium lauryl sulfosuccinate; diammonium lauryl sulfosuccinate; tetrasodium N-(1,2-carboxyethyl)-N-octadecyl sulfosuccinate; diamyl ester of sodium sulfosuccinic acid; dihexyl ester of sodium sulfosuccinic acid; and dioctyl esters of sodium sulfosuccinic acid.</p>
+    <p id="p-00046-en" num="0046">Other suitable anionic surfactants include olefin sulfonates having about 10 to about 24 carbon atoms. In this context the term "olefin sulfonates" refers to compounds produced by sulfonation of α-olefins by means of uncomplexed sulfur trioxide, followed by neutralization of the acid reaction mixture in conditions such that any sulfones formed in the reaction are hydrolyzed to give the corresponding hydroxy alkane sulfonates. The sulfur trioxide can be liquid or gaseous, and is usually, but not necessarily, diluted by inert diluents (e.g., by liquid SO<sub>2</sub>, chlorinated hydrocarbons, etc.) when used in the liquid form, or by air, nitrogen, gaseous SO<sub>2</sub>, etc., when used in the gaseous form. Those α-olefins from which the olefin sulfonates are derived are monoolefins having from about 10 to about 24 carbon atoms, and preferably from about 12 to about 16 carbon atoms. Preferably, they are straight chain olefins. In addition to true alkene sulfonates and a proportion of hydroxy alkane sulfonates, the olefin sulfonates can contain minor amounts of other materials, such as alkene disulfonates, depending upon reaction conditions, proportion of reactants, nature of the starting olefins and impurities in the olefin stock, and side reactions during the sulfonation process. Combinations of α-olefins are also contemplated for use in the present invention. A non-limiting example of such an α-olefin sulfonate mixture is described in <patcit id="pcit-00007" dnum="US3332880A"><text>U.S. Pat. No. 3,332,880</text></patcit>, which is incorporated by reference in its entirety herein.</p>
+    <p id="p-00047-en" num="0047">Another class of anionic surfactants suitable for use in the personal care compositions are the β-alkyloxy alkane sulfonates. Examples of suitable anionic surfactants for use in the personal care compositions include ammonium lauryl sulfate, ammonium laureth sulfate, triethylamine lauryl sulfate, triethylamine laureth sulfate, triethanolamine lauryl sulfate, triethanolamine laureth sulfate, monoethanolamine lauryl sulfate, monoethanolamine laureth sulfate, diethanolamine lauryl sulfate, diethanolamine laureth sulfate, lauric monoglyceride sodium sulfate, sodium lauryl sulfate, sodium laureth sulfate, potassium lauryl sulfate, potassium laureth sulfate, sodium lauryl sarcosinate, sodium lauroyl sarcosinate, lauryl sarcosine, cocoyl sarcosine, ammonium cocoyl sulfate, arumonium lauroyl sulfate, sodium cocoyl sulfate, sodium lauroyl sulfate, potassium cocoyl sulfate, potassium lauryl sulfate, triethanolamine lauryl sulfate, triethanolamine lauryl sulfate, monoethanolamine cocoyl sulfate, monoethanolamine lauryl sulfate, sodium tridecyl benzene sulfonate, sodium dodecyl benzene sulfonate, and combinations thereof.</p>
+    <p id="p-00048-en" num="0048">Suitable amphoteric or zwitterionic detersive surfactants for use in the personal care composition herein include those which are known for use in hair care or other personal care cleansing composition, and which contain a group that is anionic at the pH of the personal care composition.</p>
+    <p id="p-00049-en" num="0049">Amphoteric surfactants suitable for use in the personal care composition are well known in the art, and include those surfactants broadly described as derivatives of aliphatic secondary and tertiary amines in which the aliphatic radical can be straight or branched chain, wherein at least one of the aliphatic substituents contains from about 8 to about 18 carbon atoms and at least one contains an anionic water solubilizing group such as carboxy, sulfonate, sulfate, phosphate, or phosphonate.</p>
+    <p id="p-00050-en" num="0050">Zwitterionic surfactants suitable for use in the personal care composition are well known in the art, and include those surfactants broadly described as derivatives of aliphatic quaternary ammonium, phosphonium, and sulfonium compounds in which the aliphatic radicals are straight or branched chain, and wherein at least one of the aliphatic substituents contains from about 8 to about 18 carbon atoms and at least one contains an anionic group such as carboxy, sulfonate, sulfate, phosphate or phosphonate. Zwitterionic surfactants such as betaines are preferred.</p>
+    <p id="p-00051-en" num="0051">Non-limiting examples of other nonionic, anionic, zwitterionic, amphoteric or additional surfactants suitable for use in the personal care compositions are described in <nplcit id="ncit-00003" npl-type="b"><text>McCutcheon's Emulsifiers and Detergents 1989 Annual, MC Publishing, Glen Rock, N.J</text></nplcit>., as well as <patcit id="pcit-00008" dnum="US3929678A"><text>U.S. Pat. Nos. 3,929,678</text></patcit> and <patcit id="pcit-00009" dnum="US2528378A"><text>2,528,378</text></patcit>, each of which is incorporated by reference in its entirety herein.</p>
+    <p id="p-00052-en" num="0052">Surfactants in the present invention can be used alone or in combination.</p>
+    <heading id="h-00011-en">
+      <u>Hydrophobically modified polymers</u>
+    </heading>
+    <p id="p-00053-en" num="0053">The hydrophobically modified polymers can be anionic hydrophobically modified polymer or cationic hydrophobically modified polymer or non-ionic hydrophobically modified polymer or zwitterionic hydrophobically modified polymer.</p>
+    <p id="p-00054-en" num="0054">The at least one hydrophobically modified polymer is formed from polymerization of ethylenically unsaturated monomers using polymerization conditions known to those skilled in the art.</p>
+    <p id="p-00055-en" num="0055">The hydrophobically modified polymers have a number average molecular weight of from 1,000, preferably from 1,500, for more preferably from 2,500, to 100,000, more preferably to 90,000 and more preferably to 50,000, and even more preferably to 25,000 Da. In the context of this invention, the polymer molecular weights are as determined with size exclusion chromatography using HPLC grade water comprising 0.025M NaH<sub>2</sub>PO<sub>4</sub>, 0.025 M Na<sub>2</sub>HPO<sub>4</sub>, and 0.01 M of sodium azide which was filtered through a 0.2 µm filter as the eluent and four separation columns, G6000PWxl 7.8 mm x 30 cm, G4000PWxl 7.8 mm x 30 cm, G3000PWxl 7.8 mm x 30 cm, and TSKgel Guard PWxl 6.0 mm x 4 cm as the G2500 Guard column (all ex Tosoh Bioscience). Polyacrylic acid sodium salt standards (ex American Polymer Standards Corporation) were used for calibration. The polymers are prepared in water at a concentration of 0.1 %w/w. The weight average (Mw) and number average molecular weight (Mn) of the standards are: <tables id="tables-00001-en" num="0001"><table frame="none"><tgroup cols="5" colsep="0" rowsep="0"><colspec colnum="1" colname="col1" colwidth="8mm" /><colspec colnum="2" colname="col2" colwidth="11mm" /><colspec colnum="3" colname="col3" colwidth="30mm" /><colspec colnum="4" colname="col4" colwidth="15mm" /><colspec colnum="5" colname="col5" colwidth="29mm" /><tbody><row><entry>1.</entry><entry>Mw</entry><entry>1,300 Dalton</entry><entry>Mn</entry><entry>830 Dalton</entry></row><row><entry>2.</entry><entry>Mw</entry><entry>8,300 Dalton</entry><entry>Mn</entry><entry>6200 Dalton</entry></row><row><entry>3.</entry><entry>Mw</entry><entry>83,400 Dalton Mn</entry><entry>47,900</entry><entry>Dalton</entry></row><row><entry>4.</entry><entry>Mw</entry><entry>495,000 Dalton</entry><entry>Mn</entry><entry>311,300 Dalton</entry></row><row><entry>5.</entry><entry>Mw</entry><entry>1,700,000 Dalton</entry><entry>Mn</entry><entry>1,100,000 Dalton</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00056-en" num="0056">Injection column was 450 µL for the standard and sample. Inject the standards and build a first-order or second-order calibration curve. Choose the curve with the best fit and within the range of the sample molecular weight. Run time was 60 minutes per injection for standard and sample.</p>
+    <p id="p-00057-en" num="0057">Surprisingly, such low molecular weight polymers, that in themselves are typically not thickeners, were found to interact with the viscoelastic surfactants in a way that led to an increased viscosity which is much higher than the viscosity of solution of pure viscoelastic surfactant of the same concentration.</p>
+    <p id="p-00058-en" num="0058">According to a non-binding theory, the hydrophobically-modified polymers of the invention, notably its pendant hydrophobic chains, interact in an improved way with the surfactant micelles. This interaction conceivably increases the worm- or rod-like micelle size, and/or cross-linked the micelles, so that a higher viscosity is achieved. As a result, an aqueous viscoelastic structure that satisfies the required rheology profile is obtained using less amount of chemicals than previously possible. At the same time the lower molecular weight polymers allow easier handling of the polymer itself and faster preparation of the compositions of the invention.</p>
+    <p id="p-00059-en" num="0059">The hydrophobically-modified polymer has a backbone and, attached to said backbone, randomly or not, pendant hydrophobic chains. The polymer can be charged or non-charged, depending on the monomers used and the pH of the aqueous composition in which it is used. If too many hydrophobic groups are present, the water-solubility decreases. If it is too low, the interaction with the viscoelastic surfactant will become impaired. In an embodiment of the invention the amount of hydrophobic monomer-derived units is about 0.1 mole% or more. In another embodiment it is about 0.5 mole% or more and in a further embodiment it is about 1 mole% or more of all the monomer units comprised in the polymer.</p>
+    <p id="p-00060-en" num="0060">To a level of at least 0.1 mole%, based on the amount of monomer units in the polymer, the hydrophobically modified polymer comprises monomeric units each covalently bonded to a pendant hydrocarbyl group having from 6 to 40 carbon atoms, said pendant hydrocarbyl group being connected to the backbone of said hydrophobically modified polymer via a non-ester containing linking group.</p>
+    <p id="p-00061-en" num="0061">The pendant hydrocarbyl group has from 6, preferably from 8, more preferably from 11, for example from 14, to 40, preferably to 32, more preferred to 24 carbon atoms. The pendant hydrocarbyl group is typically a straight, branched or cyclic, saturated or unsaturated hydrocarbyl, such as a linear or branched alkyl, alkenyl, cycloalkyl, aryl, alkylaryl, or alkenylaryl group. Examples of pendant hydrocarbyl groups include behenyl, stearyl, lauryl, 2-etylhexyl, 2-propylheptyl, 2-butyloctyl, 2-hexyldecyl, 2-octyldodecyl, 2-decyltetradecyl, 2-dodecylhexadecyl, 2-tetradecyloctadecyl, or the alkyl group of oleyl, coco, soya, erucyl or tallow acids or alcohols or amines.</p>
+    <p id="p-00062-en" num="0062">Suitably, the hydrophobically-modified polymer is synthesized by copolymerization of one or more hydrophilic, one or more hydrophobic monomers, and optionally one or more other nonionic monomers. The monomers used can be copolymerized in any sequence. In an embodiment at least acrylic acid is used as a hydrophilic monomer. In another embodiment the hydrophobic monomer is selected from monomers that result in pendant hydrophobic chain, pendant of the backbone of said polymer, having at least 8 carbon atoms in said pendant chain. In an embodiment of the invention the amount of hydrophobic monomer-derived units is about 0.1 mole% or more. In another embodiment it is about 0.5 mole% or more and in a further embodiment it is about 1 mole% or more of all the monomer units comprised in the polymer.</p>
+    <p id="p-00063-en" num="0063">In another embodiment of the invention the pendant hydrocarbyl group comprises an alkyl function with at most 11 carbon atoms and the hydrophobically modified polymer contains, to a level, of from 0.1, such as from such as from 0.5, for example from 1, to 20, such as to 10, for example to 5 mole%, based on the amount of monomer units in the polymer, monomeric units connected to such pendant hydrocarbyl group.</p>
+    <p id="p-00064-en" num="0064">The pendant hydrocarbyl group is connected to the backbone of the hydrophobically modified polymer by via a non-ester containing linking group. Non-ester containing linking groups may be a direct bond or: <chemistry id="chem-00007-en" num="0007"><img id="img-00007-en" wi="47" he="24" img-content="chem" file="EP2940095A1_00014.PNG" img-format="png" original="imgb0007.tif" /></chemistry> or <chemistry id="chem-00008-en" num="0008"><img id="img-00008-en" wi="142" he="110" img-content="chem" file="EP2940095A1_00015.PNG" img-format="png" original="imgb0008.tif" /></chemistry> wherein R<sub>4</sub> is a hydrocarbylene group having 1 to 10 carbon atoms, preferably CH<sub>2</sub>, and the top bond of the linking group is connected to the polymer backbone and the bottom bond is connected to the pendant hydrocarbyl group. Preferably, the non-ester containing linking group is a, but not limited to, urea, urethane, imide, or amide containing linking group, more preferably a urea or urethane containing linking group.</p>
+    <p id="p-00065-en" num="0065">The polymers of the invention can be produced by copolymerizing suitable monomers, as described above, but they can also be produced by modification of a polymer. Hence in an embodiment of the invention, the polymer is produced in a conventional way by reacting a functional polymer with a hydrophobic modification agent, such as reacting a copolymer of maleic anhydride, including polyisobutylene succinic acid copolymers (PIBSA), with a fatty amine.</p>
+    <p id="p-00066-en" num="0066">Alternatively, the hydrophobically modified polymer may be produced by reacting a functional polymer with a hydrophobic modification agent.</p>
+    <p id="p-00067-en" num="0067">The hydrophobically modified polymer is suitably free from, or contains at most 1, preferably at most 0.1, more preferably at most 0.01 mole% based on the amount of monomer units in the polymer, of monomeric units connected to pendant hydrocarbyl group having at least 10, preferably at least 8, more preferably at least 6 carbon atoms connected to the backbone of said hydrophobically modified polymer via an ester containing linking group.</p>
+    <p id="p-00068-en" num="0068">The hydrophobically modified polymer may obtained by copolymerizing at least a first and at least a second ethylenically unsaturated monomer, wherein said first monomer is an ethylenically unsaturated monomer with a hydrocarbyl group having from 6, preferably from 8, more preferably from 11 to 40, preferably to 32, more preferably to 24 carbon atoms being connected to the unsaturated function of said monomer via a non-ester containing linkage, preferably a urea, urethane, imide and amide containing linkage, more preferably a urea or urethane containing linkage; and said second monomer is an ethylenically unsaturated monomer free from hydrocarbyl groups having at least 11, preferably at least 8, more preferably at least 6 carbon atoms connected to the unsaturated function of the monomer. The first and second monomers are present in a molar ratio of from 0.1:99.9 to 90:10.</p>
+    <p id="p-00069-en" num="0069">When the hydrocarbyl group has at least 12 carbon atoms, the first and second monomers are usually present in a molar ratio of from 0.1:99.9 to 20:80; preferably from 0.5:99.5 to 10:90, more preferably from 1:99 to 5:95.</p>
+    <p id="p-00070-en" num="0070">When the hydrocarbyl group has at most 11 carbon atoms, the first and second monomers are usually present in a mutual molar ratio of from 1:99 to 90:10; preferably from 5:95 to 70:30, more preferably from 10:90 to 50:50. In another embodiment the hydrophobically-modified polymer is obtained by first copolymerizing a monomer mixture comprising at least a hydrophobic and a hydrophilic monomer and reacting the resulting copolymer with further hydrophilic or hydrophobic reagents as to refine its properties.</p>
+    <p id="p-00071-en" num="0071">Monomers with a hydrocarbyl group having from 6 to 40 carbon atoms connected to the unsaturated function thereof via a non-ester containing linkage (herein also referred to hydrophobe-bearing monomers) include those with the following structure (VIIIII) <chemistry id="chem-00009-en" num="0009"><img id="img-00009-en" wi="44" he="22" img-content="chem" file="EP2940095A1_00016.PNG" img-format="png" original="imgb0009.tif" /></chemistry><ul id="ul-00005-en" list-style="none" compact="compact"><li>where R1, R2, and R3 are independently selected from H, CH<sub>3</sub>, COOH, and CH<sub>2</sub>COOH,</li><li>X is a direct bond or <chemistry id="chem-00010-en" num="0010"><img id="img-00010-en" wi="56" he="24" img-content="chem" file="EP2940095A1_00017.PNG" img-format="png" original="imgb0010.tif" /></chemistry> or <chemistry id="chem-00011-en" num="0011"><img id="img-00011-en" wi="128" he="100" img-content="chem" file="EP2940095A1_00018.PNG" img-format="png" original="imgb0011.tif" /></chemistry> wherein R<sub>4</sub> is a hydrocarbylene group having from 1 to 10 carbon atoms, preferably CH<sub>2</sub>, the top bond of X is connected to the double bond in (VIIII) and the bottom bond of X is connected to R<sub>hy</sub>, and R<sub>hy</sub> is the hydrocarbyl group having from 6, preferably from 8, more preferably form 11 to 40, preferably to 32, more preferably to 24 carbon atoms.</li></ul></p>
+    <p id="p-00072-en" num="0072">Hydrophobe-bearing monomers of the above type are commercially available or can be obtained by methods well known in the art, for example by reacting a ethylenically unsaturated isocyanate, such as allyl-isocyanate or 3-isopropyl-benzyl-α,α-dimethylisocyanate, with an alcohol or amine containing a hydrocarbyl group having from 6 to 40 carbon atoms, by reacting an ethylenically unsaturated acid monomer, such as acrylic acid, with an amine containing a hydrocarbyl group having from 6 to 40 carbon atoms. Other methods to synthesize such monomers are well known to the person skilled in the art of organic synthesis.</p>
+    <p id="p-00073-en" num="0073">Examples of hydrophobe-bearing monomers where the hydrophobe is linked to the double bond of the monomer include t-octyl acrylamide, n-octyl acrylamide, lauryl acrylamide, stearyl acrylamide, behenyl acrylamide, 1-allyl naphthalene, 2-allyl naphthalene,1-vinyl naphthalene, 2-vinyl naphthalene, styrene, α-methyl styrene, 3-methyl styrene, 4-propyl styrene, t-butyl styrene, 4-cyclohexyl styrene, 4-dodecyl styrene, 2-ethyl-4-benzyl styrene and 4-(phenyl butyl) styrene.</p>
+    <p id="p-00074-en" num="0074">The ethylenically unsaturated monomer free from hydrocarbyl groups having 11 or more, preferably 8 or more, more preferably 6 or more carbon atoms connected to the unsaturated function of the monomer, i.e. the second monomer, may be anionic ethylenically unsaturated monomers, cationic ethylenically unsaturated monomers, non-ionically ethylenically unsaturated monomers, zwitterionic ethylenically unsaturated monomers, mixtures thereof and salts thereof.</p>
+    <p id="p-00075-en" num="0075">In an embodiment, the hydrophobically modified polymer is anionic and is synthesized from at least one first ethylenically unsaturated hydrophobe-bearing monomer and at least one second ethylenically unsaturated monomer that is anionic and referred to as an anionic ethylenically unsaturated monomer hereforth. In another embodiment, the hydrophobically modified polymer is cationic and is synthesized from at least one first ethylenically unsaturated hydrophobe-bearing monomer and and at least one second ethylenically unsaturated monomer that is cationic and referred to as a cationic ethylenically unsaturated monomer hereforth. In yet another embodiment, a the hydrophobically modified polymer is non-ionic and is synthesized from at least one first ethylenically unsaturated hydrophobe-bearing monomer and at least one second ethylenically unsaturated monomer that is non-ionic and referred to as a non-ionic ethylenically unsaturated monomer hereforth. In a further embodiment, a the hydrophobically modified polymer is zwitterionic and is synthesized from at least one first ethylenically unsaturated hydrophobe-bearing monomer and at least one second ethylenically unsaturated monomer that is zwitterionic and referred to as a zwitterionic ethylenically unsaturated monomer hereforth. In this embodiment, the polymer contains positive and negative charges which are on the same monomer repeat unit. In yet another embodiment, the hydrophobically modified polymer is zwitterionic and synthesized from at least one first ethylenically unsaturated hydrophobe-bearing monomer and at least one anionic ethylenically unsaturated second monomer and at least one cationic ethylenically unsaturated second monomer and at least one hydrophobe-bearing monomer. In this embodiment, the polymer contains positive and negative charges which are on different monomer repeat units.</p>
+    <p id="p-00076-en" num="0076">Herein an anionic ethylenically unsaturated monomer is defined as any monomer that is capable of introducing a negative charge to the hydrophobically modified polymer. These anionic ethylenically unsaturated monomers include of acrylic acid, methacrylic acid, ethacrylic acid, α-chloro-acrylic acid, α-cyano acrylic acid, β-methyl-acrylic acid (crotonic acid), α-phenyl acrylic acid, β-acryloxy propionic acid, sorbic acid, α-chloro sorbic acid, angelic acid, cinnamic acid, p-chloro cinnamic acid, β-styryl acrylic acid (1-carboxy-4-phenyl butadiene-1,3), itaconic acid, maleic acid, citraconic acid, mesaconic acid, glutaconic acid, aconitic acid, fumaric acid, tricarboxy ethylene, 2-acryloxypropionic acid, 2-acrylamido-2-methyl propane sulfonic acid (AMPS), vinyl sulfonic acid, sodium methallyl sulfonate, sulfonated styrene, allyloxybenzene sulfonic acid and their salts. The preferred salts of hydrophilic acid monomers are sodium, potassium or ammonium salts. Moieties such as maleic anhydride or acrylamide that can be derivatized to an acid-containing group can be used. Combinations of acid-containing hydrophilic monomers can also be used. In one aspect the acid-containing hydrophilic monomer is acrylic acid, maleic acid, itaconic acid, methacrylic acid, 2-acrylamido-2-methyl propane sulfonic acid , vinyl sulfonic acid, sodium methallyl sulfonate, sulfonated styrene, allyloxybenzene sulfonic acid or mixtures thereof and their salts.</p>
+    <p id="p-00077-en" num="0077">Cationic polymers can be obtained by (co)polymerizing a cationic monomer or by functionalizing a polymer after polymerization. Cationic ethylenically unsaturated monomers are ethylenically unsaturated monomers which are capable of introducing a positive charge to the hydrophobically-modified copolymer. In an embodiment of the present invention, the cationic ethylenically unsaturated monomer has at least one amine functionality. The cations in the polymer may be obtained by forming amine salts of all or a portion of the amine functionality, and/or by quaternizing all or a portion of the amine functionality to form quaternary ammonium salts, or by oxidizing all or a portion of the amine functionality to form N-oxide groups. As used herein, the term "amine salt" means that the nitrogen atom of the amine functionality is covalently bonded to from one to three organic groups and from three to one protons, such that there are 4 bonds to the nitrogen and it is associated with an anion. As used herein, the term "quaternary ammonium salt" means that a nitrogen atom of the amine functionality is covalently bonded to four organic groups and is associated with an anion.</p>
+    <p id="p-00078-en" num="0078">Monomers that can form cations include, but are not limited to, N,N-dialkylaminoalkyl (meth)acrylate, N-alkylaminoalkyl (meth)acrylate, N,N-dialkylaminoalkyl (meth)acrylamide and N-alkylaminoalkyl (meth)acrylamide, where the alkyl groups are independently C<sub>1-18</sub> cyclic compounds such as 1-vinyl imidazole and the like. Aromatic amine containing monomers such as vinyl pyridine may also be used. Furthermore, monomers such as vinyl formamide, vinyl acetamide and the like which generate amine moieties on hydrolysis may also be used. Preferably the cationic ethylenically unsaturated monomer is N,N-dimethylaminoethyl methacrylate, tert-butyl aminoethyl methacrylate and N,N-dimethylaminopropyl methacrylamide. Cationic ethylenically unsaturated monomers that may be used include the quarternized derivatives of the above monomers as well as diallyldimethylammonium chloride also known as dimethyldiallylammonium chloride, (meth)acrylamidopropyl trimethylammonium chloride, 2-(meth)acryloyloxy ethyl trimethyl ammonium chloride, 2-(meth)acryloyloxy ethyl trimethyl ammonium methyl sulfate, 2-(meth)acryloyloxyethyltrimethyl ammonium chloride, N,N-Dimethylaminoethyl (meth)acrylate methyl chloride quaternary, methacryloyloxy ethyl betaine as well as other betaines and sulfobetaines, 2-(meth)acryloyloxy ethyl dimethyl ammonium hydrochloride, 3-(meth)acryloyloxy ethyl dimethyl ammonium hydroacetate, 2-(meth)acryloyloxy ethyl dimethyl cetyl ammonium chloride, 2-(meth)acryloyloxy ethyl diphenyl ammonium chloride and others.</p>
+    <p id="p-00079-en" num="0079">As used herein, the term "nonionic ethylenically unsaturated monomer" means an ethylenically unsaturated monomer which does not introduce a charge to the hydrophobically-modified copolymer. These nonionic ethylenically unsaturated monomers include, but are not limited to, acrylamide, styrene, acylonitrile rmethacrylamide, N-alkyl(meth)acrylamide, N,N-dialkyl(meth)acrylamide such as N,N-dimethylacrylamide, hydroxyalkyl(meth)acrylates, alkyl(meth)acrylates such as, methylacrylate and methylmethacrylate, vinyl acetate, acrylonitrile, vinyl morpholine, vinyl pyrrolidone, vinyl caprolactum, ethoxylated alkyl, alkaryl or aryl monomers such as methoxypolyethylene glycol (meth)acrylate, allyl glycidyl ether, allyl alcohol, glycerol (meth)acrylate, monomers containing silane, silanol and siloxane functionalities and others. In an embodiment the non-ionic hydrophobically modified polymer contains vinyl alcohol which is typically generated by hydrolysis of vinyl acetate after the hydrophobically modified polymer has been formed. The nonionic ethylenically unsaturated monomer is preferably water soluble.</p>
+    <p id="p-00080-en" num="0080">As used herein, the term "zwitterionic ethylenically unsaturated monomer" means an ethylenically unsaturated monomer which introduces both a positive and a negative charge in the same monomer repeat unit of the hydrophobically modified copolymer.</p>
+    <p id="p-00081-en" num="0081">The zwitterionic ethylenically unsaturated monomers include amine oxides carboxybetaine, sulfobetaine, and phosphobetaine monomers. Examples of amine oxides include, but are not limited to, vinyl pyridine-N-oxide and tert-butyl-aminoethylmethacrylate-N-oxide. It is understood that the monomer, say N-vinyl pyridine, can be copolymerized and then the pyridine moiety is oxidized to the amine oxide. Examples of carboxybetaine monomers include, but are not limited to, N,N'-dimethyl-N-methacryloyloxyethyl-N-(2-carboxyethyl) ammonium, (2-(2-acrylamido-2-methylpropyldimethylammonio) ethanoate, 6-(2-acrylamido-2-methylpropyl dimethylammonio) hexanoate, 4-(N,N-diallyl-N-methylammonio) butanoate, and others. Examples of sulfobetaine monomers include, but are not limited to, sulfopropyldimethylammonioethyl methacrylate, sulfoethyldimethyl-ammonioethyl methacrylate, sulfobutyldimethylammonioethyl methacrylate, sulfohydroxy propyldimethylammonioethyl methacrylate, sulfopropyldimethyl ammoniopropylacrylamide, sulfopropyldimethylammonio-propylmethacrylamide, sulfohydroxypropyldimethyl-ammoniopropylmethacryl-amide, sulfopropyldimethylammonioethyl acrylate, sulfopropyldiethyl-ammonio-ethoxyethyl methacrylate, 2-vinyl-I-(3-sulfopropyl) pyridinium betaine, 4-vinyl-I-(3-sulfopropyl) pyridinium betaine, I-vinyl-3-(3sulfopropyl) imidazolium betaine, sulfopropylmethyldiallylammonium betaine, 3-(N,N-diallyl-N-methylammonio) propanesulfonate, and others.</p>
+    <p id="p-00082-en" num="0082">As mentioned before, a zwitterionic hydrophobically modified polymer can be synthesized by copolymerizing an anionic ethylenically unsaturated monomer and a cationic ethylenically unsaturated monomer with a hydrophobe-bearing monomer. Any combination of anionic and cationic monomers may be used. However, the preferred anionic monomer will introduce a sulfonate group to the copolymer.</p>
+    <p id="p-00083-en" num="0083">A polymer of the present invention may comprise further monomers in addition to those mentioned above.</p>
+    <p id="p-00084-en" num="0084">It should be noted that the hydrophobically modified polymers of the invention are not conventional thickeners, due to their low molecular weight. In an embodiment of the invention, the number average molecular weight of the polymers, neutralized or not, may for example be chosen such that they do not thicken a 4 wt% KCI solution in water when used at concentrations of 2 wt% in said KCI solution, at a temperature of 25°C. In another embodiment, the molecular weight of the polymer is chosen such that an aqueous solution of 2 wt% of the polymer and 4 wt% of KCI has a viscosity of 100 or less, preferably 50 or less, most preferably 16 mPas or less at a shear rate of 100 sec<sup>-1</sup> and a temperature of 25°C. Optionally, the polymers are neutralized.</p>
+    <p id="p-00085-en" num="0085">Because of the exceptional properties observed for the compositions of the invention with the viscoelastic surfactant and the specific polymer, it is possible to reduce the amount of surfactant and/or polymer. It was also surprisingly found that the increased viscosity can be achieved at a polymer concentration that is lower than the overlap concentration c*. The polymer overlap concentration c* is a threshold concentration when polymer coils begin to densely pack in a solvent. In a dilute polymer solution where polymer concentration is below c*, the polymer coils are separated. In a polymer solution where the polymer concentration is above c*, the polymer coils are densely packed. The detailed definition of c* is described by <nplcit id="ncit-00004" npl-type="b"><text>Pierre-Gilles de Gennes in "Scaling Concept on Polymer Physics", pp. 76-77, Cornell University Press, Ithaca and London (1979</text></nplcit>). c* is measured by the plot of viscosity versus concentration. At low concentrations, the plot will follow a linear path and once the c* is reached, the slope of the line drastically increases. For the purposes herein, the polymer overlap concentration c* is measured at 25°C at atmospheric pressure in the solvent. Accordingly, in an embodiment it may be desired for economic and environmental reasons to use the polymers of the invention at a polymer concentration that is below the overlap concentration c*. Further, it is noted that the polymers of the invention were found to interact with viscoelastic surfactants in such a way that the combined use leads to increased viscosities at high temperature (tested up to 100°C) and pressures (tested up to 25 bara.)</p>
+    <p id="p-00086-en" num="0086">If the combination of viscoelastic surfactant and polymer of the invention is supplied in a concentrated form, it is preferably in an aqueous, essentially salt-free form. Such an aqueous concentrate has the advantage of having a low viscosity and related easy dilution. Typical aqueous concentrates comprise one or more glycols, such as propylene glycol, so that the viscoelastic surfactant is more easily dissolved in the concentrate. Typically, the amount of viscoelastic surfactant in such a concentrate is within the range of greater than 10 %w/w, preferably 10-60 %w/w, whereas the amount of polymer ranges from about 5-30 %w/w, based on the weight of the concentrate. By the term essentially salt-free it is meant that the salt concentration is less than 0.01 %w/w, otherwise the viscosity becomes unacceptably high.</p>
+    <p id="p-00087-en" num="0087">For personal care applications, the viscoelastic surfactant is used in an amount below about 40 %w/w, preferentially, below about 20 %w/w of the final viscoelastic aqueous composition. Also the viscoelastic surfactant is suitably used in an amount of about 1 %w/w or more. In an embodiment it is about 5 %w/w or more, while in another embodiment it is about 7%w/w or more, all being based on the weight of the total viscoelastic aqueous composition.</p>
+    <p id="p-00088-en" num="0088">In general, the hydrophobically modified polymer is used in an amount of 10 %w/w or less. In an embodiment of the invention, it is 5 %w/w or less. In another embodiment it is 2% or less, while in a further embodiment it is 1 %w/w or less. The polymer is to be used in an amount of at least 0.01 %w/w. All of these amounts are based on the weight of the total viscoelastic aqueous composition.</p>
+    <p id="p-00089-en" num="0089">The weight ratio of hydrophobically modified polymer to viscoelastic surfactant is usually from 0.1:100, preferably from 1:100, more preferably from 3:100, to 100:50, preferably to 100:100, more preferably to 50:100.The viscoelastic compositions of the invention may also comprise one or more chelating agents. Particularly when the aqueous formulations or the area where the compositions are used has a lot of hardness ions, the use of chelating agents for such ions was found to be beneficial. Without wishing to be bound by theory, it is thought that these hardness ions tend to precipitate the hydrophobically modified polymer in the aqueous solution. The addition of chelating agents, according to said theory, prevents the precipitation of these hydrophobically modified polymers and preserves the performance of the mixture of these polymers and viscoelastic surfactants in high hardness aqueous solutions.</p>
+    <p id="p-00090-en" num="0090">For purposes of this invention, a chelating agent is described as any material that will chelate hardness ions, such as calcium and magnesium, in aqueous solutions. Chelating agents include but are not limited to (S,S)-ethylenediaminesuccinic acid trisodium salt, N,N-bis(carboxymethyl)-L-glutamic acid tetrasodium salt, L-aspartate-(N,N)-diacetic acid tetrasodium salt, N-2-hydroxyethyliminodiacetic acid disodium salt, methylglycinediacetic acid trisodium salt, ethylenediaminetetraacetic acid, nitorilotriacetic acid, diethylenetriaminepentaacetic acid, hydroxyethylethylenediaminetriacetic acid, triethylenetetraminehexaacetic acid, 1,3-propanediaminetetraacetic acid, 1,3-diamino-2-hydroxypropanetetraacetic acid, dihydroxyethylglycine, glycol ether diamine tetraacetic acid, hydroxyethanediphosphonic acid, aminotrimethylenephosphonic acid, 1,2,4-butanetricarboxylic acid, dihydroxyethylethylenediaminediacetic acid, sodium gluconate, sodium glucoheptonate, inositol hexaphosphate, hydroxyethanoic acid, 2-hydroxypropanoic acid, 2-hydroxysuccinic acid, 2,3-dihydroxybutanedioic acid, and 2-hydroxy-1,2,3-propanetricarboxylic acid and their salts. The preferred chelating agents are aminocarboxylates, such as (S,S)-ethylenediaminesuccinic acid trisodium salt, N,N-bis(carboxymethyl)-L-glutamic acid tetrasodium salt, L-aspartate-(N,N)-diacetic acid tetrasodium salt, N-2-hydroxyethyliminodiacetic acid disodium salt, methylglycinediacetic acid trisodium salt, ethylenediaminetetraacetic acid, nitrilotriacetic acid, and their salts. For purposes of this invention, a high hardness aqueous solution is defined as a solution with a hardness of greater than 100 ppm expressed as CaCO<sub>3</sub>, more preferably greater than 250 ppm as CaCO<sub>3</sub>, and most preferably greater than 500 ppm as CaCO<sub>3</sub>.</p>
+    <p id="p-00091-en" num="0091">In addition to the aqueous viscoelastic solution, the personal care compositions of the present invention also include a personal care active ingredient. In hair care formulations, the personal care active ingredients may provide beneficial properties to hair such as improved cleanliness, fragrance, improved shine, improved wet combability, improved dry combability, improved wet feel, improved dry feel, improved strength, or improved color. In skin care formulations, the personal care active ingredients may provide beneficial properties to skin such as improved cleanliness, fragrance, preparation for shaving, improved smoothness, improved appearance, reduced wrinkle, improved color, or improved tone. Such active ingredients include, without limitation, thickeners, emulsifiers, aesthetic modifiers, UV filters, humectants (such as hydroxyethyl urea, available from Akzo Nobel Surface Chemistry under the trademark HYDROVANCE®), lubricants, skin whitening ingredients, silicones, powders, de-viscosifying agents, moisturizers, emollients, solvents, chelating agents, vitamins, antioxidants, botanical extracts, pH adjusting agents, preservatives, fragrances, waterproofing agents, anti-aging agents, firming forming polymers, toning agents, dyes, pigments, colors, polymers, conditioning agents, rheology modifiers, surfactants, opacifiers, foaming agents, heat generating agents and/or effervescing agents, glitter and decorative beads and shapes. In an embodiment of the invention, the personal care composition may be a hair care formulation, such as a shampoo or a conditioner, or a skin care formulation such as a body wash or shave preparation.</p>
+    <p id="p-00092-en" num="0092">The active ingredient will be present in the personal care composition from about 0.01 to about 10% of the total formula weight. In an embodiment of this invention the active ingredient will be present from about 0.1 to about 5 percent by weight based on the total weight of the personal care formulation (dry basis). In another embodiment, the active viscoelastic aqueous composition will be present from about 0.3 to 4% of the total weight of personal care formulation (dry basis).</p>
+    <p id="p-00093-en" num="0093">The viscoelastic aqueous composition will be present from about 0.1 to about 10wt% of the total personal care formulation (dry basis). In an embodiment of this invention the viscoelastic aqueous composition will be present from about 0.2 to about 5wt% of the total personal care formulation (dry basis). In another embodiment, the viscoelastic aqueous composition will be present from about 0.3 to 4wt% of the total weight of the personal care formulation (dry basis).</p>
+    <p id="p-00094-en" num="0094">In an embodiment, salt can be added to the formulation to assist in increasing viscosity. Typical levels of salt that can be added to the personal care composition will be from about 0.1 to about 10% based on the total weight of the composition. Typical salts will be, for example, alkaline metal and alkaline earth cations of common anions (e.g. sulfate, chloride, bromide, nitrate, phosphate, carbonate, and mixtures thereof). In another embodiment the salt will be sodium chloride, calcium chloride or mixtures thereof. In yet another embodiment the salt will be present in an amount from about 1 to about 5 percent based on the total weight of the composition.</p>
+    <p id="p-00095-en" num="0095">With the exception of the information in the examples, or where otherwise indicated, all numbers or expressions referring to quantities of ingredients, reaction conditions, and the like, used in the specification and claims are to be understood as modified in all instances by the term "about". Further, where numerical ranges are disclosed they are meant to be continuous ranges that include every value between the minimum and maximum value as presented. Wt% and %w/w mean percent by weight.</p>
+    <p id="p-00096-en" num="0096">The invention will now be further described in connection with the following Examples which are not intended to limit the scope thereof. Unless otherwise stated, all parts and percentages refer to parts and percentages by weight. All numbers given relate to the amount of active material. So if in the examples 10 %w/w of a chemical is specified, then the amount to be used of the supplied product is to be increased if the product is supplied in a diluted form.</p>
+    <heading id="h-00012-en">EXAMPLES</heading>
+    <p id="p-00097-en" num="0097">Except where indicated otherwise, the viscosity of samples has been determined over a broad shear rate range using a stress-controlled rheometer SR-5000 (from Rheometric Scientific, which is now TA Instruments). The sample was placed between two circular parallel plates of 25 mm or 40 mm in diameter and evaluated at a temperature of 25 °C. Typically the initial stress was 0.5 Pa and the final stress was in the 150-400 Pa range, depending on the viscosity of the sample, with the lower final stress selected for samples with lower viscosity. In the linear sweep mode a stress increment of 0.5-2 Pa was applied.</p>
+    <p id="p-00098-en" num="0098">Aromox® APA-TW is a commercial tallowalkylamidopropyl dimethyl amine oxide supplied by AkzoNobel.</p>
+    <p id="p-00099-en" num="0099">POLYFLOS<sup>®</sup> HM 21 is a hydrophobically modified hydroxypropyl guar gum supplied by Lamberti spa, and was used as received. This polymer was used as a comparison for the polymers of the invention.</p>
+    <heading id="h-00013-en">
+      <b>Preparation of hydrophobically-modified polymer R7-33-43</b>
+    </heading>
+    <heading id="h-00014-en">
+      <u>Synthesis of behenyl alcohol urethane of m-TMI monomer:</u>
+    </heading>
+    <p id="p-00100-en" num="0100">75 g of behenyl alcohol (available from Cognis) was melted and added to a reactor and heated to 95°C and sparged with nitrogen for 4 hours to remove any water. The nitrogen sparge was discontinued and the reaction temperature lowered to 78°C. 0.3 g of monomethyl ether hydroquinone (MEHQ) inhibitor and 0.3 grams of Stannous 2-ethylhexanoate (FASCAT® 2003 available from Arkema Inc, Philadelphia, PA) were then added to the reactor. 47.6 g of 3-isopropenyl-α,α-dimethylbenzyl isocyanate (m-TMI available from Cytec, Stamford, CT) was then slow added to the reactor over a period of 30 minutes. A slight exotherm was observed which raised the temperature to 78 to 83°C. After the addition, the reactor was held at 80°C for an additional 30 minutes. The final product was a liquid which cooled down to a solid at room temperature.</p>
+    <heading id="h-00015-en">Synthesis of the polymer R7-33-43:</heading>
+    <p id="p-00101-en" num="0101">An initial charge of 40.8 g of water and 153.5 g of isopropyl alcohol were added to a 1 liter glass reactor. The reactor contents were heated to reflux (approximately 82 to 84°C). In a separate beaker, 142 g of acrylic acid was warmed to 55°C and then 60 g of the behenyl alcohol urethane of m-TMI of the previous step was added with stirring. This warm mixture was added to the reactor at reflux over a period of 2.5 hours. A solution of 1.9 g of sodium persulfate dissolved in 60 g of water was simultaneously added but over said period of 2.5 hours. The reaction temperature was maintained at about 85°C for one hour. A scavenge feed (to minimize residual monomer) containing 0.175 g of sodium persulfate dissolved in 10 g of water was then added to the reactor over 30 minutes and maintained for an additional 30 minutes. The reactor was then set up for distillation which was carried out at increased temperature and/or reduced pressure, to ensure a controlled distillation without polymer degradation. A small amount of ANTIFOAM® 1400 (0.12 g) (from Dow Chemical) was added to suppress any foam generated during distillation. The alcohol (the cosolvent) was removed from the polymer solution by azeotropic distillation. During the distillation, about 1350 g of water was added. Approximately, 263 g of a mixture of water and isopropyl alcohol were distilled off. After distillation was completed, the reaction mixture was cooled and 21.8 g of 50% NaOH was added. The final product had a pH of 2.2 and solids of 13.3 percent.</p>
+    <heading id="h-00016-en">
+      <b>Preparation of hydrophobically-modified polymer R7-33-61</b>
+    </heading>
+    <heading id="h-00017-en">
+      <u>Synthesis of Armeen 18D m-TMI monomer:</u>
+    </heading>
+    <p id="p-00102-en" num="0102">70 g of octadecylamine (Armeen® 18D available from AkzoNobel Surface Chemistry) was melted and added to a reactor and heated to 90°C. The liquid octadecylamine was sparged with nitrogen for 4 hours to remove any water in the material. The nitrogen sparge was discontinued and the reaction temperature lowered to 78°C. 0.3 g of monomethyl ether hydroquinone (MEHQ) inhibitor and 0.3 grams of Stannous 2-ethylhexanoate (FASCAT® 2003 available from Arkema Inc, Philadelphia, PA) were then added to the reactor. 52.2 g of 3-isopropenyl-α,α-dimethylbenzyl isocyanate (m-TMI available from Cytec, Stamford, CT) was then slowly added to the reactor over a period of 45 minutes. A slight exotherm was observed which raised the temperature to 80 to 83°C. After the addition, the reactor was held at 80°C for an additional 30 minutes. The final product was a liquid which cooled down to a solid at room temperature.</p>
+    <heading id="h-00018-en">
+      <u>Synthesis of the polymer R7-33-61:</u>
+    </heading>
+    <p id="p-00103-en" num="0103">An initial charge of 38 g of water and 150 g of isopropyl alcohol were added to a 1 liter glass reactor. The reactor contents were heated to reflux (approximately 82 to 84°C). In a separate beaker, 142 g of acrylic acid was warmed to 55°C and then 58.4 g of the Armeen 18D m-TMI monomer was added with stirring. This warm mixture was added to the reactor at reflux over a period of 2.5 hours. A solution of 1.9 g of sodium persulfate dissolved in 61 g of water was simultaneously added but over a period of 2.5 hours. The reaction temperature was maintained at about 85°C for one hour. A scavenge feed containing 0.17 g of sodium persulfate dissolved in 10 g of water was then added to the reactor over 30 minutes and held at temperature for an additional 30 minutes. The reactor was then set up for distillation. A small amount of ANTIFOAM® 1400 (0.12 g) (from Dow Chemical) was added to suppress any foam generated during distillation. The alcohol cosolvent was removed from the polymer solution by azeotropic distillation. During the distillation, about 1080 g of water was added. Approximately, 251 g of a mixture of water and isopropyl alcohol were distilled off. After distillation was completed, the reaction mixture was cooled. The final product had a pH of 2.5 and solids of 15.7 percent.</p>
+    <heading id="h-00019-en">
+      <b>Preparation of hydrophobically-modified polymer R7-36-72</b>
+    </heading>
+    <heading id="h-00020-en">
+      <u>Synthesis of 2-decyl-tetradecanol m-TMI monomer:</u>
+    </heading>
+    <p id="p-00104-en" num="0104">150 g of 2-decyl-tetradecanol (branched alcohol) [Isofol® 24 (97.5%) (available from Sasol, Houston, TX)] was added to a 500 ml reactor and heated to 80°C. The reactor contents were sparged with nitrogen for 4 hours to remove any water in the material. The nitrogen sparge was discontinued and the reaction temperature lowered to 68°C. 0.33 g of monomethyl ether hydroquinone (MEHQ) inhibitor and 0.33 g of Stannous 2-ethylhexanoate (FASCAT 2003 available from Arkema Inc, Philadelphia, PA) were then added to the reactor. 82.5 g of 3-isopropenyl-α,α-dimethylbenzyl isocyanate (m-TMI available from Cytec, Stamford, CT) was then slowly added to the reactor over a period of 30 minutes. A slight exotherm was observed which raised the temperature to 70 to 71 °C. After the addition, the reactor was held at 72°C for an additional 60 minutes. The final product was a liquid.</p>
+    <heading id="h-00021-en">
+      <u>Synthesis of the polymer R7-36-72:</u>
+    </heading>
+    <p id="p-00105-en" num="0105">An initial charge of 43 g of water and 133 g of isopropyl alcohol were added to a 1 liter glass reactor. The reactor contents were heated to reflux (approximately 82 to 84°C). A first monomer solution of 33 g of acrylic acid, 20.11 g of 2-decyl-tetradecanol m-TMI monomer (synthesized above), 9,9 g of isopropyl alcohol and 4.1 g of hydroxypropyl methacrylate was added to the reactor at reflux over a period of 75 minutes. A second monomer solution containing 12.8 grams of 50% 2-acrylamido-2-methyl propane sulfonic acid, sodium salt in 20 g of water was added concurrently over a period of 75 minutes. An initiator solution of 0.97 g of sodium persulfate dissolved in 28.3 g of water was simultaneously added but over a period of 90 minutes. The reaction temperature was maintained at about 85°C for one hour. A scavenge feed containing 0.15 g of sodium persulfate dissolved in 10 g of water was then added to the reactor over 30 minutes and the temperature was held for an additional 30 minutes. The reactor was then set up for distillation and a small amount of ANTIFOAM® 1400 (0.12 g) (from Dow Chemical) was added to suppress any foam generated during distillation. The alcohol cosolvent was removed from the polymer solution by azeotropic distillation. Approximately, 185 g of a mixture of water and isopropyl alcohol were distilled off. During the distillation, about 242 g of water was added to replace the distillate and keep the viscosity at a manageable level. After distillation was completed, the reaction mixture was cooled and 7 g of 50% NaOH in 15 g of water was added. The final product had a pH of 4.2 and solids of 16.9 percent.</p>
+    <heading id="h-00022-en">
+      <b>Preparation of polymer R7-33-158</b>
+    </heading>
+    <p id="p-00106-en" num="0106">An initial charge of 77 g of water and 100 g of isopropanol were added to a 1 liter glass reactor. The reactor contents were heated to 82°C. A first solution which is a mixture of 72.7 g of acrylic acid and 21.6 g of an N-octadecyl acrylamide dissolved in 50 g of isopropanol was added to the reactor over a period of 80 minutes. A second solution of 0.97 g of sodium persulfate dissolved in 46 g of water was simultaneously added at the same time but over a period of 90 minutes. After the second solution addition was completed, a solution of 0.09 g of sodium persulfate dissolved in 14 g of water was then added over a period of 10 minutes. The reactor was then set up for distillation. The alcohol cosolvent was removed from the polymer solution by azeotropic distillation. During the distillation, 450 g of water was dripped in and approximately, 303 g of a mixture of water and alcohol were distilled off. The final product was a clear colorless viscous solution with a pH of 2.6 and a solids content of 19.9%.</p>
+    <heading id="h-00023-en">
+      <b>Preparation of polymer R7-33-28</b>
+    </heading>
+    <p id="p-00107-en" num="0107">An initial charge of 72.9 g of water and 50.9 g of ethanol were added to a 500 ml glass reactor. The reactor contents were heated to reflux (approximately 82 to 84°C). A mixture of 38.1 g of acrylic acid and 5.55 g of lauryl methacrylate was added to the reactor at reflux over a period of 3 hours. A solution of 0.6 g of sodium persulfate dissolved in 32 g of water was simultaneously added but over a period of 4 hours. The reaction temperature was maintained at about 85°C for 30 minutes. The reactor was then set up for distillation. The alcohol cosolvent was removed from the polymer solution by azeotropic distillation. During the distillation, 38.8 g of 50% NaOH dissolved in 70 g of water was dripped in added. Approximately, 99.3 g of a mixture of water and ethanol were distilled off. The final product has 25.25% solid and pH = 7.5.</p>
+    <heading id="h-00024-en">
+      <b>Preparation of Polymer J3-9-46</b>
+    </heading>
+    <p id="p-00108-en" num="0108">An initial charge of 150 g diallyldimethylammonium chloride (65 % Aldrich commercial material further concentrated to 88 % by removal of water), 150 g isopropyl alcohol, and 32.2 g 2-decyl-tetradecanol m-TMI monomer (synthesized above) was added to a 1 liter glass reactor fitted with a condenser for reflux. An initiator feed consisting of Esperox 28 in isopropyl alcohol (16.4 g in a total volume of 100 mL) was prepared. The reaction was maintained in the range of 83 to 87 °C, to allow for reflux of IPA, while the initiator solution was added over a period of 2 hr. Following the initiator slow addition, the reaction was maintained at 83 °C (refluxing IPA) for 2.5 hours. The reaction was cooled below the reflux temperature, and the reactor was then fitted with a Dean-Stark trap to allow for collection and removal of distillate. IPA/water was removed from 81 to 86 °C while the reaction volume was replenished with water from an addition funnel to maintain an acceptable viscosity. Total distillate collection up to this point was 194 g, while the added water was 350 g. Because of intense foaming, 195 g additional water was added to the reaction, and the reaction mixture was then transferred to a Roto-Vap apparatus, where an additional 110 g of distillate was removed under vacuum at 55 °C. The weight of the final material after being subjected to distillation was 690 g. This was a pink-tinted, lightly cloudy liquid with a pH of 4 and consisting of 23 % active polymer by weight. <tables id="tables-00002-en" num="0002"><table frame="all"><title><b>Table 1: Analysis of the hydrophobically modified polymers compared with the conventional POLYFLOS<sup>®</sup> HM 21.</b></title><tgroup cols="7"><colspec colnum="1" colname="col1" colwidth="21mm" /><colspec colnum="2" colname="col2" colwidth="23mm" /><colspec colnum="3" colname="col3" colwidth="23mm" /><colspec colnum="4" colname="col4" colwidth="23mm" /><colspec colnum="5" colname="col5" colwidth="23mm" /><colspec colnum="6" colname="col6" colwidth="25mm" /><colspec colnum="7" colname="col7" colwidth="29mm" /><thead><row><entry valign="top" /><entry valign="top"><b>R7-33-43</b></entry><entry valign="top"><b>R7-33-61</b></entry><entry valign="top"><b>R7-36-72</b></entry><entry valign="top"><b>R7-33-28</b></entry><entry valign="top"><b>R7-33-158</b></entry><entry valign="top"><b>POLYFLOS</b><sup>®</sup><b>HM 21</b></entry></row></thead><tbody><row><entry><b>M<sub>w</sub> (Da)</b></entry><entry>16131</entry><entry>19775</entry><entry>8459</entry><entry>29956</entry><entry>19528</entry><entry>537550</entry></row><row><entry><b>M<sub>n</sub> (Da)</b></entry><entry>2735</entry><entry>3199</entry><entry>1488</entry><entry>4095</entry><entry>2750</entry><entry>13641</entry></row><row><entry><b>Dispersity = M<sub>w</sub>/M<sub>n</sub></b></entry><entry>5.9</entry><entry>6.2</entry><entry>5.7</entry><entry>7.3</entry><entry>7.1</entry><entry>39.4</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00025-en">
+      <b>Example 1 and Comparative examples A-B:</b> Rheology of Aromox APA-TW and hydrophobically modified polymer R7-33-43</heading>
+    <p id="p-00109-en" num="0109">Samples A, B, and 1 were made based on the amount shown in Table 2. <tables id="tables-00003-en" num="0003"><table frame="all"><title><b>Table 2: Sample Preparation of Aromox APA-TW + R7-33-43</b></title><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="11mm" /><colspec colnum="2" colname="col2" colwidth="62mm" /><colspec colnum="3" colname="col3" colwidth="18mm" /><colspec colnum="4" colname="col4" colwidth="32mm" /><colspec colnum="5" colname="col5" colwidth="31mm" /><colspec colnum="6" colname="col6" colwidth="14mm" /><thead><row><entry valign="middle"><b>Ex.</b></entry><entry valign="middle"><b>Description</b></entry><entry valign="middle"><b>Wt of Polymer (g)</b></entry><entry valign="middle"><b>Wt. of Aromox APA-TW</b> (<b>g</b>)</entry><entry valign="middle"><b>Wt of 4% KCl Solution (g)</b></entry><entry valign="middle"><b>pH</b></entry></row></thead><tbody><row><entry valign="middle">A</entry><entry valign="middle">3wt% (active) Aromox APA-TW, no polymer, in 4% KCl</entry><entry valign="middle">None</entry><entry valign="middle">2.1270</entry><entry valign="middle">27.9093</entry><entry valign="middle">9.72</entry></row><row><entry valign="middle">B</entry><entry valign="middle">0.2wt% (active) R7-33-43, no surfactant, in 4% KCI</entry><entry valign="middle">0.4956</entry><entry valign="middle">None</entry><entry valign="middle">29.7272</entry><entry valign="middle">11.56</entry></row><row><entry valign="middle">1</entry><entry valign="middle">3wt% (active) Aromox APA-TW + 0.2wt% (active) R7-33-43, in 4% KCI</entry><entry valign="middle">0.4502</entry><entry valign="middle">2.0939</entry><entry valign="middle">27.5104</entry><entry valign="middle">10.30</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00110-en" num="0110">For samples A, B and 1, a strain-controlled rheometer ARES (from Rheometric Scientific, which is now TA Instruments) was used to conduct the Steady Strain Rate Sweep at 25°C, with an initial strain rate of 0.01 s<sup>-1</sup> and a final strain rate of 100 s<sup>-1</sup>. Data was collected, 10 data points per strain rate decade. Parallel plates of diameter of 25 mm were used, and temperature was controlled by peltier heating.</p>
+    <p id="p-00111-en" num="0111">The rheology profile is graphed in <figref>Figure 1</figref>. Clearly sample 1 shows significantly higher viscosity than sample A and sample B, indicating a synergistic viscosity increase achieved by combination of Aromox APA-TW and R7-33-43 polymer (a polymer with a urethane linkage) in 4% KCI. The same synergistic viscosity increase was also found at 50°C and at 80°C.</p>
+    <p id="p-00112-en" num="0112">In a separate rheology test at 25°C, a dynamic frequency of 10<sup>-1</sup> to 10<sup>2</sup> rad/s was used and for the solution of Example 1 G' was higher than G" over the whole range, indicating the solution showed viscoelastic behavior.</p>
+    <heading id="h-00026-en">
+      <b>Example 2 and Comparative examples C-D</b> Rheology of Aromox APA-TW and hydrophobically modified polymer R7-33-61</heading>
+    <p id="p-00113-en" num="0113">Samples C, D, and 2 were made based on the amount shown in Table 3. <tables id="tables-00004-en" num="0004"><table frame="all"><title><b>Table 3: Sample Preparation of Aromox APA-TW + R7-33-61</b></title><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="11mm" /><colspec colnum="2" colname="col2" colwidth="62mm" /><colspec colnum="3" colname="col3" colwidth="18mm" /><colspec colnum="4" colname="col4" colwidth="32mm" /><colspec colnum="5" colname="col5" colwidth="31mm" /><colspec colnum="6" colname="col6" colwidth="14mm" /><thead><row><entry valign="top"><b>Ex.</b></entry><entry valign="middle"><b>Description</b></entry><entry valign="middle"><b>Wt of Polymer (g)</b></entry><entry valign="middle"><b>Wt</b>. <b>of Aromox APA-TW</b> (<b>g</b>)</entry><entry valign="middle"><b>Wt of 4% KCl Solution</b> (<b>g</b>)</entry><entry valign="middle"><b>pH</b></entry></row></thead><tbody><row><entry>C</entry><entry valign="middle">3wt% (active) Aromox APA-TW, no polymer, in 4% KCl</entry><entry valign="middle">None</entry><entry valign="middle">2.1270</entry><entry valign="middle">27.9093</entry><entry valign="middle">9.72</entry></row><row><entry>D</entry><entry valign="middle">0.2wt% (active) R7-33-61, no surfactant, in 4% KCI</entry><entry valign="middle">0.3992</entry><entry valign="middle">None</entry><entry valign="middle">29.6257</entry><entry valign="middle">11.25</entry></row><row><entry>2</entry><entry valign="middle">3wt% (active) Aromox APA-TW + 0.2wt% (active) R7-33-61, in 4% KCI</entry><entry valign="middle">0.3834</entry><entry valign="middle">2.0971</entry><entry valign="middle">27.5424</entry><entry valign="middle">10.00</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00114-en" num="0114">For samples C, D and 2, a strain-controlled rheometer ARES (from Rheometric Scientific, which is now TA Instruments) was used to conduct the Steady Strain Rate Sweep at 25°C, with an initial strain rate of 0.01 s<sup>-1</sup> and a final strain rate of 100 s<sup>-1</sup>. Data was collected, 10 data points per strain rate decade. Parallel plates of diameter of 25 mm were used, and temperature was controlled by peltier heating.</p>
+    <p id="p-00115-en" num="0115">The rheology profile is graphed in <figref>Figure 2</figref>. Again, sample 2 shows significantly higher viscosity than sample C and sample D, indicating a synergistic viscosity increase achieved by combination of Aromox APA-TW and R7-33-61 polymer (a polymer with a urea linkage) in 4% KCI. The same synergistic viscosity increase was also found at 50°C and at 80°C</p>
+    <p id="p-00116-en" num="0116">In a separate rheology test at 25°C, a dynamic frequency of 10<sup>-1</sup> to 10<sup>2</sup> rad/s was used and for the solution of Example 2 G' was higher than G" over the whole range, indicating the solution showed viscoelastic behavior.</p>
+    <p id="p-00117-en" num="0117">
+      <b>Comparative examples E and F:</b> Rheology of Aromox® APA-TW and POLYFLOS® HM 21. Formulations were as shown in Table 4. <tables id="tables-00005-en" num="0005"><table frame="all"><title><b>Table 4: Sample Preparation of Aromox APA-TW + POLYFLOS<sup>®</sup> HM 21</b></title><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="11mm" /><colspec colnum="2" colname="col2" colwidth="65mm" /><colspec colnum="3" colname="col3" colwidth="18mm" /><colspec colnum="4" colname="col4" colwidth="31mm" /><colspec colnum="5" colname="col5" colwidth="29mm" /><colspec colnum="6" colname="col6" colwidth="14mm" /><thead><row><entry valign="middle"><b>Ex.</b></entry><entry valign="middle"><b>Description</b></entry><entry valign="middle"><b>Wt of Polymer (g)</b></entry><entry valign="middle"><b>Wt. of Aromox APA-TW (g)</b></entry><entry valign="middle"><b>Wt of 4% KCl Solution (g)</b></entry><entry valign="middle"><b>pH</b></entry></row></thead><tbody><row><entry valign="middle">E</entry><entry valign="middle">3wt% (active) Aromox APA-TW, no polymer, 4% KCI</entry><entry valign="middle">None</entry><entry valign="middle">2.1000</entry><entry valign="middle">27.9326</entry><entry valign="middle">11.27</entry></row><row><entry valign="middle">F</entry><entry valign="middle">3wt% (active) Aromox APA-TW + 0.2wt% (active) POLYFLOS<sup>®</sup> HM 21 in 4% KCI</entry><entry valign="middle">0.0774</entry><entry valign="middle">2.0985</entry><entry valign="middle">27.8268</entry><entry valign="middle">11.81</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00118-en" num="0118">The rheology profile is graphed in <figref>Figure 3</figref>. The result show that samples E and F overlay very well with each other, indicating no rheological synergy upon combination of POLYFLOS<sup>®</sup> HM 21 with Aromox APA-TW in 4% KCl.</p>
+    <p id="p-00119-en" num="0119">It is pointed out that the polymer in accordance with the invention (R7-33-43 of Example 1) has a much lower molecular weight than the conventional thickener POLYFLOS<sup>®</sup> HM 21 of the Comparative example F, see the Table 1 above. Hence it is surprising to see that the use of conventional hydrophobic polymers does not lead to the viscosities observed when using polymers of the invention.</p>
+    <heading id="h-00027-en">
+      <b>Examples 3 and 4 and Comparative example G - Rheology of Aromox APA-TW, polymer R7-33-43 and polymer R7-33-61.</b>
+    </heading>
+    <p id="p-00120-en" num="0120">Here the performance of an amine-oxide viscoelastic surfactant in combination with the hydrophobically modified polymers R7-33-43 and R7-33-61 was investigated for an aqueous environment containing 4% KCI at elevated temperature (93°C (200°F)) and at an elevated pressure (27.5 bar (400psi)), to mimic oil-well-stimulation conditions. The amounts of surfactant and polymer used as well as the results obtained are presented in the following Table 5, with the viscosity being determined after two hours at shear rate of 100 s<sup>-1</sup>, using a Grace M5600 rheometer at said pressure and temperature with rotor R1 and bob B5. <tables id="tables-00006-en" num="0006"><table frame="all"><title><b><u>Table 5 - Sample preparation of samples G, 3 and 4</u></b></title><tgroup cols="7"><colspec colnum="1" colname="col1" colwidth="11mm" /><colspec colnum="2" colname="col2" colwidth="49mm" /><colspec colnum="3" colname="col3" colwidth="18mm" /><colspec colnum="4" colname="col4" colwidth="29mm" /><colspec colnum="5" colname="col5" colwidth="20mm" /><colspec colnum="6" colname="col6" colwidth="14mm" /><colspec colnum="7" colname="col7" colwidth="27mm" /><thead><row><entry valign="middle"><b>Ex.</b></entry><entry valign="middle"><b>Description</b></entry><entry valign="middle"><b>Wt of Polymer (g)</b></entry><entry valign="middle"><b>Wt. of Aromox APA-TW (g)</b></entry><entry valign="middle"><b>Wt of KCl solution (g)</b></entry><entry valign="middle"><b>pH</b></entry><entry valign="middle"><b>HTHP Viscosity at 93°C/2hr (mPa-s)</b></entry></row></thead><tbody><row><entry valign="middle">G</entry><entry valign="middle">3wt% (active) Aromox APA-TW, no polymer, in 4% KCl</entry><entry valign="middle">0.0000</entry><entry valign="middle">6.9683</entry><entry valign="middle">93.0322</entry><entry valign="middle">10.58</entry><entry valign="middle">12.49</entry></row><row><entry valign="middle">3</entry><entry valign="middle">3wt% (active) Aromox APA-TW + 0.2wt% (active) R7-33-43, in 4% KCl</entry><entry valign="middle">1.5275</entry><entry valign="middle">7.1534</entry><entry valign="middle">91.5231</entry><entry valign="middle">11.72</entry><entry valign="middle">210.84</entry></row><row><entry valign="middle">4</entry><entry valign="middle">3wt% (active) Aromox APA-TW + 0.2wt% (active) R7-33-61, in 4% KCl</entry><entry valign="middle">1.2661</entry><entry valign="middle">6.9709</entry><entry valign="middle">91.7554</entry><entry valign="middle">10.68</entry><entry valign="middle">82.35</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00121-en" num="0121">Clearly, also in a KCl-containing aqueous formulation and at high temperature and pressure, the combination of viscoelastic surfactant and hydrophobically modified polymer according to the invention gave a very high viscosity, even when polymer used in a small amount and despite the low molecular weight of the polymer.</p>
+    <heading id="h-00028-en">
+      <b>Example 5 and Comparative examples H and I - Rheology of Aromox APA-TW and polymer R-36-72</b>
+    </heading>
+    <p id="p-00122-en" num="0122">Here, the performance of an amine-oxide viscoelastic surfactant in combination with hydrophobically modified polymer R7-36-72 was investigated for an aqueous environment containing 4%w/w KCl and an amount of CaCl<sub>2</sub> of 2,776 ppm (0.2776 %w/w) at 25°C. The amounts of surfactant and polymer used as well as the results obtained are presented in the Table 6. <tables id="tables-00007-en" num="0007"><table frame="all"><title><b>Table 6 - Sample preparation of samples H, I and 5</b></title><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="11mm" /><colspec colnum="2" colname="col2" colwidth="70mm" /><colspec colnum="3" colname="col3" colwidth="21mm" /><colspec colnum="4" colname="col4" colwidth="32mm" /><colspec colnum="5" colname="col5" colwidth="20mm" /><colspec colnum="6" colname="col6" colwidth="14mm" /><thead><row><entry valign="middle"><b>Ex.</b></entry><entry valign="middle"><b>Description</b></entry><entry valign="middle"><b>Wt. of Polymer (g)</b></entry><entry valign="middle"><b>Wt. of Aromox APA-TW (g)</b></entry><entry valign="middle"><b>Wt. of 4% KCl (g)</b></entry><entry valign="middle"><b>pH</b></entry></row></thead><tbody><row><entry valign="middle">H</entry><entry valign="middle">3wt% (active) Aromox APA-TW, no polymer, in brine of CaCl<sub>2</sub>/KCl</entry><entry valign="middle">0.0000</entry><entry valign="middle">2.0852</entry><entry valign="middle">27.9146</entry><entry valign="middle">10.91</entry></row><row><entry valign="middle">I</entry><entry valign="middle">0.2wt% (active) R7-36-72, no Aromox APA-TW, in brine of CaCl<sub>2</sub>/KCl</entry><entry valign="middle">0.3714</entry><entry valign="middle">0.0000</entry><entry valign="middle">29.6453</entry><entry valign="middle">10.26</entry></row><row><entry valign="middle">5</entry><entry valign="middle">3wt% (active) Aromox APA-TW + 0.2wt% (active) R7-36-72, in brine of CaCl<sub>2</sub>/KCl</entry><entry valign="middle">0.3857</entry><entry valign="middle">2.1083</entry><entry valign="middle">27.5273</entry><entry valign="middle">10.06</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00123-en" num="0123">The combination in accordance with the invention gave a higher viscosity than the use of the surfactant or polymer alone, showing the synergistic behavior, despite the low molecular weight of the polymer and the small quantity in which it was used, as is demonstrated in <figref>Figure 4</figref>. Polymer R7-36-72 contained AMPS monomer that provided tolerance to Calcium brine.</p>
+    <heading id="h-00029-en">
+      <b>Example 6 and Comparative example J - Rheology of Aromox APA-TW and polymer R-33-43 with EDTA</b>
+    </heading>
+    <p id="p-00124-en" num="0124">In these examples the experiment of Example 5 was repeated, except that hydrophobically modified polymer R7-33-43 was used, while also using the well-known chelate EDTA (Dissolvine NA) in the composition. Samples 6 and J were prepared according to the amount shown in Table 7. <tables id="tables-00008-en" num="0008"><table frame="all"><title><b>Table 7 - sample preparation, samples 6 and J</b></title><tgroup cols="7"><colspec colnum="1" colname="col1" colwidth="11mm" /><colspec colnum="2" colname="col2" colwidth="51mm" /><colspec colnum="3" colname="col3" colwidth="26mm" /><colspec colnum="4" colname="col4" colwidth="22mm" /><colspec colnum="5" colname="col5" colwidth="30mm" /><colspec colnum="6" colname="col6" colwidth="17mm" /><colspec colnum="7" colname="col7" colwidth="12mm" /><thead><row><entry valign="middle"><b>Ex.</b></entry><entry valign="middle"><b>Description</b></entry><entry valign="middle"><b>Wt. of Polymer R7-33-43 (g)</b></entry><entry valign="middle"><b>Wt. of Aromox APA-TW (g)</b></entry><entry valign="middle"><b>Wt. of Dissolvine NA (EDTA) (g)</b></entry><entry valign="middle"><b>Wt. of Brine (g)</b></entry><entry valign="middle"><b>pH</b></entry></row></thead><tbody><row><entry valign="middle">J</entry><entry valign="middle">3wt% (active) Aromox APA-TW + EDTA, no polymer, in brine of CaCl<sub>2</sub>/KCl</entry><entry valign="middle">0.0000</entry><entry valign="middle">2.0917</entry><entry valign="middle">0.3356</entry><entry valign="middle">27.5758</entry><entry valign="middle">9.93</entry></row><row><entry valign="middle">6</entry><entry valign="middle">3wt% (active) Aromox APA-TW + 0.2wt% (active) R7-33-43 + EDTA, in brine of CaCl<sub>2</sub>/KCl</entry><entry valign="middle">0.4624</entry><entry valign="middle">2.0940</entry><entry valign="middle">0.3320</entry><entry valign="middle">27.1467</entry><entry valign="middle">9.80</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00125-en" num="0125">
+      <figref>Figure 5</figref> shows the viscosity of these formulations. The results show that the combination of viscoelastic surfactant and low molecular weight hydrophobically modified polymer gives exceptionally high viscosity at low concentrations also in the presence of a chelate.</p>
+    <heading id="h-00030-en">
+      <b>Example 7 and comparative example K - Rheology of Aromox APA-TW and polymer R7-33-158</b>
+    </heading>
+    <p id="p-00126-en" num="0126">Samples 7 and K were prepared according to the amounts indicated in Table 8 <tables id="tables-00009-en" num="0009"><table frame="all"><title><b>Table 8 - Preparation of samples 7 and K</b></title><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="11mm" /><colspec colnum="2" colname="col2" colwidth="54mm" /><colspec colnum="3" colname="col3" colwidth="35mm" /><colspec colnum="4" colname="col4" colwidth="32mm" /><colspec colnum="5" colname="col5" colwidth="22mm" /><colspec colnum="6" colname="col6" colwidth="14mm" /><thead><row><entry valign="top"><b>Ex.</b></entry><entry valign="top"><b>Description</b></entry><entry valign="top"><b>Wt</b>. <b>of Polymer R7-33-158 (g)</b></entry><entry valign="top"><b>Wt. of Aromox APA-TW (g)</b></entry><entry valign="top"><b>Wt. of 4% KCl (g)</b></entry><entry valign="top"><b>pH</b></entry></row></thead><tbody><row><entry>K</entry><entry>3wt% (active) Aromox APA-TW, no polymer, in 4% KCl</entry><entry>0.0000</entry><entry>2.1270</entry><entry>27.9093</entry><entry>9.72</entry></row><row><entry>7</entry><entry>3wt% (active) Aromox APA-TW + 0.2wt% R7-33-158, in 4% KCl</entry><entry>0.3026</entry><entry>2.1022</entry><entry>27.6135</entry><entry>12.06</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00127-en" num="0127">For sample K, a strain-controlled rheometer ARES (from Rheometric Scientific, which is now TA Instruments) was used to conduct the Steady Strain Rate Sweep at 25°C, with an initial strain rate of 0.01 s<sup>-1</sup> and a final strain rate of 100 s<sup>-1</sup>. Data was collected, 10 data points per strain rate decade. Parallel plates of diameter of 25 mm were used, and temperature was controlled by peltier heating.</p>
+    <p id="p-00128-en" num="0128">
+      <figref>Figure 6</figref> shows the viscosity of these samples. One can see from the overlap rheology profiles that the viscosity of sample 7 is higher than that of sample K in the shear rate range tested. The blend of Aromox APA-TW and polymer R7-33-158 (a polymer with an amide linkage between the pendant hydrophobe and the backbone) has higher viscosity than Aromox APA-TW alone.</p>
+    <heading id="h-00031-en">
+      <b>Comparative Examples L and M - Rheology of Aromox APA-TW and polymer R7-33-28</b>
+    </heading>
+    <p id="p-00129-en" num="0129">Samples L and M was prepared according to the amounts indicated in Table 9. <tables id="tables-00010-en" num="0010"><table frame="all"><title><b>Table 9 - Preparation of samples L and M</b></title><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="10mm" /><colspec colnum="2" colname="col2" colwidth="56mm" /><colspec colnum="3" colname="col3" colwidth="35mm" /><colspec colnum="4" colname="col4" colwidth="32mm" /><colspec colnum="5" colname="col5" colwidth="24mm" /><colspec colnum="6" colname="col6" colwidth="12mm" /><thead><row><entry valign="top"><b>Ex</b> #</entry><entry valign="top"><b>Description</b></entry><entry valign="top"><b>Wt</b>. <b>of Polymer R7-33-28, (g)</b></entry><entry valign="top"><b>Wt</b>. <b>of Aromox APA-TW (g)</b></entry><entry valign="top"><b>Wt. of 4% KCl (g)</b></entry><entry valign="top"><b>pH</b></entry></row></thead><tbody><row><entry>L</entry><entry>3wt% (active) Aromox APA-TW, no polymer, in 4% KCl</entry><entry>0.0000</entry><entry>2.1270</entry><entry>27.9093</entry><entry>9.72</entry></row><row><entry>M</entry><entry>3wt% (active) APA-TW + 0.2wt% (active) R7-33-28, in 4% KCI</entry><entry>0.2335</entry><entry>2.1150</entry><entry>27.6778</entry><entry>8.71</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00130-en" num="0130">For samples L and M, a strain-controlled rheometer ARES (from Rheometric Scientific, which is now TA Instruments) was used to conduct the Steady Strain Rate Sweep at 25°C, with an initial strain rate of 0.01 s<sup>-1</sup> and a final strain rate of 100 s<sup>-1</sup>. Data was collected, 10 data points per strain rate decade. Parallel plates of diameter of 25 mm were used, and temperature was controlled by peltier heating.</p>
+    <p id="p-00131-en" num="0131">
+      <figref>Figure 7</figref> shows the viscosity of these samples. One can see from the overlap rheology profiles that the viscosity of sample M is lower than that of sample L. The blend of Aromox APA-TW and polymer R7-33-28 (a polymer with an ester linkage between the pendant hydrophobe and the backbone) has lower viscosity than Aromox APA-TW alone. In this case, blending VES and polymer showed a "negative" rheology synergy.</p>
+    <heading id="h-00032-en">
+      <b>Example 8 and comparative example N - Viscoelasticity of Aromox APA-TW and polymer R7-33-43</b>
+    </heading>
+    <p id="p-00132-en" num="0132">Samples 8 and N was prepared according to the amounts indicated in the following Table 10. <tables id="tables-00011-en" num="0011"><table frame="all"><title><b>Table 10 - preparation of samples 8 and N</b></title><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="10mm" /><colspec colnum="2" colname="col2" colwidth="68mm" /><colspec colnum="3" colname="col3" colwidth="23mm" /><colspec colnum="4" colname="col4" colwidth="32mm" /><colspec colnum="5" colname="col5" colwidth="22mm" /><colspec colnum="6" colname="col6" colwidth="14mm" /><thead><row><entry valign="top"><b>Ex</b> #</entry><entry valign="top"><b>Description</b></entry><entry valign="top"><b>Wt</b>. <b>of Polymer (g)</b></entry><entry valign="top"><b>Wt</b>. <b>of Aromox APA-TW (g)</b></entry><entry valign="top"><b>Wt. of 4% KCl (g)</b></entry><entry valign="top"><b>pH</b></entry></row></thead><tbody><row><entry>N</entry><entry>3wt% (active) Aromox APA-TW, no polymer, in 4% KCI</entry><entry>0.0000</entry><entry>2.1100</entry><entry>27.9126</entry><entry>10.17</entry></row><row><entry>8</entry><entry>3wt% (active) Aromox APA-TW + 0.2wt% (active) R7-33-43, in 4% KCI</entry><entry>0.4585</entry><entry>2.0974</entry><entry>27.4362</entry><entry>9.26</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00133-en" num="0133">Dynamic Frequency Sweep was tested using a stress-controlled rheometer SR-5000 (originally made by Rheometrics) at 25°C, with initial frequency of 0.01 rad/s and final frequency of 100 rad/s, and stress = 1 Pa. Parallel plates of diameter of 40 mm were used, and temperature was controlled by peltier heating. 10 data points were collected within each decade of frequency. The results are shown in <figref>Figures 8</figref> and <figref>9</figref></p>
+    <p id="p-00134-en" num="0134">From <figref>Figure 8</figref>, one can see the significant difference of the G' and G" profile between the two samples. Sample N had no polymer, and its G', G" crossover frequency was roughly 3 rad/s. The sample showed viscoelasticity, or G' &gt; G", only at frequencies that are higher than 3 rad/s. Sample 8 was the blend of Aromox APA-TW and polymer R7-33-43, and its G', G" crossover frequency was roughly 0.02 rad/s. The sample showed viscoelasticity, or G' &gt; G", at frequencies that are higher than 0.02 rad/s. Therefore, the VES-polymer blend showed much wider frequency range where viscoelastcity was demonstrated.</p>
+    <p id="p-00135-en" num="0135">From <figref>Figure 9</figref>, one can see the significant difference in the phase angle between these two samples. Sample N had no polymer, and its phase angle is mostly higher than 45 degrees. Its phase angle was only below 45 degrees at frequency higher than 3 rad/s, indicating that it only has viscoelastic characteristics at frequencies higher than 3 rad/s. Sample 8 was the blend of Aromox APA-TW and polymer R7-33-43, and its phase angle was below 45 degrees at frequencies higher than 0.02 rad/s. This is another data to support that the VES-polymer blend is more viscoelastic than VES alone.</p>
+    <heading id="h-00033-en">
+      <b>Example 9 and comparative example O - Viscoelasticity of Aromox APA-TW and polymer J3-9-46.</b>
+    </heading>
+    <p id="p-00136-en" num="0136">Samples 9 and O were prepared according to the amounts indicated in the following Table 11. <tables id="tables-00012-en" num="0012"><table frame="all"><title><b>Table 11 - Preparation of samples 9 and O</b></title><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="11mm" /><colspec colnum="2" colname="col2" colwidth="62mm" /><colspec colnum="3" colname="col3" colwidth="18mm" /><colspec colnum="4" colname="col4" colwidth="31mm" /><colspec colnum="5" colname="col5" colwidth="25mm" /><colspec colnum="6" colname="col6" colwidth="21mm" /><thead><row><entry valign="top"><b>Ex.</b></entry><entry valign="top"><b>Description</b></entry><entry valign="top"><b>Wt</b>. <b>of Polymer (g)</b></entry><entry valign="top"><b>Wt</b>. <b>of Aromox APA-TW (g)</b></entry><entry valign="top"><b>Wt. of 4% KCl (g)</b></entry><entry valign="top"><b>pH Measured</b></entry></row></thead><tbody><row><entry>O</entry><entry>3wt% (active) Aromox APA-TW, no polymer, in 4% KCl</entry><entry>0.0000</entry><entry>2.1270</entry><entry>27.9093</entry><entry>9.72</entry></row><row><entry>9</entry><entry>3wt% (active) Aromox APA-TW + 0.2% (active) J3-9-46, in 4% KCI</entry><entry>0.4505</entry><entry>3.5028</entry><entry>46.0249</entry><entry>7.75</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00137-en" num="0137">For sample O, a strain-controlled rheometer ARES (from Rheometric Scientific, which is now TA Instruments) was used to conduct the Steady Strain Rate Sweep at 25°C, with an initial strain rate of 0.01 s<sup>-1</sup> and a final strain rate of 100 s<sup>-1</sup>. Data was collected, 10 data points per strain rate decade. Parallel plates of diameter of 25 mm were used, and temperature was controlled by peltier heating.</p>
+    <p id="p-00138-en" num="0138">
+      <figref>Figure 10</figref> shows the results from these experiments. For sample O, a strain-controlled rheometer ARES (from Rheometrics, which is now TA Instrument) was used to conduct the Steady Strain Rate Sweep at 25°C, with an initial strain rate of 0.01 s<sup>-1</sup> and a final strain rate of 100 s<sup>-1</sup>. Data was collected, 10 data points per strain rate decade. Parallel plates of diameter of 25 mm were used, and temperature was controlled by peltier heating. For sample 9, a stress-controlled rheometer SR-5000 (from Rheometrics, which is now TA Instrument) was used to conduct the Steady Stress Sweep at 25°C, with an initial stress of 0.1 Pa, a final stress of 40 Pa, and a linear stress increment of 0.5 Pa. Parallel plates of diameter of 40 mm were used, and temperature was controlled by peltier heating.</p>
+    <p id="p-00139-en" num="0139">One can see from the overlap rheology profiles that the viscosity of sample 9 is higher than that of sample O in the shear rate range tested. The blend of Aromox APA-TW and polymer J3-9-46 (a cationic hydrophobically modified polymer) has higher viscosity than Aromox APA-TW alone.</p>
+    <heading id="h-00034-en">
+      <b>Example 10: Anionic/Betaine Surfactant-Polymer Dilution Experiments</b>
+    </heading>
+    <p id="p-00140-en" num="0140">Sodium lauryl ether sulfate and cocamidopropyl betaine were chosen as exemplary surfactants. They were used in a constant ratio to each other of 4:1 respectively. A series of eight dilution experiments were conducted. The compositions of the two series of experiments are found in Table 12 shown below. Sodium Chloride was the salt used in all the samples in Example 10. The first four dilution experiments (labeled 1-4) represent "no polymer controls". The latter four dilution experiments (labeled 5-8) contain different levels of a polymer R7-36-72 of the current invention. Columns A-D represent fixed levels of surfactant (column A for 15% surfactant, B for 10% surfactant, C for 7.5% surfactant, and D for 6% surfactant). In Table 13, the zero shear viscosities are shown to correlate with the dilution experiments described in Table 12. <tables id="tables-00013-en" num="0013"><img id="img-00012-en" wi="155" he="192" img-content="table" file="EP2940095A1_00019.PNG" img-format="png" original="imgb0012.tif" /></tables><tables id="tables-00014-en" num="0014"><table frame="all"><title><b>Table 13</b></title><tgroup cols="5"><colspec colnum="1" colname="col1" colwidth="26mm" /><colspec colnum="2" colname="col2" colwidth="17mm" /><colspec colnum="3" colname="col3" colwidth="17mm" /><colspec colnum="4" colname="col4" colwidth="17mm" /><colspec colnum="5" colname="col5" colwidth="17mm" /><thead><row><entry namest="col1" nameend="col5" align="left" valign="top"><b><i>Zero Shear Viscosity (Pa-s) - Surfactant</i> + <i>Polymer R7-36-72</i></b></entry></row><row><entry valign="top"><i><b>Experiment</b> #</i></entry><entry valign="top"><b><i>A</i></b></entry><entry valign="top"><b><i>B</i></b></entry><entry valign="top"><b><i>C</i></b></entry><entry valign="top"><b><i>D</i></b></entry></row></thead><tbody><row><entry><i>1</i></entry><entry><i>0.004</i></entry><entry><i>54</i></entry><entry><i>115</i></entry><entry><i>16</i></entry></row><row><entry><i>2</i></entry><entry><i>6</i></entry><entry><i>173</i></entry><entry><i>31</i></entry><entry><i>0.4</i></entry></row><row><entry><i>3</i></entry><entry><i>130</i></entry><entry><i>157</i></entry><entry><i>0.7</i></entry><entry><i>0.007</i></entry></row><row><entry><i>4</i></entry><entry><i>0.001</i></entry><entry><i>0.001</i></entry><entry><i>0.001</i></entry><entry><i>0.001</i></entry></row><row><entry><i>5</i></entry><entry><i>0.7</i></entry><entry><i>22</i></entry><entry><i>170</i></entry><entry><i>58</i></entry></row><row><entry><i>6</i></entry><entry><i>1.3</i></entry><entry><i>188</i></entry><entry><i>138</i></entry><entry><i>1.7</i></entry></row><row><entry><i>7</i></entry><entry><i>31</i></entry><entry><i>492</i></entry><entry><i>5.4</i></entry><entry><i>0.001</i></entry></row><row><entry><i>8</i></entry><entry><i>209</i></entry><entry><i>17</i></entry><entry><i>0.001</i></entry><entry><i>0.001</i></entry></row></tbody></tgroup></table></tables> Comparisons to determine influence of polymer at different salt levels can be made between the dilution experiment pairs of 1 and 5, 2 and 6, 3 and 7, and 4 and 8.</p>
+    <heading id="h-00035-en">
+      <u>Zero Shear Viscosity</u>
+    </heading>
+    <p id="p-00141-en" num="0141">Zero shear viscosities were obtained from either a plot of viscosity vs. shear rate or fitting the data to Cross model. Viscosities were measured using a stress-controlled rheometer SR-5000 (from Rheometric Scientific, which is now TA Instruments)a stress controlled rheometer utilizing a 25 mm diameter parallel plate configuration and 1 mm gap. Steady state stress sweep measurements were carried out at 25 <sup>0</sup>C a data at different shear rate were obtained.</p>
+    <p id="p-00142-en" num="0142">The zero shear viscosity was obtained by averaging the values at the viscosity plateau at the lower end of the shear rate range. For cases when the value does not reach plateau, the data was fitted to the Cross model. The fitting was carried out using the solver module of the MS Excel and setting the criterion to minimize the sum of the percentage differences between the observed and fitted data. According to the Cross model viscosity is related to shear rate by the following equation: <maths id="maths-00001-en" num=""><math display="block"><mrow><mi>η</mi><mo>=</mo><msub><mi>η</mi><mi>∞</mi></msub><mo>+</mo><mfrac><mrow><msub><mrow><mi>η</mi></mrow><mrow><mn>0</mn></mrow></msub><mo>-</mo><msub><mi>η</mi><mi>∞</mi></msub></mrow><mrow><mn>1</mn><mo>+</mo><msup><mfenced separators=""><mi>C</mi><mo>⁢</mo><mover><mrow><mrow><mi>γ</mi></mrow></mrow><mrow><mo>˙</mo></mrow></mover></mfenced><mrow><mi>m</mi></mrow></msup></mrow></mfrac></mrow></math><img id="img-00013-en" wi="41" he="11" img-content="math" file="imgb0013.tif" img-format="tif" /></maths> n<sub>0</sub> = zero shear viscosity, η<sub>∞</sub> = viscosity at very high rate, <i>ý</i> = □shear rate, <i>C</i> and <i>m</i> are constants. <tables id="tables-00015-en" num="0015"><table frame="none"><title>Calculated variables of Cross model</title><tgroup cols="2" colsep="0" rowsep="0"><colspec colnum="1" colname="col1" colwidth="26mm" /><colspec colnum="2" colname="col2" colwidth="28mm" /><tbody><row><entry>η<sub>0</sub></entry><entry>0.41 Pa-s</entry></row><row><entry>η<sub>∞</sub></entry><entry>0.0404 Pa-s</entry></row><row><entry><i>C</i></entry><entry>0.01</entry></row><row><entry><i>m</i></entry><entry>0.97</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00143-en" num="0143">The plot in <figref>Figure 11</figref> displays the results of zero shear viscosity vs. % salt for the 8 dilution experiments from example 10. In this case, experiments #5-8 relate to experiments employing R7-36-72 as the polymer of the present invention.</p>
+    <p id="p-00144-en" num="0144">These data demonstrate that R7-36-72 can effectively increase the zero shear viscosity for the sodium lauryl ether sulfate/cocamidopropyl betaine mixture over all surfactant levels to levels higher than can be achieved without polymer. Additionally, it can generally be seen that the peak viscosity of the system can be achieved with lower salt levels than in the absence of the polymer of the present invention. Furthermore, it can be observed that the zero shear viscosity of a high surfactant containing system can be achieved at substantially lower surfactant content by the addition of the polymer of the present invention with the appropriate level of salt.</p>
+    <p id="p-00145-en" num="0145">The peak viscosity achieved for each surfactant level is provided in Table 14 below. Peak viscosity refers to the highest viscosity achieved over the entire salt range that was tested. <tables id="tables-00016-en" num="0016"><table frame="all"><title><b>Table 14</b></title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="62mm" /><colspec colnum="2" colname="col2" colwidth="53mm" /><thead><row><entry valign="top"><b>R7-36-72 Testing in Surfactant System</b></entry><entry valign="top"><b>Peak Zero Shear Viscosity (Pa-s)</b></entry></row></thead><tbody><row><entry>6% surfactant without polymer</entry><entry>16</entry></row><row><entry>6% surfactant with polymer</entry><entry>58</entry></row><row><entry>7.5% surfactant without polymer</entry><entry>115</entry></row><row><entry>7.5% surfactant with polymer</entry><entry>170</entry></row><row><entry>10% surfactant without polymer</entry><entry>173</entry></row><row><entry>10% surfactant with polymer</entry><entry>429</entry></row><row><entry>15% surfactant without polymer</entry><entry>130</entry></row><row><entry>15% surfactant with polymer</entry><entry>209</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00146-en" num="0146">Comparing samples with and without polymer shows that in all cases, the addition of polymer enables higher zero shear viscosities. Additionally, comparing 15% surfactant without polymer (130 Pa-s) to 10% surfactant without polymer (173 Pa-s) and 10% surfactant with polymer (429 Pa-s) shows that it is possible to achieve higher zero shear viscosities with lower levels of surfactant by addition of the polymer of the present invention and the appropriate level of salt.</p>
+    <heading id="h-00036-en">
+      <b>Example 10: Stress Sweep and Elastic Modulus Measurement</b>
+    </heading>
+    <heading id="h-00037-en">
+      <u>Stress Sweep</u>
+    </heading>
+    <p id="p-00147-en" num="0147">Dynamic stress sweep were also evaluated using the Rheometric Scientific rheometer and same plate configuration as for steady state stress sweep. Measurement was carried out at a frequency of 1 Hz. These values allow us to investigate yield stress, storage (elastic) and loss (viscous) modulus. Figure below shows a typical example.</p>
+    <heading id="h-00038-en">
+      <u>Elastic Modulus Results</u>
+    </heading>
+    <p id="p-00148-en" num="0148">Composition 1 containing 7.5% of surfactant, 3% Sodium Chloride, and 0% polymer was prepared and evaluated according to Example 10. Composition 2 containing 7.5% surfactant, 3% Sodium Chloride, and 0.2% R7-36-72 was prepared and evaluated according to Example 5.</p>
+    <p id="p-00149-en" num="0149">The results are found in <figref>Figure 9</figref> showing Elastic Modulus as a function of Stress.</p>
+    <p id="p-00150-en" num="0150">These data demonstrate that addition of the polymer of the present invention can dramatically increase the elastic modulus and yield stress of surfactant systems.</p>
+    <heading id="h-00039-en">
+      <b>Example 12: Foam Evaluation</b>
+    </heading>
+    <p id="p-00151-en" num="0151">Foam property was evaluated by creating a foam using a blender and the measuring the time taken for half of total liquid to drain from the foam matrix.</p>
+    <heading id="h-00040-en">
+      <b>Procedure:</b>
+    </heading>
+    <p id="p-00152-en" num="0152">Prepare a 0.035% solution of each of the formulation by diluting with water. A total of 200 ml of the 0.035% solution were transferred to a blender (Oster Fusion, 3 speed blender). Blend the solution at medium speed for 30 sec. Transfer the resulting foam quickly into a 1000ml cylinder and measure the volume of foam created.</p>
+    <heading id="h-00041-en">
+      <b>Example 13: Influence of Polymer on Foam Volume</b>
+    </heading>
+    <p id="p-00153-en" num="0153">Shampoo 1 containing 7.5% surfactant, 3% salt was prepared and evaluated for its foam height. Second, shampoo 2 containing 7.5% surfactant, 3% salt, and 0.25% polymer R7-36-72 was prepared and evaluated for its foam height. Finally, a Shampoo 3, a deep cleansing shampoo from a leading brand that is estimated to contain 15% total surfactants, was evaluated for its foam height. The results are summarized in Table 10 below. <tables id="tables-00017-en" num="0017"><table frame="all"><title>Table 10</title><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="26mm" /><colspec colnum="2" colname="col2" colwidth="24mm" /><colspec colnum="3" colname="col3" colwidth="34mm" /><thead><row><entry valign="top"><b>Product Name</b></entry><entry valign="top"><b>Foam Height</b></entry><entry valign="top"><b>Standard Deviation</b></entry></row></thead><tbody><row><entry>Shampoo 1</entry><entry>782mL</entry><entry>30mL</entry></row><row><entry>Shampoo 2</entry><entry>845mL</entry><entry>2mL</entry></row><row><entry>Shampoo 3</entry><entry>802mL</entry><entry>3mL</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00154-en" num="0154">These data demonstrate that the polymers of the present invention enhance the foam characteristics of shampoo. Additionally, these data demonstrate that it is possible to exceed the foam characteristics of a shampoo with ∼15% surfactant with one that contains only 7.5% surfactant by addition of the polymer of the present invention.</p>
+    <p id="p-00155-en" num="0155">All documents cited in the Detailed Description of the Invention are, in relevant part, incorporated herein by reference; the citation of any document is not to be construed as an admission that it is prior art with respect to the present invention.</p>
+    <p id="p-00156-en" num="0156">While particular embodiments of the present invention have been illustrated and described herein, the invention is not intended to be limited to the details shown. Rather, various modifications may be made in the details within the range and scope of equivalents of the claims and without departing from the spirit and scope of the invention.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>An aqueous viscoelastic personal care composition comprising:
+<claim-text>at least one viscoelastic surfactant;</claim-text><claim-text>at least one hydrophobically-modified polymer obtainable by copolymerizing at least a first and at least a second ethylenically unsaturated monomer, wherein
+<claim-text>- said first monomer is an ethylenically unsaturated monomer with a pendant hydrocarbyl group having from 6 to 40 carbon atoms, being connected to the unsaturated function of said monomer via a non-ester containing linkage, preferably a urea, urethane, imide and amide containing linkage, more preferably a urea or urethane containing linkage;</claim-text><claim-text>- said second monomer is an ethylenically unsaturated monomer free from hydrocarbyl groups having 6 or more carbon atoms connected to the unsaturated function of said monomer; and</claim-text></claim-text><claim-text>a personal care active ingredient.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The personal care composition of claim 1 wherein the at least one hydrophobically-modified polymer has a number average molecular weight of from 1000 to 100,000 Da.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The personal care composition of claim 1 or 2 wherein the at least one hydrophobically modified polymer, to a level of least 0.1 mol%, based on the amount of monomer units in the polymer, of covalently bonded pendant hydrocarbyl groups having from 6 to 40 carbon atoms.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The personal care composition of any one of claims 1 -3, wherein said pendant hydrocarbyl group has at least 12 carbon atoms and 0.1 to 20 mole%, preferably from 0.5 to 10 mole%, more preferably from 1 to 5 mole%, based on the amount of monomer units in the polymer, of the monomeric units of the polymer are connected to said pendant hydrocarbyl groups.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The personal care composition of any one of claims 1 -3, wherein said pendant hydrocarbyl group has at most 11 carbon atoms and from 1 to 50 mole%, preferably from 5 to 40 mole%, more preferably from 10 to 30 mole%, based on the amount of monomer units in the polymer, are connected to said pendant hydrocarbyl group.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The personal care composition of any one of claims 1 -3, wherein said pendant hydrocarbyl group contains at least 8, preferably at least 11 carbon atoms.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The personal care composition according to any one of the preceding claims, wherein said pendant hydrocarbyl group contains at most 32, preferably at most 24 carbon atoms.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The personal care composition according to any one of the preceding claims, wherein said pendant hydrocarbyl group is a branched alkyl or alkenyl group.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The personal care composition according to any one of the preceding claims, wherein said hydrophobically modified polymer is present in a concentration below the overlap concentration of said polymer.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The personal care composition according to any one of the preceding claims, wherein said first and second monomer are present in a mutual molar ratio of from 0.1:99.9 to 90:10</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The personal care composition according to claim 10, wherein said hydrocarbyl group has at least 12 carbon atoms and said first and second monomers are present in a molar ratio of from 0.1:99.9 to 20:80; preferably from 0.5:99.5 to 10:90, more preferably from 1:99 to 5:95, or wherein said hydrocarbyl group has at most 11 carbon atoms and said first and second monomers are present in a mutual molar ratio of from 1:99 to 90:10; preferably from 5:95 to 70:30, more preferably from 10:90 to 50:50.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The personal care composition according to any one of claims 10 to 12, wherein said second ethylenically unsaturated monomer is selected from the group consisting of anionic ethylenically unsaturated monomers, cationic ethylenically unsaturated monomers, non-ionically ethylenically unsaturated monomers, zwitterionic ethylenically unsaturated monomers, and mixtures thereof and salts thereof.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The personal care composition according to any one of the preceding claims, wherein said viscoelastic surfactant is selected from the group consisting of zwitterionic surfactants, amphoteric surfactants, anionic surfactants and combinations thereof.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>The personal care composition according to any one of the preceding claims, wherein the weight ratio of hydrophobically modified polymer to viscoelastic surfactant is from 0.1:100, preferably from 1:100, more preferably from 3:100, to 100:50, preferably to 100:100, more preferably to 50:100.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>Use of the personal care composition of any one of the preceding claims as a liquid cleansing product for hair or skin, a liquid conditioning product for hair or skin, or a shaving preparation.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0005.tif" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0006.tif" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0007.tif" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0008.tif" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0009.tif" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0010.tif" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0011.tif" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00019.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0012.tif" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00020.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0013.tif" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="EP2940095A1_00021.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940095A1.PDF" type="pdf" size="897004" pages="37" />
+</lexisnexis-patent-document>

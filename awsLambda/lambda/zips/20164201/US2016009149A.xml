@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2015 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20150603" file="EP1852232A4.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20141226" time-inserted="060653" date-changed="20150107" time-changed="015146">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Supplementary search report">
+      <document-id>
+        <country>EP</country>
+        <doc-number>1852232</doc-number>
+        <kind>A4</kind>
+        <date>20141224</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>06713799</doc-number>
+        <kind>A</kind>
+        <date>20060215</date>
+      </document-id>
+    </application-reference>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20141226">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2005048790</doc-number>
+        <kind>A</kind>
+        <date>20050224</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2006302658</doc-number>
+        <kind>W</kind>
+        <date>20060215</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2005048790</doc-number>
+        <kind>A</kind>
+        <date>20050224</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2005048790</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2006302658</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>WO2006JP302658</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>JP20050048790</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20141226">
+      <supplemental-srep-reference>
+        <date>20141224</date>
+      </supplemental-srep-reference>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20141226">
+      <classification-ipcr sequence="1">
+        <text>B25D  11/06        20060101AFI20141120BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B06B   1/16        20060101ALI20141120BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>06</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B23B  45/16        20060101ALI20141120BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>45</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>B25D  16/00        20060101ALI20141120BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>16</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>B28D   1/14        20060101ALI20141120BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>28</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20141226">
+      <classification-cpc sequence="1">
+        <text>B25D  11/066       20130101 FI20141124BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>066</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141124</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B06B   1/16        20130101 LI20141119BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>06</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141119</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B25D  16/00        20130101 LI20141124BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>16</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141124</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B25D2250/391       20130101 LA20141119BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>2250</main-group>
+        <subgroup>391</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141119</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B28D   1/14        20130101 LI20141124BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>28</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141124</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <invention-title id="title_ger" date-changed="20141226" lang="ger" format="original">BOHRWERKZEUG</invention-title>
+    <invention-title id="title_eng" date-changed="20141226" lang="eng" format="original">DRILL TOOL</invention-title>
+    <invention-title id="title_fre" date-changed="20141226" lang="fre" format="original">OUTIL DE PERÇAGE</invention-title>
+    <parties date-changed="20141226">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>MAX CO LTD</orgname>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdb">
+          <addressbook lang="eng">
+            <orgname>MAX CO LTD</orgname>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdba">
+          <addressbook lang="eng">
+            <orgname>MAX CO., LTD.</orgname>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>NONAKA TAKUMA</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>MURAKAMI NAOHIDE</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdb">
+          <addressbook lang="eng">
+            <name>NONAKA TAKUMA</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdba">
+          <addressbook lang="eng">
+            <name>NONAKA, TAKUMA</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdba">
+          <addressbook lang="eng">
+            <name>MURAKAMI, NAOHIDE</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdb">
+          <addressbook lang="eng">
+            <name>MURAKAMI NAOHIDE</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <designation-of-states date-changed="20141226">
+      <designation-epc>
+        <contracting-states>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>NL</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>TR</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP06302658</doc-number>
+        <date>20060215</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2006090625</doc-number>
+        <date>20060831</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20141226">
+      <main-family family-id="155376933">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20080156507</doc-number>
+            <kind>A1</kind>
+            <date>20080703</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1852232</doc-number>
+            <kind>A4</kind>
+            <date>20141224</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2006090625</doc-number>
+            <kind>A1</kind>
+            <date>20060831</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2006218321</doc-number>
+            <kind>A1</kind>
+            <date>20060831</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1852232</doc-number>
+            <kind>A1</kind>
+            <date>20071107</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2600048</doc-number>
+            <kind>A1</kind>
+            <date>20060831</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2006231457</doc-number>
+            <kind>A</kind>
+            <date>20060907</date>
+          </document-id>
+          <application-date>
+            <date>20050224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>7568529</doc-number>
+            <kind>B2</kind>
+            <date>20090804</date>
+          </document-id>
+          <application-date>
+            <date>20070823</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>4742613</doc-number>
+            <kind>B2</kind>
+            <date>20110810</date>
+          </document-id>
+          <application-date>
+            <date>20050224</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="155376932">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1852232</doc-number>
+            <kind>A1</kind>
+            <date>20071107</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20080156507</doc-number>
+            <kind>A1</kind>
+            <date>20080703</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2006090625</doc-number>
+            <kind>A1</kind>
+            <date>20060831</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2006218321</doc-number>
+            <kind>A1</kind>
+            <date>20060831</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2600048</doc-number>
+            <kind>A1</kind>
+            <date>20060831</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1852232</doc-number>
+            <kind>A4</kind>
+            <date>20141224</date>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2006231457</doc-number>
+            <kind>A</kind>
+            <date>20060907</date>
+          </document-id>
+          <application-date>
+            <date>20050224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>7568529</doc-number>
+            <kind>B2</kind>
+            <date>20090804</date>
+          </document-id>
+          <application-date>
+            <date>20070823</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>4742613</doc-number>
+            <kind>B2</kind>
+            <date>20110810</date>
+          </document-id>
+          <application-date>
+            <date>20050224</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20141226" lang="eng" format="equivalent" country="EP" doc-number="1852232" kind="A1">
+    <p>A drill tool is provided with: a drive source accommodated in a tool body 2; a bit drive shaft 3 which is rotation-driven by the drive source and provided projectingly from a front end of the drill body 2; and a diamond bit 4 attached to a front end of the bit drive shaft 3. Further, the drill tool is provided with a vibrating apparatus which generates vibrating force which acts in the axial direction of the bit drive shaft 3, a magnitude of which pulsates, and vibrating moment which acts in the rotational direction of the bit drive shaft 3, a magnitude of which pulsates.</p>
+  </abstract>
+  <legal-data date-changed="20150107">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20071107</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1852232A1</docdb-publication-number>
+      <docdb-application-id>16329966</docdb-application-id>
+      <effective-date>
+        <date>20070820</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20071107</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1852232A1</docdb-publication-number>
+      <docdb-application-id>16329966</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20080528</date>
+      </publication-date>
+      <event-code-1>DAX</event-code-1>
+      <legal-description>EXTENSION OF THE EUROPEAN PATENT TO (DELETED)</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1852232A1</docdb-publication-number>
+      <docdb-application-id>16329966</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20141224</date>
+      </publication-date>
+      <event-code-1>A4</event-code-1>
+      <effect>+</effect>
+      <legal-description>SUPPLEMENTARY SEARCH REPORT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     1852232A1</docdb-publication-number>
+      <docdb-application-id>16329966</docdb-application-id>
+      <effective-date>
+        <date>20141126</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20141224</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     1852232A1</docdb-publication-number>
+      <docdb-application-id>16329966</docdb-application-id>
+      <ipc>B06B   1/16        20060101ALI20141120BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20141224</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     1852232A1</docdb-publication-number>
+      <docdb-application-id>16329966</docdb-application-id>
+      <ipc>B23B  45/16        20060101ALI20141120BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20141224</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     1852232A1</docdb-publication-number>
+      <docdb-application-id>16329966</docdb-application-id>
+      <ipc>B25D  11/06        20060101AFI20141120BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20141224</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     1852232A1</docdb-publication-number>
+      <docdb-application-id>16329966</docdb-application-id>
+      <ipc>B25D  16/00        20060101ALI20141120BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20141224</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     1852232A1</docdb-publication-number>
+      <docdb-application-id>16329966</docdb-application-id>
+      <ipc>B28D   1/14        20060101ALI20141120BHEP</ipc>
+    </legal-event>
+  </legal-data>
+  <image file="WO2006090625A1.PDF" type="pdf" size="342666" pages="19" />
+</lexisnexis-patent-document>

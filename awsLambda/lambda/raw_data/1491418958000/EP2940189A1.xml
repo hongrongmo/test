@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940189A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="090659" date-changed="20151202" time-changed="052209">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121937972">
+        <country>EP</country>
+        <doc-number>2940189</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>12890855</doc-number>
+        <date>20121227</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151105">
+      <priority-claim sequence="1" kind="international">
+        <country>WO</country>
+        <doc-number>JP12083951</doc-number>
+        <kind>W</kind>
+        <date>20121227</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012083951</doc-number>
+        <kind>W</kind>
+        <date>20121227</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012083951</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>WO2012JP83951</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150625</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151202">
+      <classification-ipcr sequence="1">
+        <text>C23C  26/00        20060101AFI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>26</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B32B  15/08        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C09D   7/12        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C09D 135/00        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>135</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C09D 135/06        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>135</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C09D 171/02        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>171</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>C23C  28/00        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>28</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151202">
+      <classification-cpc sequence="1">
+        <text>C10M 107/34        20130101 FI20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>M</subclass>
+        <main-group>107</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B05D   1/36        20130101 LI20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09D   7/12        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C09D 135/00        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>135</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C09D 135/04        20130101 LI20141127BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>135</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141127</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C09D 135/06        20130101 LI20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>135</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C09D 171/02        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>171</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>Y10T 428/12549     20130101 LA20151023BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>12549</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>Y10T 428/31692     20150401 LA20151023BCEP        </text>
+        <cpc-version-indicator>
+          <date>20150401</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>31692</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C09D 135/04        20130101 LI20141127BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>09</class>
+            <subclass>D</subclass>
+            <main-group>135</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20141127</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  71/02        20130101 LI20141127BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>71</main-group>
+            <subgroup>02</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20141127</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">10</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">STAHLBLECH MIT EINEM ALKALILÖSLICHEN SCHMIERFILM, VERFAHREN ZUR HERSTELLUNG DAVON UND ZUSAMMENSETZUNG</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">STEEL SHEET HAVING ALKALI-SOLUBLE LUBRICATING FILM, METHOD FOR PRODUCING SAME, AND COMPOSITION</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">TÔLE D'ACIER PORTANT UN FILM LUBRIFIANT SOLUBLE EN MILIEU ALCALIN, SON PROCÉDÉ DE PRODUCTION ET COMPOSITION S'Y RAPPORTANT</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>NIHON PARKERIZING CO., LTD.</orgname>
+            <registered-number>100957371</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>1-15-1, Nihonbashi</address-1>
+              <city>Chuo-ku Tokyo 103-0027</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>SERITA Atsushi</name>
+            <address>
+              <address-1>c/o Nihon Parkerizing Co. Ltd. 1-15-1 Nihonbashi Chuo-ku</address-1>
+              <city>Tokyo 103-0027</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>NAMAI Yoshikazu</name>
+            <address>
+              <address-1>c/o Nihon Parkerizing Co. Ltd. 1-15-1 Nihonbashi Chuo-ku</address-1>
+              <city>Tokyo 103-0027</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>KAWAGOSHI Ryosuke</name>
+            <address>
+              <address-1>c/o Nihon Parkerizing Co. Ltd. 1-15-1 Nihonbashi Chuo-ku</address-1>
+              <city>Tokyo 103-0027</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Beckmann, Claus et al</name>
+            <registered-number>100057330</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Kraus &amp; Weisert Patentanwälte PartGmbB Thomas-Wimmer-Ring 15</address-1>
+              <city>80539 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP12083951</doc-number>
+        <date>20121227</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014102982</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151210">
+      <main-family family-id="166466820">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5782198</doc-number>
+            <kind>B2</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>105121703</doc-number>
+            <kind>A</kind>
+            <date>20151202</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940189</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201439308</doc-number>
+            <kind>A</kind>
+            <date>20141016</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014102982</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166466819">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5782198</doc-number>
+            <kind>B2</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>105121703</doc-number>
+            <kind>A</kind>
+            <date>20151202</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940189</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201439308</doc-number>
+            <kind>A</kind>
+            <date>20141016</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014102982</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides a steel sheet which has an alkali-soluble lubricating film on the surface, and which is characterized in that: the lubricating film has a first layer that contains (A) a polyethylene oxide having a weight average molecular weight of 50,000-500,000 and (B) a copolymer of (X) a styrene-based hydrocarbon compound or an olefin-based hydrocarbon compound having 3 or more carbon atoms and (Y) either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group, said compounds being copolymerizable with the compound (X), wherein some or all of the carboxylic anhydride groups and the carboxy groups contained in the copolymer may be ammonia-modified, imidized or blocked by an alcohol, with the weight ratio of the component (B) relative to the total of the component (A) and the component (B) being more than 5% by weight but less than 50% by weight, and a second layer that is provided on the first layer and is formed of an oil layer that contains an oil component having a kinetic viscosity of 3 to 32 mm<sup>2</sup>/s (at 40°C); the total adhesion amount of the component (A) and the component (B) is 0.1 to 1.0 g/m<sup>2</sup>; and the adhesion amount of the oil layer is 0.1 to 3.0 g/m<sup>2</sup>.<img id="imga-00001-en" wi="78" he="67" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">TECHNICAL FIELD</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a steel sheet having an alkali-soluble lubricating film. More specifically, the present invention can be suitably used in an automotive steel sheet having an alkali-soluble lubricating film.</p>
+    <heading id="h-00002-en">BACKGROUND ART</heading>
+    <p id="p-00002-en" num="0002">Various flat steel sheets represented by the automotive steel sheet are formed into desired shapes through press forming or the like, and then, subjected to painting performed thereon.</p>
+    <p id="p-00003-en" num="0003">A plate-like steel sheet to be subjected to press forming is coated with rust preventive oil and delivered to a customer in the state of a steel material packed into a coil shape, a sheet shape, or the like. In a pressing process, a so-called press-cleaning oil to dilute the rust preventive oil is added to the steel sheet delivered to the customer, and the steel sheet is press-formed. Then, the press-formed steel sheet is subjected to painting in a painting process.</p>
+    <p id="p-00004-en" num="0004">In a degreasing step of the painting process, the steel sheet to which the above oil content adheres is subjected to an alkali cleaning to remove the oil content. However, in a case where the oil content remains, the remaining oil content repels paint, and thus, the appearance of the painting deteriorates, or the adhesion property between the paint film and the steel material becomes poor in many cases. That is, in the pressing of the steel sheet, it is preferable for the surface state of the steel sheet to be excellent in lubricity, but if the surface of the pressed steel sheet is not cleaned in the degreasing step, this leads to a defect in subsequent steps.</p>
+    <p id="p-00005-en" num="0005">As another method of giving lubricity to the surface of the steel sheet, a method for providing a film of polyethylene oxide (PEO) having an average molecular weight of 50,000 to 5,000,000 on the surface of an aluminum alloy sheet has been proposed (Patent Literature 1). In addition, a method for improving the level of lubrication has been proposed (Patent Literature 2). In the method, a first layer which contains polyethylene oxide (PEO) having a weight average molecular weight of 50,000 to 500,000 and in which the adhesion amount of the PEO is 0.1 g/m<sup>2</sup> to 1.0 g/m<sup>2</sup>, and a second layer which contains lubricating oil having a kinematic viscosity of 7 mm<sup>2</sup>/s to 32 mm<sup>2</sup>/s (at 40°C) and in which the adhesion amount of the lubricating oil is 0.1 g/m<sup>2</sup> to 3.0 g/m<sup>2</sup> are provided on the surface of a steel sheet in this order.</p>
+    <heading id="h-00003-en">CITATION LIST</heading>
+    <heading id="h-00004-en">PATENT LITERATURE</heading>
+    <p id="p-00006-en" num="0006">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>Patent Literature 1: <patcit id="pcit-00001" dnum="JP8323286A"><text>JP 8-323286 A</text></patcit></li>
+        <li>Patent Literature 2: <patcit id="pcit-00002" dnum="JP2012121954A"><text>JP 2012-121954 A</text></patcit></li>
+      </ul>
+    </p>
+    <heading id="h-00005-en">SUMMARY OF INVENTION</heading>
+    <heading id="h-00006-en">TECHNICAL PROBLEMS</heading>
+    <p id="p-00007-en" num="0007">In recent years, with a rise in awareness with respect to aesthetics of products, press forming of a steel sheet into a more complex shape has been increased, and thus, a steel sheet which is more excellent in lubricity at the time of press forming has been demanded. In particular, in the case of a galvanized steel sheet, the zinc on the surface of the steel sheet is soft, and thus, agglutination of the zinc with a mold at the time of pressing easily occurs, and if the lubricity is not sufficient, so-called galling or seizing is easily generated.</p>
+    <p id="p-00008-en" num="0008">As a result of the examination of the lubricity of the conventional steel sheet coated with lubricating oil and the aluminum alloy sheet having the PEO film described in <patcit id="pcit-00003" dnum="JP8323286A"><text>JP 8-323286 A</text></patcit> (Patent Literature 1), the present inventors found that the levels of lubricity of the conventional steel sheet and the aluminum alloy sheet described in Patent Literature 1 do not reach the level of lubricity currently required. In contrast, as a result of the examination of the lubricity of the steel sheet having the lubricating film described in <patcit id="pcit-00004" dnum="JP2012121954A"><text>JP 2012-121954 A</text></patcit> (Patent Literature 2), it was confirmed that, in a so-called dry environment, the level of lubricity thereof satisfies the level currently required.</p>
+    <p id="p-00009-en" num="0009">However, according to the further examination by the present inventors, it was confirmed that, although the steel sheet having the lubricating film described in Patent Literature 2 has no problem with respect to the formability by the pressing and is excellent in lubricity in a so-called dry environment, when the steel sheet is retained in a wet environment, the lubricity thereof deteriorates, and some of a film component and a material component adheres onto the steel sheet as a black adhering substance. As a result of the qualitative analysis of the adhering substance conducted by the present inventors, an organic component and an inorganic component were detected in the adhering substance, and it became clear that the inorganic component is a part of the surface of the steel sheet scraped away therefrom due to abrasion or wear. The present inventors consider that since the lubricating film described in Patent Literature 2 is a film excellent in removability, the first layer swells in a wet atmosphere, and the first layer and the second layer are not drawn in a mold from an introduction portion thereof, thereby the lubricity is decreased.</p>
+    <p id="p-00010-en" num="0010">The plate-like steel materials are transported to a customer in the state of being packed in a shape such as a coil shape, a sheet shape, or the like. These steel materials have many opportunities to come into contact with the outside air at the time of transportation. In particular, since the steel materials are largely exported to overseas by ships, at the time of transporting to the destinations for export, or at the time of storing in the destinations for export, the steel materials experience a rainfall, a snowfall, a rainy season (a pluvial period), or the like. Therefore, these steel materials have many opportunities to be allowed to stand in a wet environment, and accordingly, improvement measures against the decrease of the lubricity at the time of being retained in a wet environment as seen in the steel sheet with a lubricating film described in Patent Literature 2 are essential.</p>
+    <p id="p-00011-en" num="0011">The present invention has been made in consideration of the above-described circumstances, and an object thereof is to provide a steel sheet having an alkali-soluble lubricating film which is excellent in lubricity in a dry environment, does not exhibit deterioration of the lubricity even after being retained in a wet environment, can be properly subjected to pressing, and can be easily removed in an alkali-degreasing step after the pressing.</p>
+    <heading id="h-00007-en">SOLUTION TO PROBLEMS</heading>
+    <p id="p-00012-en" num="0012">As a result of conducting intensive examination, the present inventors found that the above object can be accomplished by the following constitution of the present invention. <ol><li>(1) A steel sheet having an alkali-soluble lubricating film on a surface,<br /> wherein the lubricating film has: <ul id="ul-00002-en" list-style="none" compact="compact"><li>a first layer which contains (A) polyethylene oxide with a weight average molecular weight of 50,000 to 500,000 and (B) a copolymer of (X) a styrene-based hydrocarbon compound or an olefin-based hydrocarbon compound with three or more carbon atoms and (Y) either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group that is copolymerizable with (X), with carboxylic anhydride groups or carboxy groups in the copolymer being partially or wholly ammonia-modified, imidized, or blocked with an alcohol in some cases, and which contains (B) at a weight ratio relative to a total of (A) and (B) of greater than 5% by weight but less than 50% by weight; and</li><li>a second layer which is formed of an oil layer containing an oil component with a kinematic viscosity of 3 to 32 mm<sup>2</sup>/s (at 40°C) and provided on the first layer, and</li><li>wherein a total adhesion amount of (A) and (B) is 0.1 to 1.0 g/m<sup>2</sup>, and an adhesion amount of the oil layer is 0.1 to 3.0 g/m<sup>2</sup>.</li></ul></li><li>(2) The steel sheet having an alkali-soluble lubricating film according to (1), wherein (X) the styrene-based hydrocarbon compound or the olefin-based hydrocarbon compound with three or more carbon atoms is at least one selected from the group consisting of styrene, isobutylene and propylene, and the either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group is at least one selected from the group consisting of maleic acid, acrylic acid, methacrylic acid, maleic anhydride and itaconic acid.</li><li>(3) The steel sheet having an alkali-soluble lubricating film according to (1) or (2),<br /> wherein the either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group is maleic acid, and<br /> wherein greater than 0 mol% but not greater than 50 mol% of carboxy groups derived from the maleic acid in the copolymer are blocked with an alcohol with one to four carbon atoms.</li><li>(4) The steel sheet having an alkali-soluble lubricating film according to (1) or (2),<br /> wherein the either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group is maleic anhydride, and<br /> wherein greater than 0 mol% but not greater than 50 mol% of carboxy groups which are generated by ring opening of carboxylic anhydride groups derived from the maleic anhydride in the copolymer are blocked with an alcohol with one to four carbon atoms.</li><li>(5) The steel sheet having an alkali-soluble lubricating film according to (1) or (2),<br /> wherein the either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group is maleic anhydride, and<br /> wherein carboxylic anhydride groups derived from the maleic anhydride in the copolymer are at least partially imidized.</li><li>(6) The steel sheet having an alkali-soluble lubricating film according to any one of (1) to (5), wherein the steel sheet which has the alkali-soluble lubricating film is a zinc- or zinc alloy-coated steel sheet selected from the group consisting of a hot-dip galvanized steel sheet, a hot-dip galvannealed steel sheet, a zinc electrogalvanized steel sheet and a zinc alloy electrogalvanized steel sheet.</li><li>(7) The steel sheet having an alkali-soluble lubricating film according to any one of (1) to (6), wherein the first layer further contains at least one metal selected from the group consisting of Li, Mg, Al, Ca, Mn, Zn, Si, P, W, Zr and Sn in a form of an oxide, a hydroxide or a salt, with a total weight of (C) the oxide, the hydroxide and the salt being 0.01% by weight to 10% by weight of a total weight of (A), (B) and (C), and a total adhesion amount of (A), (B) and (C) is 0.1 to 1.0 g/m<sup>2</sup>.</li><li>(8) A composition for forming a lubricating film on a steel sheet, comprising: <ol><li>(A) polyethylene oxide with a weight average molecular weight of 50,000 to 500,000; and</li><li>(B) a copolymer of (X) a styrene-based hydrocarbon compound or an olefin-based hydrocarbon compound with three or more carbon atoms and (Y) either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group that is copolymerizable with (X), with carboxy groups in the copolymer being partially ammonia-modified, imidized, or blocked with an alcohol in some cases,</li></ol> wherein (B) is at a weight ratio relative to a total of (A) and (B) of greater than 5% by weight but less than 50% by weight.</li><li>(9) The composition according to (8), further comprising at least one metal selected from the group consisting of Li, Mg, Al, Ca, Mn, Zn, Si, P, W, Zr and Sn in a form of an oxide, a hydroxide or a salt, with a total weight of (C) the oxide, the hydroxide and the salt being 0.01% by weight to 10% by weight of a total weight of (A), (B) and (C).</li><li>(10) A method for producing the steel sheet having an alkali-soluble lubricating film according to any one of (1) to (7), comprising the steps of: <ul id="ul-00003-en" list-style="none" compact="compact"><li>forming the first layer by applying the composition according to (8) onto a steel sheet such that the total adhesion amount of (A) and (B) is 0.1 to 1.0 g/m<sup>2</sup>, or forming the first layer by applying the composition according to (9) onto a steel sheet such that a total adhesion amount of (A), (B) and (C) is 0.1 to 1.0 g/m<sup>2</sup>; and</li><li>forming the second layer formed of the oil layer by applying a composition containing the oil component with a kinematic viscosity of 3 to 32 mm<sup>2</sup>/s (at 40°C) onto the first layer such that the adhesion amount of the oil layer is 0.1 to 3.0 g/m<sup>2</sup>.</li></ul></li></ol></p>
+    <heading id="h-00008-en">ADVANTAGEOUS EFFECTS OF INVENTION</heading>
+    <p id="p-00013-en" num="0013">According to the present invention, it is possible to provide a steel sheet having an alkali-soluble lubricating film which is excellent in lubricity and can be properly subjected to pressing in a dry environment; does not exhibit deterioration of the lubricity and can be properly subjected to pressing even after being retained in a wet environment; and can be easily removed in an alkali-degreasing step after the pressing.</p>
+    <heading id="h-00009-en">BRIEF DESCRIPTION OF DRAWINGS</heading>
+    <p id="p-00014-en" num="0014">[<figref>FIG. 1] FIG. 1</figref> is a cross-sectional view schematically showing an embodiment of a steel sheet of the present invention.</p>
+    <heading id="h-00010-en">DESCRIPTION OF EMBODIMENTS</heading>
+    <p id="p-00015-en" num="0015">The present invention will be described in detail below.</p>
+    <heading id="h-00011-en">[Steel sheet having lubricating film]</heading>
+    <p id="p-00016-en" num="0016">Hereinafter, a steel sheet having an alkali-soluble lubricating film of the present invention will be described.</p>
+    <p id="p-00017-en" num="0017">The steel sheet of the present invention is characterized in that the steel sheet has a laminated-type lubricating film, and a first layer of the lubricating film contains, at a predetermined ratio, polyethylene oxide having a predetermined molecular weight and a copolymer obtained by polymerizing predetermined monomers. Since the first layer contains the polyethylene oxide, excellent lubricity is ensured. In addition, since the first layer includes the predetermined copolymer, the durability of the lubricating film itself can be improved, the scraping and peeling of the lubricating film at the time of processing of the steel sheet are more suppressed, and as a result, the excellent lubricity is maintained. In particular, in a wet environment, swelling of the first layer is more suppressed due to the presence of the copolymer, and the excellent lubricity is maintained even in a wet environment.</p>
+    <p id="p-00018-en" num="0018">
+      <figref>FIG. 1</figref> is a cross-sectional view schematically showing an embodiment of the steel sheet having an alkali-soluble lubricating film according to the present invention.</p>
+    <p id="p-00019-en" num="0019">As shown in <figref>FIG. 1</figref>, a steel sheet having an alkali-soluble lubricating film (hereafter also referred to simply as "steel sheet with a lubricating film") 10 includes a steel sheet 12 and a lubricating film 14. The lubricating film 14 has a laminated structure composed of a first layer 16 containing polyethylene oxide and a copolymer having a predetermined repeating unit, and a second layer 18 formed of an oil layer containing an oil component.</p>
+    <p id="p-00020-en" num="0020">More specifically, the steel sheet with a lubricating film 10 according to the present invention has the first layer 16 that contains (A) polyethylene oxide having a weight average molecular weight of 50,000 to 500,000 and (B) a copolymer of (X) a styrene-based hydrocarbon compound or an olefin-based hydrocarbon compound having 3 or more carbon atoms and (Y) either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group, which are copolymerizable with (X); and the second layer 18 that is provided on the first layer 16 and is formed of an oil layer containing an oil component having a kinematic viscosity of 3 mm<sup>2</sup>/s to 32 mm<sup>2</sup>/s (40°C). Here, in the first layer, some or all of the carboxylic anhydride groups or the carboxy groups contained in (B) may be ammonia-modified, imidized, or blocked by an alcohol, and the ratio of the weight of (B) with respect to the total weight of (A) and (B) is greater than 5% by weight but less than 50% by weight. In the steel sheet with a lubricating film 10, the total adhesion amount of (A) and (B) is 0.1 g/m<sup>2</sup> to 1.0 g/m<sup>2</sup>, and the adhesion amount of the oil layer is 0.1 g/m<sup>2</sup> to 3.0 g/m<sup>2</sup>. The steel sheet with a lubricating film having the above laminated structure satisfies the level of lubricity currently required; even when being retained in a wet environment, the lubricity and press-formability thereof compares favorably with those in a dry environment; and it is possible to easily remove the lubricating film from the steel sheet in a degreasing step after the forming.</p>
+    <p id="p-00021-en" num="0021">Hereinafter, the steel sheet 12 and the lubricating film 14 will be described in detail.</p>
+    <heading id="h-00012-en">&lt;Steel sheet 12&gt;</heading>
+    <p id="p-00022-en" num="0022">The steel sheet 12 used in the present invention is not particularly limited. Sheets of metal materials including iron, iron-based alloy, aluminum, aluminum-based alloy, copper and copper-based alloy, as well as plated such sheets are mentioned as a usable metal sheet. Among others, a zinc coated steel sheet is preferred. As described above, the press forming of the zinc coated steel sheet is technically more difficult than the press forming of other steel sheets. Therefore, if the zinc coated steel sheet is provided with the lubricating film of the present invention, the highest effect can be expected.</p>
+    <p id="p-00023-en" num="0023">The zinc coated steel sheet is exemplified by a galvanized steel sheet, a zinc-nickel coated steel sheet, a zinc-iron coated steel sheet, a zinc-chromium coated steel sheet, a zinc-aluminum coated steel sheet, a zinc-titanium coated steel sheet, a zinc-magnesium coated steel sheet, a zinc-manganese coated steel sheet, a zinc-aluminum-magnesium coated steel sheet, and a zinc-aluminum-magnesium-silicon coated steel sheet.</p>
+    <p id="p-00024-en" num="0024">In addition, as the zinc coated steel sheet, a zinc coated steel sheet of which the coating layer contains cobalt, molybdenum, tungsten, nickel, titanium, chromium, aluminum, manganese, iron, magnesium, lead, bismuth, antimony, tin, copper, cadmium, arsenic, or the like as a small amount of a different metal element or impurities; or has an inorganic substance such as silica, alumina, titania, or the like dispersed therein may also be used.</p>
+    <p id="p-00025-en" num="0025">Furthermore, as the zinc coated steel sheet, a multilayer coated steel sheet obtained by combining the above-described zinc coating with another type of coating (for example, iron coating, iron-phosphorous coating, nickel coating, cobalt coating, or the like) can also be used.</p>
+    <p id="p-00026-en" num="0026">A coating method is not particularly limited, and a known method, for example, such as an electroplating method, a hot-dip coating method, an evaporation coating method, a dispersion coating method, a vacuum coating method, or the like, can be used.</p>
+    <heading id="h-00013-en">&lt;Lubricating film 14&gt;</heading>
+    <p id="p-00027-en" num="0027">The lubricating film 14 that is provided on the steel sheet 12 has the first layer 16 containing polyethylene oxide and the copolymer which will be described later (hereafter also referred to simply as "the first layer 16"), and the second layer 18 containing an oil component (hereafter also referred to simply as "the second layer 18").</p>
+    <p id="p-00028-en" num="0028">By having such a laminated structure, the lubricating film 14 exhibits more excellent lubricity than that of the aluminum alloy sheet having the PEO film described in Patent Literature 1, and in a wet environment, the lubricating film 14 exhibits more excellent lubricity than that of the steel sheet with a lubricating film described in Patent Literature 2. In addition, while the first layer 16 disposed on the base material side (steel sheet side) can be more easily peeled off from the steel sheet in the degreasing step, the swelling thereof is suppressed even in a wet atmosphere, and the lubricity is maintained. That is, even when being retained in a wet atmosphere, in pressing or the like in which lubricity is required, the first layer and the second layer promptly enter the inside of a mold and continue to maintain an effect of sufficiently preventing the metal contact between the mold and the surface of the steel sheet.</p>
+    <p id="p-00029-en" num="0029">Hereinafter, the first layer 16 and the second layer 18 will be described.</p>
+    <heading id="h-00014-en">&lt;First layer 16&gt;</heading>
+    <p id="p-00030-en" num="0030">The first layer 16 constituting a lower layer of the lubricating film 14 has polyethylene oxide having a predetermined weight average molecular weight and a copolymer produced from predetermined compounds.</p>
+    <p id="p-00031-en" num="0031">Hereinafter, first, the polyethylene oxide will be described in detail, and then, the copolymer will be described in detail.</p>
+    <heading id="h-00015-en">(Polyethylene oxide)</heading>
+    <p id="p-00032-en" num="0032">The weight average molecular weight of polyethylene oxide (PEO) used is 50,000 to 500,000. When the weight average molecular weight is within the above-described range, the lubricating film exhibits excellent lubricity and excellent removability, and especially, from the viewpoint of excellent effects, the weight average molecular weight is preferably 60,000 to 400,000, and more preferably 70,000 to 300,000.</p>
+    <p id="p-00033-en" num="0033">When the weight average molecular weight is less than 50,000, the lubricating film does not exhibit sufficient lubricity. When the weight average molecular weight is greater than 500,000, not only that it is no longer possible to further improve lubricity, but also the viscosity of the aqueous solution is extremely increased, and thus, usability at the time of forming a lubricating film becomes remarkably poor.</p>
+    <p id="p-00034-en" num="0034">The weight average molecular weight can be measured by a GPC measurement (gel permeation chromatography) in which tetrahydrofuran is used as an eluent and polyethylene glycol is used as a standard sample.</p>
+    <p id="p-00035-en" num="0035">The polyethylene oxide used may be synthesized by a known method, or may be a commercially available product (for example, manufactured by Sumitomo Seika Chemicals Co., Ltd.) or the like.</p>
+    <p id="p-00036-en" num="0036">Polyethylene oxide is an ethylene glycol addition polymer, and has a three-dimensionally continuous helical structure in a single direction. In general, an ethylene glycol addition polymer having a high molecular weight is called polyethylene oxide (in general, weight average molecular weight of 50,000 or greater), and an ethylene glycol addition polymer having a low molecular weight is called polyethylene glycol (in general, weight average molecular weight of less than 50,000). Polyethylene oxide has the same basic structure as polyethylene glycol and has similar chemical properties to those of polyethylene glycol, but the physical properties thereof are significantly different from those of polyethylene glycol.</p>
+    <p id="p-00037-en" num="0037">When the weight average molecular weight of polyethylene oxide is 50,000 to 500,000 as described above, the full length per molecule is estimated to be about 0.3 µm to 3 µm. In a case where such molecules having a large molecular size constitute a thin film, it is presumed that the molecules in the film are arranged in directions in a plane parallel to the surface of the steel sheet.</p>
+    <p id="p-00038-en" num="0038">Therefore, when stress is applied to the film in a vertical direction, destruction of the film is prevented by strong covalent bonds. In addition, when stress is applied thereto in a direction in the plane, the molecules are moved due to destruction of hydrogen bonds between the molecules, and thus, the deformation following performance of the film is ensured with respect to the deformation of the substrate. Furthermore, it is considered that the toughness of the film is expressed due to the high melting point and high viscosity resulting from the high molecular weight.</p>
+    <heading id="h-00016-en">(Copolymer)</heading>
+    <p id="p-00039-en" num="0039">The first layer 16 constituting the lower layer of the lubricating film 14 contains a copolymer of (X) a styrene-based hydrocarbon compound or an olefin-based hydrocarbon compound having 3 or more carbon atoms and (Y) either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group which are copolymerizable with (X), in which copolymer some or all of the carboxylic anhydride groups and the carboxy groups may be ammonia-modified, imidized, or blocked by an alcohol (hereafter also referred to simply as "copolymer").</p>
+    <p id="p-00040-en" num="0040">The weight average molecular weight of the copolymer used is not particularly limited, and it is preferably 4,000 to 400,000. When the weight average molecular weight is within the above-described range, the lubricating film exhibits more excellent lubricity and more excellent removability.</p>
+    <p id="p-00041-en" num="0041">The weight average molecular weight can be measured by a GPC measurement (gel permeation chromatography) in which tetrahydrofuran is used as an eluent and polyethylene glycol is used as a standard sample.</p>
+    <p id="p-00042-en" num="0042">As a monomer used to form the copolymer, (X) a styrene-based hydrocarbon compound or an olefin-based hydrocarbon compound having 3 or more carbon atoms can be mentioned, and the type of the monomer is not particularly limited.</p>
+    <p id="p-00043-en" num="0043">Examples of the styrene-based hydrocarbon compound include styrene(vinylbenzene), α-methylstyrene(isopropenylbenzene), β-methylstyrene(1-propenylbenzene), 4-methylstyrene(4-vinyl-1-methylbenzene), and 2,3-dimethylstyrene(1-ethenyl-2,3-dimethylbenzene).</p>
+    <p id="p-00044-en" num="0044">The olefin-based hydrocarbon compound having 3 or more carbon atoms is preferably an olefin-based hydrocarbon compound having 3 to 20 carbon atoms, and more preferably an olefin-based hydrocarbon compound having 3 to 8 carbon atoms, and examples thereof include propylene, α-butylene (1-butene), cis-β-butylene (cis-2-butene), trans-β-butylene (trans-2-butene), isobutylene (2-methylpropene), 1-pentene, cis-2-pentene, trans-2-pentene, and the like.</p>
+    <p id="p-00045-en" num="0045">As another monomer used to form the copolymer, (Y) either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group which are copolymerizable with (X) can be mentioned, and the type of the monomer or monomers is not particularly limited.</p>
+    <p id="p-00046-en" num="0046">The polymerizable unsaturated compound having a carboxylic anhydride group is preferably a compound obtained by intramolecular dehydration of two carboxy groups of a vinyl compound having two or more carboxy groups in one molecule, and examples thereof include maleic anhydride, itaconic anhydride and the like.</p>
+    <p id="p-00047-en" num="0047">Examples of the above vinyl compound having carboxy groups include maleic acid, fumaric acid, acrylic acid, methacrylic acid, itaconic acid, mesaconic acid, trans-aconitic acid, cis-aconitic acid, and the like.</p>
+    <p id="p-00048-en" num="0048">Here, the polymerizable unsaturated compound is a compound having a polymerizable unsaturated group, and the polymerizable unsaturated group refers to a group having a polymerizable double bond (for example, &gt;C=C&lt;).</p>
+    <p id="p-00049-en" num="0049">The copolymer may be any one of a random copolymer, an alternating copolymer, and a block copolymer.</p>
+    <p id="p-00050-en" num="0050">In addition, some or all of the carboxylic anhydride groups or the carboxy groups contained in the copolymer may be ammonia-modified, imidized, or blocked by an alcohol. More specifically, some or all of the carboxylic anhydride groups contained in the copolymer may be imidized, or some or all of the carboxy groups contained therein may be ammonia-modified or blocked by an alcohol.</p>
+    <p id="p-00051-en" num="0051">Here, the ammonia modification means that a carboxylic anhydride group or a carboxy group is allowed to react with ammonia to modify the carboxylic anhydride group or the carboxy group.</p>
+    <p id="p-00052-en" num="0052">In addition, the imidization means that a carboxylic anhydride group or a carboxy group is made to be an amido group, and by a dehydration reaction or the like of the remaining carboxyl group with the amido group, an imide bond is generated.</p>
+    <p id="p-00053-en" num="0053">Furthermore, the blocking by an alcohol means that a carboxylic anhydride group or a carboxy group is allowed to react with the hydroxy group in the alcohol to generate an ester group.</p>
+    <p id="p-00054-en" num="0054">Here, the blocking by an alcohol is preferably performed by an alcohol having 1 to 4 carbon atoms. However, this is to keep the boiling point of the alcohol at the level of the drying temperature when the first layer is dried and film-formed on the steel sheet, and accordingly, in an environment in which the temperature when the first layer is dried and film-formed exceeds the boiling point of the alcohol having 1 to 4 carbon atoms, the number of carbon atoms of the alcohol is not limited to this range. The alcohol having 1 to 4 carbon atoms is preferably an alkyl alcohol having 1 to 4 carbon atoms, and examples thereof include methyl alcohol, ethyl alcohol, 1-propanol, 2-propanol, 1-butanol, 2-butanol, isobutyl alcohol, tert-butyl alcohol, and the like.</p>
+    <p id="p-00055-en" num="0055">For example, in a case where carboxylic anhydride groups derived from maleic anhydride are contained in the copolymer, the ammonia modification or the imidization may be performed at any modification rate with respect to carboxylic acid. In many cases, the modification rate by alcohol is about 50% at most. The imidization may be modification of a monomer itself to be copolymerized, or may be modification after the monomer is copolymerized to a copolymer, and the modification rate thereof is also arbitrary. It is preferable that greater than 0 mol% and 50 mol% or less of the carboxylic anhydride groups derived from maleic anhydride are ammonia-modified or imidized.</p>
+    <p id="p-00056-en" num="0056">In addition, in a case where the carboxylic anhydride groups derived from maleic anhydride are contained in the copolymer, in the blocking by an alcohol, greater than 0 mol% and 50 mol% or less of the carboxy groups obtained by ring-opening the carboxylic anhydride groups (hydrolysis) are preferably blocked by an alcohol. The blocking by an alcohol can also be referred to as esterification by an alcohol. The total blocking rate may be adjusted by mixing those having different blocking rates.</p>
+    <p id="p-00057-en" num="0057">Furthermore, in a case where carboxylic anhydride groups derived from maleic acid are contained in the copolymer, in the ammonia-modification, imidization, or blocking by an alcohol, greater than 0 mol% and 50 mol% or less of the carboxy groups derived from maleic acid may be ammonia-modified, imidized, or blocked by an alcohol.</p>
+    <p id="p-00058-en" num="0058">If some of the carboxylic anhydride groups and the carboxy groups are ammonia-modified, imidized, or blocked by an alcohol, water-solubilization can be easily performed with respect to the preparation of a coating treatment liquid, and thus, it is advantageous for the preparation of chemicals.</p>
+    <p id="p-00059-en" num="0059">For the above (B), (X) a styrene-based hydrocarbon compound or an olefin-based hydrocarbon compound having 3 or more carbon atoms is preferably at least one selected from the group consisting of styrene, isobutylene, and propylene (first monomer), and (Y) either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group is preferably at least one selected from the group consisting of maleic acid, acrylic acid, methacrylic acid, maleic anhydride, and itaconic acid (second monomer).</p>
+    <p id="p-00060-en" num="0060">The usage ratio of the first monomer to the second monomer (the first monomer/the second monomer) is not particularly limited. However, it is preferably 1/9 to 9/1, more preferably 2/8 to 8/2, and still more preferably 5/5 to 8/2. When the usage ratio, or weight ratio, is less than 1/9, workability is poor, that is, the film is easily broken at the time of press forming due to insufficient hardness of the film, and thus, it is not preferable. In contrast, when the weight ratio is greater than 9/1, the peelability of the film is decreased, and thus, it is not preferable.</p>
+    <p id="p-00061-en" num="0061">In the steel sheet with a lubricating film 10, (B) the copolymer used in the first layer 16 of the lubricating film 14 preferably has a glass transition temperature of 75°C or higher, and more preferably has a glass transition temperature of 80°C or higher. Normally, the surface temperature of the steel material at the time of press forming is around 80°C, and if the glass transition temperature of the resin of the film is low, the film is damaged during the press forming in some cases.</p>
+    <p id="p-00062-en" num="0062">In the steel sheet with a lubricating film 10, the weight ratio of (B) the copolymer to the total of (A) PEO and (B) the copolymer used in the first layer 16 of the lubricating film 14 is greater than 5% by weight and less than 50% by weight. When the weight ratio of (B) the copolymer is 5% by weight or less, the lubricity in a wet environment is decreased, and when the weight ratio of (B) the copolymer is 50% by weight or greater, the lubricity in a dry environment and in a wet environment is decreased. The weight ratio of (B) the copolymer to the total of (A) PEO and (B) the copolymer is preferably 10% by weight to 40% by weight, and more preferably 10% by weight to 25% by weight.</p>
+    <p id="p-00063-en" num="0063">In the steel sheet with a lubricating film 10, the total adhesion amount of (A) PEO and (B) the copolymer of the first layer 16 is 0.1 g/m<sup>2</sup> to 1.0 g/m<sup>2</sup>. If the total adhesion amount is within the above-described range, the steel sheet with a lubricating film 10 exhibits excellent lubricity and excellent removability even in a wet environment. From the viewpoint of obtaining more excellent effects, the total adhesion amount is preferably 0.2 g/m<sup>2</sup> to 0.9 g/m<sup>2</sup>, and more preferably 0.3 g/m<sup>2</sup> to 0.7 g/m<sup>2</sup>. When the adhesion amount of (A) PEO and (B) the copolymer is less than 0.1 g/m<sup>2</sup>, the lubricity is poor, and when the adhesion amount is greater than 1.0 g/m<sup>2</sup>, further improvement of the lubricity cannot be expected, and use of a greater amount than that is economically disadvantageous.</p>
+    <p id="p-00064-en" num="0064">The measurement of the adhesion amount can be performed by using a surface carbon analyzing apparatus or the like.</p>
+    <p id="p-00065-en" num="0065">Furthermore, in the steel sheet with a lubricating film 10, the first layer 16 may contain at least one metal selected from the group consisting of Li, Mg, Al, Ca, Mn, Zn, Si, P, W, Zr, and Sn in a state of an oxide, a hydroxide, or a salt. The above-described salt includes a complex salt. In the present invention, the oxide, the hydroxide, and the salt are also referred to collectively as (C) an inorganic compound or simply as (C), and (C) the inorganic compound may be contained such that the total of (C) the inorganic compound is 0.01% by weight to 10% by weight of the total of (A) PEO, (B) the copolymer, and (C) the inorganic compound. Oxides and salts of these elements do not adversely affect the sliding properties of the steel sheet, and they have the primary rust preventive function for the steel sheet as retained in a wet environment. When the amount of such materials is less than 0.01% by weight, corrosion resistance compares favorably with the present invention in which the materials are not added, and the steel sheet is practically usable. When the materials are contained in an amount of 0.01% by weight to 10% by weight, the corrosion resistance is further improved, and when the materials are added in an amount of greater than 10% by weight, the corrosion resistance is saturated.</p>
+    <p id="p-00066-en" num="0066">When the first layer contains (C) the inorganic compound, the total adhesion amount of (A), (B), and (C) is 0.1 g/m<sup>2</sup> to 1.0 g/m<sup>2</sup>. If the total adhesion amount is within the above-described range, the steel sheet with a lubricating film 10 exhibits excellent lubricity and excellent removability even in a wet environment. From the viewpoint of obtaining more excellent effects, the total adhesion amount is preferably 0.2 g/m<sup>2</sup> to 0.9 g/m<sup>2</sup>, and more preferably 0.3 g/m<sup>2</sup> to 0.7 g/m<sup>2</sup>.</p>
+    <p id="p-00067-en" num="0067">Even when these materials are contained in the first layer (A) + (B) in an amount of 10% by weight or greater, the materials do not adversely affect the lubricity. The contents (% by weight) of (A), (B), and (C) in the first layer are equal to the compounding ratio (% by weight) of (A), (B), and (C) for forming the first layer, respectively.</p>
+    <heading id="h-00017-en">&lt;Second layer 18&gt;</heading>
+    <p id="p-00068-en" num="0068">The second layer 18 that is provided on the first layer 16 is a layer formed of an oil layer that contains an oil component having a kinematic viscosity of 3 mm<sup>2</sup>/s to 32 mm<sup>2</sup>/s (40°C). As the oil layer, a lubricating oil layer using lubricating oil containing a lubricating component is preferable, but the oil layer may be a rust preventive oil layer using rust preventive oil containing a lubricating component. If the kinematic viscosity is within the above-described range, the second layer 18 may be the lubricating oil itself or the rust preventive oil itself. When the steel sheet is shipped from a steel maker, on the steel sheet, rust preventive oil is applied rather than lubricating oil. At the time of pressing, a so-called press-cleaning oil is applied while diluting the rust preventive oil. On the steel sheet with a lubricating film of the present invention, pressing can be conducted even through such processes.</p>
+    <p id="p-00069-en" num="0069">The oil component is not particularly limited as long as the kinematic viscosity is 3 mm<sup>2</sup>/s to 32 mm<sup>2</sup>/s (40°C), and the lubricating film exhibits excellent lubricity and excellent removability. From the viewpoint of obtaining more excellent effects, the kinematic viscosity is preferably 3 mm<sup>2</sup>/s to 28 mm<sup>2</sup>/s (40°C), more preferably 3 mm<sup>2</sup>/s to 25 mm<sup>2</sup>/s (40°C), and still more preferably 6 mm<sup>2</sup>/s to 20 mm<sup>2</sup>/s (40°C).</p>
+    <p id="p-00070-en" num="0070">When the kinematic viscosity is less than 3 mm<sup>2</sup>/s (40°C), it is poor from the viewpoint of lubricity. When the kinematic viscosity is greater than 32 mm<sup>2</sup>/s (40°C), the viscosity of the oil is high, and thus, the removability is inferior.</p>
+    <p id="p-00071-en" num="0071">Here, the kinematic viscosity means a kinematic viscosity measured at 40°C, and means a kinematic viscosity measured according to JIS K 2283:2000 "Crude petroleum and petroleum products - Determination of kinematic viscosity and calculation of viscosity index from kinematic viscosity."</p>
+    <p id="p-00072-en" num="0072">The adhesion amount of the oil layer as the second layer is 0.1 g/m<sup>2</sup> to 3.0 g/m<sup>2</sup>. When the adhesion amount is within the range, the lubricating film exhibits excellent lubricity and excellent removability. From the viewpoint of obtaining more excellent lubricity and removability, the adhesion amount is preferably 0.3 g/m<sup>2</sup> to 2.0 g/m<sup>2</sup>, and more preferably 0.5 g/m<sup>2</sup> to 1.5 g/m<sup>2</sup>. When the adhesion amount is less than 0.1 g/m<sup>2</sup>, the lubricity is poor, and when the adhesion amount is greater than 3.0 g/m<sup>2</sup>, further improvement of the lubricity cannot be expected, and it is economically disadvantageous. The measurement of the adhesion amount can be performed by using a surface carbon analyzing apparatus or the like.</p>
+    <heading id="h-00018-en">&lt;Method for producing steel sheet having lubricating film&gt;</heading>
+    <p id="p-00073-en" num="0073">The method for producing the above steel sheet having a lubricating film is not particularly limited, but is preferably carried out through the following two steps.</p>
+    <p id="p-00074-en" num="0074">First layer forming step: the step of forming the first layer by applying a composition for forming the first layer on a steel sheet.</p>
+    <p id="p-00075-en" num="0075">Second layer forming step: the step of forming the second layer by applying a composition for forming the second layer on the first layer.</p>
+    <p id="p-00076-en" num="0076">Procedure of each step will be described in detail below.</p>
+    <heading id="h-00019-en">(First layer forming step)</heading>
+    <p id="p-00077-en" num="0077">In the first layer forming step, the first layer is formed by applying the composition for forming a first layer containing (A) PEO and (B) the copolymer, in which the weight ratio of (B) the copolymer with respect to the total of (A) PEO and (B) the copolymer is greater than 5% by weight and less than 50% by weight, on a steel sheet such that the total adhesion amount of (A) PEO and (B) the copolymer becomes 0.1 g/m<sup>2</sup> to 1.0 g/m<sup>2</sup>. The composition for forming a first layer is used for forming a film (first layer) on which an oil layer containing an oil component having the kinematic viscosity described below is formed.</p>
+    <p id="p-00078-en" num="0078">In the present invention, the concentration of the composition for forming a first layer is preferably adjusted with an aqueous diluent such that the total of (A) and (B) falls within the above-described range of the adhesion amount. Here, as the aqueous diluent, water is preferable. After application of the composition, drying is performed.</p>
+    <p id="p-00079-en" num="0079">If desired, a solvent may be contained in the composition for forming a first layer. When the composition cannot be applied to the steel sheet depending on the surface state of the steel sheet, the composition may be adjusted so as to be capable of being applied to the steel sheet surface by adding a small amount of a surfactant thereto as necessary. In addition, for improving the drying property of the film or the like, as necessary, the solvent may be an aqueous solvent to which an alcohol, a ketone, or a cellosolve-based water-soluble organic solvent is added.</p>
+    <p id="p-00080-en" num="0080">A method for applying the composition for forming a first layer on a steel sheet is not particularly limited, and, for example, generally used application methods such as roll coating, shower coating, air spraying, airless spraying, curtain flow coating, brushing, dipping and the like can be mentioned. If necessary, before applying the composition for forming a first layer, the surface of the steel sheet may be subjected to a degreasing treatment.</p>
+    <p id="p-00081-en" num="0081">If desired, a substance called an antiseptic agent or a mildewproofing agent may be suitably added to the composition for forming a first layer. The antiseptic agent or the mildewproofing agent is not particularly limited, but rather than a substance which is a solid and is significantly aggregated or precipitated, a substance which does not change the viscosity or the liquid properties of the composition when the substance is added thereto is more suitable.</p>
+    <p id="p-00082-en" num="0082">After applying the composition for forming a first layer on the steel sheet, if necessary, heat treatment may be performed to remove the solvent. The temperature of the heat treatment is preferably 50°C to 300°C, and can be adjusted in combination of the production speed of the steel material and an atmosphere for drying. If the surface temperature of the steel sheet is 60°C to 150°C, it is sufficiently suitable.</p>
+    <heading id="h-00020-en">(Second layer forming step)</heading>
+    <p id="p-00083-en" num="0083">The second layer forming step is a step of forming the second layer formed of the oil layer by applying the composition for forming a second layer containing an oil component having a kinematic viscosity of 3 mm<sup>2</sup>/s to 32 mm<sup>2</sup>/s (40°C) on the first layer formed in the first layer forming step such that the adhesion amount of the oil layer becomes 0.1 g/m<sup>2</sup> to 3.0 g/m<sup>2</sup>. The content of the oil component in the composition for forming a second layer is not particularly limited. A solvent may be contained in the composition for forming a second layer, if necessary.</p>
+    <p id="p-00084-en" num="0084">As the application method of the composition for forming a second layer, the application method of the first layer described above can be employed, and further, spray coating by an electrostatic method can also be used. If necessary, after applying the composition for forming a second layer, heat treatment may be performed.</p>
+    <p id="p-00085-en" num="0085">As described above, the steel sheet having a lubricating film (steel sheet with a lubricating film) of the present invention exhibits excellent lubricity even in a wet environment, and the lubricating film thereof can be easily removed.</p>
+    <heading id="h-00021-en">&lt;Method for producing painted steel sheet&gt;</heading>
+    <p id="p-00086-en" num="0086">Using the above-described steel sheet having a lubricating film, a painted steel sheet having a paint film on the surface can be produced. That is, by using the above-described steel sheet, with respect to the steel sheet press-formed into more complicated shape, a painted steel sheet having a paint film exhibiting excellent adhesion property can be produced.</p>
+    <p id="p-00087-en" num="0087">The method for producing the painted steel sheet preferably includes the following processes.</p>
+    <heading id="h-00022-en">(Pressing process) a process of performing press forming.</heading>
+    <p id="p-00088-en" num="0088">(Film removing process) a process of removing the lubricating film on the press-formed steel sheet using an aqueous solution.</p>
+    <p id="p-00089-en" num="0089">(Painting process) a process of performing painting on the steel sheet from which the lubricating film has been removed.</p>
+    <p id="p-00090-en" num="0090">Procedure of each process will be described in detail below.</p>
+    <heading id="h-00023-en">(Pressing process)</heading>
+    <p id="p-00091-en" num="0091">The pressing process is a process of press-forming the steel sheet having the lubricating film. By the process, the steel sheet is formed into a predetermined shape.</p>
+    <p id="p-00092-en" num="0092">The method of press forming is not particularly limited, and a known method (for example, hot pressing) can be used. During the process, additional processing such as drawing, stretch forming, bending, ironing, punching or the like may be performed.</p>
+    <p id="p-00093-en" num="0093">Furthermore, the press forming may be performed in one step, or may be performed in plural steps.</p>
+    <heading id="h-00024-en">(Film removing process)</heading>
+    <p id="p-00094-en" num="0094">The film removing process is a process of removing the lubricating film on the steel sheet, which has been formed into a predetermined shape in the pressing process, using an aqueous solution. By bringing the aqueous solution into contact with the lubricating film, the lubricating film can be removed from the steel sheet.</p>
+    <p id="p-00095-en" num="0095">The aqueous solution used is not particularly limited as long as it contains water. However, from the viewpoint that the lubricating film is efficiently removed, it is preferable for the aqueous solution to be an alkali aqueous solution. The pH of the alkali aqueous solution is preferably within a range of 8 to 13. In the preparation of the alkali aqueous solution, an alkaline component added to water is not particularly limited, and examples of the alkaline component include sodium carbonate, sodium hydroxide, sodium phosphate, sodium silicate, and the like.</p>
+    <p id="p-00096-en" num="0096">The method of bringing the aqueous solution into contact with the lubricating film is not particularly limited, and is exemplified by a method of applying the aqueous solution onto the steel sheet, a method of dipping the steel sheet into the aqueous solution, and the like.</p>
+    <p id="p-00097-en" num="0097">The period of time for bringing the aqueous solution into contact with the lubricating film is not particularly limited, and from industrial point of view, normally, the period of time is preferably 20 seconds to 200 seconds. In addition, normally, the temperature of the aqueous solution when the aqueous solution comes into contact with the lubricating film is preferably 30°C to 50°C.</p>
+    <heading id="h-00025-en">(Painting process)</heading>
+    <p id="p-00098-en" num="0098">The painting process is a process of performing painting on the steel sheet from which the lubricating film has been removed in the film removing process. By painting the steel sheet from which the lubricating film has been removed, the paint film having excellent adhesion property can be formed on the steel sheet.</p>
+    <p id="p-00099-en" num="0099">In the present invention, painting method and paint used are not particularly defined, and known painting means that is selected considering the adhesion property of the paint film, such as cationic electrocoating, electrostatic painting, spray painting, and the like, and commercially available paints can be utilized.</p>
+    <p id="p-00100-en" num="0100">As described above, the steel sheet having a lubricating film (steel sheet with a lubricating film) according to the present invention exhibits excellent lubricity, and the lubricating film thereof can be easily removed.</p>
+    <p id="p-00101-en" num="0101">The lubricating film can be easily removed by bringing the alkali aqueous solution into contact with the lubricating film for about 10 seconds.</p>
+    <heading id="h-00026-en">EXAMPLES</heading>
+    <p id="p-00102-en" num="0102">Hereinafter, the present invention will be specifically described with reference to Examples. However, the present invention is not limited thereto.</p>
+    <heading id="h-00027-en">[Example 1]</heading>
+    <heading id="h-00028-en">(First layer forming treatment)</heading>
+    <p id="p-00103-en" num="0103">The surface of a metal sheet (hot-dip galvanized steel sheet; GI) was cleaned by removing dirt and oil. To the surface of the metal sheet, an aqueous solution containing a composition for forming a first layer, of which the concentration had been adjusted such that the adhesion amount a, which will be described later, was obtained, was applied by a bar coating method, and dried.</p>
+    <p id="p-00104-en" num="0104">The composition for forming the first layer contains (A) polyethylene oxide (weight average molecular weight of 170,000), (B) a styrene-acrylic copolymer (weight average molecular weight of about 5,000), and water as a solvent. The composition for forming the first layer does not contain an inorganic component.</p>
+    <p id="p-00105-en" num="0105">The drying of the metal sheet was performed by disposing the metal sheet in a hot air-circulating type oven, and maintaining the metal sheet for 3 seconds after the surface temperature of the steel sheet reached 80°C.</p>
+    <p id="p-00106-en" num="0106">The adhesion amount of the film after the drying was obtained by creating a calibration curve of dried solid content and carbon intensity in advance, measuring carbon intensity of fluorescent X-rays, and converting the carbon intensity to the adhesion amount per unit area (m<sup>2</sup>).</p>
+    <p id="p-00107-en" num="0107">The total adhesion amount of (A) and (B) in Example 1 was 0.3 g/m<sup>2</sup>, the content of (A) in the first layer was 80% by weight, and the content of (B) in the first layer was 20% by weight.</p>
+    <heading id="h-00029-en">(Second layer forming treatment)</heading>
+    <p id="p-00108-en" num="0108">Next, a steel sheet with a lubricating film was produced by applying NOX-RUST 550HN manufactured by PARKER INDUSTRIES, INC. (kinematic viscosity of 17.4 mm<sup>2</sup>/s (40°C)) on the first layer by a roll coating method to form a second layer. The adhesion amount of the second layer was 1.5 g/m<sup>2</sup>.</p>
+    <p id="p-00109-en" num="0109">The adhesion amount was obtained by weighing the applied agent with a precision balance and calculating the weight per unit area.</p>
+    <p id="p-00110-en" num="0110">In addition, by using a hot-dip galvannealed steel sheet (GA) instead of the hot-dip galvanized steel sheet (GI), a steel sheet with a lubricating film was produced in the same manner as above.</p>
+    <heading id="h-00030-en">[Example 2]</heading>
+    <p id="p-00111-en" num="0111">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (A) the polyethylene oxide (weight average molecular weight of 170,000) was replaced by (A) polyethylene oxide (weight average molecular weight of 500,000); (B) the styrene-acrylic copolymer was replaced by (B) a polystyrene-acrylic acid copolymer (weight average molecular weight of about 5,000); and the adhesion amount of the first layer was changed from 0.3 g/m<sup>2</sup> to 0.9 g/m<sup>2</sup>.</p>
+    <heading id="h-00031-en">[Example 3]</heading>
+    <p id="p-00112-en" num="0112">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (B) the styrene-acrylic copolymer was replaced by (B) a styrene-acrylic acid copolymer (in which 50 mol% of the carboxy groups derived from acrylic acid were esterified with an alcohol having 4 carbon atoms) (weight average molecular weight of about 5,000); the total adhesion amount of (A) and (B) was changed from 0.3 g/m<sup>2</sup> to 0.4 g/m<sup>2</sup>; as well as the content of (A) was changed from 80% by weight to 90% by weight, and the content of (B) was changed from 20% by weight to 10% by weight.</p>
+    <heading id="h-00032-en">[Example 4]</heading>
+    <p id="p-00113-en" num="0113">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (A) the polyethylene oxide (weight average molecular weight of 170,000) was replaced by (A) polyethylene oxide (weight average molecular weight of 500,000); (B) the styrene-acrylic copolymer was replaced by (B) a styrene-maleic acid copolymer (in which 50 mol% of the carboxy groups derived from maleic acid were esterified with an alcohol having 2 carbon atoms) (weight average molecular weight of about 120,000); the total adhesion amount of (A) and (B) was changed from 0.3 g/m<sup>2</sup> to 0.2 g/m<sup>2</sup>; as well as the content of (A) was changed from 80% by weight to 55% by weight, and the content of (B) was changed from 20% by weight to 45% by weight.</p>
+    <p id="p-00114-en" num="0114">In addition, by using a hot-dip galvannealed steel sheet (GA) instead of the hot-dip galvanized steel sheet (GI), a steel sheet with a lubricating film was produced in the same manner as above.</p>
+    <heading id="h-00033-en">[Example 5]</heading>
+    <p id="p-00115-en" num="0115">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (B) the styrene-acrylic copolymer was replaced by (B) a styrene-maleic anhydride copolymer (weight average molecular weight of about 120,000); the total adhesion amount of (A) and (B) was changed from 0.3 g/m<sup>2</sup> to 0.4 g/m<sup>2</sup>; and the adhesion amount of the second layer (oil layer) was changed from 1.5 g/m<sup>2</sup> to 3.0 g/m<sup>2</sup>.</p>
+    <heading id="h-00034-en">[Example 6]</heading>
+    <p id="p-00116-en" num="0116">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (B) the styrene-acrylic copolymer was replaced by (B) an isobutylene-maleic anhydride copolymer (weight average molecular weight of about 120,000); the total adhesion amount of (A) and (B) was changed from 0.3 g/m<sup>2</sup> to 0.9 g/m<sup>2</sup>; and the adhesion amount of the second layer (oil layer) was changed from 1.5 g/m<sup>2</sup> to 1.0 g/m<sup>2</sup>.</p>
+    <heading id="h-00035-en">[Example 7]</heading>
+    <p id="p-00117-en" num="0117">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (B) the styrene-acrylic copolymer was replaced by (B) an isobutylene-maleic anhydride copolymer (in which 50 mol% of the carboxylic anhydride groups derived from maleic anhydride were imidized) (weight average molecular weight of about 120,000); and the total adhesion amount of (A) and (B) was changed from 0.3 g/m<sup>2</sup> to 0.2 g/m<sup>2</sup>.</p>
+    <heading id="h-00036-en">[Example 8]</heading>
+    <p id="p-00118-en" num="0118">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (B) the styrene-acrylic copolymer was replaced by (B) an isobutylene-maleic anhydride copolymer (in which 50 mol% of the carboxylic anhydride groups derived from maleic anhydride were imidized) (weight average molecular weight of about 120,000); (C) an inorganic compound comprising aluminum (Al) and phosphorus (P) was further added to the composition for forming the first layer; the total adhesion amount of (A), (B), and (C) was not specified to be 0.3 g/m<sup>2</sup> but 0.4 g/m<sup>2</sup>; and the first layer was defined such that the content of (A) remained 80% by weight, the content of (B) was changed to 19% by weight, and the content of (C) was 1% by weight.</p>
+    <p id="p-00119-en" num="0119">In addition, by using a hot-dip galvannealed steel sheet (GA) instead of the hot-dip galvanized steel sheet (GI), a steel sheet with a lubricating film was produced in the same manner as above.</p>
+    <heading id="h-00037-en">[Example 9]</heading>
+    <p id="p-00120-en" num="0120">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (C) an inorganic compound comprising zinc (Zn) and phosphorus (P) was further added to the composition for forming the first layer; the total adhesion amount of (A), (B), and (C) was not specified to be 0.3 g/m<sup>2</sup> but 0.4 g/m<sup>2</sup>; and the first layer was defined such that the content of (A) remained 80% by weight, the content of (B) was changed to 19% by weight, and the content of (C) was 1% by weight.</p>
+    <heading id="h-00038-en">[Example 10]</heading>
+    <p id="p-00121-en" num="0121">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (C) an inorganic compound comprising zinc (Zn) and phosphorus (P) was further added to the composition for forming the first layer; (A) the polyethylene oxide (weight average molecular weight of 170,000) was replaced by (A) polyethylene oxide (weight average molecular weight of 500,000); the total adhesion amount of (A), (B), and (C) was not specified to be 0.3 g/m<sup>2</sup> but 0.4 g/m<sup>2</sup>; and the first layer was defined such that the content of (A) remained 80% by weight, the content of (B) was changed to 10% by weight, and the content of (C) was 10% by weight.</p>
+    <heading id="h-00039-en">[Example 11]</heading>
+    <p id="p-00122-en" num="0122">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: as (C) an inorganic compound, SiO<sub>2</sub> was further added to the composition for forming the first layer; (B) the styrene-acrylic copolymer was replaced by (B) a styrene-maleic acid copolymer (in which 50 mol% of the carboxy groups derived from maleic acid were blocked with an alcohol having 4 carbon atoms) (weight average molecular weight of about 5,000); the total adhesion amount of (A), (B), and (C) was not specified to be 0.3 g/m<sup>2</sup> but 0.4 g/m<sup>2</sup>; and the first layer was defined such that the content of (A) was changed to 80.5% by weight, the content of (B) was changed to 19% by weight, and the content of (C) was 0.5% by weight.</p>
+    <heading id="h-00040-en">[Example 12]</heading>
+    <p id="p-00123-en" num="0123">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: as (C) an inorganic compound, WO<sub>3</sub> was further added to the composition for forming the first layer; (A) the polyethylene oxide (weight average molecular weight of 170,000) was replaced by (A) polyethylene oxide (weight average molecular weight of 500,000); (B) the styrene-acrylic copolymer was replaced by (B) a styrene-maleic acid copolymer (in which 50 mol% of the carboxy groups derived from maleic acid were blocked with an alcohol having 2 carbon atoms) (weight average molecular weight of about 5,000); the total adhesion amount of (A), (B), and (C) was not specified to be 0.3 g/m<sup>2</sup> but 0.4 g/m<sup>2</sup>; and the first layer was defined such that the content of (A) was changed to 78% by weight, the content of (B) remained 20% by weight, and the content of (C) was 2% by weight.</p>
+    <p id="p-00124-en" num="0124">In addition, by using a hot-dip galvannealed steel sheet (GA) instead of the hot-dip galvanized steel sheet (GI), a steel sheet with a lubricating film was produced in the same manner as above.</p>
+    <heading id="h-00041-en">[Example 13]</heading>
+    <p id="p-00125-en" num="0125">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: as (C) an inorganic compound, ZrO<sub>2</sub> was further added to the composition for forming the first layer; (B) the styrene-acrylic copolymer was replaced by (B) an isobutylene-maleic anhydride copolymer (weight average molecular weight of about 120,000); the total adhesion amount of (A), (B), and (C) was not specified to be 0.3 g/m<sup>2</sup> but 0.4 g/m<sup>2</sup>; and the first layer was defined such that the content of (A) was changed to 78% by weight, the content of (B) remained 20% by weight, and the content of (C) was 2% by weight.</p>
+    <heading id="h-00042-en">[Example 14]</heading>
+    <p id="p-00126-en" num="0126">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: as (C) an inorganic compound, LiOH was further added to the composition for forming the first layer; (B) the styrene-acrylic copolymer was replaced by (B) an isobutylene-maleic anhydride copolymer (weight average molecular weight of about 120,000); the total adhesion amount of (A), (B), and (C) was not specified to be 0.3 g/m<sup>2</sup> but 0.4 g/m<sup>2</sup>; and the first layer was defined such that the content of (A) was changed to 59.5% by weight, the content of (B) was changed to 40% by weight, and the content of (C) was 0.5% by weight.</p>
+    <heading id="h-00043-en">[Example 15]</heading>
+    <p id="p-00127-en" num="0127">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: as (C) an inorganic compound, ZnO was further added to the composition for forming the first layer; (B) the styrene-acrylic copolymer was replaced by (B) an isobutylene-maleic anhydride copolymer (in which 50 mol% of the carboxylic anhydride groups derived from maleic anhydride were imidized) (weight average molecular weight of about 120,000); the total adhesion amount of (A), (B), and (C) was not specified to be 0.3 g/m<sup>2</sup> but 0.4 g/m<sup>2</sup>; the first layer was defined such that the content of (A) was changed to 78% by weight, the content of (B) remained 20% by weight, and the content of the inorganic compound was 2% by weight; and the adhesion amount of the second layer (oil layer) was changed from 1.5 g/m<sup>2</sup> to 1.0 g/m<sup>2</sup>.</p>
+    <heading id="h-00044-en">[Example 16]</heading>
+    <p id="p-00128-en" num="0128">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: as (C) an inorganic compound, ZrO<sub>2</sub> was further added to the composition for forming the first layer; (B) the styrene-acrylic copolymer was replaced by (B) an isobutylene-maleic anhydride copolymer (in which 50 mol% of the carboxylic anhydride groups derived from maleic anhydride were imidized) (weight average molecular weight of about 120,000); the total adhesion amount of (A), (B), and (C) was not specified to be 0.3 g/m<sup>2</sup> but 0.4 g/m<sup>2</sup>; and the first layer was defined such that the content of (A) was changed to 79% by weight, the content of (B) remained 20% by weight, and the content of the inorganic compound was 1% by weight.</p>
+    <heading id="h-00045-en">[Comparative Example 1]</heading>
+    <p id="p-00129-en" num="0129">A steel sheet not subjected to the first layer forming treatment and the second layer forming treatment was prepared.</p>
+    <heading id="h-00046-en">[Comparative Example 2]</heading>
+    <p id="p-00130-en" num="0130">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (B) the styrene-acrylic copolymer was not used; and the adhesion amount of (A) in the first layer was specified to be 0.4 g/m<sup>2</sup>.</p>
+    <p id="p-00131-en" num="0131">In Comparative Example 2, (B) the styrene-acrylic copolymer was not contained in the first layer.</p>
+    <heading id="h-00047-en">[Comparative Example 3]</heading>
+    <p id="p-00132-en" num="0132">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (A) the polyethylene oxide (weight average molecular weight of 170,000) was not used; and the adhesion amount of (B) in the first layer was specified to be 0.4 g/m<sup>2</sup>.</p>
+    <p id="p-00133-en" num="0133">In Comparative Example 3, (A) the polyethylene oxide was not contained in the first layer.</p>
+    <heading id="h-00048-en">[Comparative Example 4]</heading>
+    <p id="p-00134-en" num="0134">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (A) the polyethylene oxide (weight average molecular weight of 170,000) was not used; (B) the styrene-acrylic copolymer was replaced by (B) a styrene-maleic anhydride copolymer (weight average molecular weight of about 120,000); and the adhesion amount of (B) in the first layer was specified to be 0.4 g/m<sup>2</sup>.</p>
+    <p id="p-00135-en" num="0135">In Comparative Example 4, (A) the polyethylene oxide was not contained in the first layer.</p>
+    <heading id="h-00049-en">[Comparative Example 5]</heading>
+    <p id="p-00136-en" num="0136">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (B) the styrene-acrylic copolymer was replaced by (B) a styrene-maleic anhydride copolymer (weight average molecular weight of about 120,000); the total adhesion amount of (A) and (B) was changed from 0.3 g/m<sup>2</sup> to 0.4 g/m<sup>2</sup>; as well as the content of (A) in the first layer was changed from 80% by weight to 40% by weight, and the content of (B) in the first layer was changed from 20% by weight to 60% by weight.</p>
+    <p id="p-00137-en" num="0137">In Comparative Example 5, the weight ratio of (B) with respect to the total weight of (A) and (B) was out of the predetermined range.</p>
+    <heading id="h-00050-en">[Comparative Example 6]</heading>
+    <p id="p-00138-en" num="0138">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (B) the styrene-acrylic copolymer was replaced by (B) an isobutylene-maleic anhydride copolymer (in which 50 mol% of the carboxylic anhydride groups derived from maleic anhydride were imidized) (weight average molecular weight of about 120,000); the total adhesion amount of (A) and (B) was changed from 0.3 g/m<sup>2</sup> to 0.4 g/m<sup>2</sup>; as well as the content of (A) in the first layer was changed from 80% by weight to 98% by weight, and the content of (B) in the first layer was changed from 20% by weight to 2% by weight.</p>
+    <p id="p-00139-en" num="0139">In Comparative Example 6, the weight ratio of (B) with respect to the total weight of (A) and (B) was out of the predetermined range.</p>
+    <heading id="h-00051-en">[Comparative Example 7]</heading>
+    <p id="p-00140-en" num="0140">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (B) the styrene-acrylic copolymer was replaced by (B) a styrene-maleic acid copolymer (weight average molecular weight of about 5,000); and the total adhesion amount of (A) and (B) was changed from 0.3 g/m<sup>2</sup> to 0.05 g/m<sup>2</sup>.</p>
+    <p id="p-00141-en" num="0141">In Comparative Example 7, the total adhesion amount of (A) and (B) was out of the predetermined range.</p>
+    <heading id="h-00052-en">[Comparative Example 8]</heading>
+    <p id="p-00142-en" num="0142">A steel sheet with a lubricating film was produced according to the same procedure as in Example 1 except that: (A) the polyethylene oxide (weight average molecular weight of 170,000) was replaced by (A) polyethylene oxide (weight average molecular weight of 500,000); the total adhesion amount of (A) and (B) was changed from 0.3 g/m<sup>2</sup> to 0.4 g/m<sup>2</sup>; and the adhesion amount of the second layer (oil layer) was changed from 1.5 g/m<sup>2</sup> to 0.05 g/m<sup>2</sup>.</p>
+    <p id="p-00143-en" num="0143">In Comparative Example 8, the adhesion amount of the second layer was out of the predetermined range.</p>
+    <heading id="h-00053-en">[Comparative Example 9]</heading>
+    <p id="p-00144-en" num="0144">When polyethylene oxide (weight average molecular weight of 700,000) was dissolved in water at a concentration of 2% by weight, the absolute viscosity was greater than 300 mPa·s, and as a result, roll coating with the solution was substantially impossible, and thus, it was not possible to obtain a steel sheet.</p>
+    <p id="p-00145-en" num="0145">When the solution was diluted with water until the roll coating became possible, the concentration of polyethylene oxide was too low, and as a result, it was not possible to secure the predetermined adhesion amount of polyethylene oxide.</p>
+    <p id="p-00146-en" num="0146">[Table 1] <tables id="tables-00001-en" num="0001"><img id="img-00001-en" wi="160" he="191" img-content="table" file="EP2940189A1_00003.PNG" img-format="png" original="imgb0001.tif" /></tables></p>
+    <p id="p-00147-en" num="0147">In Table 1, the meanings of the symbols are as follows. <ul id="ul-00004-en" list-style="none" compact="compact"><li>GI: A hot-dip galvanized steel sheet.</li><li>GA: A hot-dip galvannealed steel sheet.</li><li>X: A styrene-based hydrocarbon compound or an olefin-based hydrocarbon compound having 3 or more carbon atoms.</li><li>Y: Either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group, which are copolymerizable with X.</li><li>St: Styrene.</li><li>IB: Isobutylene.</li><li>AA: Acrylic acid.</li><li>MA: Maleic acid.</li><li>MAH: Maleic anhydride.</li></ul></p>
+    <p id="p-00148-en" num="0148">The following evaluations were performed on the steel sheets obtained in Examples and Comparative Examples.</p>
+    <heading id="h-00054-en">&lt;Flat surface sliding test on workability&gt;</heading>
+    <p id="p-00149-en" num="0149">The test piece was cut to a size of 30 mm x 300 mm, and a flat surface sliding test was performed on the lubricating film surface of the steel sheet using a universal testing machine (in a room temperature environment under such conditions that the die was a mirror finished flat surface die (both shoulders of 5 mm round), the pressing load was 10 kN, the sliding speed was 360 mm/min, and the sliding distance was 100 mm).</p>
+    <heading id="h-00055-en">(1) Adjustment of dry environment and wet environment.</heading>
+    <p id="p-00150-en" num="0150">In the test, the lubricity after retention in a wet environment was evaluated (as the presence of black refuse). The wet environment was of two types.</p>
+    <p id="p-00151-en" num="0151">Dry environment: The sliding test was performed immediately after applying oil.</p>
+    <p id="p-00152-en" num="0152">Wet environment A: The test piece was held in an environment at 40°C and 70% RH for one day after applying oil, and the sliding test was performed two hours after the test piece was taken out from the environment.</p>
+    <p id="p-00153-en" num="0153">Wet environment B: The test piece was held in an environment at 40°C and 90% RH for three hours after applying oil, and the sliding test was performed within one minute after the test piece was taken out from the environment.</p>
+    <heading id="h-00056-en">(2) Evaluation methods.</heading>
+    <heading id="h-00057-en">(2-1) Evaluation method 1: Workability (appearance determination).</heading>
+    <p id="p-00154-en" num="0154">The surface state and the presence of black refuse were visually checked during the flat surface sliding test. <ul id="ul-00005-en" list-style="none" compact="compact"><li>A: No or very little black refuse was present.</li><li>B: Black refuse was little, but more or less visible.</li><li>C: The film was slightly peeled off in a sliding area, and black refuse was much.</li><li>D: The base material was considerably bared, and galling, stick-slip, or chatter was recognized.</li></ul></p>
+    <p id="p-00155-en" num="0155">In the evaluation, A is the best rating, and rating B indicates that the steel sheet in question was practicable, with ratings C and D being unfavorable.</p>
+    <heading id="h-00058-en">(2-2) Evaluation method 2: Workability (dynamic friction coefficient)</heading>
+    <p id="p-00156-en" num="0156">In the flat surface sliding test, from the pressing load and the drawing load, the dynamic friction coefficient (µ') was calculated. Evaluation was performed as follows. <ul id="ul-00006-en" list-style="none" compact="compact"><li>Excellent: µ' &lt; 0.08</li><li>Good: 0.08 ≤ µ' &lt; 0.1</li><li>No good: µ' ≥ 0.1</li></ul></p>
+    <p id="p-00157-en" num="0157">"Excellent" and "Good" ratings are acceptable, and "No good" rating is not acceptable.</p>
+    <heading id="h-00059-en">&lt;Degreasability (film removability) test&gt;</heading>
+    <p id="p-00158-en" num="0158">Using an alkaline degreaser Fine Cleaner E2011 (manufactured by Nihon Parkerizing Co., Ltd.), a bath was so prepared with tap water of Hiratsuka city as to contain 13 g/L of agent A of the degreaser and 7 g/L of agent B thereof, and heated to 43°C. Each test piece was immersed with shaking in the bath for 2 minutes. Then, the relevant test piece was rinsed with water by immersing it with shaking in the same tap water for 30 seconds. Subsequently, the test piece was kept vertical for 30 seconds to remove water therefrom, and the water-wetted area ratio of the surface of the steel sheet in a state of being allowed to stand still in an upright position was visually determined. In practical use, it is preferable that a state of being wet with water is maintained. Here, the water-wetted area ratio (%) represents a ratio of the area of the portion which is wet with water with respect to the total area of the steel sheet when the steel sheet surface is visually observed.</p>
+    <heading id="h-00060-en">&lt;Evaluation Method&gt;</heading>
+    <p id="p-00159-en" num="0159">
+      <ul id="ul-00007-en" list-style="none" compact="compact">
+        <li>Excellent: Water-wetted area ratio was 100%.</li>
+        <li>Good: Water-wetted area ratio was 80% or greater but less than 100%.</li>
+        <li>Fair: Water-wetted area ratio was 50% or greater but less than 80%.</li>
+        <li>Bad: Water-wetted area ratio was less than 50%.</li>
+        <li>"Excellent" and "Good" ratings are acceptable, and "Fair" and "Bad" ratings are not acceptable.</li>
+      </ul>
+    </p>
+    <heading id="h-00061-en">&lt;Evaluation of primary rust prevention capacity&gt;</heading>
+    <p id="p-00160-en" num="0160">In the evaluation of primary rust prevention capacity, the evaluation was performed by the following method and in the following environment.</p>
+    <heading id="h-00062-en">(1) Preparation of test piece</heading>
+    <p id="p-00161-en" num="0161">The target surfaces (surfaces with a lubricating film) of the steel sheets were so superimposed as to face each other, clamps called chucks were disposed at the four corners thereof, the chucks were fastened with bolts and nuts, and the bolts and nuts were tightened and fixed by a torque wrench. The tightening torque by the torque wrench was 70 kgf/cm<sup>2</sup>.</p>
+    <p id="p-00162-en" num="0162">The above test piece was held in a wet environment at 40°C and 70% RH for 10 days. After 10 days, the test piece was taken out from the wet environment, the pressure by the torque wrench was removed, and the presence or absence of white rust and the occurrence portion of white rust on the steel sheets having faced each other were checked.</p>
+    <heading id="h-00063-en">(2) Evaluation Method</heading>
+    <p id="p-00163-en" num="0163">
+      <ul id="ul-00008-en" list-style="none" compact="compact">
+        <li>Excellent: White rust was not observed in the inner area 0.5 cm away from the edge of the sheet (white rust was very slightly observed at the edge).</li>
+        <li>Good: White rust was slightly observed in the area between the edge and the position about 1 cm away from the edge.</li>
+        <li>Fair: White rust was observed in the area between the edge and the position about 2 cm away from the edge, and in the area more inside, white rust was faintly observed, although at an inconspicuous level.</li>
+        <li>Bad: White rust was observed in the area up to the vicinity of the center of the sheet from the edge.</li>
+        <li>"Excellent" (extremely suitable) and "Good" (practically suitable) ratings are acceptable, and "Fair" (Unsuitable) and "Bad" (entirely unsuitable) ratings are not acceptable.</li>
+      </ul>
+      <tables id="tables-00002-en" num="0002">
+        <img id="img-00002-en" wi="160" he="160" img-content="table" file="EP2940189A1_00004.PNG" img-format="png" original="imgb0002.tif" />
+      </tables>
+    </p>
+    <p id="p-00164-en" num="0164">As shown in Table 2, in the steel sheets of Examples 1 to 16 of the present invention, even when the steel sheets were retained in a wet environment, black refuse was not observed, the dynamic friction coefficient µ' was below 0.1, and thus, the lubricity was excellent. In addition, the degreasability (film removability) was also satisfactory. Above all, the steel sheets of Examples 1 to 3, 5 to 13, 15, and 16 in which the weight ratio of (B) with respect to (A) + (B) was 10% by weight to 25% by weight showed more excellent workability.</p>
+    <p id="p-00165-en" num="0165">The steel sheets of Comparative Examples 1 to 8 out of the scope of the present invention were practicable indeed in terms of the primary rust prevention capacity and the degreasability (film removability). However, the steel sheets corresponded to the following (a) or (b), and were not at a satisfactory level in terms of both (all) the relevant evaluations. <ol><li>(a) The appearance determination was rated C or D and the dynamic friction coefficient µ' was high, so that neither of them was satisfactory.</li><li>(b) Black refuse was much or the dynamic friction coefficient µ' was 0.1 or greater, so that one or the other was not satisfactory.</li></ol></p>
+    <p id="p-00166-en" num="0166">In Examples 1, 4, 8, and 12, the same results were obtained in a case where the steel sheet was a GI and in a case where the steel sheet was a GA.</p>
+    <heading id="h-00064-en">REFERENCE SIGNS LIST</heading>
+    <p id="p-00167-en" num="0167">
+      <dl id="dl-00001-en" compact="compact">
+        <dt>10</dt>
+        <dd>STEEL SHEET HAVING A LUBRICATING FILM (STEEL SHEET WITH A LUBRICATING FILM)</dd>
+        <dt>12</dt>
+        <dd>STEEL SHEET</dd>
+        <dt>14</dt>
+        <dd>LUBRICATING FILM</dd>
+        <dt>16</dt>
+        <dd>FIRST LAYER</dd>
+        <dt>18</dt>
+        <dd>SECOND LAYER</dd>
+      </dl>
+    </p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A steel sheet having an alkali-soluble lubricating film on a surface,<br />
+wherein the lubricating film has:
+<claim-text>a first layer which contains (A) polyethylene oxide with a weight average molecular weight of 50,000 to 500,000 and (B) a copolymer of (X) a styrene-based hydrocarbon compound or an olefin-based hydrocarbon compound with three or more carbon atoms and (Y) either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group that is copolymerizable with (X), with carboxylic anhydride groups or carboxy groups in the copolymer being partially or wholly ammonia-modified, imidized, or blocked with an alcohol in some cases, and which contains (B) at a weight ratio relative to a total of (A) and (B) of greater than 5% by weight but less than 50% by weight; and</claim-text><claim-text>a second layer which is formed of an oil layer containing an oil component with a kinematic viscosity of 3 to 32 mm<sup>2</sup>/s (at 40°C) and provided on the first layer, and</claim-text><claim-text>wherein a total adhesion amount of (A) and (B) is 0.1 to 1.0 g/m<sup>2</sup>, and an adhesion amount of the oil layer is 0.1 to 3.0 g/m<sup>2</sup>.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The steel sheet having an alkali-soluble lubricating film according to Claim 1, wherein (X) the styrene-based hydrocarbon compound or the olefin-based hydrocarbon compound with three or more carbon atoms is at least one selected from the group consisting of styrene, isobutylene and propylene, and the either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group is at least one selected from the group consisting of maleic acid, acrylic acid, methacrylic acid, maleic anhydride and itaconic acid.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The steel sheet having an alkali-soluble lubricating film according to Claim 1 or 2,<br />
+wherein the either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group is maleic acid, and<br />
+wherein greater than 0 mol% but not greater than 50 mol% of carboxy groups derived from the maleic acid in the copolymer are blocked with an alcohol with one to four carbon atoms.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The steel sheet having an alkali-soluble lubricating film according to Claim 1 or 2,<br />
+wherein the either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group is maleic anhydride, and<br />
+wherein greater than 0 mol% but not greater than 50 mol% of carboxy groups which are generated by ring opening of carboxylic anhydride groups derived from the maleic anhydride in the copolymer are blocked with an alcohol with one to four carbon atoms.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The steel sheet having an alkali-soluble lubricating film according to Claim 1 or 2,<br />
+wherein the either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group is maleic anhydride, and<br />
+wherein carboxylic anhydride groups derived from the maleic anhydride in the copolymer are at least partially imidized.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The steel sheet having an alkali-soluble lubricating film according to any one of Claims 1 to 5, wherein the steel sheet which has the alkali-soluble lubricating film is a zinc- or zinc alloy-coated steel sheet selected from the group consisting of a hot-dip galvanized steel sheet, a hot-dip galvannealed steel sheet, a zinc electrogalvanized steel sheet and a zinc alloy electrogalvanized steel sheet.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text> The steel sheet having an alkali-soluble lubricating film according to any one of Claims 1 to 6, wherein the first layer further contains at least one metal selected from the group consisting of Li, Mg, Al, Ca, Mn, Zn, Si, P, W, Zr and Sn in a form of an oxide, a hydroxide or a salt, with a total weight of (C) the oxide, the hydroxide and the salt being 0.01% by weight to 10% by weight of a total weight of (A), (B) and (C), and a total adhesion amount of (A), (B) and (C) is 0.1 to 1.0 g/m<sup>2</sup>.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>A composition for forming a lubricating film on a steel sheet, comprising:
+<claim-text>(A) polyethylene oxide with a weight average molecular weight of 50,000 to 500,000; and</claim-text><claim-text>(B) a copolymer of (X) a styrene-based hydrocarbon compound or an olefin-based hydrocarbon compound with three or more carbon atoms and (Y) either or both of a polymerizable unsaturated compound having a carboxylic anhydride group and a polymerizable unsaturated compound having a carboxy group that is copolymerizable with (X), with carboxy groups in the copolymer being partially ammonia-modified, imidized, or blocked with an alcohol in some cases,</claim-text>
+wherein (B) is at a weight ratio relative to a total of (A) and (B) of greater than 5% by weight but less than 50% by weight.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The composition according to Claim 8, further comprising at least one metal selected from the group consisting of Li, Mg, Al, Ca, Mn, Zn, Si, P, W, Zr and Sn in a form of an oxide, a hydroxide or a salt, with a total weight of (C) the oxide, the hydroxide and the salt being 0.01% by weight to 10% by weight of a total weight of (A), (B) and (C).</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>A method for producing the steel sheet having an alkali-soluble lubricating film according to any one of Claims 1 to 7, comprising:
+<claim-text>the step of forming the first layer by applying the composition according to Claim 8 onto a steel sheet such that the total adhesion amount of (A) and (B) is 0.1 to 1.0 g/m<sup>2</sup>, or the step of forming the first layer by applying the composition according to Claim 9 onto a steel sheet such that a total adhesion amount of (A), (B) and (C) is 0.1 to 1.0 g/m<sup>2</sup>; and</claim-text><claim-text>the step of forming the second layer formed of the oil layer by applying a composition containing the oil component with a kinematic viscosity of 3 to 32 mm<sup>2</sup>/s (at 40°C) onto the first layer such that the adhesion amount of the oil layer is 0.1 to 3.0 g/m<sup>2</sup>.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940189A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940189A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940189A1_00003.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940189A1_00004.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940189A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940189A1.PDF" type="pdf" size="418947" pages="25" />
+</lexisnexis-patent-document>

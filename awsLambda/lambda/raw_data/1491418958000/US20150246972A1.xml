@@ -1,0 +1,2063 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246972A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021245" date-changed="20160127" time-changed="023630">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139079">
+        <country>US</country>
+        <doc-number>20150246972</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14714775</doc-number>
+        <date>20150518</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C07K  16/28        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>16</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  38/20        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K  39/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61K  39/395       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>395</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A61K  45/06        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C07K  16/30        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>16</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C07K  16/2818      20130101 FI20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>16</main-group>
+        <subgroup>2818</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  38/2013      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>2013</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  39/00        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  39/39558     20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>39558</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K  45/06        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K2039/505       20130101 LA20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>505</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61K2039/545       20130101 LA20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>545</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C07K  16/3053      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>16</main-group>
+        <subgroup>3053</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C07K2317/21        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>2317</main-group>
+        <subgroup>21</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">CTLA-4 ANTIBODY DOSAGE ESCALATION REGIMENS</invention-title>
+    <references-cited date-changed="20160127">
+      <patent-citations name="patcit" date-changed="20160127" />
+      <non-patent-citations name="nplcit" date-changed="20160127" />
+      <citation>
+        <patcit num="1" dnum="US2009031187A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090031187</doc-number>
+            <kind>A1</kind>
+            <name>TAGUCHI MASAKAZU [JP]</name>
+            <date>20090129</date>
+          </document-id>
+          <application-date>
+            <date>20080819</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2014161767A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20140161767</doc-number>
+            <kind>A1</kind>
+            <name>LEUSCHNER CAROLA [US], et al</name>
+            <date>20140612</date>
+          </document-id>
+          <application-date>
+            <date>20131114</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2015125463A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20150125463</doc-number>
+            <kind>A1</kind>
+            <name>COGSWELL JOHN P [US], et al</name>
+            <date>20150507</date>
+          </document-id>
+          <application-date>
+            <date>20130513</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Horinouchi et al. Invest. New Drugs (2015) 33:881-889</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>Maki et al. Sarcoma. 2013;2013:168145. doi: 10.1155/2013/168145. Epub 2013 Feb 27.</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>Royal et al. J. Immunother. (2010) 33:828-833</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="4">
+          <text>Yang et al. J. Immunother. (2007) 30(8): 825-830</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13335232</doc-number>
+              <date>20111222</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9062111</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007147</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>11567846</doc-number>
+              <date>20061207</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8110194</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13335232</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60748688</doc-number>
+          <date>20051207</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Medarex, L.L.C.</orgname>
+            <address>
+              <city>Princeton</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nichol</last-name>
+            <first-name>Geoffrey M.</first-name>
+            <address>
+              <city>Short Hills</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lowy</last-name>
+            <first-name>Israel</first-name>
+            <address>
+              <city>Dobbs Ferry</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173461874">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246972</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173461873">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246972</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A disease or condition, such as cancer or an infectious disease, can be treated in a patient by administering a CTLA-4 antibody in an escalating dosage regimen until a partial or complete response is elicited in the patient or a pre-determined maximum dosage is reached.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150604</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246972A1</docdb-publication-number>
+      <docdb-application-id>444209844</docdb-application-id>
+      <new-owner>E. R. SQUIBB &amp; SONS, L.L.C., NEW JERSEY</new-owner>
+      <free-text-description>MERGER;ASSIGNOR:MEDAREX, L.L.C.;REEL/FRAME:035784/0420</free-text-description>
+      <effective-date>
+        <date>20140930</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation application of U.S. application Ser. No. 13/335,232, filed Dec. 22, 2011, which is a continuation application of U.S. application Ser. No. 11/567,846, filed Dec. 7, 2006, issued as U.S. Pat. No. 8,110,194, which claims priority to U.S. Provisional application Ser. No. 60/748,688, filed on Dec. 7, 2005, the contents of each of which are incorporated by reference in their entirety, and to each of which priority is claimed.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">SEQUENCE LISTING</heading>
+      <p id="p-00002-en" num="0002">The specification further incorporates by reference the Sequence Listing submitted herewith via EFS on May 18, 2014. Pursuant to 37 C.F.R. §1.52(e)(5), the Sequence Listing text file, identified as “0773750983SEQLIST.TXT,” is 3,687 bytes and was created on May 18, 2014. The Sequence Listing, electronically filed herewith, does not extend beyond the scope of the specification and thus does not contain new matter.</p>
+      <heading id="h-00003-en" level="1">1. FIELD OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">The present invention relates to methods of treating a disease, such as cancer or an infectious disease, in a patient by administering a CTLA-4 antibody to the patient in an escalating dosage regimen until an optimum dosage is reached.</p>
+      <p id="p-00004-en" num="0004">2. BACKGROUND OF THE INVENTION</p>
+      <p id="p-00005-en" num="0005">The vertebrate immune system requires multiple signals to achieve optimal immune activation (see, e.g., Janeway, Cold Spring Harbor Symp. Quant. Biol. 1989; 54:-14; Paul William E., ed. Raven Press, N.Y., Fundamental Immunology, 4th edition (1998), particularly chapters 12 and 13, pages 411 to 478). Interactions between T lymphocytes (T cells) and antigen presenting cells (APC) are essential to the immune response. Levels of many cohesive molecules found on T cells and APC's increase during an immune response (Springer et al., A. Rev. Immunol. 1987; 5:223-252; Shaw and Shimuzu, Current Opinion in Immunology, 1988 Eds. Kindt and Long, 1:92-97; and Hemler, Immunology Today 1988; 9:109-113). Increased levels of these molecules may help explain why activated APC's are more effective at stimulating antigen-specific T cell proliferation than are resting APC's (Kaiuchi et al., J. Immunol. 1983; 131:109-114; Kreiger et al., J. Immunol. 1985; 135:2937-2945; McKenzie, J. Immunol. 1988; 141:2907-2911; and Hawrylowicz and Unanue, J. Immunol. 1988; 141:4083-4088).</p>
+      <p id="p-00006-en" num="0006">T cell immune response is a complex process that involves cell-cell interactions (Springer et al., A. Rev. Immunol. 1987; 5:223-252), particularly between T and accessory cells such as APC's, and production of soluble immune mediators (cytokines or lymphokines) (Dinarello, New Engl. J. Med 1987; 317:940-945; Sallusto, J. Exp. Med. 1997; 179:1109-1118). This response is regulated by several T-cell surface receptors, including the T-cell receptor complex (Weiss, Ann. Rev. Immunol. 1986; 4:593-619) and other “accessory” surface molecules (Allison, Curr. Opin. Immunol.1994; 6:414-419; Springer, 1987, supra). Many of these accessory molecules are naturally occurring cell surface differentiation (CD) antigens defined by the reactivity of monoclonal antibodies on the surface of cells (McMichael, Ed., <i>Leukocyte Typing III</i>, Oxford Univ. Press, Oxford, N.Y., 1987).</p>
+      <p id="p-00007-en" num="0007">CD28 antigen, a homodimeric glycoprotein of the immunoglobulin superfamily (Aruffo and Seed, Proc. Natl. Acad. Sci. 1987; 84:8573-8577), is an accessory molecule found on most mature human T cells (Damle et al., J. Immunol. 1983; 131:2296-2300). Current evidence suggests that this molecule functions in an alternative T cell activation pathway distinct from that initiated by the T-cell receptor complex (June et al., Mol. Cell. Biol. 1987; 7:4472-4481). Monoclonal antibodies (MAbs) reactive with CD28 antigen can augment T cell responses initiated by various polyclonal stimuli (reviewed by June et al., supra). These stimulatory effects may result from MAb-induced cytokine production (Thompson et al., Proc. Natl. Acad. Sci 1989; 86:1333-1337; and Lindsten et al., Science 1989; 244:339-343) as a consequence of increased mRNA stabilization (Lindsten et al., 1989, supra).</p>
+      <p id="p-00008-en" num="0008">CTLA-4 (cytotoxic T lymphocycte-associated antigen-4) is accepted as opposing CD28 activity and dampening T cell activation (Krummel, J. Exp. Med. 1995; 182:459-465; Krummel et al., Int'l Immunol. 1996; 8:519-523; Chambers et al., Immunity. 1997; 7:885-895). CTLA-4 deficient mice suffer from massive lymphoproliferation (Chambers et al., supra). It has been reported that CTLA-4 blockade augments T cell responses in vitro (Walunas et al., Immunity. 1994; 1:405-413) and in vivo (Kearney, J. Immunol. 1995; 155:1032-1036), exacerbates antitumor immunity (Leach, Science 1996; 271:1734-1736), and enhances an induced autoimmune disease (Luhder, J Exp. Med. 1998; 187:427-432). It has also been reported that CTLA-4 has an alternative or additional impact on the initial character of the T cell immune response (Chambers, Curr. Opin. Immunol. 1997; 9:396-404; Bluestone, J. Immunol. 1997; 158:1989-1993; Thompson, Immunity 1997; 7:445-450). This is consistent with the observation that some autoimmune patients have autoantibodies to CTLA-4. It is possible that CTLA-4 blocking autoantibodies play a pathogenic role in these patients (Matsui, J. Immunol. 1999; 162:4328-4335).</p>
+      <p id="p-00009-en" num="0009">Non-human CTLA-4 antibodies have been used in the various studies discussed above. Furthermore, human antibodies against human CTLA-4 have been described as immunostimulation modulators in a number of disease conditions, such as treating or preventing viral and bacterial infection and for treating cancer (e.g., PCT Publication WO 01/14424 and PCT Publication WO 00/37504). U.S. Pat. No. 5,855,887 discloses a method of increasing the response of a mammalian T cell to antigenic stimulation by combining a T cell with a CTLA-4 blocking agent. U.S. Pat. No. 5,811,097 discloses a method of decreasing the growth of non-T cell tumors by administering a CTLA-4 blocking agent. U.S. Pat. No. 6,984,720 and U.S. Patent Publication No. 2002/0086014 disclose human CTLA-4 antibodies. Each of these patents and applications is hereby incorporated by reference.</p>
+      <p id="p-00010-en" num="0010">U.S. Patent Publication No. 2004/0241169 describes a treatment for cancer in which the target dosage of a CTLA-4 antibody for a patient is a dosage that results in an autoimmune event.</p>
+      <p id="p-00011-en" num="0011">There continues to be a need for methods of administering an optimum dose of a CTLA-4 antibody for the treatment of a disease, such as cancer or infectious disease, to a patient that meets a predetermined maximum dosage level, or results in a partial or complete response, and minimizes the incidence and/or severity of an adverse event.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00012-en" num="0012">This invention is directed to methods of administering a CTLA-4 antibody to a patient in a dosage escalation regimen for treating a disease or condition, such as cancer or an infectious disease, by administering escalating dosages of the CTLA-4 antibody to the patient until an optimum dosage is reached.</p>
+      <p id="p-00013-en" num="0013">The present invention provides methods for treating cancer in a patient by administering a CTLA-4 antibody to the patient according to a dosage escalation regimen, which comprises administering increasing dosages of the CTLA-4 antibody to the patient until an optimum dosage is reached.</p>
+      <p id="p-00014-en" num="0014">In one embodiment, the escalating dosage regimen includes a linear increase in CTLA-4 antibody dosage. In another embodiment, the escalating dosage regimen includes a stepwise increase in CTLA-4 antibody dosage.</p>
+      <p id="p-00015-en" num="0015">According to the present invention, a dosage escalation regimen permits a patient to receive an optimum dosage of a CTLA-4 antibody, which is a dosage that results in a partial or complete response in the patient, or is a predetermined maximum dosage.</p>
+      <p id="p-00016-en" num="0016">In an embodiment of the invention, a dosage of CTLA-4 antibody is administered about every three weeks.</p>
+      <p id="p-00017-en" num="0017">In a specific embodiment, the escalating dosage regimen includes administering a first dosage of CTLA-4 antibody at about 3 mg/kg, a second dosage of CTLA-4 antibody at about 5 mg/kg, and a third dosage of CTLA-4 antibody at about 9 mg/kg.</p>
+      <p id="p-00018-en" num="0018">In another specific embodiment, the escalating dosage regimen includes administering a first dosage of CTLA-4 antibody at about 5 mg/kg and a second dosage of CTLA-4 antibody at about 9 mg/kg.</p>
+      <p id="p-00019-en" num="0019">Further, the present invention provides an escalating dosage regimen, which includes administering an increasing dosage of CTLA-4 antibody about every six weeks.</p>
+      <p id="p-00020-en" num="0020">In an aspect of the present invention, a stepwise escalating dosage regimen is provided, which includes administering a first CTLA-4 antibody dosage of about 3 mg/kg, a second CTLA-4 antibody dosage of about 3 mg/kg, a third CTLA-4 antibody dosage of about 5 mg/kg, a fourth CTLA-4 antibody dosage of about 5 mg/kg, and a fifth CTLA-4 antibody dosage of about 9 mg/kg. In another aspect of the present invention, a stepwise escalating dosage regimen is provided, which includes administering a first dosage of 5 mg/kg, a second dosage of 5 mg/kg, and a third dosage of 9 mg/kg.</p>
+      <p id="p-00021-en" num="0021">The present invention further provides methods for treating infectious disease in a patient comprising administering a CTLA-4 antibody to the patient according to a dosage escalation regimen, which includes administering increasing dosages of the CTLA-4 antibody to the patient until an optimum dosage is reached.</p>
+      <p id="p-00022-en" num="0022">In particular embodiments of the present invention, the CTLA-4 antibody is a human sequence antibody. In a more particular embodiment, the CTLA-4 antibody is MDX-010, also referred to as ipilimumab. The MDX-010 antibody comprises a heavy chain variable region that comprises CDR1, CDR2, and CDR3 domains; and a light chain variable region that comprises CDR1, CDR2, and CDR3 domains, wherein the heavy chain variable region CDR1 comprises amino acids having the sequence set forth in SEQ ID NO:1; the heavy chain variable region CDR2 comprises amino acids having the sequence set forth in SEQ ID N0:2; the heavy chain variable region CDR3 comprises amino acids having the sequence set forth in SEQ ID NO:3; the light chain variable region CDR1 comprises amino acids having the sequence set forth in SEQ ID NO:4; the light chain variable region CDR2 comprises amino acids having the sequence set forth in SEQ ID NO:5; and the light chain variable region CDR3 comprises amino acids having the sequence set forth in SEQ ID N0:6. The MDX-010 antibody comprises a heavy chain variable region comprising amino acids comprising the sequence set forth in SEQ ID NO:7. The MDX-010 antibody comprises a light chain variable region comprising amino acids comprising the sequence set forth in SEQ ID NO:8.</p>
+      <p id="p-00023-en" num="0023">In embodiments of the present invention, a CTLA-4 antibody can be administered according to a dosage escalation regimen in combination with a vaccine (e.g., gp100, tyrosinase or MART-1), a chemotherapeutic agent (e.g., cyclophosphamide or dacarbazine), or a cytokine (e.g., IL-2).</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00024-en" num="0024">It has been surprisingly found that a patient receiving a CTLA-4 antibody in an escalating dosage regimen according to the present invention can tolerate an optimum dose of the antibody. The methods of the present invention include dosage escalation regimens that permit a patient to tolerate a dosage of a CTLA-4 antibody that is about three times greater than previously reported maximum dosages. For example, the present invention provides a method for administering a 9 mg/kg dose of a CTLA-4 antibody to a patient, and previous studies reported a maximum CTLA-4 antibody dose of 3 mg/kg (see, e.g., the clinical studies disclosed in U.S. Patent Publication No. 2004/0241169).</p>
+      <p id="p-00025-en" num="0025">The methods of the present invention are based, in part, on the clinical study summarized below and described further in the example.</p>
+      <p id="p-00026-en" num="0026">In a clinical study, 46 HLA-A2 negative patients with progressive stage IV melanoma were treated with a CTLA-4 antibody according to a dose escalation regimen. Twenty-three patients started CTLA-4 antibody therapy at 3 mg/kg and 23 patients started therapy at 5 mg/kg. The patients received progressively increased doses of the CTLA-4 antibody until an objective clinical response was observed, a maximum of 9 mg/kg was reached, or a grade III/IV autoimmune toxicity occurred. Five patients (11%) had an objective clinical response. Two of the responses occurred without grade III/IV autoimmune toxicity. One of the responses occurred without autoimmune toxicity. To date, four of the responses are ongoing.</p>
+      <heading id="h-00006-en" level="1">2.1. Escalating Dosage Regimens</heading>
+      <p id="p-00027-en" num="0027">The present invention includes methods for escalating the dosage of a CTLA-4 antibody administered to a patient until a partial or complete response is elicited in the patient, or a pre-determined maximum dosage is reached.</p>
+      <p id="p-00028-en" num="0028">As used herein, a “complete response” means a complete disappearance of a symptom or objective indicia of a disease. For example, a complete response in a patient with a tumor means the disappearance of all measurable lesions for greater than or equal to one month. For patients with infectious diseases, a complete response means the complete clearance of the infectious toxin or pathogen from the patient (as measured by, e.g., a body fluid culture) or the complete resolution of all signs and symptoms associated with the infectious disease (e.g., fever, cough, leukocytosis).</p>
+      <p id="p-00029-en" num="0029">As used herein, a “partial response” means a response that is less than a complete response. For example, a partial response in a patient with a tumor is a decrease of approximately greater than or equal to 30% (but not 100%) of the sum of the longest diameters of index (baseline) lesions, lasting at least one month with no growth of lesions or the appearance of new lesions. Tumor size can be measured directly or using an imaging study (e.g., a CT, MRI, or sonogram). For infectious diseases, a partial response, means an improvement, but not complete resolution of, the signs and symptoms associated with the infectious disease or a decrease in the infectious toxin or pathogen in a patient (e.g., a decreased viral load in the case of HIV).</p>
+      <p id="p-00030-en" num="0030">A “pre-determined maximum dosage” or a “pre-determined maximum dose” is a target endpoint dosage that is defined before the administration of the CTLA-4 dosage regimen. For example, prior to administration of the first dose of a CTLA-4 antibody to a patient, a clinician can identify 9 mg/kg of the CTLA-4 antibody as the predetermined maximum dosage.</p>
+      <p id="p-00031-en" num="0031">An “optimal” or “optimum” dose of a CTLA-4 antibody is the dose corresponding to a predetermined maximum dose, or a dose that results in a partial or complete response to the disease being treated. It shall be appreciated by those of skill in the art that factors, including the patient's immune state, which may be affected by prior immune therapies, disease state, age, etc., can impact the dosage required to elicit a complete or partial response, or determine a pre-determined maximum dosage. A skilled clinician will be able to take such factors into account when determining the initial dose, as well as any subsequent doses, to obtain an optimum dosage. Typically, a CTLA-4 antibody dosage is about 0.1 mg/kg to about 25 mg/kg.</p>
+      <p id="p-00032-en" num="0032">An “adverse event” (AE) as used herein is any unfavorable and generally unintended, even undesirable, sign (including an abnormal laboratory finding), symptom, or disease associated with the use of a medical treatment (e.g., CTLA-4 antibody therapy). Most AE's are temporary and reverse upon withdrawal or reduction in dose of the medical treatment, or with treatment of the AE.</p>
+      <p id="p-00033-en" num="0033">A “serious adverse event” (SAE) is a grade III or IV adverse event as defined by the National Cancer Institute (NCI). A grade III AE is generally defined as “severe” and a grade IV AE is generally defined as “life-threatening or disabling”.</p>
+      <p id="p-00034-en" num="0034">Adverse events associated with CTLA-4 antibody administration include: skin rash, vitiligo, hypophysitis, colitis, diarrhea, dermatitis, uveitis, nephritis, and increased liver enzymes. See also U.S. Patent Publication No. 2004/0241169 (the contents of which are hereby incorporated by reference in their entirety) for a description of certain adverse events associated with CTLA-4 antibody therapy. An adverse event associated with CTLA-antibody therapy can limit, or cause the cessation of, the CTLA-4 antibody therapy.</p>
+      <p id="p-00035-en" num="0035">As used herein, an “escalating dosage regimen” or “dosage escalation regimen” is a dosage regimen administered to a patient wherein dosages in a series can be increased in a stepwise (i.e., a subsequent dosage is either greater than or equal to the immediately preceding dosage, but at least one increase in dosage occur over the length of the regimen) or linear fashion (i.e., each subsequent dosage is greater than its immediately preceding dosage).</p>
+      <p id="p-00036-en" num="0036">An initial dose of a CTLA-4 antibody is typically about 0.1 mg/kg to about 10 mg/kg, and more typically about 3 mg/kg to about 10 mg/kg. Following an initial dose of CTLA-4 antibody, a patient is monitored by a clinician for a sufficient period of time, which is typically over the course of the dosage interval (e.g., 1 to 8 weeks, preferably 1 to 4 weeks) to detect a partial or complete response. In the absence of a partial or complete response during the monitoring period, a second dose of CTLA-4 antibody can be administered that is greater than or equal to the first dose. Following this second dose, the patient is again monitored for a partial or complete response. Additional dosages greater than or equal to the immediately prior dose are administered in a stepwise or linear fashion until a partial or complete response is elicited, or a pre-determined maximum dosage is obtained. If an additional dose is required, the dosage can be increased by, e.g., about 10% to about 100% of the immediately preceding dosage.</p>
+      <p id="p-00037-en" num="0037">In one example of a linear dosage regimen, a patient is initially administered about 3 mg/kg of a CTLA-4 antibody. If the patient does not achieve a partial or complete response after a 3 week period, then the patient is administered about 5 mg/kg of CTLA-4 antibody.</p>
+      <p id="p-00038-en" num="0038">In one example of a stepwise dosage regimen, a patient is initially administered about 3 mg/kg of a CTLA-4 antibody followed by a second dose of about CTLA-4 antibody at 3 mg/kg. Subsequent doses of CTLA-4 antibody, in order, include about 5 mg/kg, about 5 mg/kg, about 9 mg/kg, and about 9 mg/kg. A dosage according to this example is administered every 3 weeks. The patient is monitored throughout the regimen to determine whether a partial or complete response has been achieved. If the patient does not achieve a partial or complete response before the next scheduled dosage, the next scheduled dosage is administered. If the patient does achieve a partial response, the patient is not given the next scheduled dosage or is administered a dosage approximately equal to the immediately preceding dosage.</p>
+      <heading id="h-00007-en" level="1">2.2. General Definitions</heading>
+      <p id="p-00039-en" num="0039">Except when noted, the terms “patient” or “subject” are used interchangeably and refer to mammals such as human patients and non-human primates, as well as experimental animals such as rabbits, rats, and mice, and other animals. Animals include all vertebrates, e.g., mammals and non-mammals, such as sheep, dogs, cows, chickens, amphibians, and reptiles.</p>
+      <p id="p-00040-en" num="0040">The term “treating” includes the administration of CTLA-4 antibodies of the present invention to prevent or delay the onset of the symptoms, complications, or biochemical indicia of a disease, alleviating the symptoms or arresting or inhibiting further development of the disease, condition, or disorder (e.g., cancer, an infectious disease, or an autoimmune disease). Treatment may be prophylactic (to prevent or delay the onset of the disease, or to prevent the manifestation of clinical or subclinical symptoms thereof) or therapeutic suppression or alleviation of symptoms after the manifestation of the disease.</p>
+      <p id="p-00041-en" num="0041">The terms “about” or “approximately” mean within an acceptable range for the particular parameter specified as determined by one of ordinary skill in the art, which will depend in part on how the value is measured or determined, e.g., the limitations of the measurement system. For example, “about” can mean a range of up to 20% of a given value. Alternatively, particularly with respect to biological systems or processes, the term can mean within an order of magnitude, preferably within 5-fold, and more preferably within 2-fold, of a value.</p>
+      <heading id="h-00008-en" level="1">2.3. CTLA-4 Antibodies</heading>
+      <p id="p-00042-en" num="0042">The terms “cytotoxic T lymphocyte-associated antigen-4,” “CTLA-4,” “CTLA4,” “CTLA-4 antigen” and “CD 152” (see, e.g., Murata (1999) Am. J. Pathol. 155:453-460) are used interchangeably, and include variants, isoforms, species homologs of human CTLA-4, and analogs having at least one common epitope with CTLA-4 (see, e.g., Balzano (1992) Int. J. Cancer Suppl. 7:28-32). A complete sequence of human CTLA-4 is set forth in GenBank Accession No. L15006.</p>
+      <p id="p-00043-en" num="0043">The term “epitope” means a protein determinant capable of specific binding to an antibody. Epitopes usually consist of chemically active surface groupings of molecules such as amino acids or sugar side chains and usually have specific three dimensional structural characteristics, as well as specific charge characteristics. Conformational and nonconformational epitopes are distinguished in that the binding to the former but not the latter is lost in the presence of denaturing solvents.</p>
+      <p id="p-00044-en" num="0044">An intact “antibody” comprises at least two heavy (H) chains and two light (L) chains inter-connected by disulfide bonds. Each heavy chain is comprised of a heavy chain variable region (abbreviated herein as HCVR or VH) and a heavy chain constant region. The heavy chain constant region is comprised of three domains, CH1, CH2 and CH3. Each light chain is comprised of a light chain variable region (abbreviated herein as LCVR or VL) and a light chain constant region. The light chain constant region is comprised of one domain, CL. The VH and VL regions can be further subdivided into regions of hypervariability, termed complementarity determining regions (CDR), interspersed with regions that are more conserved, termed framework regions (FR). Each VH and VL is composed of three CDRs and four FRs, arranged from amino-terminus to carboxyl-terminus in the following order: FR1, CDR1, FR2, CDR2, FR3, CDR3, FR4. The variable regions of the heavy and light chains contain a binding domain that interacts with an antigen. The constant regions of the antibodies may mediate the binding of the immunoglobulin to host tissues or factors, including various cells of the immune system (e.g., effector cells) and the first component (Clq) of the classical complement system.</p>
+      <p id="p-00045-en" num="0045">The term antibody includes antigen-binding portions of an intact antibody that retain capacity to bind CTLA-4. Examples of binding include (i) a Fab fragment, a monovalent fragment consisting of the VL, VH, CL and CH1 domains; (ii) a F(ab′)2 fragment, a bivalent fragment comprising two Fab fragments linked by a disulfide bridge at the hinge region; (iii) a Fd fragment consisting of the VH and CH1 domains; (iv) a Fv fragment consisting of the VL and VH domains of a single arm of an antibody, (v) a dAb fragment (Ward et al., (1989) <i>Nature </i>341:544-546), which consists of a VH domain; and (vi) an isolated complementarity determining region (CDR). Furthermore, although the two domains of the Fv fragment, VL and VH, are coded for by separate genes, they can be joined, using recombinant methods, by a synthetic linker that enables them to be made as a single protein chain in which the VL and VH regions pair to form monovalent molecules (known as single chain Fv (scFv); See, e.g., Bird et al., Science 1998; 242:423-426; and Huston et al., Proc. Natl. Acad. Sci. USA 1988; 85:5879-5883). Such single chain antibodies are included by reference to the term “antibody.” Fragments can be prepared by recombinant techniques or enzymatic or chemical cleavage of intact antibodies.</p>
+      <p id="p-00046-en" num="0046">The term “human sequence antibody” includes antibodies having variable and constant regions (if present) derived from human germline immunoglobulin sequences. The human sequence antibodies of the invention may include amino acid residues not encoded by human germline immunoglobulin sequences (e.g., mutations introduced by random or site-specific mutagenesis in vitro or by somatic mutation in vivo). Such antibodies can be generated in non-human transgenic animals, i.e., as described in PCT Publication Nos. WO 01/14424 and WO 00/37504. However, the term “human sequence antibody”, as used herein, is not intended to include antibodies in which CDR sequences derived from the germline of another mammalian species, such as a mouse, have been grafted onto human framework sequences (i.e., humanized antibodies).</p>
+      <p id="p-00047-en" num="0047">The terms “monoclonal antibody” or “monoclonal antibody composition” refer to a preparation of antibody molecules of single molecular composition. A monoclonal antibody composition displays a single binding specificity and affinity for a particular epitope. Accordingly, the term “human monoclonal antibody” refers to antibodies displaying a single binding specificity which have variable and constant regions (if present) derived from human germline immunoglobulin sequences. In one embodiment, the human monoclonal antibodies are produced by a hybridoma which includes a B cell obtained from a transgenic non-human animal, e.g., a transgenic mouse, having a genome comprising a human heavy chain transgene and a light chain transgene fused to an immortalized cell.</p>
+      <p id="p-00048-en" num="0048">The term “polyclonal antibody” refers to a preparation of more than 1 (two or more) different antibodies to human CTLA-4. Such a preparation includes antibodies binding to a range of different epitopes.</p>
+      <p id="p-00049-en" num="0049">CTLA-4 antibodies can bind to an epitope on human CTLA-4 so as to inhibit CTLA-4 from interacting with a human B7 counterreceptor. Because interaction of human CTLA-4 with human B7 transduces a signal leading to inactivation of T-cells bearing the human CTLA-4 receptor, antagonism of the interaction effectively induces, augments or prolongs the activation of T cells bearing the human CTLA-4 receptor, thereby prolonging or augmenting an immune response. CTLA-4 antibodies are described in U.S. Pat. Nos. 5,811,097, 5,855,887, 6,051,227, and 6,984,720; in PCT Publication Nos. WO 01/14424 and WO 00/37504; and in U.S. Publication No. 2002/0039581 and 2002/086014. Other anti-CTLA-4 antibodies that can be used in a method of the present invention include, for example, those disclosed in: WO 98/42752; U.S. Pat. Nos. 6,682,736 and 6,207,156; Hurwitz et al., PNAS 1998; 95(17):10067-10071; Camacho et al., J Clin Oncology 2004:22(145):abstract no. 2505 (antibody CP-675206); and Mokyr, et al., Cancer Research 1998; 58:5301-5304. Each of these references is specifically incorporated herein by reference for purposes of description of CTLA-4 antibodies. A preferred clinical CTLA-4 antibody is human monoclonal antibody 10D1 (also referred to as MDX-010 and ipilimumab and available from Medarex, Inc., Bloomsbury, N.J.) as disclosed in WO 01/14424.</p>
+      <p id="p-00050-en" num="0050">Also included in the invention are modified antibodies. The term “modified antibody” includes antibodies, such as monoclonal antibodies, chimeric antibodies, and humanized antibodies which have been modified by, e.g., deleting, adding, or substituting portions of the antibody. For example, an antibody can be modified by deleting the constant region and replacing it with a constant region meant to increase half-life, e.g., serum half-life, stability or affinity of the antibody.</p>
+      <p id="p-00051-en" num="0051">Antibody conjugates are also contemplated for use in the methods of this invention and can be used to modify a given biological response or create a biological response (e.g., to recruit effector cells). An “antibody conjugate,” as used herein, is a CTLA-4 antibody conjugated to a drug moiety. The drug moiety is not to be construed as limited to classical chemical therapeutic agents. For example, the drug moiety may be a protein or polypeptide possessing a desired biological activity. Such proteins may include, for example, an enzymatically active toxin, or active fragment thereof, such as abrin, ricin A, pseudomonas exotoxin, or diphtheria toxin; a protein such as tumor necrosis factor or interferon-alpha; or, biological response modifiers such as, for example, lymphokines, interleukin-1 (“IL-1”), interleukin-2 (“1L-2”), interleukin-6 (“IL-6”), granulocyte macrophage colony stimulating factor (“GM-CSF”), granulocyte colony stimulating factor (“G-CSF”), or other growth factors.</p>
+      <heading id="h-00009-en" level="1">2.4. Cancer Treatment</heading>
+      <p id="p-00052-en" num="0052">The present invention is directed, in part, to the treatment of tumors, particularly immunologically sensitive tumors, which are cancers that respond to immunotherapy or cancers that manifest in patients who are immunocompromised. A tumor treated with the methods of this invention can be a solid tumor.</p>
+      <p id="p-00053-en" num="0053">Examples of tumors that can be treated according to the invention include sarcomas and carcinomas such as, but not limited to: fibrosarcoma, myxosarcoma, liposarcoma, chondrosarcoma, osteogenic sarcoma, chordoma, angiosarcoma, endotheliosarcoma, lymphangiosarcoma, lymphangioendotheliosarcoma, synovioma, mesothelioma, lymphoma, melanoma, Kaposi's sarcoma, Ewing's tumor, leiomyosarcoma, rhabdomyosarcoma, colo-rectal carcinoma, gastric carcinoma, pancreatic cancer, breast cancer, ovarian cancer, prostate cancer, squamous cell carcinoma, basal cell carcinoma, adenocarcinoma, sweat gland carcinoma, sebaceous gland carcinoma, papillary carcinoma, papillary adenocarcinomas, cystadenocarcinoma, medullary carcinoma, bronchogenic carcinoma, renal cell carcinoma, hepatoma, bile duct carcinoma, choriocarcinoma, seminoma, embryonal carcinoma, Wilms' tumor, cervical cancer, testicular tumor, lung carcinoma, small cell lung carcinoma, bladder carcinoma, epithelial carcinoma, glioma, astrocytoma, medulloblastoma, craniopharyngioma, ependymoma, pinealoma, hemangioblastoma, acoustic neuroma, oligodendroglioma, meningioma, melanoma, neuroblastoma, and retinoblastoma.</p>
+      <p id="p-00054-en" num="0054">The methods of this invention can also treat or prevent dysproliferative changes (such as metaplasias and dysplasias) in epithelial tissues such as those in the cervix, esophagus, and lung. Thus, the present invention provides for treatment of conditions known or suspected of preceding progression to neoplasia or cancer, in particular, where non-neoplastic cell growth consisting of hyperplasia, metaplasia, or most particularly, dysplasia has occurred (for review of such abnormal growth conditions, see Robbins and Angell, 1976, <i>Basic Pathology, </i>2d Ed., W.B. Saunders Co., Philadelphia, pp. 68-79). Hyperplasia is a form of controlled cell proliferation involving an increase in cell number in a tissue or organ, without significant alteration in structure or function. As but one example, endometrial hyperplasia often precedes endometrial cancer. Metaplasia is a form of controlled cell growth in which one type of adult or fully differentiated cell substitutes for another type of adult cell. Metaplasia can occur in epithelial or connective tissue cells. Atypical metaplasia involves a somewhat disorderly metaplastic epithelium. Dysplasia is frequently a forerunner of cancer, and is found mainly in the epithelia; it is the most disorderly form of non-neoplastic cell growth, involving a loss in individual cell uniformity and in the architectural orientation of cells. Dysplastic cells often have abnormally large, deeply stained nuclei, and exhibit pleomorphism. Dysplasia characteristically occurs where there exists chronic irritation or inflammation, and is often found in the cervix, respiratory passages, oral cavity, and gall bladder. For a review of such disorders, see Fishman et al., 1985, <i>Medicine, </i>2d Ed., J. B. Lippincott Co., Philadelphia.</p>
+      <p id="p-00055-en" num="0055">The present invention is also directed to treatment of non-malignant tumors and other disorders involving inappropriate cell or tissue growth augmented by angiogenesis by administering a therapeutically effective amount of a vector of the invention to the tissue undergoing inappropriate growth. For example, it is contemplated that the invention is useful for the treatment of arteriovenous (AV) malformations, particularly in intracranial sites. The invention may also be used to treat psoriasis, a dermatologic condition that is characterized by inflammation and vascular proliferation; and benign prostatic hypertrophy, a condition associated with inflammation and possibly vascular proliferation. Treatment of other hyperproliferative disorders is also contemplated.</p>
+      <p id="p-00056-en" num="0056">The term “advanced cancer” means cancer that is no longer localized to the primary tumor site, or a cancer that is Stage III or IV according to the American Joint Committee on Cancer (AJCC).</p>
+      <heading id="h-00010-en" level="1">2.5. Treatment of Infectious Disease</heading>
+      <p id="p-00057-en" num="0057">Other methods of the invention are used to treat patients that have been exposed to pathogens. Similar to its application to tumors as discussed above, CTLA-4 antibody administered according to a dosage escalation regimen of the present invention can be used alone, or in combination with a vaccine to treat an infectious disease. CTLA-4 blockade has been shown to be effective in the acute phase of infections of <i>Nippostrongylus brasiliensis </i>(McCoy, K. et al. (1997) 186(2); 183-187) and <i>Leishmania donovani </i>(Murphy, M. et al. (1998) J. Immunol. 161:4153-4160). Examples of pathogens for which this therapeutic approach may be particularly useful include pathogens for which there is currently no effective vaccine, or pathogens for which conventional vaccines are less than completely effective. These include, but are not limited to HIV, Hepatitis (A, B, &amp; C), Influenza, Herpes, Giardia, Malaria, Leishmania, <i>Staphylococcus aureus</i>, and <i>Pseudomonas aeruginosa</i>. CTLA-4 blockade is particularly useful in boosting immunity against established infections by agents such as HIV that present altered antigens over the course of the infections. These novel epitopes are recognized as foreign at the time of anti-human CTLA-4 administration, thus provoking a strong T-cell response that is not dampened by negative signals through CTLA-4.</p>
+      <p id="p-00058-en" num="0058">Some examples of pathogenic viruses causing infections treatable by methods of the invention include hepatitis (A, B, or C), herpes virus (e.g., VZV, HSV-1, HAV-6, HSV-II, and CMV, Epstein Barr virus), adenovirus, influenza virus, flaviviruses, echovirus, rhinovirus, coxsackie virus, cornovirus, respiratory syncytial virus, mumps virus, rotavirus, measles virus, rubella virus, parvovirus, vaccinia virus, HTLV virus, dengue virus, papillomavirus, molluscum virus, poliovirus, rabies virus, JC virus and arboviral encephalitis virus.</p>
+      <p id="p-00059-en" num="0059">Some examples of pathogenic bacteria causing infections treatable by methods of the invention include chlamydia, rickettsial bacteria, mycobacteria, staphylococci, streptococci, pneumonococci, meningococci and conococci, klebsiella, proteus, serratia, pseudomonas, legionella, diphtheria, salmonella, bacilli, cholera, tetanus, botulism, anthrax, plague, leptospirosis, and Lyme disease bacteria.</p>
+      <p id="p-00060-en" num="0060">Some examples of pathogenic fungi causing infections treatable by methods of the invention include <i>Candida </i>(<i>albicans, krusei, glabrata, tropicalis</i>, etc.), <i>Cryptococcus neoformans, Aspergillus </i>(<i>fumigants, niger</i>, etc.), Genus Mucorales (<i>Mucor, Absidia, Rhizophus</i>), <i>Sporothrix schenkii, Blastomyces dermatitidis, Paracoccidioides brasiliensis, Coccidioides immitis </i>and <i>Histoplasma capsulatum. </i></p>
+      <p id="p-00061-en" num="0061">Some examples of pathogenic parasites causing infections treatable by methods of the invention include <i>Entamoeba histolytica, Balantidium coli, Naegleria fowleri, Acanthamoeba </i>sp., <i>Giardia lambia, Cryptosporidium </i>sp., <i>Pneumocystis carinii, Plasmodium vivax, Babesia microti, Trypanosoma brucei, Trypanosoma Leishmania donovani, Toxoplasma gondi, Nippostrongylus brasiliensis. </i></p>
+      <heading id="h-00011-en" level="1">2.6. Treatment for the Inappropriate Accumulation of Self-Antigens</heading>
+      <p id="p-00062-en" num="0062">A CTLA-4 antibody can be administered according to a dosage escalation regimen of the present invention to treat a patient having an inappropriate accumulation of self-antigens, such as amyloid deposits, cytokines such as TNFα, and IgE (for the treatment of allergy and asthma). For example, Alzheimer's disease involves inappropriate accumulation of Aβ peptide in amyloid deposits in the brain; antibody responses against amyloid are able to clear these amyloid deposits (Schenk et al., Nature 1999; 400:173-177).</p>
+      <heading id="h-00012-en" level="1">2.7. Combination Treatments</heading>
+      <heading id="h-00013-en" level="1">2.7.1. CTLA-4 Antibodies and Vaccines for the Treatment of Cancer</heading>
+      <p id="p-00063-en" num="0063">According to the methods of the present invention, a CTLA-4 antibody can be administered in a dosage escalation regimen alone or in combination with one or more other therapeutic agents, or in conjunction with an inimunotherapeutic vaccine for the tumor, such as chemotherapy, radiation therapy, cytokines, chemokines and other biologic signaling molecules, tumor specific vaccines, autologous and allogeneic stem cell rescue (e.g., to augment graft versus tumor effects), other therapeutic antibodies, molecular targeted therapies, anti-angiogenic therapy, infectious agents with therapeutic intent (such as tumor localizing bacteria), and gene therapy. The antibodies can be used in adjuvant or neoadjuvant therapy, either alone or in conjunction with the aforementioned therapies.</p>
+      <p id="p-00064-en" num="0064">Antibodies to CTLA-4 can be combined with an immunogenic agent, such as cancerous cells, purified tumor antigens (including recombinant proteins, peptides, and carbohydrate molecules), cells, and cells transfected with genes encoding immune stimulating cytokines and cell surface antigens such as B7 (see, e.g., Hurwitz, A. et al. (1998) Proc. Natl. Acad. Sci U.S.A. 1998; 95:10067-10071), or used alone, to stimulate immunity.</p>
+      <p id="p-00065-en" num="0065">Treatment with a CTLA-4 antibody can be used to activate a pre-existing memory response in patients treated with a cancer vaccine. Thus, methods of this invention include treating vaccine-treated patients who are selected for further treatment with a CTLA-4 antibody to thereby further induce or enhance an immune response.</p>
+      <p id="p-00066-en" num="0066">Many experimental strategies for vaccination against tumors have been devised (see Rosenberg, S., 2000, Development of Cancer Vaccines, ASCO Educational Book Spring: 60-62; Logothetis, C., 2000, ASCO Educational Book Spring: 300-302; Khayat, D. 2000, ASCO Educational Book Spring: 414-428; Foon, K. 2000, ASCO Educational Book Spring: 730-738; see also Restifo, N. and Sznol, M., Cancer Vaccines, Ch. 61, pp. 3023-3043 in DeVita, V. et al. (eds.), 1997, <i>Cancer: Principles and Practice of Oncology, </i>Fifth Edition). In one of these strategies, a vaccine is prepared using autologous or allogeneic tumor cells. These cellular vaccines have been shown to be most effective when the tumor cells are transduced to express GM-CSF. GM-CSF has been shown to be a potent activator of antigen presentation for tumor vaccination (Dranoff et al. Proc. Natl. Acad. Sci U.S.A. 1993; 90: 3539-43).</p>
+      <p id="p-00067-en" num="0067">CTLA-4 blockade to boost GMCSF-modified tumor cell vaccines improves efficacy of vaccines in a number of experimental tumor models such as mammary carcinoma (Hurwitz et al., 1998, supra), primary prostate cancer (Hurwitz et al., Cancer Research 2000; 60:2444-8) and melanoma (van Elsas et al. J. Exp. Med. 1999, 190:355-66). In these instances, non-immunogenic tumors, such as the B16 melanoma, have been rendered susceptible to destruction by the immune system. The tumor cell vaccine may also be modified to express other immune activators such as IL-2, and costimulatory molecules, among others.</p>
+      <p id="p-00068-en" num="0068">The study of gene expression and large scale gene expression patterns in various tumors has led to the definition of so called “tumor specific antigens” (Rosenberg, Immunity 1999; 10:281-7). In many cases, these tumor specific antigens are differentiation antigens expressed in the tumors and in the cell from which the tumor arose, for example melanocyte antigens gp100, MAGE, and Trp-2. More importantly, many of these antigens can be shown to be the targets of tumor specific T-cells found in the host. CTLA-4 blockade may be used as a boosting agent in conjunction with vaccines based on recombinant versions of proteins and/or peptides found to be expressed in a tumor. The tumor antigen may also include the protein telomerase, which is required for the synthesis of telomeres of chromosomes and which is expressed in more than 85% of human cancers and in only a limited number of somatic tissues (Kim et al., Science 1994; 266:2011-2013). These somatic tissues may be protected from immune attack by various means.</p>
+      <p id="p-00069-en" num="0069">Tumor antigen may also be “neo-antigens” expressed in cancer cells because of somatic mutations that alter protein sequence or create fusion proteins between two unrelated sequences (i.e. bcr-abl in the Philadelphia chromosome), or idiotype from B-cell tumors. Other tumor vaccines may include the proteins from viruses implicated in human cancers such a Human Papilloma Viruses (HPV), Hepatitis Viruses (HBV and HCV) and Kaposi's Herpes Sarcoma Virus (KHSV). Another form of tumor specific antigen which may be used in conjunction with CTLA-4 blockade is purified heat shock proteins (HSP) isolated from the tumor tissue itself. These heat shock proteins contain fragments of proteins from the tumor cells and these HSPs are highly efficient at delivery to antigen presenting cells for eliciting tumor immunity (Snot and Srivastava, Science 1995; 269:1585-1588; Tamura et al., Science 1997, 278:117-120).</p>
+      <p id="p-00070-en" num="0070">Dendritic cells (DC) are potent antigen presenting cells that can be used to prime antigen-specific responses. DC's can be produced ex vivo and loaded with various protein and peptide antigens as well as tumor cell extracts (Nestle et al., Nature Medicine 1998; 4:328-332). DCs may also be transduced by genetic means to express these tumor antigens as well. DCs have also been fused directly to tumor cells for the purposes of immunization (Kugler et al., Nature Medicine 2000; 6:332-336). As a method of vaccination, DC immunization may be effectively boosted with CTLA-4 blockade according to a dosage escalation regimen of the present invention to activate more potent anti-tumor responses.</p>
+      <p id="p-00071-en" num="0071">Another type of melanoma vaccine that can be combined with CTLA-4 blockade according to the present invention is a vaccine prepared from a melanoma cell line lysate, in conjunction with an immunological adjuvant, such as the MELACINE® vaccine, a mixture of lysates from two human melanoma cell lines plus DETOX™ immunological adjuvant. Vaccine treatment can be boosted with CTLA-4 antibody, with or without additional chemotherapeutic treatment.</p>
+      <heading id="h-00014-en" level="1">2.7.2. Chemotherapeutic Agents and Other Standard Cancer Treatments</heading>
+      <p id="p-00072-en" num="0072">CTLA-4 administration in a dosage escalation regimen according to the present invention can be used in combination with standard cancer treatments. In these instances, it may be possible to reduce the dose of chemotherapeutic reagent administered (Mokyr et al., Cancer Research, 1998; 58:5301-5304). The scientific rationale behind the combined use of CTLA-4 blockade and chemotherapy is that cell death, that is a consequence of the cytotoxic action of most chemotherapeutic compounds, should result in increased levels of tumor antigen in the antigen presentation pathway. Thus, CTLA-4 can boost an immune response primed to chemotherapy release of tumor cells. Moreover, the immuno-stimulatory activity of CTLA-4 is useful to overcome the immunosuppressive effects of chemotherapy. Examples of chemotherapeutic agents with which CTLA-4 treatment can be combined include, but are not limited to, aldesleukin, altretamine, amifostine, asparaginase, bleomycin, capecitabine, carboplatin, carmustine, cladribine, cisapride, cisplatin, cyclophosphamide, cytarabine, dacarbazine (DTIC), dactinomycin, docetaxel, doxorubicin, dronabinol, epoetin alpha, etoposide, filgrastim, fludarabine, fluorouracil, gemcitabine, granisetron, hydroxyurea, idarubicin, ifosfamide, interferon alpha, irinotecan, lansoprazole, levamisole, leucovorin, megestrol, mesna, methotrexate, metoclopramide, mitomycin, mitotane, mitoxantrone, omeprazole, ondansetron, paclitaxel (TAXOL®), pilocarpine, prochloroperazine, rituximab, tamoxifen, topotecan hydrochloride, trastuzumab, vinblastine, vincristine and vinorelbine tartrate. For prostate cancer treatment, a preferred chemotherapeutic agent with which CTLA-4 can be combined is paclitaxel (TAXOL®). For melanoma cancer treatment, a preferred chemotherapeutic agent with which CTLA-4 can be combined is dacarbazine (DTIC).</p>
+      <p id="p-00073-en" num="0073">Other combination therapies that may result in immune system priming through cell death are radiation, surgery, and hormone deprivation (Kwon, E. et al. Proc. Natl. Acad. Sci U.S.A. 1999; 96 (26): 15074-9. Each of these protocols creates a source of tumor antigen in the host. For example, any manipulation of the tumor at the time of surgery can greatly increase the number of cancer cells in the blood (Schwartz, et al., Principles of Surgery 1984. 4<sup>th </sup>ed. p.338). Angiogenesis inhibitors may also be combined with a CTLA-4 antibody dosage escalation regimen. Inhibition of angiogenesis leads to tumor cell death which may feed tumor antigen into host antigen presentation pathways.</p>
+      <heading id="h-00015-en" level="1">2.7.3. Cytokines</heading>
+      <p id="p-00074-en" num="0074">A CTLA-4 antibody administered in a dosage escalation regimen according to the present invention can also be combined with other forms of immunotherapy such as cytokine treatment (e.g., interferons, GMCSF, GCSF, IL-2, or bispecific antibody therapy, which provides for enhanced presentation of tumor antigens (see e.g., Holliger (1993) <i>Proc. Natl. Acad. Sci. USA </i>90:6444-6448; Poljak (1994) <i>Structure </i>2:1121-1123).</p>
+      <p id="p-00075-en" num="0075">Typical dosages regimens for cytokines include 720,000 IU/kg/dose every 8 hours for up to 15 doses per dosage of CTLA-4 antibody.</p>
+      <heading id="h-00016-en" level="1">2.8. Pharmaceutical Compositions and Routes of Administration</heading>
+      <p id="p-00076-en" num="0076">The invention encompasses pharmaceutical compositions comprising a CTLA-4 human monoclonal antibody and/or a human sequence CTLA-4 antibody (intact or binding fragments) formulated together with a pharmaceutically acceptable carrier for use in a dosage escalation regimen. Some compositions include a combination of multiple (e.g., two or more) isolated human CTLA-4 antibodies and/or human sequence antibody or antigen-binding portions thereof of the invention.</p>
+      <p id="p-00077-en" num="0077">Pharmaceutically acceptable carriers include solvents, dispersion media, coatings, antibacterial and antifungal agents (e.g., paraben, chlorobutanol, phenol sorbic acid, and the like), isotonic and absorption delaying agents, and the like that are physiologically compatible. The carrier can be suitable for intravenous, intramuscular, subcutaneous, parenteral, spinal or epidermal administration (e.g., by injection or infusion). Depending on the route of administration, the active compound, i.e., antibody, bispecific and multispecific molecule, may be coated in a material to protect the compound from the action of acids and other natural conditions that may inactivate the compound.</p>
+      <p id="p-00078-en" num="0078">Pharmaceutically acceptable carriers also include sterile aqueous solutions or dispersions and sterile powders for the extemporaneous preparation of sterile injectable solutions or dispersion. The use of such media and agents for pharmaceutically active substances is known in the art. Except insofar as any conventional media or agent is incompatible with the active compound, use thereof in the pharmaceutical compositions of the invention is contemplated. For example, the compound may be administered to a subject in an appropriate carrier, for example, liposomes, or a diluent. Pharmaceutically acceptable diluents include saline and aqueous buffer solutions. Liposomes include water-in-oil-in-water CGF emulsions as well as conventional liposomes (Strejan et al. (1984) <i>J. Neuroimmunol</i>. 7:27). Supplementary active compounds can also be incorporated into the compositions.</p>
+      <p id="p-00079-en" num="0079">Therapeutic compositions typically must be sterile, substantially isotonic, and stable under the conditions of manufacture and storage. The composition can be formulated as a solution, microemulsion, liposome, or other ordered structure suitable to high drug concentration. The carrier can be a solvent or dispersion medium containing, for example, water, ethanol, polyol (for example, glycerol, propylene glycol, and liquid polyethylene glycol, and the like), and suitable mixtures thereof, vegetable oils, such as olive oil, and injectable organic esters, such as ethyl oleate. The proper fluidity can be maintained, for example, by the use of a coating such as lecithin, by the maintenance of the required particle size in the case of dispersion and by the use of surfactants. In many cases, it is preferable to include isotonic agents, for example, sugars, polyalcohols such as mannitol, sorbitol, or sodium chloride in the composition. Prolonged absorption of the injectable compositions can be brought about by including in the composition an agent that delays absorption, for example, monostearate salts and gelatin. These compositions may also contain adjuvants such as preservatives, wetting agents, emulsifying agents and dispersing agents.</p>
+      <p id="p-00080-en" num="0080">Sterile injectable solutions can be prepared by incorporating the active compound in the required amount in an appropriate solvent with one or a combination of ingredients enumerated above, as required, followed by sterilization microfiltration. Generally, dispersions are prepared by incorporating the active compound into a sterile vehicle that contains a basic dispersion medium and the required other ingredients from those enumerated above. In the case of sterile powders for the preparation of sterile injectable solutions, the preferred methods of preparation are vacuum drying and freeze-drying (lyophilization) that yield a powder of the active ingredient plus any additional desired ingredient from a previously sterile-filtered solution thereof.</p>
+      <p id="p-00081-en" num="0081">A “pharmaceutically acceptable salt” refers to a salt that retains the desired biological activity of the parent compound and does not impart any undesired toxicological effects (See e.g., Berge, S. M., et al. (1977) J. Pharm. Sci. 66:1-19). Examples of such salts include acid addition salts and base addition salts. Acid addition salts include those derived from nontoxic inorganic acids, such as hydrochloric, nitric, phosphoric, sulfuric, hydrobromic, hydroiodic, phosphorous and the like, as well as from nontoxic organic acids such as aliphatic mono- and dicarboxylic acids, phenyl-substituted alkanoic acids, hydroxy alkanoic acids, aromatic acids, aliphatic and aromatic sulfonic acids and the like. Base addition salts include those derived from alkaline earth metals, such as sodium, potassium, magnesium, calcium and the like, as well as from nontoxic organic amines, such as N,N′-dibenzylethylenediamine, N-methylglucamine, chloroprocaine, choline, diethanolamine, ethylenediamine, procaine and the like.</p>
+      <p id="p-00082-en" num="0082">A composition for use in a dosage escalation regimen according to the present invention can be administered by a variety of methods known in the art. The route and/or mode of administration vary depending upon the desired results. The active compounds can be prepared with carriers that protect the compound against rapid release, such as a controlled release formulation, including implants, transdermal patches, and microencapsulated delivery systems. Biodegradable, biocompatible polymers can be used, such as ethylene vinyl acetate, polyanhydrides, polyglycolic acid, collagen, polyorthoesters, and polylactic acid. Many methods for the preparation of such formulations are described by e.g., <i>Sustained and Controlled Release Drug Delivery Systems</i>, J. R. Robinson, ed., Marcel Dekker, Inc., New York, 1978. In addition, prolonged absorption of an injectable pharmaceutical form may be brought about by the inclusion of agents which delay absorption such as aluminum monostearate and gelatin. Pharmaceutical compositions are preferably manufactured under GMP conditions.</p>
+      <p id="p-00083-en" num="0083">Examples of pharmaceutically-acceptable antioxidants for use in pharmaceutical compositions include: (1) water soluble antioxidants, such as ascorbic acid, cysteine hydrochloride, sodium bisulfate, sodium metabisulfite, sodium sulfite and the like; (2) oil-soluble antioxidants, such as ascorbyl palmitate, butylated hydroxyanisole (BHA), butylated hydroxytoluene (BHT), lecithin, propyl gallate, alpha-tocopherol, and the like; and (3) metal chelating agents, such as citric acid, ethylenediamine tetraacetic acid (EDTA), sorbitol, tartaric acid, phosphoric acid, and the like.</p>
+      <p id="p-00084-en" num="0084">For the therapeutic compositions, formulations for use in the methods of the present invention include those suitable for oral, nasal, topical (including buccal and sublingual), rectal, vaginal and/or parenteral administration. The formulations can conveniently be presented in unit dosage form and may be prepared by any methods known in the art of pharmacy. The amount of active ingredient which can be combined with a carrier material to produce a single dosage form varies depending upon the subject being treated, and the particular mode of administration. Generally, out of one hundred percent, this amount ranges from about 0.01 percent to about ninety-nine percent of active ingredient, from about 0.1 percent to about 70 percent, or from about 1 percent to about 30 percent.</p>
+      <p id="p-00085-en" num="0085">Formulations of the present invention which are suitable for vaginal administration also include pessaries, tampons, creams, gels, pastes, foams or spray formulations containing such carriers as are known in the art to be appropriate. Dosage forms for the topical or transdermal administration of compositions of this invention include powders, sprays, ointments, pastes, creams, lotions, gels, solutions, patches and inhalants. The active compound may be mixed under sterile conditions with a pharmaceutically acceptable carrier, and with any preservatives, buffers, or propellants which may be required.</p>
+      <p id="p-00086-en" num="0086">The phrases “parenteral administration” and “administered parenterally” mean modes of administration other than enteral and topical administration, usually by injection, and includes, without limitation, intravenous, intramuscular, intraarterial, intrathecal, intracapsular, intraorbital, intracardiac, intradermal, intraperitoneal, transtracheal, subcutaneous, subcuticular, intraarticular, subcapsular, subarachnoid, intraspinal, epidural and intrasternal injection and infusion.</p>
+      <p id="p-00087-en" num="0087">Therapeutic compositions can be administered with medical devices known in the art. For example, in a preferred embodiment, a therapeutic composition of the invention can be administered with a needleless hypodermic injection device, such as the devices disclosed in, e.g., U.S. Pat. Nos. 5,399,163, 5,383,851, 5,312,335, 5,064,413, 4,941,880, 4,790,824, or 4,596,556. Examples of implants and modules useful in the present invention include: U.S. Pat. No. 4,487,603, which discloses an implantable micro-infusion pump for dispensing medication at a controlled rate; U.S. Pat. No. 4,486,194, which discloses a therapeutic device for administering medicants through the skin; U.S. Pat. No. 4,447,233, which discloses a medication infusion pump for delivering medication at a precise infusion rate; U.S. Pat. No. 4,447,224, which discloses a variable flow implantable infusion apparatus for continuous drug delivery; U.S. Pat. No. 4,439,196, which discloses an osmotic drug delivery system having multi-chamber compartments; and U.S. Pat. No. 4,475,196, which discloses an osmotic drug delivery system. Many other such implants, delivery systems, and modules are known.</p>
+      <p id="p-00088-en" num="0088">Some human sequence antibodies and human monoclonal antibodies of the invention can be formulated to ensure proper distribution in vivo. For example, the blood-brain barrier (BBB) excludes many highly hydrophilic compounds. To ensure that the therapeutic compounds of the invention cross the BBB (if desired), they can be formulated, for example, in liposomes. For methods of manufacturing liposomes, See, e.g., U.S. Pat. Nos. 4,522,811; 5,374,548; and 5,399,331. The liposomes may comprise one or more moieties which are selectively transported into specific cells or organs, thus enhance targeted drug delivery (See, e.g., V. V. Ranade (1989) <i>J. Clin. Pharmacol. </i>29:685). Exemplary targeting moieties include folate or biotin (See, e.g., U.S. Pat. No. 5,416,016 to Low et al.); mannosides (Umezawa et al., (1988) <i>Biochem. Biophys. Res. Commun. </i>153:1038); antibodies (P. G. Bloeman et al. (1995) <i>FEBS Lett. </i>357:140; M. Owais et al. (1995) <i>Antimicrob. Agents Chemother. </i>39:180); surfactant protein A receptor (Briscoe et al. (1995) <i>Am. J. Physiol. </i>1233:134), different species of which may comprise the formulations of the inventions, as well as components of the invented molecules; p120 (Schreier et al. (1994) <i>J. Biol. Chem. </i>269:9090); See also K. Keinanen; M. L. Laukkanen (1994) <i>FEBS Lett</i>. 346:123; J. J. Killion; I. J. Fidler (1994) <i>Immunomethods </i>4:273. In some methods, the therapeutic compounds of the invention are formulated in liposomes; in a more preferred embodiment, the liposomes include a targeting moiety. In some methods, the therapeutic compounds in the liposomes are delivered by bolus injection to a site proximal to the tumor or infection. The composition should be fluid to the extent that easy syringability exists. It should be stable under the conditions of manufacture and storage and should be preserved against the contaminating action of microorganisms such as bacteria and fungi.</p>
+      <p id="p-00089-en" num="0089">The present invention is further described by way of the following particular examples. However, the use of such examples is illustrative only and is not intended to limit the scope or meaning of the present invention or of any exemplified term. Furthermore, the present invention is not limited to any particular preferred embodiments) described herein. Indeed, many modifications and variations of the invention will be apparent to those skilled in the art upon reading this specification, and such “equivalents” can be made without departing from the invention in spirit or scope. The invention is therefore limited only by the terms of the appended claims, along with the full scope of equivalents to which the claims are entitled.</p>
+      <heading id="h-00017-en" level="1">EXAMPLE 1</heading>
+      <heading id="h-00018-en" level="1">Intra-Patient Dose Escalation of CTLA-4 Antibody in Patients with Metastatic Melanoma</heading>
+      <p id="p-00090-en" num="0090">Forty-six HLA-A2 negative patients with progressive stage IV melanoma were treated using a CTLA-4 antibody dose escalation regimen to test whether higher doses of CTLA-4 antibody would induce increased autoimmunity and concomitant tumor regression. Twenty-three patients started CTLA-4 antibody administration at 3 mg/kg and 23 patients started treatment at 5 mg/kg. Each group was administered a dose every three weeks. Patients were administered the CTLA-4 antibody according to the dosage escalation regimen to a predetermined maximum dose of 9 mg/kg or until objective clinical responses or grade III/IV autoimmune toxicity was observed.</p>
+      <heading id="h-00019-en" level="1">2.9. Methods</heading>
+      <heading id="h-00020-en" level="1">2.9.1. Patients and Treatment</heading>
+      <p id="p-00091-en" num="0091">Patients eligible for treatment with CTLA-4 antibody (MDX-010, Medarex Inc., Bloomsbury, N.J.) were HLA-A*0201<sup>−</sup>, had measurable stage IV melanoma, were at least 16 years of age, had a life expectancy of at least six months, an ECOG Performance Status≦2, and at least 3 weeks had elapsed since any systemic cancer therapy had been administered. Patients were excluded if they had autoimmune disease, active infection, were pregnant or nursing, had any concurrent medical condition requiring the use of systemic or topical steroids, or had received prior treatment with CTLA-4 antibody. All patients were treated on an Investigational Review Board approved protocol in the Surgery Branch, National Cancer Institute in Bethesda, Md.</p>
+      <p id="p-00092-en" num="0092">At the initial patient screening, patients underwent a physical examination, assessment of performance status, ophthalmologic examination, ECG, pulmonary function tests, HLA typing, pheresis, rheumatoid factor, antinuclear antibody, human anti-human antibody (HAHA), hematologic, biochemical, and thyroid function tests. After every dose cycle, a physical exam and thyroid, hematologic, and biochemical panels were performed. Diagnostic imaging, an autoimmune panel, urinalysis, pheresis, and HAHA were obtained after every course, and a repeat ophthalmologic exam was performed after 4 cycles or as clinically indicated.</p>
+      <p id="p-00093-en" num="0093">CTLA-4 antibody was administered to each patient in escalating doses until the development of an objective response (partial or complete), the predetermined maximum dose (i.e., 9 mg/kg) was reached, or a≧grade III autoimmune or another dose-limiting toxicity was observed. In the first 23 patients the starting dose of MDX-010 was 3 mg/kg, (this was also the initial dose reported in Attia et al., 2005 Sep. 1; 23(25):6043-53. Epub 2005 Aug. 8; and Phan et al., PNAS 2003, 100:8372-8377). Subsequent doses were escalated to 5 mg/kg, and then to 9 mg/kg. For the next 23 patients, the starting dose of CTLA-4 antibody was 5 mg/kg. A cycle was defined as one dose administration, and a course was defined as the administration of two doses at the same drug concentration.</p>
+      <p id="p-00094-en" num="0094">Blood samples were drawn immediately prior to each dose cycle and again one hour post antibody infusion. Quantitative ELISA was used to determine plasma concentrations of CTLA-4 antibody as previously described. Briefly, microtiter plates were coated with recombinant human CTLA-4-1g and bound CTLA-4 antibody was detected with an alkaline phosphatase labeled goat anti-human IgG probe. Phenotypic analysis of T-cell activation markers was performed using standard flow analysis techniques by Esoterix Inc. (East Windsor, N.J.) on peripheral blood samples obtained immediately prior to each course.</p>
+      <p id="p-00095-en" num="0095">After completion of a course at a given dose, patients who did not experience an objective response or dose-limiting toxicity were escalated to the next dose level. Patients who experienced a complete response were treated for two additional cycles at the same dose level. Patients who achieved a partial response, and continued to have tumor regression, were re-treated at the same dose level until they achieved a complete response or no longer had tumor shrinkage. Once a patient experienced a complete response or the tumor size stabilized, they received two additional cycles at the same dose level. Patients who completed treatment with two cycles of antibody at each dose level, either 3 mg/kg, 5 mg/kg, and 9 mg/kg (patients 1-23), or 5 mg/kg and 9 mg/kg (patients 24-46), and had stable disease at follow-up evaluation were eligible to receive one additional course at 9 mg/kg. However, if these patients demonstrated progressive disease they were taken off of the study.</p>
+      <p id="p-00096-en" num="0096">Patients who experienced non-skin related≧grade III adverse events, any autoimmune ocular toxicity, or required steroid therapy for toxicity attributable to CTLA-4 antibody administration did not receive further therapy, regardless of their clinical response status. Patients that experienced skin-related toxicity≦grade III, or a non-skin related toxicity&lt;grade III may have had their antibody administration delayed.</p>
+      <p id="p-00097-en" num="0097">The human IgGlκ CTLA-4 MDX-010 monoclonal antibody was administered as an intravenous bolus over 90 minutes every three weeks. Prior to antibody administration and, when possible, three weeks after each course, peripheral blood mononuclear cells (PBMC) were obtained by apheresis, isolated by Ficoll-Hypaque separation, and cryopreserved at −180 degrees Celsius in heat-inactivated human AB serum with 10% DMSO until further use.</p>
+      <heading id="h-00021-en" level="1">2.9.2. Clinical Response Evaluation and On-Study Evaluation</heading>
+      <p id="p-00098-en" num="0098">All patients underwent computed axial tomography of the chest, abdomen, and pelvis, and MRI of the brain, within 28 days of starting treatment and after every two cycles of treatment. RECIST criteria were utilized to determine radiographic response to treatment (Therasse et al., J Natl Cancer Inst 2000, 92:205-216). The sum of the longest diameters of all tumors before and after therapy was calculated. A partial response was defined as a decrease of greater than or equal to 30% (but not 100%) of the sum of the longest diameters of index lesions, lasting at least one month with no growth of lesions or the appearance of new lesions. A complete response was defined as the disappearance of all lesions for greater than or equal to one month. Patients not achieving either a partial or complete response were deemed non-responders.</p>
+      <p id="p-00099-en" num="0099">Forty-six HLA-A2 negative patients had stage IV melanoma with metastases to various sites (Table 1). Thirty-nine patients (85%) had visceral metastases. Thirty-two patients (70%) were male. Patients received treatment prior to enrollment in this study as follows: 29 (63%) had received chemotherapy, 14 (30%) radiation therapy, 2 (4%) hormonal therapy, 38 (83%) immunotherapy, and 28 (61%) had received more than one therapy. Patients 1-23 began treatment with CTLA-4 antibody at a concentration of 3 mg/kg and patients 24-46 started at a concentration of 5 mg/kg.</p>
+      <p id="p-00100-en" num="0000">Treatment, autoimmunity, and response characteristics for patients treated with CTLA-4 antibody are summarized in Table 1.</p>
+      <p id="p-00101-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="343pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Patient characteristics, clinical response, and toxicity</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="14pt" align="center" />
+              <colspec colname="4" colwidth="77pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="70pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <colspec colname="8" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Prior</entry>
+                  <entry />
+                  <entry>Response</entry>
+                  <entry>Autoimmune Toxicity</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Age</entry>
+                  <entry>Sex</entry>
+                  <entry>Disease Sites</entry>
+                  <entry>Therapy</entry>
+                  <entry>Doses (mg/kg)</entry>
+                  <entry>(mo.)*</entry>
+                  <entry>(Grade III/IV)**</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="char" char="." />
+              <colspec colname="2" colwidth="21pt" align="char" char="." />
+              <colspec colname="3" colwidth="14pt" align="center" />
+              <colspec colname="4" colwidth="77pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="70pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <colspec colname="8" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>47</entry>
+                  <entry>M</entry>
+                  <entry>Mesenteric LN</entry>
+                  <entry>S, I</entry>
+                  <entry>3, 3, 3, 3, 5, 5, 9, 9, 9, 9</entry>
+                  <entry>PR (12+)</entry>
+                  <entry>hypophysitis</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>50</entry>
+                  <entry>M</entry>
+                  <entry>Cervical LN, lung, SQ</entry>
+                  <entry>S, C, I</entry>
+                  <entry>3, 3</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>43</entry>
+                  <entry>M</entry>
+                  <entry>Adrenal, ALN, lung</entry>
+                  <entry>S, C, I</entry>
+                  <entry>3, 3, 5, 5, 9, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry>hypophysitis</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>66</entry>
+                  <entry>M</entry>
+                  <entry>lung</entry>
+                  <entry>S, I</entry>
+                  <entry>3, 3, 5, 5, 9, 9, 9, 9, 9, 9</entry>
+                  <entry>PR (12+)</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>5</entry>
+                  <entry>30</entry>
+                  <entry>M</entry>
+                  <entry>lung</entry>
+                  <entry>S, I</entry>
+                  <entry>3, 3, 5, 5, 9</entry>
+                  <entry>NR</entry>
+                  <entry>hypophysitis</entry>
+                </row>
+                <row>
+                  <entry>6</entry>
+                  <entry>27</entry>
+                  <entry>F</entry>
+                  <entry>ALN, brain, lung, </entry>
+                  <entry>R, S, I</entry>
+                  <entry>3, 3</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>RPLN, SQ, </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>supraclavicular LN</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>7</entry>
+                  <entry>48</entry>
+                  <entry>M</entry>
+                  <entry>aortic LN, periportal LN, </entry>
+                  <entry>S, C, I</entry>
+                  <entry>3, 3, 5, 5, 9, 9, 9, 9, 9, 9</entry>
+                  <entry>PR (11+)</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>RPLN</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>8</entry>
+                  <entry>33</entry>
+                  <entry>F</entry>
+                  <entry>clavicular LN, liver, </entry>
+                  <entry>S, I</entry>
+                  <entry>3, 3, 5, 5</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>lung, MLN, mandibular</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>LN, muscle</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>9</entry>
+                  <entry>43</entry>
+                  <entry>M</entry>
+                  <entry>ALN, MLN, liver, lung, </entry>
+                  <entry>S, C, I</entry>
+                  <entry>3, 3, 5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>periaortic LN, spleen, </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>SQ</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>10</entry>
+                  <entry>61</entry>
+                  <entry>M</entry>
+                  <entry>lung, muscle</entry>
+                  <entry>S, C, H, I</entry>
+                  <entry>3, 3, 5, 5, 9, 9</entry>
+                  <entry>PR (9)</entry>
+                  <entry>hypophysitis</entry>
+                </row>
+                <row>
+                  <entry>11</entry>
+                  <entry>34</entry>
+                  <entry>M</entry>
+                  <entry>lung</entry>
+                  <entry>S, I</entry>
+                  <entry>3, 3, 5, 5</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>43</entry>
+                  <entry>M</entry>
+                  <entry>Iliac LN, periaortic LN</entry>
+                  <entry>S, I</entry>
+                  <entry>3, 3, 5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry>anterior uveitis</entry>
+                </row>
+                <row>
+                  <entry>13</entry>
+                  <entry>63</entry>
+                  <entry>M</entry>
+                  <entry>lung, MLN</entry>
+                  <entry>S, C, I</entry>
+                  <entry>3, 3</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>14</entry>
+                  <entry>68</entry>
+                  <entry>M</entry>
+                  <entry>MLN, SQ</entry>
+                  <entry>R, S, C, I</entry>
+                  <entry>3, 3, 5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>15</entry>
+                  <entry>56</entry>
+                  <entry>F</entry>
+                  <entry>bone, gallbladder, lung, </entry>
+                  <entry>R, S</entry>
+                  <entry>3</entry>
+                  <entry>NR</entry>
+                  <entry>dermatitis</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>muscle, popliteal LN, </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>SQ</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>16</entry>
+                  <entry>52</entry>
+                  <entry>F</entry>
+                  <entry>lung</entry>
+                  <entry>S, C, I</entry>
+                  <entry>3, 3, 5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>17</entry>
+                  <entry>35</entry>
+                  <entry>F</entry>
+                  <entry>adrenal, mesenteric LN, </entry>
+                  <entry>S, C, I</entry>
+                  <entry>3, 3, 5, 5, 9, 9, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>pelvis, RPLN</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>18</entry>
+                  <entry>35</entry>
+                  <entry>M</entry>
+                  <entry>liver, pelvis, SQ, spleen</entry>
+                  <entry>S, C, I</entry>
+                  <entry>3, 3, 5</entry>
+                  <entry>NR</entry>
+                  <entry>tubulointerstitial</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>nephritis</entry>
+                </row>
+                <row>
+                  <entry>19</entry>
+                  <entry>38</entry>
+                  <entry>M</entry>
+                  <entry>bone, MLN, parotid, SQ</entry>
+                  <entry>R, S, I</entry>
+                  <entry>3</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>20</entry>
+                  <entry>66</entry>
+                  <entry>M</entry>
+                  <entry>lung, MLN</entry>
+                  <entry>R, S, I</entry>
+                  <entry>3, 3, 5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>21</entry>
+                  <entry>44</entry>
+                  <entry>F</entry>
+                  <entry>iliac LN, liver, lung, </entry>
+                  <entry>S, I</entry>
+                  <entry>3, 3, 5, 5</entry>
+                  <entry>NR</entry>
+                  <entry>arthritis</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>MLN, periaortic LN</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>22</entry>
+                  <entry>64</entry>
+                  <entry>M</entry>
+                  <entry>bone, liver, lung, MLN, </entry>
+                  <entry>S, C, I</entry>
+                  <entry>3.3, 5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>SQ</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>23</entry>
+                  <entry>48</entry>
+                  <entry>M</entry>
+                  <entry>iliac LN, liver, MLN</entry>
+                  <entry>S, C</entry>
+                  <entry>3, 3, 5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry>diarrhea, hypophysitis</entry>
+                </row>
+                <row>
+                  <entry>24</entry>
+                  <entry>40</entry>
+                  <entry>M</entry>
+                  <entry>adrenal, ALN</entry>
+                  <entry>S, C, I</entry>
+                  <entry>5</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>25</entry>
+                  <entry>54</entry>
+                  <entry>M</entry>
+                  <entry>bladder, kidney, liver, </entry>
+                  <entry>R, S, C, I</entry>
+                  <entry>5, 5, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>MLN, pancreas, RPLN, </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>SQ</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>26</entry>
+                  <entry>44</entry>
+                  <entry>F</entry>
+                  <entry>ALN, SQ</entry>
+                  <entry>S, C, I</entry>
+                  <entry>5, 5</entry>
+                  <entry>NR</entry>
+                  <entry>diarrhea</entry>
+                </row>
+                <row>
+                  <entry>27</entry>
+                  <entry>46</entry>
+                  <entry>F</entry>
+                  <entry>liver, lung, caval LN</entry>
+                  <entry>R, S, C, I</entry>
+                  <entry>5, 5, 9, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>28</entry>
+                  <entry>57</entry>
+                  <entry>F</entry>
+                  <entry>liver, lung, MLN</entry>
+                  <entry>S, C, I</entry>
+                  <entry>5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>29</entry>
+                  <entry>52</entry>
+                  <entry>M</entry>
+                  <entry>lung, RPLN, SQ</entry>
+                  <entry>S, C, I</entry>
+                  <entry>5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>30</entry>
+                  <entry>62</entry>
+                  <entry>F</entry>
+                  <entry>iliac LN, lung</entry>
+                  <entry>S, I</entry>
+                  <entry>5, 5, 9, 9, 9, 9, 9</entry>
+                  <entry>PR (6+)</entry>
+                  <entry>diarrhea</entry>
+                </row>
+                <row>
+                  <entry>31</entry>
+                  <entry>59</entry>
+                  <entry>M</entry>
+                  <entry>liver, lung MLN</entry>
+                  <entry>S</entry>
+                  <entry>5, 5, 9</entry>
+                  <entry>NR</entry>
+                  <entry>diarrhea</entry>
+                </row>
+                <row>
+                  <entry>32</entry>
+                  <entry>49</entry>
+                  <entry>M</entry>
+                  <entry>lung, MLN</entry>
+                  <entry>R, S, C, I</entry>
+                  <entry>5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry>hypophysisis</entry>
+                </row>
+                <row>
+                  <entry>33</entry>
+                  <entry>55</entry>
+                  <entry>F</entry>
+                  <entry>bone, muscle, SQ</entry>
+                  <entry>R, S, C</entry>
+                  <entry>5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>34</entry>
+                  <entry>27</entry>
+                  <entry>M</entry>
+                  <entry>internal mammary LN</entry>
+                  <entry>R, S, C</entry>
+                  <entry>5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>35</entry>
+                  <entry>55</entry>
+                  <entry>M</entry>
+                  <entry>lung, SQ</entry>
+                  <entry>S, C</entry>
+                  <entry>5.5</entry>
+                  <entry>NR</entry>
+                  <entry>hypophysisis</entry>
+                </row>
+                <row>
+                  <entry>36</entry>
+                  <entry>57</entry>
+                  <entry>M</entry>
+                  <entry>lung</entry>
+                  <entry>S, C</entry>
+                  <entry>5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>37</entry>
+                  <entry>59</entry>
+                  <entry>M</entry>
+                  <entry>lung, MLN</entry>
+                  <entry>S, C</entry>
+                  <entry>5, 5, 9, 9, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry>hypophysisis</entry>
+                </row>
+                <row>
+                  <entry>38</entry>
+                  <entry>35</entry>
+                  <entry>M</entry>
+                  <entry>kidney, MLN</entry>
+                  <entry>R, S, C, I</entry>
+                  <entry>5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>39</entry>
+                  <entry>50</entry>
+                  <entry>M</entry>
+                  <entry>liver, lung, pleura</entry>
+                  <entry>S, I</entry>
+                  <entry>5, 5, 9, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry>colitis</entry>
+                </row>
+                <row>
+                  <entry>40</entry>
+                  <entry>24</entry>
+                  <entry>F</entry>
+                  <entry>lung</entry>
+                  <entry>R, S, C, I</entry>
+                  <entry>5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry>colitis, transaminitis</entry>
+                </row>
+                <row>
+                  <entry>41</entry>
+                  <entry>67</entry>
+                  <entry>M</entry>
+                  <entry>bone, breast, liver, lung, </entry>
+                  <entry>S, I</entry>
+                  <entry>5, 5, 9, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>spleen, SQ</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>42</entry>
+                  <entry>49</entry>
+                  <entry>M</entry>
+                  <entry>adrenal, clavicular LN, </entry>
+                  <entry>S, I</entry>
+                  <entry>5, 5</entry>
+                  <entry>NR</entry>
+                  <entry>dermatitis, diarrhea</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>lung, pleura</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>43</entry>
+                  <entry>5</entry>
+                  <entry>M</entry>
+                  <entry>ALN, MLN</entry>
+                  <entry>S, I</entry>
+                  <entry>5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>44</entry>
+                  <entry>41</entry>
+                  <entry>M</entry>
+                  <entry>lung, RPLN, SQ</entry>
+                  <entry>S, C, I</entry>
+                  <entry>5, 5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>45</entry>
+                  <entry>29</entry>
+                  <entry>F</entry>
+                  <entry>ILN, lung, MLN</entry>
+                  <entry>R, S, C, H, I</entry>
+                  <entry>5, 9, 9</entry>
+                  <entry>NR</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>46</entry>
+                  <entry>46</entry>
+                  <entry>F</entry>
+                  <entry>adrenal, MLN, SQ</entry>
+                  <entry>R, S, C, I</entry>
+                  <entry>5, 5, 9</entry>
+                  <entry>NR</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00001-en">ALN, axillary lymph node;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00002-en">C, chemotherapy;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00003-en">CR, complete response;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00004-en">F, femal;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00005-en">H, hormonal therapy;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00006-en">I, immunotherapy;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00007-en">LN, lymph node;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00008-en">M, male;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00009-en">MLN, mediastinal lymph node;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00010-en">NR, no response,</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00011-en">PR, partial response;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00012-en">R, radiation therapy;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00013-en">RP, retroperitoneal;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00014-en">S, surgery;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00015-en">SQ, subcutaneous</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00016-en">“+” indicates ongoing response</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00017-en">*Responses as of May 18, 2005</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00018-en">**including severe ocular toxicity</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00022-en" level="1">2.10.1. Clinical Responses</heading>
+      <p id="p-00102-en" num="0100">Five of 46 patients (11%) (Table 1) satisfied criteria for objective clinical responses after treatment at 9 mg/kg (Table 2). To date, four of the five patients have ongoing responses, which have lasted over six months.</p>
+      <p id="p-00103-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Incidence of anti-tumor responses and autoimmunity </entry>
+                </row>
+                <row>
+                  <entry>in patients by dose level</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Dose</entry>
+                  <entry>3 mg/kg</entry>
+                  <entry>5 mg/kg</entry>
+                  <entry>9 mg/kg</entry>
+                  <entry>all doses</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Responders</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>5</entry>
+                  <entry> 5/46 (11%)</entry>
+                </row>
+                <row>
+                  <entry>Grade III/IV or severe </entry>
+                  <entry>1</entry>
+                  <entry>5</entry>
+                  <entry>12</entry>
+                  <entry>18/46 (39%)</entry>
+                </row>
+                <row>
+                  <entry>ocular autoimmunity</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Responders with auto</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>3</entry>
+                  <entry>3*</entry>
+                </row>
+                <row>
+                  <entry>immunity</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00019-en">*p = 0.37, Fisher's Exact Test comparing responders with autoimmunity to nonresponders with autoimmunity</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00104-en" num="0101">Patient 1 achieved an objective partial response in lymph nodes of the retroperitoneum, pre-aortic, and peri-pancreatic areas after receiving MDX-010 at four doses of 3 mg/kg, two doses of 5 mg/kg, and two doses of 9 mg/kg. Patient 1 received a final course of 9 mg/kg before experiencing hypophysitis and, to date, remains a responder at over 12 months. Patient 4 experienced regression of multiple lung metastases after two doses of MDX-010 each at 3 mg/kg, 5 mg/kg, and 9 mg/kg without grade III/IV autoimmune toxicity. Patient 4 received two additional courses at 9 mg/kg and, to date, remains a partial responder for over 12 months. Patient 7 achieved complete regression of peri-portal and peri-pancreatic lymph nodes, and partial regression of a peri-aortic lymph node after two doses of MDX-010 each at 3 mg/kg, 5 mg/kg, and 9 mg/kg without grade III/IV autoimmune toxicity. Patient 7 received two additional courses at 9 mg/kg and, to date, remains a responder at over 11 months. Patient 10 experienced complete regression of an intramuscular lesion and partial responses in multiple lung lesions after receiving two doses of MDX-010 each at 3 mg/kg, 5 mg/kg, and 9 mg/kg. Patient 10 remained a partial responder for nine months before growth of new lung lesions. Patient 30 achieved a partial response in an iliac lymph node and a lung lesion after receiving two doses of MDX-010 at 5 mg/kg, and 4 doses at 9 mg/kg. Patient 30 received an additional dose at 9 mg/kg before experiencing grade III autoimmune diarrhea and, to date, remains a partial responder at over six months.</p>
+      <heading id="h-00023-en" level="1">2.10.2. Autoimmune Effects</heading>
+      <p id="p-00105-en" num="0102">Eighteen patients (39%) experienced 21 grade III/IV autoimmune events or severe ocular toxicity requiring steroid treatment (Tables 1 and 2). These events consisted of: anterior uveitis (1), arthritis (1), colitis/diarrhea (7), dermatitis (2), hypophysitis (8), transaminitis (1), and tubulointerstitial nephritis (1) (Tables 1 and 3). Of these 18 patients who experienced severe autoimmune toxicity, 3 (17%) were objective clinical responders, whereas of the 28 patients who did not experience severe autoimmunity, 2 (17%) were responders (p=0.37, Fisher's Exact Test). In addition, 10 patients experienced 11 grade I/II autoimmune events including alopecia areata (1), anterior uveitis/episcleritis (1), arthritis (1), diarrhea (3), dermatitis (4), and hypopigmentation (I) (Table 3). Five of these patients had concurrent grade III/IV autoimmune toxicity. Thus, 23 patients experienced autoimmunity at any grade. Analysis of these patients resulted in 4/23 (17%) of patients with autoimmunity that experienced tumor regression, and 1/23 (4%) of patients without autoimmunity that experienced tumor regression (p=0.35, Fisher's Exact Test).</p>
+      <p id="p-00106-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Number of autoimmune toxicities by severity</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Grade</entry>
+                  <entry>Grade</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Toxicity</entry>
+                  <entry>I/II</entry>
+                  <entry>III/IV</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="70pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>alopecia areata</entry>
+                  <entry>1</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>anterior uveitis</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>arthritis</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>colitis/diarrhea</entry>
+                  <entry>3</entry>
+                  <entry>7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dermatitis</entry>
+                  <entry>4</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>hypophysitis</entry>
+                  <entry>0</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>hypopigmentation</entry>
+                  <entry>1</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>transaminitis</entry>
+                  <entry>0</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>tubulointerstitial nephritis</entry>
+                  <entry>0</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>11</entry>
+                  <entry>21</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00024-en" level="1">2.10.3. Pharmacokinetics</heading>
+      <p id="p-00107-en" num="0103">Peripheral blood samples were obtained immediately prior to antibody administration and one hour post-infusion from patients who began treatment at 3 mg/kg of CTLA-4 antibody in order to analyze the effect of increasing antibody doses on both peak and trough plasma levels of the antibody. Trough levels increased proportionally from below detection levels to 68.9 ug/mL with increasing doses and concentrations of CTLA-4 antibody. Similarly, peak levels increased proportionally from 55.8 ug/mL to 356.3 ug/mL with increasing doses and concentrations of antibody, though levels appeared to stabilize with repeated dosing at 9 mg/kg (Table 4). Plasma concentrations of CTLA-4 antibody measured before and after doses of 3 mg/kg were comparable to peak and trough plasma concentrations from patients treated on previous protocols where patients received antibody doses of 3 mg/kg.</p>
+      <p id="p-00108-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Pharmacokinetics of CTLA-4 antibody administration</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="14pt" align="center" />
+              <colspec colname="3" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Sample Timepoint</entry>
+                  <entry>N</entry>
+                  <entry>PK concentration (ug/mL)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="14pt" align="char" char="." />
+              <colspec colname="3" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>pre-treatment</entry>
+                  <entry>13</entry>
+                  <entry>BD</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>post 3 mg/kg × 1</entry>
+                  <entry>5</entry>
+                  <entry>55.8 ± 6.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pre 3 mg/kg × 2</entry>
+                  <entry>3</entry>
+                  <entry>17.4 ± 2.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>post 3 mg/kg × 2</entry>
+                  <entry>2</entry>
+                  <entry>116.2 ± 15.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pre 5 mg/kg </entry>
+                  <entry>4</entry>
+                  <entry>25.5 ± 1.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>post 5 mg/kg × 1</entry>
+                  <entry>3</entry>
+                  <entry>131.5 ± 66.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pre 5 mg/kg × 2</entry>
+                  <entry>4</entry>
+                  <entry>29.6 ± 9.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>post 5 mg/kg × 2</entry>
+                  <entry>3</entry>
+                  <entry>193.1 ± 30.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pre 9 mg/kg</entry>
+                  <entry>10</entry>
+                  <entry>48.0 ± 4.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>post 9 mg/kg × 1</entry>
+                  <entry>3</entry>
+                  <entry> 287.0 ± 109.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pre 9 mg/kg × 2</entry>
+                  <entry>5</entry>
+                  <entry> 60.0 ± 12.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>post 9 mg/kg × 2</entry>
+                  <entry>3</entry>
+                  <entry>366.4 ± 28.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pre 9 mg/kg × 3</entry>
+                  <entry>5</entry>
+                  <entry>63.7 ± 8.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>post 9 mg/kg × 3</entry>
+                  <entry>4</entry>
+                  <entry>342.8 ± 68.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pre 9 mg/kg × 4</entry>
+                  <entry>2</entry>
+                  <entry>68.9 ± 7.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>post 9 mg/kg × 4</entry>
+                  <entry>3</entry>
+                  <entry>356.3 ± 74.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00020-en">reported as the mean concentration ± the standard error of the mean</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00021-en">BD = below detection</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00025-en" level="1">2.10.4. Phenotypic Changes</heading>
+      <p id="p-00109-en" num="0104">Using flow cytometry, pre- and post-treatment peripheral blood samples were analyzed for changes in surface expression of T-cell activation markers (Table 5). Samples were obtained immediately prior to each course (three weeks after the prior course of treatment) in order to analyze the effect of increasing antibody doses on the activation of T-cells. Peripheral blood was stained for both CD3 and CD4 surface expression. Patients for whom a pre-treatment sample and at least one post-treatment course sample was available were used for analysis, including three of the five responders. CD25+ surface expression decreased significantly on CD4+ cells after 5 mg/kg and 9 mg/kg. HLA-DR expression increased significantly both on CD4+ and CD8+cells. CD69 expression trended towards a decrease on both CD4+ and CD8+ cells, while CD45RO+ expression increased on both CD4+ and CD8+ cells.</p>
+      <p id="p-00110-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Flow cytometric analysis of selected T-cell surface markers in</entry>
+                </row>
+                <row>
+                  <entry>peripheral blood of patients receiving escalating </entry>
+                </row>
+                <row>
+                  <entry>doses of anti-CTLA-4 antibody</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="91pt" align="left" />
+              <colspec colname="2" colwidth="126pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Mean % Δ</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="91pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>0 to 3 mg/kg</entry>
+                  <entry>0 to 5 mg/kg</entry>
+                  <entry>0 to 9 mg/kg</entry>
+                </row>
+                <row>
+                  <entry>N</entry>
+                  <entry>18</entry>
+                  <entry>24</entry>
+                  <entry>12</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="91pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>CD25+ (% CD3+ CD4+)</entry>
+                  <entry>−0.5</entry>
+                  <entry>−4.7</entry>
+                  <entry>−6.8</entry>
+                </row>
+                <row>
+                  <entry>p-value</entry>
+                  <entry>0.8</entry>
+                  <entry>0.006</entry>
+                  <entry>0.03</entry>
+                </row>
+                <row>
+                  <entry>HLA-DR+ (% CD3+ CD4+)</entry>
+                  <entry>+10.1</entry>
+                  <entry>+10.7</entry>
+                  <entry>+13.2</entry>
+                </row>
+                <row>
+                  <entry>p-value</entry>
+                  <entry>0.0002</entry>
+                  <entry>&lt;0.0001</entry>
+                  <entry>0.0001</entry>
+                </row>
+                <row>
+                  <entry>HLA-DR+ (% CD3+ CD4−)</entry>
+                  <entry>+11.0</entry>
+                  <entry>+8.5</entry>
+                  <entry>+11.5</entry>
+                </row>
+                <row>
+                  <entry>p-value</entry>
+                  <entry>0.01</entry>
+                  <entry>0.002</entry>
+                  <entry>0.003</entry>
+                </row>
+                <row>
+                  <entry>CD69+ (% CD3+ CD4+)</entry>
+                  <entry>−11.2</entry>
+                  <entry>−5.6</entry>
+                  <entry>−10.5</entry>
+                </row>
+                <row>
+                  <entry>p-value</entry>
+                  <entry>0.04</entry>
+                  <entry>0.1</entry>
+                  <entry>0.1</entry>
+                </row>
+                <row>
+                  <entry>CD69+ (% CD3+ CD4−)</entry>
+                  <entry>−12.8</entry>
+                  <entry>−11.4</entry>
+                  <entry>−18.6</entry>
+                </row>
+                <row>
+                  <entry>p-value</entry>
+                  <entry>0.01</entry>
+                  <entry>0.004</entry>
+                  <entry>0.007</entry>
+                </row>
+                <row>
+                  <entry>CD45RO+ (% CD3+ CD4+)</entry>
+                  <entry>+3.9</entry>
+                  <entry>+5.7</entry>
+                  <entry>+9.8</entry>
+                </row>
+                <row>
+                  <entry>p-value</entry>
+                  <entry>0.02</entry>
+                  <entry>0.0005</entry>
+                  <entry>0.007</entry>
+                </row>
+                <row>
+                  <entry>CD4SRO+ (% CD3+ CD4−)</entry>
+                  <entry>+6.0</entry>
+                  <entry>+4.2</entry>
+                  <entry>+7.0</entry>
+                </row>
+                <row>
+                  <entry>p-value</entry>
+                  <entry>0.03</entry>
+                  <entry>0.06</entry>
+                  <entry>0.04</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00022-en">two-tailed p-value using paired T-test</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00111-en" num="0105">Five of the 46 patient treated with MDX-010 administered in an escalating dosage regimen exhibited a response to the regimen. Of these 5 patients, 2 patients exhibited a response without grade III/IV autoimmune toxicity, and 1 of these 2 patients had tumor regression without autoimmune toxicity. These results show the therapeutic effectiveness and tolerability of an escalating dosage regimen of a CTLA-4 antibody.</p>
+      <p id="p-00112-en" num="0106">The present invention is not to be limited in scope by the specific embodiments described herein. Indeed, various modifications of the invention in addition to those described herein will become apparent to those skilled in the art from the foregoing description. Such modifications are intended to fall within the scope of the appended claims.</p>
+      <p id="p-00113-en" num="0107">All references cited herein, including all patents, published patent applications, published scientific articles, protocols, and GenBank Accession Numbers are incorporated by reference in their entireties for all purposes.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for treating a solid tumor in a patient comprising administering a CTLA-4 antibody to the patent according to a dosage escalation regimen, which comprises: (a) administering a first CTLA-4 antibody dosage and then administering one or more increased dosages of the CTLA-4 antibody to the patient until the dosage results in a complete response in the patient; and (h) when the patent experiences a complete response, administering two additional cycles of the CTLA-4 antibody at the dosage level that resulted in the complete response.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first CTLA-4 dosage is from about 3 mg/kg to about 10 mg/kg.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the first CTLA-4 dosage is 3 mg/kg or 5 mg/kg.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the solid tumor is selected from the group consisting of melanoma, prostate cancer, lung carcinoma, pancreatic cancer, and renal cell carcinoma.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the CTLA-4 antibody is a human sequence antibody.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the CTLA-4 antibody is MDX-010.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the complete response is disappearance of the measurable tumor for greater than or equal to one month.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each one of the two additional cycles comprises one administration of a CTLA-4 antibody dosage.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising administering a chemotherapeutic agent to the patient.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the chemotherapeutic agent is selected from the group consisting of paclitaxel, carboplatin, cisplatin, etoposide, and combinations thereof.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the dosage escalation regimen comprises a linear increase in CTLA-4 antibody dosage.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the dosage escalation regimen comprises a stepwise increase in CTLA-4 antibody dosage.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising administering a CTLA-4 antibody dosage every one to eight weeks.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, comprising administering a CTLA-4 antibody dosage every three weeks.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising administering a vaccine to the patient.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the vaccine comprises gp100, tyrosinase, MART-1 or a combination thereof.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising administering a cytokine to the patient.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the cytokine is 1L-2.</claim-text>
+    </claim>
+  </claims>
+  <image file="US20150246972A1.PDF" type="pdf" size="1093168" pages="16" />
+</lexisnexis-patent-document>

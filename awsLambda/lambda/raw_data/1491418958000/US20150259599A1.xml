@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259599A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030148" date-changed="20151221" time-changed="190828">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315092">
+        <country>US</country>
+        <doc-number>20150259599</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14428196</doc-number>
+        <date>20130919</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012224114</doc-number>
+        <date>20121009</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151204">
+      <classification-ipcr sequence="1">
+        <text>C09K  19/30        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C07C  43/225       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>43</main-group>
+        <subgroup>225</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C09K  19/32        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151204">
+      <classification-cpc sequence="1">
+        <text>C09K  19/3003      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>3003</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07C  43/225       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>43</main-group>
+        <subgroup>225</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09K  19/322       20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>322</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C09K2019/0448      20130101 LA20151125BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>2019</main-group>
+        <subgroup>0448</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C09K2019/0466      20130101 LA20151125BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>2019</main-group>
+        <subgroup>0466</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C09K2019/301       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>2019</main-group>
+        <subgroup>301</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C09K2019/3422      20130101 LA20151125BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>2019</main-group>
+        <subgroup>3422</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">COMPOUND HAVING FLUORINATED NAPHTHALENE STRUCTURE AND LIQUID CRYSTAL COMPOSITION OF THE SAME</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>DIC Corporation</orgname>
+            <role>03</role>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Tojo</last-name>
+            <first-name>Kenta</first-name>
+            <address>
+              <city>Kita-adachi-gun</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kusumoto</last-name>
+            <first-name>Tetsuo</first-name>
+            <address>
+              <city>Kita-adachi-gun</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13075266</doc-number>
+        <date>20130919</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014057780</doc-number>
+        <date>20140417</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20160120">
+      <main-family family-id="165276246">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5622066</doc-number>
+            <kind>B2</kind>
+            <date>20141112</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014057780</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104640832</doc-number>
+            <kind>A</kind>
+            <date>20150520</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150020251</doc-number>
+            <kind>A</kind>
+            <date>20150225</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201425546</doc-number>
+            <kind>A</kind>
+            <date>20140701</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259599</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101576962</doc-number>
+            <kind>B1</kind>
+            <date>20151207</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165276245">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5622066</doc-number>
+            <kind>B2</kind>
+            <date>20141112</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014057780</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104640832</doc-number>
+            <kind>A</kind>
+            <date>20150520</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150020251</doc-number>
+            <kind>A</kind>
+            <date>20150225</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201425546</doc-number>
+            <kind>A</kind>
+            <date>20140701</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259599</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101576962</doc-number>
+            <kind>B1</kind>
+            <date>20151207</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">There is provided a liquid crystal composition containing the compound represented by the general formula (1) and a liquid crystal display device that uses the liquid crystal composition. The compound represented by the general formula (1) has high Δ∈, high T<sub>ni</sub>, and good miscibility with other liquid crystal compounds. Therefore, a liquid crystal composition that has high Δ∈ and exhibits a liquid crystal phase in a wide temperature range can be obtained by using the compound represented by the general formula (1) as a component of the liquid crystal composition. Thus, the compound is very useful as a constituent component of the liquid crystal composition for liquid crystal display devices.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150313</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259599A1</docdb-publication-number>
+      <docdb-application-id>444514789</docdb-application-id>
+      <new-owner>DIC CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:TOJO, KENTA;KUSUMOTO, TETSUO;REEL/FRAME:035165/0842</free-text-description>
+      <effective-date>
+        <date>20150106</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a compound having a fluorinated naphthalene structure, which is useful for organic electronic materials, medicines and agricultural chemicals, and, in particular, materials for liquid crystal display devices.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Liquid crystal display devices have been used for clocks, calculators, measuring instruments, panels for automobiles, word processors, electronic organizers, printers, computers, televisions, clocks, advertising signage, etc. Typical examples of a liquid crystal display mode include a TN (twisted nematic) mode, an STN (super twisted nematic) mode, a vertical alignment mode that uses a TFT (thin film transistor), and an IPS (in-plane switching) mode. Liquid crystal compositions used for such liquid crystal display devices need to be stable against external factors such as moisture, air, heat, and light, exhibit a liquid crystal phase (e.g., nematic phase, smectic phase, and blue phase) in as wide as possible temperature range centered around room temperature, and have a low viscosity and a low drive voltage. Furthermore, such a liquid crystal composition needs to have optimum dielectric anisotropy (As), optimum refractive index anisotropy (Δn), and the like for individual display devices.</p>
+      <p id="p-00003-en" num="0003">In horizontal alignment displays with a TN mode, an STN mode, or an IPS mode, a liquid crystal composition whose Δ∈ is positive has been used. Furthermore, a driving method has been reported in which a liquid crystal composition whose Δ∈ is positive is vertically aligned when no voltage is applied and display is achieved by applying a horizontal electric field, and thus such a liquid crystal composition whose Δ∈ is positive has been increasingly required. Therefore, components that constitute the liquid crystal composition need to have Δ∈ as high as possible. When a liquid crystal composition is used in display devices or the like, the liquid crystal composition needs to exhibit a stable nematic phase in a wide temperature range. In order to maintain a nematic phase in a wide temperature range, individual components that constitute the liquid crystal composition need to have good miscibility with other components and a high clearing point (T<sub>ni</sub>).</p>
+      <p id="p-00004-en" num="0004">For the purpose of obtaining a compound having high Δ∈, it is generally effective to intramolecularly introduce many fluorine atoms. For the purpose of obtaining a compound having high T<sub>ni</sub>, it is effective to increase the number of ring structures contained in the molecule. However, compounds having a structure in which a plurality of ring structures are directly bonded to each other without including a linking group therebetween, that is, a so-called direct-ring structure, generally have high crystallinity. If a liquid crystal composition containing such a compound is cooled, crystals of the compound are precipitated. The precipitation of the compound from the liquid crystal composition changes the physical properties of the liquid crystal composition. Therefore, the compound added to the liquid crystal composition should not be separated or precipitated for a long time for practical reasons (storage stability).</p>
+      <p id="p-00005-en" num="0005">For example, the following compound having a fluorinated naphthalene structure (refer to PTL 1) has a relatively high Δ∈ and high T<sub>ni</sub>.</p>
+      <p id="p-00006-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="33.70mm" wi="67.56mm" alt="embedded image" img-content="chem" file="US20150259599A1_00001.PNG" img-format="png" original="US20150259599A1-20150917-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00007-en" num="0006">However, crystals may be precipitated by cooling depending on the components in the liquid crystal composition. Therefore, such a compound has poor storage stability.</p>
+      <p id="p-00008-en" num="0007">The following compound having a —CF<sub>2</sub>O— group introduced as a linking group has high Δ∈ and good storage stability (refer to PTL 2). However, when the compound is added to a liquid crystal composition, T<sub>ni </sub>considerably decreases.</p>
+      <p id="p-00009-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="35.56mm" wi="73.74mm" alt="embedded image" img-content="chem" file="US20150259599A1_00002.PNG" img-format="png" original="US20150259599A1-20150917-C00002.TIF" />
+        </chemistry>
+      </p>
+      <heading id="h-00003-en" level="1">CITATION LIST</heading>
+      <heading id="h-00004-en" level="1">Patent Literature</heading>
+      <p id="p-00010-en" num="0008">PTL 1: Japanese Unexamined Patent Application Publication No. 2000-355560</p>
+      <p id="p-00011-en" num="0009">PTL 2: Japanese Unexamined Patent Application Publication No. 2001-19649</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF INVENTION</heading>
+      <heading id="h-00006-en" level="1">Technical Problem</heading>
+      <p id="p-00012-en" num="0010">It is an object of the present invention to provide a compound having high Δ∈, high T<sub>ni</sub>, and good storage stability and also to provide a liquid crystal composition containing the compound as a constituent component and a liquid crystal display device.</p>
+      <heading id="h-00007-en" level="1">Solution to Problem</heading>
+      <p id="p-00013-en" num="0011">To achieve the above object, the inventors of the present invention have studied various compounds, and consequently have completed the present invention.</p>
+      <p id="p-00014-en" num="0012">The present invention provides a compound represented by general formula (1),</p>
+      <p id="p-00015-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="42.59mm" wi="75.61mm" alt="embedded image" img-content="chem" file="US20150259599A1_00003.PNG" img-format="png" original="US20150259599A1-20150917-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00016-en" num="0000">(in the formula, R represents an alkyl group having 1 to 15 carbon atoms or an alkenyl group having 2 to 15 carbon atoms; one —CH<sub>2</sub>— or two or more non-adjacent —CH<sub>2</sub>— in the groups may be each independently substituted with —O—, —S—, —COO—, —OCO—, or —CO—; <br /> A<sup>1 </sup>to A<sup>4 </sup>are each independently selected from the group consisting of <br /> (a) a 1,4-cyclohexylene group (one —CH<sub>2</sub>— or two or more non-adjacent —CH<sub>2</sub>— in this group may be each independently substituted with O— or —S—) and <br /> (b) a 1,4-phenylene group (one —CH═ or two or more non-adjacent —CH═ in this group may be substituted with —N═, and a hydrogen atom in this group may be substituted with a fluorine atom or a chlorine atom); <br /> Z<sup>1 </sup>to Z<sup>4 </sup>each independently represent —CF<sub>2</sub>O—, —OCF<sub>2</sub>—, —CH<sub>2</sub>CH<sub>2</sub>—, —CF<sub>2</sub>CF<sub>2</sub>—, —CH═CH—, —CF=CF—, —CC—, or a single bond, and at least one of Z<sup>1 </sup>to Z<sup>4 </sup>present in the compound represents —CF<sub>2</sub>O— or —OCF<sub>2</sub>—; <br /> X<sup>a </sup>to X<sup>d </sup>each independently represent a hydrogen atom, a fluorine atom, or a chlorine atom; and n represents 0 or 1) and also provides a liquid crystal composition containing the compound and a liquid crystal display device that uses the liquid crystal composition. </p>
+      <heading id="h-00008-en" level="1">Advantageous Effects of Invention </heading>
+      <p id="p-00017-en" num="0013">The compound represented by the general formula (1) and provided by the present invention has high Δ∈, high T<sub>ni</sub>, and good miscibility with other liquid crystal compounds.</p>
+      <p id="p-00018-en" num="0014">Accordingly, a liquid crystal composition that has high Δ∈ and exhibits a liquid crystal phase in a wide temperature range can be obtained by using the compound represented by the general formula (1) as a component of the liquid crystal composition. Thus, the compound is very useful as a constituent component of the liquid crystal composition for liquid crystal display devices.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00009-en" level="1">DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00019-en" num="0015">In the general formula (1), for the purpose of decreasing the viscosity, R preferably represents an alkyl group having 1 to 8 carbon atoms or an alkenyl group having 2 to 8 carbon atoms, and particularly preferably represents an alkyl group having 1 to 5 carbon atoms or an alkenyl group having 2 to 5 carbon atoms. Furthermore, R preferably represents a linear group.</p>
+      <p id="p-00020-en" num="0016">When an importance is given to a decrease in the viscosity, A<sup>1 </sup>to A<sup>4 </sup>present in the compound preferably each independently represent a trans-1,4-cyclohexylene group or an unsubstituted 1,4-phenylene group and more preferably each independently represent a trans-1,4-cyclohexylene group. When an importance is given to an increase in Δ∈, A<sup>1 </sup>to A<sup>4 </sup>preferably each independently represent one of the following structures.</p>
+      <p id="p-00021-en" num="0000">
+        <chemistry id="chem-00004-en" num="00004">
+          <img id="img-00004-en" he="75.44mm" wi="48.43mm" alt="embedded image" img-content="chem" file="US20150259599A1_00004.PNG" img-format="png" original="US20150259599A1-20150917-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00022-en" num="0000">When an importance is given to the storage stability,</p>
+      <p id="p-00023-en" num="0000">
+        <chemistry id="chem-00005-en" num="00005">
+          <img id="img-00005-en" he="37.68mm" wi="48.94mm" alt="embedded image" img-content="chem" file="US20150259599A1_00005.PNG" img-format="png" original="US20150259599A1-20150917-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00024-en" num="0000">A<sup>1 </sup>to A<sup>4 </sup>preferably each independently represent one of the above structures.</p>
+      <p id="p-00025-en" num="0017">When an importance is given to a decrease in the viscosity, Z<sup>1 </sup>to Z<sup>3 </sup>present in the compound preferably each independently represent —CF<sub>2</sub>O—, —OCF<sub>2</sub>—, —CF=CF—, or a single bond and more preferably each independently represent —CF<sub>2</sub>O—, —OCF<sub>2</sub>—, or a single bond.</p>
+      <p id="p-00026-en" num="0018">When an importance is given to an increase in Δ∈, Z<sup>4 </sup>preferably represents —CF<sub>2</sub>O— or —OCF<sub>2</sub>— and more preferably represents —CF<sub>2</sub>O—.</p>
+      <p id="p-00027-en" num="0019">When an importance is given to the balance among the viscosity, Δ∈, and the storage stability, Z<sup>1 </sup>and Z<sup>2 </sup>present in the compound preferably represent —CH<sub>2</sub>CH<sub>2</sub>— or a single bond.</p>
+      <p id="p-00028-en" num="0000">Preferably, Z<sup>3 </sup>represents —CF<sub>2</sub>O— and Z<sup>4 </sup>represents a single bond or Z<sup>3 </sup>represents a single bond and Z<sup>4 </sup>represents —CF<sub>2</sub>O—.</p>
+      <p id="p-00029-en" num="0020">When an importance is given to an increase in Δ∈, X<sup>a </sup>to X<sup>d </sup>preferably each independently represent a fluorine atom. When an importance is given to the viscosity, X<sup>d </sup>preferably represents a hydrogen atom. When an importance is given to the balance among the viscosity, Δ∈, and the storage stability, X<sup>a </sup>to X<sup>c </sup>preferably represent a fluorine atom and X<sup>d </sup>preferably represents a hydrogen atom.</p>
+      <p id="p-00030-en" num="0021">When an importance is given to the solubility, n preferably represents 0. When an importance is given to T<sub>ni</sub>, n preferably represents 1.</p>
+      <p id="p-00031-en" num="0022">In the compound represented by the general formula (1), heteroatoms are not directly bonded to each other.</p>
+      <p id="p-00032-en" num="0023">Specific examples of preferred compounds are shown below, but the present invention is not limited thereto. The compound represented by the general formula (1) preferably includes compounds represented by general formula (1-1) to general formula (1-64).</p>
+      <p id="p-00033-en" num="0000">
+        <chemistry id="chem-00006-en" num="00006">
+          <img id="img-00006-en" he="217.34mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00006.PNG" img-format="png" original="US20150259599A1-20150917-C00006.TIF" />
+        </chemistry>
+        <chemistry id="chem-00007-en" num="00007">
+          <img id="img-00007-en" he="232.83mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00007.PNG" img-format="png" original="US20150259599A1-20150917-C00007.TIF" />
+        </chemistry>
+        <chemistry id="chem-00008-en" num="00008">
+          <img id="img-00008-en" he="202.78mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00008.PNG" img-format="png" original="US20150259599A1-20150917-C00008.TIF" />
+        </chemistry>
+        <chemistry id="chem-00009-en" num="00009">
+          <img id="img-00009-en" he="234.36mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00009.PNG" img-format="png" original="US20150259599A1-20150917-C00009.TIF" />
+        </chemistry>
+        <chemistry id="chem-00010-en" num="00010">
+          <img id="img-00010-en" he="232.58mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00010.PNG" img-format="png" original="US20150259599A1-20150917-C00010.TIF" />
+        </chemistry>
+        <chemistry id="chem-00011-en" num="00011">
+          <img id="img-00011-en" he="222.33mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00011.PNG" img-format="png" original="US20150259599A1-20150917-C00011.TIF" />
+        </chemistry>
+        <chemistry id="chem-00012-en" num="00012">
+          <img id="img-00012-en" he="228.26mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00012.PNG" img-format="png" original="US20150259599A1-20150917-C00012.TIF" />
+        </chemistry>
+        <chemistry id="chem-00013-en" num="00013">
+          <img id="img-00013-en" he="229.45mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00013.PNG" img-format="png" original="US20150259599A1-20150917-C00013.TIF" />
+        </chemistry>
+        <chemistry id="chem-00014-en" num="00014">
+          <img id="img-00014-en" he="229.70mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00014.PNG" img-format="png" original="US20150259599A1-20150917-C00014.TIF" />
+        </chemistry>
+        <chemistry id="chem-00015-en" num="00015">
+          <img id="img-00015-en" he="211.67mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00015.PNG" img-format="png" original="US20150259599A1-20150917-C00015.TIF" />
+        </chemistry>
+        <chemistry id="chem-00016-en" num="00016">
+          <img id="img-00016-en" he="227.67mm" wi="152.40mm" alt="embedded image" img-content="chem" file="US20150259599A1_00016.PNG" img-format="png" original="US20150259599A1-20150917-C00016.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00034-en" num="0000">(In the formulae, R<sup>1 </sup>each independently represent an alkyl group having 1 to 15 carbon atoms, an alkenyl group having 2 to 15 carbon atoms, an alkoxy group having 1 to 15 carbon atoms, or an alkenyloxy group having 2 to 15 carbon atoms.)</p>
+      <p id="p-00035-en" num="0024">In the liquid crystal composition of the present invention, if the content of the compound represented by the general formula (1) is low, the effects are not produced. Therefore, the lower limit of the content of the compound in the liquid crystal composition is preferably 1% (% in the composition refers to mass % and the same applies hereafter), more preferably 2%, and further preferably 5%. If the content is high, a problem such as precipitation is caused. Therefore, the upper limit of the content is preferably 50%, more preferably 30%, further preferably 20%, and particularly preferably 10%. The compounds represented by the general formula (1) may be used alone or in combination of two or more.</p>
+      <p id="p-00036-en" num="0025">To adjust the physical properties of the liquid crystal composition, a compound other than the compound represented by the general formula (1) may be used. A compound not having a liquid crystal phase may optionally added, in addition to the compound having a liquid crystal phase.</p>
+      <p id="p-00037-en" num="0026">Preferred examples of the compounds that can be used as a mixture with the compounds represented by the general formula (1) are described below. In the composition provided by the present invention, at least one of the compounds represented by the general formula (1) is contained as a first component, and at least one of the following second to sixth components is particularly preferably contained as another component.</p>
+      <p id="p-00038-en" num="0027">That is, the second component is a so-called fluorine-based (halogen-based) p-type liquid crystal compound. Examples of the p-type liquid crystal compound include compounds represented by general formulae (A1) to (A3).</p>
+      <p id="p-00039-en" num="0000">
+        <chemistry id="chem-00017-en" num="00017">
+          <img id="img-00017-en" he="83.14mm" wi="76.03mm" alt="embedded image" img-content="chem" file="US20150259599A1_00017.PNG" img-format="png" original="US20150259599A1-20150917-C00017.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00040-en" num="0028">In the above formulae, R<sup>b </sup>represent an alkyl group having 1 to 12 carbon atoms, and may have a linear or branched structure or a cyclic structure with a three to six-membered ring; —CH<sub>2</sub>— present in the group may be substituted with —O—, —CH═CH—, —CH═CF—, —CF=CH—, —CF=CF—, or —C≡C—; and a hydrogen atom present in the group may be substituted with a fluorine atom or a trifluoromethoxy group. R<sup>b </sup>preferably represent a linear alkyl group having 1 to 7 carbon atoms, a linear 1-alkenyl group having 2 to 7 carbon atoms, a linear 3-alkenyl group having 4 to 7 carbon atoms, or an alkyl group which has 1 to 5 carbon atoms and whose terminal is substituted with an alkoxy group having 1 to 3 carbon atoms. If an asymmetric carbon atom is present due to the branched structure, the compound may be an optically active compound or a racemic body.</p>
+      <p id="p-00041-en" num="0029">Ring A, Ring B, and Ring C each independently represent a trans-1,4-cyclohexylene group, a transdecahydronaphthalene-trans-2,6-diyl group, a 1,4-phenylene group that may be substituted with one or more fluorine atoms, a naphthalene-2,6-diyl group that may be substituted with one or more fluorine atoms, a tetrahydronaphthalene-2,6-diyl group that may be substituted with one or more fluorine atoms, a 1,4-cyclohexenylene group that may be substituted with a fluorine atom, a 1,3-dioxane-trans-2,5-diyl group, a pyrimidine-2,5-diyl group, or a pyridine-2,5-diyl group. Ring A, Ring B, and Ring C preferably each independently represent a trans-1,4-cyclohexylene group, a transdecahydronaphthalene-trans-2,6-diyl group, a naphthalene-2,6-diyl group that may be substituted with a fluorine atom, or a 1,4-phenylene group that may be substituted with one or two fluorine atoms. In particular, when Ring B represents a trans-1,4-cyclohexylene group or a transdecahydronaphthalene-trans-2,6-diyl group, Ring A preferably represents a trans-1,4-cyclohexylene group. When Ring C represents a trans-1,4-cyclohexylene group or a transdecahydronaphthalene-trans-2,6-diyl group, Ring B and Ring A preferably represent a trans-1,4-cyclohexylene group. In the general formula (A3), Ring A preferably represents a trans-1,4-cyclohexylene group.</p>
+      <p id="p-00042-en" num="0030">L<sup>a</sup>, L<sup>b</sup>, and L<sup>c </sup>are linking groups and each independently represent a single bond, an ethylene group (—CH<sub>2</sub>CH<sub>2</sub>—), a 1,2-propylene group (—CH(CH<sub>2</sub>)CH<sub>2</sub>— and —CH<sub>2</sub>CH(CH<sub>2</sub>)—), a 1,4-butylene group, —COO—, —OCO—, —OCF<sub>2</sub>—, —CF<sub>2</sub>O—, —CH═CH—, —CH═CF—, —CF=CH—, —CF=CF—, —CC—, or —CH═NN═CH—. L<sup>a</sup>, L<sup>b</sup>, and L<sup>c </sup>preferably each independently represent a single bond, an ethylene group, a 1,4-butylene group, —COO—, —OCF<sub>2</sub>—, —CF<sub>2</sub>O—, —CF=CF—, or —C≡C— and particularly preferably each independently represent a single bond or an ethylene group. In the general formula (A2), at least one of L<sup>a</sup>, L<sup>b</sup>, and L<sup>c </sup>preferably represents a single bond. In the general formula (A3), at least two of L<sup>a</sup>, L<sup>b</sup>, and L<sup>c </sup>preferably represent a single bond.</p>
+      <p id="p-00043-en" num="0031">Ring Z is an aromatic ring and represents one of structures represented by general formulae (La) to (Lc) below.</p>
+      <p id="p-00044-en" num="0000">
+        <chemistry id="chem-00018-en" num="00018">
+          <img id="img-00018-en" he="142.24mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259599A1_00018.PNG" img-format="png" original="US20150259599A1-20150917-C00018.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00045-en" num="0032">In the formulae, Y<sup>a </sup>to Y<sup>j </sup>each independently represent a hydrogen atom or a fluorine atom. In the general formula (La), at least one of Y<sup>a </sup>and Y<sup>b </sup>preferably represents a fluorine atom. In the general formula (Lb), at least one of Y<sup>d </sup>to Y<sup>f </sup>preferably represents a fluorine atom and Y<sup>d </sup>particularly preferably represents a fluorine atom. In the general formula (Lc), at least one of Y<sup>h </sup>and Y<sup>i </sup>preferably represents a fluorine atom and Y<sup>h </sup>particularly preferably represents a fluorine atom.</p>
+      <p id="p-00046-en" num="0033">The terminal group P<sup>a </sup>represents a fluorine atom, a chlorine atom, a trifluoromethoxy group, a difluoromethoxy group, a trifluoromethyl group, a difluoromethyl group, an alkoxy group having 2 or 3 carbon atoms and substituted with two or more fluorine atoms, an alkyl group having 2 or 3 carbon atoms and substituted with two or more fluorine atoms, an alkenyl group having 2 or 3 carbon atoms and substituted with two or more fluorine atoms, or an alkenyloxy group having 2 or 3 carbon atoms and substituted with two or more fluorine atoms. The terminal group P<sup>a </sup>preferably represents a fluorine atom, a trifluoromethoxy group, or a difluoromethoxy group and particularly preferably represents a fluorine atom.</p>
+      <p id="p-00047-en" num="0034">The third component is a so-called cyano-based p-type liquid crystal compound. Examples of the p-type liquid crystal compound include compounds represented by general formulae (B1) to (B3) below.</p>
+      <p id="p-00048-en" num="0000">
+        <chemistry id="chem-00019-en" num="00019">
+          <img id="img-00019-en" he="83.06mm" wi="76.12mm" alt="embedded image" img-content="chem" file="US20150259599A1_00019.PNG" img-format="png" original="US20150259599A1-20150917-C00019.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00049-en" num="0035">In the above formulae, R<sup>c </sup>represent an alkyl group having 1 to 12 carbon atoms, and may have a linear or branched structure or a cyclic structure with a three to six-membered ring; —CH<sub>2</sub>— present in the group may be substituted with —O—, —CH═CH—, —CH═CF—, —CF=CH—, —CF=CF—, or —C≡C—; and a hydrogen atom present in the group may be substituted with a fluorine atom or a trifluoromethoxy group. R<sup>c </sup>preferably represent a linear alkyl group having 1 to 7 carbon atoms, a linear 1-alkenyl group having 2 to 7 carbon atoms, a linear 3-alkenyl group having 4 to 7 carbon atoms, or an alkyl group which has 1 to 5 carbon atoms and whose terminal is substituted with an alkoxy group having 1 to 3 carbon atoms. If an asymmetric carbon atom is present due to the branched structure, the compound may be an optically active compound or a racemic body.</p>
+      <p id="p-00050-en" num="0036">Ring D, Ring E, and Ring F each independently represent a trans-1,4-cyclohexylene group, a transdecahydronaphthalene-trans-2,6-diyl group, a 1,4-phenylene group that may be substituted with one or more fluorine atoms, a naphthalene-2,6-diyl group that may be substituted with one or more fluorine atoms, a tetrahydronaphthalene-2,6-diyl group that may be substituted with one or more fluorine atoms, a 1,4-cyclohexenylene group that may be substituted with a fluorine atom, a 1,3-dioxane-trans-2,5-diyl group, a pyrimidine-2,5-diyl group, or a pyridine-2,5-diyl group. Ring D, Ring E, and Ring F preferably each independently represent a trans-1,4-cyclohexylene group, a transdecahydronaphthalene-trans-2,6-diyl group, a naphthalene-2,6-diyl group that may be substituted with a fluorine atom, or a 1,4-phenylene group that may be substituted with one or two fluorine atoms. In particular, when Ring E represents a trans-1,4-cyclohexylene group or a transdecahydronaphthalene-trans-2,6-diyl group, Ring D preferably represents a trans-1,4-cyclohexylene group. When Ring F represents a trans-1,4-cyclohexylene group or a transdecahydronaphthalene-trans-2,6-diyl group, Ring D and Ring E preferably represent a trans-1,4-cyclohexylene group. In the general formula (B3), Ring D preferably represents a trans-1,4-cyclohexylene group.</p>
+      <p id="p-00051-en" num="0037">L<sup>d</sup>, L<sup>e</sup>, and L<sup>f </sup>are linking groups and each independently represent a single bond, an ethylene group (—CH<sub>2</sub>CH<sub>2</sub>—), a 1,2-propylene group (—CH(CH<sub>2</sub>)CH<sub>2</sub>— and) —CH<sub>2</sub>CH(CH<sub>2</sub>)—), a 1,4-butylene group, —COO—, —OCO—, —OCF<sub>2</sub>—, —CF<sub>2</sub>O—, —CH═CH—, —CH═CF—, —CF=CH—, —CF=CF—, —CC—, —OCH<sub>2</sub>—, —CH<sub>2</sub>O—, or —CH═NN═CH—. L<sup>d</sup>, L<sup>e</sup>, and L<sup>f </sup>preferably each independently represent a single bond, an ethylene group, —COO—, —OCF<sub>2</sub>—, —CF<sub>2</sub>O—, —CF=CF—, or —C≡C— and particularly preferably each independently represent a single bond, an ethylene group, or —COO—. In the general formula (B2), at least one of L<sup>d</sup>, L<sup>e</sup>, and L<sup>f </sup>preferably represents a single bond. In the general formula (B3), at least two of L<sup>d</sup>, L<sup>e</sup>, and L<sup>f </sup>preferably represent a single bond.</p>
+      <p id="p-00052-en" num="0038">P<sup>b </sup>represents a cyano group.</p>
+      <p id="p-00053-en" num="0039">Ring Y is an aromatic ring and represents one of structures represented by general formulae (Ld) to (Lf) below.</p>
+      <p id="p-00054-en" num="0000">
+        <chemistry id="chem-00020-en" num="00020">
+          <img id="img-00020-en" he="139.70mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259599A1_00020.PNG" img-format="png" original="US20150259599A1-20150917-C00020.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00055-en" num="0040">In the formulae, Y<sup>k </sup>to Y<sup>q </sup>each independently represent a hydrogen atom or a fluorine atom. In the general formula (Ld), at least one of Y<sup>k </sup>and Y<sup>l </sup>preferably represents a fluorine atom. In the general formula (Le), at least one of Y<sup>m </sup>to Y<sup>o </sup>preferably represents a fluorine atom and Y<sup>m </sup>particularly preferably represents a fluorine atom. In the general formula (Lf), at least one of Y<sup>p </sup>and Y<sup>q </sup>preferably represents a fluorine atom and Y<sup>p </sup>particularly preferably represents a fluorine atom.</p>
+      <p id="p-00056-en" num="0041">The fourth component is a so-called nonpolar liquid crystal compound, which has a dielectric anisotropy of about 0. Examples of the nonpolar liquid crystal compound include compounds represented by general formulae (C1) to (C3) below.</p>
+      <p id="p-00057-en" num="0000">
+        <chemistry id="chem-00021-en" num="00021">
+          <img id="img-00021-en" he="83.06mm" wi="76.03mm" alt="embedded image" img-content="chem" file="US20150259599A1_00021.PNG" img-format="png" original="US20150259599A1-20150917-C00021.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00058-en" num="0042">In the above formulae, R<sup>d </sup>and P<sup>e </sup>each independently represent an alkyl group having 1 to 12 carbon atoms, and may have a linear or branched structure or a cyclic structure with a three to six-membered ring; —CH<sub>2</sub>— present in the group may be substituted with —O—, —CH═CH—, —CH═CF—, —CF=CH—, —CF=CF—, or —C≡C—; and a hydrogen atom present in the group may be substituted with a fluorine atom or a trifluoromethoxy group. R<sup>d </sup>and P<sup>e </sup>preferably each independently represent a linear alkyl group having 1 to 7 carbon atoms, a linear 1-alkenyl group having 2 to 7 carbon atoms, a linear 3-alkenyl group having 4 to 7 carbon atoms, a linear alkoxy group having 1 to 3 carbon atoms, or a linear alkyl group which has 1 to 5 carbon atoms and whose terminal is substituted with an alkoxy group having 1 to 3 carbon atoms. Furthermore, at least one of R<sup>d </sup>and P<sup>e </sup>particularly preferably each independently represent a linear alkyl group having 1 to 7 carbon atoms, a linear 1-alkenyl group having 2 to 7 carbon atoms, or a linear 3-alkenyl group having 4 to 7 carbon atoms.</p>
+      <p id="p-00059-en" num="0043">Ring G, Ring H, Ring I, and Ring J each independently represent a trans-1,4-cyclohexylene group, a transdecahydronaphthalene-trans-2,6-diyl group, a 1,4-phenylene group that may be substituted with 1 or 2 fluorine atoms or a methyl group, a naphthalene-2,6-diyl group that may be substituted with one or more fluorine atoms, a tetrahydronaphthalene-2,6-diyl group that may be substituted with 1 or 2 fluorine atoms, a 1,4-cyclohexenylene group that may be substituted with 1 or 2 fluorine atoms, a 1,3-dioxane-trans-2,5-diyl group, a pyrimidine-2,5-diyl group, or a pyridine-2,5-diyl group. In each of the compounds, the number of the transdecahydronaphthalene-trans-2,6-diyl group, the naphthalene-2,6-diyl group that may be substituted with one or more fluorine atoms, the tetrahydronaphthalene-2,6-diyl group that may be substituted with 1 or 2 fluorine atoms, the 1,4-cyclohexenylene group that may be substituted with a fluorine atom, the 1,3-dioxane-trans-2,5-diyl group, the pyrimidine-2,5-diyl group, and the pyridine-2,5-diyl group is preferably one or less. Other rings are each preferably a trans-1,4-cyclohexylene group or a 1,4-phenylene group that may be substituted with 1 or 2 fluorine atoms or a methyl group. The total number of fluorine atoms present in Ring G, Ring H, Ring I, and Ring J is preferably 2 or less and more preferably 0 or 1.</p>
+      <p id="p-00060-en" num="0044">L<sup>g</sup>, L<sup>h</sup>, and L<sup>i </sup>are linking groups and each independently represent a single bond, an ethylene group (—CH<sub>2</sub>CH<sub>2</sub>—), a 1,2-propylene group (—CH(CH<sub>2</sub>)CH<sub>2</sub>— and) —CH<sub>2</sub>CH(CH<sub>2</sub>)—), a 1,4-butylene group, —COO—, —OCO—, —OCF<sub>2</sub>—, —CF<sub>2</sub>O—, —CH═CH—, —CH═CF—, —CF=CH—, —CF=CF—, —CC—, or —CH═NN═CH—. L<sup>g</sup>, L<sup>h</sup>, and L<sup>i </sup>preferably each independently represent a single bond, an ethylene group, a 1,4-butylene group, —COO—, —OCO—, —OCF<sub>2</sub>—, —CF<sub>2</sub>O—, —CF=CF—, —CC—, or —CH═NN═CH—. In the general formula (C2), at least one of L<sup>g</sup>, L<sup>h</sup>, and L<sup>i </sup>preferably represents a single bond. In the general formula (C3), at least two of L<sup>g</sup>, L<sup>h</sup>, and L<sup>i </sup>preferably represent a single bond.</p>
+      <p id="p-00061-en" num="0045">The compounds represented by the general formulae (C1) to (C3) exclude the compounds represented by the general formulae (A1) to (A3) and the compounds represented by the general formulae (B1) to (B3).</p>
+      <p id="p-00062-en" num="0046">In the compounds represented by the general formulae (A1) to (A3), the compounds represented by the general formulae (B1) to (B3), and the compounds represented by the general formulae (C1) to (C3), heteroatoms are not directly bonded to each other.</p>
+      <p id="p-00063-en" num="0047">The fifth component is an optically active compound used to induce a helical structure in the liquid crystal composition. The fifth component is preferably a compound having an asymmetric carbon atom and more preferably a compound having a 1-methylheptyloxy group.</p>
+      <p id="p-00064-en" num="0048">The sixth component is a compound having a polymerizable functional group that allows polymerization by applying ultraviolet rays or heat, the compound being added in order to improve the response speed or to improve the alignment properties of the liquid crystal composition. The polymerizable group is preferably an acryloxy group or a methacryloxy group and more preferably a methacryloxy group. Furthermore, the compound preferably has 1 to 3 polymerizable functional groups and more preferably has 2 polymerizable functional groups.</p>
+      <p id="p-00065-en" num="0049">In the present invention, the compound represented by the general formula (1) can be produced by the following method. Obviously, the spirit and scope of the present invention are not limited by the production examples.</p>
+      <heading id="h-00010-en" level="2">(Production Method 1)</heading>
+      <p id="p-00066-en" num="0050">A compound represented by general formula (2),</p>
+      <p id="p-00067-en" num="0000">[in-line-formulae][Chem. 21][/in-line-formulae]</p>
+      <p id="p-00068-en" num="0000">[in-line-formulae]RA<sup>1</sup>−Z<sup>1</sup><sub>n</sub>A<sup>2</sup>-Z<sup>2</sup>-A<sup>3</sup>-Z<sup>3</sup>-A<sup>4</sup>  (2)[/in-line-formulae]</p>
+      <p id="p-00069-en" num="0000">(in the formula, R, A<sup>1 </sup>to A<sup>3</sup>, Z<sup>1 </sup>to Z<sup>3</sup>, and n are each independently the same as R, A<sup>1 </sup>to A<sup>3</sup>, Z<sup>1 </sup>to Z<sup>3</sup>, and n in the general formula (1); and A<sup>4 </sup>represents a 3-fluorophenyl group or a 3,5-difluorophenyl group), is caused to act on a base and then reacted with dibromodifluoromethane to obtain a compound represented by general formula (3).</p>
+      <p id="p-00070-en" num="0000">[in-line-formulae][Chem. 22][/in-line-formulae]</p>
+      <p id="p-00071-en" num="0000">[in-line-formulae]RA<sup>1</sup>-Z<sup>1</sup><sub>n</sub>A<sup>2</sup>-Z<sup>2</sup>-A<sup>3</sup>-Z<sup>3</sup>-A<sup>4</sup>-CF<sub>2</sub>Br  (3)[/in-line-formulae]</p>
+      <p id="p-00072-en" num="0000">(In the formula, R, A<sup>1 </sup>to A<sup>3</sup>, Z<sup>1 </sup>to Z<sup>3</sup>, and n are each independently the same as R, A<sup>1 </sup>to A<sup>3</sup>, Z<sup>1 </sup>to Z<sup>3</sup>, and n in the general formula (1); and A<sup>4 </sup>represents a 3-fluorophenyl group or a 3,5-difluorophenyl group.)</p>
+      <p id="p-00073-en" num="0051">Any solvent that causes the reaction to suitably proceed may be used, but the solvent is preferably an ether solvent such as tetrahydrofuran or diethyl ether. These solvents may be used alone or in the form of a mixture.</p>
+      <p id="p-00074-en" num="0052">Any base that causes the reaction to suitably proceed may be used, but the base is preferably an alkyllithium reagent such as n-butyllithium, sec-butyllithium, or tert-butyllithium or a lithium amide such as lithium diisopropylamide. When A<sup>4 </sup>represents a 3-fluorophenyl group, sec-butyllithium is more preferably used. When A<sup>4 </sup>represents a 3,5-difluorophenyl group, n-butyllithium or lithium diisopropylamide is more preferably used.</p>
+      <p id="p-00075-en" num="0053">Any reaction temperature that causes the reaction to suitably proceed may be employed, but the reaction temperature is preferably −76° to −40° C. and more preferably −76° C. to −60° C. After the addition of dibromodifluoromethane, the reaction is preferably caused to proceed at room temperature.</p>
+      <p id="p-00076-en" num="0054">Subsequently, the compound represented by the general formula (3) is reacted with a compound represented by general formula (4),</p>
+      <p id="p-00077-en" num="0000">
+        <chemistry id="chem-00022-en" num="00022">
+          <img id="img-00022-en" he="36.24mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259599A1_00022.PNG" img-format="png" original="US20150259599A1-20150917-C00022.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00078-en" num="0000">(in the formula, X<sup>a </sup>to X<sup>d </sup>are each independently the same as X<sup>a </sup>to X<sup>d </sup>in the general formula (1)), in the presence of a base to obtain a compound represented by the general formula (1) in which A<sup>4 </sup>represents 3-fluoro-1,4-phenylene or 3,5-difluoro-1,4-phenylene.</p>
+      <p id="p-00079-en" num="0055">Any base that causes the reaction to suitably proceed may be used, but the base is preferably a carbonate such as sodium carbonate, potassium carbonate, or cesium carbonate or an alkali metal hydroxide such as sodium hydroxide or potassium hydroxide and more preferably potassium carbonate.</p>
+      <p id="p-00080-en" num="0056">Any solvent that causes the reaction to smoothly proceed may be used, but the solvent is preferably an amide solvent such as N,N-dimethylformamide, N,N-dimethylacetamide, or N-methylpyrrolidone or an ether solvent such as tetrahydrofuran, 1,4-dioxane, or t-butyl methyl ether and more preferably N,N-dimethylformamide or N-methylpyrrolidone.</p>
+      <p id="p-00081-en" num="0057">Any reaction temperature that causes the reaction to suitably proceed may be employed, but the reaction temperature is preferably room temperature to a temperature at which the solvent is refluxed, more preferably room temperature to 80° C., and particularly preferably 40° C. to 60° C.</p>
+      <heading id="h-00011-en" level="2">(Production Method 2)</heading>
+      <p id="p-00082-en" num="0058">A compound represented by general formula (5),</p>
+      <p id="p-00083-en" num="0000">[in-line-formulae][Chem. 24][/in-line-formulae]</p>
+      <p id="p-00084-en" num="0000">[in-line-formulae]RA<sup>1</sup>-Z<sup>1</sup><sub>n</sub>A<sup>2</sup>-Z<sup>2</sup>-A<sup>3</sup>-Z<sup>3</sup>-A<sup>4</sup>-COOH  (5)[/in-line-formulae]</p>
+      <p id="p-00085-en" num="0000">(in the formula, R, A<sup>1 </sup>to A<sup>4</sup>, Z<sup>1 </sup>to Z<sup>3</sup>, and n are the same as A<sup>1 </sup>to A<sup>4 </sup>and Z<sup>1 </sup>to Z<sup>3 </sup>in the general formula (1)), is reacted with an acid chloride to obtain a compound represented by general formula (6).</p>
+      <p id="p-00086-en" num="0000">[in-line-formulae][Chem. 25][/in-line-formulae]</p>
+      <p id="p-00087-en" num="0000">[in-line-formulae]RA<sup>1</sup>-Z<sup>1</sup><sub>n</sub>A<sup>2</sup>-Z<sup>2</sup>-A<sup>3</sup>-Z<sup>3</sup>-A<sup>4</sup>-COCl  (6)[/in-line-formulae]</p>
+      <p id="p-00088-en" num="0000">(In the formula, R, A<sup>1 </sup>to A<sup>4</sup>, Z<sup>1 </sup>to Z<sup>3</sup>, and n are the same as A<sup>1 </sup>to A<sup>4 </sup>and Z<sup>1 </sup>to Z<sup>3 </sup>in the general formula (1).)</p>
+      <p id="p-00089-en" num="0059">Any acid chloride that causes the reaction to suitably proceed may be used, but the acid chloride is preferably oxalic acid dichloride or thionyl chloride.</p>
+      <p id="p-00090-en" num="0060">Any solvent that causes the reaction to suitably proceed may be used, but the solvent is preferably a chlorine-based solvent such as dichloromethane, chloroform, carbon tetrachloride, or 1,2-dichloroethane, a hydrocarbon solvent such as hexane or toluene, or an ether solvent such as diethyl ether or tetrahydrofuran and more preferably dichloromethane or 1,2-dichloromethane.</p>
+      <p id="p-00091-en" num="0061">Any reaction temperature that causes the reaction to suitably proceed may be employed, but the reaction temperature is preferably 0° C. to a temperature at which the solvent is refluxed and more preferably 40° C. to a temperature at which the solvent is refluxed.</p>
+      <p id="p-00092-en" num="0062">Subsequently, the compound represented by the general formula (6) is reacted with a dithiol and trifluoromethanesulfonic acid to obtain a compound represented by general formula (7).</p>
+      <p id="p-00093-en" num="0000">
+        <chemistry id="chem-00023-en" num="00023">
+          <img id="img-00023-en" he="31.33mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259599A1_00023.PNG" img-format="png" original="US20150259599A1-20150917-C00023.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00094-en" num="0000">(In the formula, R, A<sup>1 </sup>to A<sup>4</sup>, Z<sup>1 </sup>to Z<sup>3</sup>, and n are the same as A<sup>1 </sup>to A<sup>4 </sup>and Z<sup>1 </sup>to Z<sup>3 </sup>in the general formula (1); and m represents 3 or 4.)</p>
+      <p id="p-00095-en" num="0063">The dithiol is preferably 1,3-propanedithiol or 1,4-butanedithiol.</p>
+      <p id="p-00096-en" num="0064">Any reaction temperature that causes the reaction to suitably proceed may be employed. However, when trifluoromethanesulfonic acid is added to a mixture of the compound represented by the general formula (6) and the dithiol, the reaction temperature is preferably 0° C. After that, the reaction temperature is preferably 100° C. to 130° C. and more preferably 110° C. to 120° C.</p>
+      <p id="p-00097-en" num="0065">Subsequently, the compound represented by the general formula (7) is reacted with the compound represented by the general formula (4) in the presence of a fluorinating reagent and an oxidizing agent to obtain a compound represented by the general formula (1).</p>
+      <p id="p-00098-en" num="0066">Any fluorinating reagent that causes the reaction to suitably proceed may be used, but the fluorinating reagent is preferably triethylamine trihydrofluoride, tetrabutylammonium dihydrogen trifluoride, a pyridine-hydrogen fluoride complex, or a melamine-hydrogen fluoride complex.</p>
+      <p id="p-00099-en" num="0067">Any reaction temperature that causes the reaction to suitably proceed may be employed, but the reaction temperature is preferably −76° C. to −60° C.</p>
+      <heading id="h-00012-en" level="1">EXAMPLES</heading>
+      <p id="p-00100-en" num="0068">Hereafter, the present invention will be further described in detail based on Examples, but is not limited to Examples.</p>
+      <p id="p-00101-en" num="0069">The phase transition temperature was measured using both a polarizing microscope equipped with a temperature control stage and a differential scanning calorimeter (DSC).</p>
+      <p id="p-00102-en" num="0070">In the compositions of Examples and Comparative Examples below, “%” means “mass %”.</p>
+      <p id="p-00103-en" num="0071">T<sub>n-i </sub>represents a nematic phase-isotropic phase transition temperature.</p>
+      <p id="p-00104-en" num="0072">The following abbreviations are used to describe compounds.</p>
+      <p id="p-00105-en" num="0073">THF: tetrahydrofuran</p>
+      <p id="p-00106-en" num="0074">DMF: N,N-dimethylformamide</p>
+      <p id="p-00107-en" num="0075">Me: methyl group, Pr: n-propyl group, Bu: n-butyl group</p>
+      <p id="p-00108-en" num="0076">Tf: trifluoromethanesulfonyl group</p>
+      <heading id="h-00013-en" level="1">Example 1</heading>
+      <heading id="h-00014-en" level="1">Production of [3,5-difluoro-trans-4-(4-(trans-4-propylcyclohexyl)cyclohexyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane</heading>
+      <p id="p-00109-en" num="0077">
+        <chemistry id="chem-00024-en" num="00024">
+          <img id="img-00024-en" he="211.16mm" wi="147.07mm" alt="embedded image" img-content="chem" file="US20150259599A1_00024.PNG" img-format="png" original="US20150259599A1-20150917-C00024.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00110-en" num="0000">(1-1) In a nitrogen atmosphere, metal magnesium (5.5 g) was suspended in THF (5 mL), a solution prepared by dissolving 3,5-difluorobromobenzene (41.5 g) in THF (120 mL) was added at a rate at which the solution was gently refluxed, and stirring was performed at 40° C. for 45 minutes. Subsequently, a solution prepared by dissolving 4-(trans-4-propylcyclohexyl)cyclohexanone (39.8 g) in THF (85 mL) was added at 40° C., and then stirring was performed at room temperature for one hour. The reaction liquid was gently added under stirring to 10% hydrochloric acid (120 mL) cooled to 5° C., and toluene (160 mL) was added thereto and extraction was performed. The resulting organic layer was washed with a saturated saline solution (120 mL). Anhydrous sodium sulfate was added to perform drying. The organic solvent was distilled off under reduced pressure to obtain a crude 3,5-difluoro-4-(1-hydroxy-4-(4-trans-propylcyclohexyl)cyclohexyl)benzene (62.5 g). <br /> (1-2) A solution prepared by dissolving the crude 3,5-difluoro-4-(1-hydroxy-4-(trans-4-propylcyclohexyl)cyclohexyl)benzene (62.5 g) obtained in (1-1) and p-toluenesulfonic acid monohydrate (1.7 g) in toluene (300 mL) was refluxed, and stirring was performed for five hours while water generated was removed using a Dean-Stark apparatus. The resulting mixture was naturally cooled, and water (150 mL) was added thereto. The mixture was separated and the resulting organic layer was washed with an aqueous saturated sodium hydrogen carbonate solution (150 mL) and a saturated saline solution (150 mL). Anhydrous sodium sulfate was added thereto to perform drying. The organic solvent was distilled off under reduced pressure, and the resulting residue was purified by alumina column chromatography to obtain a crude 3,5-difluoro-4-(4-(trans-4-propylcyclohexyl)-1-cyclohexenyl)benzene (64.1 g). <br /> (1-3) A solution prepared by dissolving the crude 3,5-difluoro-4-(4-(trans-4-propylcyclohexyl)-1-cyclohexenyl)benzene (64.1 g) obtained in (1-2) and 5 wt % palladium/carbon (3.0 g) in toluene (200 mL) and ethanol (100 mL) was inserted into an autoclave, and stirring was performed in a hydrogen atmosphere (0.5 MPa) at 40° C. for five hours. The palladium/carbon was removed by filtration and the solvent was distilled off under reduced pressure to obtain a crude 3,5-difluoro-4-(4-(trans-4-propylcyclohexyl)-1-cyclohexyl)benzene (64.3 g). <br /> (1-4) In a nitrogen atmosphere, the crude 3,5-difluoro-4-(4-(trans-4-propylcyclohexyl)cyclohexyl)benzene (64.3 g) obtained in (1-3) and potassium tert-butoxide (2.0 g) were dissolved in DMF (300 mL), and stirring was performed at 70° C. for three hours. After natural cooling, toluene (300 mL) and water (300 mL) were added thereto and the mixture was separated. The resulting organic layer was washed with water (300 mL) and a saturated saline solution (300 mL). Anhydrous sodium sulfate was added to perform drying, and the organic solvent was distilled off under reduced pressure. The resulting residue was purified by silica gel column chromatography, subjected to reduced-pressure distillation (0.7 mmHg, boiling point: 171 to 174° C.), and recrystallized using ethanol to obtain 3,5-difluoro-4-(trans-4-(trans-4-propylcyclohexyl)cyclohexyl)benzene (43.5 g). <br /> (1-5) In a nitrogen atmosphere, a solution prepared by dissolving the 3,5-difluoro-4-(trans-4-(trans-4-propylcyclohexyl)cyclohexyl)benzene (43.5 g) obtained in (1-4) in THF (300 mL) was cooled to −76° C., and a 1.6 mol/L n-butyllithium/hexane solution (95 mL) was added thereto and stirring was performed at −76° C. for one hour. Subsequently, a solution prepared by dissolving dibromodifluoromethane (19.0 g) in THF (90 mL) was added thereto, and the temperature was gradually increased to room temperature. Toluene (300 mL) and water (200 mL) were added and the mixture was separated. The resulting organic layer was washed with a 10% aqueous sodium sulfite solution (150 mL) and a saturated saline solution (159 mL). Anhydrous sodium sulfate was added to perform drying, and the organic solvent was distilled off under reduced pressure. The resulting residue was purified by silica gel column chromatography to obtain a crude (3,5-difluoro-4-(trans-4-(trans-4-propylcyclohexyl)cyclohexyl)phenyl)bromodifluoromethane (57.5 g). <br /> (1-6) 5,6,7-Trifluoro-2-naphthol (25.4 g, produced in conformity with Japanese Unexamined Patent Application Publication No. 2004-91361), the (3,5-difluoro-4-(trans-4-(trans-4-propylcyclohexyl)cyclohexyl)phenyl)bromodifluoromethane (57.5 g) obtained in (1-5), and anhydrous potassium carbonate (26.5 g) were suspended in DMF (300 mL), and stirring was performed at 50° C. for 18 hours. After natural cooling, water (200 mL) and toluene (200 mL) were added and the mixture was separated. The resulting organic layer was washed with a saturated saline solution (200 mL) twice. Anhydrous sodium sulfate was added to perform drying, and the organic solvent was distilled off under reduced pressure. The resulting residue was purified by silica gel column chromatography and recrystallized using ethanol and hexane to obtain [3,5-difluoro-4-(trans-4-(trans-4-propylcyclohexyl)cyclohexyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane (47.4 g). </p>
+      <p id="p-00111-en" num="0078">MS m/z: 566 [M<sup>+</sup>]</p>
+      <p id="p-00112-en" num="0079">
+        <sup>1</sup>HNMR (CDCl<sub>3</sub>, TMS internal standard) δ (ppm)=8.03 (1H, d, J=9.2 Hz), 7.67 (1H, s), 7.48-7.46 (1H, m), 7.38-7.32 (1H, m), 7.19 (2H, d, 10.3 Hz), 2.35 (1H, tt, J<sub>1</sub>=3.2 Hz, J<sub>2</sub>=12.1 Hz), 1.90-1.71 (8H, m), 1.33-1.28 (4H, m), 1.56-0.94 (9H, m), 0.89-0.81 (5H, m)</p>
+      <heading id="h-00015-en" level="1">Example 2</heading>
+      <heading id="h-00016-en" level="1">Production of [3,5-difluoro-4-(2-fluoro-4-(trans-4-propylcyclohexyl)phenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane</heading>
+      <p id="p-00113-en" num="0080">
+        <chemistry id="chem-00025-en" num="00025">
+          <img id="img-00025-en" he="134.70mm" wi="149.78mm" alt="embedded image" img-content="chem" file="US20150259599A1_00025.PNG" img-format="png" original="US20150259599A1-20150917-C00025.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00114-en" num="0081">(2-1) 3,5-Difluorobromobenzene (30 g), tetrakis(triphenylphosphine)palladium (0) (1.8 g), ethanol (150 mL), and a 2 mol/L aqueous potassium carbonate solution (155 mL) were mixed with each other and heated to 50° C. A solution prepared by dissolving 2-fluoro-4-(trans-4-propylcyclohexyl)phenylboric acid (49.3 g) in ethanol (300 mL) was added thereto, and stirring was performed at 50° C. for five hours. After the temperature was decreased to room temperature by natural cooling, toluene (300 mL) was added thereto and the mixture was separated. The resulting organic layer was washed with a saturated saline solution (200 mL) twice. Anhydrous sodium sulfate was added to perform drying, and the organic solvent was distilled off under reduced pressure. The resulting residue was purified by silica gel column chromatography and recrystallized using ethanol to obtain 4-[2-fluoro-4-(trans-4-propylcyclohexyl)phenyl]-3,5-difluorobenzene (39.1 g).</p>
+      <p id="p-00115-en" num="0000">(2-2) The subsequent processes were performed by the same method as in Example 1 to obtain [3,5-difluoro-4-(2-fluoro-4-(trans-4-propylcyclohexyl)phenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane (20.5 g).</p>
+      <p id="p-00116-en" num="0082">MS m/z: 578 [M<sup>+</sup>]</p>
+      <p id="p-00117-en" num="0083">
+        <sup>1</sup>HNMR (CDCl<sub>3</sub>, TMS internal standard) δ (ppm)=8.03 (1H, d, J=9.2 Hz), 7.67 (1H, s), 7.49-7.45 (1H, m), 7.39-7.33 (1H, m), 7.27 (1H, t, J=8.1 Hz), 7.18 (2H, d, 10.4 Hz), 7.06-6.97 (2H, m), 2.50-2.43 (1H, m), 1.93-1.86 (4H, m), 1.49-1.38 (2H, m), 1.36-1.26 (3H, m), 1.24-1.18 (2H, m), 1.11-1.00 (2H, m), 0.91 (3H, t, J=7.1 Hz)</p>
+      <heading id="h-00017-en" level="1">Example 3</heading>
+      <heading id="h-00018-en" level="1">Production of [3,5-difluoro-4-(2-fluoro-4-(trans-4-propylcyclohexyl)phenyl)phenyl]-[3-fluoro-4-(5,6,7-trifluoro-2-naphthyl)phenyloxy]difluoromethane</heading>
+      <p id="p-00118-en" num="0084">
+        <chemistry id="chem-00026-en" num="00026">
+          <img id="img-00026-en" he="167.98mm" wi="120.23mm" alt="embedded image" img-content="chem" file="US20150259599A1_00026.PNG" img-format="png" original="US20150259599A1-20150917-C00026.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00119-en" num="0000">(3-1) In a nitrogen atmosphere, metal magnesium (3.9 g) was suspended in THF (5 mL), a solution prepared by dissolving 4-bromo-3-fluoroanisole (30 g) in THF (150 mL) was added at a rate at which the solution was gently refluxed, and stirring was performed at 40° C. for one hour. Subsequently, the reaction liquid was cooled to 5° C. After a solution prepared by dissolving trimethyl borate (19.8 g) in THF (60 mL) was added thereto, stirring was performed at room temperature for one hour. Toluene (150 mL) and 10% hydrochloric acid (100 mL) were added thereto and the mixture was separated. Toluene (100 mL) was added to the resulting aqueous layer and extraction was performed. The obtained organic layers were mixed and washed with a saturated saline solution (100 mL). Anhydrous sodium sulfate was added to perform drying, and the organic solvent was distilled off under reduced pressure. Thus, a crude 2-fluoro-4-methoxyphenylboric acid (26.3 g) was obtained. <br /> (3-2) In a nitrogen atmosphere, 5,6,7-trifluoro-2-naphthol (30 g) and pyridine (15.6 g) were dissolved in dichloromethane (150 mL) and cooled to 5° C., and a solution prepared by dissolving trifluoromethanesulfonic acid anhydride (47.0 g) in dichloromethane (150 mL) was added thereto. After stirring was performed at room temperature for one hour, water (200 mL) was added and the mixture was separated. The resulting organic layer was washed with 10% hydrochloric acid (150 mL), an aqueous saturated sodium hydrogen carbonate solution (150 mL), and a saturated saline solution (150 mL). Anhydrous sodium sulfate was added to perform drying, and the organic solvent was distilled off under reduced pressure. Purification was performed by silica gel column chromatography to obtain 5,6,7-trifluoro-2-naphthyl trifluoromethanesulfonate (49.4 g). <br /> (3-3) In a nitrogen atmosphere, the 5,6,7-trifluoro-2-naphthyl trifluoromethanesulfonate obtained in (3-2) (40.0 g), tetrakis(triphenylphosphine)palladium (0) (1.4 g), a 2 mol/L aqueous potassium carbonate solution (120 mL), and THF (200 mL) were mixed with each other and heated to 60° C. A solution prepared by dissolving 2-fluoro-4-methoxyphenylboric acid (24.7 g) obtained in (3-1) in THF (100 mL) was added thereto, and stirring was performed at 60° C. for six hours. The temperature was decreased to room temperature. Toluene (150 mL) was added thereto and the mixture was separated. The resulting organic layer was washed with water (100 mL) and a saturated saline solution (100 mL). Anhydrous sodium sulfate was added to perform drying, and the organic solvent was distilled off under reduced pressure. The resulting residue was purified by silica gel column chromatography to obtain a crude 2-(2-fluoro-4-methoxyphenyl)-5,6,7-trifluoronaphthalene (35.1 g). <br /> (3-4) The crude 2-(2-fluoro-4-methoxyphenyl)-5,6,7-trifluoronaphthalene (35.1 g) obtained in (3-3) was dissolved in dichloromethane (350 mL) and cooled to 5° C., and boron tribromide (14.4 g) was added thereto. After stirring was performed at room temperature for three hours, the temperature was decreased to 5° C. Water (100 mL) was added thereto and the mixture was separated. The resulting organic layer was washed with a saturated saline solution (100 mL) twice. Anhydrous sodium sulfate was added to perform drying, and the organic solvent was distilled off under reduced pressure. The resulting residue was purified by alumina column chromatography and recrystallized using hexane to obtain 4-(5,6,7-trifluoro-2-naphthyl)-3-fluorophenol (25.3 g). <br /> (3-5) The subsequent processes were performed by the same method as in Example 1 to obtain [3,5-difluoro-4-(2-fluoro-4-(trans-4-propylcyclohexyl)phenyl)phenyl]-[3-fluoro-4-(5,6,7-trifluoro-2-naphthyl)phenyloxy]difluoromethane (49.9 g). </p>
+      <p id="p-00120-en" num="0085">MS m/z: 672 [M<sup>+</sup>]</p>
+      <p id="p-00121-en" num="0086">
+        <sup>1</sup>HNMR (CDCl<sub>3</sub>, TMS internal standard) δ (ppm)=8.03 (1H, d, J=9.2 Hz), 7.67-7.66 (2H, m), 7.49-7.46 (1H, m), 7.38-7.33 (1H, m), 7.27 (1H, t, J=8.0 Hz), 7.19 (2H, d, 10.4 Hz), 7.06-6.97 (2H, m), 6.83-6.82 (2H, m), 2.52-2.45 (1H, m), 1.93-1.86 (4H, m), 1.49-1.38 (2H, m), 1.36-1.26 (3H, m), 1.24-1.18 (2H, m), 1.11-1.00 (2H, m), 0.91 (3H, t, J=7.1 Hz)</p>
+      <heading id="h-00019-en" level="1">Example 4</heading>
+      <heading id="h-00020-en" level="1">Production of [4-(4-(5,6,7-trifluoro-2-naphthyl)-3-fluorophenyl)phenyloxy]-(2,6-difluoro-4-propylphenyl)difluoromethane</heading>
+      <p id="p-00122-en" num="0087">
+        <chemistry id="chem-00027-en" num="00027">
+          <img id="img-00027-en" he="189.65mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150259599A1_00027.PNG" img-format="png" original="US20150259599A1-20150917-C00027.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00123-en" num="0088">By methods similar to the methods described in Examples 1 to 3, 4-(4-(5,6,7-trifluoro-2-naphthyl)-3-fluorophenyl)phenyloxy]-(2,6-difluoro-4-propylphenyl)difluoromethane (10.1 g) was obtained.</p>
+      <p id="p-00124-en" num="0089">MS m/z: 572 [M<sup>+</sup>]</p>
+      <p id="p-00125-en" num="0090">
+        <sup>1</sup>HNMR (CDCl<sub>3</sub>, TMS internal standard) δ (ppm)=8.03 (1H, d, J=9.2 Hz), 7.67 (1H, s), 7.49-7.45 (1H, m), 7.39-7.33 (1H, m), 7.27 (1H, t, J=8.1 Hz), 7.18 (2H, d, 10.4 Hz), 7.13 (2H, d, J=8.8 Hz), 7.06-6.97 (2H, m), 6.85 (2H, d, J=8.8 Hz), 2.64 (2H, t, J=7.6), 1.68 (2H, quinted, J=8.0 Hz), 0.97 (3H, t, J=7.2 Hz)</p>
+      <heading id="h-00021-en" level="1">Example 5</heading>
+      <heading id="h-00022-en" level="1">Production of [3,5-difluoro-4-(4-(2-(trans-4-propylcyclohexyl)-1-ethyl)phenyl)phenyl]-[4-(5,6,7-trifluoro-2-naphthyl)phenyl]difluoromethane</heading>
+      <p id="p-00126-en" num="0091">
+        <chemistry id="chem-00028-en" num="00028">
+          <img id="img-00028-en" he="241.30mm" wi="156.80mm" alt="embedded image" img-content="chem" file="US20150259599A1_00028.PNG" img-format="png" original="US20150259599A1-20150917-C00028.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00127-en" num="0092">By methods similar to the methods described in Examples 1 to 3, [3,5-difluoro-4-(4-(2-(trans-4-propylcyclohexyl)-1-ethyl)phenyl)phenyl]-[4-(5,6,7-trifluoro-2-naphthyl)phenyl]difluoromethane (5.1 g) was obtained.</p>
+      <p id="p-00128-en" num="0093">MS m/z: 664 [M<sup>+</sup>]</p>
+      <p id="p-00129-en" num="0094">
+        <sup>1</sup>HNMR (CDCl<sub>3</sub>, TMS internal standard) δ (ppm)=8.03 (1H, d, J=9.2 Hz), 7.67 (1H, s), 7.49-7.45 (3H, m), 7.42 (2H, d, J=7.9 Hz), 7.40-7.33 (3H, m), 7.27 (2H, d, J=8.0 Hz), 7.19 (2H, d, J=10.4 Hz), 2.38 (2H, t, J=7.0 Hz), 1.60-1.58 (2H, m), 1.40-1.17 (10H, m), 1.07-0.97 (4H, m), 0.90 (3H, t, J=7.2 Hz)</p>
+      <heading id="h-00023-en" level="1">Example 6</heading>
+      <heading id="h-00024-en" level="1">Production of [3,5-difluoro-4-(2-fluoro-4-(4-propylphenyl)phenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane</heading>
+      <p id="p-00130-en" num="0095">
+        <chemistry id="chem-00029-en" num="00029">
+          <img id="img-00029-en" he="134.70mm" wi="147.66mm" alt="embedded image" img-content="chem" file="US20150259599A1_00029.PNG" img-format="png" original="US20150259599A1-20150917-C00029.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00131-en" num="0096">By a method similar to the method described in Example 2, 3,5-difluoro-4-(2-fluoro-4-(4-propylphenyl)phenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane (19.1 g) was obtained.</p>
+      <p id="p-00132-en" num="0097">MS m/z: 572 [M<sup>+</sup>]</p>
+      <p id="p-00133-en" num="0098">Phase transition: Cr 99 N 217 Iso</p>
+      <p id="p-00134-en" num="0099">
+        <sup>1</sup>HNMR (CDCl<sub>3</sub>, TMS internal standard) δ (ppm)=8.06 (1H, d, J=9.2 Hz), 7.71 (1H, s), 7.55-7.37 (7H, m), 7.27 (2H, d, J=10.1 Hz), 2.65 (2H, t, J=7.4 Hz), 1.69 (2H, sixtet, J=7.6 Hz), 0.98 (3H, t, J=7.3 Hz)</p>
+      <heading id="h-00025-en" level="1">Reference Example 1</heading>
+      <heading id="h-00026-en" level="1">Production of [3,5-difluoro-4-(4-propylphenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane</heading>
+      <p id="p-00135-en" num="0100">
+        <chemistry id="chem-00030-en" num="00030">
+          <img id="img-00030-en" he="119.04mm" wi="75.78mm" alt="embedded image" img-content="chem" file="US20150259599A1_00030.PNG" img-format="png" original="US20150259599A1-20150917-C00030.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00136-en" num="0101">By methods similar to the methods described in Examples 1 to 3, [3,5-difluoro-4-(4-propylphenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane (24.1 g) was obtained.</p>
+      <p id="p-00137-en" num="0102">MS m/z: 478 [M<sup>+</sup>]</p>
+      <p id="p-00138-en" num="0103">
+        <sup>1</sup>HNMR (CDCl<sub>3</sub>, TMS internal standard) δ (ppm)=8.03 (1H, d, J=9.2 Hz), 7.67 (1H, s), 7.49-7.45 (3H, m), 7.38-7.33 (1H, m), 7.27 (2H, d, J=8.0 Hz), 7.19 (2H, d, 10.4 Hz), 2.63 (2H, d, 7.4 Hz), 1.67 (2H, quinted, J=7.6 Hz), 0.96 (3H, t, J=7.3 Hz)</p>
+      <heading id="h-00027-en" level="1">Reference Example 2</heading>
+      <heading id="h-00028-en" level="1">Production of 5,6,7-trifluoro-2-[3-fluoro-4-(4-propylphenyl)phenyl]naphthalene</heading>
+      <p id="p-00139-en" num="0104">
+        <chemistry id="chem-00031-en" num="00031">
+          <img id="img-00031-en" he="80.26mm" wi="75.78mm" alt="embedded image" img-content="chem" file="US20150259599A1_00031.PNG" img-format="png" original="US20150259599A1-20150917-C00031.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00140-en" num="0105">By methods similar to the methods described in Examples 1 to 3, 5,6,7-trifluoro-2-[3-fluoro-4-(4-propylphenyl)phenyl]naphthalene (50.1 g) was obtained.</p>
+      <p id="p-00141-en" num="0106">MS m/z: 394 [M<sup>+</sup>]</p>
+      <heading id="h-00029-en" level="1">Example 7</heading>
+      <heading id="h-00030-en" level="1">Preparation of Liquid Crystal Composition—1</heading>
+      <p id="p-00142-en" num="0107">A host liquid crystal composition (H) having the following composition was prepared.</p>
+      <p id="p-00143-en" num="0000">
+        <chemistry id="chem-00032-en" num="00032">
+          <img id="img-00032-en" he="48.09mm" wi="73.66mm" alt="embedded image" img-content="chem" file="US20150259599A1_00032.PNG" img-format="png" original="US20150259599A1-20150917-C00032.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00144-en" num="0108">The physical properties of the composition (H) were as follows.</p>
+      <p id="p-00145-en" num="0109">Nematic phase upper-limit temperature (T<sub>ni</sub>): 117.2° C.</p>
+      <p id="p-00146-en" num="0110">Dielectric anisotropy (Δ∈): 4.38</p>
+      <p id="p-00147-en" num="0111">Refractive index anisotropy (Δn): 0.0899</p>
+      <p id="p-00148-en" num="0112">Viscosity (η<sub>20</sub>): 20.3 mPa·s</p>
+      <p id="p-00149-en" num="0113">A liquid crystal composition (M-A) containing 80% of the host liquid crystal (H) and 20% of the [3,5-difluorotrans-4-(4-(trans-4-propylcyclohexyl)cyclohexyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane obtained in Example 1 was prepared. The resulting composition had the following physical properties.</p>
+      <p id="p-00150-en" num="0114">T<sub>ni</sub>: 127.4° C.</p>
+      <p id="p-00151-en" num="0115">Δ∈: 8.44</p>
+      <p id="p-00152-en" num="0116">Δn: 0.10232</p>
+      <p id="p-00153-en" num="0117">η<sub>20</sub>: 35.3 mPa·s</p>
+      <p id="p-00154-en" num="0118">It was found that the addition of the [3,5-difluoro-trans-4-(4-(trans-4-propylcyclohexyl)cyclohexyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane increased T<sub>ni </sub>(extrapolated T<sub>ni</sub>=168.2° C.) and increased Δ∈ in a positive direction (extrapolated Δ∈=24.7). Furthermore, the prepared liquid crystal composition (M-A) maintained a homogeneous nematic liquid crystal state at room temperature for one month or longer, which revealed that the liquid crystal composition (M-A) had good storage stability.</p>
+      <heading id="h-00031-en" level="1">Example 8</heading>
+      <heading id="h-00032-en" level="1">Preparation of Liquid Crystal Composition—2</heading>
+      <p id="p-00155-en" num="0119">A liquid crystal composition (M-B) containing 80% of the host liquid crystal (H) and 20% of the [3,5-difluoro-4-(2-fluoro-4-(trans-4-propylcyclohexyl)phenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane obtained in Example 2 was prepared. The resulting composition had the following physical properties.</p>
+      <p id="p-00156-en" num="0120">T<sub>ni</sub>: 124.5° C.</p>
+      <p id="p-00157-en" num="0121">Δ∈: 10.88</p>
+      <p id="p-00158-en" num="0122">Δn: 0.1135</p>
+      <p id="p-00159-en" num="0123">η<sub>20</sub>: 34.3 mPa·s</p>
+      <p id="p-00160-en" num="0124">It was found that the addition of the [3,5-difluoro-4-(2-fluoro-4-(trans-4-propylcyclohexyl)phenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane increased T<sub>ni </sub>(extrapolated T<sub>ni</sub>=153.6° C.) and increased Δ∈ in a positive direction (extrapolated Δ∈=36.9). Furthermore, the prepared liquid crystal composition (M-B) maintained a homogeneous nematic liquid crystal state at room temperature for one month or longer, which revealed that the liquid crystal composition (M-B) had good storage stability.</p>
+      <heading id="h-00033-en" level="1">Example 9</heading>
+      <heading id="h-00034-en" level="1">Preparation of Liquid Crystal Composition—3</heading>
+      <p id="p-00161-en" num="0125">A liquid crystal composition (M-C) containing 90% of the host liquid crystal (H) and 10% of the [3,5-difluoro-4-(2-fluoro-4-(trans-4-propylcyclohexyl)phenyl)phenyl]-[3-fluoro-4-(5,6,7-trifluoro-2-naphthyl)phenyloxy]difluoromethane obtained in Example 3 was prepared. The resulting composition had the following physical properties.</p>
+      <p id="p-00162-en" num="0126">T<sub>ni</sub>: 128.8° C.</p>
+      <p id="p-00163-en" num="0127">Δ∈: 8.30</p>
+      <p id="p-00164-en" num="0128">Δn: 0.1106</p>
+      <p id="p-00165-en" num="0129">η<sub>20</sub>: 31.8 mPa·s</p>
+      <p id="p-00166-en" num="0130">It was found that the addition of the [3,5-difluoro-4-(2-fluoro-4-(trans-4-propylcyclohexyl)phenyl)phenyl]-[3-fluoro-4-(5,6,7-trifluoro-2-naphthyl)phenyloxy]difluoromethane considerably increased T<sub>ni </sub>(extrapolated T<sub>ni</sub>=233.4° C.) and increased Δ∈ in a positive direction (extrapolated Δ∈=43.6). Furthermore, the prepared liquid crystal composition (M-C) maintained a homogeneous nematic liquid crystal state at room temperature for one month or longer, which revealed that the liquid crystal composition (M-C) had good storage stability.</p>
+      <heading id="h-00035-en" level="1">Example 10</heading>
+      <heading id="h-00036-en" level="1">Preparation of Liquid Crystal Composition—4</heading>
+      <p id="p-00167-en" num="0131">A liquid crystal composition (M-D) containing 80% of the host liquid crystal (H) and 20% of the [4-(4-(5,6,7-trifluoro-2-naphthyl)-3-fluorophenyl)phenyloxy]-(2,6-difluoro-4-propylphenyl)difluoromethane obtained in Example 4 was prepared. The resulting composition had the following physical properties.</p>
+      <p id="p-00168-en" num="0132">T<sub>ni</sub>: 117.7° C.</p>
+      <p id="p-00169-en" num="0133">Δ∈: 9.77</p>
+      <p id="p-00170-en" num="0134">Δn: 0.1481</p>
+      <p id="p-00171-en" num="0135">η<sub>20</sub>: 28.3 mPa·s</p>
+      <p id="p-00172-en" num="0136">It was found that the addition of the [4-(4-(5,6,7-trifluoro-2-naphthyl)-3-fluorophenyl)phenyloxy]-(2,6-difluoro-4-propylphenyl)difluoromethane relatively considerably increased T<sub>ni </sub>(extrapolated T<sub>ni</sub>=119.7° C.) and increased Δ∈ in a positive direction (extrapolated Δ∈=31.2). Furthermore, the prepared liquid crystal composition (M-D) maintained a homogeneous nematic liquid crystal state at room temperature for one month or longer, which revealed that the liquid crystal composition (M-D) had good storage stability.</p>
+      <heading id="h-00037-en" level="1">Example 11</heading>
+      <heading id="h-00038-en" level="1">Preparation of Liquid Crystal Composition—5</heading>
+      <p id="p-00173-en" num="0137">A liquid crystal composition (M-E) containing 95% of the host liquid crystal (H) and 5% of the [3,5-difluoro-4-(4-(2-(trans-4-propylcyclohexyl)-1-ethyl)phenyl)phenyl]-[4-(5,6,7-trifluoro-2-naphthyl)phenyl]difluoromethane obtained in Example 5 was prepared. The resulting composition had the following physical properties.</p>
+      <p id="p-00174-en" num="0138">T<sub>ni</sub>: 126.1° C.</p>
+      <p id="p-00175-en" num="0139">Δ∈: 5.63</p>
+      <p id="p-00176-en" num="0140">Δn: 0.1017</p>
+      <p id="p-00177-en" num="0141">η<sub>20</sub>: 30.8 mPa·s</p>
+      <p id="p-00178-en" num="0142">It was found that the addition of the [3,5-difluoro-4-(4-(2-(trans-4-propylcyclohexyl)-1-ethyl)phenyl)phenyl]-[4-(5,6,7-trifluoro-2-naphthyl)phenyl]difluoromethane extremely increased T<sub>ni </sub>(extrapolated T<sub>ni</sub>=294.5° C.) and increased Δ∈ in a positive direction (extrapolated Δ∈=29.3). Furthermore, the prepared liquid crystal composition (M-E) maintained a homogeneous nematic liquid crystal state at room temperature for one month or longer, which revealed that the liquid crystal composition (M-E) had good storage stability.</p>
+      <heading id="h-00039-en" level="1">Example 12</heading>
+      <heading id="h-00040-en" level="1">Preparation of Liquid Crystal Composition—6</heading>
+      <p id="p-00179-en" num="0143">A liquid crystal composition (M-F) containing 90% of the host liquid crystal (H) and 10% of the [3,5-difluoro-4-(2-fluoro-4-(4-propylphenyl)phenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane obtained in Example 6 was prepared. The resulting composition had the following physical properties.</p>
+      <p id="p-00180-en" num="0144">T<sub>ni</sub>: 123.3° C.</p>
+      <p id="p-00181-en" num="0145">Δ∈: 7.51</p>
+      <p id="p-00182-en" num="0146">Δn: 0.1060</p>
+      <p id="p-00183-en" num="0147">η<sub>20</sub>: 26.2 mPa·s</p>
+      <p id="p-00184-en" num="0148">It was found that the addition of the [3,5-difluoro-4-(2-fluoro-4-(4-propylphenyl)phenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane considerably increased T<sub>ni </sub>(extrapolated T<sub>ni</sub>=178.2° C.) and increased Δ∈ in a positive direction (extrapolated Δ∈=32.3). Furthermore, the prepared liquid crystal composition (M-F) maintained a homogeneous nematic liquid crystal state at room temperature for one month or longer, which revealed that the liquid crystal composition (M-F) had good storage stability.</p>
+      <heading id="h-00041-en" level="1">Comparative Example 1</heading>
+      <heading id="h-00042-en" level="1">Preparation of Liquid Crystal Composition—7</heading>
+      <p id="p-00185-en" num="0149">A liquid crystal composition (M-G) containing 80% of the host liquid crystal (H) and 20% of the [3,5-difluoro-4-(4-propylphenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane obtained in Reference Example 1 was prepared. The resulting composition had the following physical properties.</p>
+      <p id="p-00186-en" num="0150">T<sub>ni</sub>: 106.9° C.</p>
+      <p id="p-00187-en" num="0151">Δ∈: 9.79</p>
+      <p id="p-00188-en" num="0152">Δn: 0.1112</p>
+      <p id="p-00189-en" num="0153">η<sub>20</sub>: 26.9 mPa·s</p>
+      <p id="p-00190-en" num="0154">It was found that the addition of the [3,5-difluoro-4-(4-propylphenyl)phenyl]-(5,6,7-trifluoro-2-naphthyloxy)difluoromethane decreased T<sub>ni </sub>(extrapolated T<sub>ni</sub>=65.8° C.) and increased Δ∈ in a positive direction (extrapolated Δ∈=31.4). The prepared liquid crystal composition (M-G) maintained a homogeneous nematic liquid crystal state at room temperature for one month or longer, which revealed that the liquid crystal composition (M-G) had good storage stability.</p>
+      <heading id="h-00043-en" level="1">Comparative Example 2</heading>
+      <heading id="h-00044-en" level="1">Preparation of Liquid Crystal Composition—8</heading>
+      <p id="p-00191-en" num="0155">A liquid crystal composition (M-H) containing 90% of the host liquid crystal (H) and 10% of the 5,6,7-trifluoro-2-[3-fluoro-4-(4-propylphenyl)phenyl]naphthalene was prepared. The resulting composition had the following physical properties.</p>
+      <p id="p-00192-en" num="0156">T<sub>ni</sub>: 119.6° C.</p>
+      <p id="p-00193-en" num="0157">Δ∈: 6.15</p>
+      <p id="p-00194-en" num="0158">Δn: 0.1137</p>
+      <p id="p-00195-en" num="0159">η<sub>20</sub>: 23.8 mPa·s</p>
+      <p id="p-00196-en" num="0160">It was found that the addition of the 5,6,7-trifluoro-2-[3-fluoro-4-(4-propylphenyl)phenyl]naphthalene increased T<sub>n-i </sub>to some extent (extrapolated T<sub>ni</sub>=140.8° C.) and increased Δ∈ in a positive direction (extrapolated Δ∈=22.1). When the prepared liquid crystal composition (M-H) was stored at room temperature for two weeks, crystals were precipitated.</p>
+      <p id="p-00197-en" num="0161">As a result of the comparison between Example 7 and Comparative Example 1, it was found that the compound of the present invention considerably increased T<sub>ni </sub>and Δ∈ while the compound of the present invention had better storage stability than the reference compound. As a result of the comparison between Example 7 and Comparative Example 2, it was also found that the compound of the present invention considerably improved the storage stability and Δ∈ while the compound of the present invention maintained high Tni.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>11</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>12</b>. A compound represented by general formula (1),</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00033">
+          <img id="imgc-00001-en" he="29.97mm" wi="75.61mm" alt="embedded image" img-content="chem" file="US20150259599A1_00033.PNG" img-format="png" original="US20150259599A1-20150917-C00033.TIF" />
+        </chemistry><claim-text>(in the formula, R represents an alkyl group having 1 to 15 carbon atoms or an alkenyl group having 2 to 15 carbon atoms; one —CH<sub>2</sub>— or two or more non-adjacent —CH<sub>2</sub>— in the groups may be each independently substituted with —O—, —S—, —COO—, —OCO—, or —CO—;</claim-text><claim-text>A<sup>1 </sup>to A<sup>4 </sup>are each independently selected from the group consisting of</claim-text><claim-text>(a) a 1,4-cyclohexylene group (one —CH<sub>2</sub>— in this group may be substituted with —S— and two or more non-adjacent —CH<sub>2</sub>— in this group may be each independently substituted with —O— or —S—) and</claim-text><claim-text>(b) a 1,4-phenylene group (one —CH═ or two or more non-adjacent —CH═ in this group may be substituted with —N═ and a hydrogen atom in this group may be substituted with a fluorine atom or a chlorine atom);</claim-text><claim-text>Z<sup>1 </sup>to Z<sup>4 </sup>each independently represent —CF<sub>2</sub>O—, —OCF<sub>2</sub>—, —CH<sub>2</sub>CH<sub>2</sub>—, —CF<sub>2</sub>CF<sub>2</sub>—, —CH═CH—, —CF=CF—, —CC—, or a single bond, and at least one of Z<sup>1 </sup>to Z<sup>4 </sup>present in the compound represents —CF<sub>2</sub>O— or —OCF<sub>2</sub>—;</claim-text><claim-text>X<sup>a </sup>to X<sup>d </sup>each independently represent a hydrogen atom, a fluorine atom, or a chlorine atom; and</claim-text><claim-text>n represents 0 or 1).</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>13</b>. The compound according to <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein in the general formula (1), Z<sup>1 </sup>and Z<sup>2 </sup>present in the compound represent a single bond.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>14</b>. The compound according to <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein in the general formula (1), X<sup>d </sup>represents a hydrogen atom.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>15</b>. The compound according to <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein in the general formula (1), A<sup>1 </sup>to A<sup>4 </sup>present in the compound each independently represent one of groups below,</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00034">
+          <img id="imgc-00002-en" he="89.41mm" wi="49.19mm" alt="embedded image" img-content="chem" file="US20150259599A1_00034.PNG" img-format="png" original="US20150259599A1-20150917-C00034.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>16</b>. The compound according to <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein in the general formula (1), X<sup>a </sup>to X<sup>c </sup>represent a fluorine atom.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>17</b>. The compound according to <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein in the general formula (1), n represents 0.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>18</b>. The compound according to <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein in the general formula (1), n represents 1.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>19</b>. The compound according to <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein in the general formula (1), Z<sup>3 </sup>represents —CF<sub>2</sub>O— and Z<sup>4 </sup>represents a single bond.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>20</b>. The compound according to <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein in the general formula (1), Z<sup>3 </sup>represents a single bond and Z<sup>4 </sup>represents —CF<sub>2</sub>O—.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>21</b>. A liquid crystal composition comprising at least one of the compound according to <claim-ref idref="clm-00002-en">claim 12</claim-ref>.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>22</b>. A liquid crystal display device using the liquid crystal composition according to <claim-ref idref="clm-00011-en">claim 21</claim-ref>. </claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00014.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00015.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00016.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00017.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00018.TIF" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00019.TIF" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00020.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00020.TIF" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00021.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00021.TIF" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00022.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00022.TIF" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00023.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00023.TIF" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00024.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00024.TIF" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00025.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00025.TIF" inline="yes" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00026.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00026.TIF" inline="yes" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00027.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00027.TIF" inline="yes" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00028.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00028.TIF" inline="yes" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00029.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00029.TIF" inline="yes" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00030.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00030.TIF" inline="yes" />
+    </figure>
+    <figure num="31">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00031.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00031.TIF" inline="yes" />
+    </figure>
+    <figure num="32">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00032.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00032.TIF" inline="yes" />
+    </figure>
+    <figure num="33">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00033.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00033.TIF" inline="yes" />
+    </figure>
+    <figure num="34">
+      <img he="N/A" wi="N/A" file="US20150259599A1_00034.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259599A1-20150917-C00034.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150259599A1.PDF" type="pdf" size="790037" pages="26" />
+</lexisnexis-patent-document>

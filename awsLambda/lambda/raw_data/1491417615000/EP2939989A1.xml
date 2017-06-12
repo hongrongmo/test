@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2939989A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091101" date-changed="20160104" time-changed="145552">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939376">
+        <country>EP</country>
+        <doc-number>2939989</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13867691</doc-number>
+        <date>20131225</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012282646</doc-number>
+        <date>20121226</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>JP</country>
+        <doc-number>2013260301</doc-number>
+        <date>20131217</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012282646</doc-number>
+        <kind>A</kind>
+        <date>20121226</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013260301</doc-number>
+        <kind>A</kind>
+        <date>20131217</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013007585</doc-number>
+        <kind>W</kind>
+        <date>20131225</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012282646</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013260301</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="original">
+        <doc-number>2013007585</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120282646</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>JP20130260301</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="epodoc">
+        <doc-number>WO2013JP07585</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150617</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151105">
+      <classification-ipcr sequence="1">
+        <text>C04B   7/45        20060101AFI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>45</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>F27B  15/14        20060101ALI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>27</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151105">
+      <classification-cpc sequence="1">
+        <text>C04B   7/45        20130101 FI20151029BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>45</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151029</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C04B   7/434       20130101 LI20151030BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>434</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151030</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>F27B  15/10        20130101 LI20151029BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>27</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151029</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>F27B  15/14        20130101 LI20151030BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>27</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151030</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">4</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">FLUIDISIERTER KALZINIERUNGSOFEN</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">FLUIDIZED CALCINATION FURNACE</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">FOUR DE CALCINATION À LIT FLUIDISÉ</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Mitsubishi Materials Corporation</orgname>
+            <registered-number>101142604</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>3-2, Otemachi 1-chome</address-1>
+              <city>Chiyoda-ku Tokyo 100-8117</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>TAKAYAMA, Yoshinori</name>
+            <address>
+              <address-1>c/o Mitsubishi Materials Corporation Central Research Institute 1002-14 Mukohyama</address-1>
+              <city>Naka-shi Ibaraki 311-0102</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>WANG, Junzhu</name>
+            <address>
+              <address-1>c/o Mitsubishi Materials Corporation Central Research Institute 1002-14 Mukohyama</address-1>
+              <city>Naka-shi Ibaraki 311-0102</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Hoffmann Eitle</name>
+            <registered-number>100061036</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Patent- und Rechtsanwälte PartmbB Arabellastraße 30</address-1>
+              <city>81925 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13007585</doc-number>
+        <date>20131225</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014103302</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151104">
+      <main-family family-id="166469660">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150098632</doc-number>
+            <kind>A</kind>
+            <date>20150828</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939989</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104903268</doc-number>
+            <kind>A</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201441552</doc-number>
+            <kind>A</kind>
+            <date>20141101</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150307396</doc-number>
+            <kind>A1</kind>
+            <date>20151029</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103302</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="167097311">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150098632</doc-number>
+            <kind>A</kind>
+            <date>20150828</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939989</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>4144DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20151016</date>
+          </document-id>
+          <application-date>
+            <date>20150514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201441552</doc-number>
+            <kind>A</kind>
+            <date>20141101</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150307396</doc-number>
+            <kind>A1</kind>
+            <date>20151029</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103302</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104903268</doc-number>
+            <kind>A</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014141396</doc-number>
+            <kind>A</kind>
+            <date>20140807</date>
+          </document-id>
+          <application-date>
+            <date>20131217</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A fluidized calciner is provided which allows a reduction in the rate of unburned fuel at an outlet of a fluidized calciner to enable sufficient calcination while preventing possible occlusion in a preheater, even when pulverized coal of coal or coke, which has low combustion quality, is used as fuel, based on calculations in accordance with computational fluid dynamics based on the shape of an actual furnace and operational conditions. The present invention provides a fluidized calciner including a tubular furnace body (2) in which an axial direction is an up-down direction, a pulverized coal blowing line (3) through which fuel is blown into the furnace body (2), a raw material chute (4) through which a cement raw material is loaded into the furnace body (2), at least one air introduction pipe (5) through which introduced air is sucked, the pulverized coal blowing line (3), the raw material chute (4), and the air introduction pipe (5) being connected to a side portion of the furnace body (2), and a fluidizing air blowing port (6) disposed at a bottom portion of the furnace body (2) and through which fluidizing air is blown into the furnace body (2), in which a blowing port of the pulverized coal blowing line (3) is disposed below a suction port of the air introduction pipe (5) and above the fluidizing air blowing port (6).<img id="imga-00001-en" wi="90" he="62" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">Technical Field</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a fluidized calciner that enables the rate of unburned fuel at an outlet of a calciner to be reduced by optimizing a supply position for pulverized coal.</p>
+    <heading id="h-00002-en">Background Art</heading>
+    <p id="p-00002-en" num="0002">Conventionally, in a cement manufacturing facility 10 with a fluidized calciner, a raw material heated by heat exchange with hot gas in a suspension preheater 7 is discharged from a lower-stage cyclone 8 of the suspension preheater 7, and a portion of the raw material is dispersively loaded into a rotary kiln exhaust gas duct 9, with the remaining portion of the raw material supplied to a raw material supply chute 12 of a fluidized calciner 11 as depicted in <figref>Figure 6</figref>.</p>
+    <p id="p-00003-en" num="0003">In the fluidized calciner 11, high-pressure air is blown in through a fluidization air blowing port 13, an air chamber 13a, and an air dispersing plate 14 to form a fluidizing bed 15. At this time, the high-pressure air causes combustion of a portion of fuel supplied through a pulverized supply pipe 16, makes a calcination target raw material stagnant in the fluidizing bed 15 for a predetermined time, and then causes the raw material to fly up to a free board 17 located above the fluidizing bed 15. Furthermore, air from a hot clinker cooler 18 is sucked through a suction port 19 substantially in a tangential direction, and the fuel supplied through the pulverized coal supply pipe 16 is also combusted in the free board 17. Thus, the raw material loaded through the upper raw material supply chute 12 and the raw material flying up from a surface of the fluidizing bed 15 are efficiently and quickly calcined.</p>
+    <p id="p-00004-en" num="0004">Then, all of the calcined raw material is entrained by calciner exhaust gas and enters a separating cyclone 21. On the other hand, the raw material dispersively loaded into the rotary kiln exhaust gas duct 9 is also partly calcined by rotary kiln exhaust gas and enters the separating cyclone 21 along with the rotary kiln exhaust gas. Moreover, a calcination raw material collected by the separating cyclone 21 is introduced into a rotary kiln 20 via a raw material chute 22.</p>
+    <p id="p-00005-en" num="0005">On the other hand, hot air generated in the clinker cooler 18 is sucked into the rotary kiln 20 and the fluidized calciner 11 by a suction force of an induction fan 23. However, an excessive amount of hot air is sucked into the rotary kiln 20, which offers a low draft resistance. Thus, a part of the rotary kiln exhaust gas duct 9 is reduced in cross-sectional area, and the amount of hot air sucked into the fluidized calciner 11 is adjusted by using a damper 24.</p>
+    <p id="p-00006-en" num="0006">In the fluidized calciner, a solid fuel such as coal is generally used as fuel that allows a cement raw material to be calcined. In particular, bituminous coal, which has high combustion quality, is micronized to fine powder for use. However, for effective utilization of limited resources, there has been a demand for the use of various types of fuel such as coal and oil coke, which have low combustion quality.</p>
+    <p id="p-00007-en" num="0007">However, when pulverized coal of coal or coke, which has low combustion quality, is used as fuel, the rate of unburned fuel at an outlet of the fluidized calciner is high, and combustion occurs in the suspension preheater. As a result, the temperature in the preheater is elevated, and attachment is generated in the cyclone or the raw material chute. Thus, disadvantageously, occlusion frequently occurs in the preheater, hindering operation. Furthermore, in the fluidized calciner, the temperature and the concentration of dust are very high, making determination of a combustion state difficult.</p>
+    <p id="p-00008-en" num="0008">Thus, Patent Literature 1 described below proposes a fluidized calciner for a cement raw material including: a tubular furnace body in which the axial direction of the tube is an up-down direction; an air dispersing plate provided substantially horizontally at a bottom portion of the furnace body and an air chamber below the air dispersing plate; a raw material supply chute located above the air dispersing plate and through which a raw material is supplied; a fuel supply nozzle located above the air dispersing plate and through which solid fuel is supplied to a fluidizing bed; a secondary air duct through which secondary air (extracted air) is supplied to above the air dispersing plate, in which the fuel supply nozzle is connected to the furnace body at a descending slope of 20° or more to a horizontal plane so as to be deflected toward a tangential side with respect to a centripetal direction.</p>
+    <p id="p-00009-en" num="0009">This conventional fluidized calciner for a cement raw material calcines a raw material by combusting fuel. However, the connection position of the fuel supply nozzle and the like are based on empirical values, and this technique fails to take into account, for example, the presence or absence of the distribution of a raw material concentration or a gas concentration (particularly O<sub>2</sub>) in the fluidized calciner. Thus, when pulverized coal of coal or coke, which has low combustion quality, is used as fuel, there are disadvantages that sufficient calcination fails to be achieved and ducts may be occluded to hinder operation.</p>
+    <p id="p-00010-en" num="0010">Furthermore, for refractories such as a furnace body, excessively high combustion quality disadvantageously causes the temperature near a furnace wall to be locally excessively elevated, leading to a high possibility of burnout.</p>
+    <heading id="h-00003-en">Citation List</heading>
+    <heading id="h-00004-en">Patent Literature</heading>
+    <p id="p-00011-en" num="0011">Patent Literature 1: Japanese Patent Laid-Open No. <patcit id="pcit-00001" dnum="JPH8231254B"><text>H8-231254</text></patcit></p>
+    <heading id="h-00005-en">Summary of Invention</heading>
+    <heading id="h-00006-en">Technical Problem</heading>
+    <p id="p-00012-en" num="0012">The present invention has been developed in view of these circumstances. An object of the present invention is to provide a fluidized calciner that allows a reduction in the rate of unburned fuel at an outlet of a fluidized calciner to enable sufficient calcination while preventing possible occlusion in a preheater, even when pulverized coal of coal or coke, which has low combustion quality, is used as fuel.</p>
+    <heading id="h-00007-en">Solution to Problem</heading>
+    <p id="p-00013-en" num="0013">To accomplish the object, the invention recited in claim 1 provides a fluidized calciner, comprising a tubular furnace body in which an axial direction is an up-down direction, a pulverized coal blowing line through which fuel is blown into the furnace body, a raw material chute through which a cement raw material is loaded into the furnace body, at least one air introduction pipe through which introduced air is sucked, the pulverized coal blowing line, the raw material chute, and the air introduction pipe being connected to a side portion of the furnace body, and a fluidizing air blowing port disposed at a bottom portion of the furnace body and through which fluidizing air is blown into the furnace body, wherein a blowing port of the pulverized coal blowing line is disposed below a suction port of the air introduction pipe and above the fluidizing air blowing port.</p>
+    <p id="p-00014-en" num="0014">Furthermore, the invention recited in claim 2 provides the invention recited in claim 1, wherein a center of the blowing port of the pulverized coal blowing line is disposed at a position 200 mm away from the fluidizing air blowing port and at a position of 35 to 145° from a center of a loading port of the raw material chute with respect to a circumferential direction of the furnace body.</p>
+    <p id="p-00015-en" num="0015">The invention recited in claim 3 provides the invention recited in claim 1, wherein a center of the blowing port of the pulverized coal blowing line is disposed at a position at least 350 mm away from the fluidizing air blowing port and at a position of 90 to 145° from a center of a loading port of the raw material chute with respect to a circumferential direction of the furnace body.</p>
+    <p id="p-00016-en" num="0016">The invention recited in claim 4 provides the invention recited in claim 1, wherein a center of the blowing port of the pulverized coal blowing line is disposed at a position at least 200 mm away from the fluidizing air blowing port and at a position of 100 to 120° from a center of a loading port of the raw material chute with respect to a circumferential direction of the furnace body.</p>
+    <heading id="h-00008-en">Advantageous Effects of Invention</heading>
+    <p id="p-00017-en" num="0017">According to the invention recited in claims 1 to 4, the blowing port of the pulverized coal blowing line connected to the side portion of the tubular furnace body in which the axial direction is the up-down direction is disposed below the suction port of the air introduction pipe connected to the side portion of the furnace body and above the fluidizing air blowing port disposed at the bottom portion of the furnace body. Thus, a flow of fuel is strongly impacted by a flow of introduced air, allowing the fuel to be blown into an area with a low raw material concentration (which reduces the likelihood of heat absorption as a result of decarbonation) and high O<sub>2</sub> concentration. Consequently, combustion can be improved. This allows a reduction in the rate of unburned fuel at an outlet of the furnace body located at an upper portion thereof to keep the temperature in a preheater low, preventing occlusion in the preheater as a result of attachment generated in a cyclone or the raw material chute. Therefore, appropriate operation can be achieved.</p>
+    <p id="p-00018-en" num="0018">According to the invention recited in claim 2, the center of the blowing port of the pulverized coal blowing line is disposed at a position 200 mm away from the fluidizing air blowing port and at a position of 35 to 145° from the center of the loading port of the raw material chute with respect to the circumferential direction of the furnace body. Thus, a mean char reaction rate can be set to at least 60%, and a mean raw material decarbonation rate can be set to at least 50%. Even when pulverized coal of coal or coke, which has low combustion quality, is used as fuel, the rate of unburned fuel at the outlet of furnace body located at the upper portion thereof can be reduced to keep the temperature in the preheater low, preventing possible occlusion. Furthermore, wear on refractories can be reduced.</p>
+    <p id="p-00019-en" num="0019">According to the invention recited in claim 3, the center of the blowing port of the pulverized coal blowing line is disposed at a position at least 350 mm away from the fluidizing air blowing port and at a position of 90 to 145° from the center of the loading port of the raw material chute with respect to the circumferential direction of the furnace body. Thus, the mean char reaction rate can be set to at least 60%, and the mean raw material decarbonation rate can be set to at least 50%. Even when pulverized coal of coal or coke, which has low combustion quality, is used as fuel, the rate of unburned fuel at the outlet of furnace body located at the upper portion thereof can be reduced to keep the temperature in the preheater low, preventing possible occlusion. Furthermore, wear on refractories can be reduced.</p>
+    <p id="p-00020-en" num="0020">According to the invention recited in claim 4, the center of the blowing port of the pulverized coal blowing line is disposed at a position at least 200 mm away from the fluidizing air blowing port and at a position of 100 to 120° from the center of the loading port of the raw material chute with respect to the circumferential direction of the furnace body. Thus, even when pulverized coal of coal or coke, which has low combustion quality, is used as fuel, the rate of unburned fuel at the outlet of furnace body located at the upper portion thereof can be reduced to keep the temperature in the preheater low, preventing possible occlusion. Furthermore, wear on refractories can be reduced.</p>
+    <heading id="h-00009-en">Brief Description of Drawings</heading>
+    <p id="p-00021-en" num="0021">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>[<figref>Figure 1] Figure 1</figref> is a schematic diagram depicting an embodiment of a fluidized calciner according to the present invention.</li>
+        <li>[<figref>Figure 2A] Figure 2A</figref> is a schematic diagram depicting a positional relation between a blowing port of a pulverized coal blowing line and a loading port of a raw material chute in a fluidized calciner of the present invention, in which the blowing port of the pulverized coal blowing line is disposed at a position below a suction port of an air introduction pipe, and the loading port of the raw material chute is disposed at a position of 75° with respect to a circumferential direction.</li>
+        <li>[<figref>Figure 2B] Figure 2B</figref> is a schematic diagram depicting the positional relation between the blowing port of the pulverized coal blowing line and the loading port of the raw material chute in the fluidized calciner of the present invention, in which the blowing port of the pulverized coal blowing line is disposed at a position below the suction port of the air introduction pipe, and the loading port of the raw material chute is disposed at a position of 110° with respect to the circumferential direction.</li>
+        <li>[<figref>Figure 2C] Figure 2C</figref> is a schematic diagram depicting the positional relation between the blowing port of the pulverized coal blowing line and the loading port of the raw material chute in the fluidized calciner of the present invention, in which the blowing port of the pulverized coal blowing line is disposed at a position other than the position below the suction port of the air introduction piper, and the loading port of the raw material chute is disposed at a position of 75° with respect to the circumferential direction.</li>
+        <li>[<figref>Figure 3] Figure 3</figref> is a line graph depicting the angle between the blowing port of the pulverized coal blowing line and the loading port of the raw material chute with respect to the circumferential direction and a mean raw material decarbonation rate (%) at a pulverized coal blowing height (h) of the pulverized coal blowing line 3.</li>
+        <li>[<figref>Figure 4] Figure 4</figref> is a line graph depicting the angle between the blowing port of the pulverized coal blowing line and the loading port of the raw material chute with respect to the circumferential direction and the mean char reaction rate (%) at a pulverized coal blowing height (h) of the pulverized coal blowing line 3.</li>
+        <li>[<figref>Figure 5] Figure 5</figref> is a computer graphic depicting results for the embodiment of the present invention and a variation in temperature distribution depending on a variation in the position of the blowing port of the pulverized coal blowing line.</li>
+        <li>[<figref>Figure 6] Figure 6</figref> is a schematic diagram of a conventional cement manufacturing facility.</li>
+      </ul>
+    </p>
+    <heading id="h-00010-en">Description of Embodiments</heading>
+    <p id="p-00022-en" num="0022">As depicted in <figref>Figure 1</figref>, <figref>Figure 2A, Figure 2B, and Figure 2C</figref>, Embodiment 1 of a fluidized calciner 1 of the present invention is roughly configured to include a tubular furnace body 2 in which an axial direction is an up-down direction, a pulverized coal blowing line 3 through which pulverized coal as fuel is blown into the furnace body 2, a raw material chute 4 through which a cement raw material is loaded into the furnace body 2, a plurality of (in the drawings, four) air introduction pipe 5 through which introduced air is sucked, the pulverized coal blowing line 3, the raw material chute 4, and the air introduction pipe 5 being connected to a side portion of the furnace body 2, and a fluidizing air blowing port 6 disposed at a bottom portion of the furnace body 2 and through which fluidizing air is blown into the furnace body. The furnace body 2 has an inner diameter of 4 to 6 m.</p>
+    <p id="p-00023-en" num="0023">In this regard, the four air introduction pipe 5 are connected to the side portion of the furnace body 2 at a descending slope so that the centers of suction ports of the air introduction pipe 5 are disposed on the same circumference. Specifically, the angle between the center line of the air introduction pipe 5 and a horizontal plane is set between 55 and 65°. Furthermore, a gas velocity in the air introduction pipe 5 is set to approximately 15 to 18 m/s. Moreover, the center of the suction port of the air introduction pipe 5 is disposed at a height dimension of 1,500 to 2,500 mm above the fluidizing air blowing port 6. In order to evenly supply air to the furnace bottom portion, a plurality of (normally four as depicted in the drawings) air introduction pipes 5 are disposed at approximately equal intervals in a circumferential direction.</p>
+    <p id="p-00024-en" num="0024">The raw material chute 4 is connected to the furnace body 2 between the air introduction pipes 5 at a descending slope, and the angle between the raw material chute 4 and a horizontal plane is empirically determined based on the coefficient of friction and the angle of repose for raw material particles. For normal cement raw materials, the angle between the raw material chute 4 and the horizontal plane is set to approximately 50° to 70°. Furthermore, the diameter of the raw material chute 4 is designed to be suitable for the amount of raw material loaded. Thus, the center of a loading port of the raw material chute 4 is arranged at a height dimension within the range of approximately 1,500 to 3,000 mm above the fluidizing air blowing port 6, though the height dimension depends on the production capacity of the fluidized calciner.</p>
+    <p id="p-00025-en" num="0025">Furthermore, the fluidizing air blowing port 6 allows high-pressure air to be blown into the furnace body 2 through an air chamber 13a and an air dispersing plate 14, for example, as depicted in the conventional example in <figref>Figure 6</figref>. In the present embodiment, the air dispersing plate 14 is disposed parallel to a radial direction of the furnace body 2, as the fluidizing air blowing port 6. In this regard, the blowing velocity of fluidizing air through the fluidizing air blowing port 6 is determined depending on a raw material density and a particle size distribution and is set to 1.0 to 2.0 m/s for normal cement raw materials.</p>
+    <p id="p-00026-en" num="0026">The pulverized coal blowing line 3, through which pulverized coal as fuel, for example, coal or coke, is blown into the furnace body 2, is connected to the furnace body 2 below any one of the four air introduction pipes 5 and above the fluidizing air blowing port 6. Furthermore, the pulverized coal blowing line 3 is connected to the furnace body 2 perpendicularly to a shaft center line thereof so as to extend toward the center of the furnace body 2. Additionally, the center of the blowing port of the pulverized coal blowing line 3 is disposed in alignment with the center of the air introduction pipe 5 with respect to the vertical direction. In addition, a carrying air velocity in the pulverized coal blowing line is an adjustment item for operation. The range of the speed is normally set between 10 and 20 m/s.</p>
+    <p id="p-00027-en" num="0027">The height of the blowing port of the pulverized coal blowing line 3 from the fluidizing air blowing port 6 depends on the position of the raw material chute 4. For example, when the center of the blowing port of the pulverized coal blowing line 3 and the center of the loading port of the raw material chute 4 are disposed at positions within the range of 35 to 145° with respect to the circumferential direction of the furnace body 2, the blowing port is arranged at a height dimension of 200 mm.</p>
+    <p id="p-00028-en" num="0028">Furthermore, when the center of the blowing port of the pulverized coal blowing line 3 and the center of the loading port of the raw material chute 4 are disposed at positions within the range of 90 to 145° with respect to the circumferential direction of the furnace body 2, the blowing port is arranged at a height dimension of at least 350 mm.</p>
+    <p id="p-00029-en" num="0029">The fluidized calciner 1 with the above-described configuration has been configured based on the results of calculations executed by the inventors based on computational fluid dynamics (CFD); through the calculations, the inventors have found that a flow of pulverized coal blown in through the pulverized coal blowing line 3 is impacted by a flow of a raw material loaded through the raw material chute 4 and a flow of gas through the air introduction pipe 5, and found the height of the blowing port of the pulverized coal blowing line 3 from the fluidizing air blowing port 6 and a suitable positional relation between the pulverized coal blowing line 3 and the raw material chute 4 in the circumferential direction of the furnace body 2 as illustrated in Example 1 and Example 2 described below.</p>
+    <p id="p-00030-en" num="0030">The introduced air makes the same impact on a flow of pulverized coal regardless of whether the bleed air is blown or sucked through the air introduction pipe 5.</p>
+    <p id="p-00031-en" num="0031">The calculations in accordance with the computational fluid dynamics involve quantifying the actual shape of the fluidized calciner and operational conditions therefor and numerically calculating gas flow, particle migration, chemical reaction, and heat transfer using a computer in which an analysis program is installed, to make determination of the state of combustion and calcination in the fluidized calciner using computer graphics, the determination being otherwise difficult to make based on actual measurements.</p>
+    <p id="p-00032-en" num="0032">Methods and models for the calculations in accordance with the computational fluid dynamics are as follows: <ol><li>(1) Numerical fluid dynamics computation software (R-flow Corporation Ltd.)</li><li>(2) Turbulence model: k-ε Model</li><li>(3) Fluid: incompressible ideal gas</li><li>(4) Pressure-speed coupling: SIMPLE</li><li>(5) Discretization scheme: Finite Volume Method</li><li>(6) Momentum: Second Order Upwind</li><li>(7) Turbulent kinetic energy: First Order Upwind</li><li>(8) Turbulent dissipation rate: First Order Upwind</li><li>(9) Energy: Second Order Upwind</li><li>(10) Particle analysis: Discrete Element Method</li><li>(11) Particle fluid interaction: Two Way Coupling</li><li>(12) Pulverized coal combustion: H<sub>2</sub> + O<sub>2</sub> - H<sub>2</sub>O, CH<sub>4</sub> + O<sub>2</sub> - H<sub>2</sub>O + CO<sub>2</sub>, CO + O<sub>2</sub> - CO<sub>2</sub>, C + O<sub>2</sub> - CO<sub>2</sub></li><li>(13) Raw material decarbonation model: CaCO<sub>3</sub> - CaO + CO<sub>2</sub>, unreacted core model</li></ol></p>
+    <p id="p-00033-en" num="0033">Of these methods and models, (2) to (13) are all general-purpose models widely used by those skilled in the art; (2) to (11) are used to perform numerical fluid analysis on a flow of gas or the like, (12) is used to perform combustion analysis, and (13) is used to analyze decarbonation of limestone.</p>
+    <p id="p-00034-en" num="0034">Evaluation using the calculations in accordance with the computational fluid dynamics is performed by calculating the mean raw material decarbonation rate (%) with respect to the angles of the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4 for a plurality of cases for the position of the pulverized coal blowing line 3 and a pulverized coal blowing height (h) of the pulverized coal blowing line 3, as depicted in <figref>Figure 3</figref>, and similarly calculating the mean char reaction rate (%) with respect to the angle between the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4 for a plurality of cases for the position of the pulverized coal blowing line 3 and the pulverized coal blowing height (h) of the pulverized coal blowing line 3, as depicted in <figref>Figure 4</figref>.</p>
+    <p id="p-00035-en" num="0035">Furthermore, the mean raw material decarbonation rate (%) has been obtained by performing weighted averaging on the decarbonation rate for each raw material particle at the outlet of the calciner in accordance with the weight of the particle that has not been calcined. The mean char reaction rate (%) has been obtained by performing weighted averaging on the char reaction rate for each pulverized coal particle at the outlet of the calciner in accordance with the weight of char that has not reacted. Moreover, the mean raw material decarbonation rate (%) of at least 50% is evaluated to correspond to high relevant performance. A mean char reaction rate (%) of at least 60% is evaluated to correspond to high relevant performance.</p>
+    <p id="p-00036-en" num="0036">Moreover, the graph of the mean raw material decarbonation rate (%) in <figref>Figure 3</figref> and the graph of the mean char reaction rate (%) in <figref>Figure 4</figref> are related to Example 1 where each pulverized coal blowing line 3 is connected to the furnace body below the corresponding air introduction pipe 5 and where the center of the blowing port of the pulverized coal blowing line 3 is positioned at a height dimension of 200 mm from the fluidizing air blowing port 6, Example 2 where the center of the blowing port of the pulverized coal blowing line 3 is positioned at a height dimension of at least 350 mm (350 mm, 500 mm, and 850 mm) from the fluidizing air blowing port, and Comparative Example where each pulverized coal blowing line 3 is connected to the furnace body at a position other than the position below the corresponding air introduction pipe 5 and where the center of the blowing port of the pulverized coal blowing line 3 is positioned at height dimensions of 200 mm and 350 mm from the fluidizing air blowing port 6.</p>
+    <p id="p-00037-en" num="0037">The composition of coal used in Example 1, Example 2, and Comparative Example illustrated below is as follows. <ul id="ul-00002-en" list-style="none" compact="compact"><li>Name: Bituminous coal</li><li>Amount of heat generation (Kcal/Kg): 6700</li><li>Volatile content (%): 34.3</li><li>Fixed carbon (%): 49.4</li><li>Water content (%): 6.8</li><li>Ash content (%): 9.5</li></ul></p>
+    <p id="p-00038-en" num="0038">When the type of pulverized coal was changed, not only the above-described industrial analytical values were changed but also the amount of pulverized coal fed was adjusted so as to maintain a constant total amount of heat generated by the pulverized coal loaded into the calciner.</p>
+    <heading id="h-00011-en">(Example 1)</heading>
+    <p id="p-00039-en" num="0039">First, for the calculations in accordance with the computational fluid dynamics in Example 1, the raw material chute 4 was arranged at a position (in the drawings, 75°) closer to the pulverized coal blowing line 3 connected to the furnace body below the air introduction pipe 5, based on the shape of the actual furnace, as depicted in <figref>Figure 1</figref> and <figref>Figure 2A</figref>. At this time, the center of the loading port of the raw material chute 4 was arranged at a height dimension of 2,000 mm above the fluidizing air blowing port 6 and in alignment with the center of the suction port of the air introduction pipe 5 arranged in alignment with the fluidizing air blowing port 6 in the circumferential direction.</p>
+    <p id="p-00040-en" num="0040">Furthermore, the calculations in accordance with the computational fluid dynamics were executed for the arrangement where the center of the blowing port of the pulverized coal blowing line 3 arranged below the air introduction pipe 5 was arranged at a height dimension of 200 mm from the fluidizing air blowing port 6.</p>
+    <p id="p-00041-en" num="0041">The angle between the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4 is as follows. <ul id="ul-00003-en" list-style="none" compact="compact"><li>200 mm: 35°, 75°, 110°, 145°</li></ul></p>
+    <p id="p-00042-en" num="0042">Moreover, for operational conditions for the actual furnace such as the amount of cement raw material loaded, flow velocity, and temperature, the following data was used. <ul id="ul-00004-en" list-style="bullet" compact="compact"><li>Furnace body 2 <ul id="ul-00005-en" list-style="none" compact="compact"><li>Furnace inner diameter = 4 m</li><li>Furnace length = 25 m</li></ul></li><li>Pulverized coal blowing line 3 <ul id="ul-00006-en" list-style="none" compact="compact"><li>Amount of pulverized coal fed = 7.4 t/h</li><li>Carrying air flow velocity = 11 m/s</li><li>Temperature = 50°C</li></ul></li><li>Raw material chute 4 <ul id="ul-00007-en" list-style="none" compact="compact"><li>Cement raw material: 200 t/h</li><li>Temperature = 740°C</li><li>Carrying air flow velocity = 0.5 m/s</li></ul></li><li>Air introduction pipe 5 (arranged at four positions in the circumferential direction) <ul id="ul-00008-en" list-style="none" compact="compact"><li>Introduced air</li><li>Temperature = 880°C</li><li>Flow velocity = 15.8 m/s</li></ul></li><li>Fluidizing air blowing port <ul id="ul-00009-en" list-style="none" compact="compact"><li>Fluidizing air</li><li>Temperature = 800°C</li><li>Flow velocity = 1.64 m/s</li></ul></li></ul></p>
+    <p id="p-00043-en" num="0043">Then, the mean raw material decarbonation rate (%) and the mean char reaction rate (%) were computationally determined for each angle between the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4. The results are as depicted in <figref>Figure 3</figref> and <figref>Figure 4</figref>.</p>
+    <p id="p-00044-en" num="0044"> For Example 1 where the pulverized coal blowing line 3 was arranged below the air introduction pipe 5 and at a height dimension of 200 mm from the fluidizing air blowing port 6, it has been found that the mean raw material decarbonation rate (%) in <figref>Figure 3</figref> and the mean char reaction rate (%) in <figref>Figure 4</figref> are set to at least 50% and at least 60%, respectively, by arranging the pulverized coal blowing line 3 and the raw material chute 4 such that the angle between the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4 is within the range of 35 to 145°.</p>
+    <heading id="h-00012-en">(Example 2)</heading>
+    <p id="p-00045-en" num="0045">Then, in Example 2, like in Example 1, the raw material chute 4 was arranged at a position (in the drawings, 110°) further from the pulverized coal blowing line 3 connected to the furnace body below the air introduction pipe 5, based on the shape of the actual furnace, as depicted in <figref>Figure 1</figref> and <figref>Figure 2B</figref>. At this time, the center of the loading port of the raw material chute 4 was arranged at a height dimension of 2,000 mm above the fluidizing air blowing port 6 and in alignment with the center of the blowing port of the air introduction pipe 5 arranged in alignment with the fluidizing air blowing port 6 in the circumferential direction.</p>
+    <p id="p-00046-en" num="0046">Furthermore, the calculations in accordance with the computational fluid dynamics were executed for the arrangement where the center of the blowing port of the pulverized coal blowing line 3 arranged below the air introduction pipe 5 was arranged at least 350 mm above the fluidizing air blowing port 6, in Example 2, at three height dimensions of 350 mm, 500 mm, and 850 mm.</p>
+    <p id="p-00047-en" num="0047">The angle between the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4 for each height of the blowing port of the pulverized coal blowing line 3 is as follows. <ul id="ul-00010-en" list-style="none" compact="compact"><li>350 mm: 35°, 75°, 110°, 145°</li><li>500 mm: 50°, 110°, 160°</li><li>850 mm: 50°, 110°, 160°</li></ul></p>
+    <p id="p-00048-en" num="0048">Moreover, for the operational conditions for the actual furnace such as the amount of cement raw material loaded, the flow velocity, and the temperature, like in Example 1, the following data was used for example. <ul id="ul-00011-en" list-style="bullet" compact="compact"><li>Furnace body 2 <ul id="ul-00012-en" list-style="none" compact="compact"><li>Furnace inner diameter = 4 m</li><li>Furnace length = 25 m</li></ul></li><li>Pulverized coal blowing line 3 <ul id="ul-00013-en" list-style="none" compact="compact"><li>Amount of pulverized coal fed = 7.4 t/h</li><li>Carrying air flow velocity = 11 m/s</li><li>Temperature = 50°C</li></ul></li><li>Raw material chute 4 <ul id="ul-00014-en" list-style="none" compact="compact"><li>Cement raw material: 200 t/h</li><li>Temperature = 740°C</li><li>Carrying air flow velocity = 0.5 m/s</li></ul></li><li>Air introduction pipe 5 (arranged at four positions in the circumferential direction) <ul id="ul-00015-en" list-style="none" compact="compact"><li>Introduced air</li><li>Temperature = 880°C</li><li>Flow velocity = 15.8 m/s</li></ul></li><li>Fluidizing air blowing port <ul id="ul-00016-en" list-style="none" compact="compact"><li>Fluidizing air</li><li>Temperature = 800°C</li><li>Flow velocity = 1.64 m/s</li></ul></li></ul></p>
+    <p id="p-00049-en" num="0049">Then, for each height dimension of the blowing port of the pulverized coal blowing line 3, the mean raw material decarbonation rate (%) and the mean char reaction rate (%) were computationally determined for each angle between the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4. The results are as depicted in <figref>Figure 3</figref> and <figref>Figure 4</figref>.</p>
+    <p id="p-00050-en" num="0050">For Example 2 where the pulverized coal blowing line 3 was arranged below the air introduction pipe 5 and at a height dimension of at least 350 mm from the fluidizing air blowing port 6, it has been found that the mean raw material decarbonation rate (%) in <figref>Figure 3</figref> and the mean char reaction rate (%) in <figref>Figure 4</figref> are set to at least 50% and at least 60%, respectively, by arranging the pulverized coal blowing line 3 and the raw material chute 4 such that the angle between the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4 is within the range of 90 to 145°.</p>
+    <p id="p-00051-en" num="0051">It has been found that, when the pulverized coal blowing line 3 is arranged below the air introduction pipe 5 and at a height dimension of at least 500 mm from the fluidizing air blowing port 6, the mean raw material decarbonation rate (%) is high and at least 50% but the gas temperature near the furnace wall in the furnace body 2 is high at a height position of 5 to 20 m when the pulverized coal blowing line 3 is attached closer to the raw material chute 4 below the air introduction pipe 5. This may cause burnout of bricks in the furnace body 2.</p>
+    <heading id="h-00013-en">(Comparative Example)</heading>
+    <p id="p-00052-en" num="0052">Moreover, in Comparative Example, like in Examples 1 and 2, the raw material chute 4 was arranged at a position (in the drawings, 75°) closer to the pulverized coal blowing line 3 connected to the furnace body at a position other than the position below the air introduction pipe 5, based on the shape of the actual furnace, as depicted in <figref>Figure 2C</figref>. At this time, the center of the loading port of the raw material chute 4 was arranged at a height dimension of 2,000 mm above the fluidizing air blowing port 6 and in alignment with the center of the blowing port of the air introduction pipe 5 arranged in alignment with the fluidizing air blowing port 6 in the circumferential direction.</p>
+    <p id="p-00053-en" num="0053">Furthermore, the calculations in accordance with the computational fluid dynamics were executed for the arrangement where the center of the blowing port of the pulverized coal blowing line 3 arranged at the position other than the position below the air introduction pipe 5 was arranged at each of the two height dimensions of 200 mm and 350 mm from the fluidizing air blowing port 6.</p>
+    <p id="p-00054-en" num="0054">The angle between the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4 for each height of the blowing port of the pulverized coal blowing line 3 is as follows. <ul id="ul-00017-en" list-style="none" compact="compact"><li>200 mm: 20°, 75°, 110°, 160°</li><li>350 mm: 20°, 75°, 110°, 160°</li></ul></p>
+    <p id="p-00055-en" num="0055">Moreover, for the operational conditions for the actual furnace such as the amount of cement raw material loaded, the flow velocity, and the temperature, like in Examples 1 and 2, the following data was used for example. <ul id="ul-00018-en" list-style="bullet" compact="compact"><li>Furnace body 2 <ul id="ul-00019-en" list-style="none" compact="compact"><li>Furnace inner diameter = 4 m</li><li>Furnace length = 25 m</li></ul></li><li>Pulverized coal blowing line 3 <ul id="ul-00020-en" list-style="none" compact="compact"><li>Amount of pulverized coal fed = 7.4 t/h</li><li>Carrying air flow velocity = 11 m/s</li><li>Temperature = 50°C</li></ul></li><li>Raw material chute 4 <ul id="ul-00021-en" list-style="none" compact="compact"><li>Cement raw material: 200 t/h</li><li>Temperature = 740°C</li><li>Carrying air flow velocity = 0.5 m/s</li></ul></li><li>Air introduction pipe 5 (arranged at four positions in the circumferential direction) <ul id="ul-00022-en" list-style="none" compact="compact"><li>Introduced air</li><li>Temperature = 880°C</li><li>Flow velocity = 15.8 m/s</li></ul></li><li>Fluidizing air blowing port <ul id="ul-00023-en" list-style="none" compact="compact"><li>Fluidizing air</li><li>Temperature = 800°C</li><li>Flow velocity = 1.64 m/s</li></ul></li></ul></p>
+    <p id="p-00056-en" num="0056">Then, for each height dimension of the blowing port of the pulverized coal blowing line 3, the mean raw material decarbonation rate (%) and the mean char reaction rate (%) were computationally determined for each angle between the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4. The results are as depicted by dashed lines in <figref>Figure 3</figref> and <figref>Figure 4</figref>.</p>
+    <p id="p-00057-en" num="0057">Thus, in Comparative Example where the pulverized coal blowing line 3 was arranged at the position other than the position below the air introduction pipe 5 and at height dimensions of 200 mm and 350 mm from the fluidizing air blowing port, for the angle between the blowing port of the pulverized coal blowing line 3 and the loading port of the raw material chute 4, an appropriate angle failed to be obtained which contributed to high performance in which the mean raw material decarbonation rate (%) in <figref>Figure 3</figref> is at least 50% and in which the mean char reaction rate in <figref>Figure 4</figref> is at least 60%.</p>
+    <p id="p-00058-en" num="0058">The results of the calculations in accordance with the computational fluid dynamics first indicate that, when the blowing port of the pulverized coal blowing line 3 is arranged below the air introduction pipe 5, the gas temperature at the bottom portion of the furnace body 2 is higher than when the blowing port of the pulverized coal blowing line 3 is not arranged below the air introduction pipe 5, as depicted in <figref>Figure 5</figref>. This indicates that, when the blowing port of the pulverized coal blowing line 3 is arranged below the air introduction pipe 5, the pulverized coal is ignited quickly, leading to improved combustion quality.</p>
+    <p id="p-00059-en" num="0059">Furthermore, as depicted in <figref>Figure 3</figref> and <figref>Figure 4</figref>, when the pulverized coal blowing line 3 is attached to the furnace body at a position far from the raw material chute 4 below the suction port of the air introduction pipe 5, a supply position for pulverized coal can be optimized by arranging the pulverized coal blowing line 3 at a height of at least 200 mm from the fluidizing air blowing port 6.</p>
+    <p id="p-00060-en" num="0060">Moreover, when the pulverized coal blowing line 3 is attached at a position close to the raw material chute 4 below the suction port of the air introduction pipe 5, at a height of 350 mm from the fluidizing air blowing port 6, the flow of pulverized coal is strongly impacted by the flow of the raw material and is displaced from an area with a low raw material concentration and a high O<sub>2</sub> concentration, leading to a low char reaction rate. Thus, it has been found that, when the pulverized coal blowing line 3 was arranged at a height of 200 mm from the fluidizing air blowing port 6, the impact of the flow of the raw material was reduced to allow the pulverized coal to be blown into the desired area, enabling the supply position for pulverized coal to be optimized. It has also been found that, when the pulverized coal blowing line 3 is arranged at a height of at least 500 mm from the fluidizing air blowing port 6, the flow of pulverized coal can be blown into the desired area but excessive combustion occurs locally, with the result that the temperature near the furnace wall becomes excessively high to increase the possibility of burnout.</p>
+    <p id="p-00061-en" num="0061">Furthermore, it has been found that, when the pulverized coal blowing line 3 is attached to a position other than the position below the air introduction pipe 5, the flow of pulverized coal is impacted only weakly by the flow of introduced air but strongly by the flow of the raw material, precluding the pulverized coal from being blown into the desired area, with the result that combustion is deteriorated regardless of from where the pulverized coal is blown in.</p>
+    <p id="p-00062-en" num="0062">As seen in the results in Examples 1 and 2, in the fluidized calciner disclosed in the above-described embodiment, the blowing port of the pulverized coal blowing line 3 connected to the side portion of the tubular furnace body 2 in which the axial direction is the up-down direction is arranged below the suction port of the air introduction pipe 5 connected to the side portion of the furnace body 2 and above the fluidizing air blowing port 6 disposed at the bottom portion of the furnace body 2. Thus, the flow of fuel is strongly impacted by the flow of introduced air, allowing the fuel to be blown into the area with a low raw material concentration (which reduces the likelihood of heat absorption as a result of decarbonation) and a high O<sub>2</sub> concentration. Consequently, combustion can be improved. This allows a reduction in the rate of unburned fuel at the outlet of the furnace body 2 located at the upper portion thereof to keep the temperature in a preheater low, preventing occlusion in the preheater as a result of attachment generated in a cyclone or the raw material chute. Therefore, appropriate operation can be achieved.</p>
+    <p id="p-00063-en" num="0063">Furthermore, the center of the blowing port of the pulverized coal blowing line 3 is disposed at a position 200 mm away from the fluidizing air blowing port 6 and at a position of 35 to 145° from the center of the loading port of the raw material chute 4 with respect to the circumferential direction of the furnace body 2. Thus, a mean char reaction rate can be set to at least 60%, and a mean raw material decarbonation rate can be set to at least 50%. Even when pulverized coal of coal or coke, which has low combustion quality, is used as fuel, the rate of unburned fuel at the outlet of furnace body 2 located at the upper portion thereof can be reduced to keep the temperature in the preheater low, preventing possible occlusion due to the generation of attachment in the cyclone or the raw material chute. Furthermore, wear on refractories can be reduced.</p>
+    <p id="p-00064-en" num="0064">When the center of the blowing port of the pulverized coal blowing line 3 is disposed at a position at least 350 mm away from the fluidizing air blowing port 6 and at a position of 90 to 145° from the center of the loading port of the raw material chute 4 with respect to the circumferential direction of the furnace body 2, the mean char reaction rate can be set to at least 60%, and the mean raw material decarbonation rate can be set to at least 50%. Even when pulverized coal of coal or coke, which has low combustion quality, is used as fuel, the rate of unburned fuel at the outlet of furnace body located at the upper portion thereof can be reduced to keep the temperature in the preheater low, preventing possible occlusion due to the generation of attachment in the cyclone or the raw material chute. Furthermore, wear on refractories can be reduced.</p>
+    <p id="p-00065-en" num="0065">Moreover, when the center of the blowing port of the pulverized coal blowing line 3 is disposed at a position at least 200 mm away from the fluidizing air blowing port 6 and at a position of 100 to 120° from the center of the loading port of the raw material chute 4 with respect to the circumferential direction of the furnace body 2. Thus, even when pulverized coal of coal or coke, which has low combustion quality, is used as fuel, the rate of unburned fuel at the outlet of furnace body 2 located at the upper portion thereof can be reduced to keep the temperature in the preheater low, preventing possible occlusion due to the generation of attachment in the cyclone or the raw material chute. Furthermore, wear on refractories can be reduced.</p>
+    <heading id="h-00014-en">Industrial Applicability</heading>
+    <p id="p-00066-en" num="0066">The present invention can be utilized for a tubular fluidized calciner in which the axial direction is the up-down direction.</p>
+    <heading id="h-00015-en">Reference Signs List</heading>
+    <p id="p-00067-en" num="0067">
+      <dl id="dl-00001-en" compact="compact">
+        <dt>1</dt>
+        <dd>Fluidized calciner</dd>
+        <dt>2</dt>
+        <dd>Furnace body</dd>
+        <dt>3</dt>
+        <dd>Pulverized coal blowing line</dd>
+        <dt>4</dt>
+        <dd>Raw material chute</dd>
+        <dt>5</dt>
+        <dd>Air introduction pipe</dd>
+        <dt>6</dt>
+        <dd>Fluidizing air blowing port</dd>
+      </dl>
+    </p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A fluidized calciner comprising a tubular furnace body in which an axial direction thereof is an up-down direction, a pulverized coal blowing line through which fuel is blown into the furnace body, a raw material chute through which a cement raw material is loaded into the furnace body, at least one air introduction pipe through which introduced air is sucked, the pulverized coal blowing line, the raw material chute, and the air introduction pipe being connected to a side portion of the furnace body, and a fluidizing air blowing port disposed at a bottom portion of the furnace body and through which fluidizing air is blown into the furnace body,<br />
+wherein a blowing port of the pulverized coal blowing line is disposed below a suction port of the air introduction pipe and above the fluidizing air blowing port.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The fluidized calciner according to claim 1, wherein a center of the blowing port of the pulverized coal blowing line is disposed at a position 200 mm away from the fluidizing air blowing port and at a position of 35 to 145° from a center of a loading port of the raw material chute with respect to a circumferential direction of the furnace body.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The fluidized calciner according to claim 1, wherein a center of the blowing port of the pulverized coal blowing line is disposed at a position at least 350 mm away from the fluidizing air blowing port and at a position of 90 to 145° from a center of a loading port of the raw material chute with respect to a circumferential direction of the furnace body.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The fluidized calciner according to claim 1, wherein a center of the blowing port of the pulverized coal blowing line is disposed at a position at least 200 mm away from the fluidizing air blowing port and at a position of 100 to 120° from a center of a loading port of the raw material chute with respect to a circumferential direction of the furnace body.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2939989A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2939989A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2939989A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2939989A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2939989A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2939989A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2939989A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2939989A1_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2939989A1.PDF" type="pdf" size="505411" pages="19" />
+</lexisnexis-patent-document>

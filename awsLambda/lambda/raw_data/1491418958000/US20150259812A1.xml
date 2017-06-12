@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259812A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030047" date-changed="20160127" time-changed="023643">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121313792">
+        <country>US</country>
+        <doc-number>20150259812</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14431977</doc-number>
+        <date>20130829</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>GB</country>
+        <doc-number>1217327</doc-number>
+        <date>20120928</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160127">
+      <classification-ipcr sequence="1">
+        <text>C25B  15/08        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C25B   1/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C25B   9/18        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160127">
+      <classification-cpc sequence="1">
+        <text>C25B  15/08        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01J  19/0093      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>19</main-group>
+        <subgroup>0093</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B01J2219/00783     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00783</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B01J2219/00813     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00813</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B01J2219/00815     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00815</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B01J2219/00822     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00822</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>B01J2219/00824     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00824</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>B01J2219/00828     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00828</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>B01J2219/00833     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00833</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>B01J2219/00853     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00853</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>B01J2219/00867     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00867</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>B01J2219/00869     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00869</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>B01J2219/00894     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00894</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>B01J2219/00898     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00898</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>B01J2219/0093      20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>0093</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>B01J2219/00943     20130101 LA20140430BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00943</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140430</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>C25B   1/003       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>C25B   9/18        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>H01M  14/005       20130101 LI20141106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>M</subclass>
+        <main-group>14</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="20">
+        <text>Y02E  60/50        20130101 LA20160120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>60</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">SCALABLE CHEMICAL REACTOR AND METHOD OF OPERATION THEREOF</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>International Business Machines Corporation</orgname>
+            <address>
+              <city>Armonk</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Escher</last-name>
+            <first-name>Werner</first-name>
+            <address>
+              <city>Dusseldorf</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ruch</last-name>
+            <first-name>Patrick</first-name>
+            <address>
+              <city>Rueschlikon</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>IB13058095</doc-number>
+        <date>20130829</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014049463</doc-number>
+        <date>20140403</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151211">
+      <main-family family-id="154702769">
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201217327</doc-number>
+            <kind>D0</kind>
+            <date>20121114</date>
+          </document-id>
+          <application-date>
+            <date>20120928</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259812</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>112013004182</doc-number>
+            <kind>T5</kind>
+            <date>20150521</date>
+          </document-id>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201506481</doc-number>
+            <kind>D0</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2506393</doc-number>
+            <kind>A</kind>
+            <date>20140402</date>
+          </document-id>
+          <application-date>
+            <date>20120928</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015533102</doc-number>
+            <kind>A</kind>
+            <date>20151119</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2522802</doc-number>
+            <kind>A</kind>
+            <date>20150805</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014049463</doc-number>
+            <kind>A1</kind>
+            <date>20140403</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="154702768">
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201217327</doc-number>
+            <kind>D0</kind>
+            <date>20121114</date>
+          </document-id>
+          <application-date>
+            <date>20120928</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259812</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>112013004182</doc-number>
+            <kind>T5</kind>
+            <date>20150521</date>
+          </document-id>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201506481</doc-number>
+            <kind>D0</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2506393</doc-number>
+            <kind>A</kind>
+            <date>20140402</date>
+          </document-id>
+          <application-date>
+            <date>20120928</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015533102</doc-number>
+            <kind>A</kind>
+            <date>20151119</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2522802</doc-number>
+            <kind>A</kind>
+            <date>20150805</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014049463</doc-number>
+            <kind>A1</kind>
+            <date>20140403</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A chemical reactor and method for operation. The reactor enables N pairwise fluid contacts among k chemical fluids, with k≧2 and N≧4 and comprises: a reaction layer extending in a plane subtended by two directions; N chemical cells, each including two circuit portions, designed for enabling circulation of two of the k chemical fluids, respectively, the two circuit portions intersecting each other, thereby enabling one pairwise fluid contact for the two of the k chemical fluids; and a fluid distribution circuit comprising: k sets of inlet orifices sequentially alternating along lines parallel to one of the two directions, for respectively dispensing k chemical fluids to the reaction layer; and k sets of outlet orifices sequentially alternating along lines parallel to the inlet orifices, for respectively collecting k chemical fluids from the reaction layer, and wherein, each circuit portion connects an inlet orifice to an outlet orifice.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150327</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259812A1</docdb-publication-number>
+      <docdb-application-id>444515209</docdb-application-id>
+      <new-owner>INTERNATIONAL BUSINESS MACHINES CORPORATION, NEW Y</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:ESCHER, WERNER;RUCH, PATRICK;REEL/FRAME:035274/0867</free-text-description>
+      <effective-date>
+        <date>20150226</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The invention relates in general to the field of (electro)chemical reactors, as well as methods of operation thereof. In particular, it is directed to scalable chemical reactors designed for enabling N pairwise fluid contacts among k chemical fluids, with k≧2 and N≧4, with possible applications to photovoltaic apparatuses and microelectronic packaging.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Micro-scale reactors are known, which provide high rates of heat and mass transfer. Conventional microfabrication processes are known, whereby cheap mass-production is nowadays available. In addition, well-controlled laminar flows can be achieved, thanks to known techniques.</p>
+      <p id="p-00003-en" num="0003">The demonstration of microfluidic electrochemical energy conversion was first reported in 2002 (see e.g., Ferrigno et al., Journal of the American Chemical Society 124, 12930-1 (2002); Choban et al., Power Sources Proceedings 40, 317-320 (2002)).</p>
+      <p id="p-00004-en" num="0004">Several patents (applications) have been filed in this field or in neighboring fields which illustrate the background art, for instance: U.S. Pat. No. 7,758,814 B2; US 2012 0070766 A1; U.S. Pat. No. 7,651,797 B2; U.S. Pat. No. 7,435,503 B2; WO 2010 083219 A1; CA 2354513 C; US 2009/0291347 A1 and U.S. Pat. No. 7,909,971 B2. The list is not exhaustive. Some papers are available in the non-Patent Literature (not mentioned).</p>
+      <heading id="h-00003-en" level="1">BRIEF SUMMARY OF THE INVENTION</heading>
+      <p id="p-00005-en" num="0005">According to a first aspect, the present invention is embodied as a chemical reactor, designed for enabling N pairwise fluid contacts among k chemical fluids, with k≧2 and N≧4, the reactor comprising: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>a reaction layer essentially extending in a 2D plane subtended by two directions, preferably perpendicular, the reaction layer comprising N chemical cells, each including two circuit portions, the two circuit portions designed for enabling circulation of two of the k chemical fluids, respectively, said two circuit portions further intersecting each other, thereby enabling one pairwise fluid contact for said two of the k chemical fluids;</li><li>a fluid distribution circuit comprising:         <ul id="ul-00003-en" list-style="none"><li>k sets of inlet orifices sequentially alternating along lines parallel to one of the two directions, for respectively dispensing k chemical fluids to the reaction layer; and</li><li>k sets of outlet orifices sequentially alternating along lines parallel to the inlet orifices, for respectively collecting k chemical fluids from the reaction layer, the outlet orifices shifted along said one of the two directions with respect to the inlet orifices, <br /> and wherein, <br /> each circuit portion connects, via respective ends thereof, an inlet orifice to an outlet orifice. </li></ul></li></ul></li></ul></p>
+      <p id="p-00006-en" num="0010">In embodiments, the above chemical reactor may further comprise one or more of the following features: <ul id="ul-00004-en" list-style="none"><li><ul id="ul-00005-en" list-style="none"><li>each of the orifices joins ends of four circuit portions, each of the four circuit portions belonging to distinct chemical cells, said distinct chemical cells contiguous in the reaction plane;</li><li>the reaction layer and the fluid distribution circuit form a 2D periodic array, a unit cell of said array periodically repeating in said 2D plane by translation along one or each of said two directions;</li><li>k=2; each of the orifices joins ends of four circuit portions belonging to distinct chemical cells, said distinct chemical cells contiguous in the reaction plane; and each unit cell comprises:         <ul id="ul-00006-en" list-style="none"><li>four chemical cells;</li><li>eight circuit portions;</li><li>two inlet orifices; and</li><li>two outlet orifices;</li></ul></li><li>the fluid distribution circuit comprises at least a first manifold, the latter comprising several parallel channels, each perpendicular to said one of the two directions and in fluid communication with orifices of one of the k sets of inlet orifices or one of the k sets of outlet orifices;</li><li>the fluid distribution circuit further comprises one or more additional manifolds, an n<sup>th </sup>additional manifold comprising several parallel channels that are, each, rotated with respect to and in fluid communication with channels of an (n−1)<sup>th </sup>manifold;</li><li>a manifold is formed by two superimposed layers, a first one of said two superimposed layers comprising orifices as through holes, and a second one of said two superimposed layers comprising channels as through holes;</li><li>the outlet orifices are shifted by less than the distance between two contiguous inlet orifices along said one of the two directions, and preferably are shifted by half of this distance; and</li><li>the reactor is an electrochemical reactor, and two circuit portions that connect, each, a same inlet orifice to a same outlet orifice are separated by a wall coupled in the reactor as an electrode, such that two chemical cells adjacent along said one of the two directions share said electrode.</li></ul></li></ul></p>
+      <p id="p-00007-en" num="0023">According to another aspect, the invention is embodied as a photovoltaic apparatus, such as: a photovoltaic cell; a photovoltaic module; or a photovoltaic system comprising an array of photovoltaic cells or an array of photovoltaic modules; the photovoltaic apparatus comprising: <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>at least one photovoltaic surface electrically connected to a set of photovoltaic electrodes; and</li><li>a chemical reactor according to any one of the above embodiments, electrically connected to the set of photovoltaic electrodes.</li></ul></li></ul></p>
+      <p id="p-00008-en" num="0026">According to still another aspect, the invention is embodied as a method of operating a device according to any one of the previous embodiments, the method comprising: enabling N pairwise fluid contacts by <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>dispensing k chemical fluids to the reaction layer, with k≧2, via the k sets of inlet orifices, such that, in each of the N chemical cells, two of the k chemical fluids circulate in two respective circuit portions, make contact and thereby enable a chemical reaction; and</li><li>collecting k chemical fluids from the reaction layer via the k sets of outlet orifices.</li></ul></li></ul></p>
+      <p id="p-00009-en" num="0029">Preferably, the reactor is an electrochemical reactor such as defined above, and the method further comprises: dispensing or collecting electrical charges to or from electrodes, respectively, wherein each of said electrodes separates two circuit portions that connect, each, a same inlet orifice to a same outlet orifice, whereby each of said electrodes is shared by two chemical cells adjacent along said one of the two directions.</p>
+      <p id="p-00010-en" num="0030">Devices, apparatuses and methods embodying the present invention will now be described, by way of non-limiting examples, and in reference to the accompanying drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF SEVERAL VIEWS OF THE DRAWINGS</heading>
+      <p id="p-00011-en" num="0031">
+        <figref>FIG. 1</figref> is a 2D view of a simplified representation of an example of chemical cell as used in a chemical reactor according to embodiments;</p>
+      <p id="p-00012-en" num="0032">
+        <figref>FIG. 2</figref> is a 2D view of a simplified representation of a reaction layer of a chemical reactor, according to embodiments, where the reaction layer comprises several chemical cells as depicted in <figref>FIG. 1</figref>;</p>
+      <p id="p-00013-en" num="0033">
+        <figref>FIG. 3</figref> is a 2D view of a simplified representation of a first manifold of a fluid distribution circuit of a chemical reactor, compatible with the reaction layer of <figref>FIG. 2</figref>, according to embodiments;</p>
+      <p id="p-00014-en" num="0034">
+        <figref>FIG. 4</figref> is a 2D view of the first manifold of <figref>FIG. 3</figref>, superimposed to the view of the reaction layer of <figref>FIG. 2</figref>, as in embodiments;</p>
+      <p id="p-00015-en" num="0035">
+        <figref>FIG. 5</figref> is a 2D view of a simplified representation of a second manifold of a fluid distribution circuit of a chemical reactor, compatible with the first manifold of <figref>FIG. 3</figref> or <b>4</b>, according to embodiments;</p>
+      <p id="p-00016-en" num="0036">
+        <figref>FIG. 6</figref> is a 2D view of the second manifold of <figref>FIG. 5</figref>, superimposed to the view of <figref>FIG. 3</figref>;</p>
+      <p id="p-00017-en" num="0037">
+        <figref>FIG. 7</figref> is a 2D view of the second manifold of <figref>FIG. 5</figref>, superimposed to the view of <figref>FIG. 4</figref>, as in embodiments;</p>
+      <p id="p-00018-en" num="0038">
+        <figref>FIG. 8</figref> is a section view (simplified representation) taken along line (plane) PP of <figref>FIG. 2</figref>;</p>
+      <p id="p-00019-en" num="0039">
+        <figref>FIG. 9</figref> is a 3D view of a chemical reactor, comprising elements such as depicted in <figref>FIGS. 1-8</figref>, and according to embodiments;</p>
+      <p id="p-00020-en" num="0040">
+        <figref>FIG. 10</figref> depicts a photovoltaic apparatus, comprising an array of photovoltaic modules and a chemical reactor, according to embodiments;</p>
+      <p id="p-00021-en" num="0041">
+        <figref>FIG. 11</figref> is a flowchart illustrating steps of a method of operating a device according to embodiments; and</p>
+      <p id="p-00022-en" num="0042">
+        <figref>FIGS. 12A-C</figref> illustrates three distinct electrode wiring configurations for a reaction layer such as depicted in <figref>FIG. 2</figref>, and used in an electrochemical reactor, according to embodiments.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00023-en" num="0043">The following description is structured as follows. First, general embodiments and high-level variants are described (sect. 1). The next section addresses more specific embodiments and technical implementation details (sect. 2).</p>
+      <heading id="h-00006-en" level="1">1. General Embodiments and High-Level Variants</heading>
+      <p id="p-00024-en" num="0044">Referring generally to <figref>FIGS. 1 to 10</figref>, an aspect of the invention is first described, which concerns a chemical reactor. This reactor CR is designed for enabling N pairwise fluid contacts among k chemical fluids. For simplicity, the geometrical concept underlying the invention is illustrated in the appended drawings for k=2 fluids. However, the most general concept is valid for k≧2, as shall be apparent from the following description.</p>
+      <p id="p-00025-en" num="0045">The reactor principally comprises a reaction layer RP and a fluid distribution circuit M<b>1</b>, M<b>2</b>, which are described now.</p>
+      <p id="p-00026-en" num="0046">First, as illustrated in <figref>FIG. 2</figref>, the reaction layer RP essentially extends in a 2D plane (i.e., subtended by two directions x, y, typically perpendicular, as seen in <figref>FIG. 2</figref>). This reaction layer comprises several chemical cells CC. The reaction layer RP may also be referred to as a “conversion plane”, a “conversion layer”, etc.</p>
+      <p id="p-00027-en" num="0047">An example of chemical cell is depicted in <figref>FIG. 1</figref>. This cell includes two circuit portions CP<b>1</b>, CP<b>2</b> (circuit portions are generally denoted by reference CP). These circuit portions are each designed for circulating a chemical fluid A, B, such that the two portions of one chemical cell enable circulation of two of the k chemical fluids, respectively (i.e., each of the two portions enables circulation of one of the k chemical fluids). As further seen in <figref>FIG. 1</figref>, the circuit portions CP<b>1</b>, CP<b>2</b> intersect each other, which results in one pairwise fluid contact (for two fluids A, B). The circuit portions typically intersect each other over a relatively large overlap area. To that aim, they may have a broken shape or be curved (or have any other suitable shape), as illustrated in <figref>FIG. 1</figref>.</p>
+      <p id="p-00028-en" num="0048">Second, the fluid distribution circuit principally comprises sets of inlet orifices and outlet orifices, these orifices being visible in each of <figref>FIGS. 1-4</figref> and <b>8</b>-<b>9</b>.</p>
+      <p id="p-00029-en" num="0049">More precisely, the fluid distribution circuit comprises k sets of inlet orifices (k≧2), i.e., there are as many sets as fluids. As seen in <figref>FIG. 2</figref> (where k=2), the orifices IA, IB sequentially alternates along lines parallel to direction y. More in detail, inlet orifices IA, IB are arranged in lines parallel to direction y and in each of these lines, the inlet orifices sequentially alternate to form sequences such as IB-IA-IB- . . . . The inlet orifices allow for dispensing each of the chemical fluids (e.g., the two chemical fluids A, B) to the reaction layer RP. More generally, k sets of inlet orifices allow for respectively dispensing the k chemical fluids.</p>
+      <p id="p-00030-en" num="0050">Similarly, the fluid distribution circuit further comprises k sets of outlet orifices OA′, OB′, the outlet orifices sequentially alternating along lines parallel (strictly) to the inlet orifices (and thus parallel to the same direction y as well). This results in sequences OB′-OA′-OB′- . . . parallel the sequences IB-IA-IB- . . . along vertical direction y. The outlet orifices are meant to respectively collect k chemical fluids from the reaction layer. As illustrated in <figref>FIG. 1</figref> (or <b>2</b>), each circuit portion CP<b>1</b>, CP<b>2</b> connects, via respective ends thereof, an inlet orifice (IA or IB) to an outlet orifice (OA′ to OB′).</p>
+      <p id="p-00031-en" num="0051">For completeness, the outlet orifices must be shifted along direction y (or more generally along the reference direction), with respect to the inlet orifices. Basically, the shift of the outlet orifices vs. the inlet orifices implies a wave pattern of the circuit portions, see <figref>FIG. 2</figref>. This shift shall allow for providing and collecting fluid (i.e., liquid) to and from the reaction layer RP, by way of parallel channels of alternating type. This, together with the other geometrical constraints captured in the above specifications, allows for the scalability of the fluid distribution process and thus of the chemical reactor itself.</p>
+      <p id="p-00032-en" num="0052">The reactor described above is meant to be filled with k chemical fluids (mostly liquids), in operation. Although pairwise fluid contacts are enabled, the mixing of the fluids can be intentionally avoided (e.g., thanks to co-laminar flows). Well-controlled laminar flow techniques, resulting in diffusional (only) mixing of the liquids can be achieved, thanks to methods known per se, as outlined in the introduction. Thus, it is not mandatory to separate the liquids at the contact point. NB: for those embodiments which involve co-laminar flows, “fluid” means “liquid” in practice as co-laminar flows of gases are not easily achieved in practice.</p>
+      <p id="p-00033-en" num="0053">In that respect, the present invention can be embodied as a method of operating a device as described herein. Basically, the core of the method consists of enabling N pairwise fluid contacts by dispensing (<figref>FIG. 11</figref>, step S<b>10</b>) k chemical fluids to the reaction layer, k≧2, via the k sets of inlet orifices, such that, in each of the N chemical cells CC, two of the k chemical fluids circulate (step S<b>20</b>) in two respective circuit portions CP<b>1</b>, CP<b>2</b>, make contact (step S<b>30</b>) and thereby enable the desired chemical reaction. In the meantime (i.e., while the fluids are dispensed and/or after step S<b>10</b> has begun), the k chemical fluids are collected from the reaction layer via the k sets of outlet orifices, step S<b>10</b><i>a. </i></p>
+      <p id="p-00034-en" num="0054">In <figref>FIGS. 1-2</figref>, distinct square patterns are used for illustrating the paths taken by the two fluids A, B in the circuit portions CP of the chemical cells CC (horizontal-vertical square pattern for fluid A, rotated square pattern for fluid B). Still other patterns are used to distinguish orifices IA, IB, OA′, OB′, for reasons to be explained later. Note that the nature of the fluids collected from OA′ and OB′ may slightly differ from the fluids dispensed via IA and IB, because of (partial) diffusion at the contact between circuit portions. For this reason, primes are used to reference the outputs OA′ and OB′, i.e., to remind that the fluids as collected may slightly differ from the fluids as injected.</p>
+      <p id="p-00035-en" num="0055">As noted earlier, each chemical cell CC enables at least one pairwise contact. Now, the requested alternating sequences of inlet/outlet orifices imply N≧4. Indeed, a limited sequence IB-IA-IB along one line parallel to direction y already imply a first set of two vertically contiguous chemical cells (if k=2); considering now that a parallel (and shifted) sequence OB′-OA′-OB′ will also imply a second set of two vertically contiguous chemical cells (also contiguous with the first set of chemical cells), the minimal number of chemical cells (and thus of pairwise contacts) involved is thus N≧4. Generalizing this, N can take any value m+m′−2, with ≧3 and m′≧3, where m and m′ are the number of “monomers” (IB, IA, OB′ or OA′) in each parallel line, such that N can take any value larger than 4 (and not necessary even). Thus, practical realizations may result in N≧l, for any integer value of l (≧4). For example, <figref>FIG. 2</figref> explicitly shows 24 pairwise contacts. Yet, one understands that N can, in practice, be much larger, e.g., 1024.</p>
+      <p id="p-00036-en" num="0056">Referring more particularly to <figref>FIGS. 1</figref>, <b>2</b>: each of the inlet/outlet orifices preferably joins ends of four circuit portions CP, that each belongs to distinct chemical cells CC (but are contiguous in the reaction plane RP). As one understands from <figref>FIG. 2</figref>, such a configuration allows for markedly increasing the density of circuit portions CP, and in turn of chemical cells CC in the reaction layer RP. More generally though, the chemical reactor needs not be such that each orifice joins ends of four circuit portions. One can also build a chemical reactor with less circuit portions at the expense of lower density. One may for instance have only one inlet orifice and one outlet orifice for each fluid circuit portion. Yet, four times more orifices would be needed, in comparison to the preferred case and the reaction layer RP would not be packed as densely with chemical cells. Having each orifice joining ends of four circuit portions is accordingly the preferred way of embodying a chemical reactor (with two chemical fluids or more).</p>
+      <p id="p-00037-en" num="0057">Referring now more particularly to <figref>FIG. 2</figref>: the reaction layer RP and the fluid distribution circuit preferably form a 2D periodic array, i.e., a unit cell UC of said array periodically repeats in the 2D plane (by translation along one or each of said two directions x, y). Note that owing to the minimal set of geometrical constraints described above (e.g., the shift of OB′-OA′-OB′vs. IB-IA-IB, a unit cell necessarily comprises subsets of non-parallel channel portions CP. The choice of unit cell is not unique: in <figref>FIG. 2</figref>, two unit cells UC and UC′ are depicted, for illustration. A 2D periodic array is preferred inasmuch as it allows for both increasing the packing density while easing the manufacture process.</p>
+      <p id="p-00038-en" num="0058">Importantly, a unit cell captures features of both the chemical cells CC and the fluid distribution circuit (i.e., orifices). Yet, since a single orifice shall preferably connect several circuit portions of distinct chemical cells CC, the orifices are the limiting factors when determining minimal unit cells. As for instance seen in <figref>FIG. 2</figref>, the minimal unit cells UC, UC′ are primarily determined by a minimal set of orifices needed (i.e., IA, IB, OA′, OB′).</p>
+      <p id="p-00039-en" num="0059">A preferred embodiment that combines several of the options evoked above (explicitly or not) is for instance one wherein: k=2; each orifice joins the ends of four circuit portions (belonging to distinct chemical cells); and each unit cell comprises: <ul id="ul-00011-en" list-style="none"><li><ul id="ul-00012-en" list-style="none"><li>four chemical cells;</li><li>eight circuit portions;</li><li>two inlet orifices IA, IB; and</li><li>two outlet orifices OA′, OB′.</li></ul></li></ul></p>
+      <p id="p-00040-en" num="0064">This embodiment precisely corresponds to the appended drawings. However, each unit cell may more generally comprise 2 k chemical cells, where the factor <b>2</b> comes from the fact that both input and output are needed, while the factor k is due to the number of fluids. This would mean vertical sequences such as IA-IB-IC-ID . . . , and OA′-OB′-OC′-OD′ . . . . Similarly, one would obtain 4 k circuit portions, k inlet orifices and k outlet orifices. Still, each of the orifices joins ends of four circuit portions (each portion belonging to distinct chemical cells).</p>
+      <p id="p-00041-en" num="0065">Having realized how a dense packing of chemical cells can be achieved for enabling pairwise contacts with k fluids, one may advantageously apply the above (general) solution to any value of k&gt;2, k&gt;3 or k&gt;4, etc., a thing that results in very original designs. Such embodiments, however, give rise to complex technical drawings and are therefore not explicitly rendered in the appended drawings. Still, we note that, if one abstracts the stripped or square patterns used to render CP<b>1</b>, CP<b>2</b>, IA, IB, OA′, and OB′, then the residual template shown in <figref>FIG. 2</figref> remains valid for any k (unit cells UC, UC′depends on the value of k as well). It is nevertheless believed that the appended drawings suffice to understand the essential, conceptual aspects and technical contributions of the present invention.</p>
+      <p id="p-00042-en" num="0066">Referring now to <figref>FIGS. 3-4</figref>: the fluid distribution circuit preferably comprises at least one manifold M<b>1</b>, which itself comprises several parallel channels M<b>11</b>-M<b>14</b>. Each of these parallel channels M<b>11</b>-M<b>14</b> must then be perpendicular to direction y (or, say, the reference direction), for compatibility reasons. Each of the parallel channels M<b>11</b>-M<b>14</b> is furthermore in fluid communication with orifices of one of the sets (A or B) of orifices (inlet or outlet). To that aim, orifices or nozzles NIA, NIB, NOA′, NOB′can be provided in the manifold M<b>1</b>, respectively coupled to, i.e., vis-à-vis the orifices IA, IB, OA′, OB′ that directly connect to the circuit portions at the level of the reaction layer RP. Still, the nozzles NIA, NIB, NOA′, NOB′ and the orifices IA, IB, OA′, OB′ could be one and a same thing. More generally, each of the parallel channels is in fluid communication with orifices of one of the k sets of inlet orifices or one of the k sets of outlet orifices. This implies that the parallel channels of M<b>1</b> sequentially alternate as well, to meet the corresponding type of orifices. It follows from the above definitions that there are 2 k types of channels in M<b>1</b>.</p>
+      <p id="p-00043-en" num="0067">Now, since one channel type connects to several orifices of the same type, see <figref>FIGS. 3 and 4</figref>, the number of channels is much less than the number of orifices. In addition, thanks to the shifted and alternating orifices, the fluid distribution to/collection from orifices can be achieved via sequentially alternating parallel channels, a thing that advantageously allows for scalability of the upstream and downstream distribution circuits with respect to the reaction layer RP (i.e., up- and downstream with respect to the inlet/outlet orifices IA, IB, OA′, OB′) as well.</p>
+      <p id="p-00044-en" num="0068">As touched above, since two types of fluids (A and B) are assumed in the appended drawings and two types of orifices are needed for input and output, there are 4 types of manifold channels. Each type of channels is depicted using distinct patterns (horizontal, vertical or diagonal stripes “///” or “\\\”).</p>
+      <p id="p-00045-en" num="0069">In <figref>FIG. 4</figref>, the manifold M<b>1</b> is shown superimposed to the reaction layer of <figref>FIG. 2</figref>, to allow the reader to see where the manifold connects to the reaction layer RP.</p>
+      <p id="p-00046-en" num="0070">Similarly, the fluid distribution circuit may further comprise one or more additional manifolds, as illustrated in <figref>FIGS. 5-7</figref> with (only) one additional manifold M<b>2</b>. In that case, the additional manifold M<b>2</b> comprises several parallel channels M<b>2</b><i>i </i>(i.e., M<b>21</b>-M<b>25</b> in the drawings) that are, each, rotated with respect to channels M<b>1</b><i>i </i>of M<b>1</b> (e.g., perpendicular thereto), and in fluid communication with channels M<b>1</b><i>i </i>of M<b>1</b>. For instance, nozzles M<b>2</b><i>ij </i>(i.e., M<b>221</b> and M<b>222</b> in the drawings) may be provided in the channels M<b>2</b><i>i </i>to enable fluid communication with M<b>1</b>. The same principle can be generalized to an n<sup>th </sup>additional manifold, in fluid communication with an (n−1)<sup>th </sup>manifold. Thus, one understands that there is 2 k types of channels in each of the manifolds M<b>1</b>, M<b>2</b>, etc. However, since one channel type in Mn connects to several channels in Mn−1, see <figref>FIGS. 5 and 6</figref>, the number of channels in Mn is much less that the number of channels in Mn−1. The sequence of manifolds as defined above allows for enabling a fluid communication between, on the one hand, macroscopic fluid inlet/outlet e.g., by way of tubing ports, and on the other hand, microscopic or at least much smaller orifices at the level of the reaction layer RP. The underlying principle is, once more, fully scalable. More generally, manifold layers may be added if and as necessary to facilitate the supply of the k fluids to the reactor from an external source.</p>
+      <p id="p-00047-en" num="0071">The 2D views shown in <figref>FIGS. 2-7</figref> shall be better understood when compared to the section view of <figref>FIG. 8</figref> (taken along plane PP of <figref>FIG. 2</figref>) and the 3D view of <figref>FIG. 9</figref>.</p>
+      <p id="p-00048-en" num="0072">Note that a manifold can preferably be formed by two superimposed layers, where a first layer comprises orifices as through holes, and the second layer comprises longitudinal channels oriented perpendicular to the direction of these orifices. This has advantages in terms of manufacturability. Indeed, a lower sub-layer of manifold Mn may comprise orifices meant for fluid communication with a lower level manifold Mn−1 or the reaction layer RP, whereas the upper sub-layer comprises the channels of the manifold Mn. Both the orifices and channels can be machined as through holes in their respective sub-layers, a thing that eases the manufacture process. Two such sub-layers just need to be first superimposed and then assembled, with no substantial additional machining. Thus, not only the orifices but also the channels can be machined as through holes, i.e., the channels in this case are grooves which define a continuous void from one surface of a layer to the other surface of the same layer.</p>
+      <p id="p-00049-en" num="0073">In variants, one may also manufacture the orifices and the channels in a single layer, in which case the channels are not continuous through the layer anymore but rather define grooves which are recessed into the layer by a certain depth.</p>
+      <p id="p-00050-en" num="0074">Superimposed layers may further be made of different materials, if necessary, since the different dimensions and shapes of the channel portions vs. orifices may more easily be processed using different materials.</p>
+      <p id="p-00051-en" num="0075">Next, referring more particularly to <figref>FIGS. 2 to 4</figref>: as per the above specifications, the outlet orifices are necessarily shifted by less than the distance between two contiguous inlet orifices along direction y. Now, they are typically shifted by half of this distance. A half-distance shift corresponds to embodiments depicted in the appended drawings. One understands that this case is probably the simplest to design and manufacture, as this enables a regular arrangement of channels e.g., with identical dimensions in the fluid distribution circuit.</p>
+      <p id="p-00052-en" num="0076">At present, more is said about the chemical cells CC. Referring back to <figref>FIGS. 1 and 2</figref>, two circuit portions CP that connect, each, a same inlet orifice (e.g., IA) to a same outlet orifice (e.g., OA′) are typically separated by a wall E<b>1</b>, E<b>2</b>. Now, in embodiments, the chemical reactor CR is preferably an electrochemical reactor. In that case, the walls E<b>1</b>, E<b>2</b> are coupled in the reactor as electrodes E<b>1</b>, E<b>2</b>. Note that these electrodes can be bulk electricity conductors, or not. I.e., electrodes may be designed, if necessary, such that electrical power flows along the surface of the electrodes rather than their mass. Additional walls W<b>1</b>, W<b>2</b> may be suitably arranged to properly separate circuit portion ends, as seen in <figref>FIGS. 1</figref>, <b>2</b>.</p>
+      <p id="p-00053-en" num="0077">Note that in electrochemical applications, the electron transfer does not occur between the fluids A, B, but between the electrodes E<b>1</b>, E<b>2</b> and the fluids A, B. The pairwise contact is needed to close the electronic circuit (the fluids are ionic conductors, thus enabling ion exchange between each other for electroneutrality).</p>
+      <p id="p-00054-en" num="0078">
+        <figref>FIGS. 1-10</figref> relate to manifold schemes which allow for uniform periodic distribution of two independent fluid streams and show how electrodes can be easily integrated into this scheme for electrochemical conversion. The depicted manifolds ensure distribution of independent fluid streams and bridging of length scales from macroscopic fluidic connections to microscopic conversion plane. Although the examples shown in <figref>FIGS. 1-10</figref> are meant for independent handling of two inlet and two outlet streams; a larger number of streams may be handled similarly, as touched earlier.</p>
+      <p id="p-00055-en" num="0079">Simultaneous electrochemical yield and heat dissipation were modeled for laminar flow conditions in the reaction layer RP (not reported here, this shall be the subject of subsequent publications). This study has shown that embodiments of the invention allow for very high power footprints compared to known microfluidic electrochemical conversion units. For instance, embodiments of the present invention allow for achieving power footprints typically larger than 0.1 or even 1 W/cm<sup>2</sup>, for average fluid velocities between 0.01 and 1.00 m/s, whereas the prior art devices usually provide power footprints on the order of 0.01 to 0.10 W/cm<sup>2</sup>.</p>
+      <p id="p-00056-en" num="0080">Several applications can be contemplated for the concepts disclosed herein, notably: <ul id="ul-00013-en" list-style="none"><li><ul id="ul-00014-en" list-style="none"><li>Electrochemical power delivery for power density (e.g. fuel cells, redox flow batteries);</li><li>Decentralized power generation with integrated storage (e.g. photovoltaics);</li><li>Chemical reactors with defined product composition (e.g. hydrogen reformers, artificial photosynthesis);</li><li>Thermal management with high heat transfer coefficients (e.g. microchannel heat sinks)</li><li>Etc.</li></ul></li></ul></p>
+      <p id="p-00057-en" num="0086">The invention can for instance be embodied as a photovoltaic apparatus PA, as illustrated in <figref>FIG. 10</figref>. The upper part of <figref>FIG. 10</figref> corresponds to a section view, while the lower part is a bottom view. Apparatus PA may actually restrict to a single photovoltaic cell, or to a photovoltaic module or, still, it may be a photovoltaic system comprising an array PMA of photovoltaic cells PC (or even modules).</p>
+      <p id="p-00058-en" num="0087">Briefly, photovoltaics generate electrical power by converting solar radiation (i.e., “S” in <figref>FIG. 10</figref>) into direct current electricity through semiconductors exhibiting the photovoltaic effect. A photovoltaic cell (or PV cell, also “solar cell” or “photoelectric cell”) is a solid state device that converts energy of light directly into electricity by virtue if the photovoltaic effect. A photovoltaic module (also “solar module”, “solar panel” or “photovoltaic panel”) is an assembly of connected photovoltaic cells. Finally, a photovoltaic system typically includes an array of photovoltaic modules, an inverter and interconnection wiring.</p>
+      <p id="p-00059-en" num="0088">In <figref>FIG. 10</figref>, the apparatus depicted is a multiple photovoltaic-cell array receiver, which can advantageously be used for concentrated photovoltaics. Concentrated photovoltaic systems (often abbreviated as CPV) use optics (e.g., lenses) to concentrate a large amount of sunlight onto a small area of solar photovoltaic materials to generate electricity (sunlight is converted directly to electricity). Concentration allows for production of smaller areas of solar cells.</p>
+      <p id="p-00060-en" num="0089">Importantly, the patterns shown in <figref>FIG. 10</figref> do not correspond to fluidic paths anymore, contrary to <figref>FIGS. 1-9</figref>. Instead, the stripe patterns now denote typical isopotential areas and a square pattern is now used for the substrate S and some structures in the reaction layer RP.</p>
+      <p id="p-00061-en" num="0090">In all cases, applications of the invention to photovoltaic apparatuses would typically give rise to apparatuses comprising at least one photovoltaic surface PS, electrically connected to a set of photovoltaic electrodes PE, BE (BE stands for back electrode), in addition to a chemical (electrochemical) reactor CR such as described above. The CR is in that case electrically connected to the set of photovoltaic electrodes. Note the vertical ordering of the layers S, RP, etc., which is reversed to that of <figref>FIGS. 8 and 9</figref>. In <figref>FIG. 10</figref>, the additional reference TC denotes through contacts. Electronically conductive fins forming the electrodes E<b>1</b>, E<b>2</b> (in the case of k=2 fluids) within the reaction layer RP′ are electrically connected to the through contacts TC. The electrodes E<b>1</b>, E<b>2</b> (in the case of k=2 fluids) are connected to electrode terminals T<b>1</b>, T<b>2</b> which in turn are connected to the external load or power source, e.g. the photovoltaic device shown in <figref>FIG. 10</figref>. The arrangement of T<b>1</b>, T<b>2</b> shown in <figref>FIG. 10</figref> is an example of an interdigitated electrode arrangement which permits to interconnect the electrochemical reactor with the photovoltaic cell consistently over an entire area. This areal dense array of electrode terminals may be particularly useful in embodiments, e.g. for electronic devices employing ball-grid arrays.</p>
+      <p id="p-00062-en" num="0091">When the reactor is used as an electrochemical reactor, then each of the electrodes E<b>1</b>, E<b>2</b> separates two circuit portions (that connect, each, a same inlet orifice to a same outlet orifice). In other words, each electrode is shared by two chemical cells adjacent along direction y. The corresponding operation method further comprises: dispensing or collecting (step S<b>40</b> in <figref>FIG. 11</figref>) electrical charges to or from said electrodes, respectively. There, one understands that a load between the electrodes can be used for electricity generation. Alternatively, electricity can be stored chemically in the fluids.</p>
+      <p id="p-00063-en" num="0092">
+        <figref>FIGS. 12A-12C</figref> denote different examples of arrangement of terminals which will be briefly described below. As known in the fields of fuel cell and battery technology, several single cells can be electrically interconnected to cell strings to form a fuel cell stack or module. When the electrical interconnection between cells is formed in series, the total voltage delivered by this cell string is higher than that of an individual cell. More specifically, the open circuit voltage of a cell string in which the cells are connected in series is equal to the sum of the individual open circuit voltages of each individual cell. One particular form of said series connection of cells is known as a bipolar arrangement in which the electrode of one cell participates in the electrochemical reactions of two contiguous cells. In this case, the polarity assigned to the electrode in one cell is the opposite of the polarity assigned to the electrode in the neighboring cell. In embodiments of this invention, it can be beneficial to operate strings of chemical cells CC such that the open circuit voltages at the terminals connected to an external load or power source are whole number multiples of the open circuit voltage delivered by a single chemical cell CC. By way of example, <figref>FIGS. 12A-12C</figref> depict different possibilities of connecting individual electrodes E<b>1</b>, E<b>2</b> to deliver different terminal voltages. For example, if a single chemical cell CC gives rise to an open circuit voltage of 1 V as defined by the electrochemical reactions occurring therein, the terminals (bold lines) in <figref>FIG. 12A</figref> operate at a voltage of 1 V. Based on the same type of chemical cell CC, the arrangement shown in <figref>FIG. 12B</figref> delivers a terminal voltage of 3 V. The design in <figref>FIG. 12C</figref> delivers a terminal voltage of 5 V.</p>
+      <p id="p-00064-en" num="0093">Embodiments have been described, which are scalable to large areas, thanks to an appropriate fluid distribution (manifold) scheme. Some of the disclosed embodiments notably allow high electrochemical power densities through efficient microstructures. The present concepts are highly scalable from small footprints (e.g. microprocessors, few cm<sup>2</sup>) to large footprints (e.g. large photovoltaic modules, several m<sup>2</sup>) without loss of power density. They further provide reduced complexity compared to large-scale membrane-based designs since fluid separation by laminar flow is applicable. For completeness, efficient electrochemical energy storage and delivery can be enabled, due to reduced wiring resistance. Also, the embodiments described above allow for storing or delivering electrical power, or at least for chemical reactions to occur, a thing that fundamentally differs from e.g., the conventional microchannel cooler designs that have been proposed in other technical fields.</p>
+      <p id="p-00065-en" num="0094">The above embodiments have been described in reference to the accompanying drawings and may accommodate a number of variants. In preferred embodiments, several combinations of the above features may be contemplated, as illustrated in the drawings. Other variants and detailed examples are given in the next section.</p>
+      <heading id="h-00007-en" level="1">2. Specific Embodiments/Technical Implementation Details</heading>
+      <p id="p-00066-en" num="0095">A number of additional variants can be contemplated. For instance, the fluid distribution can be tailored by engineering the hydrodynamic resistance of different fluid paths, e.g. by introducing a specific taper in the manifold channels or varying the orifice diameter which interconnects different manifold layers or the lowest manifold layer with the reaction plane.</p>
+      <p id="p-00067-en" num="0096">Also, concerning electrochemical applications: different electrode wiring configurations can be contemplated, which enable large range of voltage combinations, where the lowest voltage is defined by the potentials of each half-cell reaction (typically ˜1 V).</p>
+      <p id="p-00068-en" num="0097">A multitude of supply voltages is beneficial for power supply applications for integrated circuits. A multitude of charging voltages is also beneficial for direct energy storage (electrolysis) from a variety of photovoltaic chips (single- vs. multi-junction, organic, thin-film). The power pins are typically located at the lower face of the reaction layer RP (i.e., a face vis-à-vis the PV systems: with various possible layouts, as illustrated in <figref>FIGS. 12A-C</figref>.</p>
+      <p id="p-00069-en" num="0098">In addition, for photovoltaic applications such as depicted in <figref>FIG. 10</figref>, care shall be taken to ensure proximity of the electrodes to power source/sink, in order to minimize wiring losses.</p>
+      <p id="p-00070-en" num="0099">Also, electrode and channel integration schemes can be realized by a variety of techniques, such as: <ul id="ul-00015-en" list-style="none"><li><ul id="ul-00016-en" list-style="none"><li>Conventional microfabrication techniques (e.g. lithography, wet/dry etching, metallization, electroplating);</li><li>Bulk machining from carbonaceous material (e.g. by oxygen etching, laser ablation); and</li><li>Bottom-up fabrication of non-conventional structures (e.g. pyrolyzed structured photoresist, growth of nanotubes or nanowires).</li></ul></li></ul></p>
+      <p id="p-00071-en" num="0103">Reliability of the package may also be considered. A solution using silicon as substrate material allows a good thermal coefficient of expansion match between the photovoltaic cells (typically germanium) and the reactor, which reduces stress on the cells. Use of silicon further allows for using MEMS processes to structure the reactor surface and implement sensing elements in the reactor (temperature, radiation, pressure).</p>
+      <p id="p-00072-en" num="0104">Next, minimizing pumping power while maximizing temperature homogeneity across the reactor surface can be both achieved with an efficient manifold such as described above, i.e., a hierarchical fluid distribution/collection system with two main paths (fluid inlet and outlet).</p>
+      <p id="p-00073-en" num="0105">A layer-wise implementation of distribution channels (manifold) and injection orifices/nozzles allows for: <ul id="ul-00017-en" list-style="none"><li><ul id="ul-00018-en" list-style="none"><li>using different materials and fabrication methods to cover the broad range of structure dimensions (e.g., from 20 μm to 20 mm or more); and</li><li>using different materials in turn allows for achieving low thermo-mechanical stress in the reactor layer, increasing the lifetime of the package.</li></ul></li></ul></p>
+      <p id="p-00074-en" num="0108">A complete package (including the reactor and photovoltaic system components) is preferably fabricated using MEMS technology, taking advantage of definition and processing of microstructures, batch processing, bonding techniques, integration of sensing elements, etc.</p>
+      <p id="p-00075-en" num="0109">In reference to <figref>FIG. 10</figref>, this package typically comprises: <ul id="ul-00019-en" list-style="none"><li><ul id="ul-00020-en" list-style="none"><li>a layer on top, comprising:         <ul id="ul-00021-en" list-style="none"><li>photovoltaic cells PC, forming altogether a multichip module, the cells connected by electrical interconnects;</li><li>Bypass electrodes (not shown); and</li><li>An electrical layer (not shown), to connect the bottom electrodes of the photovoltaic cells.</li></ul></li><li>A lower layer may further contain:         <ul id="ul-00022-en" list-style="none"><li>a sensor layer with a network of resistive temperature devices to map the temperature over the entire package right at the bottom of the photovoltaic cell (not shown), if needed; and</li><li>an insulation layer, to insulate the sensor layer to electrical layer (not shown);</li></ul></li></ul></li></ul></p>
+      <p id="p-00076-en" num="0117">These layers are typically processed using thin film deposition techniques as well as galvanic processes. Solders can be applied by a galvanic process too or any conventional process like screen printing.</p>
+      <p id="p-00077-en" num="0118">In the reactor layer RP, the circuit portions, the walls, etc., can be fabricated using DRIE to enhance heat removal. These channels can be also be fabricated using multiple dicing saws. Orifices can be fabricated by DRIE as well. Die casting and other mass production processes can also be used.</p>
+      <p id="p-00078-en" num="0119">A multichip module package including a reactor as described above may for instance comprise: <ul id="ul-00023-en" list-style="none"><li><ul id="ul-00024-en" list-style="none"><li>High efficiency triple junction solar cells (or “3JPV”, commercially available) soldered onto a substrate with a minimal distance between each other;</li><li>Electrical interconnects (including conductive pads, connections PE, etc.) which connect a top electrode of one cell to a top electrode of another cell in case of a parallel connection or which connect a top electrode of one cell to a electrically conductive pad which is again connected to the bottom electrode of another cell in case of a serial connection (300 μm wire bond, soldered or welded Cu ribbon or lead frame).</li><li>A carrier (not shown) for mechanical support and interface to other systems, and which notably comprises an electrochemical reactor as described earlier, with the manifold layers M<b>1</b>, M<b>2</b> made of polymer, metal, composite materials, etc.</li></ul></li></ul></p>
+      <p id="p-00079-en" num="0123">Finally, it is noted that in a package as described above, the presence of the electrochemical reactor obviates the need for a heat sink.</p>
+      <p id="p-00080-en" num="0124">While the present invention has been described with reference to certain embodiments, it will be understood by those skilled in the art that various changes may be made and equivalents may be substituted without departing from the scope of the present invention. In addition, many modifications may be made to adapt a particular situation or material to the teachings of the present invention without departing from its scope. Therefore, it is intended that the present invention not be limited to the particular embodiments disclosed, but that the present invention will include all embodiments falling within the scope of the appended claims. In that respect, not all the components or steps depicted in the accompanying drawings need be involved, depending on embodiments. In addition, many other variants than explicitly touched above can be contemplated. For example: other materials could be used for fabricating the structures in the reaction layer RP; other patterns of circuit sections CP could be relied upon, such as curved (rounded) circuit portions CP<b>1</b>, CP<b>2</b>, etc.</p>
+      <heading id="h-00008-en" level="1">REFERENCE LIST</heading>
+      <p id="p-00081-en" num="0000">
+        <ul id="ul-00025-en" list-style="none">
+          <li>CR Chemical Reactor</li>
+          <li>RP Reaction Layer</li>
+          <li>E<b>1</b>, E<b>2</b> Walls (Electrodes)</li>
+          <li>W<b>1</b>, W<b>2</b> Additional Walls</li>
+          <li>x, y Reaction Plane Subtending Directions</li>
+          <li>UC Unit Cell</li>
+          <li>UC′ Unit Cell (Variant)</li>
+          <li>CC Chemical Cell(s)</li>
+          <li>CP Circuit Portions</li>
+          <li>M<b>1</b>, M<b>2</b> Fluid Distribution Circuit</li>
+          <li>IA, IB Inlet Orifices</li>
+          <li>OA′, OB′ Outlet Orifices</li>
+          <li>M<b>1</b> First Manifold</li>
+          <li>M<b>11</b>-M<b>14</b> First Manifold's Parallel Channels</li>
+          <li>M<b>2</b> Second (Additional) Manifold</li>
+          <li>M<b>21</b>-M<b>25</b> Second (Additional) Manifold's Parallel Channels</li>
+          <li>PA Photovoltaic Apparatus</li>
+          <li>PMA Array of Photovoltaic Modules</li>
+          <li>PM Photovoltaic Modules</li>
+          <li>PS Photovoltaic Surface</li>
+          <li>PE, BE Photovoltaic Electrodes</li>
+          <li>A Fluid A</li>
+          <li>B Fluid B</li>
+          <li>T<b>1</b> Electrical connection terminal <b>1</b></li>
+          <li>T<b>2</b> Electrical connection terminal <b>2</b> (opposite polarity of T<b>1</b>)</li>
+        </ul>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A chemical reactor (CR), designed for enabling N pairwise fluid contacts among k chemical fluids, with k≧2 and N≧4, the reactor comprising:
+<claim-text>a reaction layer (RP)
+<claim-text>essentially extending in a 2D plane subtended by two directions (x, y), preferably perpendicular; and</claim-text><claim-text>comprising N chemical cells (CC), each including two circuit portions (CP<b>1</b>, CP<b>2</b>, CP), said two circuit portions designed for enabling circulation of two of the k chemical fluids, respectively, said two circuit portions further intersecting each other, thereby enabling one pairwise fluid contact for said two of the k chemical fluids;</claim-text></claim-text><claim-text>a fluid distribution circuit (M<b>1</b>, M<b>2</b>) comprising
+<claim-text>k sets of inlet orifices (IA, IB) sequentially alternating along lines parallel to one (y) of the two directions (x, y), for respectively dispensing k chemical fluids to the reaction layer; and</claim-text><claim-text>k sets of outlet orifices (OA′, OB′) sequentially alternating along lines parallel to the inlet orifices, for respectively collecting k chemical fluids from the reaction layer, the outlet orifices shifted along said one (y) of the two directions with respect to the inlet orifices,</claim-text></claim-text><claim-text>and wherein,</claim-text><claim-text>each circuit portion connects, via respective ends thereof, an inlet orifice to an outlet orifice.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The chemical reactor (CR) according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each of the orifices joins ends of four circuit portions (CP) belonging to distinct chemical cells (CC), said distinct chemical cells contiguous in the reaction plane.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The chemical reactor (CR) according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the reaction layer and the fluid distribution circuit form a 2D periodic array, a unit cell (UC) of said array periodically repeating in said 2D plane by translation along one or each of said two directions (x, y).</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The chemical reactor (CR) according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein:
+<claim-text>k=2; each of the orifices joins ends of four circuit portions belonging to distinct chemical cells, said distinct chemical cells contiguous in the reaction plane; and</claim-text><claim-text>each unit cell comprises
+<claim-text>four chemical cells;</claim-text><claim-text>eight circuit portions;</claim-text><claim-text>two inlet orifices; and</claim-text><claim-text>two outlet orifices.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The chemical reactor (CR) according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the fluid distribution circuit comprises at least a first manifold (M1), the latter comprising several parallel channels (M11-M14), each perpendicular to said one (y) of the two directions (x, y) and in fluid communication with orifices of one of the k sets of inlet orifices or one of the k sets of outlet orifices.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The chemical reactor (CR) according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the fluid distribution circuit further comprises one or more additional manifolds (M2), an n<sup>th </sup>additional manifold (M2) comprising several parallel channels (M21-M25) that are, each, rotated with respect to, preferably perpendicular to, and in fluid communication with channels (M11-M14) of an (n−1)<sup>th </sup>manifold (M1).</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The chemical reactor (CR) according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein a manifold is formed by two superimposed layers, a first one of said two superimposed layers comprising orifices as through holes, a second one of said two superimposed layers comprising channels as through holes.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The chemical reactor (CR) according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the outlet orifices are shifted by less than the distance between two contiguous inlet orifices along said one of the two directions, and preferably are shifted by half of this distance.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The chemical reactor (CR) according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the reactor is an electrochemical reactor, and wherein two circuit portions that connect, each, a same inlet orifice to a same outlet orifice are separated by a wall (E1, E2) coupled in the reactor as an electrode (E1, E2), such that two chemical cells adjacent along said one (y) of the two directions share said electrode (E1, E2).</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A photovoltaic apparatus (PA), such as: a photovoltaic cell; a photovoltaic module; or a photovoltaic system comprising an array (PMA) of photovoltaic cells (PC) or an array of photovoltaic modules; the photovoltaic apparatus comprising:
+<claim-text>at least one photovoltaic surface (PS) electrically connected to a set of photovoltaic electrodes (PE, BE); and</claim-text><claim-text>a chemical reactor (CR) according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, electrically connected to the set of photovoltaic electrodes.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A method for operating a device having a chemical reactor (CR), said device designed for enabling N pairwise fluid contacts among k chemical fluids, with k≧2 and N≧4, the reactor comprising:
+<claim-text>a reaction layer (RP)</claim-text><claim-text>essentially extending in a 2D plane subtended by two directions (x, y), preferably perpendicular; and</claim-text><claim-text>comprising N chemical cells (CC), each including two circuit portions (CP<b>1</b>, CP<b>2</b>, CP), said two circuit portions designed for enabling circulation of two of the k chemical fluids, respectively, said two circuit portions further intersecting each other, thereby enabling one pairwise fluid contact for said two of the k chemical fluids;</claim-text></claim-text>
+      <claim-text>a fluid distribution circuit (M<b>1</b>, M<b>2</b>) comprising
+<claim-text>k sets of inlet orifices (IA, IB) sequentially alternating along lines parallel to one (y) of the two directions (x, v), for respectively dispensing k chemical fluids to the reaction layer; and</claim-text><claim-text>k sets of outlet orifices (OA′, OB′) sequentially alternating along lines parallel to the inlet orifices, for respectively collecting k chemical fluids from the reaction layer, the outlet orifices shifted along said one (y) of the two directions with respect to the inlet orifices, and wherein, each circuit portion connects, via respective ends thereof, an inlet orifice to an outlet orifice, and the method comprising: enabling N pairwise fluid contacts by</claim-text><claim-text>dispensing (S<b>10</b>) k chemical fluids to the reaction layer, k≧2, via the k sets of inlet orifices, such that, in each of the N chemical cells (CC), two of the k chemical fluids circulate (S<b>20</b>) in two respective circuit portions (CP<b>1</b>, CP<b>2</b>), make contact (S<b>30</b>) and thereby enable a chemical reaction; and</claim-text><claim-text>collecting (S<b>10</b><i>a</i>) k chemical fluids from the reaction layer via the k sets of outlet orifices.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, the method further comprising:
+<claim-text>dispensing or collecting (S40) electrical charges to or from electrodes, respectively, wherein each of said electrodes separates two circuit portions that connect, each, a same inlet orifice to a same outlet orifice, whereby each of said electrodes is shared by two chemical cells adjacent along said one (y) of the two directions. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150259812A1_00013.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150259812A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259812A1.PDF" type="pdf" size="1647693" pages="20" />
+</lexisnexis-patent-document>

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257657A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030155" date-changed="20160112" time-changed="151912">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315320">
+        <country>US</country>
+        <doc-number>20150257657</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14436612</doc-number>
+        <date>20131002</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>RU</country>
+        <doc-number>2012144358</doc-number>
+        <date>20121018</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160112">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/0215      20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0215</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   5/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61M  25/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>25</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160112">
+      <classification-cpc sequence="1">
+        <text>A61B   5/0215      20130101 FI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0215</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/02014     20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02014</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/4839      20130101 LI20151127BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>4839</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151127</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/6862      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6862</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B2560/04        20130101 LA20151127BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2560</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151127</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B2562/0247      20130101 LA20140905BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2562</main-group>
+        <subgroup>0247</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140905</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61F   2/88        20130101 LA20140923BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>88</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140923</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61F2250/0068      20130101 LA20140923BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2250</main-group>
+        <subgroup>0068</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140923</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61M  25/0043      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>25</main-group>
+        <subgroup>0043</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">1</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">DEVICE FOR MEASURING PRESSURE AND ADMINISTERING MEDICINAL SUBSTANCES TO A BLOOD VESSEL ANEURYSM</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>KAVTELADZE</last-name>
+            <first-name>Zaza Alexandrovich</first-name>
+            <address>
+              <city>Moscow</city>
+              <country>RU</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>RU</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kavteladze</last-name>
+            <first-name>Zaza Alexandrovich</first-name>
+            <address>
+              <city>Moscow</city>
+              <country>RU</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>RU13000873</doc-number>
+        <date>20131002</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014062089</doc-number>
+        <date>20140424</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="165375576">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2910184</doc-number>
+            <kind>A1</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2521833</doc-number>
+            <kind>C2</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20121018</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2012144358</doc-number>
+            <kind>A</kind>
+            <date>20140427</date>
+          </document-id>
+          <application-date>
+            <date>20121018</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257657</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014062089</doc-number>
+            <kind>A1</kind>
+            <date>20140424</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165375575">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2910184</doc-number>
+            <kind>A1</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2521833</doc-number>
+            <kind>C2</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20121018</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2012144358</doc-number>
+            <kind>A</kind>
+            <date>20140427</date>
+          </document-id>
+          <application-date>
+            <date>20121018</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257657</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014062089</doc-number>
+            <kind>A1</kind>
+            <date>20140424</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention relates to medicine, in particular, to vascular and endovascular surgery. The objective of the invention is to measure pressure and to administer drugs to an aneurysm in a blood vessel after implantation of a stent-graft. The device for measurement of pressure and for administration of drugs is made of a shape memory material, in the form of a hollow tube with side apertures.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <p id="p-00001-en" num="0001">The invention relates to medicine, in particular, to vascular and endovascular surgery.</p>
+      <p id="p-00002-en" num="0002">A stent-graft providing internal isolation of an aneurysm in a blood vessel is known (see U.S. Pat. No. 5,716,365, A61F, 1998). A disadvantage of the stent-graft is in impossibility of assessing the condition of an isolated aneurysmal sac after the graft implantation (in particular, impossibility of measuring of intra-aneurysm sac pressure and administering drugs, as far as necessary).</p>
+      <p id="p-00003-en" num="0003">A device for measurement of pressure and for administration of drugs is known (see U.S. Pat. No. 5,037,403, A61M 25/00, 1991), wherein the device is made in the form of a catheter with side apertures. Said device is the closest technical solution in terms of the problem to be solved.</p>
+      <p id="p-00004-en" num="0004">A disadvantage of the known technical solution is in impossibility of assessing the condition of an isolated space of an aneurysmal sac between the aneurysmal vessel wall and the wall of a stent-graft after the implantation of the latter.</p>
+      <p id="p-00005-en" num="0005">The objective of the invention is to eliminate the above disadvantages and develop a device allowing assessment of the condition of an isolated space of an aneurysmal sac by measuring pressure and administering drugs to an aneurysm in a blood vessel after implantation of a stent-graft.</p>
+      <p id="p-00006-en" num="0006">The objective is achieved by providing a device for measurement of pressure and for administration of drugs made in the form of a hollow tube with side apertures, the device being made of a shape-memory material—nitinol—that provides changing the shape of the tube when the latter is introduced into an aneurysm in a blood vessel and filling the entire interior space of the aneurysm at its circumference, and wherein the tube is adapted to be connected to a pressure-measuring sensor and to administer drugs through a detachable hollow tube.</p>
+    </summary>
+    <description-of-drawings>
+      <p id="p-00007-en" num="0007">The FIGURE shows a general view of the claimed invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00008-en" num="0008">In the claimed invention the device for measurement of pressure and for administration of drugs is made in the form of hollow tube <b>1</b> with side apertures <b>2</b>. Hollow tube <b>1</b> is made of nitinol, i.e. a shape-memory material, and is adapted to be connected to a pressure-measuring sensor (not shown) and to administer drugs through detachable hollow tube <b>3</b>.</p>
+      <p id="p-00009-en" num="0009">The device is used as follows:</p>
+      <p id="p-00010-en" num="0010">Before introduction of the device into the aorta an aneurysm in a blood vessel is diagnosed to determine its shape and size. The shape and size of nitinol-made hollow tube <b>1</b> is specified on the basis of the diagnostic results, and then the tube is introduced into the aneurysm in the blood vessel by one of known methods. The shape-memory material allows hollow tube <b>1</b> to fill the entire interior space of the aneurism at its circumference. After that a stent-graft is implanted by a known method. Measurement of pressure and, if necessary, administration of drugs, for example Thrombovar, are performed through detachable hollow tube <b>3</b> disposed in the aneurysmal sac between the vessel wall and the wall of the stent-graft, by using side apertures <b>2</b>. Hollow tube <b>3</b> is removed also by a known method.</p>
+      <p id="p-00011-en" num="0011">Thus, the design of the device for measurement of pressure and for administration of drugs to an aneurysm in a blood vessel, made in the form of a hollow tube having shape memory allows qualitative measurement of pressure and qualitative administration of drugs due to filling by the hollow tube the interior space of the aneurysm at its circumference.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A device for measurement of pressure and for administration of drugs in an aneurysm in a blood vessel, made in the form of a hollow tube with side apertures, characterized in that the hollow tube is made of nitinol and is capable of changing a shape and filling the entire interior space of the aneurysm at its circumference when introduced into the aneurysm, the device being adapted to be connected to a pressure-measuring sensor and to administer drugs through a detachable hollow tube.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257657A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257657A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257657A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257657A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257657A1_00003.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257657A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257657A1.PDF" type="pdf" size="175885" pages="3" />
+</lexisnexis-patent-document>

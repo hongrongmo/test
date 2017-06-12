@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252337A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021823" date-changed="20151208" time-changed="150653">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229332">
+        <country>US</country>
+        <doc-number>20150252337</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14431868</doc-number>
+        <date>20121224</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020120108366</doc-number>
+        <date>20120927</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151208">
+      <classification-ipcr sequence="1">
+        <text>C12N   9/10        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A01N  37/42        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>37</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C12P  33/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>33</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151208">
+      <classification-cpc sequence="1">
+        <text>C12N   9/1051      20130101 FI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>1051</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A01N  37/42        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>37</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12P  19/56        20130101 LI20140923BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>19</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140923</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12P  33/00        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>33</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C12Y 204/01017     20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Y</subclass>
+        <main-group>204</main-group>
+        <subgroup>01017</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>Y02P  20/52        20151101 LA20151203BHEP        </text>
+        <cpc-version-indicator>
+          <date>20151101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>P</subclass>
+        <main-group>20</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151203</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">NOVEL UDP-GLYCOSYLTRANSFERASE DERIVED FROM GINSENG AND USE THEREOF</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>KOREA ADVANCED INSTITUTE OF SCIENCE AND TECHNOLOGY</orgname>
+            <address>
+              <city>Yuseong-gu, Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>INTELLIGENT SYNTHETIC BIOLOGY CENTER</orgname>
+            <address>
+              <city>Yuseong-gu, Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kim</last-name>
+            <first-name>Sun-Chang</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Choi</last-name>
+            <first-name>Gil Tsu</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Jung</last-name>
+            <first-name>Suk Chae</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kim</last-name>
+            <first-name>Woo Hyun</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Im</last-name>
+            <first-name>Wan Taek</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lee</last-name>
+            <first-name>Yeon</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR12011402</doc-number>
+        <date>20121224</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014051215</doc-number>
+        <date>20140403</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151015">
+      <main-family family-id="165038851">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140041259</doc-number>
+            <kind>A</kind>
+            <date>20140404</date>
+          </document-id>
+          <application-date>
+            <date>20120927</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014051215</doc-number>
+            <kind>A1</kind>
+            <date>20140403</date>
+          </document-id>
+          <application-date>
+            <date>20121224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2900812</doc-number>
+            <kind>A1</kind>
+            <date>20150805</date>
+          </document-id>
+          <application-date>
+            <date>20121224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015530108</doc-number>
+            <kind>A</kind>
+            <date>20151015</date>
+          </document-id>
+          <application-date>
+            <date>20121224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101479615</doc-number>
+            <kind>B1</kind>
+            <date>20141230</date>
+          </document-id>
+          <application-date>
+            <date>20120927</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252337</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20121224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104854235</doc-number>
+            <kind>A</kind>
+            <date>20150819</date>
+          </document-id>
+          <application-date>
+            <date>20121224</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165038850">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140041259</doc-number>
+            <kind>A</kind>
+            <date>20140404</date>
+          </document-id>
+          <application-date>
+            <date>20120927</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014051215</doc-number>
+            <kind>A1</kind>
+            <date>20140403</date>
+          </document-id>
+          <application-date>
+            <date>20121224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2900812</doc-number>
+            <kind>A1</kind>
+            <date>20150805</date>
+          </document-id>
+          <application-date>
+            <date>20121224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015530108</doc-number>
+            <kind>A</kind>
+            <date>20151015</date>
+          </document-id>
+          <application-date>
+            <date>20121224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101479615</doc-number>
+            <kind>B1</kind>
+            <date>20141230</date>
+          </document-id>
+          <application-date>
+            <date>20120927</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252337</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20121224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104854235</doc-number>
+            <kind>A</kind>
+            <date>20150819</date>
+          </document-id>
+          <application-date>
+            <date>20121224</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a novel uridine diphosphate (UDP)-glycosyltransferase, and particularly to a novel UDP-glycosyltransferase derived from <i>ginseng </i>and use thereof, a method for preparing glycosylated ginsenoside by converting protopanaxadiol (PPD)-type ginsenoside using the UDP-glycosyltransferase, a composition for converting the PPD-type ginsenoside into glycosylated ginsenoside, comprising the UDP-glycosyltransferase, a transformant or a culture thereof as active ingredients, a method for enhancing the expression of the UDP-glycosyltransferase using MeJA (methyl jasmonate), and a composition for enhancing the expression of the UDP-glycosyltransferase, which comprises MeJA as an active ingredient.</p>
+  </abstract>
+  <legal-data date-changed="20151030">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151011</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252337A1</docdb-publication-number>
+      <docdb-application-id>444310733</docdb-application-id>
+      <new-owner>INTELLIGENT SYNTHETIC BIOLOGY CENTER, KOREA, REPUB</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:LEE, YEON;REEL/FRAME:036769/0701</free-text-description>
+      <effective-date>
+        <date>20150324</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151011</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252337A1</docdb-publication-number>
+      <docdb-application-id>444310733</docdb-application-id>
+      <new-owner>KOREA ADVANCED INSTITUTE OF SCIENCE AND TECHNOLOGY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KIM, SUN CHANG;CHOI, GIL TSU;JUNG, SUK CHAE;AND OTHERS;REEL/FRAME:036769/0704</free-text-description>
+      <effective-date>
+        <date>20150324</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a novel uridine diphosphate (UDP)-glycosyltransferase, and particularly to a novel UDP-glycosyltransferase derived from <i>ginseng </i>and use thereof, a method for preparing glycosylated ginsenoside by converting protopanaxadiol (PPD)-type ginsenoside using the UDP-glycosyltransferase, a composition for converting the PPD-type ginsenoside into glycosylated ginsenoside, comprising the UDP-glycosyltransferase, a transformant or a culture thereof as active ingredients, a method for enhancing the expression of the UDP-glycosyltransferase using MeJA (methyl jasmonate), and a composition for enhancing the expression of the UDP-glycosyltransferase, which comprises MeJA as an active ingredient.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">
+        <i>Ginseng </i>(<i>Panax ginseng </i>C. A meyer) is one of the most popular medicinal herbs widely used for improving health. The root of <i>ginseng </i>was consumed as a herbal tea in a traditional medicine, and currently it has been included in a variety of products including candy, instant tea, and tonic drink. Ginsenosides which are glycosylated triterpenes contained in <i>ginseng </i>have positive effects on health. In particular, ginsenosides have been known to have various pharmacological effects such as immune system enhancement and revitalization of body functions. Also more than 40 different ginsenosides have been identified in the root of <i>ginseng</i>. However, since mass production of each of the ginsenosides is hard, it remains as a major obstacle for investigating efficacy of certain ginsenoside, for example, its therapeutic effects on specific diseases.</p>
+      <p id="p-00003-en" num="0003">Ginsenosides are glycosylated dammarene-type tetracyclic triterpenes, and can be classified into three different groups based on their aglycone structure: Protopanaxadiol (PPD)-type ginsenosides, Protopanaxatriol (PPT)-type ginsenosides, and Oleanolic acid-type ginsenosides. These three groups can be further classified based on the position and number of sugar moieties (aglycones) attached to the C-3, C-6, and C-20 positions of the rings by a glycosidic bond in the chemical structure. PPD and PPT also possess different hydroxylation patterns. PPD possesses —OH groups at the C-3, C-12, and C-20 positions, whereas PPT possesses —OH groups at the C-3, C-6, C-12, and C-20 positions. PPD and PPT can be glycosylated with glucose and/or other types of sugars to be converted into various ginsenosides. The representative PPD-type ginsenosides include ginsenoside Rh2, ginsenoside Rg3, Compound K (C-K), ginsenoside F2, and ginsenoside Rd. And the representative PPT-type ginsenosides include ginsenoside F1, Rg1, Re, Rh1, and Rg2.</p>
+      <p id="p-00004-en" num="0004">The biosynthetic pathway of ginsenosides is only partially identified. The ginsenoside biosynthesis is known to share the biosynthetic pathways with other triterpenes until oxidosqualene is synthesized by a series of condensation reactions of isopentenyl diphosphate and DMADP (dimethylallyl diphosphate) by the action of IPP isomerase (IPI), GPP synthase (GPS), FPP synthase (FPS), squalene synthase (SS) and squalene epoxidase (SE) (Ajikumar et al. Science, 330, 70-74. 2010; Ro et al. Nature, 440, 940-943. 2006; Sun et al. BMC genomics, 11, 262, 2010). Oxidosqualene is cyclized into dammarenediol-II by DS (dammarenediol-II synthase) which is a triterpene cyclase. Dammarenediol-II has hydroxyl groups at the C-3 and C-20 positions, and is converted into PPD by hydroxylation of the C-12 position by a p450 enzyme, PPDS (protopanaxadiol synthase). PPDS can be also converted into PPT by hydroxylation at the C-6 position by another p450 enzyme, PPTS (protopanaxatriol synthase). PPD can be converted into PPD-type ginsenoside by glycosylation at the C-3 and/or C-20 position(s), and PPT can be converted into PPT-type ginsenoside by glycosylation at the C-6 and/or C-20 position(s). UDP (Uridine diphosphate)-glycosyltransferase (UGT) is considered to be involved in synthetic pathways of various ginsenosides by formation of O-, β1,2-, or β1,6-glycosidic linkage. DS, PPDS and PPTS have been reported as the enzymes involved in ginsenoside biosynthesis, but it has not been identified whether UGT is involved in the biosynthesis of ginsenosides.</p>
+      <p id="p-00005-en" num="0005">UDP-glycosyltransferase is an enzyme that catalyzes the transfer of a sugar moiety from UDP-sugar to a wide range of metabolites such as hormones and secondary metabolites. Generally, UGT acts in the final step of biosynthetic pathway in order to increase solubility, stability, storage, bioactivity, or biological availability of metabolites. As recognized by a remarkable diversity of metabolites in plants, the genome of a plant possesses hundreds of different UGTs. For example, a plant model, <i>Arabidopsis thaliana </i>contains 107 UGTs that belong to 14 different groups (Group A to Group N) based on the amino acid sequence. Different UGTs show substrate specificity towards both sugar donor and sugar acceptor. For example, UGT78D2 transfers glucose from UDP-glucose to the C-3 position of flavonol (kaempferol, quercetin) and anthocyanin (cyanidin) in order to produce flavonol 3-O-glucosides and cyanidin 3-O-glucoside, respectively. It seems that such glycosylation is essential for in vivo stability and storage of the compound. On the other hand, UGT89C1 transfers rhanmnose from UDP-rhanmnose to the C-7 position of flavonol-3-O-glucosides in order to produce flavonol-3-O-glucoside-7-O-rhamnoside. Likewise, UGT89C1 does not utilize UDP-glucose and anthocyanin-3-O-glucoside as a substrate. And it has different specificity towards UDP-sugar and acceptor from that of UGT78D2. Therefore, there is a need to investigate the substrate specificity for different types of UGTs.</p>
+      <heading id="h-00003-en" level="1">DISCLOSURE</heading>
+      <heading id="h-00004-en" level="1">Technical Problem</heading>
+      <p id="p-00006-en" num="0006">The present inventors put a lot of effort into development of a novel UDP-glycosyltransferase with a substrate specificity and regioselectivity to be used for biosynthesis of a particular ginsenoside. As a result, the present inventors identified a novel glycosyltransferase called PgUGT74A1 from <i>ginseng</i>, and they found that PgUGT74A1 has an activity of converting PPD and C-K into ginsenoside Rh2 and ginsenoside F2, respectively by specifically acting on the PPD-type ginsenosides, PPD and C-K, to catalyze O-glycosylation at the C-3 position. Having this activity, PgUGT74A1 can be used for the production of certain glycosylated ginsenoside.</p>
+      <heading id="h-00005-en" level="1">Technical Solution</heading>
+      <p id="p-00007-en" num="0007">An object of the present invention is to provide a novel uridine diphosphate (UDP)-glycosyltransferase protein derived from <i>ginseng. </i></p>
+      <p id="p-00008-en" num="0008">Another object of the present invention is to provide a polynucleotide encoding the UDP-glycosyltransferase protein, an expression vector comprising the polynucleotide, and a transformant introduced with the expression vector.</p>
+      <p id="p-00009-en" num="0009">Still another object of the present invention is to provide a method for preparing the UDP-glycosyltransferase protein.</p>
+      <p id="p-00010-en" num="0010">Still another object of the present invention is to provide a method for preparing a glycosylated ginsenoside by converting a protopanaxadiol (PPD)-type ginsenoside using the UDP-glycosyltransferase protein, the transformant or a culture thereof.</p>
+      <p id="p-00011-en" num="0011">Still another object of the present invention is to provide a composition for converting a PPD-type ginsenoside into a glycosylated ginsenoside, comprising the UDP-glycosyltransferase protein, the transformant or the culture thereof as an active ingredient.</p>
+      <p id="p-00012-en" num="0012">Still another object of the present invention is to provide a method for enhancing expression of the UDP-glycosyltransferase using MeJA (methyl jasmonate).</p>
+      <p id="p-00013-en" num="0013">Still another object of the present invention is to provide a composition for enhancing expression of the UDP-glycosyltransferase, comprising MeJA as an active ingredient.</p>
+      <heading id="h-00006-en" level="1">Advantageous Effects</heading>
+      <p id="p-00014-en" num="0014">The novel UDP-glycosyltransferase of the present invention has a substrate specificity and regioselectivity, and thus it is able to transfer a sugar moiety specifically to the C-3 position of a PPD-type ginsenoside. Therefore it is useful for mass production of a particular ginsenoside such as ginsenoside Rh2, F2, Rg3 or Rd.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00007-en" level="1">DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 1</figref> shows chemical structures of PPD-type and PPT-type ginsenosides;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 2</figref> shows a schematic diagram for clustering between each of the UDP-glycosyltransferases, PgUGT74A1 and PgUGT94B1, with UGT74 and UGT94, respectively. Amino acid sequences of UGTs were aligned by using MEGA5 software, and the alignment is demonstrated as a neighbor-joining tree. All USTs except for PgUGTs (<i>ginseng, Panax ginseng</i>), SiUGT94B1 (<i>Sesamumindicum </i>L.), BpUGT94B1 (<i>Bellis perennis</i>), Cm1, 2RhaT (<i>Citrus maxima</i>) and CaUGT3 (<i>Catharanthus roseus</i>) are derived from <i>Arabidopsis thaliana; </i></p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 3A-B</figref> shows the results of thin-layer chromatography (TLC) demonstrating that the UDP-glycosyltransferase, PgUGT74A1 has an activity of converting PPD into ginsenoside Rh2 and converting Compound K into ginsenoside F2. <figref>FIG. 3</figref><i>a </i>shows the result of TLC analysis of PgUGT74A1 of the present invention and 10 different ginsenosides (right panel: treated with PgUGT74A1, left panel: untreatment), and each of the 10 different ginsenosides was reacted with PgUGT74A1 in the presence of UDP-glucose (UDP-Glc). As shown in <figref>FIG. 3</figref><i>a</i>, PgUGT74A1 converted only PPD and C-K among 10 ginsenosides into Rh2 and F2 respectively, (triangles). <figref>FIG. 3</figref><i>b </i>shows the result of High performance liquid chromatography (HLPC) of the products from the reaction of PPD (left) and C-K (right) with PgUGT74A1 of the present invention. Rh2 and F2 converted from PPD and C-K respectively are marked as triangles;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 4A-B</figref> shows the TLC and HPLC analysis results demonstrating that the UDP-glycosyltransferase, PgUGT94B1 has an activity of converting ginsenoside Rh2 and ginsenoside F2 into ginsenoside Rg3 and Rd, respectively. <figref>FIG. 4</figref><i>a </i>shows the result of TLC analysis of PgUGT94B1 of the present invention and 10 different ginsenosides (right panel: treated with PgUGT94B1, left panel: untreated). Each of the 10 different ginsenosides was reacted with PgUGT94B1 in the presence of UDP-glucose (UDP-Glc). As shown in <figref>FIG. 4</figref><i>a</i>, PgUGT94B1 converted only ginsenoside Rh2 and ginsenoside F2 among 10 ginsenosides into ginsenoside Rg3 and ginsenoside Rd respectively (triangles). <figref>FIG. 4</figref><i>b </i>is the result of HPLC analysis of products from the reaction of ginsenoside Rh2 (left) and ginsenoside F2 (right) with PgUGT94B1 of the present invention. Ginsenoside Rg3 and ginsenoside Rd converted from ginsenoside Rh2 and ginsenoside F2 respectively are marked as triangles;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 5</figref> shows HPLC analysis results demonstrating that if both of PgUGT74A1 and PgUGT94B1 are used, PPD and C-K were converted into ginsenoside Rg3 and Rd respectively. PPD (upper panel) or C-K (lower panel) was incubated with both of PgUGT74A1 and PgUGT94B1 in the presence of UDP-Glc. Then the reaction mixture was analyzed by HPLC. The result showed that PPD and C-K were converted into Rg3 and Rd respectively. Rg3 and Rd converted by the above two enzymes are marked as black triangles;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 6A-C</figref> shows the relative expression level of PgUGT74A1 and PgUGT94B1. <figref>FIG. 6</figref><i>a </i>shows the expression level of ginsenoside biosynthetic genes in the leaf and root of <i>ginseng</i>, and <figref>FIG. 6</figref><i>b </i>shows changes in the expression level of ginsenoside biosynthetic genes in the leaf after treated with MeJA (Methyl jasmonate). MeJA was sprayed on the leaf everyday for a total of 5 days, and on the 6th day after the start of the treatment, samples were collected for the expression analysis. <figref>FIG. 6</figref><i>c </i>shows the changes in the expression level of ginsenosides after treatment with MeJA. Error bars show a standard deviation (SD) of three biological replicates; and</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 7</figref> is the schematic diagram for the ginsenoside biosynthetic pathway of Rg3 and Rd, involving UDP-glycosyltransferase of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00008-en" level="1">BEST MODE</heading>
+      <p id="p-00022-en" num="0022">As one aspect, the present invention provides a novel uridine diphosphate (UDP)-glycosyltransferase (UGT) derived from <i>ginseng. </i></p>
+      <p id="p-00023-en" num="0023">As used herein, the term “uridine diphosphate (UDP)-glycosyltransferase” is an enzyme that catalyzes the transfer of a monosaccharide moiety from a glycosyl donor to a glycosyl acceptor molecule, and in particular, it refers to an enzyme that utilizes UDP-sugar as the glycosyl donor. In the present invention, the UDP-glycosyltransferase may be interchangeably used with UGT. It is thought that the UDP-glycosyltransferase catalyzes various glycosylations of protopanaxadiol (PPD) and protopanaxatriol (PPT) to generate a wide range of ginsenosides. However, even those enzymes with have the UDP-glycosyltransferase activity have different substrate specificity and regioselectivity depending on the type of the enzyme. Therefore, it needs to be determined whether the enzyme is a UDP-glycosyltransferase specifically acting on ginsenoside which is a <i>ginseng </i>saponin. There has been no report on UDP-glycosyltransferase derived from <i>ginseng</i>, which specifically acts at the C-3 position of the PPD-type ginsenoside and transfers a sugar moiety in order to produce ginsenoside Rh2 or F2 from PPD or Compound K (C-K). The UDP-glycosyltransferase was identified for the first time by the present inventors.</p>
+      <p id="p-00024-en" num="0024">For the purpose of the present invention, the UDP-glycosyltransferase may be an UDP-glycosyltransferase derived from <i>ginseng</i>, preferably a UDP-glycosyltransferase derived from <i>Panax ginseng</i>, and more preferably a UDP-glycosyltransferase represented by the amino acid sequence of SEQ ID NO. 1, but is not limited thereto. In one example of the present invention, the UDP-glycosyltransferase represented by the amino acid sequence of SEQ ID NO. 1 is designated as PgUGT74A1.</p>
+      <p id="p-00025-en" num="0025">The UDP-glycosyltransferase may refer to the proteins possessing the amino acid sequence of SEQ ID NO.1, but also an amino acid sequence having a sequence homology of 70% or higher, preferably 80% or higher, more preferably 90% or higher, even more preferably 95% or higher, even much more preferably 98% or higher, and most preferably 99% or higher to the amino acid sequence of SEQ ID NO. 1. However, any protein can be used without limitation, as long as it has the UDP-glycosyltransferase activity being capable of substantially transferring a sugar to <i>ginseng </i>ginsenoside. In addition, if the protein with the above sequence homology has substantially the same or corresponding bioactivity as UDP-glycosyltransferase even the variants of the protein having a portion of amino acid sequence deleted, modified, substituted, or added may be included in the scope of the present invention.</p>
+      <p id="p-00026-en" num="0026">As used herein, the term “homology” is intended to indicate the degree of similarity to the amino acid sequence of a wild type protein or a nucleotide sequence that encodes the same, and includes sequences having homology of the above percentage or higher with the amino acid sequence or base sequence of the present invention. Homology comparisons can be conducted by sight or by readily available sequence comparison programs.</p>
+      <p id="p-00027-en" num="0027">Preferably, the UDP-glycosyltransferase of the present invention refers to a protein having an activity of converting a PPD-type ginsenoside into a glycosylated ginsenoside, but is not limited thereto.</p>
+      <p id="p-00028-en" num="0028">As used herein, the term “PPD-type ginsenoside” is a dammarane-type saponin, and it means a ginsenoside having two hydroxyl groups (—OH) at its non-sugar component (aglycone), and examples thereof include PPD (protopanaxadiol), Rb1, Rb2, Rb3, Rc, Rd, Ra3, Rg3, Rh2, Rs1, C—O, C—Y, C-Mc1, C-Mc, F2, C-K, Gypenoside XVII, Gypenoside LXXV, and Rs2. For the purpose of the present invention, the PPD-type ginsenoside may be any ginsenoside without limitation, as long as it is a ginsenoside that can be glycosylated by the UDP-glycosyltransferase of the present invention. It may be preferably a ginsenoside to be O-glycosylated, more preferably a ginsenoside to be glycosylated at its C-3 position, and much more preferably PPD or C-K, but is not limited thereto. In one example of the present invention, PPD and Compound K were used as the PPD-type ginsenoside that can be glycosylated by the UDP-glycosyltransferase of the present invention, PgUGT74A1. A schematic diagram for the structure of the ginsenoside is shown in <figref>FIG. 1</figref>.</p>
+      <p id="p-00029-en" num="0029">As used herein, the term “glycosylated ginsenoside” means a ginsenoside having a monosaccharide or larger saccharide molecule attached to the hydroxyl group of the non-sugar component (aglycone) that constitutes the ginsenoside, and exemplified by ginsenoside Rh2, Rg3, F2 or Rd, but is not limited thereto. For the purpose of the present invention, the glycosylated ginsenoside includes any glycosylated ginsenoside without limitation, as long as it is a ginsenoside glycosylated by the UDP-glycosyltransferase of the present invention. The glycosylated ginsenoside preferably means a ginsenoside having an O-glycosidic bond, and more preferably a ginsenoside having a sugar of monosaccharide or higher saccharide at its C-3 position, but is not limited thereto. In one example of the present invention, PPD and Compound K (C-K) were converted into glycosylated ginsenosides, ginsenoside Rh2 and F2 by the activity of PgUGT74A1, respectively.</p>
+      <p id="p-00030-en" num="0030">In particular, the UDP-glycosyltransferase of SEQ ID NO. 1 in the present invention transfers a glucose from UDP-glucose to the hydroxyl group (—OH) at the C-3 position of PPD-type ginsenoside forming an O-glycosidic bond, thereby producing glycosylated ginsenoside.</p>
+      <p id="p-00031-en" num="0031">Specifically, the UDP-glycosyltransferase transfers the glucose moiety from UDP-glucose to the hydroxyl group at the C-3 position of PPD to form the O-glycosidic bond, thereby converting PPD into ginsenoside Rh2. The UDP-glycosyltransferase transfers the glucose moiety from UDP-glucose to the hydroxyl group at the C-3 position of C-K forming the O-glycosidic bond, thereby converting C-K into ginsenoside F2. On the other hand, the UDP-glycosyltransferase does not act on the hydroxyl group at the C-12 or C-20 position of PPD-type ginsenoside, but specifically transfers a sugar to the hydroxyl group at the C-3 position. In addition, even though PPT-type ginsenoside has the hydroxyl group at the C-3 position, the UDP-glycosyltransferase of the present invention does not act on the PPT-type ginsenoside. Therefore, since the UDP-glycosyltransferase of the present invention has a substrate specificity and regioselectivity for PPD-type ginsenosides, particularly the hydroxyl group at the C-3 position of PPD and C-K, it can be used for conversion of a particular ginsenoside, preferably conversion of PPD and C-K into Rh2 and F2 respectively.</p>
+      <p id="p-00032-en" num="0032">In one example of the present invention, the novel UDP-glycosyltransferase, PgUGT74A1 was newly isolated from <i>ginseng </i>(Example 1), and the result of the sequence analysis showed that the glycosyltransferase was clustered in the UGT74 family, but was not clustered in the <i>Arabidopsis thaliana </i>UGT74 subfamily (Experimental Example 1 and <figref>FIG. 2</figref>). In addition, the glycosyltransferase regioselectively acts on PPD-type ginsenosides and transfers one glucose to the hydroxyl group at the C-3 position, thereby producing glycosylated ginsenosides (Experimental Examples 2 and 4; and <figref>FIGS. 3 and 5</figref>). The enzymatic activity of PgUGT74A1 protein is shown in <figref>FIG. 7</figref>.</p>
+      <p id="p-00033-en" num="0033">As another aspect, the present invention provides a polynucleotide encoding the UDP-glycosyltransferase, an expression vector comprising the polynucleotide, and a transformant comprising the expression vector therein.</p>
+      <p id="p-00034-en" num="0034">The UDP-glycosyltransferase is the same as described above.</p>
+      <p id="p-00035-en" num="0035">The polynucleotide that encodes the UDP-glycosyltransferase may be preferably a polynucleotide represented by a nucleotide sequence of SEQ ID NO. 2, and also includes any nucleotide sequence having a sequence homology of 70% or higher, preferably 80% or higher, more preferably 90% or higher, much more preferably 95% or higher, and most preferably 98% or higher to the nucleotide sequence of SEQ ID NO. 2 without limitation, as long as it is able to substantially encode a protein having the UDP-glycosyltransferase activity.</p>
+      <p id="p-00036-en" num="0036">The expression vector comprising the polynucleotide of the present invention is an expression vector capable of expressing the target protein in a suitable host cell, and refers to a DNA construct comprising essential regulatory elements which are operably linked to express a nucleic acid insert. The target proteins can be obtained by transformation or transfection of the prepared recombinant vector into the host cells.</p>
+      <p id="p-00037-en" num="0037">The expression vector comprising the polynucleotide provided in the present invention includes, but is not limited to, <i>E. coli</i>-derived plasmids (pYG601BR322, pBR325, pUC118 and pUC119), <i>Bacillus subtilis</i>-derived plasmids (pUB110 and pTP5), yeast-derived plasmids (YEp13, YEp24 and YCp50) and Ti-plasmids used in <i>Agrobacterium</i>-mediated transformation. The specific example of phage DNA includes λ-phage (Charon4A, Charon21A, EMBL3, EMBL4, λgt10, λgt11 and λZAP). Further, an animal virus such as retrovirus, adenovirus or vaccinia virus, an insect virus such as baculovirus, a double-stranded plant virus (e.g., CaMV), a single-stranded virus, or a viral vector originated from Geminivirus may be used.</p>
+      <p id="p-00038-en" num="0038">Moreover, as the vector of the present invention, a transcriptional activator, such as B42-linked fusion plasmid (e.g., pJG4-5), may be used. In order to facilitate purification of the target protein obtained in the present invention, the plasmid vector may further include other sequences, if necessary. The fusion plasmid may include a tag such as GST, GFP, His-tag, Myc-tag or the like, but the fusion plasmid of the present invention is not limited to these examples. In one example of the present invention, pGEX4T-1 which is a GST gene-fused vector was used for construction of the expression vector that comprises the UDP-glycosyltransferase-encoding polynucleotide.</p>
+      <p id="p-00039-en" num="0039">In addition, the fusion protein expressed by the vector comprising the fusion sequence may be purified by affinity chromatography. For example, if a glutathione-S-transferase is to be fused with other sequence, glutathione which is a substrate of the enzyme can be used. If hexa-histidine is used as a tag to the target protein, the target protein can be easily purified by using a Ni-NTA His-bind resin column (Novagen, USA).</p>
+      <p id="p-00040-en" num="0040">For insertion of the polynucleotide of the present invention into the vector, the purified DNA may be cleaved using appropriate restriction enzymes, and inserted into the restriction sites or cloning site of a suitable vector DNA.</p>
+      <p id="p-00041-en" num="0041">The polynucleotide encoding the UDP-glycosyltransferase of the present invention may be operably linked to a vector. The vector of the present invention may further include cis elements such as an enhancer, a splicing signal, a poly A addition signal, a selection marker, a ribosome binding sequence (SD sequence), in addition to a promoter and the nucleic acid of the present invention. As examples of the selection marker, chloramphenicol resistance gene, ampicillin resistance gene, dihydrofolate reductase, neomycin resistance gene or the like can be used, but the type of additional elements to be operably linked is not limited to these examples.</p>
+      <p id="p-00042-en" num="0042">As used herein, the term “transformation” means an introduction of DNA into a host cell such that the DNA can be replicated as an extra-chromosomal element or by chromosomal integration. That is, transformation refers to synthetic alteration of genes by introducing a foreign DNA into the cell.</p>
+      <p id="p-00043-en" num="0043">The transformation of the present invention may be performed by any transformation method, and can be easily performed following the common method known in the art. In general, examples of the transformation methods include a CaCl2 precipitation, a Hanahan method that is an improved CaCl2 method by using DMSO (dimethyl sulfoxide) as a reducing material, electroporation, calcium phosphate precipitation, protoplast fusion, agitation using silicon carbide fiber, <i>Agrobacterium</i>-mediated transformation, PEG-mediated transformation, dextran sulfate-, lipofectamine-, and desiccation/inhibition-mediated transformation. The method for transformation of the vector comprising the polynucleotide that encodes UDP-glycosyltransferase of the present invention is not limited to these examples, and the transformation or transfection methods typically used in the art may be used without limitation.</p>
+      <p id="p-00044-en" num="0044">In the present invention, the type of host cell is not particularly limited, as long as it is able to express the polynucleotide of the present invention. The specific examples of the host cell to be used in the present invention include bacteria belonging to the genus <i>Escherichia </i>such as <i>E. coli</i>; bacteria belonging to the genus <i>Bacillus </i>such as <i>Bacillus subtilis</i>; bacteria belonging to the genus <i>Pseudomonas </i>such as <i>Pseudomonas putida</i>; yeasts such as <i>Saccharomyces cerevisiae </i>and <i>Schizosaccharomyces pombe</i>; animal cells, plant cells and insect cells. The specific examples of the <i>E. coli </i>strain to be used in the present invention include CL41 (DE3), BL21, and HB101, and the specific examples of the <i>Bacillus subtilis </i>strain include WB700 and LKS87. The type of the plant transformant introduced with the expression vector comprising the polynucleotide of the present invention is not particularly limited, as long as it is able to express the glycosyltransferase of the present invention. Examples thereof include tobacco, <i>Arabidopsis thaliana</i>, potato, <i>ginseng</i>, sesame, citron, <i>Bellis </i>or the like, but are not limited thereto.</p>
+      <p id="p-00045-en" num="0045">Any promoter can be used as a promoter of the present invention, as long as it is able to drive expression of the nucleic acid of the present invention in the host cell. For example, <i>E. coli</i>- or phage-derived promoters such as trp promoter, lac promoter, PL promoter, and PR promoter; <i>E. coli </i>infection phage-derived promoters such as T7 promoter, CaMV35S, MAS or histone promoter may be used. Synthetically modified promoters such as tac promoter may be also used.</p>
+      <p id="p-00046-en" num="0046">The transformant that is introduced with the expression vector comprising the polynucleotide which encodes the UDP-glycosyltransferase protein of the present invention by the above method has a bioactivity of transferring a glucose by formation of O-glycosidic bond at the C-3 position of PPD-type ginsenoside. Preferably, the transformant means a transformant having capable capability of converting ginsenoside PPD into ginsenoside Rh2 or converting C-K into ginsenoside F2, but is not limited thereto.</p>
+      <p id="p-00047-en" num="0047">As another aspect, the present invention provides a method for preparing the UDP-glycosyltransferase protein.</p>
+      <p id="p-00048-en" num="0048">The UDP-glycosyltransferase is the same as described above.</p>
+      <p id="p-00049-en" num="0049">Preferably, the preparation method comprises (a) culturing the transformant that is introduced with the vector comprising the polynucleotide that encodes the UDP-glycosyltransferase; (b) producing UDP-glycosyltransferase from the cultured transformant; and (c) recovering the produced UDP-glycosyltransferase.</p>
+      <p id="p-00050-en" num="0050">Culturing of the transformant can be carried out by following a common method used in the art. A carbon source included in the growth medium for transformant may be selected by those skilled in the art according to the type of the transformant. And a suitable condition for culturing may be adopted in order to adjust the culturing time and amount.</p>
+      <p id="p-00051-en" num="0051">As another aspect, the present invention provides a method for preparing a glycosylated ginsenoside by converting a PPD (protopanaxadiol)-type ginsenoside using the UDP-glycosyltransferase, the transformant or the culture thereof.</p>
+      <p id="p-00052-en" num="0052">The UDP-glycosyltransferase, transformant, PPD-type ginsenoside, and glycosylated ginsenoside are the same as described above.</p>
+      <p id="p-00053-en" num="0053">To be more specific, the method comprises the step of reacting the PPD-type ginsenoside with an UDP-glycosyltransferase protein represented by the amino acid sequence of SEQ ID NO. 1, a transformant introduced with an expression vector comprising a polynucleotide that encodes the protein, or a culture of the transformant in the presence of UDP-sugar.</p>
+      <p id="p-00054-en" num="0054">As used herein the term “culture of the transformant” means a product obtained by culturing the transformant according to the known method of culturing microorganisms. The culture includes the UDP-glycosyltransferase of SEQ ID NO. 1 of the present invention, and thus it is capable of converting PPD-type ginsenosides into glycosylated ginsenosides, for example, conversion of ginsenoside PPD into ginsenoside Rh2, or conversion of Compound K into ginsenoside F2.</p>
+      <p id="p-00055-en" num="0055">As the PPD-type ginsenoside used as a starting material in the present invention, isolated and purified ginsenoside, or ginsenoside included in a powder or extract of <i>ginseng </i>may be used. That is, a powder or extract of <i>ginseng </i>comprising ginsenoside may be directly used as a starting material to perform the method of the present invention. The <i>ginseng </i>used in the present invention includes the known various types of ginsengs, such as <i>Panax ginseng, P. quiquefolius, P. notoginseng, P. japonicus, P. trifolium, P. pseudoginseng </i>and <i>P. vietnamensis</i>, but is not limited thereto.</p>
+      <p id="p-00056-en" num="0056">Preferably, the conversion may occur through bioconversion of the PPD-type gisenoside into a glycosylated ginsenoside by UDP-glycosyltransferase of the present invention, transformant introduced with the expression vector comprising the polynucleotide that encodes the UDP-glycosyltransferase, or culture of the transformant, and it may be achieved by transferring sugar to hydroxyl group (—OH) at the C-3 position of ginsenosides. The protein represented by the amino acid sequence of SEQ ID NO. 1 of the present invention is able to convert a PPD-type ginsenoside having hydroxyl group at C-3 position, preferably PPD or C-K, into a glycosylated ginsenoside. The bioconversion by the protein represented by the amino acid sequence of SEQ ID NO. 1 of the present invention includes conversion of PPD into Rh2, and conversion of C-K into F2. Thus, the method of the present invention can be used in the fields that require glycosylated ginsenosides, in particular, ginsenoside Rh2 or F2.</p>
+      <p id="p-00057-en" num="0057">The method for preparing glycosylated ginsenoside may further comprise the step of reacting the PPD-type ginsenoside with the UDP-glycosyltransferase protein which is represented by the amino acid sequence of SEQ ID NO. 3, transformant introduced with the vector comprising the polynucleotide that encodes the protein, or culture of the transformant in the step of reacting PPD-type ginsenoside with the UDP-glycosyltransferase of SEQ ID NO. 1, transformant introduced with the vector comprising the polynucleotide that encodes the UDP-glycosyltransferase of SEQ ID NO. 1, or culture of the transformant.</p>
+      <p id="p-00058-en" num="0058">As used herein, the term “UDP-glycosyltransferase represented by the amino acid sequence of SEQ ID NO. 3” means an enzyme that is capable of transferring a sugar moiety from UDP-sugar to ginsenoside by formation of β1,2 glycosidic linkage. The UDP-glycosyltransferase represented by the amino acid sequence of SEQ ID NO. 3 has capable capability of transferring a sugar moiety from the sugar donor such as UDP-sugar to the sugar acceptor like 3-O-glucosylated ginsenoside so as to cause formation of β1,2 glycosidic bond. Thus, it converts 3-O-glucosylated ginsenoside into glycosylated ginsenoside. The UDP-glycosyltransferase represented by the amino acid sequence of SEQ ID NO. 3 is a glycosyltransferase derived from <i>ginseng</i>, which was isolated for the first time by the present inventors, and can be interchangeably used with PgUGT94B1 in the present invention.</p>
+      <p id="p-00059-en" num="0059">The sugar acceptor of the UDP-glycosyltransferase represented by the amino acid sequence of SEQ ID NO. 3 is 3-O-glucosylated ginsenoside, and preferably ginsenoside Rh2 or F2, but is not limited thereto. Therefore, since the glycosyltransferase has an activity of transferring a sugar moiety by formation of β1,2 glycosidic linkage with the O-glucoside at the C-3 position of ginsenoside Rh2, it is able to convert ginsenoside Rh2 into ginsenoside Rg3. Likewise, since the glycosyltransferase has an activity of transferring a sugar moiety by formation of β1,2 glycosidic linkage with the O-glucoside at the C-3 position of ginsenoside F2, it is able to convert ginsenoside F2 into Rd.</p>
+      <p id="p-00060-en" num="0060">Thus, if both of the UDP-glycosyltransferase that specifically acts on the hydroxyl group at the C-3 position of PPD-type ginsenoside and UDP-glycosyltransferase represented by the amino acid sequence of SEQ ID NO.3 are used, PPD can be converted into ginsenoside Rh2, which in turn can be converted into Rg3. Through this process, PPD can be converted into ginsenoside Rg3. If C-K is used as a starting material, C-K is converted into ginsenoside F2 by the glycosyltransferase of the present invention, which in turn is converted into ginsenoside Rd. Through this process, C-K is converted into ginsenoside Rd. In one example of the present invention, both PgUGT74A1 and PgUGT94B1 were used to convert PPD into ginsenoside Rg3 and convert C-K into ginsenoside Rd. Thus, it was confirmed that both of the above enzymes can be used to produce ginsenoside Rg3 and Rd with high yield (<figref>FIG. 5</figref>).</p>
+      <p id="p-00061-en" num="0061">As another aspect, the present invention provides a composition for converting a PPD (protopanaxadiol)-type ginsenoside into a glycosylated ginsenoside, which comprises the UDP-glycosyltransferase protein represented by the amino acid sequence of SEQ ID NO. 1, transformant or culture thereof as an active ingredient.</p>
+      <p id="p-00062-en" num="0062">The UDP-glycosyltransferase, the transformant, and culture thereof; and the conversion of PPD-type ginsenoside into glycosylated ginsenoside are the same as described above.</p>
+      <p id="p-00063-en" num="0063">The composition may further comprise the UDP-glycosyltransferase which is represented by the amino acid sequence of SEQ ID NO. 3, the transformant transfected with the vector comprising the polynucleotide that encodes the UDP-glycosyltransferase of SEQ ID NO. 3, or the culture of the transformant.</p>
+      <p id="p-00064-en" num="0064">The UDP-glycosyltransferase represented by the amino acid sequence of SEQ ID NO. 1 of the present invention transfers one sugar moiety selectively to the hydroxyl group at the C-3 position of PPD-type ginsenoside, and thus it can be used for the production of ginsenoside glycosylated at the C-3 position such as ginsenoside Rh2 or F2.</p>
+      <p id="p-00065-en" num="0065">As another aspect, the present invention provides a method for enhancing expression of the UDP-glycosyltransferase in <i>ginseng</i>, comprising treating <i>ginseng </i>with a compound called methyl jasmonate (MeJA).</p>
+      <p id="p-00066-en" num="0066">The UDP-glycosyltransferase is the same as described above.</p>
+      <p id="p-00067-en" num="0067">As used herein, the term “MeJA (methyl jasmonate)” is a volatile organic compound involved in a plant defense and various growth pathways such as root growth. MeJA can be interchangeably used with Methyl (1R,2R)-3-Oxo-2-(2Z)-2-pentenyl-cyclopentaneacetate, and has the following Chemical structure.</p>
+      <p id="p-00068-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="37.08mm" wi="64.60mm" alt="embedded image" img-content="chem" file="US20150252337A1_00008.PNG" img-format="png" original="US20150252337A1-20150910-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00069-en" num="0068">For the purpose of the present invention, MeJA refers to a compound capable of enhancing expression of PgUGT74A1. When MeJA is sprayed onto the leaves of <i>ginseng</i>, PgUGT74A1 expression is enhanced. Therefore, since expression of PgUGT74A1 of the present invention is increased in <i>ginseng </i>by using MeJA, MeJA is useful for the production of ginsenosides. In one example of the present invention, it was found that PgUGT74A1 expression can be remarkably increased by the treatment with MeJA (<figref>FIG. 6B</figref>).</p>
+      <p id="p-00070-en" num="0069">As another aspect, the present invention provides a composition for enhancing expression of the UDP-glycosyltransferase, which comprises MeJA as an active ingredient.</p>
+      <p id="p-00071-en" num="0070">MeJA and UDP-glycosyltransferase are the same as describe above.</p>
+      <p id="p-00072-en" num="0071">In addition, MeJA is able to increase expression of the PgUGT74A1 of the present invention, and thus the composition comprising MeJA as an active ingredient of the present invention can be used for enhancing the PgUGT74A1 expression, and preferably applied to <i>ginseng </i>so as to increase the PgUGT74A1 expression in <i>ginseng. </i></p>
+      <heading id="h-00009-en" level="1">Mode for Invention</heading>
+      <p id="p-00073-en" num="0072">The present invention is described in more details through providing Examples as below. However these Examples are merely meant to illustrate, but in no way to limit, the claimed invention.</p>
+      <heading id="h-00010-en" level="1">Example 1</heading>
+      <heading id="h-00011-en" level="1">Cloning and Purification of <i>Ginseng </i>UDP-Glycosyltransferase (PgUGT)</heading>
+      <p id="p-00074-en" num="0073">Two types of UGT genes identified from the <i>ginseng </i>EST library were cloned into a pGEX4T-1 vector using the primer sets listed in the following Table 1 (SEQ ID NOs. 5 and 6, SEQ ID NOs. 7 and 8), and designated as PgUGT74A1 and PgUGT94B1, respectively.</p>
+      <p id="p-00075-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1" tabstyle="monospace">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="182pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>SEQ</entry>
+                </row>
+                <row>
+                  <entry>Primer</entry>
+                  <entry>Sequence (5′-&gt;3′)</entry>
+                  <entry>ID NO</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>PgUGT74A1-BamHI</entry>
+                  <entry>AGGCATGGATCCCTGAGCAAAACTCACATTATGTTCATC</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>PgUGT74A1-EcoRI</entry>
+                  <entry>AGGCATGAATTCTCAGGAGGACACAAGCTTTGAAATGAACTC</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>PgUGT94B1-BamHI</entry>
+                  <entry>AGGCATGGATCCGATAACCAAAAAGGTAGAATCAGTATA</entry>
+                  <entry>7</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>PgUGT94B1-EcoRI</entry>
+                  <entry>AGGCATGAATTCCTATTGTTCATCTTTCTTCTTCTTACAAAT</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00076-en" num="0074">The <i>E. coli </i>cells (<i>E. coli </i>BL21-CodonPlus (DE3)-RIL) transfected with the recombinant proteins, PgUGT74A1 and PgUGT94B1, were cultured in a LB medium supplemented with 50 μg/ml ampicillin and 34 μg/ml chloramphenicol. Then the proteins were purified from the cell culture.</p>
+      <p id="p-00077-en" num="0075">The expression of the target gene was induced by using 0.1 mM IPTG. Then the cell pellet was isolated by centrifuging the cell culture at 2,500 g at 4° C. for 15 minutes. The collected cell pellet was resuspended in 10 mM PBS buffer (pH 7.0), and the cells were disrupted by ultrasonication (Vibra-cell, Sonics&amp;Matreials, CT). Non-disrupted cells and cell debris were removed by centrifugation of the sample at 10,000 g at 4° C. for 15 minutes, and the resulting supernatant was purified further by being passed through a syringe filter with a pore size of 0.45 μm. The recombinant proteins were purified from a cell-free extract by glutathione-sepharose affinity chromatography (GE Healthcare).</p>
+      <heading id="h-00012-en" level="1">Example 2</heading>
+      <heading id="h-00013-en" level="1">In Vitro Enzyme Assay</heading>
+      <p id="p-00078-en" num="0076">A glycosyltransferase assay was performed in a reaction buffer (10 mM PBS buffer, pH 7) containing the purified PgUGT74A1 or PgUGT94B1 (30 μg), a ginsenoside compound (5 mM) and UDP-glucose (50 mM). For this assay, 10 different types of ginsenosides including PPD (Protopanaxadiol), PPT (Protopanaxatriol), Compound K (C-K), ginsenoside Rg3, Rh2, F2, Rd, Rg2, Rh1 and F1 were used, and the structures of the ginsenosides are shown in <figref>FIG. 1</figref>.</p>
+      <p id="p-00079-en" num="0077">The reaction mixture was incubated at 35° C. for 12 hours, and then the products were analyzed by thin-layer chromatography (TLC) or high performance liquid chromatography (HPLC).</p>
+      <p id="p-00080-en" num="0078">TLC analysis was performed using a mobile phase (acetone:methanol:DDW=65:35:10 vol/vol) and a 60F<sub>254 </sub>silica gel plate (Merck, Germany). The resolved product on the TLC plate was detected by spraying the plate with 10% (vol/vol) sulfuric acid (H<sub>2</sub>SO<sub>4</sub>) and heating it at 110° C. for 5 minutes.</p>
+      <p id="p-00081-en" num="0079">HPLC analysis was performed using ODS (2) C18 column (Phenomenex, USA). Water and acetonitrile gradient application time; and a component ratio are as follows: at a flow rate of 1 ml per minute for 0 minute, 68% water and 32% acetonitrile; 8 minutes, 35% water and 65% acetonitrile; 12 minutes, 0% water and 100% acetonitrile; 20 minutes, 0% water and 100% acetonitrile; 20.1 minutes, 68% water and 32% acetonitrile; and 28 minutes, 68% water and 32% acetonitrile.</p>
+      <p id="p-00082-en" num="0080">Ginsenosides were detected by using a UV-detector (Younglin, Korea) at a wavelength of 203 nm.</p>
+      <heading id="h-00014-en" level="1">Example 3</heading>
+      <heading id="h-00015-en" level="1">RNA Isolation and Real-Time PCR Analysis</heading>
+      <p id="p-00083-en" num="0081">Total RNA was isolated from the leaf or root of 15-month-old <i>ginseng </i>using a spectrum plant total RNA kit (Sigma-Aldrich). 200 μM methyl jasmonate (MeJA) was sprayed onto the leaves of <i>ginseng </i>everyday for a total of 5 days, and samples were collected on the 6th day. The 1 μg of total RNA was used for cDNA synthesis.</p>
+      <p id="p-00084-en" num="0082">Expression levels of different genes were examined by a quantitative RT-PCR using the primer sets listed in the following Table 2, and the results were normalized to the expression level of tubulin.</p>
+      <p id="p-00085-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Gene</entry>
+                  <entry>Sequence (5′-&gt;3′)</entry>
+                  <entry>SEQ ID NO.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>PgDS</entry>
+                  <entry>5′-AAATGAAGAAGGTGGTTGGG-3′</entry>
+                  <entry>9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′-CTCTATGCAGAGGTGTCGGA-3′</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>PgPPDS</entry>
+                  <entry>5′-GCCAGAGGATCCAATCAACT-3′</entry>
+                  <entry>11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′-TCTCCATCCTTCGGGAATAA-3′</entry>
+                  <entry>12</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>PgPPTS</entry>
+                  <entry>5′-GATGTCCTGGAATGCAGCTA-3′</entry>
+                  <entry>13</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′-AGTGCTTGACTCGTGGTGTC-3′</entry>
+                  <entry>14</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>PgUGT74A1</entry>
+                  <entry>5′-TATCGAACCCGAACGTACAA-3′</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′-GTCGAGTTCCAACCACAATG-3′</entry>
+                  <entry>16</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>PgUGT94B1</entry>
+                  <entry>5′-GACAGAGGATTGGTTGTGGA-3′</entry>
+                  <entry>17</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′-TCAAAGGCTGATCAAGATGC-3′</entry>
+                  <entry>18</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>PgTubulin</entry>
+                  <entry>5′-GAAGGCTTTCTTGCATTGGT-3′</entry>
+                  <entry>19</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′-CCCAGATCGTCTTCTTCTCC-3′</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00016-en" level="1">Experimental Example 1</heading>
+      <heading id="h-00017-en" level="1">Sequence Analysis of UDP-Glycosyltransferases PgUGT74A1 and PgUGT94B1</heading>
+      <p id="p-00086-en" num="0083">In order to investigate the role of UDP-glycosyltransferase (UGT) involved in biosynthesis of ginsenosides, EST database analysis was first performed to clone the UGT genes from <i>Panax ginseng </i>by the method described in Example 1. Among them, two types of UGTs named as PgUGT74A1 and PgUGT94B1 were investigated to determine their roles.</p>
+      <p id="p-00087-en" num="0084">The results of sequence analysis showed that they could not be specified by a sequence homology with UGTs derived from other plants including UGT from <i>Arabidopsis thaliana </i>(<i>A. thaliana</i>) (<figref>FIG. 2</figref>). To be more specific, PgUGT74A1 formed cluster with the UGT74 family of <i>A. thaliana</i>. The UGT74 family of <i>A. thaliana </i>consists of 7 types of UGTs which can be classified into 5 subfamilies (UGT74B, C, D, E1 and F). Although PgUGT74A1 formed cluster with the UGT74 family of <i>A. thaliana</i>, it could not belong to any of the 5 subfamilies, thereby indicating that PgUGT74A1 of the present invention falls into a new UGT74 subfamily distinct from other subfamilies of <i>A. thaliana</i>. Among the UGT74 families of <i>A. thaliana</i>, UGT74B1 glycosylates phenylacetothiohydroximate, which is a precursor of glucosinolate, by forming a glycosyl thioester linkage, while UGT74E2 glycosylates indole butylate by forming a glycosyl ester linkage. Likewise, UGT74F1 and UGT4F2 glycosylate salicyclate and anthranilate respectively by forming the glycosyl ester linkage as well. On the other hand, the UGT74 family members can also form an O-glycosidic linkage other than the glycosyl ester linkage. UGT74F1 is known to glycosylate salicyclate by forming a 2-O-glycosidic linkage. In addition, UGT74F1 and UGT74F2 glycosylate both salicyclate and anthranilate by forming the O-glycosidic linkage.</p>
+      <p id="p-00088-en" num="0085">Therefore, even those UGTs that belong to the UGT74 family of <i>A. thaliana </i>need to be investigated to identify the type of their substrates and the linkage they form for glycosylation.</p>
+      <p id="p-00089-en" num="0086">Furthermore, the analysis results demonstrated that PgUGT94B1 did not form cluster with the UGT94 family of <i>A. thaliana</i>, but instead with the UGT94 subfamilies of BpUGT94B1 (<i>Bellis perennis</i>), SiUGT94D1 (<i>Sesamumindicum </i>L.), CaUGT3 (<i>Catharanthus roseus</i>) and Cm1,2RhaT (<i>Citrus maxima</i>). Among them, BpUGT94B1 forms a β1,6 linkage to add a glucuronosyl moiety to the 3-O-glucoside of cyanidin, whereas SiUGT94D1forms the β1,6 linkage to add glucose to the 2-O-glucoside of sesaminol. CaUGT3 forms the β1,6 linkage to transfer a glucose molecule to quercetin-3-O-glucoside, while Cm1,2RhaT forms the β1,6 linkage to add rhanmnose to flavone 7-O-glucoside.</p>
+      <p id="p-00090-en" num="0087">Overall, the results demonstrated that all UGT94 family members which belong to the PgUGT94B1 catalyze the glycosylation that adds the second sugar molecule to the O-glycosylated receptor regardless of the types of sugar donor and receptor.</p>
+      <p id="p-00091-en" num="0088">These results indicate that PgUGT74A1 can form the O-glycosidic linkage or glycosyl ester linkage to catalyze glycosylation of ginsenosides, whereas PgUGT94B1 forms the β-glycosidic linkage to add the second sugar to the glycosylated ginsenoside, thereby catalyzing glycosylation. As indicated by the structures of ginsenosides of <figref>FIG. 1</figref>, PPD-type ginsenosides can be glycosylated at its C-3 or C-20 position, or at both positions via the O-linkage, whereas PPT-type ginsenosides can be glycosylated at its C-6 or C-20 position, or at the both positions via the O-linkage. In addition, ginsenosides having one or more sugar groups comprising ginsenoside Rb1, Compound Y and Compound O, can be further glycosylated via the 13-1,6 linkage.</p>
+      <p id="p-00092-en" num="0089">Based on these results of sequence analysis, the actual activities of PgUGT74A1 and PgUGT94B1 were determined through Examples as below.</p>
+      <heading id="h-00018-en" level="1">Experimental Example 2</heading>
+      <heading id="h-00019-en" level="1">Conversion of PPD and C-K into Ginsenoside Rh2 and Ginsenoside F2 by PgUGT74A1</heading>
+      <p id="p-00093-en" num="0090">Based on the sequence analysis results in Experimental Example 1, substrate specificity and regioselectivity of PgUGT74A1 and PgUGT94B1 were determined as follows.</p>
+      <p id="p-00094-en" num="0091">First, the recombinant PgUGT of Example 1, PgUGT74A1, was incubated with 10 different types of ginsenosides (PPD, C-K, Rh2, F2, Rg3, Rd, Rg2, Rh1, F1 and PPT) in the presence of UDP-glucose, and the products converted by the recombinant PgUGT were analyzed by TLC. The results are shown in <figref>FIG. 3</figref><i>a. </i></p>
+      <p id="p-00095-en" num="0092">The results showed that PgUGT74A1 did not convert ginsenosides other than PPD and C-K, indicating that PgUGT74A1 has a high acceptor specificity (<figref>FIG. 3</figref><i>a</i>). The above result was confirmed by migrating spot on TLC plate. As a result, PgUGT74A1 converted PPD and C-K into ginsenoside Rh2 and ginsenoside F2 respectively.</p>
+      <p id="p-00096-en" num="0093">The result was further confirmed by high performance liquid chromatography (HPLC), as shown in <figref>FIG. 3</figref><i>b</i>. The results from HPLC showed that PgUGT74A1 of the present invention converted PPD and C-K into ginsenoside Rh2 and F2 respectively, as in the TLC analysis result. Unlike PgUGT74A1, PgUGT94B1 of Example 1 did not convert PPD and C-K into other ginsenosides (<figref>FIG. 3</figref><i>b</i>).</p>
+      <p id="p-00097-en" num="0094">As shown in the results of TLC and HPLC, PgUGT74A1 converted only the PPD-type ginsenosides such as PPD and C-K into ginsenoside Rh2 and ginsenoside F2 respectively, demonstrating its substrate specificity. Furthermore, when the carbon number that is to be glycosylated was determined, there was a specific glycosylation at the C-3 position of PPD-type ginsenoside via O-linkage while other positions such as the hydroxyl groups (—OH) at the C-12 and C-20 positions of PPD and the hydroxyl groups (—OH) at the C-3, C-6, C-12 and C-20 positions of PPT were not glycosylated, indicating that PgUGT74A1 has a regioselectivity to the C-3 position of the PPD-type ginsenosides. This result suggests that PgUGT74A1 of the present invention forms the O-glycosidic linkage to induce glycosylation.</p>
+      <p id="p-00098-en" num="0095">Overall, the above results demonstrate that PgUGT74A1 specifically acts on PPD-type ginsenosides, and has a strong substrate specificity for PPD and C-K, and regioselectivity for glycosylation at the C-3 position.</p>
+      <heading id="h-00020-en" level="1">Experimental Example 3</heading>
+      <heading id="h-00021-en" level="1">Conversion of Ginsenoside Rh2 and F2 into Ginsenoside Rg3 and Ginsenoside Rd by PgUGT94B1</heading>
+      <p id="p-00099-en" num="0096">It was also examined whether PgUGT94B1 cloned in Example 1 has a substrate specificity and regioselectivity like PgUGT74A1.</p>
+      <p id="p-00100-en" num="0097">First, the recombinant PgUGT of Example 1, PgUGT94B1, was incubated with 10 different types of ginsenosides (PPD, C-K, Rh2, F2, Rg3, Rd, Rg2, Rh1, F1 and PPT) in the presence of UDP-glucose, and then the products converted by the recombinant PgUGT were analyzed by TLC. The results are shown in <figref>FIG. 4</figref><i>a. </i></p>
+      <p id="p-00101-en" num="0098">As a result, PgUGT94B1 did not convert ginsenosides other than ginsenoside Rh2 and F2, indicating that PgUGT94B1 has a high acceptor specificity (<figref>FIG. 4</figref><i>a</i>). This result was confirmed by a migrating spot on TLC plate. As a result, PgUGT94B1 converted ginsenoside Rh2 and ginsenoside F2 into ginsenoside Rg3 and ginsenoside Rd respectively.</p>
+      <p id="p-00102-en" num="0099">The result was further confirmed by HPLC as shown in <figref>FIG. 4</figref><i>b</i>. The HPLC results demonstrate that PgUGT94B1 converted ginsenoside Rh2 and F2 into ginsenoside Rg3 and Rd respectively, as in the TLC analysis result. On the other hand, PgUGT74A1 of the present invention did not convert ginsenoside Rh2 and F2, as in the results of Experimental Example 2 (<figref>FIG. 4</figref><i>b</i>).</p>
+      <p id="p-00103-en" num="0100">According to these results, PgUGT94B1 specifically glycosylates the O-glucoside at C-3 position of Rh2 and F2 by forming 13-1,2 linkage, but not the O-glucoside at the C-20 position of C-K and F2. The above results suggest that PgUGT94B1 has a substrate specificity for Rh2 and F2 and regioselectivity for O-glucoside at the C-3 position.</p>
+      <heading id="h-00022-en" level="1">Experimental Example 4</heading>
+      <heading id="h-00023-en" level="1">Conversion of PPD and C-K into Ginsenoside Rg3 and Rd by PgUGT74A1 and PgUGT94B1</heading>
+      <p id="p-00104-en" num="0101">Based on the results of Experimental Examples 2 and 3, it was conceived that when the two types of PgUGTs are used at the same time, <i>ginseng </i>PPD can be converted into ginsenoside Rh2, which in turn can be converted into Rg3, thereby producing Rg3 from PPD sequentially. Likewise, when both enzymes are used, C-K can be converted into ginsenoside F2, which in turn can be converted into ginsenoside Rd, thereby producing Rd from C-K sequentially.</p>
+      <p id="p-00105-en" num="0102">In order to confirm this, the above two enzymes were reacted with PPD as a substrate in a single reaction tube. The result showed that PPD was successfully converted into Rg3 (upper panel of <figref>FIG. 5</figref>). In addition, the two enzymes were reacted with C-K as a substrate in a single reaction tube. The result showed that C-K was also successfully converted into Rd (lower panel of <figref>FIG. 5</figref>).</p>
+      <p id="p-00106-en" num="0103">The above results demonstrate that PPD and C-K can be converted into Rg3 and Rd respectively by using a combination of PgUGT74A1 and PgUGT94B1 of the present invention in a single reaction tube in vitro. Thus, PgUGT74A1 and PgUGT94B1 can be used for an efficient production of Rg3 and Rd.</p>
+      <heading id="h-00024-en" level="1">Experimental Example 5</heading>
+      <heading id="h-00025-en" level="1">Enhancement of PgUGT74A1 and PgUGT94B1 Expressions by MeJA (Methyl Jasmonate)</heading>
+      <p id="p-00107-en" num="0104">It was investigated whether PgUGT74A1 and PgUGT94B1 of the present invention were mainly expressed in the roots of <i>ginseng </i>that had been used for a medical purpose traditionally. Also, organ-specific expression patterns were examined for two types of PgUGTs of the present invention along with three different ginseoside biosynthetic genes such as PgDS (dammarenediol-II synthase), PgPPDS (protopanaxadiol synthase), and PgPPTS (protopanaxatriol synthase). The leaf and root of 15-month old <i>ginseng </i>were used for the expression analysis.</p>
+      <p id="p-00108-en" num="0105">The result demonstrated that all of the above ginseoside biosynthetic genes were expressed in the leaf and root of <i>ginseng</i>, and particularly in the glucosylation-activated roots (<figref>FIG. 6</figref><i>a</i>).</p>
+      <p id="p-00109-en" num="0106">As shown in <figref>FIG. 6</figref><i>a</i>, all of the 5 genes of interest were expressed in the leaf and root of <i>ginseng</i>, but there was a difference in their expression levels. The expression of PgUGT74A1 and PgUGT94B1 of the present invention was higher in the root than in the leaf. PgDS and PgPPDS genes that are involved in biosynthesis of ginsenosides showed higher expression level in the leaf of <i>ginseng</i>, whereas PgPPTS showed similar expression levels in both root and leaf of <i>ginseng</i>. These results suggest that ginsenosides are synthesized in both leaf and root of <i>ginseng</i>, but glucosylation occurs more actively in the root compared to the leaf.</p>
+      <p id="p-00110-en" num="0107">Methyl jasmonate (MeJA) has been reported to enhance the expression of ginsenoside biosynthetic genes in hairy root cultures. Knowing the effect of MeJA, it was examined whether the expression of the UDP-glycosyltransferase of the present invention can be increased by MeJA.</p>
+      <p id="p-00111-en" num="0108">The 15-month old <i>ginseng </i>grown in a growth chamber under LD conditions was collected, and MeJA was sprayed onto its leaves everyday for a total of 5 days. To analyze expression level of the ginsenoside biosynthetic genes, samples were collected on the 6th days. The two types of PgUGTs of the present invention showed a higher expression level in the leaves of <i>ginseng </i>which was treated with MeJA, suggesting that MeJA is capable of facilitating the expression of UGTs of the present invention (<figref>FIG. 6</figref><i>b</i>). In addition to the above PgUGTs, MeJA also enhanced the expression of PgDS and PgPPDS. However, expression of PgPPTS was not induced by MeJA under the conditions of the present invention.</p>
+      <p id="p-00112-en" num="0109">Overall, the expression analysis results demonstrate that the ginsenoside concentrations can be increased with the addition of MeJA. In this regard, the concentrations of 4 major ginsenosides were measured after spraying MeJA onto the leaf of <i>ginseng</i>. The treatment of MeJA increased the concentrations of two PPD-type ginsenosides, Rd and Rb1, by 1.55 and 1.14 times respectively (<figref>FIG. 6</figref><i>c</i>). In addition, the treatment of MeJA increased the concentrations of two PPT-type ginsenosides, Rg1 and Re, by 2.61 and 1.45 times respectively.</p>
+      <p id="p-00113-en" num="0110">These results suggest that addition of MeJA onto <i>ginseng </i>plant facilitates the expression of various ginsenoside biosynthetic genes and increases production of ginsenosides in <i>ginseng</i>. The results also suggest that since MeJA enhances the expression of PgUGT74A1 and PgUGT94B1 which are the representative glycosyltransferase of the present invention, it can be used for enhancing the expression of PgUGT74A1 and PgUGT94B1.</p>
+      <p id="p-00114-en" num="0111">It will be apparent to those skilled in the art that various modifications and changes may be made without departing from the scope and spirit of the invention. Therefore, it should be understood that the above embodiment is not limitative, but illustrative in all aspects. The scope of the invention is defined by the appended claims rather than by the description preceding them, and therefore all changes and modifications that fall within metes and bounds of the claims, or equivalents of such metes and bounds are therefore intended to be embraced by the claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An isolated Uridine diphosphate (UDP)-glycosyltransferase protein represented by an amino acid sequence of SEQ ID NO. 1 (PgUGT74A1).</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The isolated UDP-glycosyltransferase protein according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the protein is derived from ginseng. </claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The isolated UDP-glycosyltransferase protein according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the protein has a sugar-transfer activity to the C-3 position of protopanaxadiol (PPD)-type ginsenoside.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A polynucleotide encoding the isolated UDP-glycosyltransferase protein of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. An expression vector comprising the polynucleotide of <claim-ref idref="clm-00004-en">claim 4</claim-ref>.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A transformant comprising the expression vector of <claim-ref idref="clm-00005-en">claim 5</claim-ref> therein.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. A method for preparing a glycosylated ginsenoside by converting a protopanaxadiol (PPD)-type ginsenoside, comprising reacting the PPD-type ginsenoside with an isolated Uridine diphosphate (UDP)-glycosyltransferase protein represented by the amino acid sequence of SEQ ID NO. 1, a transformant introduced with an expression vector comprising a polynucleotide that encodes the protein, or a culture of the transformant in the presence of UDP-sugar.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the isolated UDP-glycosyltransferase protein has a sugar-transfer activity to the C-3 position of PPD-type ginsenoside.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the PPD-type ginsenoside is PPD or Compound K (C-K).</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the glycosylated ginsenoside is ginsenoside Rh2 or F2.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the preparation of glycosylated ginsenoside comprises conversion of PPD into ginsenoside Rh2 or conversion of Compound K into ginsenoside F2.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, which further comprises reacting the PPD-type ginsenoside with an isolated UDP-glycosyltransferase protein represented by the amino acid sequence of SEQ ID NO. 3, a transformant introduced with a vector comprising a polynucleotide that encodes the protein, or a culture of the transformant.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, which comprises conversion of ginsenoside Rh2 into ginsenoside Rg3 or conversion of ginsenoside F2 into ginsenoside Rd by the isolated UDP-glycosyltransferase protein which is represented by the amino acid sequence of SEQ ID NO. 3.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>
+        <b>14</b>. A composition for converting a protopanaxadiol (PPD)-type ginsenoside into a glycosylated ginsenoside, comprising an isolated UDP-glycosyltransferase protein represented by the amino acid sequence of SEQ ID NO. 1, a transformant introduced with a vector comprising a polynucleotide that encodes the protein, or a culture of the transformant as an active ingredient.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The composition according to <claim-ref idref="clm-00014-en">claim 14</claim-ref>, which further comprises an isolated UDP-glycosyltransferase protein represented by the amino acid sequence of SEQ ID NO. 3, a transformant introduced with a vector comprising a polynucleotide that encodes the protein, or a culture of the transformant.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A method for enhancing the expression of the UDP-glycosyltransferase of <claim-ref idref="clm-00001-en">claim 1</claim-ref> in ginseng, comprising treating ginseng with methyl jasmonate (MeJA).</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. A composition for enhancing the expression of the UDP-glycosyltransferase of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising methyl jasmonate (MeJA) as an active ingredient.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. A composition comprising the isolated UDP-glycosyltransferase protein of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252337A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252337A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252337A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252337A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252337A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252337A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252337A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252337A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252337A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252337A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252337A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252337A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252337A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252337A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252337A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252337A1-20150910-C00001.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150252337A1.PDF" type="pdf" size="1762094" pages="24" />
+</lexisnexis-patent-document>

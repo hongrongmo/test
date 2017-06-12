@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150258321A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030340" date-changed="20151006" time-changed="063135">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121317941">
+        <country>US</country>
+        <doc-number>20150258321</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14436262</doc-number>
+        <date>20131009</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>A61M  39/02        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>39</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>A61M  39/02        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>39</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/0002      20130101 LA20150630BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0002</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150630</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/145       20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>145</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/1495      20130101 LA20150630BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>1495</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150630</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   5/6865      20130101 LI20150630BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6865</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150630</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B2560/0223      20130101 LA20150630BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2560</main-group>
+        <subgroup>0223</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150630</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61M2039/1077      20130101 LA20150408BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2039</main-group>
+        <subgroup>1077</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150408</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61M2205/3303      20130101 LA20150408BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2205</main-group>
+        <subgroup>3303</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150408</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61M2205/3327      20130101 LA20150408BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2205</main-group>
+        <subgroup>3327</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150408</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61M2207/00        20130101 LA20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2207</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>Y10T  29/49826     20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>49826</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">26</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">SEALING CONNECTOR ASSEMBLY</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61720116</doc-number>
+          <date>20121030</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Edwards Lifesciences Corporation</orgname>
+            <role>02</role>
+            <address>
+              <city>Irvine</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Higgins</last-name>
+            <first-name>Michael</first-name>
+            <address>
+              <city>Huntington Beach</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>West</last-name>
+            <first-name>Weldon D.</first-name>
+            <address>
+              <city>Mission Viejo</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Van Wieren</last-name>
+            <first-name>Paul S.</first-name>
+            <address>
+              <city>Los Angeles</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13064010</doc-number>
+        <date>20131009</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014070395</doc-number>
+        <date>20140508</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173672560">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258321</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173672559">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258321</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present disclosure provides a sensor system that includes a fluid supply, one or more supply lines, a monitor, communication lines, a sensor, a catheter and a connector assembly. The connector assembly includes a housing and a tube extending out of a distal end of the housing wherein the tube is compressed against a luer connector of the catheter to form a seal between the catheter and connector assembly.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150429</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015258321A1</docdb-publication-number>
+      <docdb-application-id>444512290</docdb-application-id>
+      <new-owner>EDWARDS LIFESCIENCES CORPORATION, CALIFORNIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HIGGINS, MICHAEL;WEST, WELDON D.;VAN WIEREN, PAUL S.;SIGNING DATES FROM 20121109 TO 20121127;REEL/FRAME:035529/0669</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">This disclosure relates to fluidic connections for use in medical applications, and more particularly connectors between fluid lines for low flow volume applications.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">Fluidics connections on existing medical devices are usually made using standard luer lock fittings. The male fitting is either screwed into the female fitting using threads, or the male fitting may be pushed onto the female fitting. In either case, there is a static frictional force between the two fittings. For the threaded luer lock, the threads provide a mechanical advantage, forcing the male luer into the female lure. Also, the threads prevent linear translation pulling the two luers apart. The threads typically, however, do not prevent a torque from rotating the two fittings relative to each other. A problem with luer locks is that they tend to occlude when used as blood pathways and during low flow and/or low volume applications.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00003-en" num="0003">The present disclosure overcomes the problems of the prior art by providing a sensor system that includes a fluid supply, one or more supply lines, a monitor, communication lines, a sensor, a catheter and a connector assembly. The connector assembly includes a housing and a tube extending out of a distal end of the housing, wherein the tube is compressed against a luer connector of the catheter to form a seal between the catheter and connector assembly.</p>
+      <p id="p-00004-en" num="0004">One embodiment of the present disclosure includes an access component for insertion into a proximal opening of a device configured to access the bodily fluids of a subject (hereinafter also referred to as “access device”), for example the circulatory system. The access component includes a housing and a tube. The housing comprises an internal passageway. The tube is fit within the internal passageway and extends out of the housing at a distal end thereof. The tube further comprises a fluid lumen. The tube has a distal end configured to form a compression seal with the access device when the tube and housing are fit within the proximal opening of the access device.</p>
+      <p id="p-00005-en" num="0005">In one aspect, the tube has an extruded shape and may even be extruded. Also, the distal end of the tube may be configured to distort outwardly upon compression against the access device. This distortion helps to narrow the fluid lumen as it transitions to a narrower lumen of the tube. Also, it helps to fill voids at the connection between the housing and the access device.</p>
+      <p id="p-00006-en" num="0006">In another embodiment, the housing is configured to friction fit within the proximal opening of the access device and to compress the tube against the access device. Also, the housing may be screwed onto the access device using luer-lock threads.</p>
+      <p id="p-00007-en" num="0007">Also, the housing and tube may define aligned side openings configured to allow passage of a analyte sensor. In this manner, the fluid lumen of the tube is configured to receive and contain at least a portion of the sensor.</p>
+      <p id="p-00008-en" num="0008">In another embodiment, the housing includes at least two portions configured to split apart and receive the tube. These two portions may also be configured to reattach around the tube, like a clamshell.</p>
+      <p id="p-00009-en" num="0009">Another embodiment of the present disclosure includes a sensor system having a analyte sensor, at least one wire and an access component. The wire extends from the analyte sensor to an electronic device. The access component includes a housing and a tube. The housing defines an internal passageway. The tube fits within the internal passageway and extends out of the housing at its distal end. The tube defines a fluid lumen that contains the analyte sensor. Also, a distal end of the tube is configured to form a compression seal with the access device when the tube and housing are fit within the proximal opening of the access device.</p>
+      <p id="p-00010-en" num="0010">In another aspect, a proximal end of the access component is configured for coupling with a flush fluid supply line. In another embodiment, the sensor system may include the flush fluid supply line. Also, the sensor system may include a pump connected to the flush fluid supply line and configured to urge flush fluid through the flush fluid supply line and the access component. The pump could also pump a calibration fluid through the access component and over the sensor.</p>
+      <p id="p-00011-en" num="0011">Another embodiment of the present disclosure includes a method of making an access device. The method includes extruding a tube to define a fluid lumen. The tube is positioned in an internal passageway of a housing so that a distal end of the tube extends out of a distal end of the housing.</p>
+      <p id="p-00012-en" num="0012">These and other features and advantages of the present disclosure will become more readily apparent to those skilled in the art upon consideration of the following detailed description and accompanying drawings, which describe both the preferred and alternative embodiments of the present disclosure.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 1</figref> is a perspective view of a sensor system of one embodiment of the present disclosure;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 2</figref> is a sectional view of a combined housing, tube and catheter of the sensor system of <figref>FIG. 1</figref>;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 3</figref> is a cross-section of a housing, tube and sensor of another embodiment of the present disclosure;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 4</figref> is a cross-section of a distal end of the tube and housing of <figref>FIG. 3</figref> inserted into a connector of a catheter; and</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 5</figref> is a sectional view of a combined housing, tube and catheter of the sensor system of another embodiment of the present disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00018-en" num="0018">The present disclosure now will be described more fully hereinafter with reference to specific embodiments of the disclosure. Indeed, the disclosure can be embodied in many different forms and should not be construed as limited to the embodiments set forth herein; rather, these embodiments are provided so that this disclosure will satisfy applicable legal requirements. As used in the specification, and in the appended claims, the singular forms “a”, “an”, “the”, include plural referents unless the context clearly dictates otherwise. The term “comprising” and variations thereof as used herein is used synonymously with the term “including” and variations thereof and are open, non-limiting terms.</p>
+      <p id="p-00019-en" num="0019">As shown in <figref>FIG. 1</figref>, embodiments of the present disclosure include a sensor system <b>10</b> that includes a fluid supply <b>12</b>, one or more supply lines <b>14</b>, a fluid controller <b>36</b> (e.g., a pump or pinch valve), a monitor <b>16</b>, communication lines <b>18</b>, a sensor assembly <b>20</b>, a catheter <b>22</b> and a connector assembly <b>24</b>. The connector assembly <b>24</b> includes a housing <b>26</b> and a tube <b>28</b> extending out of a distal end of the housing wherein, when inserted into the catheter <b>22</b> or other access device, the tube is compressed against a luer connector <b>30</b> of the catheter to form a seal between the catheter and connector assembly. The connector assembly can thus be a component of an over access assembly.</p>
+      <p id="p-00020-en" num="0020">Referring again to <figref>FIG. 1</figref>, the fluid supply <b>12</b> in one embodiment may include some type of fluid reservoir that facilitates operation of the sensor assembly <b>20</b> and sensor system <b>10</b>. For example, the fluid supply <b>12</b> may include a pole <b>32</b> supporting one or more bags <b>34</b>, such as a bag of saline, or other flushing solution, and a calibration solution of an analyte, or other compound, of known concentration. Elevation of the bag <b>34</b> on the pole <b>32</b> generates head that works with the fluid controller <b>36</b> to control alternating flush, draw and calibration cycles for the sensor system <b>10</b>.</p>
+      <p id="p-00021-en" num="0021">It should be noted that the fluid supply <b>12</b> could also include reservoirs or existing sterile fluid supply lines or other fluid containers and need not be customized or limited to the illustrated embodiment. Generally, the fluid supply <b>12</b> is some type of liquid, gas or otherwise flowable compound that facilitates operation of the sensor system <b>10</b>, such as by flushing the sensor assembly <b>20</b>, connector assembly <b>24</b> and catheter <b>22</b>, calibrating the sensor assembly <b>20</b> and/or administering fluids to the patient. Also, the fluid supply <b>12</b> could be configured to communicate with a pressure or other sensors combined with the sensor system <b>10</b>. In yet another alternative, the sensor system <b>10</b> may not include a fluid supply <b>12</b> at all, wherein the sensor assembly <b>20</b> does not require or benefit from flushing, calibration, etc.</p>
+      <p id="p-00022-en" num="0022">Regardless, in the illustrated embodiment, the supply line <b>14</b> extends down from the fluid supply <b>12</b> and includes a relatively flexible plastic tube that passes through the fluid controller <b>36</b> on its way to connect to the connector assembly <b>24</b> and the catheter <b>22</b>. Preferably, the line <b>14</b> is sufficiently flexible that it can extend through and be manipulated by the fluid controller <b>36</b>. As described above, however, embodiments of the sensor system <b>10</b> may not even need fluid supply and/or the fluid supply <b>12</b> may include a range of configurations. By extension, the supply line <b>14</b> may not be needed or may be modified to fit and facilitate other configurations, including the use of multiple supply lines from multiple fluid sources.</p>
+      <p id="p-00023-en" num="0023">Referring again to <figref>FIG. 1</figref>, the fluid controller <b>36</b> is also supported by the pole about midway down, below the bag <b>34</b>, and above the height of the catheter <b>22</b>. The fluid controller <b>36</b> in the illustrated embodiment includes one or more pinch valves which compress and roll along a portion of the lines <b>14</b>. By pinching and rolling, these valves meter out fluid during flushing or calibration cycles and can draw blood (or other fluid) samples by moving in reverse.</p>
+      <p id="p-00024-en" num="0024">For instance, the continuous fluid column that extends down from the fluid controller <b>36</b> through the supply lines <b>14</b>, the connector assembly <b>24</b> and to the catheter <b>22</b>, is drawn back when the pinch valve reverses and causes a vacuum to arise in the catheter. This draws a sample of bodily fluid e.g., blood, into the catheter <b>22</b> and the connector assembly <b>24</b>. In the other direction, the fluid controller <b>36</b> can either release to allow a steady drip from the bags <b>34</b> or can pinch and advance to drive flushing or calibrant solution through the connector assembly <b>24</b>, the connector assembly <b>24</b> and the catheter <b>22</b>.</p>
+      <p id="p-00025-en" num="0025">The fluid controller <b>36</b> may include other types of pumping mechanisms that facilitate fluid movement and sample drawing into the catheter <b>22</b> and connector assembly <b>24</b>. Especially useful are pumps that control low volumes and are lower-risk for use with patient fluid systems. For example, a peristaltic pump works well and, in addition to the pinch pump, maintains the sterile integrity of the tubing of the supply lines <b>14</b>.</p>
+      <p id="p-00026-en" num="0026">The monitor <b>16</b>, as shown in <figref>FIG. 1</figref>, is mounted on the pole <b>32</b> and includes a display and some type of input-output device, such as a keyboard, buttons or a controller. The monitor <b>16</b> includes a processor, memory and other computer functions that allow it to receive and process signals from the sensor assembly <b>20</b>. Also, the monitor <b>16</b> may be configured to communicate with and/or control the operation of the fluid controller <b>36</b> through the various above-described cycles.</p>
+      <p id="p-00027-en" num="0027">The communication lines <b>18</b> extend from the monitor to the sensor assembly <b>20</b> coupled to the connector assembly <b>24</b>. These lines communicate the signal generated by the sensor <b>44</b> and can also supply power that energizes the sensor assembly <b>20</b>. It should be noted that the functions of the monitor <b>16</b> could be performed by a range of distributed computing systems that have processors, memory and other capacities at various location interconnected by network and other forms of communication. Also, the communication lines <b>18</b> could be removed in favor of wireless communication, and the sensor assembly <b>20</b> may be configured for wireless, portable communication via a network to a remotely housed computing facility with a central database.</p>
+      <p id="p-00028-en" num="0028">Referring now to <figref>FIG. 2</figref>, an embodiment of the disclosure including the sensor assembly <b>20</b>, catheter <b>22</b> and connector assembly <b>24</b> are shown. The sensor assembly <b>20</b> includes a signal cable <b>38</b>, a signal cable connector <b>40</b>, a sensor puck <b>42</b> and a sensor <b>44</b>. Sensor puck <b>42</b> can be constructed of a compressible, conductive material or of a compressible nonconductive material having portions thereof that are conductive, for example, to mate with electrical contacts, wires, pads, etc. The signal cable connector <b>40</b> is configured to easily mate to a congruent connector at a distal end of the communication lines <b>18</b> to establish communication with the monitor <b>16</b>. The sensor signal cable <b>38</b> is configured to resiliently bend for dynamic use and intersects the housing <b>26</b> at an acute angle for lower connection strain. It attaches at its distal end to the sensor puck <b>42</b> which, in this embodiment, includes electronics in the form of a board configured to connect standard wiring with platinum wires of the sensor <b>44</b>. In other embodiments, some intelligence, such as an EPROM, RF transmitter, etc. could be included in the sensor puck <b>42</b>, or, no sensor puck employed at all. The sensor <b>44</b> in one embodiment is a wire sensor with a working, blank, optionally a counter electrode, and reference electrode wires that extend from the sensor puck <b>42</b> through the housing <b>26</b> and into the tube <b>28</b>. In one aspect the working, blank, optional counter electrode, and reference electrode of sensor <b>44</b> are positioned near the distal tip of the wire sensor. In another aspect, the working, blank, optional counter electrode, and reference electrode of sensor <b>44</b> are positioned in proximity to sensor puck <b>42</b>.</p>
+      <p id="p-00029-en" num="0029">Although the connector assembly <b>24</b> of the illustrated embodiment is particularly well-suited for use with an elongate wire electrode, it should be noted that the connector assembly's ability to seal two fittings together can be employed with other sensor types, such as flexible substrate sensors, or fiber optic sensors or could even be used as a general connector. For example, the connector assembly <b>24</b> could be used to connect two fluid lines where it is desirable to eliminate dead space at the connection point. Also, although the elimination of dead space is particularly advantageous for blood lines due to avoidance of clotting and embolic events, embodiments of the connector assembly <b>24</b> may be used with other types of fluids, gasses or flowable materials.</p>
+      <p id="p-00030-en" num="0030">The catheter <b>22</b> shown in <figref>FIG. 2</figref> includes a luer receptacle <b>46</b> of the luer connector <b>30</b>, a luer nut <b>48</b> and a sampling tube <b>50</b>. The luer receptacle <b>46</b> has an annular shape defining an opening configured to receive a distal end of the connector assembly <b>24</b>. A proximal end of the luer receptacle <b>46</b> includes threads or a flange configured to mate with the same on the connector assembly <b>24</b>. The luer receptacle <b>46</b> is connected to a proximal end of the sampling tube <b>50</b>. The luer nut <b>48</b> also has an annular shape and is rotatably mounted about the sampling tube <b>50</b> adjacent and distal to the luer receptacle <b>46</b>. The annular shape opens distally and included on the inside of the luer nut <b>48</b> are threads allowing it to be attached to an existing catheter line in a patient, wherein the small-diameter sampling tube <b>50</b> “sleeves” into the catheter blood sampling line.</p>
+      <p id="p-00031-en" num="0031">The small diameter of the sampling tube <b>50</b>, for example 0.010 inch, and small amounts of blood that are drawn for operation of the sensor system <b>10</b>, make for a difficult transition to standard-sized supply lines and other fluid components configured for larger volumes. For example, the system sensor <b>10</b> may be employed over a 72 hour period and sample blood with 40 to 100 L volumes in 5 to 10 minute cycles. With a 5 minute target blood glucose cycle and an approximate 90 second time window for draw volume, the maximum draw rate is about 200 mL/hour. For such volumes, the impact of even a small amount of dead space can be significant.</p>
+      <p id="p-00032-en" num="0032">The small diameter sampling tube <b>50</b> can have a range of configurations to facilitate small volume sampling. In one embodiment, the sampling tube <b>50</b> has a constant 0.010 inch ID and a 0.025 inch OD so as to fit a range of standard-sized catheters. Also, the OD might be even smaller, such as 0.15 inch with a 0.010 inch ID, but the ID may be scaled down to keep bending stiffness high, such as down to 0.008 inch. The dimensions of the sampling tube need not be consistent through its entire length. For example, the ID of the sampling tube <b>50</b> could be larger closer to its proximal end to match up better with a larger upstream diameter of the tube <b>28</b>. In other embodiments, the lumen of the sampling tube <b>50</b> need not be cylindrical in cross-section and could be elliptical or have intervening walls to define multiple, split lumens through which blood could be drawn simultaneously.</p>
+      <p id="p-00033-en" num="0033">The connector assembly <b>24</b> includes the housing <b>26</b> and the tube <b>28</b>. The housing, in the embodiment of <figref>FIG. 2</figref>, includes a main housing <b>52</b> and an adaptor <b>54</b>. The main housing <b>52</b> has a cylindrical shape with a proximal end <b>56</b> and a distal end <b>58</b>. Extending between the ends <b>56</b>, <b>58</b> is a passageway <b>60</b>. The proximal end <b>56</b> is configured to connect to a complementary luer fitting from the fluid supply line <b>14</b> and may include threads for a secure connection. The distal end <b>58</b> has a male luer shape having a central portion and a luer nut <b>62</b> extending around the central portion. The central portion is configured to extend into the adaptor <b>54</b> while the luer nut extends around the adaptor for a secure fit.</p>
+      <p id="p-00034-en" num="0034">The passageway <b>60</b> is configured to receive therein the tube <b>28</b>, such as in a friction fit, so that the tube is secure and can be manipulated as a single unit with the main housing <b>52</b>. Defined in the side of the main housing <b>52</b> and in communication with the passageway <b>60</b> is a side opening <b>64</b>. The side opening <b>64</b> is sized and configured to facilitate passage of the wire sensor <b>44</b> into the tube <b>28</b>, as will be described in more detail below.</p>
+      <p id="p-00035-en" num="0035">In one embodiment, the main housing <b>52</b> has additional portions that extend over the sensor puck <b>42</b> and the signal cable <b>38</b>, as shown in <figref>FIG. 2</figref>. These portions may be integrally formed with the main housing <b>52</b> to additionally secure the delicate components together. In this manner, the signal cable <b>38</b>, sensor puck <b>42</b> and sensor <b>44</b> are less likely to come apart from each other during use that includes attachment and detachment with movement of the patient.</p>
+      <p id="p-00036-en" num="0036">In another embodiment, the main housing <b>52</b> is molded as two portions that can attach to each other in a clamshell arrangement. This enables the main housing to be easily assembled about the tube <b>28</b>, signal cable <b>38</b>, sensor puck <b>42</b> and wire sensor <b>44</b>.</p>
+      <p id="p-00037-en" num="0037">The adaptor <b>54</b> has a cylindrical shape with a proximal end <b>66</b> and a distal end <b>68</b>. The proximal end <b>66</b> is configured to mate in a luer-type fit with the distal end <b>58</b> of the main housing <b>52</b> as described above. The distal end <b>68</b> includes a central portion and a luer nut <b>70</b>, wherein the luer nut extends around the central portion. The central portion is configured to insert into the luer receptacle <b>46</b> of the catheter <b>22</b> and the luer nut <b>70</b> screws onto the catheter <b>22</b>, thereby advancing the distal end of the housing <b>26</b> and tube <b>28</b> into the luer receptacle. Defined within the adaptor <b>54</b> is a passageway <b>76</b> that extends between the proximal end <b>66</b> and the distal end <b>68</b>.</p>
+      <p id="p-00038-en" num="0038">The tube <b>28</b> includes a proximal end <b>72</b> and a distal end <b>74</b> and defines a fluid lumen <b>78</b> extending therebetween. An external surface of the tube is preferably configured to conform with and tightly fit within the passageway <b>60</b> of the main housing <b>52</b> and the passageway <b>76</b> of the adaptor <b>54</b>.</p>
+      <p id="p-00039-en" num="0039">The internal surface of the tube <b>28</b> has a smooth surface with a low propensity to clog or clot when passing body fluids such as blood. For example, the tube <b>28</b> may be constructed of a smooth, extruded plastic, such as a polyurethane (which can be heparin coated), PTFE, FEP and PFA (and other “Teflon type” materials). Thus, the tube <b>28</b> advantageously bypasses the voids that are present within molded components configured for higher blood volume flow and/or at connections between the components, such as at the junction between the main housing <b>52</b> and the adaptor <b>54</b>.</p>
+      <p id="p-00040-en" num="0040">Preferably, the fluid lumen <b>78</b> has a shape and diameter configured to receive and allow passage of the wire sensor <b>44</b> but still allow sufficient clearance between the tube <b>28</b> and the wire sensor for the flush, calibration and draw cycles. The fluid lumen may have a diameter of 0.030 inch (7.1×10e<sup>−4 </sup>square inches in area) to 0.040 inch (1.26×10e<sup>−3 </sup>square inches) with a sensor of around 0.015 inch diameter (1.77×10e−4 square inches). Thus, the flow area is 5.33×10e<sup>−4 </sup>to 10.83×10e<sup>−4 </sup>square inches. Also, the area of the lumen in proportion to sensor area range from 400% to about 700%.</p>
+      <p id="p-00041-en" num="0041">Other ranges are possible, although larger diameters have excess blood accumulation and smaller diameters are difficult to assemble.</p>
+      <p id="p-00042-en" num="0042">Defined in a side of the tube <b>28</b> is an opening <b>80</b> configured to be aligned with the side opening <b>64</b> in the main housing <b>52</b>. The aligned side openings facilitate passage of the wire sensor <b>44</b> from the sensor puck <b>42</b> into the fluid lumen <b>78</b>.</p>
+      <p id="p-00043-en" num="0043">Preferably, the tube <b>28</b> has a length sufficient for its proximal end <b>72</b> to start proximal to the side opening <b>64</b> and its distal end <b>74</b> to extend out of the passageway <b>76</b>. The distal end <b>74</b> is configured to form a compression seal with the catheter <b>22</b> (or other access device) when the tube <b>28</b> and housing <b>26</b> are fit within the luer receptacle <b>46</b>, of the catheter. Also, if constructed of a sufficiently compressible material, the distal end <b>74</b> of the tube <b>28</b> may distort outwardly under the compression force of the connection to help fill any voids or gaps in the transition between the housing <b>26</b> and the catheter <b>22</b>. In addition, distortion may narrow the fluid lumen <b>78</b> at the transition to the smaller lumen of the sampling tube <b>50</b>.</p>
+      <p id="p-00044-en" num="0044">As described above, the tube <b>28</b> may be assembled or combined with the housing <b>26</b> by enclosing the tube between two or more split apart portions of the housing, such as in a clamshell arrangement. In another method, the tube <b>28</b> may be extended through the passageway <b>60</b> of the main housing <b>52</b> until the distal end <b>74</b> of the tube extends out of the main housing. The adaptor <b>54</b> is slid over the distal end <b>74</b> of the tube, leaving a small portion of the distal end extending out of the housing <b>26</b>, and the adaptor is secured using the luer fitting to the main housing <b>52</b>. The adaptor <b>54</b> is also attachable at the point-of-care when the housing <b>26</b> and tube <b>28</b> are attached to the catheter <b>22</b>.</p>
+      <p id="p-00045-en" num="0045">The method may also include aligning the side openings <b>64</b>, <b>78</b> and extending the sensor <b>44</b> through the side openings <b>64</b>, <b>78</b> into the fluid passageway <b>76</b> of the tube <b>28</b>. Other assembly steps may also include attaching the sensor wiring to the sensor puck <b>42</b> and assembling other portions of the sensor assembly <b>20</b>.</p>
+      <p id="p-00046-en" num="0046">During use at the point of care, the combined housing <b>26</b> and tube <b>28</b> are advanced toward and connected to the catheter <b>22</b> by inserting the distal end <b>74</b> of the tube into the luer receptacle <b>46</b> of the catheter <b>22</b>. The luer nut <b>70</b> of the adaptor <b>54</b> is screwed onto the threaded end of the luer receptacle <b>46</b>, thereby compressing the distal end <b>74</b> against the terminating end of the luer receptacle.</p>
+      <p id="p-00047-en" num="0047">At the proximal end of the housing <b>26</b>, the supply line <b>14</b> is attached to establish communication of the fluid supply <b>12</b> through to the patient.</p>
+      <p id="p-00048-en" num="0048">As shown in <figref>FIGS. 3 and 4</figref>, another embodiment of the present disclosure includes a housing <b>26</b> that has a tapering distal end configured to friction fit into a luer receptacle <b>46</b> of a catheter <b>22</b>. As the housing <b>26</b> and catheter <b>22</b> are secured, the distal end <b>74</b> of the tube <b>28</b> is compressed in a seal against the luer receptacle <b>46</b>. The walls of the tube <b>28</b> expand due to the compression, thereby narrowing the fluid passageway <b>76</b> and reducing the void space between the outer diameter of the tube and the inner diameter of the luer receptacle <b>46</b>.</p>
+      <p id="p-00049-en" num="0049">A shown in <figref>FIG. 5</figref>, another embodiment of the disclosure eliminates the need for intervening luer nut <b>62</b> and <b>66</b> (as shown in <figref>FIG. 2</figref>).</p>
+      <p id="p-00050-en" num="0050">
+        <b>10</b> sensor system</p>
+      <p id="p-00051-en" num="0051">
+        <b>12</b> fluid supply</p>
+      <p id="p-00052-en" num="0052">
+        <b>14</b> supply lines</p>
+      <p id="p-00053-en" num="0053">
+        <b>16</b> monitor</p>
+      <p id="p-00054-en" num="0054">
+        <b>18</b> communication lines</p>
+      <p id="p-00055-en" num="0055">
+        <b>20</b> sensor assembly</p>
+      <p id="p-00056-en" num="0056">
+        <b>22</b> catheter</p>
+      <p id="p-00057-en" num="0057">
+        <b>24</b> connector assembly</p>
+      <p id="p-00058-en" num="0058">
+        <b>26</b> housing</p>
+      <p id="p-00059-en" num="0059">
+        <b>28</b> tube</p>
+      <p id="p-00060-en" num="0060">
+        <b>30</b> luer connector</p>
+      <p id="p-00061-en" num="0061">
+        <b>32</b> pole</p>
+      <p id="p-00062-en" num="0062">
+        <b>34</b> bags</p>
+      <p id="p-00063-en" num="0063">
+        <b>36</b> fluid controller</p>
+      <p id="p-00064-en" num="0064">
+        <b>38</b> signal cable</p>
+      <p id="p-00065-en" num="0065">
+        <b>40</b> signal cable connector</p>
+      <p id="p-00066-en" num="0066">
+        <b>42</b> sensor puck</p>
+      <p id="p-00067-en" num="0067">
+        <b>44</b> sensor</p>
+      <p id="p-00068-en" num="0068">
+        <b>46</b> luer receptacle</p>
+      <p id="p-00069-en" num="0069">
+        <b>48</b> luer nut</p>
+      <p id="p-00070-en" num="0070">
+        <b>50</b> sampling tube</p>
+      <p id="p-00071-en" num="0071">
+        <b>52</b> main housing</p>
+      <p id="p-00072-en" num="0072">
+        <b>54</b> adaptor</p>
+      <p id="p-00073-en" num="0073">
+        <b>56</b> prox end of <b>52</b></p>
+      <p id="p-00074-en" num="0074">
+        <b>58</b> distal end of <b>52</b></p>
+      <p id="p-00075-en" num="0075">
+        <b>60</b> passageway</p>
+      <p id="p-00076-en" num="0076">
+        <b>62</b> luer nut</p>
+      <p id="p-00077-en" num="0077">
+        <b>64</b> side opening</p>
+      <p id="p-00078-en" num="0078">
+        <b>66</b> proximal end of adaptor</p>
+      <p id="p-00079-en" num="0079">
+        <b>68</b> distal end of adaptor</p>
+      <p id="p-00080-en" num="0080">
+        <b>70</b> luer nut</p>
+      <p id="p-00081-en" num="0081">
+        <b>72</b> proximal end of tube</p>
+      <p id="p-00082-en" num="0082">
+        <b>74</b> distal end of tube</p>
+      <p id="p-00083-en" num="0083">
+        <b>76</b> fluid lumen of tube</p>
+      <p id="p-00084-en" num="0084">
+        <b>78</b> side opening</p>
+      <p id="p-00085-en" num="0085">A number of aspects of the systems, devices and methods have been described. Nevertheless, it will be understood that various modifications may be made without departing from the spirit and scope of the disclosure. Accordingly, other aspects are within the scope of the following claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>That which is claimed:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An access component for insertion into a proximal opening of an access device, the access component comprising:
+<claim-text>a housing defining an internal passageway; and</claim-text><claim-text>a tube, the tube fit within the internal passageway and extending out of the housing at a distal end of the housing, said tube comprising a fluid lumen and a distal end configured to form a compression seal with the access device when the tube and housing are fit within the proximal opening of the access device.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. An access component of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the tube has an extruded shape.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. An access component of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the distal end of the tube is configured to distort outwardly upon compression against the access device.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. An access component of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein a distal end of the fluid lumen narrows upon compression against the access device.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. An access component of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the housing is configured to friction fit within the proximal opening of the access device and to compress the tube against the access device.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. An access component of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the housing and tube define aligned side openings configured to receive a sensor extending therethrough.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. An access component of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the fluid lumen is configured to receive and contain at least a portion of the sensor.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. An access component of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the housing includes at least two portions that are configured to split apart and receive the tube.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. An access component of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the two portions are configured for reattachment around the tube.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. A sensor system for connection to an access device, the sensor system comprising:
+<claim-text>a analyte sensor;</claim-text><claim-text>an electronic device in communication with the analyte sensor;</claim-text><claim-text>an access component, the access component including:</claim-text><claim-text>a housing comprising an internal passageway; and</claim-text><claim-text>a tube fit within the internal passageway and extending out of the housing at a distal end of the housing, said tube comprising a fluid lumen containing the sensor;</claim-text></claim-text>
+      <claim-text>wherein the tube has a distal end configured to form a compression seal with the access device when the tube and housing are fit within the proximal opening of the access device.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A sensor system of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the tube has an extruded shape.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A sensor system of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the distal end of the tube is configured to distort outwardly upon compression against the access device.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A sensor system of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein a distal end of the fluid lumen narrows upon compression against the access device.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A sensor system of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the housing is configured to friction fit within the proximal opening of the access device and to compress the tube against the access device.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A sensor system of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the tube defines a side opening and wherein the wire extends from the sensor through the side opening.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A sensor system of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the housing also defines a side opening and wherein the wire extends from the sensor through both side openings.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. A sensor system of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the housing includes at least two portions that are configured to split apart and receive the tube.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. A sensor system of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the two portions are configured for reattachment around the tube.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. A sensor system of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, further comprising a flush fluid supply line and wherein a proximal end of the access component is configured for coupling with the flush fluid supply line.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. A sensor system of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, further comprising a pump connected to the flush fluid supply line and configured to urge flush fluid through the flush fluid supply line and the access component.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. A sensor system of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the pump is further configured to draw body fluid through the access device, into the tube and over the sensor.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en" independent="true">
+      <claim-text>
+        <b>22</b>. A method of making an access device, the method comprising:
+<claim-text>extruding a tube comprising at least one fluid lumen; and</claim-text><claim-text>positioning the tube in an internal passageway of a housing so that a distal end of the tube extends out of a distal end of the housing.</claim-text></claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. A method of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, further comprising defining a side opening in the extruded tube, the side opening configured to allow passage of at least a portion of a sensor assembly therethrough.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. A method of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, further comprising defining a side opening in the housing and aligning both side openings.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. A method of <claim-ref idref="clm-00024-en">claim 24</claim-ref>, further comprising inserting a sensor through the side openings and into the fluid lumen of the tube.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. A method of <claim-ref idref="clm-00025-en">claim 25</claim-ref>, further comprising assembling the housing by attaching at least two portions together about the tube.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150258321A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150258321A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150258321A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258321A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150258321A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258321A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150258321A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258321A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150258321A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258321A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150258321A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150258321A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150258321A1.PDF" type="pdf" size="497697" pages="10" />
+</lexisnexis-patent-document>

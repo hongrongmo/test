@@ -1,0 +1,1488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252480A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021834" date-changed="20151103" time-changed="063326">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229472">
+        <country>US</country>
+        <doc-number>20150252480</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14628756</doc-number>
+        <date>20150223</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>14382078</doc-number>
+        <date>20140305</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>C23C  22/34        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>22</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C23C  22/73        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>22</main-group>
+        <subgroup>73</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C23C  22/78        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>22</main-group>
+        <subgroup>78</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C23C  22/82        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>22</main-group>
+        <subgroup>82</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>C23C  22/34        20130101 FI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>22</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C09D   5/08        20130101 LI20140909BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>5</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140909</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C23C  22/78        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>22</main-group>
+        <subgroup>78</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C23C2222/20        20130101 LA20140909BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>2222</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140909</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>Y10T 428/31663     20150401 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20150401</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>31663</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">Chromium-free Conversion Coating</invention-title>
+    <references-cited date-changed="20151103">
+      <patent-citations name="patcit" date-changed="20151103" />
+      <non-patent-citations name="nplcit" date-changed="20151103" />
+      <citation>
+        <patcit num="1" dnum="US2008254283A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080254283</doc-number>
+            <kind>A1</kind>
+            <name>SHIMODA MASAHARU [JP]</name>
+            <date>20081016</date>
+          </document-id>
+          <application-date>
+            <date>20070801</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US5342456A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5342456</doc-number>
+            <kind>A</kind>
+            <name>DOLAN SHAWN E [US]</name>
+            <date>19940830</date>
+          </document-id>
+          <application-date>
+            <date>19930413</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>"Evaluation of Corrosion Resistance and Self-healing Behavior of Zirconium-Cerium Conversion Coating Developed on AA2024 Alloy" authored by Yoganandan et al. and published in Surface and Coatings Technology (2015) 270, 249-258</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>abstract for CN 103642365 (03/2014)</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>The Boeing Company</orgname>
+            <address>
+              <city>Chicago</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lapena Rey</last-name>
+            <first-name>Nieves</first-name>
+            <address>
+              <city>Madrid</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Mozo</last-name>
+            <first-name>Patricia Santa Coloma</first-name>
+            <address>
+              <city>Vitoria-Gasteiz</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Etxeberria</last-name>
+            <first-name>Usoa Izagirre</first-name>
+            <address>
+              <city>Zumaia</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Alcorta</last-name>
+            <first-name>Oihana Zubillaga</first-name>
+            <address>
+              <city>Hernani</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Iranzo</last-name>
+            <first-name>Francisco J. Cano</first-name>
+            <address>
+              <city>Donostia-San Sebastian</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173558057">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2915903</doc-number>
+            <kind>A1</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20140305</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252480</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150223</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173558056">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2915903</doc-number>
+            <kind>A1</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20140305</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252480</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150223</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A conversion coating composition including a conducting polymer dispersion, at least one silane and inorganic metallic salts, wherein a pH of the composition is between 1.0 and 6.0, and wherein the inorganic metallic salts include at least one zirconium salt and at least one cerium nitrate salt.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150223</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252480A1</docdb-publication-number>
+      <docdb-application-id>444311015</docdb-application-id>
+      <new-owner>THE BOEING COMPANY, ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:LAPENA REY, NIEVES;SANTA COLOMA MOZO, PATRICIA;IZAGIRRE ETXEBERRIA, USOA;AND OTHERS;SIGNING DATES FROM 20150218 TO 20150220;REEL/FRAME:035006/0803</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">PRIORITY</heading>
+      <p id="p-00001-en" num="0001">This application claims priority from European Patent Application Number EP14382078.5 filed on Mar. 5, 2014, the entire contents of which are incorporated herein by reference.</p>
+      <heading id="h-00002-en" level="1">FIELD</heading>
+      <p id="p-00002-en" num="0002">This application relates to coatings and corrosion control on metals, in particular to a chromium-free conversion coating suitable, among others, for aircraft, automotive, marine, construction, industrial and household applications. Additionally, this application relates to a chromium-free composition and a process for the treatment of a metallic surface comprising the application of such composition onto the metallic surface, obtaining a metallic surface coated with a chromium-free conversion coating.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Corrosion is defined as the chemical or electrochemical reaction between a material, usually a metal, and its environment that produces a deterioration of the material and its properties.</p>
+      <p id="p-00004-en" num="0004">Corrosive attack begins on the surface of the metal. The corrosion process involves two chemical changes. The metal that is attacked or oxidized undergoes an anodic change, with the corrosive agent being reduced and undergoing a cathodic change. The tendency of most metals to corrode creates one of the major problems in the maintenance of aircraft, particularly in areas where adverse environmental or weather conditions exist.</p>
+      <p id="p-00005-en" num="0005">Chromium-based anti-corrosive systems containing hexavalent chromium compounds have proven to be an extremely useful and versatile group of chemistries that are extensively used in aircraft metal treatment processes. They impart many beneficial and essential anti-corrosive characteristics to metallic substrates on which they are applied and have been used extensively for the pre-treatment of metals before coating, adhesive bonding and surface finishing.</p>
+      <p id="p-00006-en" num="0006">Chemically, chromium-based anti-corrosive systems have involved the combination(s) of hexavalent chromium (e.g., CrO<sub>3</sub>, CrO<sub>4</sub><sup>2−</sup>, Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup>) and hydrofluoric acid (HF) in the case of aluminum and its alloys. The hydrofluoric acid removes oxide film from the surface of the metallic substrate (e.g., aluminum) and the hexavalent chromium reacts with the exposed metal and a trivalent chromium oxide precipitates. Using aluminum as an example:</p>
+      <p id="p-00007-en" num="0000">[in-line-formulae]Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup>+2Al<sup>0</sup>+2H<sup>+</sup>-&gt;Cr<sub>2</sub>O3.H<sub>2</sub>O+Al<sub>2</sub>O<sub>3 </sub>[/in-line-formulae]</p>
+      <p id="p-00008-en" num="0007">Chromium oxide such as that produced according to the above reaction is quite useful in anti-corrosive applications. It is quite stable in alkaline environments, it is water repellant (hydrophobic) and may act as a barrier coating towards water. Finally, it exhibits a “self-healing effect,” that is, residual hexavalent chromium in the coating may react with damaged areas of the coating, thereby producing more trivalent chromium oxide at damaged sites and therefore “healing” itself.</p>
+      <p id="p-00009-en" num="0008">Consequently, chromium-based, and in particular hexavalent chromium-based systems, have been extensively used in the aircraft industry because they have proven to be: highly effective at preventing corrosion and as an adhesion promoter for organic coatings and adhesives; particularly resilient as the application/treatment process exhibits a low sensitivity towards variation in process conditions; extremely effective on most/all aluminum alloys; and ensure considerable quality control characteristics as a skilled worker may tell the amount of chromium on the surface of a substrate by mere inspection (color) of the coating.</p>
+      <p id="p-00010-en" num="0009">Concern about chromium, in particular hexavalent chromium, in the environment has generated a need to replace chromium-based systems. Hexavalent chromium salts are classified as hazardous substances (toxic, sensitizing and carcinogenic). Consequently, they are environmentally and toxicologically undesirable. The European Parliament has published directives requiring the elimination of hexavalent chromium such as directive 2002/95/EC for electrical and electronic equipment and directive 2000/53/EC for the automotive sector. Therefore “environmentally friendly,” commercially acceptable alternative to chromium-based systems are highly desirable.</p>
+      <p id="p-00011-en" num="0010">Processes and compositions for Cr-free conversion coatings with good corrosion resistance were described in the Patent Application US2010/0009083 A1 by the same inventors. This U.S. Patent Application describes a conversion coating for the treatment of surfaces comprising a conducting polymer dispersion containing an inorganic metallic salt of at least one of molybdenum, magnesium, zirconium, titanium, vanadium, cerium, hafnium, silicon, aluminum, boron, cobalt and zinc. The conversion coatings described in the abovementioned patent application showed very good corrosion performance. However, a good adhesion of the coatings to subsequent organic coatings was not achieved without jeopardizing the corrosion protection.</p>
+      <p id="p-00012-en" num="0011">A significant improvement was developed by the same inventors and a new patent application was filed in October 2012, U.S. patent application Ser. No. 13/662,412 (published as US2013/052352 A1). This patent application describes a conversion coating comprising a conducting polymer dispersion, at least one silane and inorganic salts selected from at least one of molybdenum, magnesium, zirconium, titanium, vanadium, cerium, hafnium, silicon, aluminum, boron, cobalt and zinc. The silane compounds enhanced the adhesion performance so the coating complied with the requirements of aeronautical applications, while the corrosion protection as described in the examples of US2010/0009083 A1 was maintained. Moreover, the new conversion coatings obtained with the conducting polymer dispersions comprising at least one silane compound offered low surface contact electrical resistance, compliant with the requirements for aeronautical applications.</p>
+      <p id="p-00013-en" num="0012">Now, the challenge is to optimize the chemical conversion process and the conversion coating to further enhance the corrosion protection without jeopardizing the adhesion.</p>
+      <p id="p-00014-en" num="0013">Lanthanide ions as Ce<sup>3+</sup> and Ce<sup>4+</sup> forming insoluble hydroxides show low toxicity and are economically competitive products, since cerium is relatively abundant in nature. Therefore, cerium has been investigated to develop corrosion protection systems for aluminum alloys as alternative to chromates.</p>
+      <p id="p-00015-en" num="0014">In particular, M. Bethencourt et al., in a paper titled “High protective, environmental friendly and short-time developed conversion coatings for aluminum alloys”, which was published in Applied Surface Science 189 (2002) 162-173, described conversion coating treatments for AA5083 based on Ce(NO<sub>3</sub>)<sub>2 </sub>and CeCl<sub>3 </sub>0.005M solutions with pH adjusted to 5.5, deposited at temperatures ranging from 298K to 363K, and immersion times between 0.08 h and 24 h. The corrosion performance was studied through linear polarization curves. The best results are reported for Ce(NO<sub>3</sub>)<sub>2 </sub>treatments carried out at 348K for 120 min, showing an increase of the polarization resistance by a factor higher than 12.000 comparing to the bare alloy.</p>
+      <p id="p-00016-en" num="0015">The above-mentioned publication deals with cerium conversion treatments containing no zirconium salts, conducting polymers or silanes. Further, the process described in M. Bethencourt et al. involves high temperatures and long immersion times to obtain satisfactory corrosion protection results, different from the process of the present invention wherein the coating may be carried out without heat treatment, preferably at room temperature between 1 to 10 minutes.</p>
+      <p id="p-00017-en" num="0016">Botana et al., in the patent PCT WO2004/059035 A1 “Method of obtaining chromate-free conversion coatings on aluminum alloys” (Universidad de Cádiz, 2004) discloses a coating consisting of a mix of cerium rich islands onto intermetallic particles and aluminum oxide layer in the alloy matrix. Such a coating is obtained with a dipping process in an aerated solution containing 0.001-0.01M Ce(NO<sub>3</sub>)<sub>3 </sub>or 0.001-0.01M CeCl<sub>3</sub>. The process is carried out in a temperature range of 323-363K for a maximum immersion time of 120 min. In one of the described options 0.5-30 mL/L H<sub>2</sub>O<sub>2 </sub>is added to the already heated solution, and immersion time is shortened to 30 minutes. The treated panels passed 168 h of salt spray test under ASTM B-117 without signs of corrosion. In electrochemical tests, a factor of improvement of 40 in the polarization resistance is obtained with respect to the panels treated at room temperature.</p>
+      <p id="p-00018-en" num="0017">However, patent application WO2004/059035 A1 is related to cerium conversion coatings without the presence of conducting polymers or silanes. Furthermore, the procedure described in WO2004/059035 A1 involves high temperature and/or long immersion times comparing with the process for treatment of a metallic surface of the present application.</p>
+      <p id="p-00019-en" num="0018">C. Rosero-Navarro et al., in the PCT patent application WO2011/058209 A1 “Vitreous coatings made using the sol-gel process for protecting metals against corrosion” (Consejo Superior de Investigaciones Científicas (CSIC), 2011), describe a composition and methods to obtain a vitreous coating made by sol-gel process. Said vitreous coating contains Ce<sup>3+</sup> ions in its structure, which migrates to damaged regions when the metal suffers corrosion phenomena. The hybrid coatings, formed from solutions containing cerium salts and organic complexing agent, are sintered in temperatures up to 250° C., and the resulting coating shows a thickness in the range of 100-1000 nm. The cerium salt is selected from the group of chlorides, sulfate, nitrates or halide, being preferably nitrate. The complexing agents are acetyl-acetone, glacial acetic acid, citric acid, diethanol-amine, or other compounds with carboxylic groups, and improve the stability of the sol and allows controlling of the final pH. One of the examples deals with the treatment of AA2024 panels (see composition in Table 1), coatings with a sol composed of Ce(NO<sub>3</sub>)<sub>3</sub>6H<sub>2</sub>O, glacial acetic acid, citric acid and butanodiol, with a final pH value of 2. The coating is sintered during 12 hours at 120° C., and it is further coated with an epoxy primer. The coated panel was exposed to salt spray test (ASTM B-117) with a scratch, and after 1000 h of exposure the scratch was still protected, attributed by the inventors to the passivation and active protection of the coating.</p>
+      <p id="p-00020-en" num="0019">Another sol-gel process and coating for aluminum alloys is disclosed by F. Ansart et al. in the PCT patent application WO2013/054064 A1 “Process for the anticorrosion treatment of a solid metal substrate and treated solid metal substrate capable of being obtained by such a process” (Université Paul Sabatier Toulouse III, 2013). The described hybrid coating containing cerium nitrate, offers high adherence to the substrate and high mechanical resistance. Its corrosion protection performance is due to the barrier effect and self-healing or active corrosion protection in corrosion pits or other damaged areas. The active protection is conferred by the cerium compound, which can be either chloride, nitrate, acetate or sulfate. A particular coating is described in an example, composed of 3-(glycidoxypropyl)-trimehoxysilane (GPTMS), aluminum tri(s-butoxyde) (ASB) and cerium nitrate, with final cerium content of 0.01 mol/L. The sol is deposited onto AA2024-T3 (see composition in Table 1) and sintered at 110° C. for 3 h. The resulting coating shows a thickness of 6 microns, and offers an exposition between 96 and 800 h in salt spray test without corrosion.</p>
+      <p id="p-00021-en" num="0020">The patent application US2012/0204762 A1 “Aqueous silane systems for bare corrosion protection and corrosion protection of metals” (P. Albert et al., Evonik Degussa GmbH, 2012) relates to an aqueous silane-based composition to be used in corrosion protection in metals. The composition contains metal salts of cerium (III) or cerium (IV) between other metals, and particular preference is given to nitrates and acetates. The resulting coating prevents pitting corrosion in aluminum alloys.</p>
+      <p id="p-00022-en" num="0021">Patent applications WO2011/058209 A1 and WO2013/054064 A1, above summarized, describe sol-gel coatings incorporating cerium compounds. The compositions of both inventions are based on organic solvents, and require thermal treatment at high temperature as the final step of the coating process. Similar characteristics are shown by the silane system presented in the patent application US2012/0204762 A1.</p>
+      <p id="p-00023-en" num="0022">The U.S. Pat. No. 6,077,885 “Chromate-free protective coatings” (H. E. Hager et al., The Boeing Company, 2000) discloses a polymeric coating providing corrosion protection of aluminum and its alloys used in the aircraft industry. The coatings of the invention have a “site blocking” or “buffering” action in that the corrosion inhibitors of the coatings are mobile and migrate into damaged areas to protect them from corrosion. This mobility is a result of the solubility of the inhibitors in the polymer matrix. The coating consists of a film-forming organic polymer or sol-gel containing metallic salts including cerium oxalates, acetates, borate, chlorides and others. The coating may be applied to aluminum alloy substrate as primer coat, a pigmented coat, or as a unicoat. The coating is preferably prepared in liquid form, with the polymer dispersed or dissolved, and the salts present controlled solubility in the polymer or sol-gel, or either they should be suspended in the blend. The salt content is preferably in the range of 100-300 ppm. The polymers are epoxy based, polyimides, polyurethanes, acrylics and alkyd-based systems. 2024-T3 panels (see composition in Table 1) coated with a formulations containing cerium oxalate and/or cerium acetate as inhibitor showed excellent dry and wet adhesion, but poor corrosion results in 1500 h and 3000 h of 5 wt. % NaCl salt spray test on described panels. In the organic polymer or sol-gel coating containing cerium compounds described in this patent, good adhesion results are reported for the cerium salt containing formulation, but with poor corrosion results in salt spray tests.</p>
+      <p id="p-00024-en" num="0023">H. Shoji et al., in the U.S. Pat. No. 6,190,780 “Surface treated metal material and surface treating agent” (Nippon Steel Corporation, 2001), disclose a corrosion protection treatment for metal surfaces including aluminum and its alloys, composed mainly of a oxyacid compound of a rare earth element, other inorganic or organic compounds of rare earth elements, a resin, and an organic corrosion inhibitor. The oxyacid anion may be a phosphate, tungstate, molybdate and/or vanadate, the rare earth element can be cerium, and the corrosion inhibitor a conducting polymer. The treatment shows good adhesion and corrosion performance in the examples comprising the coating of various steel sheets. Although the corrosion protection treatment disclosed in this patent may comprise using cerium and conducting polymer as corrosion inhibitor, silanes are not mentioned. Adhesion and corrosion results are only depicted for zinc and steel.</p>
+      <p id="p-00025-en" num="0024">The U.S. Pat. No. 6,875,479 “Method for coating metal surfaces with aqueous, polymer-containing composition, said aqueous composition and the use of the coated substrates” (C. Jung et al., Chemetall GmbH, 2005) relates to a method for coating a metallic surface including aluminum, with an aqueous composition that contains an polymeric film-forming agent, fine inorganic particles within the range from 0.005 μm to 0.3 μm, at least one organic corrosion inhibitor, optionally a silane, and other optional compounds. One of the proposed compounds to add in fine particle form is cerium dioxide, whereas conducting polymers are mentioned as possible organic corrosion inhibitor. The examples are focused on the treatment of galvanized steel sheets, obtaining films with thickness in the range of 0.8-1 μm, and showing no corrosion up to 720 hours salt spray test under ASTM B-117. Therefore, the composition described in this patent may contain a conducting polymer as corrosion inhibitor, cerium compounds and optionally a silane. However, different to the inorganic salts used in our invention, the cerium is added as cerium dioxide in the form of fine particles. Moreover, the formulation described in U.S. Pat. No. 6,875,479 contains also a film forming organic polymer, and a thermal treatment is required according to its curing conditions. Adhesion and corrosion results are only depicted for galvanized steel sheets.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00026-en" num="0025">In one aspect, the disclosed conversion coating composition includes a conducting polymer dispersion, at least one silane and inorganic metallic salts, wherein a pH of the composition is between 1.0 and 6.0, and wherein the inorganic metallic salts include at least one zirconium salt and at least one cerium nitrate salt.</p>
+      <p id="p-00027-en" num="0026">In another aspect, the disclosed process for treatment of a metallic surface may include the steps of: (a) pretreating the metallic surface; (b) coating the metallic surface with a conversion coating by contacting such metallic surface with a composition including a conducting polymer dispersion, at least one silane and inorganic metallic salts, wherein a pH of the composition is between 1.0 and 6.0, and wherein the inorganic metallic salts include at least one zirconium salt and at least one cerium nitrate salt; and (c) drying the coated metallic surface.</p>
+      <p id="p-00028-en" num="0027">Other aspects of the disclosed composition and process will become apparent from the following detailed description, the accompanying drawings and the appended claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWING</heading>
+      <p id="p-00029-en" num="0028">
+        <figref>FIG. 1</figref> is a process flow chart depicting the steps associated with an embodiment of the disclosed process for treatment a metallic surface with a chromium-free conversion coating of the disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00030-en" num="0029">It has now been discovered that the corrosion performance of a conversion coating may be improved by incorporating at least one cerium nitrate salt to a conversion coating comprising a conducting polymer dispersion, at least one zirconium salt and at least one silane compound. In this patent application, the term “cerium nitrate salt” should be understood as a salt comprising cerium and nitrate ions and, optionally, other cations such as ammonium.</p>
+      <p id="p-00031-en" num="0030">The present disclosure provides an environmentally friendly chemical conversion coating, which may be developed in a process that include a single coating step, that perform a dual function of improving corrosion resistance and promoting adhesion of the subsequent organic coating(s). Additionally, these coatings can be used in parts where low contact electrical resistance is also a requirement. The maximum electrical resistance values allowed by the MIL-DTL-81706-B standard are 775 μΩ/square cm before the salt spray test (MIL-DTL-81706B paragraphs 3.5.1 and 4.5.1, referring to ASTM B-117), and 1550 μΩ/square cm after 168 h of salt spray test under an applied electrode pressure of 1.38 MPa. Individual readings not greater than 20% in excess of the specified maximums shall be acceptable, provided that the average of all readings does not exceed the specified maximum resistance.</p>
+      <p id="p-00032-en" num="0031">Thus, the present disclosure provides a chromium-free coating composition that may be used in the treatment of a metallic surface. Specifically, the chromium-free coating composition may be used to coat a metallic surface with a conversion coating. Despite of being chromium-free, the chromium-free coating is capable of providing equivalent to or superior corrosion protection, adhesion promotion for organic coatings and low contact electrical resistance than a chromium-type coating.</p>
+      <p id="p-00033-en" num="0032">In a first aspect, there is disclosed a composition comprising a conducting polymer dispersion, at least one silane and inorganic metallic salts, wherein the pH of the composition is between 1.0 and 6.0; characterized in that the inorganic metallic salts are: at least one zirconium salt and at least one cerium nitrate salt.</p>
+      <p id="p-00034-en" num="0033">Although both zirconium and cerium salts are used to improve the resistance to corrosion of the metallic surface, the suitable combination of these compounds in the composition of the present invention is not obvious for the skilled person. The combination of different salts may cause changes in the coating composition or in the conversion coating once applied on the metallic surface. In particular, the salts may interact between each other forming complexes, inhibiting the protective action of each of these salts or giving rise to precipitates in the composition and, therefore, obtaining a coating with non-desired properties such as lack of homogeneity or continuity, porosity, lower adherence, etc. These drawbacks in the development of improved conversion coatings, as well as the process of treatment comprising the coating of a metallic surface with such conversion coating, are illustrated in the comparative examples included in this patent application (see below), wherein it is shown that the combination of a zirconium salt with cerium chloride or cerium sulfate does not produce conversion coatings with the desired resistance to the corrosion.</p>
+      <p id="p-00035-en" num="0034">In one embodiment, the present invention refers to the composition as described in this patent application, wherein the at least one zirconium salt is K<sub>2</sub>ZrF<sub>6 </sub>(potassium hexafluorozirconate).</p>
+      <p id="p-00036-en" num="0035">In another embodiment, the composition contains at least one zirconium salt in a concentration of between 2.0 and 20 g/L. In one expression, the at least one zirconium salt is contained in a concentration of between 5.0 and 10.0 g/L, concentrations expressed in weight of Zr salts with respect to the total volume of the composition. In another expression, the at least one zirconium salt is K<sub>2</sub>ZrF<sub>6 </sub>(potassium hexafluorozirconate).</p>
+      <p id="p-00037-en" num="0036">In another embodiment of the present invention, the at least one cerium nitrate salt is selected from the group consisting of cerium (IV) ammonium nitrate, cerium (III) nitrate and any combination thereof. In one expression, the cerium nitrate salt is cerium (IV) ammonium nitrate.</p>
+      <p id="p-00038-en" num="0037">In another embodiment, the composition described in this patent application contains at least one cerium nitrate salt in a concentration of between 0.5 and 20 g/L. In expression the at least one cerium nitrate salt is contained in a concentration of between 0.5 and 3.0 g/L, concentrations expressed in weight of Ce salts with respect to the total volume of the composition. In another expression, the at least one cerium nitrate salt is selected from the group consisting of cerium (IV) ammonium nitrate, cerium (III) nitrate and any combination thereof. In yet another expression, the at least one cerium nitrate salt is cerium (IV) ammonium nitrate.</p>
+      <p id="p-00039-en" num="0038">In another embodiment of the present invention, both the at least one zirconium salt and the at least one cerium salt contained in the composition, are as described in the above paragraphs.</p>
+      <p id="p-00040-en" num="0039">In yet another embodiment, the composition described in this patent application comprises K<sub>2</sub>ZrF<sub>6 </sub>in a concentration of between 5.0 g/L and 10.0 g/L, and cerium (IV) ammonium nitrate in a concentration of between 0.5 and 3 g/L, concentrations expressed in weight of Zr or Ce salts, respectively, with respect to the total volume of the composition.</p>
+      <p id="p-00041-en" num="0040">In another embodiment, this invention refers to the composition as described in this patent application, wherein the pH value of the composition is between 3.0 and 5.0, such as between 3.0 and 3.5 (e.g., 3.5).</p>
+      <p id="p-00042-en" num="0041">The pH value of the composition described in the patent application may be adjusted to the desired range, using alkaline compounds such as ammonia, DMEA (dimethylethanolamine) or phosphate, or acidic compounds, including hexafluorozirconic acid and fluorhydric acid. For example, the pH value may be adjusted using H<sub>2</sub>ZrF<sub>6 </sub>(fluorozirconic acid) and/or DMEA (dimethylethanolamine). The use of DMEA as a base results in an improved conversion coating, with better results in preventing the corrosion of metallic surface and promoting the adhesion of organic coatings.</p>
+      <p id="p-00043-en" num="0042">In another embodiment of the present invention, the at least one silane comprised in the composition described in this patent application, is present in an amount of from 0.01 v % to 1.0 v % (v/v) of the composition, such as from 0.1 v % to 0.5 v % of the composition. With this range of silane content, the adhesion of any organic coating subsequently applied on the conversion coated metallic surfaces improves without compromising the corrosion resistance.</p>
+      <p id="p-00044-en" num="0043">A medium may be used for silane solution preparation. Silanes may be classified as water-based or solvent-based silanes. It may be desirable to use water-based silane systems with zero or very little alcohol content, due to VOC (volatile organic compound) restrictions. As an example, the at least one silane is water soluble.</p>
+      <p id="p-00045-en" num="0044">In another embodiment, the at least one silane is of the formula:</p>
+      <p id="p-00046-en" num="0000">[in-line-formulae]YSiX<sub>(3-a)</sub>Z<sub>a </sub>[/in-line-formulae]</p>
+      <p id="p-00047-en" num="0000">wherein X are equal or different hydrolysable groups, Y is non-hydrolysable group comprising a functional group, Z are independently selected from H and alkyl, and a is 0, 1 or 2.</p>
+      <p id="p-00048-en" num="0045">By “hydrolysable group,” it is meant that the group is susceptible to nucleophilic attack to cleave the group from the silicon atom. Each X is a hydrolysable group such as alkoxy (for example, methoxy (—OCH<sub>3</sub>) or ethoxy (—OC<sub>2</sub>H<sub>5</sub>)). A hydrolysable group allows good adhesion of the compound to nucleophilic sites on the metal and/or further coatings.</p>
+      <p id="p-00049-en" num="0046">By “non-hydrolysable,” it is meant that the group is not susceptible to nucleophilic attack to cleave the group from the silicon atom.</p>
+      <p id="p-00050-en" num="0047">The Y moiety may be joined to the silicon atom by a silicon-carbon bond.</p>
+      <p id="p-00051-en" num="0048">The Y moiety comprises a functional group. That is, the Y moiety comprises a group capable of reacting to link a silicon atom to a further coating, a further silane or to a metal substrate. This functional group can be linked to the silicon atom directly or by an alkylene. Thus, the Y moiety may be, for example, vinyl (—CH═CH<sub>2</sub>), vinylalkylene (-alkylene-CH═CH<sub>2</sub>), amino (—NH<sub>2</sub>), aminoalkylene (-alkylene-NH<sub>2</sub>), epoxy, epoxyalkylene (-alkylene-epoxy), mercapto (—SH) or mercaptoalkylene (-alkylene-SH).</p>
+      <p id="p-00052-en" num="0049">The term “alkylene” refers to a divalent saturated aliphatic hydrocarbon from 1 to 12 carbon atoms. Specifically, the alkylene can be an acyclic C<sub>1</sub>-C<sub>6</sub>-alkylene. More specifically, the alkylene can be an acyclic C<sub>1</sub>-C<sub>3 </sub>alkylene such as methylene, ethylene or propylene.</p>
+      <p id="p-00053-en" num="0050">In the formula YSiX<sub>(3-a)</sub>Z<sub>a</sub>, Z are independently selected from H (hydrogen) and alkyl. That is, Z is a non-hydrolysable group that does not include a functional group for linking the silane to a further coating, a further silane or to the metal substrate.</p>
+      <p id="p-00054-en" num="0051">By “alkyl,” it is meant a straight or branched chain saturated acyclic hydrocarbon group of from 1 to 12 carbons, or a cyclic (e.g., cycloalkyl) saturated hydrocarbon group of from 3 to 12 carbon atoms, unless otherwise specified. Exemplary alkyl groups include C<sub>1</sub>-C<sub>8</sub>, C<sub>1</sub>-C<sub>6</sub>, C<sub>1</sub>-C<sub>4</sub>, C<sub>2</sub>-C<sub>7</sub>, C<sub>3</sub>-C<sub>12</sub>, and C<sub>3</sub>-C<sub>6 </sub>acyclic alkyl. Specific examples include methyl, ethyl, 1-propyl, 2-propyl, 2-methyl-1-propyl, 1-butyl, 2-butyl, and the like.</p>
+      <p id="p-00055-en" num="0052">Unless otherwise noted, the alkyl group may include one or more heteroatoms in the hydrocarbon chain such as oxygen, nitrogen, sulfur or halogen. Specifically, the alkyl group may comprise, for example, one or more of the following groups: ether, amino, sulfyl or halogen.</p>
+      <p id="p-00056-en" num="0053">In one example, in the above formula YSiX<sub>(3-a)</sub>Z<sub>a</sub>, a is 0 (zero). Thus, the at least one silane comprised in the composition is of formula YSiX<sub>3</sub>, wherein Y and X are as defined above.</p>
+      <p id="p-00057-en" num="0054">According to their chemical structures, silane molecules are divided into two major categories, mono-silanes and bis-silanes. Bis-type silanes have two silicon atoms in their molecule, whereas mono-silanes have only one, with a general formula of X<sub>3</sub>Si—R—SiX<sub>3</sub>. The silane may be symmetrical in this way for ease of synthesis and to minimize production costs. The main difference between mono- and bis-silanes is that the number of hydrolysable groups may be double in a bis-silane molecule than in a mono-silane molecule. Thus, it is reported that bis-silanes offer stronger interfacial adhesion (with the substrate) and denser films leading to better corrosion performance compared to mono-silanes, especially in unpainted state.</p>
+      <p id="p-00058-en" num="0055">In another embodiment, the silane may be of formula Z<sub>a</sub>X<sub>(3-a)</sub>Si—R—SiX<sub>(3-a)</sub>Z<sub>a</sub>, where X, Z and a are as defined above, and R is a divalent linker such as an alkylene, an ether (e.g., -alkylene-O-alkylene-) or an aminodialkylene (e.g., -alkylene-NH-alkylene-). For example, R may be an ether such as —CH<sub>2</sub>OCH<sub>2−</sub>, or an aminodialkyene such as —(CH<sub>2</sub>)<sub>3</sub>—NH—(CH<sub>2</sub>)<sub>3</sub>—.</p>
+      <p id="p-00059-en" num="0056">In another embodiment, the at least one silane may be selected from (3-Glycidoxypropyl) trimethoxysilane (GPMS), 1,2-Bis(trimethoxysilyl)ethane (TMSE), 1,2-Bis(Triethoxysilyl) ethane (BTSE), Bis[3-(trimethoxysilyl)propyl]amine (BAS) and Vinyltriacetoxysilane (VTAS), or combinations of two or more thereof. For example, the silane is (3-Glycidoxypropyl) trimethoxysilane (GPMS).</p>
+      <p id="p-00060-en" num="0057">In another embodiment, the conducting polymer dispersion described herein comprises one conducting polymer selected from the group consisting of: polyaniline (PANI), polyethylenedioxythiophene (PEDOT) and polypyrrole (PPY). As one example, the conducting polymer dispersion is water-based dispersion. As another example, the conducting polymer dispersion is a polypyrrole (PPY) dispersion in water. As yet another example, the conducting polymer dispersion is a polypyrrole (PPY) dispersion in water with a solid content of 6% w/v.</p>
+      <p id="p-00061-en" num="0058">In addition, other polymeric components such as acrylics, polyurethanes, epoxides, amino resins, phenolics, vinylics, polyesters, etc. may be added to enhance particular characteristics of the coating.</p>
+      <p id="p-00062-en" num="0059">The composition of the present invention may be prepared as follows: after stirring the conducting polymeric dispersion and any optional additional polymeric component that the final composition might contain, a quantity of at least one zirconium salt and at least one cerium nitrate salt are added to the conducting polymeric dispersion. Subsequently, the dispersion is mixed until the added salts are suitably dissolved. Final concentrations of the added salts in the composition may vary from between 2.0 and 20 g/L of zirconium salt, and between 0.5 and 20 g/L of cerium nitrate salts, concentrations expressed in weight of Zr or Ce nitrate salts, respectively, with respect to the total volume of the composition.</p>
+      <p id="p-00063-en" num="0060">After the inorganic salt(s) are dissolved, at least one silane is added to the conducting polymeric/salt(s) dispersion and, subsequently mixed until the added silane(s) are suitably dissolved. For example, the silane is (3-Glycidoxypropyl)trimethoxysilane (GPMS). The final total concentration of the added silanes in the composition may vary from 0.01 vol. (% v/v) to 1.0 (% v/v) of the composition.</p>
+      <p id="p-00064-en" num="0061">Finally, the pH of the composition is adjusted using alkaline compounds such as ammonia, DMEA (dimethylethanolamine) or phosphate, or acidic compounds such as hexafluorozirconic acid and fluorhydric acid. For example, the pH value is adjusted using H<sub>2</sub>ZrF<sub>6 </sub>(fluorozirconic acid) and/or DMEA (dimethylethanolamine).</p>
+      <p id="p-00065-en" num="0062">Additionally, other components such as other pH adjusting compounds, solvents, non-aqueous dispersion media, other silanes, dispersing agents, surfactants and coalescing solvents may be added to the composition of the invention to provide various degrees of coating effectiveness.</p>
+      <p id="p-00066-en" num="0063">According to a second aspect, the present invention refers to a process for treatment of a metallic surface. The process comprises the steps of: (a) pretreating the metallic surface; (b) coating the metallic surface with a conversion coating by contacting such metallic surface with a composition comprising a conducting polymer dispersion, at least one silane and inorganic metallic salts, wherein the pH value of the composition is between 1.0 and 6.0; and (c) drying the coated metallic surface; characterized in that the inorganic metallic salts are: at least one zirconium salt and at least one cerium nitrate salt.</p>
+      <p id="p-00067-en" num="0064">In other embodiments of the present invention, the composition used in the process for treatment of a metallic surface is as described in any of the embodiments of the first aspect of this patent application.</p>
+      <p id="p-00068-en" num="0065">The metallic surface to be treated may be, for example, aluminum, copper, iron, magnesium, nickel and alloys comprising at least one of them. More specifically, the metallic surface may be an aluminum alloy, for example, the aluminum alloy is one of the alloys 7075-T6, 2024-T3 or 6061-T6.</p>
+      <p id="p-00069-en" num="0066">According to the ASM International Handbook, the nominal composition of these alloys is the following:</p>
+      <p id="p-00070-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="9" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>AA</entry>
+                  <entry>Si</entry>
+                  <entry>Fe</entry>
+                  <entry>Cu</entry>
+                  <entry>Mn</entry>
+                  <entry>Mg</entry>
+                  <entry>Cr</entry>
+                  <entry>Zn</entry>
+                  <entry>Ti</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>7075</entry>
+                  <entry>0.40</entry>
+                  <entry>0.50</entry>
+                  <entry>1.2-</entry>
+                  <entry>0.30</entry>
+                  <entry>2.1-</entry>
+                  <entry>0.18-</entry>
+                  <entry>5.1-</entry>
+                  <entry>0.20</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>2.0</entry>
+                  <entry />
+                  <entry>2.9</entry>
+                  <entry>0.28</entry>
+                  <entry>6.1</entry>
+                </row>
+                <row>
+                  <entry>2024</entry>
+                  <entry>0.50</entry>
+                  <entry>0.50</entry>
+                  <entry>3.8-</entry>
+                  <entry>0.30-</entry>
+                  <entry>1.2-</entry>
+                  <entry>0.10</entry>
+                  <entry>0.25</entry>
+                  <entry>0.15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>4.9</entry>
+                  <entry>0.90</entry>
+                  <entry>1.8</entry>
+                </row>
+                <row>
+                  <entry>6061</entry>
+                  <entry>0.40-</entry>
+                  <entry>0.70</entry>
+                  <entry>0.15-</entry>
+                  <entry>0.15</entry>
+                  <entry>0.80-</entry>
+                  <entry>0.04-</entry>
+                  <entry>0.25</entry>
+                  <entry>0.15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>0.80</entry>
+                  <entry />
+                  <entry>0.40</entry>
+                  <entry />
+                  <entry>1.2</entry>
+                  <entry>0.35</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00071-en" num="0067">Therefore, while the discussion herein is concerned primarily with aluminum and certain specific alloys of aluminum, the disclosure is not so limited. In particular, different metal compositions and alloys as well as additional applications, e.g., automotive, industrial, etc. would benefit from the disclosed process or method and resulting coating as well.</p>
+      <p id="p-00072-en" num="0068">In one particular embodiment, the present invention refers to the process for treatment of an aluminum alloy, such as the alloy 7075-T6, comprising the steps of: (a) pretreating the aluminum alloy surface; (b) coating the aluminum alloy surface with a conversion coating by contacting such metallic surface with a composition comprising: a polypyrrole dispersion in water, (3-Glycidoxypropyl) trimethoxysilane (GPMS), such as between 0.1% and 0.5%(v/v) of the composition, potassium hexafluorozirconate in a concentration of between 5.0 and 10 g/L, expressed in weight of Zr salts with respect to the total volume of the composition, and cerium (IV) ammonium nitrate in a concentration of between 0.5 and 3.0 g/L, expressed in weight of Ce nitrate salts with respect to the total volume of the composition, wherein the pH value of the composition is between 3.0 and 5.0, such as between 3.0 and 3.5; and (c) drying the metallic surfaces.</p>
+      <p id="p-00073-en" num="0069">As can be appreciated by those skilled in the art, chemical conversion surface treatments/coatings generally involve the process of immersion or other contact methods such as spray or brush of a metal (e.g., aluminum and/or alloys of aluminum) with a composition that, through a redox reaction at the metallic surface or chemical deposition at the metallic surface due to physicochemical changes in the composition, form a superficial adhered protective conversion coating. Such conversion coating typically exhibits quite low solubility and, in the case of aluminum, a thickness of approximately 20 nm (nanometer) to 1 mm (millimeter), depending upon the process parameters and the alloy treated. The color of the resulting conversion coating depends upon the metallic surface and the bath/spray parameters.</p>
+      <p id="p-00074-en" num="0070">In another embodiment, the present invention refers to the process of treatment of a metallic surface described in this patent application, wherein the coating is carried out in a single-step by immersion of the metallic pretreated surface, such as an aluminum alloy, into the composition of the invention, for a period of time of at least 1 (one) minute, such as between 1 and 10 minutes, or between 2 and 5 minutes.</p>
+      <p id="p-00075-en" num="0071">In another embodiment, the coating is performed in a single step, by immersion of the pretreated metallic surface, such as an aluminum alloy, into the composition of the invention, at a temperature between 15 and 30° C., such as for the period of time described in the above paragraph.</p>
+      <p id="p-00076-en" num="0072">Thus, the process of treatment according to these embodiments, different from other processes that use cerium compounds described in the art, allows the metallic surface to be coated with a conversion coating with a resistance to corrosion and adhesion similar to known chromium conversion coatings by immersion of the metallic surface into the composition of the invention, for a period of time between 1 and 10 min at a temperature between 15 and 30° C.</p>
+      <p id="p-00077-en" num="0073">Advantageously, the conversion coating of the invention may be applied to the metallic surface in a process that comprises a single coating step by immersion, without any heat treatment and in a very short period of time. Accordingly, metal surface, e.g., panels, to be coated are immersed into the composition described in this patent application, the composition comprising a conducting polymer, zirconium salts, cerium nitrate salts and silanes; optionally along with other additives that affect the composition and/or the resulting conversion coating, e.g., dispersion agents, wetting agents, or polymeric film formation agents.</p>
+      <p id="p-00078-en" num="0074">In another embodiment, the present invention refers to the process of treatment of a metallic surface described in this patent application, wherein the drying step is carried out at a temperature of between 15 and 30° C., such as during a period of time of 8 and 30 hours.</p>
+      <p id="p-00079-en" num="0075">Thus, this invention provides a process for treatment of a metallic surface that allows the metallic surface, such as an aluminum alloy, to be coated with a conversion coating with improved resistance to corrosion and adhesion to subsequent organic coatings, without the need of high temperature or time consuming coating treatments.</p>
+      <p id="p-00080-en" num="0076">The pretreatment step serves to prepare the surface of the metal for the coating. Accordingly, the pretreatment step at least involves the cleaning of the surface. The pretreatment step may further include the steps of: degreasing the surface, cleaning the surface and deoxidizing the surface.</p>
+      <p id="p-00081-en" num="0077">The process for the treatment of a metallic surface described in this patent application may further comprise the steps of: rinsing the metallic surface after cleaning, rinsing the surface after deoxidizing and not-rinsing the surface after coating.</p>
+      <p id="p-00082-en" num="0078">
+        <figref>FIG. 1</figref> depicts an overview of the steps involved in the process for the treatment of a metallic surface of the present invention, according to a particular embodiment. More particularly, the process includes three general steps namely: a) pretreatment, b) coating, and c) drying as described above in this patent application. According to this particular embodiment, the pretreatment begins with degreasing the metal panel to be coated (110). Degreasing may be performed using any of a variety of known detergent solutions and/or organic solvents. Additionally, such degreasing, like all of the process steps, may be performed by spray, immersion or a mixture of the two techniques.</p>
+      <p id="p-00083-en" num="0079">Once the panel to be coated is degreased, it is then cleaned (120) with an alkali solution. Suitable alkali solutions are commercially available under various trade names e.g., TURCO (4215NCLT), and this alkali cleaning is advantageously performed for approximately 10 (ten) minutes at a modest elevated temperature, e.g., 50° C. (degrees Celsius). After cleaning, the panel is rinsed with water and then deoxidized (130) with, for example, TURCO Smut Go NC for approximately 5 (five) minutes at a temperature between 20 and 35° C. and then rinsed. Advantageously, other pickling or desmutting steps can be used depending on the treated substrate material and surface material or thickness to be removed.</p>
+      <p id="p-00084-en" num="0080">As can be now appreciated, the process may employ commercially available pretreatment steps that are well known and understood. Advantageously, such pretreatment is compatible with a variety of alloys and their application is widely understood.</p>
+      <p id="p-00085-en" num="0081">In one particular embodiment, the process for the treatment of a metallic surface described in this patent application includes the immersion of an aluminum alloy panel (140) in the composition for a period of time, such as 2 minutes, followed by direct drying of the treated panel (150), without rinsing the coated metallic surface.</p>
+      <p id="p-00086-en" num="0082">Generally, the composition is prepared by an initial stirring of the conducting polymer dispersion. Advantageously, the polymer dispersion(s) used may be commercially available water-based ones and exhibit satisfactory formulation(s) including solid content, pH, and dispersive additives. Consequently, only a minimal amount of stirring is required for these commercial dispersions.</p>
+      <p id="p-00087-en" num="0083">While the process and the resulting coating(s) have been described in the context of immersion into the composition of the invention, it is understood that alternative coating techniques, e.g. spray coating, may be used as well. Lastly, other metallic substrates, such as steel, aluminum, copper, iron, magnesium, nickel or any of their alloys, will benefit from our method and coating(s).</p>
+      <p id="p-00088-en" num="0084">In a third aspect, the present invention also refers to the conversion coating applied onto a metallic surface by the process described in this patent application.</p>
+      <p id="p-00089-en" num="0085">In a fourth aspect, the present invention refers to the use of the conversion coating described in this patent application to prevent the corrosion of metallic surfaces, to promote the adhesion of organic coatings or both.</p>
+      <p id="p-00090-en" num="0086">In one embodiment, this invention refers to the use of the conversion coating described to prevent corrosion of a metallic surface selected from the group consisting of aluminum, copper, iron, magnesium, nickel and alloys thereof. As one general, non-limiting example, the metallic surface is an aluminum alloy. As one specific non-limiting example, the aluminum alloy is 7075-T6.</p>
+      <p id="p-00091-en" num="0087">In a fifth aspect, the present invention also refers to the metallic surface treated using the process described in this patent application. As one general, non-limiting example, the metallic surface is an aluminum alloy. As one specific, non-limiting example, the aluminum alloy is 7075-T6.</p>
+      <p id="p-00092-en" num="0088">Thus, the present invention provides a coated metallic surface with a high resistance to corrosion, high adhesion to organic coatings and low contact electrical resistance. Due to these properties, the metallic surface of this invention is very useful in several applications, in particular in aircraft, automotive, marine, construction, industrial or household applications.</p>
+      <p id="p-00093-en" num="0089">While the disclosure discusses and describes herein some specific examples, those skilled in the art will recognize that our teachings are not so limited. More specifically, it is understood that the process of treatment and conversion coating may be used in virtually any application requiring corrosion protection, and/or adhesion of subsequently applied organic coating(s) and/or low electrical surface contact resistance and in particular, those applications concerned with the problems associated with hexavalent chromium. Accordingly, it is understood that the process of treatment and conversion coating described in this patent application may be applicable to any automotive, marine, construction, industrial, or household use in addition to aeronautical applications.</p>
+      <p id="p-00094-en" num="0090">These and other features and advantages of the disclosure will become apparent with reference to the attached drawing and detailed description.</p>
+      <p id="p-00095-en" num="0091">In this patent application, different aspects, embodiments and features are defined in detail. Each aspect, embodiment or feature so defined may be combined with any other aspect(s), embodiment(s) or feature(s) (preferred, advantageous or otherwise) unless clearly indicated to the contrary.</p>
+      <heading id="h-00007-en" level="1">EXAMPLES</heading>
+      <heading id="h-00008-en" level="1">Example 1</heading>
+      <p id="p-00096-en" num="0092">A number of samples of 7075T6 aluminum alloy were subjected to the process for treatment of metallic surface of the present invention and, then, the corrosion resistance and adhesion was evaluated. The particular experimental conditions are shown in the Table 1 for PPY/Zr/silane/Ce, based compositions and the Table 2 shows the obtained results.</p>
+      <p id="p-00097-en" num="0093">The sample panels were degreased using organic solvents and then, alkaline cleaned with the commercially available TURCO 4215NCLT solution for approximately 15 minutes at a temperature between 45 and 55° C. After alkaline cleaning, the samples were rinsed with water. Afterwards, the panels were deoxidized with the commercially available TURCO Smut Go NC solution for approximately 5 minutes at a temperature between 20 and 30° C., and then rinsed with water.</p>
+      <p id="p-00098-en" num="0094">Then, the samples were coated by immersion in the compositions for approximately 2 minutes and directly dried. For all of the samples shown in Table 1, the drying conditions ranged between 20 and 30° C. and a period of time of at least 18 hours. The best treatment in terms of corrosion performance in salt spray test (MIL-DTL-81706B paragraphs 3.5.1 and 4.5.1, referring to ASTM B-117), also provided adhesion performance of a subsequently applied organic coating complying with the aeronautical requirements (MIL-DTL-81706B paragraphs 3.5.2 and 4.5.2) in the scribed wet tape paint adhesion tests.</p>
+      <p id="p-00099-en" num="0095">The PPY dispersion used in these examples, Eeonomer 7000 from Eeonyx, is characterized for the following features:</p>
+      <p id="p-00100-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Solid content</entry>
+                  <entry>6.0%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dilution with</entry>
+                  <entry>Water</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pH</entry>
+                  <entry>3 or less</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Conductivity (S/cm)</entry>
+                  <entry>0.01-0.001</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Cast film</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Surface Resistivity (Ohm)</entry>
+                  <entry>10E4-10E6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00101-en" num="0096">Table 2 shows the experimental conditions for a PPY/Zr/silane/Ce set of samples. In this particular set, the [Zr] (zirconium) concentration was effected by varying the amounts of K<sub>2</sub>ZrF<sub>6 </sub>(potassium hexafluorozirconate) and the pH was adjusted with H<sub>2</sub>ZrF<sub>6 </sub>(fluorozirconic acid) and/or DMEA (dimethylethanolamine).</p>
+      <p id="p-00102-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>PPY/Zr/Silane/Ce</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="91pt" align="left" />
+              <colspec colname="6" colwidth="14pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Experi-</entry>
+                  <entry>[PPY]</entry>
+                  <entry>Zr</entry>
+                  <entry>GPMS</entry>
+                  <entry>Cerium nitrate salt</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ment</entry>
+                  <entry>(%)</entry>
+                  <entry>(g/l)*</entry>
+                  <entry>(% vol)</entry>
+                  <entry>(g/l)</entry>
+                  <entry>pH</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>PPY 48</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>0</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 49</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium ammonium nitrate</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 50</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>0.5 Cerium ammonium nitrate</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 51</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>2 Cerium ammonium nitrate</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 52</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium ammonium nitrate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 53</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium ammonium nitrate</entry>
+                  <entry>5.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 54</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>0.5 Cerium ammonium nitrate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 55</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium ammonium nitrate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 56</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>2 Cerium ammonium nitrate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 57</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>3 Cerium ammonium nitrate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 58</entry>
+                  <entry>0.10</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium ammonium nitrate</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 59</entry>
+                  <entry>0.50</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium ammonium nitrate</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 60</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>0.5 Cerium nitrate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 61</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium nitrate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 62</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>1.5 Cerium nitrate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 63</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>3 Cerium nitrate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 64</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium nitrate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 65</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium nitrate</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 66</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Ce ammonium nitrate +</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>1 Cerium nitrate</entry>
+                </row>
+                <row>
+                  <entry>PPY 67</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>2 Ce ammonium nitrate + 1</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Cerium nitrate</entry>
+                </row>
+                <row>
+                  <entry>PPY 68</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Ce ammonium nitrate +</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>0.03 Cerium chloride</entry>
+                </row>
+                <row>
+                  <entry>PPY 69</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Ce ammonium nitrate + 0.5</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Cerium chloride</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00001-en">*[Zr] g/L = [K<sub>2</sub>ZrF<sub>6</sub>] g/L</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00103-en" num="0097">Table 3 shows the corrosion resistance for the PPY/Zr/silane/Ce conversion coating on 7075-T6 aluminum alloy. The results obtained were after 168 hours of salt spray corrosion testing ((MIL-DTL-81706B paragraphs 3.5.1 and 4.5.1, referring to ASTM B-117). The corrosion score values go from 0 (zero) for the worst corrosion performance to 10 (ten) for best corrosion performance. The hexavalent chromium based commercial ALODINE 1200S exhibited the best corrosion performance, with a corrosion score of 10.0.</p>
+      <p id="p-00104-en" num="0098">Table 3 also shows the adhesion performance of a subsequently applied organic coating on 7075-T6 aluminum alloy. The paint adhesion performance was measured according to a wet tape paint adhesion test. Once dried (after 14 days air curing), the corresponding conversion coated panels were painted with an epoxy primer according to the MIL-PRF-85582 standard. The epoxy primer used was a water-reducible epoxy primer system made of 10PW20-4 base and ECW-104 hardener according to MIL-PRF-85582 Type 1 Class 2, provided by Akzo Nobel Aerospace Coatings, BV. Two parallel, 2 inch long scratches, ¾ to 1 inch apart through the coating and to the substrate were made on the panels. The parallel scratches were joined with two intersecting lines, or an “X” pattern. The primed and scribed panels were immersed in deionized water during 24 hours, prior to carrying out the wet paint adhesion tests. Within 2 minutes after removing test panels from water adhesive tape was applied and pressed against the test surface with firm hand pressure and then removed. The hexavalent chromium based commercial ALODINE 1200S exhibited the best pant adhesion performance, with an adhesion score of 10.0. The adhesion test score values go from 0 (zero) for the worst adhesion performance (total detachment of the primer) to 10 (ten) for best adhesion performance (no detachment of the primer).</p>
+      <p id="p-00105-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="84pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>EXPERI-</entry>
+                  <entry>CORROSION SCORE</entry>
+                  <entry>ADHESION SCORE</entry>
+                </row>
+                <row>
+                  <entry>MENT</entry>
+                  <entry>7075 T6</entry>
+                  <entry>7075 T6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="char" char="." />
+              <colspec colname="3" colwidth="84pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>PPY 48</entry>
+                  <entry>8.8</entry>
+                  <entry>9.8</entry>
+                </row>
+                <row>
+                  <entry>PPY 49</entry>
+                  <entry>9.7</entry>
+                  <entry>9.8</entry>
+                </row>
+                <row>
+                  <entry>PPY 50</entry>
+                  <entry>9.5</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 51</entry>
+                  <entry>9.5</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 52</entry>
+                  <entry>9.4</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 53</entry>
+                  <entry>9.0</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 54</entry>
+                  <entry>9.4</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 55</entry>
+                  <entry>9.4</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 56</entry>
+                  <entry>9.0</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 57</entry>
+                  <entry>9.0</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 58</entry>
+                  <entry>9.4</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 59</entry>
+                  <entry>9.4</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 60</entry>
+                  <entry>9.4</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 61</entry>
+                  <entry>9.4</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 62</entry>
+                  <entry>9.5</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 63</entry>
+                  <entry>9.4</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 64</entry>
+                  <entry>9.0</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 65</entry>
+                  <entry>9.5</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 66</entry>
+                  <entry>9.0</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 67</entry>
+                  <entry>8.8</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 68</entry>
+                  <entry>9.0</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>PPY 69</entry>
+                  <entry>9.0</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>Alodine 1200S</entry>
+                  <entry>10.0</entry>
+                  <entry>10.0</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00009-en" level="1">COMPARATIVE EXAMPLE</heading>
+      <p id="p-00106-en" num="0099">The experimental conditions described in Example 1 (see above) have been reproduced using a conducting polymer dispersion containing cerium salts different to cerium nitrate salts, in particular cerium sulfate or cerium chloride. The specific conditions of each comparative experiment are detailed in Table 4 below.</p>
+      <p id="p-00107-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>PPY/Zr/Silane/Ce</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="70pt" align="left" />
+              <colspec colname="6" colwidth="14pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Experi-</entry>
+                  <entry>[PPY]</entry>
+                  <entry>Zr</entry>
+                  <entry>GPMS</entry>
+                  <entry>Cerium salt</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ment</entry>
+                  <entry>(%)</entry>
+                  <entry>(g/l)*</entry>
+                  <entry>(% vol)</entry>
+                  <entry>(g/l)</entry>
+                  <entry>pH</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>PPY 70</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium sulfate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 71</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>2 Cerium sulfate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 72</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>5 Cerium sulfate</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 73</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>5 Cerium sulfate</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 74</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>5 Cerium sulfate</entry>
+                  <entry>5.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 75</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>0.5 Cerium chloride</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 76</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>1 Cerium chloride</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 77</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>2 Cerium chloride</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 78</entry>
+                  <entry>0.25</entry>
+                  <entry>5</entry>
+                  <entry>0.10</entry>
+                  <entry>5 Cerium chloride</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 79</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>0.5 Cerium chloride</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry>PPY 80</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>0.5 Cerium chloride</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry>PPY 81</entry>
+                  <entry>0.25</entry>
+                  <entry>8</entry>
+                  <entry>0.10</entry>
+                  <entry>0.5 Cerium chloride</entry>
+                  <entry>5.0</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00002-en">*[Zr] g/L = [K<sub>2</sub>ZrF<sub>6</sub>] g/L</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00108-en" num="0100">Corrosion inhibition has been checked in the same conditions as Example 1. Results obtained are detailed in Table 5 below.</p>
+      <p id="p-00109-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="133pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>EXPERI-</entry>
+                  <entry>CORROSION SCORE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MENT</entry>
+                  <entry>7075 T6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="133pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>PPY 70</entry>
+                  <entry>7.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 71</entry>
+                  <entry>7.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 72</entry>
+                  <entry>8.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 73</entry>
+                  <entry>9.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 74</entry>
+                  <entry>9.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 75</entry>
+                  <entry>7.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 76</entry>
+                  <entry>7.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 77</entry>
+                  <entry>8.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 78</entry>
+                  <entry>8.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 79</entry>
+                  <entry>9.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 80</entry>
+                  <entry>9.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PPY 81</entry>
+                  <entry>8.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Alodine 1200S</entry>
+                  <entry>10.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A composition comprising a conducting polymer dispersion, at least one silane and inorganic metallic salts, wherein a pH of the composition is between 1.0 and 6.0, and wherein the inorganic metallic salts comprise at least one zirconium salt and at least one cerium nitrate salt.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the at least one zirconium salt is potassium hexafluorozirconate.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the at least one cerium nitrate salt is selected from the group consisting of cerium (III) nitrate, cerium (IV) ammonium nitrate and any combination thereof.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the at least one cerium nitrate salt is cerium (IV) ammonium nitrate.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>:
+<claim-text>wherein the at least one zirconium salt is in a concentration of between 2.0 and 20 g/L, expressed in weight of Zr salts with respect to the total volume of the composition, and</claim-text><claim-text>wherein the at least one cerium nitrate salt is in a concentration of between 0.5 and 20 g/L, expressed in weight of Ce nitrate salts with respect to the total volume of the composition.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the pH is between 3.0 and 5.0.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the at least one silane is present in an amount of from about 0.01 v % (v/v) to about 1.0 v % (v/v) of the composition.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the at least one silane is of the formula:
+<claim-text>YSiX<sub>(3-a)</sub>Z<sub>a </sub></claim-text></claim-text>
+      <claim-text>wherein
+<claim-text>X are equal or different hydrolysable groups,</claim-text><claim-text>Y is non-hydrolysable group comprising a functional group,</claim-text><claim-text>Z are independently selected from H and alkyl, and</claim-text><claim-text>a is 0, 1 or 2.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the at least one silane comprises a member selected from the group consisting of (3-Glycidoxypropyl) trimethoxysilane (GPMS), 1,2-Bis(trimethoxysilyl)ethane (TMSE), 1,2-Bis(Triethoxysilyl) ethane (BTSE), Bis[3-(trimethoxysilyl)propyl]amine (BAS) and Vinyltriacetoxysilane (VTAS), and combinations thereof.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the conducting polymer dispersion comprises one conducting polymer selected from the group consisting of polyaniline, polyethylenedioxythiophene and polypyrrole.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A metallic surface contacted with the composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A process for treatment of a metallic surface, the process comprising steps of:
+<claim-text>a) pretreating the metallic surface;</claim-text><claim-text>b) coating the metallic surface with a conversion coating by contacting such metallic surface with a composition, the composition comprising a conducting polymer dispersion, at least one silane and inorganic metallic salts, wherein a pH of the composition is between 1.0 and 6.0, and wherein the inorganic metallic salts comprise at least one zirconium salt and at least one cerium nitrate salt; and</claim-text><claim-text>c) drying the coated metallic surface.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the coating is performed in a single-step, by immersion of the pretreated metallic surface into the composition for a period of time between 1 and 10 minutes and at a temperature between 15 and 30° C.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the at least one zirconium salt is potassium hexafluorozirconate.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the at least one cerium nitrate salt is selected from the group consisting of cerium (III) nitrate, cerium (IV) ammonium nitrate and any combination thereof.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the at least one cerium nitrate salt is cerium (IV) ammonium nitrate.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref>:
+<claim-text>wherein the at least one zirconium salt is in a concentration of between 2.0 and 20 g/L, expressed in weight of Zr salts with respect to the total volume of the composition, and</claim-text><claim-text>wherein the at least one cerium nitrate salt is in a concentration of between 0.5 and 20 g/L, expressed in weight of Ce nitrate salts with respect to the total volume of the composition.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the pH is between 3.0 and 5.0.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the at least one silane is present in an amount of from about 0.01 v % (v/v) to about 1.0 v % (v/v) of the composition.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the at least one silane is of the formula:
+<claim-text>YSiX<sub>(3-a)</sub>Z<sub>a </sub></claim-text></claim-text>
+      <claim-text>wherein
+<claim-text>X are equal or different hydrolysable groups,</claim-text><claim-text>Y is non-hydrolysable group comprising a functional group,</claim-text><claim-text>Z are independently selected from H and alkyl, and</claim-text><claim-text>a is 0, 1 or 2. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252480A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150252480A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252480A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252480A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252480A1_00003.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150252480A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252480A1.PDF" type="pdf" size="705210" pages="11" />
+</lexisnexis-patent-document>

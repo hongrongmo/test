@@ -1,0 +1,2221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252088A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021756" date-changed="20151215" time-changed="165840">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229082">
+        <country>US</country>
+        <doc-number>20150252088</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14610590</doc-number>
+        <date>20150130</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C07K  14/51        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>51</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C07K  14/51        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>51</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07K   1/14        20130101 LI20150203BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150203</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C07K   1/36        20130101 LI20150203BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150203</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C07K  14/475       20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>475</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">3</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">METHODS AND COMPOSITIONS COMPRISING HUMAN RECOMBINANT GROWTH AND DIFFERENTIATION FACTOR-5 (RHGDF-5)</invention-title>
+    <references-cited date-changed="20151215">
+      <patent-citations name="patcit" date-changed="20151215" />
+      <citation>
+        <patcit num="1" dnum="US2003185792A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030185792</doc-number>
+            <kind>A1</kind>
+            <name>KECK PETER C [US], et al</name>
+            <date>20031002</date>
+          </document-id>
+          <application-date>
+            <date>20020606</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2003219774A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030219774</doc-number>
+            <kind>A1</kind>
+            <name>SHARMA RAHUL [US], et al</name>
+            <date>20031127</date>
+          </document-id>
+          <application-date>
+            <date>20021213</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US8956829B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8956829</doc-number>
+            <kind>B2</kind>
+            <name>SCHER DAVID S [US], et al</name>
+            <date>20150217</date>
+          </document-id>
+          <application-date>
+            <date>20130125</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US9051389B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>9051389</doc-number>
+            <kind>B2</kind>
+            <name>HARRINGTON ROGER E [US], et al</name>
+            <date>20150609</date>
+          </document-id>
+          <application-date>
+            <date>20130125</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150910">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13750436</doc-number>
+              <date>20130125</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8945872</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006105</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>WARSAW ORTHOPDEDIC, INC.</orgname>
+            <address>
+              <city>Warsaw</city>
+              <state>IN</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Scher</last-name>
+            <first-name>David S.</first-name>
+            <address>
+              <city>Collierville</city>
+              <state>TN</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Harrington</last-name>
+            <first-name>Roger E.</first-name>
+            <address>
+              <city>Collierville</city>
+              <state>TN</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173565911">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252088</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150130</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173565910">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252088</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150130</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Expression vector systems are provided for increased production of a recombinant GDF-5 (rhGDF-5) protein. Also provided are transformed host cells that were engineered to produce and express high levels of rhGDF-5 protein. Methods for production and high expression of rhGDF-5 protein are disclosed herein. The methods of enhancing production and protein expression of rhGDF-5 protein as disclosed are cost-effective, time-saving and are of manufacturing quality.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">The present disclosure relates generally to a recombinant human growth and differentiation factor-5 (rhGDF-5) protein and, specifically to expression vector systems for increased production of rhGDF-5, host cells or cell lines for producing rhGDF-5, methods of producing rhGDF-5 using the host cells or cell lines and methods of enhancing production and protein expression of rhGDF-5 protein that are cost-effective, time-saving and manufacturing quality.</p>
+      <p id="p-00002-en" num="0002">Biologic, a therapeutic product, can be made by genetically engineering living cells and requires a high level of precision and care and various factors for its manufacturing process to yield a consistent biologic product each time. For example, a biologic that is produced by recombinant host cells, either in prokaryotes or eukaryotes, can be influenced by (i) individual cell characteristics and (ii) the environment and nutrients provided during the manufacturing process. An example of a biologic is Growth and Differentiation Factor-5 (GDF-5).</p>
+      <p id="p-00003-en" num="0003">GDF-5 belongs to the Bone Morphogenetic Protein (BMP) family, which itself is a subclass of the transforming growth factor-β superfamily of proteins. There are several variants and mutants of GDF-5 (GDF family members), some of which include the first isolated mouse GDF-5 (U.S. Pat. No. 5,801,014); MP52, a human form of GDF-5 (hGDF-5; (WO 95/04819)) or LAP-4 (Triantfilou et al., Nature Immunology 2, 338-345, 2001); cartilage-derived morphogenetic protein (CDMP)-1, an allelic protein variant of hGDF-5 (Chang, S. C. et al., J. Biol. Chem. 269(45):28227-34 (1994); WO 96/14335); rhGDF-5, a recombinant human form prepared from bacteria (EP 0955313); rhGDF-5-Ala83, a monomeric variant of rhGDF-5; BMP-14, a collective term for hGDF-5/CDMP-1 like proteins; SYNS2; Radotermin, the international non-proprietary name designated by the World Health Organization; HMW MP52's, high molecular weight protein variants of MP52; C465A, a monomeric version wherein the cysteine residue responsible for the intermolecular cross-link is substituted with alanine; also other active monomers and single amino acid substitution mutants including N445T, L441 P, R438L, and R438K.</p>
+      <p id="p-00004-en" num="0004">The GDF-5 family members share common structural features including a carboxy terminal active domain and is characterized by a polybasic proteolytic processing site, which can be cleaved to release a mature protein containing seven conserved cysteine residues. The conserved pattern of cysteine residues creates 3 intra-molecular disulfide bonds and one inter-molecular disulfide bond. The active form can be either a disulfide-bonded homodimer of a single family member or a heterodimer of two different members (Massague et al., Ann. Rev. Cell Biol. 6:957 (1990); Sampath et al., J. Biol. Chem. 265:13198 (1990); Celeste et al., Proc. Natl. Acad. Sci. USA 87:9843-7 (1990); U.S. Pat. No. 5,011,691 and U.S. Pat. No. 5,266,683). The proper folding of the GDF-5 protein and formation of these disulfide bonds are essential to biological functioning, and misfolding leads to inactive aggregates and cleaved fragments.</p>
+      <p id="p-00005-en" num="0005">GDF-5 is expressed in the developing central nervous system (O'Keeffe, G. et al., J. Neurocytol. 33(5):479-88 (2004) and has a role in skeletal and joint development (Buxton, P. et al., J. Bone Joint Surg. Am. 83-A, S1(Pt. 1):523-30 (2001); Francis-West, P. et al., Development 126(6):1305-15 (1999); Francis-West, P. et al., Cell Tissue Res. 296(1):111-9 (1999)). The GDF-5 family members are regulators of cell growth and differentiation in both embryonic and adult tissues. For example, GDF-5 may induce angiogenesis in the bone formation process (Yamashita, H. et al., Exp. Cell Res. 235(1):218-226 (1997); CDMP-1 stimulates activity of articular chondrocytes thereby contributing to the integrity of the joint surface (Erlacher, L. et al., Arthritis Rheum. 41(2):263-73 (1998)). Changes in expression patterns of GDF-5 and its receptors are associated with human articular chondrocyte dedifferentiation (Schlegel, W. et al., J. Cell Mol. Med. 13(9B):3398-404 (2009)). As a growth factor, GDF-5 (CDMP) may stimulate proteoglycan production in the human degenerate intervertebral disc (Le Maitre, C. L. et al., Arthritis Res. Ther. 11(5):R137 (2009)). It may increase the survival of neurons that respond to a dopamine neurotransmitter and can be a potential therapeutic molecule associated with Parkinson's disease. (Sullivan and O'Keeffe, J. Anat. 207(3):219-26 (2005)). When rhGDF-5 was delivered on beta-tricalcium phosphate, an effective encouragement of periodontal tissue regeneration in non-human primates was observed. In tissues critical for periodontal repair (e.g. alveolar bone, cementum and periodontal ligament), rhGDF-5 treatment on these tissues showed evidence of regeneration and the response was found to be dose-dependent (Emerton, K. B. et al., J. Dental Res. 90(12):1416-21 (2011). Based on this finding and other similar reports, a biologic such as GDF-5 may offer new approaches or options to regenerate bone during dental implant placement and may save a tooth in patients who are at risk for tooth loss due to periodontal disease.</p>
+      <p id="p-00006-en" num="0006">GDF-5 gene mutations can be associated with the following health conditions, e.g., acromesomelic chrondrodysplasia Grebe type (AMDG; (Thomas, J. T. et al., Nat. Genet. 1:58-64 (1997);), Hunter-Thompson type (AMDH; (Thomas, J. T. et al., Nat. Genet. 3:315-7 (1996)); brachydactyly type C (BDC; Francis-West, P. H. et al., Development, 126(6):1305-15 (1999), Everman, D. B. et al., Am. J. Med. Genet., 112(3):291-6 (2002), Schwabe, G. C. et al., Am. J. Med. Genet. A. 124A(4):356-63 (2004)); DuPan syndrome (DPS), which is also known as fibular hypoplasia and complex brachydactyly (Faiyaz-Ul-Haque, M. et al., Clin. Genet. 61(6):454-8 (2002)); Mohr-Wriedt brachydactyly type A2 (Kjaer, K. W. et al., J. Med. Genet. 43(3):225-31 (2006)); multiple synostoses syndrome type 2 (SYNS2; Dawson, K. et al., Am. J. Human Genet. 78(4):708-12 (2006), Schwaerzer, G. K. et al., J. Bone Miner. Res. 27(2):429-42 (2012)); semidominant brachydactyly A1 (BA1; Byrnes, A. M. et al., Hum. Mutat. 31(10): 1155-62 (2010)); symphalangism (SYM1; Yang, W. et al., J. Hum. Genet. 53(4):368-74 (2008)) or brachydactyly type A2 (BDA2; Seemann, P. et al., J. Clin. Invest. 115(9):2373-81 (2005), Plöger, F. et al., Hum. Mol. Genet. 53(4):368-74 (2008)); susceptibility to osteoarthritis type 5 (OS5; Masuya, H. et al., Hum. Molec. Genet. 16:2366-75 (2007), Miyamoto, Y. et al., Nature Genet. 39:529-53 (2007)); knee osteoarthritis in Thai ethnic population (Tawonsawatruk, T. et al., J. Orthop. Surg. Res. 6:47 (2011)). GDF5 gene variants have been associated with hand, knee osteoarthritis and fracture risk in elderly women, which replicates the previous association between GDF5 variation and height. (Vaes, R. B. et al., Ann Rheum. Dis. 68(11):1754-60 (2009)). All of these associations confirmed that the GDF-5 gene product may play a role in skeletal development.</p>
+      <p id="p-00007-en" num="0007">Expression of GDF-5-related proteins using recombinant DNA techniques has been done and their purification and production for industrial scale have also been explored. See for example, Hötten, U.S. Pat. No. 6,764,994; Makishima, U.S. Pat. No. 7,235,527; Ehringer, U.S. Pat. No. 8,187,837). Both Hötten and Makishima described (<b>1</b>) a complete DNA nucleotide sequence that codes for the TGF-β protein MP-52 and the complete amino acid sequence of MP52; and (2) a composition containing a pharmaceutically active amount of the MP-52 for wound healing and tissue regeneration, treating cartilage and bone diseases and dental implants. According to Makashina, isolation of pure MP-52 at least with the mature region from the mixture was difficult (Makashina, column 1, lines 59-61). To overcome this obstacle, Makashina constructed a DNA plasmid wherein a codon encoding methionine was linked to the DNA sequence that encodes for a 119-amino acid residue protein (MP-52) and wherein the N-terminal alanine of the mature MP-52 protein (120-amino acid residue) was eliminated. Ehringer, on the other hand, described an advanced method for the efficient prokaryotic production and purification of GDF-5 related proteins that resulted in better protein yield, high product purity and improved industrial applicability. Problems encountered during the purification and refolding of the GDF-5-related proteins in large scale were disclosed and addressed.</p>
+      <p id="p-00008-en" num="0008">The use of prokaryotic expression vectors such as bacterial plasmids for expressing preventive or therapeutic peptides (biologics) is very critical and beneficial not only for biochemical research and biotechnology but even more so for medical therapy. Such use is the basis of many biologics manufacturing processes. High-cell density (HCD) fermentation methods that employ these processes offer many advantages over traditional methods in that the final product concentrations are higher, downtime and water usage are reduced, and overall productivity is improved resulting in lower set-up and operating costs.</p>
+      <p id="p-00009-en" num="0009">The recombinant protein and plasmid DNA production typically involves: (1) bacterial propagation and fermentation production, wherein a plasmid encoding a gene of interest is transformed into a bacterial cell, typically <i>Escherichia coli </i>(<i>E. coli</i>), propagated to make master and working cell banks, and further grown in a bioreactor (e.g., fermentor) to make production cells that contain high yields of the plasmid; and (2) purification and formulation stability, wherein the production cells are lysed and plasmid DNA carrying the gene of interest is purified by a plurality of purification methods and formulated for delivery. Expression is particularly higher if the gene of interest is codon optimized to match that of the target organism, which leads to improved gene function and increased protein expression, which ultimately leads to cost-effectiveness of mass producing the recombinant protein.</p>
+      <p id="p-00010-en" num="0010">Plasmid fermentation processes for plasmid production should be optimized to retain a high percentage of supercoiled plasmid. Other plasmid forms are difficult to eliminate during purification and their presence are undesirable. Fermentation media and processes needs to be optimized for plasmid yield, plasmid quality and compatibility of the resultant cells for harvest and lysis. There are about three fermentation processes that can be utilized to initiate production, namely: batch, batch-fed or continuous fermentation processes. For a large scale production, a batch fermentation that generally yields about 10-20 mg/L of plasmid DNA has its limitations such as uncontrolled growth rates and waste product accumulation (e.g., production of reduced carbon metabolites such as acetates, lactates and formates) that ultimately would lead to inhibition of bacterial growth. To prevent these issues from occurring and to increase plasmid yield, fed-batch or continuous high cell density fermentation can be a better option. Continuous fermentation processes are more conducive to the production of large amounts of a single product but sterility remains an issue. Fed-batch fermentation begins with a short batch fermentation and is proceeded by the addition of media at a defined rate. It is more flexible and consistent than the batch method and allows for simple optimization of fermentation profiles for each plasmid DNA product. When employing a defined growth rate strategy as a form of feed strategy, a feed media is added at rates that are determined based on a pre-established growth profile, wherein the feed is triggered by an initial DO2 spike (caused by the exhaustion of initial bolus of glucose in the media). Peterson, M. and Brune, M., in BioPharm International Supplements entitled: “Maximizing Yields of Plasmid DNA Processes,” Jun. 2, 2008.</p>
+      <p id="p-00011-en" num="0011">Chemically-defined (minimal) media contain known quantities of ingredients added to purified water. The absence of animal-derived components in chemically-defined media may be more desirable from a regulatory standpoint due to concerns over BSE/TSE (spongiform encephalopathy/transmissible spongiform encephalopathy). They have reproducibility (their components have known chemical structures that can allow consistent performance of cells in the medium), greater simplicity of both downstream processing and the analysis of product and greater control of feeding strategy when carbon sources are known.</p>
+      <p id="p-00012-en" num="0012">Complex media, on the other hand, are digests of food and agriculture by-products (i.e. protein hydrolysate and yeast extract). They can provide a majority of needed nutrients to host cell (e.g., <i>Escherichia coli</i>) fermentation. They may produce high yields at lower costs (thus, more cost-effective) and less control over individual components and possibly vary from lot-to-lot.</p>
+      <p id="p-00013-en" num="0013">Semi-defined media contain small concentrations of complex ingredients usually from about 0.05 to about 0.5% added to a chemically defined media. Semi-defined media can maximize performance while minimizing downstream processing issues. Small amount of complex material may provide enough nutrients to enhance growth of microorganisms without interfering with recovery or analysis.</p>
+      <p id="p-00014-en" num="0014">Given the role of GDF-5 in cell growth and differentiation, in particular, skeletal and joint development and bone regeneration, there is a critical need for a therapeutic rhGDF-5 biologic that can be manufactured in large scale processes. There is an urgent need for improving the manufacturing process of rhGDF-5 that can be cost-effective, time-saving and manufacturing quality.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00015-en" num="0015">The present disclosure includes methods and compositions for the production of rhGDF-5 using the T5 or Trc promoter in the production of rhGDF-5 for therapeutic applications. The rh-GDF-5 can be easily produced in large scale quantities in a cost-effective and time-saving manner.</p>
+      <p id="p-00016-en" num="0016">In various embodiments, there is an expression vector comprises a T5 or a Trc promoter operably linked to a polynucleotide sequence that encodes a GDF-5 protein.</p>
+      <p id="p-00017-en" num="0017">In various embodiments, a host cell line engineered to express rhGDF-5 protein by the expression of a vector is also provided.</p>
+      <p id="p-00018-en" num="0018">In various embodiments, there is a method for producing a rhGDF-5 (rhGDF-5) polypeptide comprises: providing a prokaryotic host cell comprising an expression vector which comprises a polynucleotide sequence encoding a polypeptide sequence under the control of a T5 or Trc promoter; cultivating the prokaryotic host cell under suitable conditions so as to induce or promote the expression of the polynucleotide sequence of SEQ ID NO: 1 in the expression vector; and recovering the rhGDF-5 polypeptide.</p>
+      <p id="p-00019-en" num="0019">In some embodiments, there is a method of purifying recombinant GDF-5 protein from a cell, the method comprising: recovering a GDF-5 protein from the cell comprising an expression vector having a T5 or a Trc promoter operatively linked to a polynucleotide sequence that encodes a GDF-5 protein by contacting the GDF-5 protein with a solid support so as to immobilize the GDF-5 protein.</p>
+      <p id="p-00020-en" num="0020">In some embodiments, there is a method of purifying recombinant GDF-5 protein from a prokaryotic cell, the method comprising: recovering a GDF-5 protein from inclusion bodies of the prokaryotic cell, the prokaryotic cell comprising an expression vector having a T5 or a Trc promoter operatively linked to a polynucleotide sequence that encodes a GDF-5 protein by contacting the GDF-5 protein with a solid support so as to immobilize the GDF-5 protein.</p>
+      <p id="p-00021-en" num="0021">In some embodiments, there is a host cell line, the cell line comprising an inclusion body comprising an isolated GDF-5 protein, wherein the host cell includes an expression vector which comprises a polynucleotide encoding for an rhGDF-5 protein under the control of a T5 or Trc promoter.</p>
+      <p id="p-00022-en" num="0022">Additional features and advantages of various embodiments will be set forth in part in the description that follows, and in part will be apparent from the description, or may be learned by practice of various embodiments. The objectives and other advantages of various embodiments will be realized and attained by means of the elements and combinations particularly pointed out in the description and appended claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00023-en" num="0023">In part, other aspects, features, benefits and advantages of the embodiments will be apparent with regard to the following description, appended claims and accompanying drawings where:</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIGS. 1A and 1B</figref> are plasmid maps of pGDF5-T5 and pGDF5-Trc expression vectors, respectively.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 1C</figref> shows a protein alignment of the theoretical amino acid sequence encoded by pGDF5-Trc and that of a commercially-known rhGDF-5 protein, as set forth in the Sequence Listing as SEQ ID NOs: 4 and 5, respectively.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIGS. 2A and 2B</figref> are agarose gels showing NdeI-linearized plasmid DNAs prepared from pGDF5-T5- and pGDF5-Trc-transformed DH10β and STBL2 clones.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIGS. 3A and 3B</figref> are Western blots showing the absence and presence of GDF-5 protein in the supernatant and pellet fractions of selected pGDF5-Trc-transformed clones, respectively.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 3C</figref> shows the lanes and samples that correspond to the Western blots of <figref>FIGS. 3A and 3B</figref>.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 4A</figref> is a Western blot showing over-expression of GDF-5 in pGDF5-Trc-transformed Clones 1 and 4.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 4B</figref> shows the growth profile and rate of pGDF5-Trc-transformed HMS174 Clones 1 and 4.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIGS. 5A and 5B</figref> shows the growth profiles of pGDF5-Trc-transformed HMS174 Clones 1 and 4 when grown using the ultra yield shake flask and 5 L Applikon Fermentor, respectively.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 6A</figref> is a Coomassie brilliant blue-stained gel showing GDF-5 protein production from supernatant and pellet fractions of pGDF5-Trc-transformed HMS174 Clones 1 and 4 that were grown by either using the ultra yield shake flask method or the 5 L Applikon Fermentor method.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 6B</figref> is a Western blot showing GDF-5 over-expression from supernatant and pellet fractions of pGDF5-T5- and -Trc-transformed HMS174 Clones 1 and 4 that were grown by either using the ultra yield shake flask method or the 5 L Applikon Fermentor method.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 7</figref> is an exemplary formulation of a high cell density media according to the embodiment of the present disclosure.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIGS. 8A</figref>, <b>8</b>B and <b>8</b>C show the enhancing effects of sodium molybdate, magnesium sulfate, heptahydrate and sodium chloride on rhGDF-5 expression when these three components were added to Media 1, which was optimized based on its improved response to rhGDF-5 expression in the cultured pGDF5-Trc-transformed host cells. Data obtained were evaluated using statistical software.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIGS. 9A and 9B</figref> show an increase of rhGDF-5 expression by the addition of yeast extract and magnesium sulfate into Media 2 (optimized based on its improved response to rhGDF-5 expression) but the addition of sodium molybdate decreased rhGDF-5 expression in pGDF5-Trc-transformed host cells. Data obtained were evaluated using statistical software.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIGS. 9C and 9D</figref> show biomass optimization by the addition of yeast extract while negatively affected by the addition of sodium chloride and MOPS when these three components were added to Media 3, which was optimized based on its improved response to biomass yield in the growth of pGDF5-Trc-transformed host cells. Data obtained were evaluated using statistical software.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIGS. 9E and 9F</figref> show the results for the optimization of the culture media.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 10</figref> is a Coomassie brilliant blue-stained gel showing the level of GDF-5 protein production of pGDF5Trc-transformed HMS174 cells when grown under different types high cell density media that were designed with respect to their optimized response to either rhGDF-5 expression (protein production) and biomass yield (growth rate): Media 1 (defined media improved rhGDF-5 expression); Media 2 (semi-defined media improved rhGDF-5 expression); and Media 3 (semi-defined media improved biomass yield).</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIGS. 11A-C</figref> are Coomassie brilliant blue-stained gels showing the level of GDF-5 protein production and expression of pGDF5Trc-transformed HMS174 cells when grown under (a) pH 6.5 (condition A); (b) pH 7.1 (condition B); and (c) pH 6.8 at low oxygen (condition C), respectively.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 11D</figref> shows the effect of pH and oxygen on protein expression and growth rate of pGDF5Trc-transformed HMS174 cells.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 11E</figref> shows the effect of pH and oxygen on the ratio of two major expressed bands, 40 kDa:14 kDa of pGDF5Trc-transformed HMS174 cells.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00043-en" num="0043">It is to be understood that the figures are not drawn to scale. Further, the relation between objects in a figure may not be to scale, and may in fact have a reverse relationship as to size. The figures are intended to bring understanding and clarity to the structure of each object shown, and thus, some features may be exaggerated in order to illustrate a specific feature of a structure.</p>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00044-en" num="0044">For the purposes of this specification and appended claims, unless otherwise indicated, all numbers expressing quantities of ingredients, percentages or proportions of materials, reaction conditions, and other numerical values used in the specification and claims, are to be understood as being modified in all instances by the term “about.” Accordingly, unless indicated to the contrary, the numerical parameters set forth in the following specification and attached claims are approximations that may vary depending upon the desired properties sought to be obtained by the present application. At the very least, and not as an attempt to limit the application of the doctrine of equivalents to the scope of the claims, each numerical parameter should at least be construed in light of the number of reported significant digits and by applying ordinary rounding techniques.</p>
+      <p id="p-00045-en" num="0045">Notwithstanding that the numerical ranges and parameters setting forth the broad scope of the present disclosure are approximations, the numerical are as precise as possible. Any numerical value, however, inherently contains certain errors necessarily resulting from the standard deviation found in their respective testing measurements. Moreover, all ranges disclosed herein are to be understood to encompass any and all subranges subsumed therein. For example, a range of “1 to 10” includes any and all subranges between (and including) the minimum value of 1 and the maximum value of 10, that is, any and all subranges having a minimum value of equal to or greater than 1 and a maximum value of equal to or less than 10, e.g., 5.5 to 10.</p>
+      <p id="p-00046-en" num="0046">Additionally, unless defined otherwise or apparent from context, all technical and scientific terms used herein have the same meanings as commonly understood by one of ordinary skill in the art to which this disclosure belongs.</p>
+      <p id="p-00047-en" num="0047">Unless explicitly stated or apparent from context, the following terms are phrases have the definitions provided below:</p>
+      <p id="p-00048-en" num="0048">It is noted that, as used in this specification and the appended claims, the singular forms “a,” “an,” and “the” include plural referents unless expressly and unequivocally limited to one referent.</p>
+      <p id="p-00049-en" num="0049">For the purposes of this application the term “GDF-5” is meant to include all variants and mutants of the GDF-5 protein, and rhGDF-5 is an exemplary member having 125 amino acids as set forth in the Sequence Listing as SEQ ID NO:4.</p>
+      <p id="p-00050-en" num="0050">The term “cysteine-knot domain” refers to a conserved cysteine-rich amino acid region that is present in the mature parts of TGF-β superfamily proteins, such as i.e. human GDF-5 and forms a three-dimensional protein structure known as cysteine-knot. It has been shown that the cysteine-knot domain alone is sufficient for the biological function of the protein (Schreuder et al., Biochem. Biophys. Res. Commun. 329:1076-86(2005)). Consensus sequences for cysteine-knot domains are well known in the state of the art. The cysteine-knot-domain of a protein starts with the first cysteine residue participating in the cysteine-knot of the respective protein and ends with the residue which follows the last cysteine participating in the cysteine-knot of the respective protein. For example, the cysteine-knot domain of the human GDF-5 precursor protein consists of the amino acids 24-125 (see the underlined region of the amino acid sequence of SEQ ID NO:4 encoded by pGDF5-Trc as shown in <figref>FIG. 1C</figref>).</p>
+      <p id="p-00051-en" num="0051">The term “recombinant” indicates that the material (e.g., a nucleic acid or a polypeptide) has been artificially or synthetically (i.e., non-naturally) altered by human intervention. The alteration can be performed on the material within, or removed from, its natural environment or state. For example, a “recombinant nucleic acid” is one that is made by recombining nucleic acids, e.g., during cloning, DNA shuffling or other well-known molecular biological procedures. A “recombinant DNA molecule” is comprised of segments of DNA joined together by means of such molecular biological techniques. The term “recombinant protein” or “recombinant polypeptide” as used herein refers to a protein molecule which is expressed using a recombinant DNA molecule. A “recombinant host cell” is a cell that contains and/or expresses a recombinant nucleic acid.</p>
+      <p id="p-00052-en" num="0052">A “polynucleotide sequence” or “nucleotide sequence” or “nucleic acid sequence,” as used interchangeably herein, is a polymer of nucleotides, including an oligonucleotide, a DNA, and an RNA, a nucleic acid or a character string representing a nucleotide polymer, depending on context. From any specified polynucleotide sequence, either the given nucleic acid or the complementary polynucleotide sequence can be determined. Included is DNA or RNA of genomic or synthetic origin which may be single- or double-stranded and represent the sense or anti-sense strand.</p>
+      <p id="p-00053-en" num="0053">The term “oligonucleotide” as used herein includes naturally occurring, and modified nucleotides linked together by naturally occurring and non-naturally occurring oligonucleotide linkages. Oligonucleotides are a polynucleotide subset generally comprising a length of 200 bases or fewer. Preferably oligonucleotides are 10 to 60 bases in length and most preferably 12, 13, 14, 15, 16, 17, 18, 19, or to 40 bases in length. Oligonucleotides are usually single stranded, e.g. for primers and probes; although oligonucleotides may be double stranded, e.g. for use in the construction of a gene mutant. Oligonucleotides of the present disclosure can be either sense or anti-sense oligonucleotides.</p>
+      <p id="p-00054-en" num="0054">As used herein, the terms “nucleic acid molecule encoding,” “DNA sequence encoding” and “DNA encoding” refer to the order or sequence of deoxyribonucleotides along a strand of deoxyribonucleic acid. The order of these deoxyribonucleotides determines the order of ribonucleotides along the mRNA chain, and also determines the order of amino acids along the polypeptide (protein) chain. The DNA sequence thus codes for the RNA sequence and for the amino acid sequence.</p>
+      <p id="p-00055-en" num="0055">“Expression of a gene” or “expression of a nucleic acid” means transcription of DNA into RNA (optionally including modification of the RNA, e.g., splicing), translation of RNA into a polypeptide (possibly including subsequent post-translational modification of the polypeptide), or both transcription and translation, as indicated by the context.</p>
+      <p id="p-00056-en" num="0056">As used herein the term “coding region” when used in reference to a structural gene refers to the nucleotide sequences which encode the amino acids found in the nascent polypeptide as a result of translation of an mRNA molecule.</p>
+      <p id="p-00057-en" num="0057">Recombinant DNA-mediated protein expression techniques are applicable to the making of the rhGDF-5 protein. Briefly, a recombinant DNA molecule or construct (pGDF5-T5 or pGDF5-Trc, the polynucleotide sequences of which are set forth in the Sequence Listing as SEQ ID NOS: 2 and 3, respectively), coding for the gene of interest (GDF-5, the polynucleotide sequence as set forth in Sequence Listing as SEQ ID NO:1) is prepared. Methods of preparing such DNA molecules are well known in the art. For instance, sequences encoding the gene of interest (e.g. rhGDF-5 or GDF-5 (SEQ ID NO: 1)) can be excised from DNA using suitable restriction enzymes. Any of a large number of available and well-known host cells may be used in the practice of this present disclosure. The selection of a particular host is dependent upon a number of factors recognized by the art. These include, for example, compatibility with the chosen expression vector, toxicity of the peptides encoded by the DNA molecule, rate of transformation, ease of recovery of the peptides, expression characteristics, biosafety and costs. A balance of these factors must be struck with the understanding that not all hosts may be equally effective for the expression of a particular DNA sequence. Within these general guidelines, useful microbial host cells in culture include bacteria such as <i>Escherichia coli </i>sp. Modifications can be made at the DNA level, as well. For example, the GDF-5 encoding DNA sequence (SEQ ID NO: 1) may be changed to codons more compatible with the chosen host cell. For <i>E. coli</i>, optimized codons are known in the art. Codons can be substituted to eliminate restriction sites or to include silent restriction sites, which may aid in processing of the DNA in the selected host cell. The transformed bacterial host cell line or cell strain is then cultured and purified. Host cells or strains may be cultured under conventional fermentation conditions so that the desired compounds are expressed. Such fermentation conditions are well known in the art.</p>
+      <p id="p-00058-en" num="0058">The region of the vector to which the gene of interest is cloned is referred to herein as an “insertion site.” Preferably, the gene of interest is rhGDF-5 or GDF-5, designated in the Sequence Listing as SEQ ID NO: 1.</p>
+      <p id="p-00059-en" num="0059">In one embodiment, the vector comprises an Nde1 restriction site for restriction enzyme analysis purposes.</p>
+      <p id="p-00060-en" num="0060">The term “expression vector” according to the embodiment of the present disclosure refers to a vehicle for introducing a gene of interest into a host cell to express the gene or a recombinant DNA molecule containing a desired coding sequence and appropriate nucleic acid sequences necessary for the expression of the operably linked coding sequence in a particular host cell. Nucleic acid sequences necessary for expression in prokaryotes include a promoter, optionally an operator sequence, a ribosome binding site and possibly other sequences. Expression vectors or vectors according to the embodiment of the present disclosure include plasmid vectors.</p>
+      <p id="p-00061-en" num="0061">In one embodiment, the expression vectors of the present disclosure may include regulatory promoters, examples of which may include but are not limited to, T5, T7 and Trc promoters. The regulatory promoters of the present disclosure can be induced by is opropyl-β-D-thiogalactoside (IPTG).</p>
+      <p id="p-00062-en" num="0062">The expression vectors of the present disclosure, which is provided for inducing high expression of a gene of interest (GDF-5 (SEQ ID NO:1)) in the host cells, may preferably further include a resistance gene for host cells, which is used as a selectable marker for permanent expression of the gene in the host cells. Non-limiting examples of such resistance genes for animal cells include those commonly used in the art, such as ampicillin-, neomycin-, kanamycin-, zeomycin- and hygromycin-resistant genes. A resistance gene, according to the embodiment of the present disclosure, is the Kanamycin-resistant (Kan<sup>r </sup>gene).</p>
+      <p id="p-00063-en" num="0063">According to one embodiment of the present disclosure, the term “host cell” is used to refer to a cell which has been transformed, or is capable of being transformed with a nucleic acid sequence and then of expressing a selected gene of interest (GDF-5, SEQ ID NO:1). Thus, a host cell, as used herein, is also a transformed cell line (or strain) or a transformant.</p>
+      <p id="p-00064-en" num="0064">The term “recombinant host cell” (or simply “host cell”), as used herein, is intended to refer to a cell into which a recombinant expression vector has been introduced. It should be understood that such terms are intended to refer not only to the particular subject cell but to the progeny of such a cell. Because certain modifications may occur in succeeding generations due to either mutation or environmental influences, such progeny may not, in fact, be identical to the parent cell, but are still included within the scope of the term “host cell” as used herein.</p>
+      <p id="p-00065-en" num="0065">The term “operably linked” refers to a functional linkage between an expression control sequence and a second nucleic acid sequence, wherein the expression control sequence directs transcription of the nucleic acid corresponding to the second sequence.</p>
+      <p id="p-00066-en" num="0066">A host cell “engineered to overexpress” a protein (or a nucleic acid encoding such protein) is a host cell, including a descendant thereof, that has been altered in such a way that higher levels of such protein are expressed than normal, compared to the unaltered host cell. Thus, included within this category are expression of proteins foreign to the host cell, proteins not naturally expressed by the host cell, or proteins naturally expressed by the host cell at relatively low levels that increase after alteration of the host cell.</p>
+      <p id="p-00067-en" num="0067">In a preferred aspect, the recombinant protein of interest (rhGDF-5 designated in the Sequence Listing as SEQ ID NO: 4) is expressed in the prokaryotic host cells, such as, for example <i>E. coli </i>host cells. Examples of prokaryotic host cell strains include, but are not limited to DH10β, STBL2, HMS174 and recA.</p>
+      <p id="p-00068-en" num="0068">The term “isolated nucleic acid” refers to a nucleic acid of the present disclosure that is free from at least one contaminating nucleic acid with which it is naturally associated. A “nucleic acid” refers to a DNA or RNA sequence, optionally including artificial bases or base analogs.</p>
+      <p id="p-00069-en" num="0069">The term “identity” (or “percent identical”) is a measure of the percent of identical matches between the smaller of two or more sequences with gap alignments (if any) addressed by a particular mathematical model or computer program (i.e., “algorithms”). The term “similarity” is a related concept but, in contrast to “identity”, includes both identical matches and conservative substitution matches. Identity and similarity of related nucleic acid molecules and polypeptides can be readily calculated by known methods. Preferred methods to determine identity and/or similarity are designed to give the largest match between the sequences tested. Methods to determine identity and similarity are described in publicly available computer programs. Exemplary computer program methods to determine identity and similarity between two sequences include, but are not limited to, the GCG program package, including GAP (Devereux et al., Nucl. Acids. Res. 12: 387, 1984; Genetics Computer Group, University of Wisconsin, Madison, Wis.), BLASTP, BLASTN, and FASTA (Altschul et al., J. Mol. Biol. 215:403-410, 1990)). The BLASTX program is publicly available from the National Center for Biotechnology Information (NCBI) and other sources (BLAST Manual, Altschul et al. NCB/NLM/NIH Bethesda, Md. 20894; Altschul et al., supra). The well-known Smith-Waterman algorithm may also be used to determine identity. Preferred parameters for a polypeptide sequence comparison include the following: Algorithm: Needleman et al., J. Mol. Biol. 48: 443-53 (1970); Comparison matrix: BLOSUM 62 from Henikoff et al., Proc. Natl. Acad. Sci. USA 89:10915-19 (1992); Gap Penalty: 12, Gap Length Penalty: 4; Threshold of Similarity: 0. The GAP program is useful with the above parameters (along with no penalty for end gaps). Preferred parameters for nucleic acid molecule sequence comparisons include the following: Algorithm: Needleman et al., J. Mol. Biol., 48:443-53 (1970); Comparison matrix: matches=+10, mismatch=0, Gap Penalty: 50, Gap Length Penalty: 3. The GAP program is also useful with the above parameters. Other exemplary algorithms, gap opening penalties, gap extension penalties, comparison matrices, thresholds of similarity, etc. may be used by those of skill in the art.</p>
+      <p id="p-00070-en" num="0070">The phrase “stringent hybridization conditions” refers to conditions under which a probe will hybridize to its target subsequence, typically in a complex mixture of nucleic acid, but to no other sequences. Hybridization stringency is principally determined by temperature, ionic strength, and the concentration of denaturing agents such as formamide. Examples of “highly stringent conditions” for hybridization and washing are 0.015M sodium chloride, 0.0015M sodium citrate at 65-68° C. or 0.015M sodium chloride, 0.0015M sodium citrate, and 50% formamide at 42° C. See Sambrook, Fritsch &amp; Maniatis, Molecular Cloning: A Laboratory Manual, 2nd Ed., Cold Spring Harbor Laboratory, (Cold Spring Harbor, N.Y. 1989); and Anderson et al., Nucleic Acid Hybridization: Hybridization: a practical approach, Ch. 4, IRL Press Limited (Oxford, England) (1999). Examples of typical “moderately stringent” conditions are 0.015M sodium chloride, 0.0015M sodium citrate at 50-65° C. or 0.015M sodium chloride, 0.0015M sodium citrate, and 20% formamide at 37-50° C. By way of example, a “moderately stringent” condition of 50° C. in 0.015 M sodium ion will allow about a 21% mismatch.</p>
+      <p id="p-00071-en" num="0071">It will be appreciated by those skilled in the art that there is no absolute distinction between “highly” and “moderately” stringent conditions. For example, at 0.015M sodium ion (no formamide), the melting temperature of perfectly matched long DNA is about 71° C. With a wash at 65° C. (at the same ionic strength), this would allow for approximately a 6% mismatch. To capture more distantly related sequences, one skilled in the art can simply lower the temperature or raise the ionic strength.</p>
+      <p id="p-00072-en" num="0072">The nucleotide and amino acid sequences of pGDF5-T5 and pGDF5-Trc are set forth in SEQ ID NOS: 2 and 3 and SEQ ID NO: 4, respectively.</p>
+      <p id="p-00073-en" num="0073">The term “rhGDF-5 or GDF-5” as used herein refers to human growth and differentiation factor-5 (the polypeptide of SEQ ID NO:4 encoded by the polynucleotide of SEQ. ID NO: 1) thereof, or a biologically active fragment, variant, analog, or derivative of the human GDF-5 protein. Exemplary analogs retain 65% or higher amino acid identity to the parent sequence, or 70%, 75%, 80%, 85%, 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, or 99% or higher identity.</p>
+      <p id="p-00074-en" num="0074">As used herein, the term “rhGDF-5 or GDF-5 (pGDF5-T5 or pGDF5-Trc nucleic acid” or “rhGDF-5 or GDF-5 (pGDF5-T5 or pGDF5-Trc) polynucleotide” refers to a nucleic acid that encodes a polypeptide having an amino acid sequence as set forth in SEQ ID NO:4, including a nucleotide sequence as set forth in SEQ ID NO: 1, or nucleic acids comprising nucleotide sequences that are at least about 65%, 70%, 75%, 80%, 85%, 90%, 95%, 96%, 97%, 98%, 99% or 100% identical thereto, or nucleic acids which hybridize under moderately or highly stringent conditions as defined herein with the complement of SEQ ID NO: 1 or any other orthologs of the nucleotide sequence of SEQ ID NO: 1.</p>
+      <p id="p-00075-en" num="0075">The terms “polypeptide” and “protein” are used interchangeably herein.</p>
+      <p id="p-00076-en" num="0076">Overexpression, as described herein, encompasses activating (or causing to be expressed) a gene which is normally silent (unexpressed) in the host cell as obtained, as well as increasing the expression of a gene which is not expressed at physiologically significant levels in the cell as obtained.</p>
+      <p id="p-00077-en" num="0077">The present disclosure includes methods and compositions for the production of rhGDF-5 using the T5 or Trc promoter in the production of rhGDF-5 for therapeutic applications. The rh-GDF-5 can be easily produced in large scale quantities in cost-effective, and time-saving manner.</p>
+      <p id="p-00078-en" num="0078">According to the embodiment of the present disclosure, the term “isolated protein” comprises rhGDF-5 or GDF5 protein. In one embodiment, the protein comprises rhGDF-5 or GDF5 having the amino acid sequence set forth in SEQ ID NO:4 and variants and derivatives of this protein, which retain the activity of the polypeptide of SEQ ID NO: 4. In one embodiment, the protein comprises a polypeptide having at least about 80% identity, at least about 85% identity, at least about 90% identity, at least about 95% identity, at least about 98% identity, or at least about 99% identity to the amino acid sequence set forth in SEQ ID NO: 4.</p>
+      <p id="p-00079-en" num="0079">Stable production of proteins, including biologics, can be accomplished by transfecting host cells with vectors containing DNA that encodes the protein. Maintenance of the vector in the cell line can be achieved through a variety of means</p>
+      <p id="p-00080-en" num="0080">With the evolving importance of therapeutic proteins, i.e., biologics, efforts must be made to optimize protein production, while improving efficiency of the overall production process. Thus, improvements in efficiency must be weighed against the protein production capacity of the vector. There is a need for better expression systems that provide efficient cloning options, as well as high levels of the desired protein product. It would be advantageous to decrease the number of cloning steps involved in the production of biologics to improve time requirements and minimize cost. It would also be advantageous to provide vectors that provide adequate protein production for both small and large scale cell cultures.</p>
+      <p id="p-00081-en" num="0081">After the expression vector is introduced into the cells, the transfected cells are cultured under conditions favoring expression of the protein, which may be recovered from the culture using standard techniques identified below by contacting the protein with a substrate (e.g., resin, glass, plastic, cellulose, etc.) that is capable of immobilizing the protein.</p>
+      <p id="p-00082-en" num="0082">The substrate comprises at least one surface on which to capture the GDF-5 protein. The substrate may comprise a ceramic substance, a glass, a metal, a crystalline material, a plastic, a polymer or co-polymer, any combinations thereof, or a coating of one material on another. Such substrates include for example, but are not limited to, (semi) noble metals such as gold or silver; glass materials such as soda-lime glass, pyrex glass, vycor glass, quartz glass; resins, cellulose, metallic or non-metallic oxides; silicon, monoammonium phosphate, and other such crystalline materials; transition metals; plastics or polymers, including dendritic polymers, such as poly(vinyl chloride), poly(vinyl alcohol), poly(methyl methacrylate), poly(vinyl acetate-maleic anhydride), poly(dimethylsiloxane)monomethacrylate, polystyrenes, polypropylene, polyethyleneimine; copolymers such as poly(vinyl acetate-co-maleic anhydride), poly(styrene-co-maleic anhydride), poly(ethylene-co-acrylic acid) or derivatives of these or the like.</p>
+      <p id="p-00083-en" num="0083">The substrate may take a variety of configurations ranging from simple to complex, depending on its intended use. Thus, the substrate could have an overall slide or plate configuration, such as a rectangular or disc configuration or be part of a column.</p>
+      <p id="p-00084-en" num="0084">Proteins (e.g., rh-GDF-5) and/or fragments thereof can be purified from any suitable expression system. If desired, the protein may be purified to substantial purity by standard techniques, including selective precipitation with such substances as ammonium sulfate; column chromatography, immunopurification methods, and others (see, e.g., Scopes, Protein Purification: Principles and Practice (1982); and U.S. Pat. No. 4,673,641. However, in the practice, purified or partially purified proteins are not required for either treatment with a modifying agent or generation of antibodies. If purification of the a conformationally trapped protein is desired, the presence of the modifying agent may be used to aid in the purification by allowing a skilled artisan to follow the location of the conformationally trapped protein during various purification steps such as those described below.</p>
+      <p id="p-00085-en" num="0085">Recombinant proteins (e.g., rh-GDF-5) can be expressed by transformed bacteria in large amounts, typically after promoter induction; but expression can be constitutive. Promoter induction with a T5 or a Trc promoter is one example of an inducible promoter system. Bacteria are grown. Fresh or frozen bacteria cells are used for isolation of protein. Proteins (e.g., rh-GDF-5) expressed in bacteria may form insoluble aggregates (“inclusion bodies”). Several protocols are suitable for purification of the expressed proteins from inclusion bodies. For example, purification of inclusion bodies typically involves the extraction, separation and/or purification of inclusion bodies by disruption of bacterial cells. The cell suspension can be lysed using 2-3 passages through a French Press; homogenized using, for example, a Polytron (Brinkman Instruments); disrupted enzymatically, e.g., by using lysozyme; or sonicated on ice. Alternate methods of lysing bacteria are apparent to those of skill in the art (see, Sambrook et al., Molecular Cloning, A Laboratory Manual (2nd ed. 1989); Kriegler, Gene Transfer and Expression: A Laboratory Manual (1990); and Current Protocols in Molecular Biology (Ausubel et al., eds., 1994)).</p>
+      <p id="p-00086-en" num="0086">If necessary, the inclusion bodies are solubilized, and the lysed cell suspension is typically centrifuged and/or filtered to remove unwanted insoluble matter. Proteins that formed the inclusion bodies may be renatured by dilution or dialysis with a compatible buffer. Suitable solvents include, but are not limited to urea (from about 4 M to about 8 M), formamide (at least about 80%, volume/volume basis), and guanidine hydrochloride (from about 4 M to about 8 M). Some solvents which are capable of solubilizing aggregate-forming proteins, for example SDS (sodium dodecyl sulfate), 70% formic acid, are inappropriate for use in this procedure due to the possibility of irreversible denaturation of the proteins, accompanied by a lack of immunogenicity and/or activity. Although guanidine hydrochloride and similar agents are denaturants, this denaturation is not irreversible and renaturation may occur upon removal (by dialysis, for example) or dilution of the denaturant, allowing re-formation of immunologically and/or biologically active protein. Other suitable buffers are known to those skilled in the art. One of skill in the art will recognize that optimal conditions for renaturation must be chosen for each protein. For example, if a protein is soluble only at low pH, renaturation can be done at low pH. Renaturation conditions can thus be adjusted for proteins with different solubility characteristics i.e., proteins that are soluble at neutral pH can be renatured at neutral pH.</p>
+      <p id="p-00087-en" num="0087">The expressed protein (e.g., rh-GDF-5) is separated from other bacterial proteins by standard separation techniques, such as for example, solubility fractionation, size differential filtration, column chromatography, or the like. Solubility fractionation involves an initial salt fractionation can separate many of the unwanted host cell proteins (or proteins derived from the cell culture media) from the recombinant protein of interest. In some embodiments, ammonium sulfate can be used. Ammonium sulfate precipitates proteins by effectively reducing the amount of water in the protein mixture. Proteins then precipitate on the basis of their solubility. The more hydrophobic a protein is, the more likely it is to precipitate at lower ammonium sulfate concentrations. A typical protocol includes adding saturated ammonium sulfate to a protein solution so that the resultant ammonium sulfate concentration is between 20-30%. This concentration will precipitate the most hydrophobic of proteins. The precipitate is then discarded (unless the protein of interest is hydrophobic) and ammonium sulfate is added to the supernatant to a concentration known to precipitate the protein of interest. The precipitate is then solubilized in buffer and the excess salt removed if necessary, either through dialysis or diafiltration. Other methods that rely on solubility of proteins, such as cold ethanol precipitation, are well known to those of skill in the art and can be used to fractionate complex protein mixtures.</p>
+      <p id="p-00088-en" num="0088">Size differential filtration involves using the molecular weight of a given protein to isolate it from proteins of greater and lesser size using ultrafiltration through membranes of different pore size (for example, Amicon or Millipore membranes). As a first step, the protein mixture is ultrafiltered through a membrane with a pore size that has a lower molecular weight cut-off than the molecular weight of the protein of interest. The retentate of the ultrafiltration is then ultrafiltered against a membrane with a molecular cut off greater than the molecular weight of the protein of interest. The recombinant protein will pass through the membrane into the filtrate. The filtrate can then be chromatographed as described below.</p>
+      <p id="p-00089-en" num="0089">Column chromatography involves separating a protein from other proteins on the basis of its size, net surface charge, hydrophobicity, and affinity for ligands. In addition, antibodies raised against proteins can be conjugated to column matrices and the proteins immunopurified. All of these methods are well known in the art. It will be apparent to one of skill that chromatographic techniques can be performed at any scale and using equipment from many different manufacturers (e.g., Pharmacia Biotech). In one embodiment, the column comprises a resin that binds the GDF-5 protein in order to isolate the rh-GDF-5 protein. The protein can be washed from the resin and washed with a buffer to refold the GDF-5 protein.</p>
+      <p id="p-00090-en" num="0090">In some embodiments, the rh-GDF-5 can be isolated on the substrate in different conformational states. A modifying agent can be contacted with a protein of interest to fix the protein in a specific conformational state. The interaction of the modifying agent may be covalent or non-covalent and may be reversible or essentially irreversible. Functional groups on proteins that may serve as sites for attachment of modifying agents include sulfhydryl, amino, and carboxyl groups found on the side chains of various amino acids. Furthermore, other features of a protein such as charge, hydrophobicity, or hydrogen bonding potential, among others, may serve as a point of association between a modifying agent and a protein. Examples of trapping of conformational states using modifying agents such as those which react with sulfhydryl groups may be found in: Erlanson et al., Annual Review of Biophys. Biomol. Struct., 33:199-223 (2004), Erlanson, et al., Curr. Opin. Chem. Biol., 8: 399-406 (2004), Erlanson et al., J. Med. Chem., 47: 3463-3482 (2004), Hardy et al., Proc. Nat'l. Acd. Sci., 34:12461-12466 (2004); Buck and Wells, Proc. Nat'l. Acd. Sci., 102: 2719-2724 (2005); Scheer et al., Proc. Nat'l. Acd. Sci., 103: 7595-7600 (2006), which are incorporated by reference in their entirety.</p>
+      <p id="p-00091-en" num="0091">Antibodies can be used to isolate the rh-GDF-5 in different conformational states. Methods of producing polyclonal and monoclonal antibodies that react specifically with proteins are known to those of skill in the art and can be readily adapted to generate conformation specific antibodies by using the conformationally trapped proteins described above as antigens (see, e.g., Coligan, Current Protocols in Immunology (1991); Harlow &amp; Lane, supra; Goding, Monoclonal Antibodies: Principles and Practice (2d ed. 1986); and Kohler &amp; Milstein, Nature 256:495-497 (1975). Such techniques include antibody preparation by selection of antibodies from libraries of recombinant antibodies in phage or similar vectors, as well as preparation of polyclonal and monoclonal antibodies by immunizing rabbits or mice (see, e.g., Huse et al., Science 246:1275-1281 (1989); Ward et al., Nature 341:544-546 (1989)).</p>
+      <p id="p-00092-en" num="0092">Methods of production of polyclonal antibodies are known to those of skill in the art. An inbred strain of mice (e.g., BALB/C mice) or rabbits is immunized with the protein (i.e., immunogen) using a standard adjuvant, such as Freund's adjuvant, and a standard immunization protocol. The animal's immune response to the immunogen preparation is monitored by taking test bleeds and determining the titer of reactivity to the protein. When appropriately high titers of antibody to the immunogen are obtained, blood is collected from the animal and antisera are prepared. Further fractionation of the antisera to enrich for antibodies reactive to the protein can be done if desired (see, Harlow &amp; Lane, supra).</p>
+      <p id="p-00093-en" num="0093">Monoclonal antibodies may be obtained by various techniques familiar to those skilled in the art. Briefly, spleen cells from an animal immunized with a desired antigen are immortalized, commonly by fusion with a myeloma cell (see, Kohler &amp; Milstein, Eur. J. Immunol. 6:511-519 (1976)). Alternative methods of immortalization include transformation with Epstein Barr Virus, oncogenes, or retroviruses, or other methods well known in the art. Colonies arising from single immortalized cells are screened for production of antibodies of the desired specificity and affinity for the antigen, and yield of the monoclonal antibodies produced by such cells may be enhanced by various techniques, including injection into the peritoneal cavity of a vertebrate host. Alternatively, one may isolate DNA sequences which encode a monoclonal antibody or a binding fragment thereof by screening a DNA library from human B cells according to the general protocol outlined by Huse, et al., Science 246:1275-1281 (1989).</p>
+      <p id="p-00094-en" num="0094">Monoclonal antibodies and polyclonal sera are collected and titered against the immunogen protein (e.g., GDF-5) in an immunoassay, for example, a solid phase immunoassay with the immunogen immobilized on a solid support. Typically, polyclonal antisera with a titer of 10<sup>4 </sup>or greater are selected and tested for their cross reactivity against non-conformationally trapped proteins or proteins trapped in a conformation different from that used to raise the antibody. Specific polyclonal antisera and monoclonal antibodies will usually bind with a Kd of at least about 0.1 mM, more usually at least about 1 μM, preferably at least about 0.1 μM or better, and most preferably, 0.01 μM or better.</p>
+      <p id="p-00095-en" num="0095">Once antibodies specific to a particular conformational state are available, the antibodies can be labeled with a suitable label (e.g., dye, fluorophore, tage, etc.) to identify the particular conformational state of the GDF-5 protein or to identify the GDF-5 protein if needed. The antibodies used to identify the GDF-5 protein may optionally be covalently or non-covalently linked to a detectable label. Detectable labels suitable for such use include any composition detectable by spectroscopic, photochemical, biochemical, immunochemical, electrical, optical or chemical means. Useful include magnetic beads (e.g. DYNABEADS), fluorescent dyes (e.g., Alexa Fluor 350, Alexa Fluor 405, Alexa Fluor 430, Alexa Fluor 488, Alexa Fluor 500, Alexa Fluor 514, Alexa Fluor 532, Alexa Fluor 546, Alexa Fluor 555, Alexa Fluor 568, Alexa Fluor 594, Alexa Fluor 610, Alexa Fluor 633, Alexa Fluor 635, Alexa Fluor 647, Alexa Fluor 660, Alexa Fluor 680, Alexa Fluor 700 and Alexa Fluor 750 dyes, fluorescein isothiocyanate, Texas red, rhodamine, green fluorescent protein, and the like), radiolabels (e.g., .sup.<sup>3</sup>H, .sup.<sup>12</sup>5I, .sup.<sup>35</sup>S, .sup.<sup>14</sup>C, or .sup.<sup>32</sup>P), enzymes (e.g., horse radish peroxidase, alkaline phosphatase and others commonly used in an ELISA), and colorimetric labels such as colloidal gold or colored glass or plastic (e.g. polystyrene, polypropylene, latex, etc.) beads.</p>
+      <p id="p-00096-en" num="0096">Means of detecting such labels are well known to those of skill in the art. Thus, for example, radiolabels may be detected using photographic film or scintillation counters, fluorescent markers may be detected using a photodetector to detect emitted illumination. Enzymatic labels are typically detected by providing the enzyme with a substrate and detecting the reaction product produced by the action of the enzyme on the substrate, and colorimetric labels are detected by simply visualizing the colored label.</p>
+      <p id="p-00097-en" num="0097">Conformation specific antibodies may be used in virtually any assay format that employs antibodies to detect antigens. Design of the immunoassays is subject to a great deal of variation, and many formats are known in the art. Protocols may, for example, use solid supports, or immunoprecipitation. Many assays involve the use of labeled antibody or polypeptide; the labels may be, for example, enzymatic, fluorescent, chemiluminescent, radioactive, or dye molecules, as discussed in detail above. Assays which amplify the signals from the immune complex are also known; examples of which are assays which utilize biotin and avidin, and enzyme-labeled and mediated immunoassays, such as ELISA assays.</p>
+      <p id="p-00098-en" num="0098">In one embodiment, the expressed recombinant rhGDF-5 protein, according to the embodiment of the present disclosure, can be collected from pGDF5-T5 or pGDF5-Trc transformed host cell lysates (from strains DH10β, STBL2, HMS174 or RecA). The supernatant (soluble fraction) and pellet (insoluble fraction containing inclusion bodies) can be separated by centrifugation. The pellet may then be collected and disrupted or homogenized to release the inclusion bodies from the bacterial cells. Host cell disruption or homogenization may be performed using well known techniques including, but not limited to, enzymatic cell disruption, sonication, dounce homogenization or high pressure release disruption. In one embodiment, the techniques disclosed are used to disrupt the pGDF5-T5- or pGDF5-Trc-transformed <i>E. coli </i>cells to release the inclusion bodies of rhGDF-5 protein.</p>
+      <p id="p-00099-en" num="0099">In one embodiment, after cell disruption, the inclusion bodies may then be subjected to solubilization using suitable denaturing agents known in the art. The denaturing agents may be urea or guanidine hydrochloride. The recombinant rhGDF-5 protein can be recovered and purified from the resulting solution by any of a number well known in the art, including but are not limited to, using ion-exchange chromatography, ammonium sulfate or ethanol precipitation, acid or base extraction, column chromatography, affinity column chromatography, anion or cation exchange chromatography, phosphocellulose chromatography, hydrophobic interaction chromatography, hydroxylapatite chromatography, lectin chromatography, gel electrophoresis and the like. Protein refolding steps can be used, as desired, in making correctly folded mature proteins. High performance liquid chromatography (HPLC), affinity chromatography or other suitable methods can be employed in final purification steps where high purity is desired. Once purified, partially or to homogeneity, as desired, the rhGDF-5 proteins are optionally used for a wide variety of utilities, including but not limited to, as assay components, therapeutics (biologics), prophylaxis, diagnostics, research reagents, and/or as immunogens for antibody production.</p>
+      <p id="p-00100-en" num="0100">In addition to other references noted herein, a variety of purification/protein folding methods are well known in the art, including, but not limited to, those set forth in R. Scopes, Protein Purification, Springer-Verlag, N.Y. (1982); Deutscher, Methods in Enzymology Vol. 182: Guide to Protein Purification, Academic Press, Inc. N.Y. (1990); Sandana (1997) Bioseparation of Proteins, Academic Press, Inc.; Bollag et al. (1996) Protein Methods, 2nd Edition Wiley-Liss, NY; Walker (1996) The Protein Protocols Handbook Humana Press, NJ, Harris and Angal (1990) Protein Purification Applications: A Practical Approach IRL Press at Oxford, Oxford, England; Harris and Angal Protein Purification Methods: A Practical Approach IRL Press at Oxford, Oxford, England; Scopes (1993) Protein Purification: Principles and Practice 3rd Edition Springer Verlag, NY; Janson and Ryden (1998) Protein Purification: Principles, High Resolution Methods and Applications, Second Edition Wiley-VCH, NY; and Walker (1998) Protein Protocols on CD-ROM Humana Press, NJ; and the references cited therein.</p>
+      <p id="p-00101-en" num="0101">As used herein, the term “exponential growth” refers to that portion of the cellular growth cycle between the lag phase and the stationary phase when cells are doubling at a logarithmic rate. The term “exponential growth” is also meant to encompass the late lag phase (i.e., the early stationary phase) which occurs between the logarithmic growth phase and stationary phase, when the cell growth rate is slowing, and therefor encompasses an extended exponential growth phase. Therefore, “stationary phase” refers to horizontal growth, i.e., when the cells have essentially stopped dividing and have reached a quiescent stage with respect to cell doubling.</p>
+      <p id="p-00102-en" num="0102">As in conventional fermentation processes, it is usually desirable to obtain as high a rate of cell growth in as high a density of bacterial cell culture as possible, to maximize the amount of bacterial biomass produced per unit of time. “Biomass,” as utilized herein and without alteration from its conventional meaning, refers to the mass and/or accumulating mass of host bacterial cells or transforming bacteria cells resulting from the cultivation of such cells using a variety of techniques, e.g., cultivating such cells in defined or semi-defined media containing additional ingredients that may enhance or increase bacterial growth rate or biomass.</p>
+      <p id="p-00103-en" num="0103">According to the embodiment of the present disclosure, fermentation processes have been developed to maximize the yield of pGDF5-T5 and pGDF5-Trc DNAs from large scale cultures of transformed host cells and to optimize recombinant hGDF-5 protein production. The fermentation processes includes optimizing the plasmid yield such that the supply of metabolites essential for growth is adequate to permit growth to a high biomass, but is not in excess so as to inhibit such growth.</p>
+      <p id="p-00104-en" num="0104">According to one embodiment, host cells transformed with an expression vector that includes a pGDF5-Trc or pGDF5-T5 DNA are cultured in a high cell density medium that are modified based on its response to protein expression and biomass yield. For example, a defined media may additionally include ingredients such as sodium molybdate (ranges from about 5 to about 10 mg/L), magnesium sulfate heptahydrate (ranges from about 2 to about 6 mM), sodium chloride (ranges from 0 to about 4 g/L), EDTA (ranges from 0 to about 400 mg/L), MOPS (ranges from 0 to about 100 mM), amino acid supplement including L-methionine (ranges from 0 to about 10 ml/L) and vitamin supplement (folic acid, pyridoxine, and biotin; ranges from 0 to about 10 ml/L). Alternatively, as semi-defined (complex) media may include, in addition to what was in the defined media, yeast extract and tryptone (animal-derived). Both yeast extract and tryptone range from 0 to about 0.4% w/v. Also included were sodium molybdate, magnesium sulfate, sodium chloride, EDTA, MOPS (3[N-morpholino]propane-sulfonic acid), amino acids (including L-methionine), and vitamins (folic acid, pyrodoxine, and biotin).</p>
+      <p id="p-00105-en" num="0105">A type of fermentation according to the embodiment of the present disclosure is fed-batch fermentation, in which the cell growth rate is controlled by the addition of nutrients to the culture during cell growth. As used herein, “fed-batch fermentation” refers to a cell culture process in which the growth rate is controlled by carefully monitored additions of metabolites to the culture during fermentation. Fed-batch fermentation according to the present disclosure permits the cell culture to reach a higher biomass. The key to fed-batch fermentation is supplying substrate at a rate such that it is completely consumed. As a result, residual substrate concentration is approximately zero and maximum conversion of substrate is obtained. Metabolic overflow from excess substrate is avoided, reducing the formation of inhibitory acetate. Fed-batch fermentation starts with a batch phase. Cells are inoculated into an initial volume of medium that contains all non-limiting nutrients and an initial concentration of the limiting substrate. Controlled feeding of the limiting nutrient begins once the cells have consumed the initial amount of substrate. One of the simplest and most effective feeding strategies is exponential feeding. This method allows the culture to grow at a predetermined rate less than the population doubling time, as expressed herein, as mu (μ)<sub>max </sub>without the need of feedback control.</p>
+      <p id="p-00106-en" num="0106">The fermentation begins with a batch mode containing a non-inhibitory concentration of substrate. The cells grow at mu (μ)<sub>max </sub>until the substrate is exhausted, at which point the nutrient feeding begins.</p>
+      <p id="p-00107-en" num="0107">The DO-stat and pH-stat methods are fairly easy to implement since most standard fermentor systems include dissolved oxygen and pH monitoring. Trends in dissolved oxygen (DO) and pH can indicate whether substrate is available to the cells. Exhaustion of substrate causes decreased oxygen uptake and the DO concentration in the medium rises. The pH also rises due to consumption of metabolic acids. Feeding is triggered when DO or pH rises above a set threshold. The growth rate can be adjusted by changing the DO or pH threshold value.</p>
+      <heading id="h-00005-en" level="1">EXAMPLES</heading>
+      <p id="p-00108-en" num="0108">Reference will now be made in detail to certain embodiments of the present disclosure. While the present disclosure will be described in conjunction with the illustrated embodiments, it will be understood that they are not intended to limit the present disclosure to those embodiments. On the contrary, the present disclosure is intended to cover all alternatives, modifications, and equivalents that may be included within the present disclosure as defined by the appended claims. The headings below are not meant to limit the disclosure in any way; embodiments under any one heading may be used in conjunction with embodiments under any other heading.</p>
+      <p id="p-00109-en" num="0109">Nucleotide and amino acid sequences are referred to herein by a sequence identifier number (SEQ ID NOS:1 to 39). A sequence listing is provided at the end of the specification.</p>
+      <heading id="h-00006-en" level="2">GDF5-T5 and GDF5-Trc Plasmid/Expression Vector Construction</heading>
+      <p id="p-00110-en" num="0110">Two plasmid expression vectors (pGDF5-T5 and pGDF5-Trc) were engineered for the purpose of expressing a recombinant human growth and differentiation factor-5 (rhGDF-5) of about 13.5 kDa in selected prokaryotic host cell strains. Plasmid maps for both plasmids are provided in <figref>FIGS. 1A and 1B</figref>. The sizes of pGDF5-T5 and pGDF5-Trc are 4299 and 4403 bp, respectively. The complete nucleotide sequence of the pGDF5-T5 and pGDF5-Trc is designated in the Sequence Listing as SEQ ID NOS: 2 and 3, respectively.</p>
+      <p id="p-00111-en" num="0111">To do this, a starting IP constraint-free plasmid, pJExpress-401 (DNA2.0, Menlo Park, Calif. having either a T5 or a Trc promoter (both IPTG-inducible) was employed. Some of the features of pJExpress-401 include a pUC origin, a Kanamycin selective marker gene (Kan<sup>R</sup>) gene, either a T5 or a Trc promoter (both IPTG (isopropylthio-β-galactoside)-inducible) and an Nde-1 restriction site. The gene of interest (gene insert) is a codon-optimized human GDF-5 (rhGDF-5) cDNA having a size of 528 bp designated in the Sequence Listing as (SEQ ID NO:1). The reverse complimentary coding sequence of the insert sequence, as underlined is provided in the sequence listing as SEQ ID NO:7.</p>
+      <heading id="h-00007-en" level="2">Plasmid DNA Analysis</heading>
+      <p id="p-00112-en" num="0112">As indicated above, the complete DNA sequences for pGDF5-T5 and pGDF5-Trc are provided in the sequence listing as SEQ ID NOS:2 and 3, respectively. The theoretical protein sequence encoded by pGDF5-Trc is denoted herein as SEQ ID. NO. 4. Sequencing was performed on pGDF5-T5 and pGDF5-Trc with a minimum of 2× coverage over the backbone and 4× coverage over the gene of interest (GDF-5 DNA insert). The samples were run on the ABI 3130xl genetic analyzer and analyzed using ABI's Sequencing Analysis software version 5.3.1. The sequences were edited using Sequencher™ version 5.0. The sequences obtained were assembled into contiguous sequence files. The consensus sequence (MD1.seq corresponding to SEQ ID NO:3) was compared with the corresponding expected reference sequence file (MD1.txt corresponding to SEQ ID NO:6). The sequence file comparisons and additional data are discussed hereinbelow.</p>
+      <heading id="h-00008-en" level="2">Plasmid DNA and Sequencing Primers Preparation and Purification:</heading>
+      <p id="p-00113-en" num="0113">Prior sequencing, the concentration of purified plasmid GDF5-Trc and GDF5-T5 DNA (pGDF5-Trc and pGDF5-T5) was determined using the Smartspec™ 3000 spectrophotometer. Sequencing Primers (oligonucleotides) were designed accordingly and the following primers, as well as the polynucleotides and polypeptides according to the embodiments of the present disclosure, are listed on Table 1. The sequencing primers were utilized to sequence pGDF5-Trc.</p>
+      <p id="p-00114-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1" tabstyle="monospace">
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="112pt" align="center" />
+              <colspec colname="4" colwidth="84pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="9" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>SEQ </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>ID</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>NO.</entry>
+                  <entry>Description</entry>
+                  <entry>Sequence</entry>
+                  <entry>Species/Type</entry>
+                  <entry>Length</entry>
+                  <entry>Start</entry>
+                  <entry>Direction</entry>
+                  <entry>Tm</entry>
+                  <entry>%GC</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry> 1</entry>
+                  <entry>GDF-5 DNA</entry>
+                  <entry>See Sequence Listing</entry>
+                  <entry>human/DNA</entry>
+                  <entry> 528</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>insert-insert</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>DNA from</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>pGDF5-Trc</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>plasmid</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 2</entry>
+                  <entry>complete</entry>
+                  <entry>See Sequence Listing</entry>
+                  <entry>human/DNA</entry>
+                  <entry>4299</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>sequence of</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>pGDF5-T5 DNA</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 3</entry>
+                  <entry>complete</entry>
+                  <entry>See Sequence Listing</entry>
+                  <entry>human/DNA</entry>
+                  <entry>4403</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>sequence of</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>pGDF5-Trc</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>DNA</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 4</entry>
+                  <entry>theoretical</entry>
+                  <entry>See Sequence Listing</entry>
+                  <entry>human/protein</entry>
+                  <entry> 125</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>amino acid</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>sequence of</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>rhGDF-5 protein</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 5</entry>
+                  <entry>GDF5-CofA</entry>
+                  <entry>See Sequence Listing</entry>
+                  <entry>human/protein</entry>
+                  <entry> 120</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>from Prospec-</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>TanyTechnoGene</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ltd</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 6</entry>
+                  <entry>MD1.txt</entry>
+                  <entry>See Sequence Listing</entry>
+                  <entry>human/DNA</entry>
+                  <entry>4405</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>reference GDF-5</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>sequence for</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sequencing</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 7</entry>
+                  <entry>Reverse</entry>
+                  <entry>See Sequence Listing</entry>
+                  <entry>human/DNA</entry>
+                  <entry> 528</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>complementary</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>strand insert</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>sequence from</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>pGDF5-Trc</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>plasmid</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 8</entry>
+                  <entry>MDP1.1SF1-A</entry>
+                  <entry>CTATCATGCCATACCGCGAAA</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  21</entry>
+                  <entry>  35</entry>
+                  <entry>Forward</entry>
+                  <entry>60</entry>
+                  <entry>48</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 9</entry>
+                  <entry>MDP1.2SF1-A</entry>
+                  <entry>GCCAGCCATTACGCTCGTC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  19</entry>
+                  <entry> 382</entry>
+                  <entry>Forward</entry>
+                  <entry>60</entry>
+                  <entry>63</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>10</entry>
+                  <entry>MDP1.3SF1-A</entry>
+                  <entry>CGCTACCTTTGCCATGTTTCA</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  21</entry>
+                  <entry> 721</entry>
+                  <entry>Forward</entry>
+                  <entry>60</entry>
+                  <entry>48</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>11</entry>
+                  <entry>MDP1.4SF1-A</entry>
+                  <entry>TAATCGCGGCCTCGACG</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  17</entry>
+                  <entry> 857</entry>
+                  <entry>Forward</entry>
+                  <entry>60</entry>
+                  <entry>65</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>MDP1.5SF1-A</entry>
+                  <entry>CCTGACCCCATGCCGAA</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  17</entry>
+                  <entry>1105</entry>
+                  <entry>Forward</entry>
+                  <entry>60</entry>
+                  <entry>65</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>13</entry>
+                  <entry>MDP1.6SF1-A</entry>
+                  <entry>AGTTAGCGACAGCCGCAGC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  19</entry>
+                  <entry>1328</entry>
+                  <entry>Forward</entry>
+                  <entry>60</entry>
+                  <entry>63</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>14</entry>
+                  <entry>MDP1.7SF1-A</entry>
+                  <entry>ATGGCTACGCAGCGGAAAC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  19</entry>
+                  <entry>1516</entry>
+                  <entry>Forward</entry>
+                  <entry>60</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>15</entry>
+                  <entry>MDP1.8SF1-A</entry>
+                  <entry>GCGGCATATGTTTTACCTCCTG</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  22</entry>
+                  <entry>1686</entry>
+                  <entry>Forward</entry>
+                  <entry>59</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>16</entry>
+                  <entry>MDP1.9SF1-A</entry>
+                  <entry>AGCTCGTAATTGTTATCCGCTCA</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  23</entry>
+                  <entry>1812</entry>
+                  <entry>Forward</entry>
+                  <entry>59</entry>
+                  <entry>43</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>17</entry>
+                  <entry>MDP1.10SF1-A</entry>
+                  <entry>CAAGCAAAGTGACAGGCGC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  19</entry>
+                  <entry>2214</entry>
+                  <entry>Forward</entry>
+                  <entry>59</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>18</entry>
+                  <entry>MDP1.11SF1-A</entry>
+                  <entry>GGCGGTAATACGGTTATCCACA</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  22</entry>
+                  <entry>2542</entry>
+                  <entry>Forward</entry>
+                  <entry>60</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>19</entry>
+                  <entry>MDP1.12SF1-A</entry>
+                  <entry>TGCGCCTTATCCGGTAACTATC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  22</entry>
+                  <entry>2933</entry>
+                  <entry>Forward</entry>
+                  <entry>59</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>20</entry>
+                  <entry>MDP1.13SF1-A</entry>
+                  <entry>TTTTGGTCATGAGTCACTGC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  20</entry>
+                  <entry>3311</entry>
+                  <entry>Forward</entry>
+                  <entry>53</entry>
+                  <entry>45</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>21</entry>
+                  <entry>MDP1.14SF1-A</entry>
+                  <entry>GGAACGATGCCCTCATTCAG</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  20</entry>
+                  <entry>3691</entry>
+                  <entry>Forward</entry>
+                  <entry>59</entry>
+                  <entry>55</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>22</entry>
+                  <entry>MDP1.15SF1-A</entry>
+                  <entry>CCAGCGGATAGTTAATGATCAGC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  23</entry>
+                  <entry>4022</entry>
+                  <entry>Forward</entry>
+                  <entry>59</entry>
+                  <entry>48</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>23</entry>
+                  <entry>MDP1.16SF1-A</entry>
+                  <entry>CCGGCATACTCTGCGACATC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  20</entry>
+                  <entry>4366</entry>
+                  <entry>Forward</entry>
+                  <entry>60</entry>
+                  <entry>60</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>24</entry>
+                  <entry>MDP1.17SR1-A</entry>
+                  <entry>GATGTCGCAGAGTATGCCGG</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  20</entry>
+                  <entry>  21</entry>
+                  <entry>Reverse</entry>
+                  <entry>60</entry>
+                  <entry>60</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>25</entry>
+                  <entry>MDP1.18SR1-A</entry>
+                  <entry>CATTAACTATCCGCTGGATGACC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  23</entry>
+                  <entry> 368</entry>
+                  <entry>Reverse</entry>
+                  <entry>59</entry>
+                  <entry>48</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>26</entry>
+                  <entry>MDP1.19SR1-A</entry>
+                  <entry>GCCAACGATCAGATGGCG</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  18</entry>
+                  <entry> 732</entry>
+                  <entry>Reverse</entry>
+                  <entry>60</entry>
+                  <entry>61</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>27</entry>
+                  <entry>MDP1.20SR1-A</entry>
+                  <entry>TGACCAAAATCCCTTAACGTGAGT</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  24</entry>
+                  <entry>1087</entry>
+                  <entry>Reverse</entry>
+                  <entry>60</entry>
+                  <entry>42</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>28</entry>
+                  <entry>MDP1.21SR1-A</entry>
+                  <entry>GATAGTTACCGGATAAGGCGCA</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  22</entry>
+                  <entry>1452</entry>
+                  <entry>Reverse</entry>
+                  <entry>59</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>29</entry>
+                  <entry>MDP1.22SR1-A</entry>
+                  <entry>CCTGCGTTATCCCCTGATTCT</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  21</entry>
+                  <entry>1823</entry>
+                  <entry>Reverse</entry>
+                  <entry>59</entry>
+                  <entry>52</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>30</entry>
+                  <entry>MDP1.23SR1-A</entry>
+                  <entry>AAACGACGGCCAGTCTTAAGCT</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  22</entry>
+                  <entry>2029</entry>
+                  <entry>Reverse</entry>
+                  <entry>60</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>31</entry>
+                  <entry>MDP1.24SR1-A</entry>
+                  <entry>AACGTAAAAACCCGCTTCGG</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  20</entry>
+                  <entry>2099</entry>
+                  <entry>Reverse</entry>
+                  <entry>60</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>32</entry>
+                  <entry>MDP1.25SR1-A</entry>
+                  <entry>CGCCTGTCACTTTGCTTGATA</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  21</entry>
+                  <entry>2175</entry>
+                  <entry>Reverse</entry>
+                  <entry>58</entry>
+                  <entry>48</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>33</entry>
+                  <entry>MDP1.26SR1-A</entry>
+                  <entry>TGAGCGGATAACAATTACGAGCT</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  23</entry>
+                  <entry>2572</entry>
+                  <entry>Reverse</entry>
+                  <entry>59</entry>
+                  <entry>43</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>34</entry>
+                  <entry>MDP1.27SR1-A</entry>
+                  <entry>TTGCTCCCGTAAAGCCCTG</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  19</entry>
+                  <entry>2767</entry>
+                  <entry>Reverse</entry>
+                  <entry>60</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>35</entry>
+                  <entry>MDP1.28SR1-A</entry>
+                  <entry>CCCGATCTCTATTCTGTTCATCG</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  23</entry>
+                  <entry>2986</entry>
+                  <entry>Reverse</entry>
+                  <entry>59</entry>
+                  <entry>48</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>36</entry>
+                  <entry>MDP1.29SR1-A</entry>
+                  <entry>TACGGCGTTTCACTTCTGAGTTC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  23</entry>
+                  <entry>3265</entry>
+                  <entry>Reverse</entry>
+                  <entry>59</entry>
+                  <entry>48</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>37</entry>
+                  <entry>MDP1.30SR1-A</entry>
+                  <entry>GGTGCGACAATCTATCGCTTG</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  21</entry>
+                  <entry>3613</entry>
+                  <entry>Reverse</entry>
+                  <entry>59</entry>
+                  <entry>52</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>38</entry>
+                  <entry>MDP1.31SR1-A</entry>
+                  <entry>GATCGCGTATTTCGCCTCG</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  19</entry>
+                  <entry>3934</entry>
+                  <entry>Reverse</entry>
+                  <entry>60</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>39</entry>
+                  <entry>MDP1.32SR1-A</entry>
+                  <entry>CTGCCTCGGTGAGTTTTCTCC</entry>
+                  <entry>artificial sequence</entry>
+                  <entry>  21</entry>
+                  <entry>4206</entry>
+                  <entry>Reverse</entry>
+                  <entry>60</entry>
+                  <entry>57</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00115-en" num="0114">The sequencing primers were diluted to a final concentration of 1.6 pmol/pL and the cycle sequencing reactions were setup in a 96-well plates. The cycle sequencing plates were then loaded onto the ABI Veriti® Thermal Cycler for a cycle sequencing run based on the following cycling conditions (see Table 2):</p>
+      <p id="p-00116-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Cycling Conditions:</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>98° C.</entry>
+                  <entry>5 minutes</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>30 cycles:</entry>
+                  <entry>96° C., 30 seconds</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>50° C., 10 seconds</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>62° C., 4 minutes</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hold:</entry>
+                  <entry> 4° C., 00</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00117-en" num="0115">Sample purification (dye terminator removal) occurred after the cycle sequencing run. The samples were purified using Qiagen® Dye Ex 2.0 Spin Kit. The samples were eluted with Hi-Di Formamide and transferred to 96-well plates. The 96-well plates were denatured at 95° C. for 2 minutes in the ABI Veriti® Thermal Cycler.</p>
+      <heading id="h-00009-en" level="2">Sequencing Analysis:</heading>
+      <p id="p-00118-en" num="0116">The 96-well sequencing plates were run on the ABI 3130xl Genetic Analyzer using ABI's Data Collection Software version 3.0. The sequencing data (electropherograms) were analyzed using ABI Sequence Analysis software version 5.3.1. The sequences were edited and assembled into contiguous sequence files using Sequencher™ Version 5.0. The following ambiguity codes may appear in the sequence files:</p>
+      <p id="p-00119-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Symbol:</entry>
+                  <entry>Meaning:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>Probable C</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2</entry>
+                  <entry>Probable T</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3</entry>
+                  <entry>Probable A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4</entry>
+                  <entry>Probable G</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>R</entry>
+                  <entry>A or G</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Y</entry>
+                  <entry>C or T</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>M</entry>
+                  <entry>A or C</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>K</entry>
+                  <entry>G or T</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>W</entry>
+                  <entry>A or T</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>S</entry>
+                  <entry>G or C</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>H</entry>
+                  <entry>A or C or T</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>B</entry>
+                  <entry>G or T or C</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>V</entry>
+                  <entry>G or C or A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>D</entry>
+                  <entry>G or T or A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>N</entry>
+                  <entry>A, C, G, or T</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00010-en" level="2">DNA Sequencing Analysis Summary:</heading>
+      <p id="p-00120-en" num="0117">Of the 4405 bps provided, 4403 bps was sequenced. The plasmid pGDF5-Trc DNA, designated herein as SEQ ID NO:3 was sequenced in full with a minimum of 2× coverage over entire plasmid and 4× coverage over the insert (bp 1324-4851). The insert sequence was conforming and there were 3 discrepancies found outside the coding region (DNA insert): (i) one (1) ambiguity (Y at consensus position bp: 116) and 2 discrepancies (ii) two (2) deletions in supplied sequence (bases that appear in sequence (MD1.txt of SEQ ID NO:6) but not in the sequenced data (MD1.seq of SEQ ID NO:3)) at consensus positions bp: 86 and 87). Protein alignment between the theoretical amino sequence encoded by pGDF5-Trc shows that it is about 99% identical to the amino acid sequence of a commercially-known recombinant human GDF-5 protein (Catalog No. CYT-442; Prospec-TanyTechnoGene Ltd, Rehovot, Israel). See <figref>FIG. 1C</figref> and Sequence ID NOS:4 and 5, respectively).</p>
+      <p id="p-00121-en" num="0000">pGDF5-T5 and pGDF5-Trc Transformation</p>
+      <p id="p-00122-en" num="0118">Four <i>Escherichia coli </i>bacteria host cell lines were selected for pGDF5-T5 and pGDF5-Trc transformation: (1) DH10β (genotype: F-, mcrA Δ(mrr-hsdRMS-mcrBC) φ80lacZΔM15 ΔlacX74 recA1 endA1 araD139 Δ (ara, leu)7697 galU galK λ-rpsL nupG/pMON14272/MON7124); (2) STBL2 (genotype: F-, mcrA Δ(mcrBC-hsdRMS-mrr) recA1 endA11on gyrA96 thi supE44 re1A1 λ-Δ(lac-proAB); (3) HMS174 (genotype: F-, recA1 hsdR(rK12-mK12+)(RifR); and (4) recA (genotype: recA1819 complete gene deletion).</p>
+      <heading id="h-00011-en" level="2">A. Preparation of Media and Agar Plates</heading>
+      <p id="p-00123-en" num="0119">“Select APS (Alternative Protein Source) LB Media” was prepared by dissolving 20 g of Select APS LB broth base powder in 1 L of purified water with a pH that ranged from about 6.6 to about 7.1. LB agar plates were prepared by adding 7.5 g of Agar, U.S.P. into 500 mL of Select APS LB media. Both APS LB media and agar were autoclaved for 121° C. to 123° C. for ≧45 min on liquid cycle. After cooling to 40-60° C., Kanamycin antibiotic was added to the media and agar plates at a concentration of 50 μg/mL.</p>
+      <heading id="h-00012-en" level="2">B. Host Cell Transformation</heading>
+      <p id="p-00124-en" num="0120">Plasmid GDF5-T5 or pGDF5-Trc DNA (SEQ ID NOS:2 and 3, respectively) and a competent cell <i>E. coli </i>host cell, either from strain DH10β, STBL2, HMS174 or recA, were each separately mixed together in a tube and incubated on an ice bath for at least about 30 minutes, heat shocked for 45 seconds at 42° C.±2° C.) and immediately placed on ice for 2-5 min. About 450 μl of SOC media (Bacto tryptone 20 g/L; Bacto yeast extract, 5 g/L; NaCl, 0.5 g/L; MgCl<sub>2</sub>.6H<sub>2</sub>O 2.03 g/L; glucose 3.6 g/L) was then added into each bacteria-plasmid DNA mixture and placed onto 37° C. (±1° C.) shaker incubator and shaked at about 225 to about 275 rpm for 60 minutes (±5 minutes). To prevent lowering of a dissolved oxygen concentration, the shaker incubator was sped up to keep the dissolved oxygen concentration at 50% of air saturation. After 1 hour, an aliquot of the transformed cells were aseptically plated into APS LB/Kn agar plates and incubated overnight at 37° C. (±1° C.) for about 14 to about 24 hours. The cultivation was proceeded by adding 50% glucose solution at a level of 0.2% to obtain a high cell density, with an indication of abrupt increase of the dissolved oxygen concentration. The final pH of the growth medium was at about a pH of 7.</p>
+      <p id="p-00125-en" num="0121">Table 4 lists the different transformed groups with their corresponding host cell strain and vector constructs:</p>
+      <p id="p-00126-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="84pt" align="left" />
+              <colspec colname="3" colwidth="70pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" rowsep="1">TABLE 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Transformed</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Groups</entry>
+                  <entry>Host Cell Line</entry>
+                  <entry>Vector Construct</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>A</entry>
+                  <entry>DH10β (Clones 1-5)</entry>
+                  <entry>pGDF5-T5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>B</entry>
+                  <entry>DH10β (Clones 1-5)</entry>
+                  <entry>pGDF5-Trc</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>C</entry>
+                  <entry>STBL2 (Clones 1-5)</entry>
+                  <entry>pGDF5-T5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>D</entry>
+                  <entry>STBL2 (Clones 1-5)</entry>
+                  <entry>pGDF5-Trc</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>E</entry>
+                  <entry>HMS174 (Clones 1-5)</entry>
+                  <entry>pGDF5-T5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>F</entry>
+                  <entry>HMS174 (Clones 1-5)</entry>
+                  <entry>pGDF5-Trc</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>G</entry>
+                  <entry>recA (Clones 1-5)</entry>
+                  <entry>pGDF5-T5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>H</entry>
+                  <entry>recA (Clones 1-5)</entry>
+                  <entry>pGDF5-Trc</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00127-en" num="0122">pGDF5-T5 and pGDF5-Trc constructs were each successfully transformed into each four host cell lines. Clonal selection and expression screening were conducted by first performing a small scale fermentation with IPTG induction (1 mM final concentration). For STBL2, clonal selection was performed at 30° C. The presence of pGDF5-T5 or pGDF5-Trc DNA (SEQ ID NOS:2 and 3, respectively) was each confirmed by restriction enzyme analysis with NdeI. GDF5 protein analysis was assessed through SDS-PAGE and Western blotting</p>
+      <p id="p-00128-en" num="0123">To monitor the transformation process, a positive (+) control vector construct, pJExpress, was used. A clone that expresses the pJExpress construct showed an over-expression of a fluorescent protein of about 30 kDa protein after IPTG induction (data not shown).</p>
+      <p id="p-00129-en" num="0000">Expression Screening of pGDF5-T5 and pGDF5-Trc Constructs</p>
+      <heading id="h-00013-en" level="2">A. DNA-Restriction Enzyme Analysis:</heading>
+      <p id="p-00130-en" num="0124">Five bacterial colonies (Clones 1-5) from each transformed groups, Groups A-H as listed in Table 4, were initially picked for overnight growth in APS LB media containing 50 μg/ml of Kanamycin (APS LB/Kan). The next day, two (2 ml) of APS LB/Kan bacterial culture from each colony of each transformed groups, were grown at 37° C. (±1° C.) overnight. Plasmid DNAs were extracted and purified using a QIAprep® Spin Miniprep Kit (Qiagen, Inc, Valencia, Calif.). The purified DNAs were linearized with NdeI restriction enzyme and run through a 0.8% agarose gel to verify for the presence of the pGDF5-T5 and pGDF5-Trc constructs. Both linearized pGDF5-T5 and pGDF5-Trc DNAs have an expected size of 4299 bp and 4403 bp, respectively. As shown in <figref>FIGS. 2A and 2B</figref>, successful transformation of pGDF5-T5 and pGDF5-Trc DNA into DH10β and STBL2 (grown at 30° C.) host cells clones 1-5, respectively, was confirmed. Transformation of pGDF5-T5 and pGDF5-Trc (Clones 1-5, respectively) on HMS174 and recA host cell strains was also successful, the results of which are not presented herein.</p>
+      <p id="p-00131-en" num="0000">B. Preparation of <i>E. coli </i>Inclusion Bodies (IB)</p>
+      <p id="p-00132-en" num="0125">Positive transformants from each Group (A-H) as listed in Table 4 were cultured according to the above-mentioned method. Cells from the culture broth of each transformant were harvested and resuspended in TE buffer (25 mM Tris and 10 mM EDTA, pH 7.3). To collect inclusion bodies that contain the highly purified concentrated rhGDF-5 protein, cells were broken up by means of a homogenizer and spun down to collect the pellet (or precipitate) that contains the inclusion bodies. The inclusion bodies were washed with wash buffer and centrifuged for a period of time at 4° C. The collected pellet was solubilized by sonicating in solubilization buffer. After solubilization, the solution containing the rhGDF-5 protein was centrifuged for a period of time at 4° C.</p>
+      <p id="p-00133-en" num="0126">To obtain high purity with the highest maximum yield rhGDF-5 protein yet low oxidation and minimal related impurities, the resultant supernatant was subjected to a weak cation exchanger resin, Toyopearl™ CM-650 from Tosoh Bioscience LLC, King of Prussia, Pa. Briefly, the CM-650 column was first equilibrated with buffer before the resultant supernatant was applied to the CM-650 column. The CM-650 column was washed before eluting with the same buffer modified with a salt to elute the proteins off the column. In various embodiments, Toyopearl™ CM-650 may be replaced by Amberlite® IRC86, CM agarose-based material and/or Dowex® as the weak cation exchanger resin.</p>
+      <p id="p-00134-en" num="0127">In various embodiments, various washing buffers can be used during the purification process such as, for example, phosphate buffer saline (PBS). In some embodiments, GDF-5 protein purity is approximately 95%, 96%, 97%, 98%, 99% and/or 100%.</p>
+      <heading id="h-00014-en" level="2">C: SDS-PAGE and Western Blotting</heading>
+      <p id="p-00135-en" num="0128">To screen for bacterial clones capable of expressing rhGDF-5 protein, five single colonies from each group as listed in Table 1, were further inoculated in 4 ml of APS LB agar plates containing 50 μg/ml of Kanamycin (APS LB/Kan) and grown at 37° C. When the bacterial culture grew to OD<sub>600 </sub>from about 0.4 to about 0.6, they were induced with or without IPTG (1 mM final concentration; ±IPTG). Non-induced and Induced cultures were each harvested and treated with Novagen™ BugBuster Protein Extraction Reagent. Supernatant (soluble proteins) and pellet (insoluble proteins) from each culture, either IPTG-induced or uninduced, were then analyzed by SDS-PAGE.</p>
+      <p id="p-00136-en" num="0129">For SDS PAGE, a total of 20 μL sample (13 μl of sample, 2 μl of reducing agent and 5 μl of sample loading buffer) was prepared for gel loading. The 20 μL-samples were boiled at 95° C. for 5 minutes and loaded either as 5 μl or 20 μl for larger volume loading. All positive clones showed the presence of the expected 13.5 kDa rhGDF-5 protein.</p>
+      <p id="p-00137-en" num="0130">rhGDF-5 expression was observed in the pellets of clones from all of the host cell strains tested, regardless of which vector constructs was used in the transformation. Overexpression of rhGDF-5 protein was particularly observed in clones from HMS174 and RecA strains and was better than those of DH10β and STBL2 ((data not shown). In addition, a higher rhGDF-5 over-expression was observed with longer IPTG induction time (results not included). The size-wise comparison of the over-expression band with the reference protein, rhGDF5 was further confirmed by Western blotting analysis using an anti-human GDF-5 antibody.</p>
+      <p id="p-00138-en" num="0131">From the Western blot results obtained, GDF-5 protein was found in the bacterial pellet fraction (see <figref>FIG. 3B</figref>) and not in the supernatant fraction (see <figref>FIG. 3A</figref>). Also, the expression level using the GDF5-TRC construct was better than that of pGDF5-T5 construct. Among the 4 different host cell lines expressing pGDF5-TRC, the HMS174 cell strain provided the optimally-expression levels of the GDF-5 protein.</p>
+      <heading id="h-00015-en" level="2">Characterization of the Over-Expressing GDF-5 Clones</heading>
+      <p id="p-00139-en" num="0132">About 400 μl±2% of thawed pGDF5-Trc- or pGDF5-T5-transformed clones were aseptically and inoculated into two separate flasks of pGDF5-T5 and pGDF5-Trc-transformed RecA or HMS174 (Flask 1 for growth monitoring and Flask 2 for storage processing) in the growth medium. Each of the inoculated flasks were shaked at 220 to 250 rpm at a temperature of about 37° C.±1° C. until an optical density (OD<sub>600</sub>) of about 1 to about 3 was reached. After 8 hours of fermentation (EFT8; Elapsed Fermentation Time), hourly sampling from Flask 1 was taken for optical density measurements. Sampling may occur prior to EFT 8 and when OD<sub>600 </sub>of Flask 1 reached between 0.8 and 1.0, the OD<sub>600 </sub>of Flask 2 was also measured.</p>
+      <p id="p-00140-en" num="0133">Of the forty clones (5 clones per each transformed group) examined, two clones, Clones #1 and 4 derived from pGDF5-TRC-transformed HMS174, were selected and evaluated for further studies, e.g., ability to express and produce GDF-5 and growth profile and rate (see <figref>FIGS. 4A and 4B</figref>, respectively).</p>
+      <p id="p-00141-en" num="0134">The growth profile study was done to understand how these cells grow in the lag, exponential and stationary phases. The data obtained may then allow for profiling growth rates, population doubling time (expressed as p), carbon consumption and waste production.</p>
+      <p id="p-00142-en" num="0135">Growth rate constant, according to the embodiment of the present disclosure, can be defined as the number of generations that occur per unit time (expressed as μ or mu), where (1) μ=(ln N2−ln N1)/(t2−t1) where N2 and N1=cells m1−1 at time t2 and t1 (in h); and (2) convert (1) to log: μ=(log N2−log N1) (2.303)/t2 and t1).</p>
+      <p id="p-00143-en" num="0136">As depicted in <figref>FIG. 4A</figref>, pGDF5-Trc-transformed HMS174 Clones 1 and 4 both overexpress the rhGDF-5 protein. However, the growth profile of Clone 4 was better than that of Clone 1 (with Clone 4 having a higher mu or μ value for growth rate), despite the similarity in their OD<sub>600 </sub>values starting from EFT0 to EFT18.5-19.0 (see <figref>FIG. 4B</figref>). Growth characterization and protein production were further conducted by growing the transformants using two fermentation methods: (1) ultra yield shake flask (UY SF) and (2) 5 L Applikon Fermentor (Ferm).</p>
+      <p id="p-00144-en" num="0137">The ultra yield shake flask (UY SF) fermentation method, as discussed above, may be used to easily make the recombinant protein material without the use of a fermentor. This technology is disposable, and is product dedicated. It stimulates a fermentation environment but does not require the infrastructure and laborious setup that actual bioreactor fermentations need. It has a similar set up like a disposable shake flask and allows for the manufacturing of the recombinant protein material that is closely representative of what can be made in a fermentor to support downstream and analytical development of the recombinant protein</p>
+      <p id="p-00145-en" num="0138">The 5 L fermentation method, on the other hand, is a non-GMP batch induction fermentation method for production of the recombinant GDF-5 protein. It involves the inoculation of 400 mL of seed media with 1000 μl seed ampoule of pGDF5-Trc-transformed Clone 1 or 4 and shaking the media at 250 rpm, for 8 hrs at 37° C. This was followed by inoculating about 200 mL of seed culture into the 5-L fermenter with the following fermentation parameters:</p>
+      <p id="p-00146-en" num="0139">Fermentation Parameters: Temperature 37° C., Stirring: 330-1322 rpm, Airflow: 4 L/min, pH control: 6.8+/−0.2 with ammonium hydroxide and 50% phosphoric acid, dissolved oxygen: 30%, and anti-foam 204 as needed.</p>
+      <p id="p-00147-en" num="0140">When the OD<sub>600 </sub>reaches at about 0.6-0.8, 1 mM IPTG was added for induction. After 14-18 hours of post-induction, the bacterial culture was harvested.</p>
+      <p id="p-00148-en" num="0141">The goal for exploring these methods is to develop a recombinant protein production that is not laborious and simple for analytical and purification approach. These two methods vary in terms of the following as illustrated in Table 5 and in the results obtained as shown in <figref>FIG. 5A</figref> and <figref>FIG. 5B</figref>.</p>
+      <p id="p-00149-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="84pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>UY Shake Flask</entry>
+                  <entry>5 L Applicon Fermentor</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(FIG. 6A)</entry>
+                  <entry>(FIG. 6A)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="84pt" align="left" />
+              <colspec colname="3" colwidth="84pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>pH Control</entry>
+                  <entry>APS Super Broth with</entry>
+                  <entry>APS Super Broth with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100 mM MOPs</entry>
+                  <entry>H3PO4 and NH4OH</entry>
+                </row>
+                <row>
+                  <entry>pH Shift</entry>
+                  <entry>pH shift to more acidic may</entry>
+                  <entry>pH maintained at</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>cause protein induction</entry>
+                  <entry>7.0 ± 0.2</entry>
+                </row>
+                <row>
+                  <entry>Growth</entry>
+                  <entry>lower growth rate</entry>
+                  <entry>growth rate was above 1</entry>
+                </row>
+                <row>
+                  <entry>Rate</entry>
+                  <entry>at induction</entry>
+                  <entry>at induction</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00150-en" num="0142">A better GDF5 protein expression was observed when UY SF method was employed (see SDS-PAGE as shown in <figref>FIG. 6A</figref>), but the overall GDF5 expression may appear equivalent between Clones 1 and 4 (see western blot as shown in <figref>FIG. 6B</figref>, lanes 6 and 10). In addition, the pellet fraction from Clone 1 UY SF (sample PF030311A, lane 10) appeared to have a more dense GDF5-band (see <figref>FIG. 6B</figref>). Supernatant (soluble proteins) and pellet (insoluble proteins) samples from pGDF5-Trc-transformed Clones 1 and 4 were analyzed using SDS-PAGE and have the following designations:</p>
+      <p id="p-00151-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="77pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" rowsep="1">TABLE 6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Sample</entry>
+                  <entry>Designated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sample Source</entry>
+                  <entry>Description</entry>
+                  <entry>pGDF5-Trc Clone #</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Supernatant</entry>
+                  <entry>SF020311A</entry>
+                  <entry>Clone 1 UY SF</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Pellet</entry>
+                  <entry>PF020311A</entry>
+                  <entry>Clone 1 UY SF</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Supernatant</entry>
+                  <entry>SF020311B</entry>
+                  <entry>Clone 4 UY SF</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Pellet</entry>
+                  <entry>PF020311B</entry>
+                  <entry>Clone 4 UY SF</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Supernatant</entry>
+                  <entry>SF020311C</entry>
+                  <entry>Clone 1 5 L Ferm</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Pellet</entry>
+                  <entry>PF020311C</entry>
+                  <entry>Clone 1 5 L Ferm</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Supernatant</entry>
+                  <entry>SF020311D</entry>
+                  <entry>Clone 4 5 L Ferm</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Pellet</entry>
+                  <entry>PF020311D</entry>
+                  <entry>Clone 4 5 L Ferm</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> Maximizing pGDF5-Trc DNA Yield and Optimal Recombinant GDF-5 Protein Production </p>
+      <p id="p-00152-en" num="0143">High plasmid DNA yield and recombinant protein production, while still cost-effective, are important for the manufacturing of rhGDF-5 biologics. Therefore, to attain the maximum pGDF5-Trc DNA yield and rhGDF-5 protein production, efforts were made to obtain a high cell density fermentation for DNA production. Specifically, the type of production (batch, fed-batch or continuous fermentation), type of media and components and growth control strategies were considered. To achieve these goals, the inventors added several components or ingredients to a high cell density media (formulation as described in <figref>FIG. 7</figref>) to determine their effects of cell growth, GDF5-Trc DNA plasmid yield and rhGDF-5 protein expression without compromising GDF5-Trc plasmid quality and GDF-5 protein expression. A two level fractional factorial designed of experiment (DoE) was performed in Thomson 24-microwell plates using either a defined (minimal) or semi-defined (complex) media. Statistical software was employed to evaluate these various formulations for fermentation media.</p>
+      <heading id="h-00016-en" level="2">A. Defined Media DoE (7-Factor DoE Design Space)</heading>
+      <p id="p-00153-en" num="0144">The defined media additionally includes ingredients such as sodium molybdate (ranges from about 5 to about 10 mg/L), magnesium sulfate heptahydrate (ranges from about 2 to about 6 mM), sodium chloride (ranges from 0 to about 4 g/L), EDTA (ranges from 0 to about 400 mg/L), MOPS (ranges from 0 to about 100 mM), amino acid supplement including L-methionine (ranges from 0 to about 10 ml/L) and vitamin supplement (folic acid, pyrodoxine, and biotin; ranges from 0 to about 10 ml/L). Center points were added to detect for curvature and residual testing and lack-of-fit testing were included in the studies. The transformed bacteria were grown in Thomson 24-well microplate at 37° C., 250 rpm, induced after 4 hours of elapsed fermentation time (EFT4) with 1 mM IPTG and harvested after incubating for an additional 14 hours. Chemical lysis was performed on harvested samples. Bacterial pellet samples were run on SDS-PAGE. Gels were analyzed using ImageJ densitometry software (see <figref>FIGS. 8A-B</figref>).</p>
+      <heading id="h-00017-en" level="2">B. Semi-Defined Media DoE</heading>
+      <p id="p-00154-en" num="0145">The semi-defined (complex) media included, in addition to what was in the defined media, yeast extract and tryptone (animal-derived). Both yeast extract and tryptone range from 0 to about 0.4% w/v. Also included were sodium molybdate, magnesium sulfate, sodium chloride, EDTA, MOPS (3[N-morpholino]propane-sulfonic acid), amino acids (including L-methionine), and vitamins (folic acid, pyrodoxine, and biotin). The center points were added to detect for curvature and residual testing were included. The transformed bacteria were grown in Thomson 24-well microtitreplate in high-throughput minibioreactor system at 37° C., 1000 rpm. During this time, biomass, pH and pO2 were measured at 15 minute interval. The bacteria culture was induced after 4 hours of elapsed fermentation time (EFT4) with 1 mM IPTG and harvested after incubating for an additional 14 hours. Chemical lysis was performed on harvest samples and bacterial pellet samples were run on SDS-PAGE and analyzed using ImageJ densitometry software (see <figref>FIGS. 9A-D</figref>).</p>
+      <p id="p-00155-en" num="0146">Based on the results obtained from the two-level fractional factorial design, three other high cell density (HCD) growth media were tested and further developed. They differ from each other with respect to their optimized response to either rhGDF5 expression (protein production) or biomass yield (growth rate) as follows: Media 1 (defined media improved rhGDF-5 expression) included sodium molybdate, magnesium sulfate and sodium chloride. Expression of rhGDF-5 was increased by increasing sodium molybdate, magnesium sulfate and sodium chloride in defined media (see Tables 6-7 and <figref>FIGS. 8A-B</figref>). Media 2 (semi-defined media improved rhGDF-5 expression) included magnesium sulfate and yeast extract. Expression of rhGDF-5 was increased in the presence of yeast extract and magnesium sulfate but decreased when sodium molybdate was present (see Tables 7-8 and <figref>FIGS. 9A-B</figref>). Media 3 (semi-defined media improved biomass yield) included yeast extract and tryptone while being negatively affected by sodium chloride and MOPS (see Tables 7-8 and <figref>FIGS. 9C-D</figref>).</p>
+      <p id="p-00156-en" num="0147">As demonstrated in Table 7 and 8, Media 1 and 2 both enhanced the expression of rhGDF-5 while Media 3 improved or optimized biomass yield.</p>
+      <p id="p-00157-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="77pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 7</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Optimized</entry>
+                  <entry>Harvest</entry>
+                  <entry>rhGDF-5 Band Amount</entry>
+                </row>
+                <row>
+                  <entry>Media</entry>
+                  <entry>Media Type</entry>
+                  <entry>Response</entry>
+                  <entry>OD<sub>600</sub></entry>
+                  <entry>(μg/mL)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="77pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>Defined</entry>
+                  <entry>rhGDF-5</entry>
+                  <entry>7.58</entry>
+                  <entry>0.133</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>expression</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>Semi-Defined</entry>
+                  <entry>rhGDF-5</entry>
+                  <entry>8.3</entry>
+                  <entry>1.03</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>expression</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>Semi-Defined</entry>
+                  <entry>Biomass</entry>
+                  <entry>9.06</entry>
+                  <entry>0.040</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>Super Broth</entry>
+                  <entry>NA</entry>
+                  <entry>15.1</entry>
+                  <entry>0.105</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Complex)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00158-en" num="0148">It was also noted that scale-up to 1 L volumes precipitated Media 2 while reduction in phosphates allowed the expression of rhGDF-5 and prevented precipitation of magnesium phosphate. Furthermore, substituting tryptone with peptone, a non-animal derived alternative, increased rhGDF-5 expression. Data not included herein.</p>
+      <p id="p-00159-en" num="0149">Similar findings were obtained with a smaller scale fermentation (24-well plate) and the 2.5 L Ultra Yield Flask scale up fermentation methods with respect to the effect of Media 1 and 3 on GDF5 on biomass yield (see Table 8). Their effect on GDF-5 protein expression was not the same. Enhanced GDF5 protein expression was demonstrated when cultures were grown on the 24-well plate with Media 2 but not on Media 1 and Media 3. See data from Table 8. A problem was encountered with Media 2 during the 2.L-Ultra Yield Flask scale-up fermentation run. The solution precipitated during overnight storage which may have been due to magnesium sulfate reacting with phosphate-buffering system to form insoluble magnesium phosphates.</p>
+      <p id="p-00160-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="441pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 8</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Media Alternatives</entry>
+                </row>
+                <row>
+                  <entry>2.5 L UY Confirm. Run</entry>
+                </row>
+                <row>
+                  <entry>24 Well Plates</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="13" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="21pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <colspec colname="10" colwidth="42pt" align="center" />
+              <colspec colname="11" colwidth="28pt" align="center" />
+              <colspec colname="12" colwidth="35pt" align="center" />
+              <colspec colname="13" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>rhGDF-5</entry>
+                  <entry>rhGDF-5</entry>
+                  <entry />
+                  <entry>rhGDF5</entry>
+                  <entry>rhGDF-5</entry>
+                  <entry />
+                  <entry>rhGDF 5</entry>
+                  <entry>rhGDF-5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>band</entry>
+                  <entry>amount per</entry>
+                  <entry />
+                  <entry>band</entry>
+                  <entry>amount per</entry>
+                  <entry />
+                  <entry>band</entry>
+                  <entry>amount per</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Media</entry>
+                  <entry>Optimized</entry>
+                  <entry />
+                  <entry>Harvest</entry>
+                  <entry>amount</entry>
+                  <entry>ml ferm</entry>
+                  <entry>Harvest</entry>
+                  <entry>amount</entry>
+                  <entry>ml ferm</entry>
+                  <entry>Harvest</entry>
+                  <entry>amount</entry>
+                  <entry>ml ferm</entry>
+                </row>
+                <row>
+                  <entry>Media</entry>
+                  <entry>Type</entry>
+                  <entry>Response</entry>
+                  <entry>ID</entry>
+                  <entry>OD600</entry>
+                  <entry>(μg)</entry>
+                  <entry>(μg/ml)</entry>
+                  <entry>OD600</entry>
+                  <entry>(μg)</entry>
+                  <entry>(μg/ml)</entry>
+                  <entry>OD600</entry>
+                  <entry>(μg)</entry>
+                  <entry>(μg/ml)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="13" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="13" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="21pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <colspec colname="7" colwidth="42pt" align="char" char="." />
+              <colspec colname="8" colwidth="28pt" align="char" char="." />
+              <colspec colname="9" colwidth="28pt" align="char" char="." />
+              <colspec colname="10" colwidth="42pt" align="char" char="." />
+              <colspec colname="11" colwidth="28pt" align="char" char="." />
+              <colspec colname="12" colwidth="35pt" align="char" char="." />
+              <colspec colname="13" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>Defined</entry>
+                  <entry>rhGDF-5</entry>
+                  <entry>N/A</entry>
+                  <entry>8.64</entry>
+                  <entry>0.6678</entry>
+                  <entry>14.99</entry>
+                  <entry>7.25</entry>
+                  <entry>2.596</entry>
+                  <entry>24.15</entry>
+                  <entry>7.58</entry>
+                  <entry>0.1402</entry>
+                  <entry>1.023</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>expression</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>Semi</entry>
+                  <entry>rhGDF-5</entry>
+                  <entry>2a</entry>
+                  <entry>9.82</entry>
+                  <entry>0.1913</entry>
+                  <entry>6.278</entry>
+                  <entry>7.79</entry>
+                  <entry>0.4379</entry>
+                  <entry>4.378</entry>
+                  <entry>8.3</entry>
+                  <entry>0.9934</entry>
+                  <entry>7.936</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>defined</entry>
+                  <entry>expression</entry>
+                  <entry>2b</entry>
+                  <entry>9.82</entry>
+                  <entry>0.7756</entry>
+                  <entry>16.37</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>Semi</entry>
+                  <entry>Biomass</entry>
+                  <entry>3</entry>
+                  <entry>11.96</entry>
+                  <entry>0.1406</entry>
+                  <entry>10.11</entry>
+                  <entry>12.2</entry>
+                  <entry>3.343</entry>
+                  <entry>52.34</entry>
+                  <entry>9.06</entry>
+                  <entry>0.0351</entry>
+                  <entry>0.3060</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>defined</entry>
+                  <entry />
+                  <entry>3a</entry>
+                  <entry>10.12</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>3b</entry>
+                  <entry>10.42</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>3c</entry>
+                  <entry>11.42</entry>
+                  <entry>1.172</entry>
+                  <entry>17.17</entry>
+                </row>
+                <row>
+                  <entry>5B</entry>
+                  <entry>Super</entry>
+                  <entry>N/A</entry>
+                  <entry>N/A</entry>
+                  <entry>22.72</entry>
+                  <entry>1.609</entry>
+                  <entry>46.92</entry>
+                  <entry>19.06</entry>
+                  <entry>2.181</entry>
+                  <entry>53.34</entry>
+                  <entry>15.1</entry>
+                  <entry>0.1668</entry>
+                  <entry>2.425</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Broth</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Complex)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="13" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00018-en" level="2">Effects of pH and Oxygen on the GDF-5 Protein Production and Expression</heading>
+      <p id="p-00161-en" num="0150">To study the effects of pH and oxygen on GDF-5 protein production and expression, pGDF5-Trc-transformed host cells (HMS174 strain, Clone F031512 were grown under the following growth conditions: (i) pH 6.5 (condition A); ii) pH 7.1 (condition B); and iii) pH 6.8 at low oxygen (condition C) and induced with IPTG. Samples designated hereinafter as F031512A, F031512AB, and F031512A C from each of the three conditions were normalized to 4.0 at OD<sub>600 </sub>by dilution into BugBuster® Plus Lysonase™ (Novagen®) before separately running them under reducing and non-reducing SDS-PAGE conditions. Each of the sample pellets (EFT22, EFT24, EFT26 and EFT28 were resuspended in equal volume of water and added to 4× reducing sample buffer. All 3 SDS-PAGE gels (see <figref>FIGS. 11A-C</figref>), i.e., Samples F031512A, B, and C loaded on Gels A, B, and C, respectively, were stained and de-stained in the same gel tray. Intensity and banding pattern of the reference standards varied greatly from gel to gel. Densitometry data was generated comparatively. All calculations were based on standards value from the gel that produced a single band standard (Gel C). Though the overall yield estimations accuracy maybe questionable but their relative comparisons should be valid since the molecular weight ladder showed consistent band intensity at molecular weights similar to the protein of interest.</p>
+      <p id="p-00162-en" num="0151">As shown in <figref>FIG. 11E</figref>, the F031512A samples resulted in a higher ratio of the two major expressed protein bands (40 kDa:14 kDa) than Samples F031512B and F031512C. Low oxygen (condition C) resulted in the lowest ratio of 40 kDa:14 kDa (<figref>FIG. 11E</figref>). Among the three conditions tested, cells that grew under growth media of pH 7.1 (condition B) had the highest overall GDF5 protein expression (<figref>FIG. 11B</figref>) and growth rate (see <figref>FIG. 11D</figref>) than cells that grew under condition A (growth media of pH 6.5; see <figref>FIG. 11A</figref>) and condition C (low oxygen condition; see <figref>FIG. 11C</figref>). Extreme reduction in dissolved oxygen leading to anaerobic conditions may not improve protein expression but can influence the ratio of 40 kDa:14 kDa (see <figref>FIGS. 11C and 11E</figref>).</p>
+      <p id="p-00163-en" num="0152">It will be apparent to those skilled in the art that various modifications and variations can be made to various embodiments described herein without departing from the spirit or scope of the teachings herein. Thus, it is intended that various embodiments cover other modifications and variations of various embodiments within the scope of the present teachings.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>.-<b>18</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>19</b>. A host cell line, the cell line comprising an inclusion body comprising an isolated GDF-5 protein, wherein the host cell includes an expression vector which comprises a polynucleotide encoding for an rhGDF-5 protein under the control of a T5 or Trc promoter.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>20</b>. A host cell line of <claim-ref idref="clm-00002-en">claim 19</claim-ref>, wherein the isolated GDF-5 protein is recovered and purified via ion-exchange chromatography, ammonium sulfate or ethanol precipitation, acid or base extraction, column chromatography, affinity column chromatography, anion or cation exchange chromatography, phosphocellulose chromatography, hydrophobic interaction chromatography, hydroxylapatite chromatography, lectin chromatography and/or gel electrophoresis.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00014.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00015.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00016.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00017.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00018.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00019.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00020.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00021.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00022.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00023.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150252088A1_00024.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252088A1-20150910-D00024.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252088A1.PDF" type="pdf" size="4389050" pages="54" />
+</lexisnexis-patent-document>

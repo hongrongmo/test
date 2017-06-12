@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247112A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021456" date-changed="20151110" time-changed="123302">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140207">
+        <country>US</country>
+        <doc-number>20150247112</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14637383</doc-number>
+        <date>20150303</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151110">
+      <classification-ipcr sequence="1">
+        <text>C12M   1/32        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>M</subclass>
+        <main-group>1</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C12M   1/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>M</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C12N   5/09        20100101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20100101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>09</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C12Q   1/68        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>G01N  33/50        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151110">
+      <classification-cpc sequence="1">
+        <text>C12M  23/12        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>M</subclass>
+        <main-group>23</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12M  23/22        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>M</subclass>
+        <main-group>23</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12M  23/38        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>M</subclass>
+        <main-group>23</main-group>
+        <subgroup>38</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12M  29/10        20130101 LI20151002BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>M</subclass>
+        <main-group>29</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151002</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">48</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">3D Tissue Culture Devices and Systems</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61947359</doc-number>
+          <date>20140303</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>KIYATEC INC.</orgname>
+            <address>
+              <city>Greenville</city>
+              <state>SC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Orr</last-name>
+            <first-name>David E.</first-name>
+            <address>
+              <city>Piedmont</city>
+              <state>SC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Gevaert</last-name>
+            <first-name>Matthew R.</first-name>
+            <address>
+              <city>Greenville</city>
+              <state>SC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Cheluvaraju</last-name>
+            <first-name>Chaitra</first-name>
+            <address>
+              <city>Central</city>
+              <state>SC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Crosswell</last-name>
+            <first-name>Howland E.</first-name>
+            <address>
+              <city>Greenville</city>
+              <state>SC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>DesRochers</last-name>
+            <first-name>Teresa M.</first-name>
+            <address>
+              <city>Greenville</city>
+              <state>SC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463290">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247112</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150303</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463289">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247112</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150303</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Embodiments disclosed herein are directed to bioreactor devices and systems that allow cultured cells to grow and develop with a three-dimensional aspect. In addition, the bioreactor systems described herein can be used for variation and independent control of environmental factors within the individual sub-wells which can be advantageously co-located in a common chamber. For example, the chemical make-up of a nutrient medium that can flow through a chamber as well as the mechanical force environment within the chamber, including the perfusion flow, shear stress, hydrostatic pressure, and the like, can be independently controlled and maintained for each separate culture chamber of the disclosed systems. Further, the bioreactor systems are designed for easy incorporation into automated systems and minimize or eliminate tubing.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150415</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247112A1</docdb-publication-number>
+      <docdb-application-id>444210125</docdb-application-id>
+      <new-owner>KIYATEC INC., SOUTH CAROLINA</new-owner>
+      <free-text-description>NUNC PRO TUNC ASSIGNMENT;ASSIGNORS:ORR, DAVID E.;GEVAERT, MATTHEW R.;CHELUVARAJU, CHAITRA;AND OTHERS;SIGNING DATES FROM 20150311 TO 20150320;REEL/FRAME:035417/0969</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This patent application claims priority to U.S. Provisional Patent Application No. 61/947,359 filed Mar. 3, 2014 and entitled “3D Tissue Culture Devices and Systems.” The entire disclosure of the above-identified priority application is hereby fully incorporated herein by reference</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">The subject matter disclosed herein is directed to three-dimensional cell culture devices and uses thereof.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">The ability to culture in vitro three-dimensional cellular constructs that mimic natural tissue has proven challenging. There are multiple dynamic biochemical and mechanical interactions that take place between and among cells in vivo, many of which have yet to be fully understood, and yet the complicated in vivo system must be accurately modeled if successful development of engineered tissues in vitro is to be accomplished. Growth of mammalian cells in vitro using traditional culture methods where cells are grown on a flat substrate, such as in a conventional cell culture plate or flask, fails to replicate the complexities cells encounter in vivo. One of the major physical differences relates to the shape and geometry cells acquire when grown on a flat substrate. Growth on two-dimensional surfaces (2D) results in cell flattening and remodeling of the cell and its internal cytoskeleton. Such changes have been shown to alter gene expression. Vergani et al. I<smallcaps>NT </smallcaps>J B<smallcaps>IOCHEM </smallcaps>C<smallcaps>ELL </smallcaps>B<smallcaps>IOL </smallcaps>2004, 36, 1447-1461. Cell flattening also affects nuclear shape, which can lead to differences in gene expression and protein synthesis. Thomas et al. PNAS 2002 99, 1972-1977. This has a significant impact on cell performance and can influence the usefulness of biological assays conducted on 2D cultures. For example, monolayers of cultured cells are though to be more susceptible to therapeutic agents. Bhadriraju &amp; Chen D<smallcaps>RUG </smallcaps>D<smallcaps>ISCOV </smallcaps>T<smallcaps>ODAY </smallcaps>2002 7, 612-620; Sun et al. J B<smallcaps>IOTECHNOL </smallcaps>2006, 122, 372-381. Furthermore, cell culture on rigid surfaces can enhance cell proliferation but inhibit cell differentiation due to limited cell interactions. Cukierman et al. C<smallcaps>URR </smallcaps>O<smallcaps>PIN </smallcaps>C<smallcaps>ELL </smallcaps>B<smallcaps>IOL. </smallcaps>2002, 14, 633-639. A more appropriately engineered cell culture environment could improve the predictive accuracy of the drug discovery process and aid in the understanding of cell differentiation and morphogenesis.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00004-en" num="0004">In one aspect, the embodiments described herein are directed to a bioreactor device comprising one or more chambers and a lid, the lid comprising one or more integrated fluid circuits defined therein. The fluid circuits define inlet and outlet channels and allow perfusion of fluids in and out of the one or more chambers. The chambers may be individual and connected only by placement of the lid, or the chambers may be directly connected to one another. The lid may be made of a single layer or multiple layers. In one example embodiment the lid is made of a bottom layer comprising a soft elastomeric material and the top layer comprises a hard or rigid material. In certain example embodiments, the fluid circuit is defined between the bottom and top layers. The bottom layer may further comprise a molded extension that seals the chamber to the lid. The top or bottom layer may comprise one or more pump interfaces. The top or bottom layer may comprise one or more reservoir interfaces. In certain example embodiments, the chambers are the wells of a commercially available microplate, such as those used for cell culture. The chambers may further comprise an insert, the insert defining one or more sub-wells within the chamber. The sub-wells are used for three-dimensional culturing of cells and may further comprise a cell scaffold for cells to grow on, into, or within. In certain example embodiments, the bioreactor device has the footprint of a standard microplate for use with existing devices, such as spectrometry devices.</p>
+      <p id="p-00005-en" num="0005">In another aspect, the embodiments described herein are directed to adapters that can convert individual microplate wells into perfused three-dimensional cell culture sub-wells. The adapter comprises a lid defining an inlet and outlet channel that can be connected to a media reservoir and/or pump to allow perfusion through the adapter. The adapter further comprises an insert that defines one or more sub-wells within the microplate well for cell culture. The sub-wells may further comprise a cell scaffold.</p>
+      <p id="p-00006-en" num="0006">In another aspect, the embodiments described herein are directed to bioreactor devices comprising a soft elastomeric layer defining one or more inlet and outlet fluid channels and one or more holes that traverse the soft layer completely, and a rigid top layer comprising one or more access ports to align with the one or more cell culture chambers. The one or more cell access ports may function as a cell culture chamber. The cell access ports further comprise one or more channels within the walls of the access port to align with the one or more inlet and outlet fluid channels of the soft layer. In certain example embodiments, the one or more channels in the walls of the one or more access ports may enter the chamber at different heights.</p>
+      <p id="p-00007-en" num="0007">In another aspect, the embodiments described herein are directed to bioreactor devices comprising a hard bottom layer defining one or more cell culture chambers, the one or more cell culture chambers comprising an inlet opening and outlet opening at a base of the cell culture channel, and a soft elastomeric top layer for mounting to the hard layer, the soft elastomeric layer defining one or more openings to receive the one or more cell culture chambers, the soft elastomeric layer further defining inlet and outlet fluid channels that align with the inlet and outlet opening in the base of the cell culture chamber.</p>
+      <p id="p-00008-en" num="0008">In another aspect, the embodiments disclosed herein are directed to methods of culturing one or more cell types in a perfused three-dimensional environment comprising seeding the one or more cells in a bioreactor device disclosed herein and perfusing the appropriate cell culture media through the chamber and/or sub-wells of the device.</p>
+      <p id="p-00009-en" num="0009">In yet another aspect, the embodiments disclosed herein are directed to method of assessing responsiveness to therapeutic agents comprising culturing in a perfused three-dimensional environment a plurality of cell samples in a plurality of sub-wells of the bioreactor devices disclosed herein, perfusing to each chamber a culture media comprising the same or a different therapeutic agent, or concentration of therapeutic agent, and measuring the responsiveness of each cell sample to the corresponding therapeutic agent or concentration of therapeutic agent. In certain example embodiments, the cell samples can be derived from subject biopsy samples and used to select an appropriate therapeutic for the subject based on the measured responsiveness. In certain example embodiments, the biopsy sample is a cancer biopsy sample. In certain other embodiments, cells derived from the biopsy sample are cultured in a three-dimensional environment containing one or more non-cancer cell types such epithelial cells, fibroblast, adipocytes, endothelial cells, macrophages, T-cells, B-cells or a combination thereof.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 1</figref> is a diagram depicting a multi-chamber bioreactor device with integrated fluid circuits, in accordance with certain example embodiments.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 2</figref> is a diagram depicting an alternative view of a multi-chamber bioreactor device with integrated fluid circuits, in accordance with example embodiments.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 3</figref> is a photograph of a multi-chamber bioreactor device with integrated fluid circuits, in accordance with certain example embodiments.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 4</figref> is a photograph providing a focused view on a multi-well chamber of a bioreactor device with integrated fluid circuits, in accordance with certain example embodiments.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 5</figref> is a photograph of a bottom view of a multi-chamber bioreactor device with integrated fluid circuits, in accordance with certain example embodiments.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 6</figref> is a photograph of a top view of a multi-chamber bioreactor device with integrated fluid circuits, in accordance with certain example embodiments.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 7</figref> is a photograph of a frontal angle view of a multi-chamber bioreactor device with integrated fluid circuits, in accordance with certain example embodiments.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 8</figref> is a diagram of a portion of a lid inserted into a chamber of a bioreactor device, in accordance with certain example embodiments.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 9</figref> is a diagram of a portion of a lid inserted into a chamber of a bioreactor device, the lid comprising a domed bubble trap, in accordance with certain example embodiments.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 10</figref> is a diagram of a portion of a lid inserted into a chamber of a bioreactor device, the lid comprising a pyramidal bubble trap, in accordance with certain example embodiments.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 11</figref> is a diagram of a portion of lid inserted into a chamber of a chamber of a bioreactor device, the lid further comprising tube extensions that extend from the lid into an insert in the bottom of the chamber, in accordance with certain example embodiments.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 12</figref> is a diagram of a portion of a lid inserted into a chamber of a bioreactor device, with an insert retained within the bottom portion of the lid, in accordance with certain example embodiments.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 13</figref> is a diagram of a portion of a lid inserted into a chamber of a bioreactor device, with an insert retained across a bottom portion of the lid, in accordance with certain example embodiments.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 15</figref> is a diagram depicting a chamber with a single inlet and single outlet (A), a chamber with a single inlet and single outlet (B), wherein the single inlet has a larger diameter/width than the outlet, and a chamber with multiple inlets and a single outlet (C), in accordance with certain example embodiments.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 16</figref> is a diagram depicting a fluid circuit with an analytical window defined within the fluid circuit, in accordance with certain example embodiments.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 17</figref> is a diagram depicting two individual rounded chambers annealed together, in accordance with certain example embodiments.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 18</figref> is a diagram depicting a single oval-shaped chamber, in accordance with certain example embodiments.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 19</figref> is a diagram depicting a top view of a rounded chamber with a flat wall surface (A), and a side view (B) of the rounded chamber with a flat wall surface, the flat wall surface comprising an opening and a tab for assisting in locking two chambers together, in accordance with certain example embodiments.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 20</figref> is a diagram depicting a top view of a double-walled rounded chamber defining a well within a well arrangement, in accordance with certain example embodiments.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 21</figref> is a diagram depicting a side view (A), a top view (B), and a cross-sectional view (C) of a series of chambers connected by a bridge with a rounded edge, in accordance with certain example embodiments.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 22</figref> is a diagram depicting a top view (A) and side view (B) of a chamber with an integrated imaging window, in accordance with certain example embodiments.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 23</figref> is a diagram depicting a cross sectional view of a lid, chamber, and insert of a bioreactor device, in accordance with certain example embodiments.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 24</figref> is a diagram depicting a series (A-F) of alternative sub-well arrangements within a chamber formed using an insert, in accordance with certain example embodiments.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 25</figref> is a diagram depicting a series (A-C) of alternative sub-well arrangements within a chamber formed using an insert, in accordance with certain example embodiments.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 26</figref> is a diagram depicting a chamber with void space around formed sub-wells filled with a hydrogel or porous substrate (A), and an insert cut from a porous filter to define two sub-wells within a chamber (B), in accordance with certain example embodiments.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 27</figref> a diagram depicting a chamber with retaining blocks for holding inserts, in accordance with certain example embodiments.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 28</figref> is a diagram depicting a chamber with an insert defining two sub-wells with the remaining void space filled with hydrogel or porous substrate, in accordance with certain example embodiments.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 29</figref> is a diagram depicting an insert defining a well within a well arrangement, in accordance with certain example embodiments.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 30</figref> is a set of photographs (A-B) of adapters for converting a single well of a multi-well culture plate into a 3D culture chamber, in accordance with certain example embodiments.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 31</figref> is a set of photographs of an adapter with an insert defining a single well (A) and an insert defining two sub-wells (B), in accordance with certain example embodiments.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 32</figref> is a set of photographs providing a side view (A), a first top view (B), a bottom view (C), and second top view (D) of an adapter inserted into a well of a micro-well culture plate, in accordance with certain example embodiments.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 33</figref> is a diagram depicting a bioreactor device with a fluid channel and chamber defined in a soft elastomeric bottom layer with a hard top layer defining an inlet or access window, in accordance with certain example embodiments.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 34</figref> is a diagram depicting a top view (A) and bottom view (B) of a bioreactor device with a hard bottom layer defining a plurality of culture chambers and a soft elastomeric top layer with a series of openings for fitting over the culture chambers, in accordance with certain example embodiments.</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 35</figref> is a table showing example cell line co-cultures used to generate microtumors, in accordance with certain example embodiments.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF THE EXAMPLE EMBODIMENTS</heading>
+      <heading id="h-00007-en" level="1">Overview</heading>
+      <p id="p-00044-en" num="0044">Embodiments disclosed herein are directed to bioreactor devices and systems that allow cultured cells to grow and develop with a three-dimensional aspect. In addition, the bioreactor systems described herein can be used for variation and independent control of environmental factors within the individual sub-wells which can be advantageously co-located in a common chamber. For example, the chemical make-up of a nutrient medium that can flow through a chamber as well as the mechanical force environment within the chamber, including the perfusion flow, shear stress, hydrostatic pressure, and the like, can be independently controlled and maintained for each separate culture chamber of the disclosed systems. Further, the bioreactor systems are designed for easy incorporation into automated systems and minimize or eliminate tubing. In certain example embodiments, the bioreactor devices provide small culture volumes within chambers that allow for direct analytics to be done on or by the device, allow full thickness imaging, and permit continuous monitoring and measurement of the growth of a cell culture.</p>
+      <p id="p-00045-en" num="0045">In one aspect, the systems disclosed herein can be utilized for culturing product cells for medical use, for example, for transplant to a patient or for manufacture of a protein product, such as a biopharmaceutical. According to this embodiment, cells can be grown in an environment that includes the biochemical products of different cell types, at least some of which may be necessary for the growth and development of the desired cells. However, cell types can be maintained in a physically isolated state during their growth and development. As such, possible negative consequences due to the presence of aberrant or undesired cell types in the desired product cells can be avoided.</p>
+      <p id="p-00046-en" num="0046">In another aspect, the systems disclosed herein can be used to more closely study the biochemical communication between different cell types and the influence of this biochemical communication on the growth and development of cells. As the local environment within each culture chamber of the system can be independently controlled while biochemical communication between chambers, or sub-wells within chambers, can be maintained, information regarding the growth and development of cells and the influence of the local environment on that growth and development can be examined through the use of the devices and systems disclosed herein.</p>
+      <p id="p-00047-en" num="0047">In another aspect, the devices disclosed herein can be used to study the triggering mechanisms involved in stem cell differentiation or to provide isolated, differentiated cells for implantation. For example, undifferentiated stem cells can be located in a first chamber or well, and one or more types of feeder cells can be located in an adjacent chamber(s) or sub-wells.</p>
+      <p id="p-00048-en" num="0048">In another aspect, the devices disclosed herein can be used to study the resistant cell populations that are either residual as a result of, or caused by, exposure of cells to a therapeutic agent. For example, primary cells of a single type or of multiple types obtained from a patient's tumor can be located in a well or chamber of the device, exposed to therapeutic agents that affect the cells resulting in a relative change in the ratio of certain residual or emergent cell populations to other cell populations, and maintain the residual or emergent cells for continued study. For example an assessment of the effect of a different therapeutic agent, or the same therapeutic agent over multiple exposures.</p>
+      <p id="p-00049-en" num="0049">In another aspect, the devices disclosed herein can incorporate primary cells obtained from a patient, expose the cells to therapeutic agents, enable measurement of an effect of the therapeutic agent and be a source for information that is used to draw conclusions about the likelihood of an effect of the therapeutic agent that the patient would experience if actually administered the therapeutic agent or similar or related agents. By way of specific example, such conclusions can be drawn about the effect on either the original cell populations obtained from the patient, and/or about the effect on resistant cell populations.</p>
+      <p id="p-00050-en" num="0050">In yet another aspect, the devices disclosed herein can be used to establish microtumor models. Tumors exist in a complex microenvironment composed of many cell types. For example, the microenvironment of the lung consists primarily of epithelial cells, fibroblasts, and endothelial cells in contact with ECM. The bioreactor devices disclosed herein can be used to develop microtumor models that more accurately reflect a cancer's microenvironment. The cancer cells may be obtained from established cancer cell line or obtained directly from patient biopsy samples. The cancer cells are then grown in combination with one or more other cell types to more closely replicate the appropriate microenvironment. Such microtumor models may then be used to assess the efficacy of different therapeutic agents. Where the sample is derived directly from a patient sample, such screening can be used to guide the course of therapeutic treatment by selecting the therapeutic agent or therapeutic agents that has shown the greatest efficacy in the context of the microtumor model.</p>
+      <p id="p-00051-en" num="0051">In another aspect, the devices disclosed herein integrate micropump automation for perfusion flow and provide multiple replicates in a device footprint conducive to interfacing with existing instrumentation. This includes, for example, automated pipetting stations as well as spectrometer plate readers and microscopes for in situ monitoring and quantitative evaluation of culture conditions and outcomes. Each individual replicate on the device may represent an independent, closed system, with an integrated fluidic circuit that seamlessly transitions into the inlet and outlet ports contained on the device. Each replicate may be positioned in parallel fashion and each driven by its own micropump head. The devices disclosed herein may be utilized in a rack system that can accommodate multiple devices in a space-saving stacked configuration.</p>
+      <p id="p-00052-en" num="0052">Turning now to the drawings, in which like numerals represent like (but not necessarily identical) elements throughout the figures, example embodiments are described in detail.</p>
+      <heading id="h-00008-en" level="1">Description of Example Embodiments</heading>
+      <p id="p-00053-en" num="0053">Referring to <figref>FIGS. 1-7</figref>, multiple views of a bioreactor device <b>100</b> in accordance with certain example embodiments are provided. The bioreactor device <b>100</b> comprises one or more chambers <b>115</b> and a lid <b>110</b>. The bioreactor device <b>100</b> may further comprise one or more inserts <b>135</b> defining one or more sub-wells <b>120</b> within the one or more chambers <b>115</b>.</p>
+      <p id="p-00054-en" num="0054">The lid <b>110</b> may comprise a single layer, or multiple layers, such as <b>110</b><i>a </i>and <b>110</b><i>b. </i>As show in the example embodiments of <figref>FIGS. 1-7</figref>, the lid comprises a top layer <b>110</b><i>a </i>and a bottom layer <b>110</b><i>b. </i>The top layer <b>110</b><i>a </i>may comprise a soft elastomeric material, a hard or rigid material, or a combination thereof. In certain example embodiments, the top layer <b>110</b><i>a </i>is constructed of a hard material. The bottom layer may comprises a hard material, a soft elastomeric material or a combination thereof. In certain example embodiments, the lid comprises two soft layers. The two soft layers may be made from the same or different materials. In certain other example embodiments, the lid may comprise two rigid layers. The two rigid layers may be made from the same or different materials. In certain example embodiments, and as show in the example embodiments of <figref>FIGS. 1-7</figref>, the lid may comprise a soft elastomeric bottom layer <b>110</b><i>b </i>and a hard top layer <b>110</b><i>a. </i>The soft elastomeric material may have a Young's modulus of approximately 250 KPa to approximately 10 MPa. Example soft materials include PDMS silicone, thermoplastic elastomers, polyurethane, and other soft elastomers. The hard or rigid material may have a Young's modulus of approximately 1 GPa to approximately 4 GPa. Example hard materials include polystyrene, polycarbonate, cyclic olefin copolymer, cyclic olefin polymer, or similar other rigid materials. The various lid layers <b>110</b><i>a </i>and <b>110</b><i>b </i>may be sealed together using heat seals, adhesive seals, or plasma treatment to allow chemical bond formation between layers.</p>
+      <p id="p-00055-en" num="0055">In certain example embodiments, the lid further comprises fluid circuits <b>125</b> defined therein. See <figref>FIGS. 1-7</figref>. The fluid circuit <b>125</b> may be defined within a single layer, or between layers of the lid <b>110</b><i>a </i>and bottom layer <b>110</b><i>b </i>using standard molding techniques to create the desired fluid flow. For example, the fluid circuit <b>125</b> may only direct fluid flow to an individual incubation chamber <b>115</b>, or the fluid circuit may be defined in the lid layers <b>110</b><i>a </i>and/or <b>110</b><i>b </i>to direct fluid flow to multiple incubation chambers <b>115</b>. The fluid circuit <b>125</b> may further direct media to specified porous regions of inserts within the chambers <b>115</b> or to the location of a defined culture construct or scaffold. In certain example embodiments, the bottom soft layer <b>110</b><i>b </i>defines an inlet channel <b>125</b><i>a </i>and an outlet channel <b>125</b><i>b </i>for each chamber <b>115</b>. In certain example embodiments, the inlet channel <b>125</b><i>a </i>and outlet channel <b>125</b><i>b </i>may be the same size. See. <figref>FIG. 15</figref><i>a</i>. In certain other example embodiments, the inlet channel <b>125</b><i>a </i>may be of a greater width or diameter than the outlet channel <b>125</b><i>b. </i>See <figref>FIG. 15B</figref>. Such an embodiment may be used to increase chamber pressure, for example, to mimic tumor physiology. Likewise, the number of inlet and/or outlet ports may be used to increase chamber pressure. In certain example embodiments, there are multiple inlet ports and a smaller number of outlet ports compared to the number of inlet ports. See <figref>FIG. 15C</figref>. In another example embodiment, there are multiple outlet ports and a smaller number of inlet ports compared to the number of inlet ports.</p>
+      <p id="p-00056-en" num="0056">The fluid circuits <b>125</b> may have a width of approximately 1 μm to approximately 10 mm. The fluid circuits may have a height of approximately 1 μm to approximately 10 mm. The fluid circuit may have a height to width ratio of approximately 1 to approximately 10,000.</p>
+      <p id="p-00057-en" num="0057">Referring to <figref>FIG. 16</figref>, in accordance with certain example embodiments, the flow circuit <b>125</b> may further comprise an analytical window <b>1605</b> in series with the flow coming out of a chamber <b>115</b>. The analytical window allows for in situ spectrometry, colorimetric, fluorimetric, and bioluminescent readings of the media flow coming out of a chamber <b>115</b>.</p>
+      <p id="p-00058-en" num="0058">The lid <b>110</b> may further comprise one or more external pump interfaces <b>130</b>. The external pump interface <b>130</b> may connect to a pump device (not shown), such as a micropump device, for introducing culture media from an external media reservoir (not shown) into the device <b>100</b>. The pump head of the pump device may connect above or beneath the device <b>100</b>. The pump device may be connected to a fluid circuit <b>125</b> or individual chamber <b>115</b> or lid via tubing into a port located in the fluid circuit <b>125</b> or lid <b>110</b><i>a. </i>In certain example embodiments the external pump interface <b>130</b> is defined on a hard layer <b>110</b><i>a. </i></p>
+      <p id="p-00059-en" num="0059">The lid <b>110</b> may further define other ports or openings for accessing the contents of an incubation chamber <b>115</b> or well <b>120</b>. For example, an access port may be defined in the lid <b>110</b> to provide access to a chamber <b>115</b> or well <b>120</b> for sampling, such as a biopsy port to access a 3D cell/tissue construct and take a needle biopsy for DNA/RNA/protein analysis. The lid <b>110</b> may define sensor ports for inserting sensors, such as, but not limited to oxygen sensors, temperature sensors, and pressures sensors for monitoring the internal biochemical and biophysical parameters of an incubation chamber <b>115</b> or well <b>120</b>.</p>
+      <p id="p-00060-en" num="0060">The lid <b>110</b><i>a </i>may comprise a plug extension <b>140</b> that extends into the incubation chamber <b>115</b> to seal the incubation chamber <b>115</b>. The plug extension <b>140</b> may be a continuous or molded part of the bottom layer <b>110</b><i>b. </i>The input channel and output channel of the fluid circuit <b>125</b> may be further defined in the plug extension <b>140</b> to direct media to specified regions of the inserts <b>135</b> or sub-wells <b>120</b>. See <figref>FIG. 8</figref>. In certain example embodiments, the lid <b>110</b><i>b </i>may further include an air bubble trap <b>150</b>. The lid may be configured so that the bubble trap is next to an outlet channel for evacuation of the trapped air bubbles under normal flow conditions. For example, the air bubble trap may be a domed or pyramidal bubble trap molded into the lid to capture air bubbles and position the air bubbles near an outlet channel for removal. <figref>FIG. 9</figref> provides an example domed bubble trap. <figref>FIG. 10</figref> provides an example of a pyramidal bubble trap. In certain other example embodiments, the air bubble trap may be an angled lid bubble trap. In certain example embodiments, the lid may further define additional ports to remove air bubbles. For example, the lid may define a tube port for connecting to tubing hooked to a vacuum source. The evacuation port may be positioned next to the air bubble traps discussed above.</p>
+      <p id="p-00061-en" num="0061">Referring to <figref>FIG. 11</figref>, in accordance with certain example embodiments, the lid <b>110</b><i>b </i>may further comprise tubing extensions <b>1105</b><i>a </i>and <b>1105</b><i>b </i>that extend tubing further into the chamber <b>115</b> or sub-well <b>120</b> to more precisely direct fluid flow within the chamber <b>115</b>, or sub-well <b>120</b>. The tubing may be square, round, or other suitable shape and may have an end cut that is perpendicular or angled with respect to the direction of flow through the tubing. In certain example embodiments, the tubing may be extended into a sized hole pre-formed in a porous substrate material.</p>
+      <p id="p-00062-en" num="0062">Referring to <figref>FIG. 12</figref>, in accordance with certain example embodiments, the lid <b>110</b><i>b </i>may be designed to accept a portion of the insert <b>135</b> within the inlet channel <b>125</b><i>a </i>and outlet channel of the fluid circuit <b>125</b><i>b. </i>For example, the insert <b>135</b> may be located in the bottom portion of the input channel <b>125</b><i>a </i>and output channel <b>125</b><i>b, </i>rather than in the bottom of the chamber <b>115</b>. In certain example embodiments, the insert material may further extend to and/or fill the bottom portion of the well.</p>
+      <p id="p-00063-en" num="0063">Referring to <figref>FIG. 13</figref>, in accordance with certain example embodiments, the lid <b>110</b><i>b </i>may comprise an extension to hold insert <b>135</b>, the extension extending beyond the end of an input channel <b>125</b><i>a </i>and output channel <b>125</b><i>b </i>for a particular chamber <b>115</b>. For example, the insert may be located inside the extension and covering the bottom surface of the lid <b>110</b><i>b. </i>In certain example embodiments, the insert material may further extend to and/or fill the bottom portion of the well.</p>
+      <p id="p-00064-en" num="0064">Referring to <figref>FIG. 14</figref>, in accordance with certain example embodiments, the lid <b>110</b> may be made with one or more partitions <b>1405</b>. The partitions <b>1405</b> may be molded into an elastomeric lid <b>110</b> allowing easier application during the sealing process. Partitions may be physically cut to gain access to an individual chamber <b>115</b> when necessary, thereby preventing a user from having to open all chambers or sub-wells at the same time. In certain example embodiments, the partitions may also be molded with perforations to allow tearing along the partition by hand.</p>
+      <p id="p-00065-en" num="0065">The bioreactor device <b>100</b> comprises one or more chambers <b>115</b>. The one or more chambers <b>115</b> may be molded together to define a base (not shown). As shown in the example embodiments of <figref>FIGS. 1-7</figref>, the chambers <b>115</b> are individual and are not connected together. In certain example embodiments, the one or more chambers <b>115</b> may be the wells of a microplate, such as a commercially available microplate. In certain example embodiments, the microwell plate is a 6, 12, 24, 38, 96, or 384 well-sized microplate. Individual chambers <b>115</b> may be any shape. For example the chambers <b>115</b> may be circular, oval, square, rectangular, or cylindrical in shape. The chambers may be connected to one another via the lid <b>110</b> as described in further detail below, or may be connected directly to one another by ports defined directly within the chamber walls. It is to be understood that embodiments that depict chambers with inlet and/or outlet ports extending from the chamber walls, may also be used in embodiments where the inlet/outlet ports are removed and the chambers are connected by a lid <b>110</b> with a fluid circuit <b>125</b> defined therein. In certain example embodiments, the inlet an outlet ports may comprise barbed tubing connectors or standard luer connectors or other similar connectors. In certain example embodiments the inlet and outlet ports enter the chamber near the top, middle, or bottom of the incubation chamber <b>115</b>. In certain example embodiments, the inlet and outlet ports enter the incubation chamber near the top to prevent bubbles from being trapped in the chamber <b>115</b>. In another example embodiment, a first port enters the chamber near the top on the chamber wall, and a second port enters the chamber near the bottom of the chamber wall. In certain example embodiments, the base and chamber <b>115</b> is used in a vertical integration. In accordance with such example embodiments, the outlet ports may enter at any point in the chamber wall.</p>
+      <p id="p-00066-en" num="0066">The number of inlet and/or outlet ports may be used to increase chamber pressure, for example, to mimic tumor physiology. In certain example embodiments, there are multiple inlet ports and a smaller number of outlet ports compared to the number of inlet ports. See <figref>FIG. 15C</figref>. In another example embodiment, there are multiple outlet ports and a smaller number of inlet ports compared to the number of inlet ports. The size of the ports may be used to increase chamber pressure. For example an inlet port greater in size than a corresponding outlet port can result in an increase in chamber pressure. See <figref>FIG. 15A</figref>. In certain example embodiments, the base, like the lid <b>110</b><i>a, </i>may include openings for inlet and outlet ports as well as the ports described above.</p>
+      <p id="p-00067-en" num="0067">Referring to <figref>FIG. 17</figref>, in accordance with certain example embodiments, the chamber <b>115</b> may be circular in shape. One or more circular chambers may be directly adhered together. Referring to <figref>FIG. 18</figref>, in accordance with certain example embodiments, the chamber <b>115</b> may be oval in shape. Referring to <figref>FIG. 19</figref>, the chamber <b>115</b> may comprise a partially circular wall and a flat wall face. In certain example embodiments, the flat wall face may define an opening <b>1905</b> in a portion of the flat wall face to allow for fluid communication between chambers. In certain example embodiments a membrane may be placed in the opening between two chambers. The bottom of the chamber may have an extension <b>1910</b> to mate with an opening in base of second chamber to facilitate connecting the two chambers. Referring to <figref>FIG. 20</figref>, in accordance with certain example embodiments, the chambers <b>115</b> may define a comprise an inner wall <b>2005</b> defining a well within a well arrangement.</p>
+      <p id="p-00068-en" num="0068">In certain example embodiments, multiple chambers may be formed together as an integrated unit. Referring to <figref>FIG. 21</figref>, in accordance with certain example embodiments, the one or more chambers <b>115</b> may comprise multiple chambers formed as a single unit. Terminal chambers on either end of the row of chamber may be connected to an inlet port/channel <b>1205</b> or outlet port/channel respectively, with the intervening chambers connected to once another with a bridge comprising rounded edge connectors <b>1210</b> to allow for laminar flow through the chambers. In certain example embodiments, the inlet port/channel is centered at the level of the rounded edges height. See <figref>FIG. 21C</figref></p>
+      <p id="p-00069-en" num="0069">Referring to <figref>FIG. 22</figref>, in accordance with certain example embodiments, the chamber <b>115</b> may further comprise an analytical imaging window <b>2205</b> just off of the chamber <b>115</b> to accommodate spectrometry reading of biochemical assays. The analytical imaging window is a fraction of the height of the chamber. In certain example embodiments, the analytical imaging window is approximately 50 μm to approximately 1.25 mm in height. The height of the analytical imaging window is based on the specifications and limitations of the analysis or imaging method used which may change over time and to which the dimensions of the analytical imaging window can adapt.</p>
+      <p id="p-00070-en" num="0070">Referring to <figref>FIG. 23</figref>, in accordance with certain example embodiments, each incubation chamber may be connected to the inlet channel <b>125</b><i>a </i>and outlet channel <b>125</b><i>b </i>of a flow circuit <b>125</b>. In certain example embodiments, each incubation chamber <b>115</b> may be connected to a separate flow circuit <b>125</b>. In certain other example embodiments, a flow circuit <b>125</b> may be connected to two or more incubation chambers <b>115</b> in series. In certain other example embodiments, a flow circuit <b>125</b> may be connected to two or more incubation chambers <b>115</b> in parallel with flow into the two or more chambers being controlled by a valve device (not shown). The lid <b>110</b> covers and seals all incubation chambers <b>115</b> to form a closed system. The lid <b>110</b> may be made from a transparent material to accommodate microscopy, spectroscopy, and other imaging based analysis. In certain example embodiments, the device <b>100</b> is sized to fit within standard multi-well culture plate footprints to accommodate use in standard instrumentation, such as, but not limited to, spectroscopy plate readers. The lid <b>110</b> may form the larger physical footprint when the incubation chambers <b>115</b> are individual in form and not connected.</p>
+      <p id="p-00071-en" num="0071">The number of chambers <b>115</b> may vary. The chambers may be clear and transparent to accommodate microscopy, spectroscopy and other imaging based analysis. Multiple chamber <b>115</b> arrangements are possible. In certain example embodiments there is one chamber <b>115</b> per flow circuit <b>125</b>. In another example embodiments, the chambers <b>115</b> may be arranged in a staggered or aligned formation. In another example embodiment, one or more chambers <b>115</b> may be connected to a common flow circuit <b>125</b>. The chamber portion of the base may be made out of the same material or a different material than the remainder of the base. The incubation chambers <b>115</b> may be made from cyclic olefin copolymer (COC), cyclic olefin polymer (COP), polystyrene, polycarbonate, polypropylene, polyethylene, or other similar materials. The chamber(s) <b>115</b> may be formed in various shapes. In certain example embodiments, the chamber <b>115</b> is rounded, square, rectangular, or oval in shape.</p>
+      <p id="p-00072-en" num="0072">In certain example embodiments, the bioreactor device comprise at least 2, at least 3, at least 4, at least 5, at least 6, at least 7, at least 8, at least 9, at least 10, at least 11, at least 12, at least 13, at least 14, at least 15, at least 16, at least 17, at least 18, at least 19, or at least 20 individual chambers. In certain example embodiments, each chamber has its own fluid circuit each drive by its own micropump head.</p>
+      <p id="p-00073-en" num="0073">In certain example embodiments the chamber <b>115</b> volume may be approximately 150 μL to approximately 250 μL, approximately 150 μL to approximately 225 μL, approximately 150 μL to approximately 200 μL, or approximately 150 μL to approximately 175 μL. In certain example embodiment, the chamber volume may be approximately 50 μL to approximately 400 μL, approximately 50 μL to approximately 375 μL, approximately 50 μL to approximately 350 μL, approximately 50 μL to approximately 300 μL, approximately 50 μL to approximately 275 μL, approximately 50 μL to approximately 250 μL, approximately 50 μL to approximately 225 μL, approximately 50 μL to approximately 200 μL, approximately 50 μL to approximately 175 μL, approximately 50 μL to approximately 150 μL, approximately 50 μL to approximately 125 μL, approximately 50 μL to approximately 100 μL, or approximately 50 μL to approximately 75 μL. In certain other example embodiments, the chamber volume may range from 25 μL to 20 mL, from approximately 25 μL to approximately 10 mL, from approximately 25 μL to approximately 5 mL, from approximately 25 μL to approximately 1 mL, from approximately 25 μL to approximately 750 μL, from approximately 25 μL to approximately 500 μL, from approximately 25 μL to approximately 250 μL.</p>
+      <p id="p-00074-en" num="0074">In certain example embodiments, the chamber has a height of approximately 3.25 mm. In certain other example embodiments, the chamber has a height of approximately 2 mm to approximately 5 mm, approximately 2 mm to approximately 4 mm, or approximately 2 mm to approximately 3 mm. In certain other example embodiments, the chambers have a height of approximately 1 mm to approximately 18 mm, approximately 1 mm to approximately 17 mm, approximately 1 mm to approximately 16 mm, approximately 1 mm to approximately 15 mm, approximately 1 mm to approximately 14 mm, approximately 1 mm to approximately 13 mm, approximately 1 mm to approximately 12 mm, approximately 1 mm to approximately 11 mm, approximately 1 mm to approximately 10 mm, approximately 1 mm to approximately 9 mm, approximately 1 mm to approximately 8 mm, approximately 1 mm to approximately 7 mm, approximately 1 mm to approximately 6 mm, approximately 1 mm to approximately 5 mm, approximately 1 mm to approximately 4 mm, approximately 1 mm to approximately 3 mm, or approximately 1 mm to approximately 2 mm. In certain example embodiment, each chamber in the base has the same height. In certain example embodiments, a chamber <b>115</b> or a group of chambers <b>115</b> may have a shorter height relative to another chamber(s) <b>115</b> on the device <b>100</b>. For example, chambers <b>115</b> that will be used to conduct imaging assays may be formed with a more shallow height. The reduced chamber volume may be selected to allow full thickness imaging of the 3D cell/tissue culture and compatibility with advanced imaging techniques such as laser confocal, two-photon, and multi-photon microscopy.</p>
+      <p id="p-00075-en" num="0075">In certain example embodiments, the chamber <b>115</b> may be open or void. In certain example embodiments, the chamber <b>115</b> may include inserts <b>135</b> to form sub-wells <b>120</b> within the chamber <b>115</b>. See <figref>FIGS. 1-7</figref>. The inserts <b>135</b> both define a well space for initial seeding of cells and placement of a three-dimensional cell anchorage construct (3D) for the cells to grow into, upon, or within. The sub-wells <b>120</b> defined by the inserts <b>135</b> may be round, square, oval, rectangular, diamond, or oblong individual shapes. See <figref>FIG. 24</figref>. The sub-wells <b>120</b> facilitate culture of one or more cell types. For example, the insert may facilitate mixed co-culture or segregated co-culture of multiple cell types. Multiple sub-wells and/or patterns within an insert may be used to facilitate culture of multiple cell types, sampling regions for media aliquots, analytical regions for spectrometry, colorimetric, fluorimetric, and bioluminescent readings, or for specific assay configurations, such as angiogenesis assays, cell migrations assays, metastasis and invasion assays. An insert may define a single sub-well <b>120</b> or multiple sub-wells <b>120</b> in various arrangements. Example sub-well configurations are shown in <figref>FIGS. 24 and 25</figref>. The inserts may further define a bridge connecting two or more sub-wells. See <figref>FIG. 24E</figref> and <figref>FIG. 25C</figref>. Such a bridge arrangement may be used to conduct various cell migration assays, such as an angiogenesis assay. In certain example embodiments, the bridge space may be filled with a synthetic or natural protein hydrogel material. In certain example embodiments, multiple sub-wells <b>120</b> may be arranged is a particular shape, such as a square, oval, diamond, star, or any other geometric shape. In certain example embodiments, one or more sub-wells <b>120</b> may be divided in to separate areas. For example, a circular sub-well <b>120</b> may be divided in to one or more parts.</p>
+      <p id="p-00076-en" num="0076">The insert <b>135</b> may be constructed of and/or include a variety of materials. For example, the inserts <b>135</b> may be constructed from a solid material or a porous material. The inserts <b>135</b> may be made with materials or coated to prevent cell attachment. The inserts <b>135</b> may be clear and transparent to allow visualization of the cell culture from the side. The inserts may be opaque black to prevent light scatter for improved colorimetric absorbance and fluorimetric readings. The inserts may be opaque white to provide for improved bioluminescent readings.</p>
+      <p id="p-00077-en" num="0077">In certain example embodiments, the insert may be porous insert. For example, the porous insert may be a bioinert porous foam, a hydrogel, sintered particles, or stacked fibers. Porous insert materials may include die cut or molded porous filter material. The porous insert material may be cut at an oversized height so that it can be compressed into place to effectively seal against the lid and/or imaging window of the chamber. The porous insert material may be tube shaped. In certain example embodiments, two tubes of different pore size may be used to create a well wall of varying porosity. In certain example embodiments, a porous filter of sufficient thickness may be die cut to the footprint of the incubation chamber to define sub-wells within the incubation chamber <b>115</b>. See <figref>FIG. 26</figref>.</p>
+      <p id="p-00078-en" num="0078">As shown in <figref>FIG. 26</figref> the void space between sub-wells and the chamber wall may be filled with a substrate. The substrate may be a hydrogel, a porous scaffold, a porous filter, or a combination thereof. The substrate may help position and hold the well forming inserts in place. The pore size of the substrate may be same or different pore size from the pore size of the insert wall. In certain example embodiments, the substrate may be a non-porous substrate. Hydrogel substrates may used for angiogenesis, migration, metastasis, and invasion assays as well as cell proliferation and expansion. That is, the void space may be filled with hydrogel or porous scaffold material that, in certain example embodiments, allows cell growth into the intermediary hydrogel and/or to ensure dispersed perfusion around the core of a cell-scaffold construct. The hydrogel insert may also be used to house an additional cell population. The additional cell population may be the same cell population as that in the sub-wells, or a different cell population from that in the sub-wells.</p>
+      <p id="p-00079-en" num="0079">Referring to <figref>FIG. 27</figref>, in accordance with certain example embodiments, the chamber <b>115</b> may include positioning blocks <b>2705</b> molded as part of the chamber <b>115</b> that hold porous inserts <b>135</b> in place. In certain example embodiments, the positioning blocks may be spaced to hold multiple inserts <b>135</b> to form sub-wells <b>120</b> of diameter similar to 12, 24, 48, 96 or 384 well plates. Alternatively, the inserts <b>135</b> may be held in place by filling the void space in the chamber with a porous substrate or hydrogel. See <figref>FIG. 28</figref>.</p>
+      <p id="p-00080-en" num="0080">In certain example embodiments, the shape of one or more sub-wells formed by an insert may include a tube-shaped sub-well, such as a sub-well with a hollow, cylindrical shape. In certain example embodiments, the one or more sub-wells may include an inner, pillar-type ring well (or inner pillar well). Additionally or alternatively, one or more sub-wells may include a pillar ring within pillar-ring-type sub-well. As shown in <figref>FIG. 29</figref> for example, the pillar ring within pillar-ring-type sub-well may include an outer media well <b>2905</b>, a cell-scaffold region <b>2910</b>, and a central plate reader well <b>2915</b>. In certain example embodiments, the pillar ring within pillar-ring-type sub-well may include multiple sub-well regions that are arranged in a concentric or nested-type pattern.</p>
+      <p id="p-00081-en" num="0081">In certain example embodiments, the portions of a sub-well may be different shapes, such as rectangles, squares, diamonds, or other shapes. For example, the sub-well may include a nested-type series of squares. In certain example embodiments, a single sub-well may include different shapes. For example, a circular sub-well may contain a square, and the square may contain a circle or other shape nested therein.</p>
+      <p id="p-00082-en" num="0082">The layout of the culture area and associated sub-well <b>120</b> wall can be adjusted in both shape and size to, for example, reduce the distance proximity that the majority of cells have to the wall. Such adjustments may be useful, for example, when cells are cultured in a 3D cell anchorage and there is a need for higher levels of soluble factors produced by the cells to be introduced into the environment. For example, the shape may be circular versus linear, rectangular, or circular versus multiple, smaller circle-shaped sub-wells, allowing for adjustment of the surface area to volume ratio for the 3D cell construct.</p>
+      <p id="p-00083-en" num="0083">In certain example embodiments, the sub-well may contain a cell scaffold with the insert ensuring dispersed perfusion to and around the cell-scaffold construct. The term “cell scaffold” as used herein refers to one or more articles upon which cells can attach and develop. For instance, the term “cell scaffold” can refer to a single continuous scaffold, multiple discrete 3D scaffolds, or a combination thereof. The terms “cell scaffold,” “cellular scaffold,” and “scaffold” are intended to be synonymous. Any suitable cell scaffold as is generally known in the art can be located in the culture chamber to provide anchorage sites for cells and to encourage the development of a three-dimensional cellular construct within the culture chamber. For purposes of the present disclosure, the term “continuous scaffold” is herein defined to refer to a construct suitable for use as a cellular scaffold that can be utilized alone as a single, three-dimensional entity. A continuous scaffold is usually porous in nature and has a semi-fixed shape. Continuous scaffolds are well known in the art and can be formed of many materials, e.g., coral, collagen, calcium phosphates, synthetic polymers, natural polymers and the like, and are usually pre-formed to a specific shape designed for the location in which they will be placed. Continuous scaffolds are usually seeded with the desired cells through absorption and cellular migration, often coupled with application of pressure through simple stirring, pulsatile perfusion methods or application of centrifugal force. Discrete scaffolds are smaller entities, such as beads, rods, tubes, fragments, or the like. When utilized as a cellular anchorage, a plurality of identical or a mixture of different discrete scaffolds can be loaded with cells and/or other agents and located within a void where the plurality of entities can function as a single cellular anchorage device. Exemplary discrete scaffolds suitable for use in the present invention that have been found particularly suitable for use in vivo are described further in U.S. Pat. No. 6,991,652 to Burg, which is incorporated herein by reference. A cellular scaffold formed of a plurality of discrete scaffolds can be preferred in certain embodiments of the present invention as discrete scaffolds can facilitate uniform cell distribution throughout the anchorage and can also allow good flow characteristics throughout the anchorage as well as encouraging the development of a three-dimensional cellular construct.</p>
+      <p id="p-00084-en" num="0084">In one example embodiment, for instance when considering a cellular scaffold including multiple discrete scaffolds, the scaffold can be seeded with cells following assembly and sterilization of the system. For example, an embodiment including multiple discrete scaffolds can be seeded in one operation or several sequential operations. Optionally, the anchorage can be pre-seeded, prior to assembly of the system. In one embodiment, the scaffold can include a combination of both pre-seeded discrete scaffolds and discrete scaffolds that have not been seeded with cells prior to assembly of the system. The good flow characteristics possible throughout a plurality of discrete scaffolds can also provide for good transport of nutrients to and waste from the developing cells, and thus can encourage not only healthy growth and development of the individual cells throughout the scaffold, but can also encourage development of a unified three-dimensional cellular construct within the culture chamber.</p>
+      <p id="p-00085-en" num="0085">The materials that are used in forming an scaffold can generally be any suitable biocompatible material. In one embodiment, the materials forming a cellular scaffold can be biodegradable. For instance, a cellular scaffold can include biodegradable synthetic polymeric scaffold materials such as, for example, polylactide, chondroitin sulfate (a proteoglycan component), polyesters, polyethylene glycols, polycarbonates, polyvinyl alcohols, polyacrylamides, polyamides, polyacrylates, polyesters, polyetheresters, polymethacrylates, polyurethanes, polycaprolactone, polyphophazenes, polyorthoesters, polyglycolide, copolymers of lysine and lactic acid, copolymers of lysine-RGD and lactic acid, and the like, and copolymers of the same. Optionally, an anchorage can include naturally derived biodegradable materials including, but not limited to chitosan, agarose, alginate, collagen, hyaluronic acid, and carrageenan (a carboxylated seaweed polysaccharide), demineralized bone matrix, and the like, and copolymers of the same.</p>
+      <p id="p-00086-en" num="0086">A biodegradable scaffold can include factors that can be released as the scaffold(s) degrade. For example, an anchorage can include within or on a scaffold one or more factors that can trigger cellular events. According to this embodiment, as the scaffold(s) forming the cellular anchorage degrades, the factors can be released to interact with the cells.</p>
+      <heading id="h-00009-en" level="1">Adapter for Microwell Plate</heading>
+      <p id="p-00087-en" num="0087">In another aspect, embodiments disclosed herein provide an adapter for converting existing individual microwell plate wells into perfused three-dimensional incubation chambers. As shown in <figref>FIGS. 30-32</figref>, in accordance with certain example embodiments, the adapter comprises a lid <b>3005</b>, the lid <b>3005</b> defining an inlet channel <b>3010</b> and an outlet channel <b>3015</b>. The lid further comprises an insert <b>135</b> as described above. For example, the insert <b>135</b> may define the bottom portion of the lid <b>3005</b>. The inlet and outlet channel <b>3010</b> connect to tubing, the tubing used to connect the adapter to a pump source or to another adapter. In certain example embodiments, the insert may be sized to fit within a standard microplate well (such as a 12, 24, 48, 96 or 384 sized well); and define a sub-well as described herein. In certain example embodiments, the insert <b>135</b> comprises a non-porous region surrounding a porous region, the porous region surrounding one or more sub-wells <b>120</b> defined by the insert <b>135</b>. The insert may be selected to prevent drug absorption or binding of biological protein therapeutics.</p>
+      <heading id="h-00010-en" level="1">Hard Top Layer, Soft Bottom Layer Devices</heading>
+      <p id="p-00088-en" num="0088">In another aspect, bioreactor devices comprising an elastomeric bottom layer defining one or more fluid channels and one or more culture chambers sealed to a hard top layer are disclosed. Referring to <figref>FIG. 33</figref>, in accordance with certain example embodiments, the bioreactor device <b>3900</b> comprises a soft elastomeric layer <b>3305</b>. The soft elastomeric layer <b>3305</b> defines one or more fluid channels <b>3315</b> and one or more holes that completely traverse the soft layer <b>3320</b>. The soft elastomeric layer <b>3305</b> may further comprise a channel compression interface, allowing a pump to interface from the bottom of the device and move up to engage the chip. The device <b>3300</b> further comprises a hard top layer <b>3310</b>, wherein the hard layer <b>3310</b> defines a chamber access port <b>3325</b> with channels through the wall of the chamber access port at its base (not shown). The chamber access port <b>3325</b> aligns with traversing hole <b>3320</b> allowing fluid access to the microfluidic channels through the channels in the base of the chamber access port <b>3325</b>. Including the chamber access port <b>3325</b> in the top hard layer reduces manufacturing steps as there is no need to drill inlets in the soft elastomeric layer as done using existing techniques. In addition, the chamber access port <b>3325</b> could be shaped as a connection, for example a luer lock, providing an alternative way to connect the device <b>3300</b> to a media reservoir that does not require inserting tubing into inlets drilled in the soft elastomeric layer <b>3305</b>.</p>
+      <p id="p-00089-en" num="0089">In certain example embodiments, the chamber access port <b>3325</b> is assembled by rotating the top rigid layer <b>3310</b> as indicated in <figref>FIG. 33</figref> such that the chamber access port <b>3325</b> is inserted through the hole <b>3320</b> in the soft layer <b>3305</b> such that the open end of the chamber access port <b>3325</b> is face down and the channels in the wall of the chamber access port <b>3325</b> align with the one or more fluid channels <b>3315</b> of the soft layer <b>3305</b>. In certain example embodiments, the chamber access port <b>3325</b> may be formed to create an open-ended cylindrical chamber useful for cell culture such that when the assembled device is inverted (i.e. the open end of the cylindrical chamber faces up). Such an embodiment would function similar to a well in a microplate allowing access to the chamber by pipette or enabling the insertion and extraction of cell scaffolding materials, which is not typically available using existing microfluidic culture architectures. In addition, such an open-ended cylinder made of the hard layer <b>3310</b> would be easier to temporarily close and seal off with a cap or lid then one made of a soft layer material. All imaging may be done through the top hard layer <b>3310</b> as there is no soft elastomeric layer barrier.</p>
+      <p id="p-00090-en" num="0090">In certain example embodiments, the chamber access port <b>3325</b> may have one or more channels in the walls of the chamber access port <b>3325</b> that enter into the chamber at different heights to create strategic flow patterns or gradients that result in flow throughout the cylinder. For example, one high and one low channel entry point may be created on opposite sides of the chamber access port <b>3325</b>. Alternatively, two channel entry points may be created on opposite sides of the chamber access port to allow flow only in the bottom region.</p>
+      <p id="p-00091-en" num="0091">Example soft and hard materials for use in each layer, and chamber and fluid circuit volumes discussed in detail above further apply to this embodiment. In addition, the inserts <b>135</b> described above may also be used with this embodiment. The embodiment shown in <figref>FIG. 33</figref> depicts a single chamber with inlet and outlet channels shown in the soft layer. However, multi-chamber configurations are contemplated. Each chamber in a multi-chamber configuration may have its own inlet and outlet channel, or may be connected in series to other chambers via the inlet and outlet channels.</p>
+      <heading id="h-00011-en" level="1">Hard Bottom Layer, Soft Top Layer Devices</heading>
+      <p id="p-00092-en" num="0092">In another aspect, bioreactor devices comprising a hard material bottom layer <b>3405</b> and a soft elastomeric top layer <b>3410</b> are disclosed. The hard bottom layer <b>3405</b> defines one or more chambers <b>3415</b>. The top soft elastomeric top layer <b>3410</b> comprises openings <b>3420</b> for receiving the one or more chambers <b>3415</b> and allowing the soft top layer to interface with the hard bottom layer <b>3405</b> at the bottom of the chamber <b>3415</b>. The soft top elastomeric layer <b>3410</b> further defines a fluid circuit <b>3425</b> comprising an inlet <b>3430</b> and an outlet <b>3435</b> and connecting the chambers <b>3415</b> to one another along the fluid circuit <b>3425</b>. The fluid circuit <b>3425</b> is example and other circuits and arrangements of the chambers <b>3415</b> is contemplated. The chambers <b>3415</b> have a set of openings <b>3440</b> in the wall of the chamber that align with the fluid circuit <b>3425</b> when the soft elastomeric top layer <b>3410</b> is seated on the bottom hard layer <b>3405</b>. The inlet could be created as a feature of the hard layer <b>3405</b> reducing manufacturing steps since there is no need to drill inlets in soft elastomeric layer. The chambers <b>3415</b> may be shaped as a luer locks or other connectors providing an alternative way to connect the device <b>3400</b> to a media reservoir that does not require inserting tubing into inlets drilled in the soft elastomeric layer. Such an embodiment would function similar to a well in a multi-well plate allowing access to the chamber by pipette or enabling the insertion and extraction of cell scaffolding materials, which is not typically available using existing microfluidic culture architectures. In addition, such an open-ended cylinder made of the hard layer material would be easier to temporarily close and seal off with a cap or lid then one made of a soft layer material.</p>
+      <p id="p-00093-en" num="0093">Example soft and hard materials for use in each layer, and chamber and fluid circuit volumes discussed in detail above apply further apply to this embodiment. In addition, the inserts <b>135</b> described above may also be used with this embodiment.</p>
+      <heading id="h-00012-en" level="1">Methods of Use</heading>
+      <p id="p-00094-en" num="0094">The following methods are by way of example only. The devices disclosed herein may be used in any method that requires or could benefit from the ability to grow and develop in a three-dimensional aspect, and require or benefit from the use of small culture volumes that allow for direct analytics to be done on or by the device, allow full thickness imaging, and permit continuous monitoring and measurement of the growth of a cell culture. The systems disclosed herein through the various chamber arrangements, use of integrated fluid circuits, ability to adapt existing microwell plate wells, and various well formations through the use of inserts provide a high degree of flexibility and scalability for a wide array of clinical and research uses.</p>
+      <p id="p-00095-en" num="0095">In one example embodiment, a method of culturing on or more populations of cells in a three-dimensional culture comprises culturing one or more cell populations in a bioreactor device disclosed herein. A single population may be grown in a single chamber. Multiple cell populations may be grown in multiple chambers. The multiple cell populations may be of the same cell type or of different cell types. In certain example embodiments, the multiple cell populations comprise 2-30 different cell populations. In one example embodiment, the multiple cell populations comprise 2, 3, 4, 5, 6, 7, 8, 9, or 10 different cell populations. In certain example embodiments multiple different populations can be grown in different sub-wells within the same chamber. In certain example embodiments, the cell population is a in vitro cell population derived from an existing cell line. In certain other example embodiments, the cell population is derived directly form a biological sample taken from a subject. In certain example embodiments, the biological sample is a biopsy sample. In certain example embodiments the biopsy sample is from a cancer patient. The cancer may be lung cancer, breast cancer, ovarian cancer, pancreatic cancer, or glioblastoma. In certain example embodiments, the biological sample is a clinical isolate infected with a pathogen such as a bacteria, fungus, or virus. In certain example embodiments, the cell population may be derived by initially culturing a single cell.</p>
+      <p id="p-00096-en" num="0096">In another example embodiment, a method of culturing one or more cell populations for ex vivo implantation comprises culturing one or more cell populations in a bioreactor device disclosed herein. In certain other example embodiments, the cell population is an ex vivo derived cell population. In certain example embodiments, the ex vivo derived cell population sample is a biopsy sample from a particular individual. In certain example embodiments, the ex vivo derived cell population includes undifferentiated stem cells. A single population may be grown in a single chamber. Multiple cell populations may be grown in multiple chambers. The multiple cell populations may be of the same cell type or of different cell types. In certain example embodiments, the culture conditions created by the disclosed device result in desirable stem cell differentiation and the creation of isolated, differentiated cells for implantation. In other embodiments, a similar process is utilized to alter the original cells, e.g. by transfection or other means, prior to their implantation. In other embodiments, a similar process is used to increase their cell number without impeding changes to their phenotype prior to their implantation</p>
+      <p id="p-00097-en" num="0097">In another example embodiment, a method of assessing responsiveness to therapeutic agents comprises culturing one or more populations of cells in a bioreactor device disclosed herein. The one or more cell populations are then cultured in the presence of a therapeutic agent for a defined period of time. After the defined period of time the one or more cell populations are screened for responsiveness to the therapeutic agent. For example, a change in cell phenotype may be observed using microscopy techniques, cell cytotoxicity may be assessed using an appropriate biomarker, such as LDH, gene expression for one or more relevant biomarkers may be assessed though lysis and nucleic acid amplification and/or sequencing or by in situ hybridization techniques such as FISH, one or more protein biomarkers may be detected using immunoassays or immunostaining techniques, and/or the cell culture media may be assessed for the presence of various biomarkers of cell metabolism or other cell functions. The appropriate screen for pharmacokinetic effect will depend on the class of therapeutic agent screened and the corresponding cell pathway targeted. In certain example embodiments, a panel of pharmacokinetic effects may be tested and involve techniques that do and not require cell lysis or fixing of cells. Accordingly, in some example embodiments, a cell population may be grown in the sub-wells of a first chamber and used to screen for a pharmacokinetic effect using a technique that requires cell lysis or fixation, while the same cell population may be grown in the sub-wells of a second chamber and used to screen for a pharmacokinetic effect using a technique that does not require cell lysis or fixation. In certain example embodiments, multiple samples of the same cell population may be cultured in different chambers to allow for assessment of pharmacokinetic effect at different time points, especially where the technique used to assess the pharmacokinetic effect requires cell lysis or fixation. The change in pharmacokinetic effect may be determined in reference to a control population not exposed to the one or more therapeutic agents.</p>
+      <p id="p-00098-en" num="0098">In certain example embodiments, a method for selecting the responsiveness of a subject to therapeutic agents ex vivo comprises culturing one or more cells derived from a biopsy sample of a subject in the sub-wells of multiple chambers of a bioreactor device disclosed herein, exposing the cultured one or more cells candidate therapeutic agents, and/or exposing each chamber to a different concentration of the candidate therapeutic agent, and measuring the responsiveness of the one or more cells to each candidate therapeutic agent and/or concentration, and selecting a therapeutic agent and/or dosage based on the observed responsiveness. The technique used to measure responsiveness will depend on the disease type and class of therapeutic agent. For example, for a therapeutic agent designed to restore particular cell function, responsiveness may be measured by a change in appropriate biomarker level of cell morphological change. For a therapeutic agent designed to kill or inhibit the one or more cells, responsiveness may be measured by biomarkers for cytotoxicity and/or morphological changes. In certain example embodiments, the biopsy sample is a cancer biopsy sample. In certain example embodiments, the cancer is breast cancer, ovarian cancer, lung cancer, pancreatic cancer, or glioblastoma.</p>
+      <p id="p-00099-en" num="0099">In certain example embodiments, the cells derived from a biopsy sample are grown in a microtumor environment comprising one or more additional non-cancer cell types. In certain example embodiments, the one or more additional non-cancer cell types comprise epithelial cells, fibroblasts, adipocytes, endothelial cells, tumor associate macrophages, T-cells, B-cells or a combination thereof.</p>
+      <p id="p-00100-en" num="0100">In certain example embodiments, a method for screening the effects of genetic perturbations on cell biology comprises culturing a plurality of cell population samples in the sub-wells of a plurality of chambers. Each sample cell population may then receive a separate genetic perturbation. Genetic permutations may include deletions, insertions, substitutions, or epigenetic changes. For example, target genes may be knocked down using RNAi techniques. Alternatively target genes may be knocked down or target sequences modified using, for example, zinc-finger nucleases (ZFNs), transcription activator-like effector nucleases (TALENs) or CRISPR/Cas-based methods. The resulting effects on cell expression and/or phenotype may then be detected using known techniques.</p>
+      <p id="p-00101-en" num="0101">In another example embodiments, it is contemplated the bioreactor systems disclosed herein can be utilized for the replication of biological conditions such as cell migration/invasion such as, for example and without limitation, wound healing, metastasis, vasculogenesis, immune responses, angiogenesis, tumor formation, and chemotaxis. Additionally the bioreactor systems disclosed herein can be utilized for the replication of biological conditions involved in cellular proliferation, cell survival and attachment. Used in such a manner the bioreactor device provides the extracellular contact and milieu to more closely replicate an intact biological system. The cell may be cultured in media containing factors that encourage cell growth and/or migration. In certain example embodiments, inserts defining two sub-wells and a channel between the two sub-wells are used to assess cell migration and invasion. See <figref>FIG. 25C</figref>. Migratory cells move across the channel from the first well to the second well while non-migratory cells remain in the first well.</p>
+      <p id="p-00102-en" num="0102">In another example embodiment, undifferentiated stem cells can be located in a first well or chamber of the bioreactor devices, and one or more types of feeder cells can be located in an adjacent sub-well or chamber, which, as one skilled in the art will appreciate, can be in selective communication with the first well or chamber. Such a method can be used to, for example and without limitation, study the triggering mechanisms involved in stem cell differentiation or to provide isolated differentiated cells for implantation.</p>
+      <p id="p-00103-en" num="0103">According to the methods disclosed herein, cells can be grown in an environment that comprises the biochemical products of different cells types, at least some of which may be necessary for growth, differentiation, or development of the desired cells. However, it is contemplated that different cell types can be maintained in a physically isolated state during their grow and development using the inserts and/or chambers disclosed herein while allowing fluid communication between the different cell populations, for example via the fluid circuits.</p>
+      <p id="p-00104-en" num="0104">Cells and tissues used in the bioreactor devices and methods disclosed herein can be obtained by any method known to those skilled in the art. Examples of source cells and tissues include without limitation purchase from a reliable vendor, blood—including peripheral blood and peripheral blood mononuclear cells), tissue biopsy samples, and specimens acquired by pulmonary lavage. The source of cells and tissues obtained from blood, biopsy, or other ex vivo means can be any subject having tissue or cells with the desired characteristics including subjects with abnormal cells or tissues which are characteristic of a disease condition such as cancer. It is also understood that there may be times where one of skill in the art desires normal tissues or cells. For example, responsiveness or other cellular changes in a test population of cells may be measured against a control or normal population of cells that are not exposed to the experimental conditions. Thus, also disclosed herein are tissues and cells obtained from a normal subject, wherein ‘normal’ refers to any subject not suffering from a disease or condition that affects the cells or tissues being obtained.</p>
+      <heading id="h-00013-en" level="1">EXAMPLES</heading>
+      <p id="p-00105-en" num="0105">One of the most complex 3D bioengineered models of breast cancer to date is a tri-culture model. These models always include epithelial cells and fibroblasts and vary based upon their incorporation of adipocytes, endothelial cells or immune cells. S. Krause, et al., T<smallcaps>ISSUE </smallcaps>E<smallcaps>NG </smallcaps>P<smallcaps>ART </smallcaps>C. M<smallcaps>ETHODS, </smallcaps>14 (2008) 261-271. A porous scaffold will be used to create a modular system composed of a fat module and an epithelial module that also contains fibroblasts. This modular system has been demonstrated to facilitate 1) the differentiation of adipose-derived stem cells into a separate fatty tissue without the chemicals necessary for differentiation having a negative impact upon the breast cancer epithelial cells and 2) the development of tri-culture breast cancer tissue with patient derived tumor cells that became available with little notice.</p>
+      <p id="p-00106-en" num="0106">There are numerous benefits to utilizing a porous scaffolding system as they: 1) are biocompatible and many are FDA approved biomaterial, 2) have been utilized to sustain tissue structures for up to months/years, 3) are compatible with vascular systems, 4) can withstand the mechanical stresses of perfusion flow, 5) have been utilized for multiple tissue types, and 6) are adaptable for optical imaging systems. G. H. Altman et al. B<smallcaps>IOMATERIALS, </smallcaps>24 (2003) 401-416; P. Gomez, III et al. B<smallcaps>IOMATERIALS, </smallcaps>32 (2011) 7562-7570; M. House et al. T<smallcaps>ISSUE </smallcaps>E<smallcaps>NG </smallcaps>P<smallcaps>ART </smallcaps>A, 16 (2010) 2101-2112; H. J. Kim et al. B<smallcaps>ONE, </smallcaps>42 (2008) 1226-1234; M. Lovett et al. B<smallcaps>IOMATERIALS, </smallcaps>28 (2007) 5271-5279; J. R. Mauney et al. B<smallcaps>IOMATERIALS, </smallcaps>28 (2007) 5280-5290; E. M. Pritchard and D. L. Kaplan, E<smallcaps>XPERT. </smallcaps>O<smallcaps>PIN. </smallcaps>D<smallcaps>RUG </smallcaps>D<smallcaps>ELIV., </smallcaps>8 (2011) 797-811; C. Vepari and D. L. Kaplan, P<smallcaps>ROG. </smallcaps>P<smallcaps>OLYM. </smallcaps>S<smallcaps>CI., </smallcaps>32 (2007) 991-1007. The use of porous scaffolds as sponges infused with ECM and different cells types forms a modular tissue unit that may be easily moved and combined with other modular units to form controllable complex tissues.</p>
+      <p id="p-00107-en" num="0107">The in vivo microenvironment of the breast consists of epithelial cells, fibroblasts, adipocytes, and endothelial cells in contact with extracellular matrix proteins (ECM). McCave et al. J. M<smallcaps>AMMARY. </smallcaps>G<smallcaps>LAND. </smallcaps>B<smallcaps>IOL. </smallcaps>N<smallcaps>EOPLASIA., </smallcaps>15 (2010) 291-299. The complexity of the created ex vivo microenvironment will be increased relative to previous tri-culture models by adding in both endothelial cells and an immune component cells in the form of monocytes/macrophages. The porous scaffold infused with cells in a mixture of Matrigel and Collagen I will be used as the ECM components as they have been shown to promote the formation of terminal ductal lobular units (TDLUs) and acini while maintaining the cells in an environment where they remain healthy.</p>
+      <p id="p-00108-en" num="0108">Previous tri-culture models will be further adapted to a tetra-culture model by utilizing the same cells as the tri-culture model, including human mammary epithelial cells (HMEC) for the normal model and MCF7 (ER+) and HCC1143 (TNBC) for the cancer model, human mammary fibroblasts (HMF) and human adipose-derived stem cells (ASC) with the addition of human umbilical vein endothelial cells (HUVEC) to form the tetra-culture. The HUVECs will be utilized for initial short-term testing, but will then be replaced by human mammary microvascular endothelial cells (HMMEC) so as to keep the system mammary specific. HUVEC/HMMEC will be seeded onto a porous scaffold which is precut to specific dimensions (5 mm diameter by 2.5 mm height) and allowed to grow for 1 week after which ASCs will be added to the scaffold. The scaffolds will be incubated in a mixture of ASC differentiation media and endothelial growth media for 1 week after which they will be cultured in a mixture of ASC growth media and endothelial growth media. The epithelial module will be formed by mixing HMEC, MCF7, or HCC1143 with HMF in a mixture of Matrigel to Collagen I. This mixture of cells and ECM will then be infused into a porous scaffold which is precut to specific dimensions (5 mm diameter by 2.5 mm height). These tissue disks will then be loaded into the sub-wells of the bioreactor devices disclosed herein. After loading the tissue disks into the sub-wells of the bioreactor devices, the devices will be assembled and connected to a perfusion circuit containing cell-specific medium. Gas exchange is enabled in the closed-loop perfusion system via a proprietary PET membrane, and media is dynamically perfused via a programmable syringe pump configuration (KD Scientific) with a dynamic medium perfusion flow of 1-50 uL/min for the length of the experiment. All bioreactor devices will be maintained under standard cell culture conditions (i.e. 37° C. humidified 5% CO2/95% air environment).</p>
+      <p id="p-00109-en" num="0109">To test the tetra-culture medium and ensure that the endothelial growth media is compatible with all four cell types, each individual cell type will first be tested in 2D culture in a specified ratio or ratios of all four cell specific mediums over 7 days. The combo medium's effects upon cell viability (measured by PrestoBlue) and cell number (dsDNA measured via PicoGreen) will be measured with cell specific growth medium utilized as a control. A short-term 3D static experiment will also be performed to ensure proper tissue morphology which will consist of the formation of TDLU/acini in the normal model and endothelial cell branching/tubule formation (CD31+). Endothelial cells and ASCs will also be cultured in 2D in a mixture of endothelial growth medium and ASC differentiation medium over 7 days and monitored for cell viability and cell proliferation as compared to cell specific growth medium. ASC differentiation will also be monitored by oil red O staining.</p>
+      <p id="p-00110-en" num="0110">Long-term perfusion experiments (4 weeks) will be performed with static correlates for both the normal model (HMECs) and the cancer model (MCF7). Analytical endpoints will be taken at weekly intervals for all lytic assays and shorter intervals for non-lytic perfusate analysis. Media will be changed periodically. The formation of TDLUs/acini and endothelial cell branching/tubule formation as determined by brightfield microscopy and H&amp;E, production of caseins by RT-PCR, replication of the secreted biomarker profile and expression of cell specific markers (E-cadherin, CD31, leptin, adiponectin, α-sma, oil red O) by RT-PCR and immunofluorescence at weeks 2 and 4 will determine successful stromal culture conditions.</p>
+      <p id="p-00111-en" num="0111">Angiogenesis will be tested in the tissue model by stimulating the cultures with varying concentrations of VEGF and counting the number of sprouts and the length of sprouts compared to untreated controls in both static and perfusion cultures. VEGF will be applied and tubules will be visualized using confocal microscopy by staining with PECAM-1. HUVECs/HMMECs alone in Matrigel will be used as controls. A comparison between the tri- and tetra-culture models in terms of gene expression and both epigenetic and miRNA regulated gene expression will be conducted. This data may be utilized for comparison to patient generated data. To perform this comparison, whole genome cDNA microarray data will be generated as well as epigenetic and miRNA microarray data in-house.</p>
+      <p id="p-00112-en" num="0112">Triple-negative breast cancers are resistant to current targeted therapies but may see some benefit from anti-angiogenesis compounds. Bevacizumab will be used in combination with paclitaxel (as utilized in the clinic) as a baseline test on the microtumor model to see if it responds similar to clinical trial data. For this study, angiogenesis will be induced through VEGF addition and then a dose curve centered at the IC50 for each drug will be generated. The endothelial cells will be pre-labeled. Cellular cytotoxicity will be measured by LDH release into the supernatant, vascularization will be monitored by confocal microscopy of the labeled endothelial cells. Length and number of sprouts will be counted and related to bevacizumab dosage. Untreated cultures and the tri- culture model will be used as a control since bevacizumab cannot function in this tissue by affecting angiogenesis. The effectiveness of this model for modeling responses to traditional treatments (tamoxifen, cisplatin) will also be measured and the IC50s will be compared to static culture and data previously generated for the tri-culture model.</p>
+      <p id="p-00113-en" num="0113">Tumor associated macrophages (TAMs) in the perfused heterotypic 3D breast microtumor will be incorporated and biologic read outs of macrophage invasion/infiltration and pro-cancer cytokine/chemokine profile to assess changes in phenotype over time in culture will be correlated. This will be achieved by analyzing the immunophenotype of perfused THP-1 or differentiated PBMCs obtained from discarded blood or through commercial suppliers. Multiplex bead based immunoassays (Miltenyi) will be used to determine M1 versus M2. For invasion, myeloid-derived cells will be pre-labeled and infiltration over time will be monitored qualitatively with multi-photon microscopy (MPM). Pro-tumorigenic growth and promotion of endothelial structures will be compared with 3D microtumors without TAMs via immuno-histochemistry (IHC). MPM will be used to monitor the effect of macrophages on promotion of vascular structures (through the secretion of proangiogenic factors). J. D. Lathia et al. PLoS O<smallcaps>NE, </smallcaps>6 (2011) e24807. If a pro-tumorigenic effect of macrophages is demonstrated within the system, ibrutinib, dexamethasone, and anti-csf-1 antibodies will be applied to reverse the TAM mediated effects.</p>
+      <heading id="h-00014-en" level="1">Example 2</heading>
+      <heading id="h-00015-en" level="1">Patient-Derived 3D Tetra-Culture Breast Cancer Microtumors</heading>
+      <p id="p-00114-en" num="0114">Patient-derived 3D tetra-culture breast cancer microtumors will be established by replacing the MCF7 cells with tumor cells isolated from breast cancer patients. Human tumor tissue will arrive in the lab after removal from the patient at which point cellular processing will immediately commence. Isolated primary breast cancer cells will be utilized in a number of assays all designed to better inform upon the utility of the personalized 3D microtumor. Cell samples will be utilized to isolate DNA, RNA, miRNA, and protein. The DNA will be used to compare to epigenetic biomarkers established above, RNA will be used to examine basic gene expression (ER, PR, Her2, casein), miRNA will be used to examine miRNA biomarkers in comparison to those determined above, and protein will be used to examine the expression of genes regulated by the epigenetic/miRNA biomarkers. Once the 3D breast model has been established with primary human epithelial and stromal breast cancer cells, a panel of patient derived 3D breast microtumors will be tested against a panel of combination therapies. In order to compare with existing databases next generation sequencing (NGS) will be performed, and molecular matched breast cancer cell lines will be compared with responses in 2D and simple 3D matrigel cultures. Normalized responses will be depicted as IC50s using 4 parameter linear regression.</p>
+      <p id="p-00115-en" num="0115">A key component of the validation study is to compare genotypic and phenotypic drift, as well as therapy response of the 3D microtumors with patient-derived xenografts developed from matched patient samples. This process will occur with the initial tumor biopsies in order to provide sufficient PDX models for statistical considerations. Given the difficulty for developing ER+PDXs, preference will be focused on TNBC PDX.</p>
+      <heading id="h-00016-en" level="1">Example 3</heading>
+      <heading id="h-00017-en" level="1">3D Glioblastoma Microtumor Model</heading>
+      <p id="p-00116-en" num="0116">Multiple investigators have demonstrated that the current state of the art for modeling GBMs is utilizing primary human tissue and initial processing for both in vitro and in vivo investigation. J. D. Lathia et al. PLoS O<smallcaps>NE, </smallcaps>6 (2011) e24807; C. Richichi et al. N<smallcaps>EOPLASIA., </smallcaps>15 (2013) 840-847; S. J. Smith et al. PLoS O<smallcaps>NE, </smallcaps>7 (2012) e52335; D. W. Infanger et al. C<smallcaps>ANCER R</smallcaps><smallcaps>ES., </smallcaps>73 (2013) 7079-7089; S. E. Yost et al. PLoS O<smallcaps>NE, </smallcaps>8 (2013) e56185; D. R. Laks et al. S<smallcaps>TEM </smallcaps>C<smallcaps>ELLS, </smallcaps>27 (2009) 980-987. Though it will be important to compare drug response in the final iteration of the 3D GBM microtumor with subtype-matched cell lines, including the GBM NCI 60 cell line prescreen GBM cell line SF268, the development work should begin with isolated GSCs from patient samples. GSC spheroids from primary human GBM tumors will be isolated utilizing established protocols Lathia et al.; Richichi et al; Smith et al.; Infanger et al.; Yost et al. Laks et al; A. B. Hjelmeland et al. C<smallcaps>ELL </smallcaps>D<smallcaps>EATH. </smallcaps>D<smallcaps>IFFER., </smallcaps>18 (2011) 829-840. After informed consent is obtained, surgical specimens not used for diagnostic purposes will be obtained and de-identified followed tumor processing in a dedicated primary culture hood. Tissue fragments will be separated for histologic and molecular characterization. The tissue will be processed and a subset of the cell population will then be assessed for neurosphere culture and expanded.</p>
+      <p id="p-00117-en" num="0117">Cell seeding post expansion will be initially assessed in various scaffolds and ECM at different quantities. It is anticipated that the larger cell numbers will develop tighter cell aggregates within the smaller porosity scaffold discs, but that overall viability will not be substantially different in the perfusion system. Given the need to incorporate other cell types, the potential limit on primary GSCs and the need to allow expansion/growth of the co-cultures over time, it is anticipated that the larger porosity scaffold discs with smaller to intermediate numbers of cells will be optimal for long term perfusion. Short term static culture of GBM cell lines will be used to determine optimal media, consisting of either stem cell media or differentiation media. In addition, media pH will be altered with hydrochloric acid and cell viability and angiogenic secretome in 3D will be assessed. Finally, the effect of reduced oxygen conditions (˜1%) on cell growth and degree of hypoxia/necrosis within spheroids will be assessed.</p>
+      <p id="p-00118-en" num="0118">Analytical techniques will be a combination of non-lytic and lytic assessments of viability (resazurin reduction, Presto Blue, Life Technologies; dsDNA quantification, CyQuant, Life Tech; live cell imaging, calcein AM, Life Tech) and cytotoxicity (LDH release, dead cell imaging, Ethidium HomoDimer, Life Tech). Hypoxia will be monitored in situ and non-destructively with a penetrating hypoxia-specific Lox-1 probe and imaged in situ via laser confocal microscopy S. Zhang et al. C<smallcaps>ANCER </smallcaps>R<smallcaps>ES., </smallcaps>70 (2010) 4490-4498. IHC will be performed on formalin fixed 3D static tissues to assess GSC stem cell markers and GBM differentiation/proliferation markers. Immunophenotype of seeded cells and extracted cells in 3D culture will be assessed for similar markers by flow cytometry, to demonstrate multilineage differentiation. L. F. Pavon et al. F<smallcaps>RONT </smallcaps>N<smallcaps>EUROL., </smallcaps>4 (2014) 214. Soluble angiogenic factors will measured by multiplexed bead based immunoassay.</p>
+      <p id="p-00119-en" num="0119">Short term assessment of viability and hypoxia will be used to identify the best flow rate, which will need to be re-assessed when endothelial cells are added. Perfused 3D cultures of GBM cell lines and GSCs will be performed over 2 weeks in optimized media conditions (stem cell versus differentiation supplements, acidic versus neutral pH, relative hypoxic versus standard incubator), with 4 analytical time points evaluated. Lytic Analysis: IHC will be performed on fixed 3D static tissues using established fixation and imbedding and slides will be immunostained as stated for GSC and differentiation markers. In addition to above IHC for expression markers, the BrdU incorporation assay will be used to better reflect the proliferative cell population over a 48 hour time period in situ, as this assay may better reflect proliferation than traditional IHC with Ki67. M. Witusik-Perkowska et al. J. N<smallcaps>EUROONCOL., </smallcaps>102 (2011) 395-407. Methylation changes will be examined over short term and long term culture experiments. The utilization of bioreactor array platform will enable more efficient and cost effective analysis of the GBM methylome. In addition, methylation status of primary samples can be compared directly with the TCGA to correlate sample tissues with that of the TCGA. Non-lytic analysis: As previously discussed, non-destructive analysis will consist of metabolism, cytotoxicity and in situ imaging using multi-photon microscopy to quantify the redox ratio of different cell populations (i.e. higher proliferating cells in outer layer of spheroids will have a lower redox ratio (NAD/FAD) and slower proliferating intermediate and inner layer cells will have a higher redox ratio. Angiogenic factors will be assessed as previously stated.</p>
+      <p id="p-00120-en" num="0120">The two mainstays of GBM therapy are external beam radiation and temozolomide TMZ. The bioreactor devices disclosed herein are perfectly suited for evaluating radiation sensitivity and resistance (dosimetry, tissue penetration, effects of hypoxia, soluble factors of cytotoxicity, etc.). TMZ will be applied to each system across multiple cell lines and multiple GCSs in 3D GBM microtumors over 7 days and normalized IC50s will be compared with molecular signature and methylation status of MGMT promoter and other 3D microtumor-specific methylome. Importantly, basic correlation with patient response (time to progression [TTP], overall survival [OS] and TCGA data will be established. Stratification will be according to patient demographics and GBM subtypes, as previously stated. Ultimately, TMZ therapy is not curative and progression ensues due to resistant cell populations. Thus, post-treatment analysis will consist of evaluation of the genomic, epigenetic and phenotypic changes of TMZ resistant populations.</p>
+      <p id="p-00121-en" num="0121">The established parameters of the 4 week perfusion 3D GBM microtumor with GSC alone will then be incorporated with endothelial cells (EC). The addition of EC will drive expansion of the GSC population, drive GSC differentiation towards tumor heterogeneity, demonstrate tubulogenesis towards hypoxic regions of GSC 3D aggregates and demonstrate effectiveness of anti-angiogenic agents (bevacizumab, axitinib, etc.). In recapitulating the perivascular niche for GSCs, it will be possible to test agents in combination with TMZ and anti-angiogenic agents to overcome treatment-related resistance seen in the clinic. Furthermore, patient-specific endothelial cells will further contribute to mimic the tumor heterogeneity seen in patients.</p>
+      <p id="p-00122-en" num="0122">In additional experiments, GBM-specific endothelial cells will be isolated, which will then be incorporated into the GBM microtumor for testing. Expression level changes can then be correlated with degree of microvascularity obtained in vitro as well as to anti-angiogenic treatment response that will be patient specific. GBM specific Ecs to be used in development and testing of 3D GBM Microtumors will be isolated, minimally characterized, and processed.</p>
+      <p id="p-00123-en" num="0123">Optimized media and conditions (growth factors, pH, hypoxia) will be assessed using simple viability and cord formation on a small percentage of early passage (2-3) and late passage EC (7-8) of the first 2-3 patient samples to determine similar growth and function between early and late passage. Conditionally immortalized HBECs will be used as comparison throughout optimization experiments. Based on the optimal numbers of HBECs, GECs seeding density will be determined for future experiments. Once these parameters are set, scaffolds with HBECs will be perfused in the disclosed bioreactors at the optimized perfusion rate determined above, and similar non-destructive analysis as performed above will be performed over 2 week cultures to determine HBEC compatibility with 3D perfusion. Viability and cytotoxicity analysis will be performed non-destructively and terminal analysis will be performed with confocal microscopy to evaluate tubular morphology and branching. IL-8 secretion will be measured and correlated with static 2D and 3D conditions.</p>
+      <p id="p-00124-en" num="0124">Ratios of direct co-culture seeding of GSCs and GECs will be assessed in 2 week perfusion experiments. Using non-lytic multi-photon microscopy, two parameters at four time points over the two weeks will be monitored: redox ratio of GSCs in close proximity to Ecs and branching morphology of Ecs. In order to do this, Ecs will be pre-labeled with dyes which will mimic in vivo experiments using dextran to label vascular structures. Lathia et al. It is predicted that the redox ratio of GSCs will be increased (slower proliferation) the closer to branching structures, correlating with slower proliferating fraction and consistent with a more undifferentiated phenotype. Confirmation of redox ratio as a proliferation index will be confirmed by BrdU incorporation assay as described above. Once the optimal co-culture ratio is determined, the benefit of patient-matched GSC and GECs will be demonstrated by comparing unmatched tumor cell lines and unmatched Ecs and demonstrated relative decrease in viability of GSCs and relative decreased tube formation and branching structures in unmatched co-cultures.</p>
+      <p id="p-00125-en" num="0125">The perfused co-culture will be extended for 4 weeks to assess the capacity of GSCs to undergo multi-lineage differentiation, using the same analytical parameters above for comparison (3D GSC microtumor). It is expected that matched GECs will enhance growth of GSCs over the 4 week platform while promoting intra-microtumor multi-lineage heterogeneity as assessed by similar analytical parameters used above. The GSCs will promote enhanced differentiation of GECs towards tubule generation and branching phenotypic. It is expected that the total microtissue will contain a significantly more heterogeneous population, as determined by IHC and flow, than when GSCs are cultured alone in 3D perfusion or than cell lines in 3D co-culture.</p>
+      <p id="p-00126-en" num="0126">Anti-angiogenic agents (bevacizumab, sunitinib, axitinib) will then be tested in the perfused system and monitor the effects of the agents solely by in situ, non-destructive methods using multi-photon microscopy (redox ratio of tumor cells, morphology of structures of Ecs), metabolism, cytotoxicity and confirm a relative decrease in more differentiated, faster proliferating cell population than the GSC population (CD133+) using lytic methods. Effects of anti-angiogenic agents will be compared with cell lines and primary GSC and GECs in 2D.</p>
+      <p id="p-00127-en" num="0127">All publications, patents, and patent applications mentioned herein are incorporated by reference to the same extent as if each individual publication, patent or patent application was specifically and individually indicated to be incorporated by reference in its entirety. In the event of there being a difference between definitions set forth in this application and those in documents incorporated herein by reference, the definitions set forth herein control.</p>
+      <p id="p-00128-en" num="0128">Various modifications and variations of the described methods, pharmaceutical compositions, and kits of the disclosure will be apparent to those skilled in the art without departing from the scope and spirit of the invention. Although the invention has been described in connection with specific embodiments, it will be understood that it is capable of further modifications and that the invention as claimed should not be unduly limited to such specific embodiments. Indeed, various modifications of the described modes for carrying out the invention that are obvious to those skilled in the art are intended to be within the scope of the invention. This application is intended to cover any variations, uses, or adaptations of the invention following, in general, the principles of the invention and including such departures from the present disclosure come within known customary practice within the art to which the invention pertains and may be applied to the essential features herein before set forth.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A bioreactor device comprising:
+<claim-text>one or more chambers; and</claim-text><claim-text>a lid, the lid comprising one or more integrated flow circuits defined therein, the flow circuits comprising flow channels that direct fluids into the one or more chambers.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The bioreactor device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the one or more chambers are wells of a microwell plate.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The bioreactor device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising, for each chamber, an insert, the insert defining within the chamber one or more sub-wells.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The bioreactor device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the lid comprises a first layer and a second layer, wherein the first layer comprises inputs for connecting each flow circuit to a pump, and wherein the flow circuit is defined within the first and second layer.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The bioreactor device of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the second layer further comprises, for each chamber, an extension on the bottom surface of the second layer that seals the second layer to the one or more chambers.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en" independent="true">
+      <claim-text>
+        <b>6</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>
+        <b>8</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>
+        <b>14</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en" independent="true">
+      <claim-text>
+        <b>19</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The bioreactor device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the one or more chambers further comprise an analytical imaging chamber to facilitate microscopy or spectrometry analysis in the chamber.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The bioreactor device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the fluidic circuit comprises an analytical imaging window.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The bioreactor device of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the inserts define two or more sub-wells.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en" independent="true">
+      <claim-text>
+        <b>24</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en" independent="true">
+      <claim-text>
+        <b>25</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en" independent="true">
+      <claim-text>
+        <b>26</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en" independent="true">
+      <claim-text>
+        <b>27</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en" independent="true">
+      <claim-text>
+        <b>28</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en" independent="true">
+      <claim-text>
+        <b>29</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en" independent="true">
+      <claim-text>
+        <b>30</b>. An adapter to convert microwell plates into three-dimensional culture devices comprising a sealing lid to fit within a well of a microwell plate, the sealing lid comprising an input flow channel and an output flow channel, and an insert defining one or more sub-wells within the well of microwell plate.</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. The adapter of <claim-ref idref="clm-00030-en">claim 30</claim-ref>, wherein the insert comprises a non-porous outer region and a porous region around the sub-wells.</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>32</b>. The adapter of <claim-ref idref="clm-00030-en">claim 30</claim-ref>, wherein the microplate is a 6, 12, 24, 48, 96, or 384 well-sized microplate.</claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en" independent="true">
+      <claim-text>
+        <b>33</b>. A bioreactor device comprising:
+<claim-text>a bottom soft layer defining one or more inlet and outlet fluid channels and one or more openings; and</claim-text><claim-text>a rigid top layer comprising one or more chamber access ports to align with the one or more openings, the one or more access ports comprising one or more channels in the walls of the access ports.</claim-text></claim-text>
+    </claim>
+    <claim num="34" id="clm-00034-en">
+      <claim-text>
+        <b>34</b>. The bioreactor device of <claim-ref idref="clm-00033-en">claim 33</claim-ref>, wherein the device is assembled by sealing the rigid top layer to the bottom soft layer such that the one or access ports are inserted through the one or more openings and the one or more channels in the walls of the access port are aligned with the inlet and outlet fluid channels of the soft layer.</claim-text>
+    </claim>
+    <claim num="35" id="clm-00035-en">
+      <claim-text>
+        <b>35</b>. The device of <claim-ref idref="clm-00033-en">claim 33</claim-ref>, wherein the access port defines a cylindrical cell culture chamber.</claim-text>
+    </claim>
+    <claim num="36" id="clm-00036-en">
+      <claim-text>
+        <b>36</b>. The device of <claim-ref idref="clm-00035-en">claim 35</claim-ref>, wherein the one or more channels in the walls of the access port enter the chamber at different heights.</claim-text>
+    </claim>
+    <claim num="37" id="clm-00037-en" independent="true">
+      <claim-text>
+        <b>37</b>. A bioreactor device comprising:
+<claim-text>a hard layer defining one or more cell culture chambers, the one or more cell culture chambers comprising an inlet opening and an outlet opening at a base of the cell culture chamber; and</claim-text><claim-text>a soft layer for mounting to the hard layer, the soft layer defining one or more openings to receive with the one or more cell culture chambers and inlet and outlet flow channels that align with the inlet and outlet openings at the base of the cell culture chamber.</claim-text></claim-text>
+    </claim>
+    <claim num="38" id="clm-00038-en">
+      <claim-text>
+        <b>38</b>. The device of <claim-ref idref="clm-00037-en">claim 37</claim-ref>, wherein each cell culture chamber is connected to the other cell culture chambers by an inlet and outlet flow channel.</claim-text>
+    </claim>
+    <claim num="39" id="clm-00039-en">
+      <claim-text>
+        <b>39</b>. A method of culturing one or more cell types in a three-dimensional environment comprising culturing the one or more cell types in a bioreactor device of any one of <claim-ref idref="clm-00001-en">claim 1 </claim-ref>, <claim-ref idref="clm-00033-en">33 </claim-ref>, or 37.</claim-text>
+    </claim>
+    <claim num="40" id="clm-00040-en">
+      <claim-text>
+        <b>40</b>. The method of <claim-ref idref="clm-00039-en">claim 39</claim-ref>, wherein one of the one or more cell types is a cancer cell.</claim-text>
+    </claim>
+    <claim num="41" id="clm-00041-en">
+      <claim-text>
+        <b>41</b>. The method of <claim-ref idref="clm-00040-en">claim 40</claim-ref>, wherein the one or more cell types further comprises epithelial cells, fibroblasts, adipocytes, endothelial cells, tumor associate macrophages, T-cells, B-cells or a combination thereof.</claim-text>
+    </claim>
+    <claim num="42" id="clm-00042-en">
+      <claim-text>
+        <b>42</b>. The method of <claim-ref idref="clm-00040-en">claim 40</claim-ref>, wherein the cancer cell is a breast cancer cell, a lung cancer cell, ovarian cancer cell, a pancreatic cancer cell, or a glioblastoma.</claim-text>
+    </claim>
+    <claim num="43" id="clm-00043-en">
+      <claim-text>
+        <b>43</b>. A method for assessing responsiveness to therapeutic agents comprising:
+<claim-text>culturing in a three-dimensional environment a plurality of cell samples in a plurality of wells or sub-wells of the bioreactor devices of any one of <claim-ref idref="clm-00001-en">claim 1 </claim-ref>, <claim-ref idref="clm-00033-en">33 </claim-ref>, or 37;</claim-text><claim-text>exposing each cell sample in a well to a different therapeutic agent or a different concentration of the same therapeutic agent by perfusing media through the plurality of chambers comprising the appropriate concentration of therapeutic agent; and</claim-text><claim-text>measuring the responsiveness to each cell sample to the therapeutic agent.</claim-text></claim-text>
+    </claim>
+    <claim num="44" id="clm-00044-en">
+      <claim-text>
+        <b>44</b>. The method of <claim-ref idref="clm-00043-en">claim 43</claim-ref>, wherein the cell sample is a cancer cell sample.</claim-text>
+    </claim>
+    <claim num="45" id="clm-00045-en">
+      <claim-text>
+        <b>45</b>. The method of <claim-ref idref="clm-00044-en">claim 44</claim-ref>, wherein the cancer cell sample is a obtained from a biopsy sample of a subject in need of therapeutic treatment.</claim-text>
+    </claim>
+    <claim num="46" id="clm-00046-en">
+      <claim-text>
+        <b>46</b>. The method of <claim-ref idref="clm-00045-en">claim 45</claim-ref>, wherein the cancer cell sample is a breast cancer sample, ovarian cancer sample, a pancreatic cancer sample, a lung cancer sample, or a glioblastoma.</claim-text>
+    </claim>
+    <claim num="47" id="clm-00047-en">
+      <claim-text>
+        <b>47</b>. The method of <claim-ref idref="clm-00043-en">claim 43</claim-ref>, wherein the plurality of cell samples is cultured in a microtumor model comprising epithelial cells, fibroblasts, adipocytes, endothelial cells, tumor associate macrophages, T-cells, or B-cells or a combination thereof.</claim-text>
+    </claim>
+    <claim num="48" id="clm-00048-en">
+      <claim-text>
+        <b>48</b>. The method of <claim-ref idref="clm-00043-en">claim 43</claim-ref>, wherein responsiveness is measured by observable phenotypic changes in cell structure on the device, the release of one or more biomarkers in the perfused media, or through lysis and detection of one or more biomarkers.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00014.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00015.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00016.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00017.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00018.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00019.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00020.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00021.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00022.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00023.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00024.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00024.TIF" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00025.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00025.TIF" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00026.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00026.TIF" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00027.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00027.TIF" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00028.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00028.TIF" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00029.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00029.TIF" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00030.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00030.TIF" />
+    </figure>
+    <figure num="31">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00031.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00031.TIF" />
+    </figure>
+    <figure num="32">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00032.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00032.TIF" />
+    </figure>
+    <figure num="33">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00033.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00033.TIF" />
+    </figure>
+    <figure num="34">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00034.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00034.TIF" />
+    </figure>
+    <figure num="35">
+      <img he="N/A" wi="N/A" file="US20150247112A1_00035.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247112A1-20150903-D00035.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247112A1.PDF" type="pdf" size="2114263" pages="51" />
+</lexisnexis-patent-document>

@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150258392A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030346" date-changed="20151006" time-changed="063138">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121318037">
+        <country>US</country>
+        <doc-number>20150258392</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14711680</doc-number>
+        <date>20150513</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>A63B  53/04        20150101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20150101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>53</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B23C   3/30        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B23P  15/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>23</class>
+        <subclass>P</subclass>
+        <main-group>15</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>A63B  53/047       20130101 FI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>53</main-group>
+        <subgroup>047</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A63B  53/04        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>53</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A63B2053/0408      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>2053</main-group>
+        <subgroup>0408</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A63B2053/0445      20130101 LA20150203BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>2053</main-group>
+        <subgroup>0445</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150203</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B23C   3/30        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B23P  15/00        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>23</class>
+        <subclass>P</subclass>
+        <main-group>15</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>Y10T  29/49986     20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>49986</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>Y10T 409/303752    20130101 LA20150610BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>409</main-group>
+        <subgroup>303752</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150610</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">7</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">GOLF CLUB HEADS AND METHODS OF MANUFACTURING GOLF CLUB HEADS</invention-title>
+    <related-documents date-changed="20150917">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13476834</doc-number>
+              <date>20120521</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9050509</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007116</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61619901</doc-number>
+          <date>20120403</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Karsten Manufacturing Corporation</orgname>
+            <address>
+              <city>Phoenix</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Jertson</last-name>
+            <first-name>Marty R.</first-name>
+            <address>
+              <city>Phoenix</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Petersen</last-name>
+            <first-name>David L.</first-name>
+            <address>
+              <city>Phoenix</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173672706">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258392</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150513</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173672705">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258392</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150513</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A golf club head with grooves is described herein. Other embodiments are disclosed.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This is a continuation of U.S. patent application Ser. No. 13/476,834, filed May 21, 2012, which claims the benefit of U.S. Provisional Application No. 61/619,901, filed Apr. 3, 2012, the contents of all disclosures above are incorporated fully by reference herein.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">This disclosure relates generally to golf clubs, and relates more particularly to golf club heads having grooves.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">In general, a golf club includes a club face with grooves in order to increase the frictional force at impact between the club face and the ball. The United States Golf Association (USGA) publishes and maintains the Rules of Golf, which govern professional golf in the United States. Appendix II to the USGA Rules provides several limitations on the grooves for golf clubs, including limitations on symmetry, width, depth, edge radius, and relative distance between grooves. The Royal and Ancient Golf Club of St. Andrews, which is the governing authority for the rules of professional golf outside the United States, provides similar limitations to golf club design.</p>
+      <p id="p-00004-en" num="0004">Moreover, an accurate hitting stoke is accomplished through a variety of subjective, as well as objective, golf club features. For example, many people subjectively associate smaller grooves with decreased ball spin at impact and with shorter distances after impact.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00005-en" num="0005">To facilitate further description of the embodiments, the following drawings are provided in which:</p>
+      <p id="p-00006-en" num="0006">
+        <figref>FIG. 1</figref> illustrates a top view of a golf club, according to a first embodiment;</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 2</figref> illustrates an isometric cross-sectional view of a first part of the club face of the golf club of <figref>FIG. 1</figref>, according to the first embodiment;</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 3</figref> illustrates a cross-sectional view of a second part of the club face of the golf club of <figref>FIG. 1</figref>, according to the first embodiment;</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 4</figref> illustrates an annotated cross-sectional view of a prior art golf club;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 5</figref> illustrates a second annotated cross-sectional view of a prior art golf club;</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 6</figref> illustrates an example of a cross-sectional view of the second part of club face of the golf club of <figref>FIG. 1</figref> superimposed over a part of a prior art club face;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 7</figref> illustrates a cross-sectional view of a second portion of a club face of a golf club, according to a second embodiment;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 8</figref> illustrates a comparison of the grooves of the golf club of <figref>FIG. 7</figref> with the groove of a prior art golf club;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 9</figref> illustrates a flow chart for an exemplary embodiment of a method of manufacturing a golf club, according to an embodiment;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 10</figref> illustrates a flow chart for an exemplary embodiment of an activity of forming a groove and a second portion at the golf club face, according to an embodiment;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 11</figref> illustrates an example of a groove cutting tool forming a groove;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 12</figref> illustrates a chart of exemplary values for use with the groove cutting tool of <figref>FIG. 11</figref>; and</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 13</figref> illustrates a second example of a groove cutting tool forming a groove.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00019-en" num="0019">For simplicity and clarity of illustration, the drawing figures illustrate the general manner of construction, and descriptions and details of well-known features and techniques may be omitted to avoid unnecessarily obscuring the invention. Additionally, elements in the drawing figures are not necessarily drawn to scale. For example, the dimensions of some of the elements in the figures may be exaggerated relative to other elements to help improve understanding of embodiments of the present invention. The same reference numerals in different figures denote the same elements.</p>
+      <p id="p-00020-en" num="0020">The terms “first,” “second,” “third,” “fourth,” and the like in the description and in the claims, if any, are used for distinguishing between similar elements and not necessarily for describing a particular sequential or chronological order. It is to be understood that the terms so used are interchangeable under appropriate circumstances such that the embodiments described herein are, for example, capable of operation in sequences other than those illustrated or otherwise described herein. Furthermore, the terms “include,” and “have,” and any variations thereof, are intended to cover a non-exclusive inclusion, such that a process, method, system, article, device, or apparatus that comprises a list of elements is not necessarily limited to those elements, but may include other elements not expressly listed or inherent to such process, method, system, article, device, or apparatus.</p>
+      <p id="p-00021-en" num="0021">The terms “left,” “right,” “front,” “back,” “top,” “bottom,” “over,” “under,” and the like in the description and in the claims, if any, are used for descriptive purposes and not necessarily for describing permanent relative positions. It is to be understood that the terms so used are interchangeable under appropriate circumstances such that the embodiments of the invention described herein are, for example, capable of operation in other orientations than those illustrated or otherwise described herein.</p>
+      <p id="p-00022-en" num="0022">The terms “couple,” “coupled,” “couples,” “coupling,” and the like should be broadly understood and refer to connecting two or more elements or signals, electrically, mechanically and/or otherwise.</p>
+      <heading id="h-00005-en" level="1">DESCRIPTION</heading>
+      <p id="p-00023-en" num="0023">In some embodiments, a golf club head can include: a club face to engage a golf ball, the club face having: a face portion; at least one groove in the club face, the at least one groove having a bottom, a first side wall adjacent to the bottom, a second side wall adjacent to the bottom, a first top radius adjacent to the first side wall, and a second top radius adjacent to the second side wall; and a second portion located between the face portion and a top of the at least one groove, the second portion is a substantially flat plane at a first angle with the face potion. The first angle can be between approximately eight and eighteen degrees relative to the face portion. The at least one groove is compliant with a Thirty Degree Rule when measured from the first top radius and the second top radius.</p>
+      <p id="p-00024-en" num="0024">In different embodiments, a golf club can include: a golf club head having: a strike face having: a face portion; one or more channels with a first sidewall and a second sidewall, the first sidewall comprises a first thirty degree point and the second sidewall comprises a second thirty degree point; a first angled surface between the first degree point and the face portion and also between the second thirty degree points and the face portion; and a cover layer located over the face portion; and a shaft coupled to the golf club head. The face portion can be substantially flat. Each of the one or more channels can be symmetric. The first angled surface is at an eight to eighteen degree angle relative to the face potion. The cover layer has a first reflectivity and the one or more channels has a second reflectivity. The first reflectivity is different from the second reflectivity; and the first angled surface and the one or more channels are devoid of being covered by the cover layer.</p>
+      <p id="p-00025-en" num="0025">In further embodiments, a method for manufacturing a golf club head including: providing a golf club head comprising a golf club face; and forming a groove and a second portion at the golf club face, forming the groove and the second portion including: rotating a groove forming tool such that the groove forming tool forms: a groove in the golf club face such that the groove is compliant with Thirty Degree Rule when measured from a first top radius of the groove and a second top radius of the groove; and a second portion adjacent to the first top radius and the second top radius of the groove and at a first angle of approximately eight to eighteen degrees relative to the golf club face of the golf club; and actuating the groove forming tool from a first end to a second end of the golf club face.</p>
+      <p id="p-00026-en" num="0026">Turning to the drawings, <figref>FIG. 1</figref> illustrates a top view of golf club <b>100</b>, according to a first embodiment. Golf club <b>100</b> is merely exemplary and is not limited to the embodiments presented herein. Golf club <b>100</b> can be employed in many different embodiments or examples not specifically depicted or described herein. Golf club <b>100</b> can be an iron-type golf club head, such as a 1-iron, a 2-iron, a 3-iron, a 4-iron, a 5-iron, a 6-iron, a 7-iron, an 8-iron, a 9-iron, a sand wedge, a lob wedge, a pitching wedge, an n-degree wedge (e.g., 44 degrees)(°, 48°, 52°, 56°, 60°, etc.), etc. In a different embodiment, golf club <b>100</b> can also be a wood-type golf club, a hybrid-type golf club, or a putter-type golf club.</p>
+      <p id="p-00027-en" num="0027">In some embodiments, golf club <b>100</b> can include: (a) a golf club head <b>101</b>; (b) a shaft <b>102</b>; and (c) a hosel <b>103</b> coupled to shaft <b>102</b>. In a different embodiment, golf club <b>100</b> has a hole, instead of hosel <b>103</b>, to which shaft <b>102</b> is coupled. A first end of shaft <b>102</b> and hosel <b>103</b> may be secured to each other by an adhesive bonding process (e.g., epoxy) and/or other suitable bonding processes (e.g., mechanical bonding, soldering, welding, and/or brazing). To complete the golf club, a grip (not shown) may receive a second or opposite end of the shaft. The shaft and the grip may be secured to each other by an adhesive bonding process and/or other suitable bonding processes. In some examples, hosel <b>103</b> or the hole can be at the heel end of golf club head <b>101</b> or at a center of golf club head <b>101</b>.</p>
+      <p id="p-00028-en" num="0028">Golf club head <b>101</b> can include: (a) a club face <b>111</b> (i.e., a strike face) to engage a golf ball, (b) a sole <b>112</b> coupled to club face <b>111</b>; (c) a toe edge <b>113</b> coupled to club face <b>111</b> and sole <b>112</b>; (d) a heel edge <b>114</b> opposite toe edge <b>113</b> and coupled to club face <b>111</b> and sole <b>112</b>; and (e) a top surface <b>115</b> (e.g., a top rail) coupled to club face <b>111</b>, toe edge <b>113</b>, and heel edge <b>114</b>.</p>
+      <p id="p-00029-en" num="0029">In some examples, golf club head <b>101</b> can be manufactured from a steel material, another metal, or one or more other materials by a casting process, a forging process, a combination thereof, or one or more other suitable manufacturing processes. In many examples, golf club head <b>101</b> can be formed as a unitary body. In other examples, golf club head <b>101</b> can be made of multiple pieces (e.g., a separate face plate and/or separate inserts to form the grooves).</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 2</figref> illustrates an isometric cross-sectional view of a first part of club face <b>111</b>, according to the first embodiment. <figref>FIG. 3</figref> illustrates a cross-sectional view of a second part of club face <b>111</b>, according to the first embodiment.</p>
+      <p id="p-00031-en" num="0031">As shown in <figref>FIGS. 2 and 3</figref>, club face <b>111</b> can include: (a) a face portion <b>221</b>; (b) at least one groove <b>222</b> (i.e., at least one channel); and (c) a second portion <b>223</b> (i.e., an angled surface) located between face portion <b>221</b> and groove <b>222</b>. In various embodiments, face portion <b>221</b> is substantially flat. For example, the face portion can be substantially flat to within plus or minus approximately 0.002 inches (0.051 millimeters (mm)).</p>
+      <p id="p-00032-en" num="0032">Groove <b>222</b> can include: (a) a bottom <b>231</b>; (b) a first side wall <b>232</b> adjacent to bottom <b>231</b>; (c) a second side wall <b>333</b> adjacent to bottom <b>231</b> and opposite first side wall <b>232</b>; (d) a first top radius <b>234</b> adjacent to first side wall <b>232</b>; and (e) a second top radius <b>335</b> adjacent to second side wall <b>333</b> and opposite first top radius <b>234</b>. In addition, groove <b>222</b> can include a first thirty degree point <b>336</b> at a top end of first top radius <b>234</b> (i.e., between first top radius <b>234</b> and first side wall <b>232</b>) and a second thirty degree point <b>337</b> at a top end of second top radius <b>335</b> (i.e., between second top radius <b>335</b> and second portion <b>223</b>). First top radius <b>234</b> and second top radius <b>335</b> are 0.003 inches (0.75 mm) or closer from face portion <b>221</b>. In some examples, the tangent lines (e.g., tangent line <b>327</b>) at first thirty degree point <b>336</b> and second thirty degree point <b>337</b> of first top radius <b>234</b> and second top radius <b>335</b>, respectively, are different from the slopes of first side wall <b>232</b> and second side wall <b>333</b>, respectively.</p>
+      <p id="p-00033-en" num="0033">In many examples, a distance between first thirty degree point <b>336</b> and second thirty degree point <b>337</b> is equal to or less than 0.035 inches (0.89 mm). In many examples, each of grooves <b>222</b> are symmetric. In many examples, first top radius <b>234</b> and/or first thirty degree point <b>336</b> can be considered part of first side wall <b>232</b>. Similarly, second top radius <b>335</b> and/or second thirty degree point <b>337</b> can be considered part of first side wall <b>333</b>.</p>
+      <p id="p-00034-en" num="0034">In many examples, first thirty degree point <b>336</b> and second thirty degree point <b>337</b> are defined by and compliant with the USGA's thirty degree method for measuring groove width (the “Thirty Degree Rule”). The USGA's Determination of Groove Conformance (Impact Area Markings (App II, 5c) Measurement Procedure) ruling, dated August 2008, is incorporated herein by reference. According to the USGA in its Thirty Degree Rule (i.e., Appendix B of the Determination of Groove Conformance ruling), the groove in a club face starts where there is a significant departure from the plane of the face (land area) (i.e., face portion <b>221</b>). The Thirty Degree Rule specifies where the measurement of the groove width should be taken when the edges of the grooves are rounded.</p>
+      <p id="p-00035-en" num="0035">The sidewall of a groove generally meets the face of the club (land area) with a filleted transition. As shown in <figref>FIG. 4</figref>, under the Thirty Degree Rule, the groove width measurement (W) is made between two points where a line, inclined at thirty degrees to the land area of the club face, is tangent to the edge of the groove. Furthermore, as shown in <figref>FIG. 5</figref>, if the tangent point using the 30° method occurs at a location that is more than 0.003 in. (0.76 mm) below the land area, then the width measurement shall be made at the points on the groove that are 0.003 in. (0.76 mm) below the land area. <figref>FIGS. 4 and 5</figref> are figures from the USGA Rules of Golf that help define the Thirty Degree Rule.</p>
+      <p id="p-00036-en" num="0036">Accordingly, referring again to <figref>FIGS. 1-3</figref>, first thirty degree point <b>336</b> and second thirty degree point <b>337</b> are the points in groove <b>222</b> where a line, inclined at thirty degrees to face portion <b>221</b> of club face <b>111</b>, is tangent to the edge of groove <b>222</b>.</p>
+      <p id="p-00037-en" num="0037">Second portion <b>223</b> can be located between face portion <b>221</b> and a top of groove <b>222</b>. Second portion <b>223</b> can be a substantially flat plane at a first angle <b>325</b> with face portion <b>221</b>. In some examples, first angle <b>325</b> is between approximately eight and eighteen degrees relative to face portion <b>221</b>. In other examples, first angle <b>325</b> is between approximately ten and fifteen degrees relative to face portion <b>221</b>. In still further examples, first angle <b>325</b> is approximately ten to eighteen degrees relative to face portion <b>221</b>. These ranges can maximize visual appearance of the width of the grooves, while not being adversely affected by manufacturing tolerances. In some examples, a length of second portion <b>223</b> between face portion <b>221</b> and groove <b>222</b> can between approximately 0.002 inches (0.005 centimeters) and 0.047 inches (0.119 centimeters).</p>
+      <p id="p-00038-en" num="0038">In some examples, first side wall <b>232</b> (or, in other examples, first top radius <b>234</b>) is at a second angle <b>326</b> with face portion <b>221</b>. Second angle <b>326</b> is greater than first angle <b>325</b>.</p>
+      <p id="p-00039-en" num="0039">Second portion <b>223</b> can be adjacent to first top radius <b>234</b> and second top radius <b>335</b> of groove <b>222</b>. Specifically, second portion <b>223</b> can be adjacent to first top radius <b>234</b> at first thirty degree point <b>336</b> and second top radius <b>335</b> at second thirty degree point <b>337</b>. Thus, second portion <b>223</b> is outside of groove <b>222</b>, as defined by the Thirty Degree Rule.</p>
+      <p id="p-00040-en" num="0040">In many examples, second portion <b>223</b> can be formed as a flat plane, tangent to first and second top radii <b>336</b> and <b>337</b> of groove <b>222</b>. To be conforming to the USGA rules of golf, second portion <b>223</b> must be tangent to the top radius of groove <b>222</b>, and at no more than thirty degrees when measured from face portion <b>221</b> of club face <b>111</b>. In other examples, second portion <b>223</b> is not planar, For example, second portion <b>223</b> could consist of a larger radius than side walls <b>232</b> and <b>333</b> and/or top radius <b>234</b> and <b>335</b>. This larger radius of second portion <b>223</b> would extend outside of groove <b>222</b> from top radius <b>234</b> and <b>335</b>, providing the larger visual width for groove <b>222</b>. In order for the larger radius to be conforming to the USGA standards, it can start at first thirty degree point <b>336</b> and second thirty degree point <b>337</b>.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 6</figref> illustrates an example of a cross-sectional view of the second part of club face <b>111</b> superimposed over a part of a prior art club face. As shown in <figref>FIG. 6</figref>, the use of second portion <b>223</b> in addition to groove <b>222</b> can create a visual impression to the user of golf club <b>100</b> that grooves <b>222</b> are larger than prior art grooves by amount <b>622</b> while golf club <b>100</b> and grooves <b>222</b> still comply with the USGA Rules of Golf. Accordingly, because many people associate larger or wider grooves with increased spin at ball impact and also with longer distances after impact, use of golf club <b>100</b> can provide an increased psychological benefit to its users and allow the user to hit a golf ball further and with improved accuracy.</p>
+      <p id="p-00042-en" num="0042">Turning to the drawings, <figref>FIG. 7</figref> illustrates a cross-sectional view of a second portion of club face <b>711</b> of golf club <b>700</b>, according to a second embodiment. Golf club <b>700</b> is merely exemplary and is not limited to the embodiments presented herein. Golf club <b>700</b> can be employed in many different embodiments or examples not specifically depicted or described herein. Golf club <b>700</b> can be an iron-type golf club head, such as a 1-iron, a 2-iron, a 3-iron, a 4-iron, a 5-iron, a 6-iron, a 7-iron, an 8-iron, a 9-iron, a sand wedge, a lob wedge, a pitching wedge, an n-degree wedge (e.g., 44 degrees)(°, 48 °, 52 °, 56 °, 60°, etc.), etc. In a different embodiment, golf club <b>700</b> can also be a wood-type golf club, a hybrid-type golf club, or a putter-type golf club.</p>
+      <p id="p-00043-en" num="0043">In some embodiments, golf club <b>700</b> can include: (a) a golf club head <b>701</b>; (b) a shaft <b>102</b> (<figref>FIG. 1</figref>); and (c) a hosel <b>103</b> (<figref>FIG. 1</figref>) coupled to shaft <b>102</b>. Golf club head <b>701</b> can include: (a) club face <b>711</b> (i.e., a strike face) to engage a golf ball, (b) a sole <b>112</b> (<figref>FIG. 1</figref>) coupled to club face <b>711</b>; (c) a toe edge <b>113</b> (<figref>FIG. 1</figref>) coupled to club face <b>711</b> and sole <b>112</b>; (d) a heel edge <b>114</b> (<figref>FIG. 1</figref>) opposite toe edge <b>113</b> and coupled to club face <b>711</b> and sole <b>112</b>; (e) a top surface <b>115</b> (<figref>FIG. 1</figref>) (e.g., a top rail) coupled to club face <b>711</b>, toe edge <b>113</b>, and heel edge <b>114</b>.</p>
+      <p id="p-00044-en" num="0044">As shown in <figref>FIG. 7</figref>, club face <b>711</b> can include: (a) a face portion <b>721</b>; (b) at least one groove <b>722</b>; (c) a second portion <b>723</b> located between face portion <b>721</b> and groove <b>722</b>; and (d) a cover layer <b>740</b> (i.e., a coating) located over at least a portion of face portion <b>721</b>.</p>
+      <p id="p-00045-en" num="0045">In various embodiments, face portion <b>221</b> is substantially flat. For example, face portion <b>721</b> can be substantially flat to within plus or minus approximately 0.002 inches (0.051 mm).</p>
+      <p id="p-00046-en" num="0046">Groove <b>722</b> can include: (a) a bottom <b>731</b>; (b) a first side wall <b>732</b> adjacent to bottom <b>731</b>; (c) a second side wall <b>733</b> adjacent to bottom <b>731</b>; (d) a first top radius <b>734</b> adjacent to first side wall <b>732</b>; and (e) a second top radius <b>735</b> adjacent to second side wall <b>733</b>. In addition, groove <b>722</b> can include a first thirty degree point <b>736</b> at an end of first top radius <b>734</b> and a second thirty degree point <b>737</b> at an end of second top radius <b>735</b>. As shown in <figref>FIG. 7</figref>, groove <b>722</b> is devoid of cover layer <b>740</b> at second portion <b>723</b> and within groove <b>722</b>. In other examples, groove <b>722</b> and second portion <b>723</b> can have a cover layer that is the same or different from cover layer <b>740</b>.</p>
+      <p id="p-00047-en" num="0047">In many examples, a thickness of cover layer <b>740</b> is less than 0.001 inches (0.025 mm). In some embodiments, a surface roughness and/or reflectivity of cover layer <b>740</b> is different than a surface roughness and/or reflectivity of second portion <b>723</b> and/or at least one surface of groove <b>722</b>. For example, the surface roughness of cover layer <b>740</b> can be approximately 20 micro-inches (51 micro-centimeters) to 180 micro-inches (457 micro-centimeters), and the surface roughness of second portion <b>723</b> and groove <b>722</b> can be approximately 4 micro-inches (10 micro-centimeters), to 40 micro-inches (457 micro-centimeters),</p>
+      <p id="p-00048-en" num="0048">In the same or different examples, a surface of groove <b>722</b> and/or second portion <b>723</b> has a first reflectivity, and a surface of face portion <b>721</b> can have a second reflectivity. The first reflectivity is different from the second reflectivity. In many embodiments, cover layer <b>740</b> can be considered a surface of face portion <b>721</b> with cover layer <b>740</b> having the second reflectivity.</p>
+      <p id="p-00049-en" num="0049">As shown in <figref>FIG. 7</figref>, golf club <b>700</b> is comprised of a contrasting finish, and a lead-in design for the grooves. The lead-in design, combined with the contrasting finish, creates an exaggerated “visual width” of the grooves, while the grooves remain entirely conforming to the USGA groove rules.</p>
+      <p id="p-00050-en" num="0050">The contrasting finish is made up of a first finish (i.e., the lack of cover layer <b>740</b>) and a “second finish” (i.e., cover layer <b>740</b>) on club face <b>711</b>. To manufacture golf club <b>700</b>, the golf club head is forged or cast without the grooves in club face <b>711</b>. After several smoothing steps, the golf club head possesses the natural finish of the metal, which is the first finish. Then a coating, or otherwise contrasting second finish, is placed on the golf club head. This contrasting second finish could be a plating, thin film coating, oxidation process, blasting process, or any other method that can, in some examples, create a resilient and thin coating. In many examples, the second finish is a contrasting finish when compared to the first finish that is created on the substrate club head material after the grooves have been machined or otherwise created. The contrasting second finish (i.e., cover layer <b>740</b>) can be very thin to facilitate the milling of the lead-in design (in some examples, less than 0.001 in. (0.025 mm) thick). Some examples of contrasting finishes are: black-nickel chrome, dark-colored physical vapor deposition (PVD), QPQ (quench polish quench), oil can, satin nickel-chrome, steel shot bead blasting, or ceramic media blasting.</p>
+      <p id="p-00051-en" num="0051">Referring to <figref>FIG. 8</figref>, a golf club with a first and second finish and the lead-in groove design is shown side-by-side with a standard finish and standard grooves. In this embodiment, the grooves of golf club <b>700</b> appear to be 20% wider than the grooves in the prior art golf club.</p>
+      <p id="p-00052-en" num="0052">Returning to <figref>FIG. 7</figref>, in other embodiments, cover layer <b>740</b> can be located over face portion <b>721</b> and over second portion <b>723</b>, but not over grooves <b>722</b>. In still another example, a first cover layer can be located over face portion <b>721</b>, and a second cover layer can be located over second portion <b>723</b>. In this embodiment, a third cover layer can be located over at least part of groove <b>722</b>, or groove <b>722</b> can be devoid of a cover layer. In these examples, the first cover layer, the second cover layer, and the third cover layer can have different surface roughnesses and/or reflectivities. That is, the first cover layer, the second cover layer, and the third cover layer can be contrasting finishes.</p>
+      <p id="p-00053-en" num="0053">
+        <figref>FIG. 9</figref> illustrates a flow chart for an embodiment of a method <b>900</b> of manufacturing a golf club. Method <b>900</b> is merely exemplary and is not limited to the embodiments presented herein. Method <b>900</b> can be employed in many different embodiments or examples not specifically depicted or described herein. In some embodiments, the activities, the procedures, and/or the processes of method <b>900</b> can be performed in the order presented. In other embodiments, the activities, the procedures, and/or the processes of method <b>900</b> can be performed in any other suitable order. In still other embodiments, one or more of the activities, the procedures, and/or the processes in method <b>900</b> can be combined or skipped.</p>
+      <p id="p-00054-en" num="0054">Referring to <figref>FIG. 9</figref>, method <b>900</b> includes an activity <b>961</b> of providing a golf club head. For example, the golf club head can be similar or identical to golf club head <b>101</b> or <b>701</b> of <figref>FIGS. 1 and 7</figref>, respectively. For example, the golf club head body may be formed, for instance, by casting, forging, cutting, grinding, machining, welding, a combination thereof, or the like.</p>
+      <p id="p-00055-en" num="0055">In some embodiments, the golf club head can have a face member, a sole, a toe edge coupled to the face member and the sole, a heel edge coupled to the face member and sole and opposite the toe edge, and a top surface coupled to the toe edge.</p>
+      <p id="p-00056-en" num="0056">Method <b>900</b> in <figref>FIG. 9</figref> continues with an activity <b>962</b> of smoothing the golf club face. In some examples, activity <b>962</b> can include performing tumbling, grinding, and/or polishing procedures to the golf club face. In many examples, after activity <b>962</b>, the golf club face can be very smooth, and the natural finish of the metal of the golf club head can be exposed.</p>
+      <p id="p-00057-en" num="0057">Subsequently, method <b>900</b> of <figref>FIG. 9</figref> includes an activity <b>963</b> of applying a cover layer to the golf club face. In some examples, the cover layer can be similar to or the same as cover layer <b>740</b> of <figref>FIG. 7</figref>.</p>
+      <p id="p-00058-en" num="0058">In some examples, the cover layer can be applied using plating, thin film coating, oxidation process, blasting process, or any other method that can create, in some examples, a resilient and thin coating. In various embodiments, the cover layer can be very thin to facilitate the milling of the lead-in design (in some examples less than 0.001 in. (0.025 mm) thick). Some examples of contrasting finishes are: black-nickel chrome, dark-colored physical vapor deposition (PVD), QPQ (quench polish quench), oil can, satin nickel-chrome, steel shot bead blasting, ceramic media blasting. In other embodiments, method <b>900</b> does not include an activity <b>963</b>, and accordingly, no cover layer is applied to the golf club head.</p>
+      <p id="p-00059-en" num="0059">Next, method <b>900</b> of <figref>FIG. 9</figref> includes an activity <b>964</b> of forming a groove and a second portion at the golf club face. In some examples, the groove can be similar to or the same as groove <b>222</b> or <b>722</b> of <figref>FIGS. 2 and 7</figref>, respectively. The second portion can be similar to or the same as second portion <b>223</b> or <b>723</b> of <figref>FIGS. 2 and 7</figref>, respectively. <figref>FIG. 10</figref> illustrates a flow chart for an exemplary embodiment of activity <b>964</b> of forming a groove and a second portion at the golf club face, according to the first embodiment.</p>
+      <p id="p-00060-en" num="0060">Referring to <figref>FIG. 10</figref>, activity <b>964</b> includes a procedure <b>1071</b> of rotating a groove forming tool. In some examples, the groove forming tool can be rotated such that the groove forming tool forms the groove in the golf club face such that the groove is compliant with the Thirty Degree Rule when measured from a first top radius of the groove and a second top radius of the groove. The second portion is adjacent to the first and second top radius of the groove and has a first angle of approximately eight to eighteen degrees relative to a face portion of the golf club.</p>
+      <p id="p-00061-en" num="0061">In various embodiments, procedure <b>1071</b> involves rotating the groove forming tool such that the groove forming tool forms the groove in the golf club face so that a distance between the first thirty degree point and the second thirty degree point is equal to or less than 0.035 in (0.89 mm).</p>
+      <p id="p-00062-en" num="0062">At least three different embodiments can be used to rotate the groove forming tool. A first example of a groove forming tool <b>1150</b> rotating to form the groove is illustrated in <figref>FIG. 11</figref>. <figref>FIG. 11</figref> illustrates a cross section of a lead-in design groove, with the wheel cutter bit inserted into the groove. In this example, grove forming tool <b>1150</b> can be a wheel cutter. In this embodiment, a bit spins about an axis <b>1151</b> that is parallel to face portion <b>111</b>. As the bit spins, it scoops out material, creating the lead-in design. The design of the bit creates a conforming groove, while keeping a noticeable visual width. In order to machine a conforming and consistent design, the manufacturing tolerances must be taken into account. When the wheel cutter is lowered into the face portion, the machine's limitations can create a range of plunge depths. The design of the bit is such that the range of depths will minimally impact the look and conformity of the grooves.</p>
+      <p id="p-00063-en" num="0063">
+        <figref>FIG. 12</figref> illustrates a table showing how the angle of the second portion can affect the impact of the mechanical limitations on the visual width of the groove. By optimizing the second portion's angle relative to the face portion, and taking the range of plunge depths into account, the bit can create consistent and conforming grooves. Referring to <figref>FIG. 11</figref>, a procedure to optimize the bit is shown schematically in circles <b>1199</b>; the circles indicate an extended portion of the bit. The bit's extended portion reaches beyond the visual width specifications, while maintaining the same angle with the face portion. <figref>FIG. 11</figref> also shows the axis of rotation <b>1151</b>, and it demonstrates how the bit can be a virtually perfect negative, or opposite of, the lead-in design groove. The bit is lowered into the club face while spinning at a high rate. In this example, the groove forming tool is at an angle perpendicular to the golf club face.</p>
+      <p id="p-00064-en" num="0064">In other embodiments, instead of machining the second portion of the club face at the same time as the main groove, the second portion could be machined into the club face in a secondary operation. Additional manufacturing methods include etching the second portion into the face of the clubs.</p>
+      <p id="p-00065-en" num="0065">A second example of a groove forming tool rotating to form the groove in procedure <b>1071</b> of <figref>FIG. 10</figref> is illustrated in <figref>FIG. 13</figref>. In the example shown in <figref>FIG. 13</figref>, groove forming tool <b>1350</b> can be a form cutter. In this embodiment, the form cutter spins about an axis <b>1351</b> that is perpendicular to face portion <b>1311</b> of the club head. As the bit spins, it extracts material under the same principle as an Archimedean Screw pump. A difference between the example in <figref>FIG. 11</figref> and this example is the bit. In the example of <figref>FIG. 11</figref>, the bit is a full negative image of the lead-in groove's negative geometry. In this example of <figref>FIG. 13</figref>, the bit is a half negative image of the groove's geometry, and as it spins, the bit carves out mirror images of itself on either side of axis of rotation <b>1351</b>.</p>
+      <p id="p-00066-en" num="0066">In some examples, this example in <figref>FIG. 13</figref> can suffer from the same plunge depth range as the first example. To circumvent this mechanical limitation, the bit can be designed with an extended portion, beyond the visual width design, as shown in circle <b>1399</b>. This extended portion allows for the plunge depth range to minimally affect the appearance and the consistency of the grooves. In many examples, the bit can be lowered into the club face while spinning at a high rate.</p>
+      <p id="p-00067-en" num="0067">A third method of manufacture for procedure <b>1071</b> combines at least one of the first example of <figref>FIG. 11</figref> and the second example of <figref>FIG. 13</figref> to carve out a substantially standard groove. Then, a secondary milling step is completed to create the second portion. The first and second examples of <figref>FIGS. 11 and 13</figref> require only one milling pass, but it is possible to create the groove with a first milling step, then a second milling step to create the second portion. Other methods than the three described above also can be used to create the groove and the second portion.</p>
+      <p id="p-00068-en" num="0068">Activity <b>964</b> in <figref>FIG. 10</figref> continues with a procedure <b>1072</b> of actuating the groove forming tool at the angle from a first end to a second end of the golf club face. In many examples, the groove forming tool can be actuated from a first end of the face portion to a second end of the face portion to form a groove (or grooves). In many examples, procedures <b>1071</b> and <b>1072</b> can be repeated multiple times to create two or more grooves in the face portion. In other examples, the groove forming tool is designed to form more than one groove in a single pass. After procedure <b>1072</b>, activity <b>964</b> is complete.</p>
+      <p id="p-00069-en" num="0069">Referring back to <figref>FIG. 9</figref>, method <b>900</b> of <figref>FIG. 9</figref> includes an activity <b>965</b> of coupling a shaft to the golf club head, wherein a hosel or a hole of the golf club head is configured to accept the shaft. In some examples, the hosel can be coupled to the golf club head body such that the golf club is similar or identical to golf club <b>100</b> or <b>700</b> of <figref>FIGS. 1 and 7</figref>, respectively.</p>
+      <p id="p-00070-en" num="0070">As the rules of golf may change from time to time (e.g., new regulations may be adopted or old rules may be eliminated or modified by golf standard organizations and/or governing bodies), golf equipment related to the methods, apparatus, and/or articles of manufacture described herein may be conforming or non-conforming to the rules of golf at any particular time. Accordingly, golf equipment related to the methods, apparatus, and/or articles of manufacture described herein may be advertised, offered for sale, and/or sold as conforming or non-conforming golf equipment. The methods, apparatus, and/or articles of manufacture described herein are not limited in this regard, unless expressly stated otherwise.</p>
+      <p id="p-00071-en" num="0071">As explained previously, while the above examples may be described in connection with an iron-type golf club, the apparatus, methods, and articles of manufacture described herein may be applicable to other types of golf club, such as a fairway wood-type golf club, a hybrid-type golf club, an iron-type golf club, a wedge-type golf club, a putter-type golf club, or a driver-type golf club. In other embodiments, the apparatus, methods, and articles of manufacture described herein may be applicable to other type of sports equipment, such as a hockey stick, a tennis racket, a fishing pole, a ski pole, etc.</p>
+      <p id="p-00072-en" num="0072">Although the invention has been described with reference to specific embodiments, it will be understood by those skilled in the art that various changes may be made without departing from the spirit or scope of the invention. Accordingly, the disclosure of embodiments of the invention is intended to be illustrative of the scope of the invention and is not intended to be limiting. It is intended that the scope of the invention shall be limited only to the extent required by the appended claims. For example, to one of ordinary skill in the art, it will be readily apparent that activities <b>961</b>-<b>965</b> of <figref>FIG. 9</figref> and procedures <b>1071</b> and <b>1072</b> of <figref>FIG. 10</figref> may be comprised of many different activities and procedures and performed by many different modules, in many different orders; that any element of <figref>FIG. 1</figref> may be modified; and that the foregoing discussion of certain of these embodiments does not necessarily represent a complete description of all possible embodiments.</p>
+      <p id="p-00073-en" num="0073">All elements claimed in any particular claim are essential to the embodiment claimed in that particular claim. Consequently, replacement of one or more claimed elements constitutes reconstruction and not repair. Additionally, benefits, other advantages, and solutions to problems have been described with regard to specific embodiments. The benefits, advantages, solutions to problems, and any element or elements that may cause any benefit, advantage, or solution to occur or become more pronounced, however, are not to be construed as critical, required, or essential features or elements of any or all of the claims, unless such benefits, advantages, solutions, or elements are stated in such claim.</p>
+      <p id="p-00074-en" num="0074">Moreover, embodiments and limitations disclosed herein are not dedicated to the public under the doctrine of dedication if the embodiments and/or limitations: (1) are not expressly claimed in the claims; and (2) are or are potentially equivalents of express elements and/or limitations in the claims under the doctrine of equivalents.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>15</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>16</b>. A method for manufacturing a golf club head comprising:
+<claim-text>providing a golf club head comprising a golf club face; and</claim-text><claim-text>forming a groove and a second portion at the golf club face, forming the groove and the second portion comprising:
+<claim-text>rotating a groove forming tool such that the groove forming tool forms:
+<claim-text>a groove in the golf club face such that the groove is compliant with a Thirty Degree Rule when measured from a first top radius of the groove and a second top radius of the groove; and</claim-text><claim-text>a second portion adjacent to the one of the first top radius or the second top radius of the groove and at a first angle of approximately eight to eighteen degrees relative to the golf club face of the golf club and has a length of approximately 0.002 inch to 0.047 inch; and</claim-text><claim-text>actuating the groove forming tool from a first end to a second end of the golf club face.</claim-text></claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein:
+<claim-text>rotating the groove forming tool further comprises:
+<claim-text>rotating the groove forming tool such that the groove forming tool forms the groove in the golf club face so that the groove is compliant with the Thirty Degree Rule when measured from a first thirty degree point of the first top radius of the groove and a second thirty degree point of the second top radius of the groove, and the groove has a bottom, a first side wall adjacent to the bottom, a second side wall adjacent to the bottom, the first top radius adjacent to the first side wall, and the second top radius adjacent to the second side wall.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00002-en">claim 16</claim-ref>, further comprising:
+<claim-text>applying a cover layer to the golf club face before forming the groove and the second portion, wherein:
+<claim-text>the surface roughness of the cover layer is different than the surface roughness of a surface of the groove and the second portion.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein:
+<claim-text>rotating the groove forming tool comprises:
+<claim-text>rotating the groove forming tool at an angle perpendicular to the golf club face.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein:
+<claim-text>the first top radius comprises a first thirty degree point; and</claim-text><claim-text>the second top radius comprises a second thirty degree point;</claim-text><claim-text>rotating the groove forming tool further comprises:
+<claim-text>rotating the groove forming tool such that the groove forming tool forms the groove in the golf club face such that a distance between the first thirty degree point and the second thirty degree point is equal to or less than 0.035 inch.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00002-en">claim 16</claim-ref>, further comprising:
+<claim-text>smoothing the golf club face before forming the groove and the second portion.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150258392A1_00013.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150258392A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150258392A1.PDF" type="pdf" size="526887" pages="18" />
+</lexisnexis-patent-document>

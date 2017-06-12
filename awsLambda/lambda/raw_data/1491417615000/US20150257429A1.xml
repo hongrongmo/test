@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257429A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030123" date-changed="20151002" time-changed="033533">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314504">
+        <country>US</country>
+        <doc-number>20150257429</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14214997</doc-number>
+        <date>20140316</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A23L   3/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A23L   3/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B65B  55/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>B</subclass>
+        <main-group>55</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A23L   3/001       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>001</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A23L   3/003       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A23L   3/02        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A23L   3/10        20130101 LI20150511BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150511</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A23L   3/14        20130101 LI20150511BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150511</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A23V2002/00        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>V</subclass>
+        <main-group>2002</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A23V2300/24        20130101 LA20150511BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>V</subclass>
+        <main-group>2300</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150511</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61L   2/04        20130101 LI20150511BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>L</subclass>
+        <main-group>2</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150511</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>B65B  55/025       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>B</subclass>
+        <main-group>55</main-group>
+        <subgroup>025</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">23</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">RETORT AGITATION SYSTEM</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>John Bean Technologies Corporation</orgname>
+            <role>02</role>
+            <address>
+              <city>Chicago</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Damhuis</last-name>
+            <first-name>Eduard Hendrikus Johannes</first-name>
+            <address>
+              <city>Bousval</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Aluwé</last-name>
+            <first-name>Bart</first-name>
+            <address>
+              <city>Nieuwkerken-Waas</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150924">
+      <main-family family-id="173667403">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015142579</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257429</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140316</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173667401">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015142579</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257429</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140316</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A retort agitation system (<b>100</b>) for thermal processing of products includes product carriers <b>102</b><i>a </i>and <b>102</b><i>b </i>mounted on a low friction support system <b>104</b> for reciprocal movement of the carriers along the interior of a retort. The product carriers are driven in reciprocating motion by a drive actuator system <b>106</b> that can be positioned between the carriers <b>102</b><i>a </i>and <b>102</b><i>b </i>or endwise of the two carriers <b>102</b><i>a </i>and <b>102</b><i>b</i>. A drive actuator system <b>106</b> is linked to the carriers to cause the carriers to move along opposite reciprocating paths lengthwise of the retort. Reaction actuators <b>108</b> act on the carriers in opposition to the drive actuator system <b>106</b> to apply forces on the carriers for accelerating the carriers along the reciprocating paths of travel when such carriers reach the distal and proximal ends of the reciprocating travel paths.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140610</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257429A1</docdb-publication-number>
+      <docdb-application-id>444510550</docdb-application-id>
+      <new-owner>JOHN BEAN TECHNOLOGIES CORPORATION, ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:DAMHUIS, EDUARD HENDRIKUS JOHANNES;ALUWE, BART;SIGNING DATES FROM 20140527 TO 20140603;REEL/FRAME:033123/0686</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to retort systems for in-container preservation of foodstuffs, and more particularly to a system and method for processing foodstuffs in a retort wherein the foodstuffs are agitated during thermal processing.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">Retorts have been widely used for in-container preservation of foodstuffs, either for pasteurization or sterilization processes. A retort generally includes a pressure vessel for receiving containers containing foodstuffs arranged on trays or baskets that are stacked on pallets or other types of carrier structures. The sterilization/pasteurization of the food products can occur by applying heating media to the food product containers, including, for example, super-heated steam or hot water. Such heating media can be applied by spraying onto the stacked containers. Alternatively, the heating media can be introduced into the retort vessel to immerse the containers holding the foodstuffs.</p>
+      <p id="p-00003-en" num="0003">Rather than utilizing a static system wherein the containers are held stationary within the retort vessel during pasteurization or sterilization, an agitating retort can be employed. Agitation of the food products during pasteurization/sterilization in a retort can result in a shorter processing time and improve the quality and presentation of the food product. Semi-convective products and those containing particulates especially benefit from agitation. The improvement in the presentation of the food product stems in part from a lower thermal load or burden having to be applied to the food product to accomplish the required level of pasteurization or sterilization.</p>
+      <p id="p-00004-en" num="0004">The agitation of food products in a retort has been accomplished by different systems. In one system the pallets/carriers of foodstuff containers are loaded within a drum positioned within the retort vessel. The drum is rotated about its longitudinal axis to produce end-over-end agitation of the food product. Although end-over-end agitation is quite effective, it does require a drive system to rotate the drum as well as a support structure for the drum during rotation within the retort, as well as systems for introducing the processing fluid into the rotating drum.</p>
+      <p id="p-00005-en" num="0005">Another type of agitation retort relies on linear agitation of the food product. By moving the food product back-and-forth over a relatively short distance within the retort, the change in direction at the end points of the back and forth travel results in deceleration and acceleration forces in the containers that induce an agitation effect on its content. The effect of linear agitation is less than that achievable by end-over-end agitation; however, in many cases such “light agitation” can sufficiently reduce the processing time and/or avoid clumping of the product, to be warranted relative to simply static thermal processing of the food product.</p>
+      <p id="p-00006-en" num="0006">A typical linear agitation system includes the drive mechanism consisting of a crankshaft rotated by a motor. Both the crankshaft and motor are located outside one end of the retort. A connecting rod system connects a crankshaft to the retort pallet/carrier. Relatively heavy duty drive systems are required in these types of linear agitation systems, including the need to counterbalance and smooth out the forces applied to the food product by the rotating crankshaft. This counterbalancing is typically accomplished through the use of one or more flywheels.</p>
+      <p id="p-00007-en" num="0007">Linear agitation of food products within a retort with a crank mechanism located outside of the retort results in sinusoidal movement of the food product. In this regard, the maximum acceleration or deceleration is achieved at only two points during rotation of the crank mechanism. Acceleration of the food product is defined by the formula: ω<sup>2</sup>*R*sin(α). In this equation, ω equals the rotational speed (in rad/s); R is the crank radius (meters); and α is the rotational angle (rad).</p>
+      <p id="p-00008-en" num="0008">To achieve higher acceleration for a given crankshaft radius, the rotational speed of the crankshaft needs to be increased. For instance, for a crankshaft radius of R=0.075 m, to achieve an acceleration of 0.4 g (4 m/s<sup>2</sup>), a rotational speed of 7.30 rad/seconds or 69.7 revolutions per minute (RPM) is required. A challenge in linear agitating systems is to achieve a sufficiently high acceleration of the food product, but at the same time limiting the number of revolutions or cycles per minute of the crankshaft mechanism and also minimizing the amount of energy consumed. As noted above, typically in linear agitation systems, a flywheel is needed to store the kinetic energy of the moving mass within the agitating retort.</p>
+      <p id="p-00009-en" num="0009">The present disclosure seeks to address the drawbacks of existing linear agitating systems by providing an inherently balanced linear agitating system accomplished by moving food product sets in opposite reciprocating directions to each other and requiring modest operating energy.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00010-en" num="0010">This summary is provided to introduce a selection of concepts in a simplified form that are further described below in the Detailed Description. This summary is not intended to identify key features of the claimed subject matter, nor is it intended to be used as an aid in determining the scope of the claimed subject matter.</p>
+      <p id="p-00011-en" num="0011">A system is provided for agitating products in a processing retort. The system includes first and second product carrier sets. The carrier sets are supported on a low friction support system for movement along the interior of the retort. A drive actuator system applies reciprocating forces on the product carrier sets for reciprocal movement of the product carrier sets in simultaneous opposite directions to each other along the retort. Also, reaction actuators apply reaction forces against the product carrier sets in opposition to the reciprocal movement of the product carrier sets by the drive actuator system thereby to urge the product carrier sets to move along the retort in directions opposite to the reciprocal movement imposed on the product carrier sets by the drive actuator system.</p>
+      <p id="p-00012-en" num="0012">The drive actuator system includes a rotary crank drive and connection linkages that extend between the rotary crank drive and the product carrier sets. The rotary crank drive itself includes a crankshaft and a torque source to supply rotational torque to the crankshaft. An over-running clutch is interposed between the torque source and the crankshaft to allow the crankshaft to move or rotate faster than the rotation of the torque source, including when the product carrier sets are accelerated by the reaction forces imposed thereon by the reaction actuators. A control system may be used to control the speed of the torque source applied to the crankshaft so that the torque source supplies energy to the system to compensate for the energy lost by friction on the system, but not so much torque that the system operates at a speed out of control.</p>
+      <p id="p-00013-en" num="0013">The product carrier sets may be composed of individual product carriers that are spaced apart from each other, each of the product carriers can include a tray structure or basket for receiving products to be processed. Additional product carriers can be linked to the product carriers of the sets so that each set is composed of several product carriers.</p>
+      <p id="p-00014-en" num="0014">The drive actuator system can be positioned in various locations relative to the retort vessel. For example, the drive actuator system can be positioned between the product carrier sets. In this regard, components of a drive actuator system may be located within the retort vessels. Alternatively, two separate retort vessels may be used with one product carrier set in each retort vessel, and the drive actuator system may be positioned between the two retort vessels. In another configuration, the drive actuator system can be positioned at the end of the retort vessel with connecting links connecting the drive actuator system with the product carrier sets.</p>
+      <p id="p-00015-en" num="0015">The reaction actuator system can be designed to apply a substantially constant force against the product carriers as the product carriers travel towards the ends of their reciprocal paths of travel. Alternatively, the reaction actuator system can apply an increasing force or even a decreasing force to the product carrier sets as the product carriers reach the ends of their reciprocal paths of travel. The reaction actuator systems can be of various configurations, including, for example, compression springs, extension springs, torsion springs, coil springs, helical springs, gas springs, pneumatic springs, and elastic bands.</p>
+      <p id="p-00016-en" num="0016">A method of agitating products in a retort is provided, which includes arranging the products in two sets for movement along the interior of the retort, and applying reciprocating forces on the two spaced-apart product sets for reciprocating movement of the product sets in opposite directions relative to each other along the retort. A reaction force is applied to the product sets for acting against the reciprocating movement of the product sets. The reaction force capable of moving the product sets in a direction opposite to the direction of movement of the product sets under the influence of the reciprocating forces.</p>
+      <p id="p-00017-en" num="0017">In accordance with the present method, the product sets move along reciprocal paths between a proximal location and a distal location. Further, the reaction forces acting on the product sets in a direction opposite to the direction of movement to the product sets under the influence of the reciprocating forces as the product sets reach the proximal locations and distal locations along the reciprocal travel paths.</p>
+      <p id="p-00018-en" num="0018">In a further aspect of the present invention, the reciprocating forces are applied to the product sets from a location between the product sets or from a location endwise of the product sets. Such reciprocating force can be applied to the product sets by a rotational crank drive system. The rotational crank drive system can include an over-running clutch system to permit the product sets to move under the influence of the reaction force at a speed faster than the speed of movement of the product sets acting under the reciprocal force applied to the product sets by the rotatable crank drive system.</p>
+      <p id="p-00019-en" num="0019">As a further aspect of the present method, the speed at which the reciprocating forces are applied to the product sets can be controlled.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00020-en" num="0020">The foregoing aspects and many of the attendant advantages of this invention will become more readily appreciated as the same become better understood by reference to the following detailed description, when taken in conjunction with the accompanying drawings, wherein:</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 1</figref> is a schematic view of one embodiment of the present disclosure showing the product carriers halfway between the ends of their reciprocal paths and showing the drive actuator system midway between a dead center location;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 2</figref> is similar to <figref>FIG. 1</figref>, but with the drive actuator system rotated approximately 45° counterclockwise from <figref>FIG. 1</figref>;</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 3</figref> is a view similar to <figref>FIGS. 1-2</figref>, but showing the drive actuator system in top dead center and the product carriers at the most distal location of their reciprocal paths;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 4</figref> is a view similar to <figref>FIGS. 1-3</figref>, but showing the drive actuator system rotated approximately 30° beyond top dead center from the location shown in <figref>FIG. 3</figref>;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 5</figref> is a view similar to <figref>FIGS. 1-4</figref>, but showing the drive actuator system in midpoint location, as well as showing the product carriers in midpoint along their reciprocal travel paths;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 6</figref> is a view similar to <figref>FIGS. 1-5</figref>, but showing the drive actuator system rotated counterclockwise approximately 45° from that shown in <figref>FIG. 5</figref>;</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 7</figref> is a view similar to <figref>FIGS. 1-6</figref>, but showing the drive actuator system in bottom dead center, wherein the product carriers are positioned at the proximal ends of their travel paths;</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 8</figref> is a view similar to <figref>FIGS. 1-7</figref>, but showing the drive actuator system rotated approximately 45° from the position shown in <figref>FIG. 8</figref>;</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 9</figref> is a view that is the same as <figref>FIG. 1</figref>, showing the drive actuator system back at a midpoint location, and showing the product carriers at the midpoint location of their travel path;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 10</figref> is a cross-sectional view of a portion of an overrunning clutch;</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 11</figref> is a graph showing the speed of the product carriers during their travel cycle;</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 12</figref> is a graph showing the speed of the carriers during their travel cycle as well as the rotational speed of the drive shaft and the acceleration and deceleration forces imposed on the carriers during their travel cycle;</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 13</figref> is a further graph showing a different operating condition of the present system;</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 14</figref> is a further graph showing a different operating condition of the present system;</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 15</figref> is a schematic view of one arrangement of product carriers within a retort and the position of the drive actuator system of the present disclosure;</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 16</figref> is a schematic view of another arrangement of product carriers within a retort and the position of the drive actuator system of the present disclosure;</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 17</figref> is a schematic view of another arrangement of product carriers within a retort and the position of the drive actuator system of the present disclosure;</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 18</figref> is a schematic view of another arrangement of product carriers within separate retorts and the position of the drive actuator system of the present disclosure;</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 19</figref> is a further embodiment of the present disclosure;</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 20</figref> is a view similar to <figref>FIG. 19</figref>, but showing the system in one dead center position;</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 21</figref> is a view similar to <figref>FIGS. 19 and 20</figref>, but showing the system in the opposite dead center location;</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 22</figref> is a cross-sectional view of <figref>FIG. 19</figref> taken along lines A-A thereof; and</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 23</figref> is a cross-sectional view of <figref>FIG. 19</figref> taken along lines B-B thereof.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00044-en" num="0044">The detailed description set forth below in connection with the appended drawings, where like numerals reference like elements, is intended as a description of various embodiments of the disclosed subject matter and is not intended to represent the only embodiments. Each embodiment described in this disclosure is provided merely as an example or illustration and should not be construed as preferred or advantageous over other embodiments. The illustrative examples provided herein are not intended to be exhaustive or to limit the disclosure to the precise forms disclosed. Similarly, any steps described herein may be interchangeable with other steps, or combinations of steps, in order to achieve the same or substantially similar result.</p>
+      <p id="p-00045-en" num="0045">In the following description, numerous specific details are set forth in order to provide a thorough understanding of exemplary embodiments of the present disclosure. It will be apparent to one skilled in the art, however, that many embodiments of the present disclosure may be practiced without some or all of the specific details. In some instances, well-known process steps have not been described in detail in order not to unnecessarily obscure various aspects of the present disclosure. Further, it will be appreciated that embodiments of the present disclosure may employ any combination of features described herein.</p>
+      <p id="p-00046-en" num="0046">The present application may include references to “directions,” such as “forward,” “rearward,” “front,” “back,” “distal,” “proximal.” “upward,” “downward,” “right hand,” left hand,” “in,” “out,” “extended,” “advanced,” and “retracted.” These references and other similar or corresponding references in the present application are only to assist in helping describe and understand the present disclosure and are not intended to limit the present disclosure to these directions.</p>
+      <p id="p-00047-en" num="0047">In the following description, various embodiments of the present disclosure are described. In the following description and in the accompanying drawings, the corresponding systems assemblies, apparatus and units may be identified by the same part number, but with an alpha suffix. The descriptions of the parts/components of such systems assemblies, apparatus and units are the same or similar are not repeated so as to avoid redundancy in the present application.</p>
+      <p id="p-00048-en" num="0048">
+        <figref>FIGS. 1-10</figref> schematically illustrate one embodiment of the present disclosure, wherein a linear reciprocating system <b>100</b> usable in a thermal processing retort includes product carriers <b>102</b><i>a </i>and <b>102</b><i>b </i>mounted on a low friction support system <b>104</b> for reciprocal movement along the interior of the retort (hereinafter the carriers may also be simply referred to by the part number <b>102</b>). The product carriers <b>102</b> are driven in reciprocating motion by a drive actuator system <b>106</b> which is illustrated as positioned between the two carriers <b>102</b><i>a </i>and <b>102</b><i>b</i>. The drive actuator system is linked to the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>to cause the carriers to move along opposite reciprocating paths lengthwise of the retort. Reaction actuators <b>108</b> act on the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>in opposition to the drive actuator system to apply force on the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>for accelerating the carriers along their reciprocating paths when such carriers reach the distal and proximal ends of their reciprocating paths, as described more fully below.</p>
+      <p id="p-00049-en" num="0049">To describe the present system and method in more detail, as shown in <figref>FIGS. 1-9</figref>, the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>are adapted to receive baskets or trays <b>112</b> therein which are stacked on the carriers <b>102</b><i>a </i>and <b>102</b><i>b</i>. Individual product containers <b>114</b> are arranged on the baskets/trays in a well-known manner.</p>
+      <p id="p-00050-en" num="0050">It will be appreciated that <figref>FIGS. 1-9</figref> do not show the details of a typical retort, including the retort vessel itself, nor the system for introducing the heating medium into the retort or for removing and/or recirculating the heating medium. These aspects of retort vessels are known to those familiar with retort design and technology. Different heating media and delivery systems can be utilized, including spraying saturated superheated steam onto the product containers or filling the interior of the retort with hot water, for example.</p>
+      <p id="p-00051-en" num="0051">The carriers <b>102</b> are supported for substantially low friction movement along the interior of the retort. This can be accomplished by different means. For example, rollers <b>120</b> can be axled to the underside of carriers <b>102</b><i>a</i>, <b>102</b><i>b</i>. Appropriate bearings can be interposed between the rollers and their axles to minimize the rotational friction on the rollers. Alternatively, rollers, such as rollers <b>120</b>, can be mounted at in the lower section of the agitating retort to support and bear against the underside of the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>in a known manner. Rather than relying on rollers <b>120</b>, balls in the form of ball bearings can be used in place of rollers <b>120</b>. The ball bearings can be mounted in the floor structure of the retort vessel.</p>
+      <p id="p-00052-en" num="0052">The carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>are linked to drive actuator system <b>106</b>, which is positioned between the carriers <b>102</b><i>a </i>and <b>102</b><i>b</i>. The drive actuator system <b>106</b> in the schematically illustrated form, includes a drive shaft <b>122</b> which is connectable to a torque source, such as a motor, for rotating the drive shaft. The drive shaft <b>122</b> is connected to a double-throw crankshaft <b>124</b>, rotatable about axis <b>126</b> by rotation of the drive shaft <b>122</b>. The crankshaft <b>124</b> has a throw <b>128</b> corresponding to the distance between the rotational axis <b>126</b> and the radial location that connecting links <b>130</b> and is attached to the crankshaft. The opposite end of the connecting links <b>130</b> and <b>132</b> are coupled to carriers <b>102</b><i>a </i>and <b>102</b><i>b</i>. A speed control system may be provided for controlling the rotational speed of the drive shaft <b>122</b>. Also although not specifically shown, the crankshaft <b>124</b> can be constructed to have a variable throw, thereby to alter the length of the reciprocal path of travel of the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>along the retort.</p>
+      <p id="p-00053-en" num="0053">The drive motor for the drive shaft <b>122</b> can be located outside of the retort vessel, with the drive shaft <b>122</b> leading from the exterior motor to the crankshaft <b>122</b> within the vessel. Also, as is standard, the drive shaft can be composed of one or more sections, and an appropriate gear or other type of speed reducer can be interposed between the motor and the crankshaft <b>120</b>. Rather than being positioned externally to the retort vessel, the drive motor can be located within the retort vessel, and appropriately sealed from the heating medium of the retort vessel.</p>
+      <p id="p-00054-en" num="0054">The reaction actuators <b>108</b> are positioned to bear against the carriers as the carriers approach the distal and proximal ends of travel along their opposing reciprocal paths. The kinetic energy of the carriers is transferred to and stored by the reaction actuators as the carriers press against the reaction carriers. The reaction actuators can be configured to apply an increasing level of the reaction or resistance force against the carriers with continued travel of the carriers toward the ends of their travel paths. Alternatively, the reaction actuators can be configured to apply a constant level of force against moving carriers. The reaction actuators can take numerous forms. For example, the reaction actuators can be composed of compression springs, extension springs, torsion springs, coil springs, and helical springs. As an alternative, the reaction actuators can be composed of extendible elastic bands. Further alternatively, the reaction actuators can be composed of gas springs or pneumatic springs or a combination of gas/pneumatic springs and compression springs, for example. If compression springs are used for the reaction actuators, they can be pre-compressed to apply a desired resistance load against the carriers as soon as the carriers bear against the reaction actuators.</p>
+      <p id="p-00055-en" num="0055">The reaction actuators are shown as bearing against an abutment <b>140</b> depending downwardly from the underside of the carriers <b>102</b><i>a</i>, <b>102</b><i>b</i>. Of course, the reaction actuators <b>108</b> can instead bear against other portions of the carriers <b>102</b><i>a </i>and <b>102</b><i>b. </i></p>
+      <p id="p-00056-en" num="0056">
+        <figref>FIG. 10</figref> illustrates an overrunning clutch <b>150</b> that is interposed between the drive shaft <b>122</b> and the crankshaft <b>124</b>, thereby to enable the crankshaft to rotate faster in one direction, i.e., “overrun,” the drive shaft. As explained below, this typically will occur when the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>reach the end of their travel and are rapidly accelerated for movement in the opposite direction by the reaction actuators <b>108</b>. The overrunning clutch <b>150</b> includes a central or inner race <b>152</b> having a central hollow through bore <b>154</b> for engaging over the drive shaft <b>122</b>. A longitudinal groove <b>156</b> can be formed in the perimeter inner race <b>152</b> for receiving a key that also engages within a keyway formed in the drive shaft <b>122</b>. Alternatively, the drive shaft <b>122</b> can be constructed with a spine that engages within the groove <b>156</b>, thereby to transfer rotational torque between the drive shaft and the inner race <b>152</b>.</p>
+      <p id="p-00057-en" num="0057">A series of shoulders or ramps <b>158</b> are formed in the outer perimeter of the inner race <b>152</b> to extend tangentially, radially and outwardly from the rotational center of the inner race <b>152</b>. An abutment <b>160</b> is provided at the base of the ramps <b>158</b>, which serves as a backstop for bearings <b>162</b> disposed between the ramps <b>158</b> and the interior diameter of the clutch outer race <b>164</b>. Spring-loaded plungers <b>166</b> engage within the blind bore formed in the inner race <b>152</b> to bear against the portion of the bearings <b>162</b> facing abutments <b>160</b>, thereby to normally load or urge the bearings <b>162</b> outwardly relative to the shoulders <b>158</b>. Compression springs <b>168</b> are located between the bottom of the blind bore in the inner race and the adjacent inward end of the plungers <b>166</b> thereby to urge the plungers outwardly against the bearings <b>162</b>.</p>
+      <p id="p-00058-en" num="0058">The outer race <b>164</b> is anti-rotationally coupled to the crankshaft <b>124</b> in a known manner. The overrunning clutch <b>150</b> operates in a typical manner wherein if the outer race rotates at a speed faster than the rotational speed of the drive shaft, the ball bearings <b>162</b> move toward abutments <b>160</b>, thereby providing slippage or clearance between the bearings and the inside diameter of the outer race, permitting the outer race to rotate faster than the inner race, which is rotating at the speed of the drive shaft. On the other hand, if the inner race is rotating at a speed faster than the speed of the outer race, the ball bearings <b>162</b> ride outwardly on ramps <b>158</b>, thereby to wedge against the inside diameter of the outer race, whereby the outer race rotates with the inner race at the speed of rotation of the drive shaft.</p>
+      <p id="p-00059-en" num="0059">Next describing the operation of the linear agitation system <b>100</b> shown in <figref>FIGS. 1-9</figref>, referring initially to <figref>FIG. 1</figref>, the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>are shown at the midpoints of their reciprocal paths. At this location of the carriers, the crankshaft <b>124</b> is also at its midpoint position, with the connecting link <b>130</b> of carrier <b>102</b><i>a </i>connected to the drive shaft at the “twelve o'clock” position and the connecting link <b>130</b> of carrier <b>102</b><i>b </i>connected to the crankshaft at the “six o'clock” position. <figref>FIG. 1</figref> could be viewed as the “startup” position of system <b>100</b>.</p>
+      <p id="p-00060-en" num="0060">Next, referring to <figref>FIG. 2</figref>, the crankshaft <b>128</b> is shown as rotated approximately 30°, wherein the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>have moved toward their distal locations of their reciprocal paths whereupon the reaction actuators <b>128</b> are shown as initially abutting against or pressing against the carriers <b>102</b><i>a</i>, <b>102</b><i>b. </i></p>
+      <p id="p-00061-en" num="0061">
+        <figref>FIG. 3</figref> shows system <b>100</b> in “top dead center” position wherein the crankshaft <b>124</b> is shown in maximum throw position, thereby forcing the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>to the distal ends of their reciprocal travel paths. At this location, the kinetic energy of the moving, loaded carriers has been converted into potential energy stored in the reaction actuators <b>108</b>, which are applying their maximum reaction load against the carriers <b>102</b><i>a</i>, <b>102</b><i>b. </i></p>
+      <p id="p-00062-en" num="0062">
+        <figref>FIG. 4</figref> shows the system <b>100</b> somewhat beyond top dead center, wherein the reaction actuators <b>108</b> accelerate the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>toward the proximal ends of their reciprocal paths by the release of the potential energy that had been accumulated or stored by the reaction actuators. It will be appreciated that the acceleration applied to the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>by the reaction actuators <b>108</b> causes the crankshaft <b>124</b> to rotate faster than the rotational speed of the drive shaft <b>122</b>, which is possible by the use of the overrunning clutch <b>150</b> described above. In essence, the potential energy in the reaction actuators <b>108</b> is released and transferred into kinetic energy in the form of the moving masses of the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>and baskets/trays <b>112</b> carried thereby, which in turn carries the product containers <b>114</b>.</p>
+      <p id="p-00063-en" num="0063">When the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>are no longer in contact with the reaction actuators <b>108</b>, as shown in <figref>FIG. 5</figref>, the carriers are moved at substantially constant speed until they contact the reaction actuators <b>108</b> positioned at the opposite ends of the travel paths of the carriers. Realistically, the speed of the carriers will decrease slightly due to the friction of the rollers <b>120</b> that support the carriers <b>102</b><i>a</i>, <b>102</b><i>b. </i></p>
+      <p id="p-00064-en" num="0064">As shown in <figref>FIG. 6</figref>, as the reaction actuators <b>108</b> are compressed by the moving carriers <b>102</b><i>a</i>, <b>102</b><i>b</i>, the speed of the carriers decreases due to the transfer of the kinetic energy of the carriers into the potential energy of the reaction actuators. Also, as the speed of the carriers decreases, the overrunning clutch <b>150</b> engages to cause the crankshaft <b>124</b> to pull the carriers through bottom dead center, as shown in <figref>FIG. 7</figref>. In <figref>FIG. 7</figref>, the crankshaft speed will be the same as the drive shaft speed, since the drive shaft is driving the crankshaft.</p>
+      <p id="p-00065-en" num="0065">Once the crankshaft <b>124</b>, under the influence of the drive shaft <b>122</b>, moves beyond bottom dead center, as shown in <figref>FIG. 8</figref>, the reaction actuators <b>108</b> accelerate the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>by transferring the potential energy stored up in the reaction actuators into kinetic energy for the accelerating carriers <b>102</b><i>a</i>, <b>102</b><i>b</i>, thereby moving the carriers in opposite directions, toward the distal end portion of their travel paths. Again, at this point, the crankshaft speed <b>124</b> is greater than the drive shaft speed, whereupon the clutch <b>150</b> is operating in overrunning mode.</p>
+      <p id="p-00066-en" num="0066">
+        <figref>FIG. 9</figref> corresponds to <figref>FIG. 1</figref> and shows the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>again halfway along their reciprocal travel paths, and also shows the crankshaft <b>124</b> in mid-point rotation. The above-described cycle is repeated over and over.</p>
+      <p id="p-00067-en" num="0067">It will be appreciated that system <b>100</b> results in acceleration/deceleration with the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>when the carriers are being acted upon by the reaction actuators. Moreover, it will be appreciated that when the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>are not in contact with the reaction actuators, they travel at substantially constant speed, as graphically shown below in <figref>FIG. 11</figref>.</p>
+      <p id="p-00068-en" num="0068">Line <b>180</b> of the graph of <figref>FIG. 11</figref> represents the speed of the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>(Y-axis) along their travel paths (X-axis). Different sections of line <b>180</b> are identified by an alpha suffix. In this regard, line section <b>180</b><i>a </i>represents the increase in speed of the carriers caused by the acceleration force supplied thereto by the reaction actuators <b>108</b>. Line segment <b>180</b><i>b </i>illustrates the speed of the carriers when beyond the reaction actuators as the carrier travels along the retort in a first direction. Line <b>182</b> represents the distance of travel of the carriers or the rotational angle of the crankshaft. Line <b>180</b><i>c </i>represents the deceleration of the carriers <b>102</b> under the influence of the reaction actuators <b>108</b> at the opposite end of the travel path of the carriers. This line segment represents the conversion of the kinetic energy of the rapidly moving carriers to potential energy stored in the reaction actuators. Line segment <b>180</b><i>d </i>represents the portion of the cycle wherein the drive shaft is driving the crankshaft and continuing to move the carrier <b>102</b> against the reaction actuator until the crankshaft reaches and passes dead center (represented by crossover point <b>184</b>), whereupon the carriers <b>102</b> start to travel in the opposite direction under the acceleration force of the reaction actuators <b>108</b>, which is represented by line segment <b>180</b><i>e</i>. This line segment illustrates the high acceleration of the carriers <b>102</b> in the travel direction of the carrier opposite to the travel direction represented by line segments <b>180</b><i>a</i>, <b>180</b><i>b</i>, and <b>180</b><i>c. </i></p>
+      <p id="p-00069-en" num="0069">Line segment <b>180</b><i>f </i>represents the travel of the carriers <b>102</b> when clear of the reaction actuators <b>108</b>. As shown by line segment <b>180</b><i>f</i>, the carriers travel at a substantially uniform speed until the carriers come into contact with the reaction actuators <b>108</b> at the opposite end of travel of the carriers, whereupon the carriers quickly decelerates under the reaction force of the reaction actuators, which is represented by line segment <b>180</b><i>g</i>. When the speed of the carriers <b>102</b> have decreased sufficiently under the influence of the reaction actuators, the drive shaft <b>122</b> again engages the crankshaft for “carrying” the carriers <b>102</b> to the end of their travel paths. This is represented by line segment <b>180</b><i>h</i>. At crossover point <b>186</b>, the crankshaft has reached dead center again and the carriers have reached the ends of their travel. Just beyond dead center, as represented by line segment <b>180</b><i>a</i>, the reaction actuators <b>108</b> release their potential energy, to create kinetic energy in the moving carriers <b>102</b>, causing the carriers to rapidly accelerate. This cycle continues over and over again.</p>
+      <p id="p-00070-en" num="0070">It will be appreciated that the speed of the crankshaft <b>124</b> is not constant. As the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>move at a substantially constant speed, the angle of the crankshaft <b>122</b> constantly changes. The speed of the crankshaft decreases as the crankshaft rotates to the “upright” positions shown in <figref>FIGS. 1</figref>, <b>5</b>, and <b>9</b>, and then the crankshaft speed increases again as the crankshaft rotates toward the next dead center position, as illustrated in <figref>FIGS. 3 and 7</figref>.</p>
+      <p id="p-00071-en" num="0071">In system <b>100</b>, the speed of the drive shaft <b>122</b> dictates the manner in which system <b>100</b> operates. If the speed of the drive shaft <b>122</b> is less than the minimum speed of the crankshaft <b>124</b> in the mid position (for example, as shown in <figref>FIGS. 1</figref>, <b>5</b>, and <b>9</b>), clutch <b>150</b> engages toward the top or bottom dead centers of the crankshaft, as the speed of the loaded carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>(and the crankshaft) decreases so that the drive shaft carries the crankshaft <b>122</b> through the dead center positions. This is shown graphically in <figref>FIG. 12</figref>. In <figref>FIG. 12</figref>, the speed of the carriers <b>102</b> is shown by line <b>180</b>. The drive shaft <b>122</b> adds energy to the system that was lost due to friction, as potential energy, to the reaction actuators, by completing the final compression or extension of the reaction actuators <b>108</b>. In <figref>FIG. 12</figref>, in addition to the line <b>180</b> representing the speed of the loaded carriers <b>102</b>, the line <b>200</b> shows the acceleration and deceleration forces applied to the loaded carriers <b>102</b> and the line <b>202</b> shows the speed of the crankshaft <b>124</b>.</p>
+      <p id="p-00072-en" num="0072">On the other hand, if the speed of the drive shaft <b>122</b> is higher than the minimum speed of the crankshaft <b>124</b> in the mid position of the system <b>100</b>, as shown in <figref>FIGS. 1</figref>, <b>5</b>, and <b>9</b>, the overrunning clutch <b>150</b> will engage the crankshaft before the mid position and thereby increase the linear speed of the loaded carriers <b>102</b>. The drive shaft <b>122</b> adds to the system kinetic energy to compensate for the energy loss due to friction on the rollers <b>120</b>. The kinetic energy added to the loaded carriers <b>102</b> is more than enough to power the carriers through the top and bottom dead center positions of the crankshaft <b>124</b> without engagement of the overrun clutch. This situation is shown in <figref>FIG. 13</figref>. In <figref>FIG. 13</figref>, the speed of the loaded carriers is shown in line <b>180</b>. The crankshaft speed is shown by line <b>202</b>, and the acceleration/deceleration forces imposed of the loaded carriers is shown by line <b>200</b>.</p>
+      <p id="p-00073-en" num="0073">In the operation of system <b>100</b>, it is desirable that the amount of energy added to the system by the drive shaft <b>122</b> is not any more than the energy that is lost by friction at rollers <b>120</b>. If too much energy is added to the moving and loaded carriers <b>102</b><i>a</i>, <b>102</b><i>b</i>, their speed will be too high as they approach top dead center or bottom dead center. Because the drive actuator system <b>106</b> momentarily stops the travel of the carriers <b>102</b><i>a</i>, <b>102</b><i>b </i>at top dead center and bottom dead center, if the carriers are moving at too high a speed, high impact forces are imposed on crankshaft <b>124</b>, causing high deceleration rates, as shown by line <b>200</b> in the graph of <figref>FIG. 14</figref>. Correspondingly, line <b>202</b> in <figref>FIG. 14</figref> shows the sharp increase in crankshaft speed occurring as the crankshaft reaches top dead center or bottom dead center, i.e., at the 90° and 270° angles plotted in <figref>FIG. 14</figref>. <figref>FIG. 14</figref> also shows the speed of the carriers as line <b>180</b>. The lines segments <b>180</b><i>b </i>and <b>180</b><i>f </i>in <figref>FIG. 14</figref> shows the increase in the speed of the moving mass caused by the energy added to the system by the rotating drive shaft, causing an increase in speed of the moving mass, rather than a gradual decrease in speed of the moving mass, as shown in <figref>FIG. 12</figref>.</p>
+      <p id="p-00074-en" num="0074">By measuring the speed of the crankshaft <b>124</b>, a speed control system can be used to optimize the speed of the drive shaft <b>122</b> to ensure that the crankshaft speed at top dead center is higher than its minimum speed and lower than the crankshaft speed when the mass of the carriers <b>102</b>A and <b>102</b>B first come into contact with the reaction actuators <b>108</b>.</p>
+      <p id="p-00075-en" num="0075">It will be appreciated that the system <b>100</b> results in the very efficient agitation of the food products in the processing retort. The only energy that is needed to be added to the system is the energy lost in rolling friction of the moving carriers. The present system does not necessarily need an external counterbalancing flywheel though in some situations at least a small flywheel may be helpful in smoothing the operation of system <b>100</b>. Also, the system <b>100</b> is capable of generating high deceleration and acceleration toward the ends of the crankshaft stroke only, while the carriers move at an almost constant speed between the ends of their travel paths.</p>
+      <p id="p-00076-en" num="0076">As noted above, the foregoing is accomplished by providing loaded carriers that move in opposite directions when coupled to a crankshaft. At the end of the crankshaft strokes in both directions (180° apart), the carriers compress and otherwise fully load the reaction actuators, whereby when the carriers reach the ends of their travel and thus stop and reverse direction, the kinetic energy of the moving carriers is now stored in the reaction actuators <b>108</b> as potential energy. Then, when the crankshaft moves through either top or bottom dead center, the energy stored in the reaction actuators is quickly released, thereby causing high acceleration of the carriers once again, but in the opposite direction. This is repeated at each 180° of rotation of the crankshaft.</p>
+      <p id="p-00077-en" num="0077">Examples of alterations or changes to the above disclosure of <figref>FIGS. 1-14</figref> may include, as noted above, constructing system <b>100</b> to be able to change the stroke of the crankshaft <b>124</b>, as well as other characteristics of the system <b>100</b>. In this regard, the amount of potential energy stored in the reaction actuators <b>108</b> at top dead center or bottom dead center can be varied. Also, the reaction actuators <b>108</b> may impose a substantially constant force on the carriers <b>102</b>, or may be designed to impose an increasing force, or even a decreasing force, on the carriers as the carriers move toward the ends of their travel paths. Further, as noted above, the rotational speed of the drive shaft <b>120</b> can be controlled. These control variables enable the system <b>100</b> to accommodate different sizes or masses of the products carried by the carriers <b>102</b>, as well as achieving different levels of agitation desired, for instance, based on the type of food product being processed by system <b>100</b>. <figref>FIGS. 15 through 18</figref> schematically show various positions of the drive actuator system <b>106</b> relative to the carriers <b>102</b><i>a </i>and <b>102</b><i>b</i>. A first example is shown in <figref>FIG. 15</figref>, wherein portions of the drive actuator system <b>106</b>, including drive shaft <b>122</b> and crankshaft <b>124</b> are located within the retort vessel <b>212</b> at a position between the carriers <b>102</b><i>a </i>and <b>102</b><i>b</i>. Connecting links <b>130</b> and <b>132</b> connect the crankshaft <b>124</b> with the carriers <b>102</b><i>a </i>and <b>102</b><i>b</i>, all located within the vessel <b>212</b>.</p>
+      <p id="p-00078-en" num="0078">
+        <figref>FIG. 16</figref> shows an alternative arrangement wherein a system <b>100</b>A is constructed so that the drive actuator system <b>106</b> is positioned outside of one end of a longitudinal retort <b>212</b>A. In this regard, the crankshaft <b>124</b> and drive motor <b>210</b> are also located outside of the retort <b>212</b>A at the location of the drive actuator system <b>106</b>A. In this configuration, connecting links <b>130</b>A and <b>132</b>A can extend inwardly from the crankshaft <b>124</b>, through the far end of the retort <b>212</b>A, to connect to the carriers <b>102</b><i>a </i>and <b>102</b><i>b </i>located within the retort. Also in this configuration, the crankshaft is not located between the carriers, but rather longitudinally of both carrier sets.</p>
+      <p id="p-00079-en" num="0079">As another alternative, a system <b>100</b>B can be constructed with the carriers <b>102</b><i>a </i>and <b>102</b><i>b </i>located side by side within a retort vessel <b>212</b>B. The drive actuator system <b>106</b>B is positioned outside one end of the “double-wide” retort vessel <b>212</b>B. In this regard, the crankshaft <b>124</b> is also located outside of the retort at the location of the drive actuator system <b>106</b>B. In this configuration, connecting links <b>130</b>B and <b>132</b>B can extend from the crankshaft <b>124</b> through the far end of the retort to connect to the adjacent ends of the carriers <b>102</b><i>a </i>and <b>102</b><i>b</i>, located within the retort. Also, in this configuration, the crankshaft is not located between the carriers <b>102</b><i>a </i>and <b>102</b><i>b</i>, but rather longitudinally of both carrier sets.</p>
+      <p id="p-00080-en" num="0080">As a further variation, a system <b>100</b>C, shown in <figref>FIG. 18</figref>, can be designed and constructed so that the drive actuator system <b>106</b>C including crankshaft <b>124</b> and drive motor <b>210</b> are located outside of the retort vessels <b>212</b>C. In this regard, the retort vessels <b>212</b>C can be constructed as two separate vessels positioned spaced apart end-to-end, with the drive actuator system <b>106</b>C located between the two vessels. Connecting links <b>130</b>C and <b>132</b>C, perhaps similar to connecting links <b>130</b> and <b>132</b>, can be utilized to connect the crankshafts <b>124</b> with the carriers <b>102</b><i>a </i>and <b>102</b><i>b </i>located within the vessels <b>212</b>C.</p>
+      <p id="p-00081-en" num="0081">Other alternative configurations/arrangements of retort vessels, carrier locations and drive system positions are also contemplated by the present disclosure.</p>
+      <p id="p-00082-en" num="0082">As a further alteration or change, as noted above, several carriers can be connected together to move as a unit, thereby to utilize the full capacity of the retort. As another variation, the system <b>100</b> can be constructed with two pallet-type carriers, each capable of receiving several baskets or tray stacks which may be loaded onto the pallet-type carriers for product processing and then removed from the pallet-type carriers after processing has been completed. In this manner, the connecting links, such as connecting links <b>130</b> and <b>132</b>, are permanently attached to the pallet-type carrier, and thus not requiring connection or disconnection with each new batch of products to be processed within the retort. <figref>FIGS. 19</figref>, <b>20</b>, <b>21</b>, <b>22</b> and <b>23</b> illustrate a further embodiment of the present invention disclosure consisting of a linear reciprocating system <b>300</b>. System <b>300</b> is similar to system <b>100</b> as illustrated and described above. The components of system <b>300</b> that are the same or very similar to the components of system <b>100</b> are identified with the same part numbers but with <b>300</b> series. System <b>300</b> includes a pair of elongated reciprocating transmission shafts <b>314</b> that are disposed within a drive housing <b>316</b>. The transmission shafts <b>314</b> extend outwardly from the distal end of the drive housing <b>316</b> to extend into retort vessel <b>318</b>. The distal ends of the transmission shafts <b>314</b> are connectable to carriers (not shown), which may be similar to carriers <b>102</b>, shown in <figref>FIGS. 1-10</figref>. The transmission shafts <b>314</b> function to reciprocate the carriers in the same manner that product carriers <b>102</b> are reciprocated, as generally shown in <figref>FIGS. 1-10</figref> and as specifically shown in <figref>FIG. 16</figref>.</p>
+      <p id="p-00083-en" num="0083">The transmission shafts <b>314</b> are powered by a motor <b>310</b> located outside of one end of the housing <b>316</b>. The motor <b>310</b> drives a crankshaft <b>324</b>, which in turn is connected to the ends of connecting links <b>330</b>. The opposite ends of the connecting links <b>330</b> are connected to the transmission shafts <b>314</b>.</p>
+      <p id="p-00084-en" num="0084">Next, describing system <b>300</b> in more detail, the housing <b>316</b> is generally rectilinear in shape, and composed of parallel spaced-apart side walls <b>332</b> and transverse end walls <b>334</b> and <b>336</b>. Also, top and bottom walls <b>338</b> and <b>340</b> overlie and underlie the side walls and end walls of the housing. Also, a pair of spaced-apart transverse cross walls <b>342</b> and <b>344</b> divide the housing into three sections and add structural integrity to the housing. Of course, other configurations of housing <b>316</b> are possible.</p>
+      <p id="p-00085-en" num="0085">The transmission shafts <b>314</b> are supported within the housing <b>316</b> and are retained in parallel alignment within the housing by linear bearings <b>350</b>, that are disposed within circular or cylindrical seats <b>352</b> that project from housing end wall <b>334</b> toward the retort vessel <b>318</b>. At their opposite ends, the transmission shafts <b>314</b> are supported by a second set of linear bearings <b>354</b> that are retained within cylindrical seats <b>356</b> that project from cross wall <b>344</b> toward the adjacent end wall <b>336</b>. As will be appreciated, the transmission shafts <b>314</b> slidably reciprocate with low friction within the linear bearings <b>350</b> and <b>354</b></p>
+      <p id="p-00086-en" num="0086">As noted above, the transmission shafts <b>314</b> are powered by the drive motor <b>310</b> which is positioned outwardly from of the housing end wall <b>336</b>, and is disposed generally transversely to the housing and transversely to the lengths of the transmission shafts <b>314</b>. The motor <b>310</b> drives a speed reducer which in turn is coupled to an overrunning clutch <b>350</b>. The output of the overrunning clutch is turn is coupled to a drive shaft <b>322</b> projecting outwardly from the overriding clutch along axis <b>328</b>. The drive shaft <b>322</b> is coupled to crankshaft <b>324</b>. The drive shaft and crankshaft are supported by bearings <b>360</b>, which are carried by flanges <b>362</b> projecting rearwardly from housing end wall <b>336</b>. While not shown, an encoder can be provided to monitor the rotation of the drive shaft <b>322</b> in a well known manner. In addition, although also not shown, the speed control system can be provided to control the speed of the motor <b>310</b>.</p>
+      <p id="p-00087-en" num="0087">The ends of connecting links <b>330</b> are connected to the crankshaft journals <b>366</b> by bearings <b>368</b>. The opposite ends of the connecting links <b>330</b> are connected to slide frames <b>370</b><i>a </i>and <b>370</b><i>b </i>by spherical bearings <b>372</b>. Slide frame <b>370</b><i>a </i>is attached to a transmission shaft <b>314</b> by a cross pin <b>374</b> extending through a across cross hole formed in the transmission shaft <b>314</b>. The cross pin <b>374</b> also extends through aligned holes formed in cylindrical collar <b>376</b> that projects from the slide frame <b>370</b><i>a</i>. Likewise, slide frame <b>370</b><i>b </i>is connected to transmission shaft <b>314</b> by a cross pin <b>374</b> running through a cross hole formed in the transmission shaft <b>314</b> and also through aligned of holes formed in a cylindrical collar <b>378</b> that projects from the slide frame <b>370</b><i>b </i>toward housing distal cross wall <b>342</b>.</p>
+      <p id="p-00088-en" num="0088">The slide frames <b>370</b><i>a </i>and <b>370</b><i>b </i>are composed of a pair of lateral members <b>380</b> and <b>382</b> disposed in spaced-apart parallel relationship to each other. Cylindrical collars <b>376</b> and <b>378</b> project from the lateral members to receive the transmission shafts <b>314</b>. In this manner, the slide frame <b>370</b><i>a </i>and <b>370</b><i>b</i>, move lengthwise within the housing <b>316</b> with the movement of the transmission shafts <b>314</b>. The slide frames <b>370</b><i>a </i>and <b>370</b><i>b </i>are journaled to the opposite transmission shafts <b>314</b> by linear bearings <b>384</b> disposed in seats <b>386</b> formed in the slide frames <b>370</b><i>a </i>and <b>370</b><i>b</i>. It will be appreciated that in this matter the slide frames <b>370</b><i>a </i>and <b>370</b><i>b </i>are maintained in alignment within the housing <b>316</b> as the slide frames reciprocate back and forth within the housings.</p>
+      <p id="p-00089-en" num="0089">As shown in <figref>FIGS. 19</figref>, <b>20</b> and <b>21</b>, reaction actuators <b>308</b> are disposed at the lateral ends of the slide frames <b>370</b><i>a</i>, <b>370</b><i>b</i>. The reaction actuators <b>308</b> each include a housing <b>390</b> within which are disposed compression springs <b>392</b>. Bumpers <b>394</b> are attached to the opposite ends of the compression springs to extend beyond the ends of the housings <b>390</b> of the reaction actuators <b>308</b>. Compression springs <b>392</b> can be preloaded to a desired loading level within the housing <b>390</b>. As shown in <figref>FIGS. 20 and 21</figref>, when the transmission shafts <b>314</b> reach the ends of their travel, the bumpers <b>394</b> bear again the end wall <b>334</b> of the housing <b>334</b> or against the cross walls <b>334</b> and <b>336</b> of the housing. In this manner of the reaction actuators are loaded to store the kinetic energy of the moving product carriers and subsequently release the stored energy to impart acceleration forces to the carriers and the transmission shafts <b>314</b> in the manner described above in <figref>FIGS. 1-10</figref>.</p>
+      <p id="p-00090-en" num="0090">Briefly describing the operation of system <b>300</b>, such system operates essentially the same as system <b>100</b> described above. <figref>FIG. 19</figref> shows system <b>300</b> in an initial position that corresponds to <figref>FIGS. 1 and 9</figref> above. In this regard, the slide frames <b>370</b><i>a </i>and <b>370</b><i>a </i>are shown in intermediate position so that the reaction activators <b>308</b> are not engaged. Also, the carriers (not shown) are in intermediate position corresponding to the position of the carriers <b>102</b><i>a </i>and <b>102</b><i>b </i>in <figref>FIGS. 1 and 9</figref>.</p>
+      <p id="p-00091-en" num="0091">
+        <figref>FIG. 20</figref> shows the system <b>300</b> when the crankshaft <b>324</b> has been rotated to be in top dead center whereat the right hand transmission shaft <b>314</b> is in fully extended position and the left hand transmission shaft <b>314</b> is shown in fully retracted position. Accordingly, <figref>FIG. 20</figref> can be thought to correspond with <figref>FIG. 3</figref> set forth above. In this regard, the reaction activators <b>308</b> are in fully compressed position so that the kinetic energy of the moving carriers is now stored in the reaction activators. In this regard, the bumpers <b>394</b> of the reaction activators bear against corresponding portions of the housing <b>316</b>.</p>
+      <p id="p-00092-en" num="0092">
+        <figref>FIG. 21</figref> shows the system <b>300</b> rotated a further 180° to correspond to <figref>FIG. 7</figref> above. In this regard, the extended and retracted positions of the transmission shafts <b>314</b> are reversed from that shown in <figref>FIG. 20</figref>. In the position of the slide frames <b>370</b><i>a </i>and <b>370</b><i>b </i>shown in <figref>FIG. 21</figref>, such slide frames are moved to the opposite end of their travel from that shown in <figref>FIG. 20</figref>. In this regard, the bumpers <b>94</b> on the opposite end of the reaction activators <b>308</b> are pressed against the housing cross wall <b>342</b> whereby the reaction activators are again in fully compressed position whereby the kinetic energy of the moving carriers are stored in the reaction activators. Also, collars <b>376</b> and <b>386</b> nest in cylindrical seats <b>386</b>. Once the system moves just beyond the dead center position shown in <figref>FIG. 21</figref>, the reaction activators operate to accelerate the system so that the carriers then move in the opposite direction under a high acceleration force. This cycle continues with every 360° rotation of the crankshaft <b>324</b>.</p>
+      <p id="p-00093-en" num="0093">Also as in system <b>100</b>, system <b>300</b> can be controlled by a control system which monitors the speed of the drive shaft <b>322</b> and can determine whether the drive shaft speed is appropriate so as to add lost kinetic energy into the system <b>300</b> but not add more kinetic energy into the system than actually lost during operation. In this respect and in other respects, the system <b>300</b> is capable of operating in the same manner a system <b>100</b> described above.</p>
+      <p id="p-00094-en" num="0094">While illustrative embodiments have been illustrated and described, it will be appreciated that various changes can be made therein without departing from the spirit and scope of the invention.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A system for agitating products in a retort, comprising:
+<claim-text>(a) a first pair of product carriers;</claim-text><claim-text>(b) a low friction support system for supporting the product carriers for movement along the retort;</claim-text><claim-text>(c) a drive actuator system for applying reciprocal forces on the product carriers for reciprocal movement of the product carriers in simultaneous opposite directions along the retort; and</claim-text><claim-text>(d) reaction actuators that apply reaction forces against the product carriers in opposition to the reciprocal movement of the product carriers by the drive actuator system to urge the product carriers for movement along the retort in the direction opposite to the reciprocal movement imposed on the product carrier by the drive actuator system.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the drive actuator system comprising:
+<claim-text>a rotary crank drive; and</claim-text><claim-text>connection linkages extending between the rotary crank drive and the product carriers.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The system according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the rotary crank drive comprising:
+<claim-text>a crankshaft;</claim-text><claim-text>a torque source to apply rotational torque to the crankshaft; and</claim-text><claim-text>an overrunning clutch between the torque source and the crankshaft.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The system according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, further comprising a controller for controlling the level of torque applied the crankshaft.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the product carriers are spaced apart from each other.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the product carriers comprise tray structures or basket structures for receiving food product containers.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising additional product carriers linked to the product carriers of the first pair.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the low friction support system comprising rollers for supporting the product carriers for travel along the retort.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The system according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein said rollers either are (1) axled to the product carriers or (2) carried by the retort and support the product carriers for movement along the retort.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the drive actuator system is positioned between the pair of product carriers.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the drive actuator system is positioned endwise of the product carriers.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the reaction actuator system applies either an increasing force or a substantially constant force against the product carrier as the product carriers travel to the ends of their reciprocal paths of travel.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the reaction actuator system is selected from the group consisting of compression springs, extension springs, torsion springs, coil springs, helical springs, gas springs, pneumatic springs, and elastic bands.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the reaction actuator system comprise a singular reaction actuator that applies a reaction force against the product carriers and both ends of the travel paths of the product carriers.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. A method of agitating products in a retort, comprising:
+<claim-text>(a) arranging the products in two sets for movement along the retort;</claim-text><claim-text>(b) applying reciprocating forces on the two spaced-apart product sets for reciprocating movement of the product sets in opposite directions relative to each other along the retort; and</claim-text><claim-text>(c) applying reaction forces to the product sets acting against the reciprocating movement of the product sets and capable of moving the product sets in a direction opposite to the direction of movement of the product sets under the influence of the reciprocating forces.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein:
+<claim-text>(a) the product sets move along reciprocal paths between a proximal location and a distal location; and</claim-text><claim-text>(b) the reaction forces acting on the product sets in a direction opposite to the direction of movement of the product sets under the influence of the reciprocating force as the product sets reach the proximal locations and the distal locations along the reciprocal travel path.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the reciprocating forces are applied to the product sets from a location between the product sets or from a location endwise of the product sets.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the reciprocal forces are applied to the product sets by a rotational crank drive system.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the crank drive system comprising an overrunning clutch system to permit the product sets to move under the influence of the reaction force at a speed faster than the speed of movement of the product sets acting under the reciprocal force applied to the product sets by the rotatable crank drive system.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, further providing a low-friction support for the product sets during reciprocal movement of the product sets along the retort.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the reaction forces applied to the product sets are either substantially constant forces or an increasing force as the products sets move towards the ends of their reciprocal paths of travel.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, further comprising connecting one or more additional product sets to each of the two product sets, said additional product sets moving in reciprocating motion along the retort with the corresponding spaced-apart product set to which the additional one or more product sets are connected.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, further comprising controlling the speed at which the reciprocating forces are applied to the product sets.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257429A1_00016.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257429A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257429A1.PDF" type="pdf" size="831454" pages="23" />
+</lexisnexis-patent-document>

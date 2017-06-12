@@ -1,0 +1,1400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259592A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030138" date-changed="20151002" time-changed="033550">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314929">
+        <country>US</country>
+        <doc-number>20150259592</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14713235</doc-number>
+        <date>20150515</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>C09K   8/80        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>80</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>C09K   8/805       20130101 FI20150114BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>805</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150114</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>Y10S 507/924       20130101 LA20150526BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>S</subclass>
+        <main-group>507</main-group>
+        <subgroup>924</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150526</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">21</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Coated And Cured Proppants</invention-title>
+    <related-documents date-changed="20150917">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13188530</doc-number>
+              <date>20110722</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9040467</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007132</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13099893</doc-number>
+              <date>20110503</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8993489</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13188530</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Preferred Technology, LLC</orgname>
+            <address>
+              <city>Radnor</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>McDaniel</last-name>
+            <first-name>Robert Ray</first-name>
+            <address>
+              <city>Cypress</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>McCrary</last-name>
+            <first-name>Avis Lloyd</first-name>
+            <address>
+              <city>Montgomery</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173668014">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259592</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150515</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668013">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259592</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150515</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Solid proppants are coated with a coating that exhibits the handling characteristics of a precured coating while also exhibiting the ability to form particle-to-particle bonds at the elevated temperatures and pressures within a wellbore. The coating includes a substantially homogeneous mixture of (i) at least one isocyanate component having at least 2 isocyanate groups, and (ii) a curing agent. The coating process can be performed with short cycle times, e.g., less than about 4 minutes, and still produce a dry, free-flowing, coated proppant that exhibits low dust characteristics during pneumatic handling but also proppant consolidation downhole for reduced washout and good conductivity.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150526</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259592A1</docdb-publication-number>
+      <docdb-application-id>444514775</docdb-application-id>
+      <new-owner>PREFERRED TECHNOLOGY, LLC, PENNSYLVANIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:MCDANIEL, ROBERT RAY;MCCRARY, AVIS LLOYD;REEL/FRAME:035709/0410</free-text-description>
+      <effective-date>
+        <date>20110727</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150527</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259592A1</docdb-publication-number>
+      <docdb-application-id>444514775</docdb-application-id>
+      <new-owner>BANK OF AMERICA, N.A., NEW YORK</new-owner>
+      <free-text-description>SECURITY INTEREST;ASSIGNOR:PREFERRED TECHNOLOGY, LLC;REEL/FRAME:035725/0254</free-text-description>
+      <effective-date>
+        <date>20150519</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20150527</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259592A1</docdb-publication-number>
+      <docdb-application-id>444514775</docdb-application-id>
+      <new-owner>JEFFERIES FINANCE LLC, NEW YORK</new-owner>
+      <free-text-description>SECURITY INTEREST;ASSIGNOR:PREFERRED TECHNOLOGY, LLC;REEL/FRAME:035725/0176</free-text-description>
+      <effective-date>
+        <date>20150519</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20150527</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259592A1</docdb-publication-number>
+      <docdb-application-id>444514775</docdb-application-id>
+      <new-owner>THE BANK OF NEW YORK MELLON TRUST COMPANY, N.A., P</new-owner>
+      <free-text-description>SECURITY INTEREST;ASSIGNOR:PREFERRED TECHNOLOGY, LLC;REEL/FRAME:035725/0197</free-text-description>
+      <effective-date>
+        <date>20150519</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation-in-part of U.S. patent application Ser. No. 13/099,893 entitled “Coated and Cured Proppants” and filed on May 3, 2011. The contents of this co-pending application are hereby incorporated by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF INVENTION</heading>
+      <p id="p-00002-en" num="0002">The invention relates to a method for the production of coated proppants, and also to the proppants obtained according to this method, to the uses thereof and to methods which use the proppants.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">Well factoring is an often used technique to increase the efficiency and productivity of oil and gas wells. Overly simplified, the process involves the introduction of a fracturing fluid into the well and the use of fluid pressure to fracture and crack the well strata. The cracks allow the oil and gas to flow more freely from the strata and thereby increase production rates in an efficient manner.</p>
+      <p id="p-00004-en" num="0004">There are many detailed techniques involved in well fracturing, but one of the most important is the use of a solid “proppant” to keep the strata cracks open as oil, gas, water and other fluids found in well flow through those cracks. The proppant is carried into the well with the fracturing fluid which itself may contain a variety of viscosity enhancers, gelation agents, surfactants, etc. These additives also enhance the ability of the fracturing fluid to carry proppant to the desired strata depth and location. The fracturing fluid for a particular well may or may not use the same formulation for each depth in the strata.</p>
+      <p id="p-00005-en" num="0005">Proppants can be made of virtually any generally solid particle that has a sufficiently high crush strength to prop open cracks in a rock strata at great depth and temperatures of about 35° C. and higher. Sand and ceramic proppants have proved to be especially suitable for commercial use.</p>
+      <p id="p-00006-en" num="0006">A proppant that is flushed from the well is said to have a high “flow back.” Flow back is undesirable. In addition to closure of the cracks, the flushed proppants are abrasive and can damage or clog the tubular goods used to complete the well, valves and pipelines in downstream processing facilities.</p>
+      <p id="p-00007-en" num="0007">One type of synthetic resin coatings can be used to impart a degree of adhesion to the proppant so that flow back is substantially reduced or eliminated. Such resins can include phenol resin, epoxy resin, polyurethane-phenol resin, furane resin, etc. See published US Patent Application No. 2002/0048676, 2003/0131998, 2003/0224165, 2005/0019574, 2007/0161515 and 2008/0230223 as well as U.S. Pat. Nos. 4,920,192; 5,048,608; 5,199,491; 6,406,789; 6,632,527; 7,624,802; and published international application WO 2010/049467, the disclosures of which are herein incorporated by reference.</p>
+      <p id="p-00008-en" num="0008">With some coatings, the synthetic coating is not completely cured when the proppant is introduced into the well. The coated, partially-cured proppants are free flowing, but the coating resin is still slightly reactive. The final cure is intended to occur in situ in the strata fracture at the elevated closure pressures and temperatures found “down hole.”</p>
+      <p id="p-00009-en" num="0009">Such partially cured coating can also exhibit a number of performance issues ranging from: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>A lack of storage stability if stored in a hot environment. This type situation could result in a completion of the curing process (while in storage) making the coated proppant incapable of bonding when placed in the fracture.</li><li>Leaching chemicals out of the partially cured coating that could interfere when the viscosity profile of the fluid used to carry the proppant into the fracture or the chemical breaker system that is relied on to reduce the frac fluid viscosity after completion of the fracturing treatment.</li><li>Erosion of the partially cured coating when the coated proppant is handled pneumatically in order to place in the field storage bins at the well site.</li></ul></li></ul></p>
+      <p id="p-00010-en" num="0013">A second type of synthetic coating is described as being precured or tempered. In this case the coating is essentially cured during the manufacturing process. This type of coating will strengthen the substrate particle so that it can withstand a higher stress level before grain failure. Such a precured coating with also exhibit the following traits: 1) Excellent storage stability; 2) Minimal chemicals that can be leached out of the coating to interfere with carrier fluid viscosity or breaker systems; and 3) A coating that is resilient to the abrasion of pneumatic handling.</p>
+      <p id="p-00011-en" num="0014">The main limitation of a precured coating is that it can not create significant particle to particle bonding when placed in the fracture an temperature and closure pressure are applied. This means that a precured coated particle can do little to prevent proppant flowback after the well is opened up to start the clean-up process or to produce the well.</p>
+      <p id="p-00012-en" num="0015">Proppants based on polyurethane chemistries have a number of potential advantages over phenol resin systems. Most notably, the reaction rates used to make polyurethane coatings are generally faster than phenol resins, cure at lower temperatures and do not have gaseous emissions that require specialized recovery equipment. The coating step with polyurethanes can be carried out at temperatures of about 10° C. to about 250° C. although temperatures of less than about 100° C. are preferred to minimize emissions during the coating process as well as energy use. Polyurethane coatings can also be performed without the use of solvents, whereas many of the known methods, as a rule, require organic solvents for the resinous coating. The components in polyurethane systems are also generally easier to use and pose lower environmental issues. These factors could reduce the cost to make coated proppants and could also permit the coating process to be moved to the site of the well head.</p>
+      <p id="p-00013-en" num="0016">Polyurethanes have not, however, achieved widespread adoption due to their performance in the hot, wet, high pressured environment encountered in the fracture. The stability of the coating to this environment, the ability of the coating to prevent particle failure (e.g., by crushing) and to develop strong particle-to-particle bonds, have contributed to poor flowback control and less than desirable fracture conductivity.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00014-en" num="0017">It would be desirable to develop a coated proppant that combined adequate crush resistance, resistance to dusting when handled pneumatically and the limited leaching of chemicals that is exhibited by precured coatings with the ability to create the particle-to-particle reaction bonds that resist proppant flowback which are exhibited by a partially cured proppant coating.</p>
+      <p id="p-00015-en" num="0018">It would also be desirable to have a coated proppant that retained its conductivity under the conditions prevailing within an actively producing well field stratum.</p>
+      <p id="p-00016-en" num="0019">It would further be desirable to have a coating that not only exhibited all of these properties but which had desirable fracture conductivity and a short production cycle.</p>
+      <p id="p-00017-en" num="0020">It would be especially preferred if a proppant could be substantially covered with a fast cure coating that could be produced to a free flowing state in a short period, e.g., less than about four minutes, while also exhibiting good crush resistance, resistance to hot water coating loss and low dust generation during pneumatic conveyance.</p>
+      <p id="p-00018-en" num="0021">These and other objectives of the invention that will become apparent from the description herein can be accomplished by a coating and coating process that comprises the step of: coating a proppant solid with a substantially homogeneous coating mixture that comprises (i) at least one isocyanate component having at least 2 isocyanate groups, and (ii) at least one curing agent in an amount sufficient and under conditions sufficient to substantially cure said proppant coating and form free flowing, coated proppants in a period of time of less than about four minutes to form a free-flowing, substantially cured, coated proppant.</p>
+      <p id="p-00019-en" num="0022">A coated, fee flowing proppant according to the invention comprises a solid proppant core particle that is substantially covered with a coating that comprises the reaction product of a coating mixture that comprises at least one isocyanate component and a curing agent to form a substantially fully cured proppant coating that is capable of forming particle-to-particle bonds at elevated temperature and pressure, such as those found downhole in an oil or gas well.</p>
+      <p id="p-00020-en" num="0023">The coating process of the present invention applies one or more layers of cured polyurethane around a solid proppant core that is substantially cured and crosslinked quickly to produce a coated proppant product that acts like it has a hybrid coating, i.e., one that acts like a precured coating in its resists dissolution of the coating under the rigorous combination of high heat, agitation, abrasion and water found downhole in an oil or gas well; exhibits good crush resistance; and has a tough coating that exhibits low levels of dust generation during pneumatic conveyance but also exhibits traits of a partially cured coating in its ability to form particle-particle bonds with similarly coated proppants at downhole conditions. In addition, the coating process has a high production rate due to its low cycle time for the coating/curing process, low emission level and a low overall production cost.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00021-en" num="0024">
+        <figref>FIG. 1</figref> is a TMA plot of Dimension Change at various Temperatures in a TMA test of precured, partially cured Phenolic A, partially cured Phenolic B that is more curable than Phenolic A, and the coating of the present invention as discussed in Example 6.</p>
+      <p id="p-00022-en" num="0025">
+        <figref>FIG. 2</figref> is a bar chart of crush test results of various coated proppants tested in Example 6.</p>
+      <p id="p-00023-en" num="0026">
+        <figref>FIG. 3</figref> is a chart of Unconfined Compressive Strength for the coated proppants of Example 6.</p>
+      <p id="p-00024-en" num="0027">
+        <figref>FIG. 4</figref> charts the fracture conductivity of three coated proppants used in Example 6.</p>
+      <p id="p-00025-en" num="0028">
+        <figref>FIG. 5</figref> depicts the results of coating loss tests (colloquially referred to as “Loss On Ignition”) in simulated well down-hole conditions.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00026-en" num="0029">The coating formulation of the present invention includes a substantially homogeneous mixture that comprises: (a) at least one isocyanate reactant having at least 2 isocyanate groups, and (ii) at least one curing agent. The coating may further comprise one or more curing agents in the form of amine reactants, metal catalysts, hydroxyl-functional curing agents and/or polyols. The components are used in an amount sufficient and under conditions that are also sufficient to substantially cure the proppant coating and form free flowing, coated proppants in a fairly short period of time. The coated proppant thus exhibits the good handling and low dust characteristics of a precured product but also exhibits in-strata consolidation characteristics and flow-back resistance that are like a partially cured product.</p>
+      <p id="p-00027-en" num="0030">The coating process of the present invention applies one or more layers of curable coating around a solid proppant core that is quickly and substantially cured to resist dissolution of the coating under the rigorous combination of high heat, agitation, abrasion and water that are found downhole in a well. Preferably, the cured coating exhibits a sufficient resistance to a 10 day autoclave test or 10 day conductivity test so that the coating resists loss by dissolution in hot water (“LOI loss”) of less than 25 wt %, more preferably less than 15 wt %, and even more preferably a loss of less than 5 wt %. The substantially cured coating of the invention thus resists dissolution in the fractured stratum while also exhibiting sufficient particle-to-particle reaction bond strength to resist flow back and sufficiently high crush strength to maintain conductivity of the fractures.</p>
+      <p id="p-00028-en" num="0031">A preferred testing method for the effectiveness of a proppant is described in ISO 13503-5:2006(E) “Procedures for measuring the long term conductivity of proppants”, the disclosure of which is herein incorporated by reference. ISO 13503-5:2006 provides standard testing procedures for evaluating proppants used in hydraulic fracturing and gravel packing operations. ISO 13503-5:2006 provides a consistent methodology for testing performed on hydraulic fracturing and/or gravel packing proppants. The “proppants” mentioned henceforth in this part of ISO 13503-5:2006 refer to sand, ceramic media, resin-coated proppants, gravel packing media, and other materials used for hydraulic fracturing and gravel-packing operations. ISO 13503-5:2006 is not applicable for use in obtaining absolute values of proppant pack conductivities under downhole reservoir conditions, but it does serve as a consistent method by which such downhole conditions can be simulated and compared in a laboratory setting.</p>
+      <heading id="h-00007-en" level="2">The Isocyanate Component</heading>
+      <p id="p-00029-en" num="0032">The isocyanate component comprises an isocyanate with at least 2 reactive isocyanate groups. Other isocyanate-containing compounds may be used, if desired. Examples of suitable isocyanate with at least 2 isocyanate groups an aliphatic or an aromatic isocyanate with at least 2 isocyanate groups (e.g. a diisocyanate, triisocyanate or tetraisocyanate), or an oligomer or a polymer thereof can preferably be used. These isocyanates with at least 2 isocyanate groups can also be carbocyclic or heterocyclic and/or contain one or more heterocyclic groups.</p>
+      <p id="p-00030-en" num="0033">The isocyanate with at least 2 isocyanate groups is preferably a compound or oligomer of compounds of the formula (III) or a compound of the formula (IV):</p>
+      <p id="p-00031-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="39.29mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259592A1_00006.PNG" img-format="png" original="US20150259592A1-20150917-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00032-en" num="0034">In the formulas (III) and (IV), A is each, independently, an aryl, heteroaryl, cycloalkyl or heterocycloalkyl. Preferably, A is each, independently, an aryl or cycloalkyl. More preferably A is each, independently, an aryl which is preferably phenyl, naphthyl or anthracenyl, and most preferably phenyl. Still more preferably A is a phenyl.</p>
+      <p id="p-00033-en" num="0035">The above mentioned heteroaryl is preferably a heteroaryl with 5 or 6 ring atoms, of which 1, 2 or 3 ring atoms are each, independently, an oxygen, sulfur or nitrogen atom and the other ring atoms are carbon atoms. More preferably the heteroaryl is selected among pyridinyl, thienyl, furyl, pyrrolyl, imidazolyl pyrazolyl, pyrazinyl, pyrimidinyl, pyridazinyl, oxazolyl, isoxazolyl or furazanyl.</p>
+      <p id="p-00034-en" num="0036">The above mentioned cycloalkyl is preferably a C<sub>3-10</sub>-cycloalkyl, more preferably a C<sub>5-7</sub>-cycloalkyl.</p>
+      <p id="p-00035-en" num="0037">The above mentioned heterocycloalkyl is preferably a heterocycloalkyl with 3 to 10 ring atoms (more preferably with 5 to 7 ring atoms), of which one or more (e.g. 1, 2 or 3) ring atoms are each, independently, an oxygen, sulfur or nitrogen atom and the other ring atoms are carbon atoms. More preferably the heterocycloalkyl is selected from among tetrahydrofuranyl, piperidinyl, piperazinyl, aziridinyl acetidinyl, pyrrolidinyl, imidazolidinyl, morpholinyl, pyrazolidinyl, tetrahydrothienyl, octahydroquinolinyl octahydroisoquinolinyl, oxazolidinyl or isoxazolidinyl. Still more preferably, the heterocycloalkyl is selected from among tetrahydrofuranyl, piperidinyl, piperazinyl, pyrrolidinyl, imidazolidinyl, morpholinyl, pyrazolidinyl, tetrahydrothienyl, oxazolidinyl or isoxazolidinyl.</p>
+      <p id="p-00036-en" num="0038">In the formulas (III) and (IV), each R<sup>1 </sup>is, independently, a covalent bond or C<sub>1-4</sub>-alkylene (e.g. methylene, ethylene, propylene or butylene). Preferably each R<sup>2 </sup>is hydrogen or a covalent bond.</p>
+      <p id="p-00037-en" num="0039">In the formulas (III) and (IV), each R<sup>2 </sup>is each, independently, hydrogen, a halogen (e.g. F, Cl, Br or I), a C<sub>1-4</sub>-alkyl (e.g. methyl, ethyl, propyl or butyl) or C<sub>1-4</sub>-alkyoxy (e.g. methoxy, ethoxy, propoxy or butoxy). Preferably, each R<sup>2 </sup>is, independently, hydrogen or a C<sub>1-4</sub>-alkyl. More preferably each R<sup>2 </sup>is hydrogen or methyl.</p>
+      <p id="p-00038-en" num="0040">In the formula (IV), R<sup>3 </sup>is a covalent bond, a C<sub>1-4</sub>-alkylene (e.g. methylene, ethylene, propylene or butylene) or a group —(CH<sub>2</sub>)<sub>R31</sub>—O—(CH<sub>2</sub>)<sub>R32</sub>—, wherein R31 and R32 are each, independently, 0, 1, 2 or 3. Preferably, R<sup>3 </sup>is a —CH<sub>2</sub>— group or an —O— group.</p>
+      <p id="p-00039-en" num="0041">In the formula (III), p is equal to 2, 3 or 4, preferably 2 or 3, more preferably 2.</p>
+      <p id="p-00040-en" num="0042">In the formulas (III) and (IV), each q is, independently, an integer from 0 to 4, preferably 0, 1 or 2. When q is equal to 0, the corresponding group A has no substituent R<sup>2</sup>, but has hydrogen atoms instead of R<sup>2</sup>.</p>
+      <p id="p-00041-en" num="0043">In the formula (IV), each r and s are, independently, 0, 1, 2, 3 or 4, wherein the sum of r and s is equal to 2, 3 or 4. Preferably, each r and s are, independently, 0, 1 or 2, wherein the sum of r and s is equal to 2. More preferably, r is equal to 1 and s is equal to 1.</p>
+      <p id="p-00042-en" num="0044">Examples of the isocyanate with at least 2 isocyanate groups are: toluol-2,4-diisocyanate; toluol-2,6-diisocyanate; 1,5-naphthalindiisocyanate; cumol-2,4-diisocyanate; 4-methoxy-1,3-phenyldiisocyanate; 4-chloro-1,3-phenyldiisocyanate; diphenylmethane-4,4-diisocyanate; diphenylmethane-2,4-diisocyanate; diphenylmethane-2,2-diisocyanate; 4-bromo-1,3-phenyldiisocyanate; 4-ethoxy-1,3-phenyl-diisocyanate; 2,4′-diisocyanate diphenylether; 5,6-dimethyl-1,3-phenyl-diisocyanate; methylenediphenyl diisocyanate (including 2,2′-MDI, 2,4′-MDI and 4,4″-MDI); 4,4-diisocyanato-diphenylether; 4,6-dimethyl-1,3-phenyldiisocyanate; 9,10-anthracene-diisocyanate; 2,4,6-toluol triisocyanate; 2,4,4′-triisocyanatodiphenylether; 1,4-tetramethylene diisocyanate; 1,6-hexamethylene diisocyanate; 1,10-decamethylene-diisocyanate; 1,3-cyclohexylene diisocyanate; 4,4′-methylene-bis-(cyclohexylisocyanate); xylol diisocyanate; 1-isocyanato-3-methyl-isocyanate-3,5,5-trimethylcyclohexane (isophorone diisocyanate); 1-3-bis(isocyanato-1-methylethyl) benzol (m-TMXDI); 1,4-bis(isocyanato-1-methylethyl) benzol (p-TMXDI); oligomers or polymers of the above mentioned isocyanate compounds; or mixtures of two or more of the above mentioned isocyanate compounds or oligomers or polymers thereof.</p>
+      <p id="p-00043-en" num="0045">Particularly preferred isocyanates with at least 2 isocyanate groups are toluol diisocyanate, methylenediphenyl diisocyanate, diphenylmethane diisocyanate, an oligomer based on toluol diisocyanate, an oligomer based on methylenediphenyl diisocyanate (poly-MDI) or an oligomer based on diphenylmethane diisocyanate and polymers thereof.</p>
+      <heading id="h-00008-en" level="2">Curing Agents</heading>
+      <p id="p-00044-en" num="0046">The coatings of the invention can be cured with at least one of a variety of curing agents, including reactive, non-reactive (e.g., “catalysts”) and partially reactive agents. Generally, preferred curing agents are selected from amine-based curing agents, hydroxyl-functional curing agents, polyols, and/or metal-based catalysts. The amine-based curing agents may also be used as a mixture of a fast-acting first curing agent and a second, latent curing agent. Either of these first and/or second amine-based curing agents may be reactive, nonreactive or partially reactive.</p>
+      <p id="p-00045-en" num="0047">Suitable single amine-based curing agent or a mixture of amine-based curing agents can include, but are not limited to, ethylene diamine; hexamethylene diamine; 1-methyl-2,6-cyclohexyl diamine; 2,2,4- and 2,4,4-trimethyl-1,6-hexanediamine; 4,4′-bis-(sec-butylamino)-dicyclohexylmethane and derivatives thereof; 1,4-bis-(sec-butylamino)-cyclohexane; 1,2-bis-(sec-butylamino)-cyclohexane; 4,4′-dicyclohexylmethane diamine; 1,4-cyclohexane-bis-(methylamine); 1,3-cyclohexane-bis-(methylamine), isomers, and mixtures thereof; diethylene glycol bis-(aminopropyl)ether; 2-methylpentamethylene-diamine; diaminocyclohexane, isomers, and mixtures thereof; diethylene triamine; triethylene tetramine; tetraethylene pentamine; propylene diamine; 1,3-diaminopropane; dimethylamino propylamine; diethylamino propylamine; imido-bis-(propylamine); monoethanolamine, diethanolamine; triethanolamine; monoisopropanolamine, diisopropanolamine; isophoronediamine; 4,4′-methylenebis-(2-chloroaniline); 3,5-dimethylthio-2,4-toluenediamine; 3,5-dimethylthio-2,6-toluenediamine; 3,5-diethylthio-2,4-toluenediamine; 3,5-diethylthio-2,6-toluenediamine; 4,4′-bis-(sec-butylamino)-benzene; and derivatives thereof; 1,4-bis-(sec-butylamino)-benzene; 1,2-bis-(sec-butylamino)-benzene; N,N′-dialkylamino-diphenylmethane; trimethyleneglycol-ci-p-aminobenzoate; polytetramethyleneoxide-di-p-aminobenzoate; 4,4′-methylenebis-(3-chloro-2,6-diethyleneaniline); 4,4′-methylenebis-(2,6-diethylaniline); meta-phenylenediamine; paraphenylenediamine; N,N′-diisopropyl-isophoronediamine; polyoxypropylene diamine; propylene oxide-based triamine; 3,3′-dimethyl-4,4′-ciaminocyclohexylmethane; and mixtures thereof. In one embodiment, the amine-terminated curing agent is 4,4′-bis-(sec-butylamino)-dicyclohexylmethane. Preferred amine-based curing agents for use with the present invention include triethylenediamine; bis(2-dimethylaminoethyl)ether; tetramethlethylenediamine; pentamethyldiethylenetriamine; 1,3,5-tris(3-(dimethylamino)propyl)-hexahydro-s-triazine and other tertiary amine products of alkyleneamines.</p>
+      <p id="p-00046-en" num="0048">Additionally, other catalysts that promote the reaction of isocyanates with hydroxyls and amines that are known by the industry can be used in the present invention, e.g., transition metal co-catalysis of Groups III or IV used for polyurethane foams. A particularly preferred metal co-catalyst is a tin complex such as stannous 2-ethylhexanoate.</p>
+      <p id="p-00047-en" num="0049">The amine-based curing agent may have a molecular weight of about 64 or greater. In one embodiment, the molecular weight of the amine-curing agent is about 2000 or less. In addition, any of the amine-terminated moieties listed above for use as the isocyanate-reactive component to form the prepolymer may be used as curing agents to react with the prepolymers.</p>
+      <p id="p-00048-en" num="0050">Of the list above, the saturated amine-based curing agents suitable for use with the present invention include, but are not limited to, ethylene diamine; hexamethylene diamine; 1-methyl-2,6-cyclohexyl diamine; 2,2,4- and 2,4,4-trimethyl-1,6-hexanediamine; 4,4′-bis-(sec-butylamino)-dicyclohexylmethane; 1,4-bis-(sec-butylamino)-cyclohexane; 1,2-bis-(sec-butylamino-cyclohexane; derivatives of 4,4′-bis-(sec-butylamino)-dicyclohexylmethane; 4,4′-dicyclohexylmethane diamine; 1,4-cyclohexane-bis-(methylamine); 1,3-cyclohexane-bis-(methylamine); diethylene glycol bis-(aminopropyl) ether; 2-methylpentamethylene-diamine; diaminocyclohexane; diethylene triamine; triethylene tetramine; tetraethylene pentamine; propylene diamine; dipropylene triamine; 1,3-diaminopropane; dimethylamino propylamine; diethylamino propylamine; imido-bis-(propylamine); monoethanolamine, diethanolamine; triethanolamine; monoisopropanolamine, diisopropanolamine; triisopropanolamine; isophoronediamine; N,N′-diisopropylisophorone diamine and mixtures thereof.</p>
+      <p id="p-00049-en" num="0051">In one embodiment, the curative used with the prepolymer include 3,5-dimethylthio-2,4-toluenediamine,3,5-dimethyl-thio-2,6-toluenediamine, 4,4′-bis-(sec-butylamino)-diphenylmethane, N,N′-diisopropyl-isophorone diamine; polyoxypropylene diamine; propylene oxide-based triamine; 3,3′-dimethyl-4,4′-diaminocyclohexylmethane; and mixtures thereof.</p>
+      <p id="p-00050-en" num="0052">Because unhindered primary diamines result in a rapid reaction between the isocyanate groups and the amine groups, in certain instances, a hindered secondary diamine may be more suitable for use in the prepolymer. Without being bound to any particular theory, it is believed that an amine with a high level of stearic hindrance, e.g., a tertiary butyl group on the nitrogen atom, has a slower reaction rate than an amine with no hindrance or a low level of hindrance. For example, 4,4′-bis-(sec-butylamino)-dicyclohexylmethane (CLEARLINK 1000® from Huntsman Corporation in The Woodlands, Tex.) may be suitable for use in combination with an isocyanate to form the polyurea prepolymer. In addition, N,N′-diisopropyl-isophorone diamine, also available from Huntsman Corporation, under the tradename JEFFLINK®, may be used as the secondary diamine curing agent.</p>
+      <p id="p-00051-en" num="0053">In addition, a trifunctional curing agent can be used to help improve cross-linking and, thus, to further improve the chemical and/or abrasion resistance of the coating. In one embodiment, a triol such as trimethylolpropane or a tetraol such as N,N,N′,N′-tetrakis (2-hydroxylpropyl)ethylenediamine may be added to the formulations.</p>
+      <p id="p-00052-en" num="0054">The curing agents of the present invention can be added to the coating formulation with the polyol component, the amine-reactive polyol component, any of the additives (e.g., coloring agents) or added simultaneously as any of these components or pre-coated on the proppant. Preferably, the curing agent is mixed with or co-applied to the solid proppant core as the first isocyanate and any other reactants are mixed so that the curing process has begun by the time the coating formulation is applied to the surface of the solid proppant core. It is also possible to premix the isocyanate and polyol together immediately before entry into the mixer. This probably would give a slightly more uniform distribution of the chemicals in the coating. Alternately, it would be possible to premix the polyol and curing agent before they are added to the isocyanate.</p>
+      <p id="p-00053-en" num="0055">Most preferably, the isocyanate, polyol, combination of (a) polyol and (b) curing agent or each individually are continuously added to solid proppant in a moving mixer at a rate that is not substantially greater than the rate of the crosslinking reaction between and among the ingredients. The specific rate will depend on the size of the mixer, the type of mixer, and whether batch or continuous production is desired. The goal is to substantially completely coat the proppant solid with a coating that becomes cured in the mixer and is discharged as a free-flowing, discrete particulates. The amperage draw rate of the mixer can be used as a guide in tumbling-type mixers because the build-up of an uncured, tacky coating on the proppant solids will increase the load on the mixer motor which can be monitored by a simple amp meter. Adding the reaction components at a rate that is consistent with the reaction rate of the curing process avoids substantial increases in amperage allows the coating process, avoids stalling the motor or interrupting the coating process, and maximizes the productivity of the equipment used to perform the coating/curing process. In a preferred process using laboratory scale equipment, a few seconds after beginning to add the polyol, the isocyanate is added at a controlled rate over a relatively short period, e.g., about a minute.</p>
+      <heading id="h-00009-en" level="2">Hydroxy-Functional Cubing Agents</heading>
+      <p id="p-00054-en" num="0056">The prepolymers of the invention may also be cured with a single hydroxy-terminated curing agent or a mixture of hydroxy-terminated curing agents. Suitable hydroxy-terminated curing agents include, but are not limited to, ethylene glycol; diethylene glycol; polyethylene glycol; propylene glycol; 2-methyl-1,3-propanediol; 2,-methyl-1,4-butanediol; dipropylene glycol; polypropylene glycol; 1,2-butanediol; 1,3-butanediol; 1,4-butanediol; 2,3-butanediol; 2,3-dimethyl-2,3-butanediol; trimethylolpropane; cyclohexyldimethylol; triisopropanolamine; N,N,N′N′-tetra-(2-hydroxypropyl)-ethylene diamine; diethylene glycol bis-(aminopropyl)ether; 1,5-pentanediol; 1,6-hexanediol; 1,3-bis-(2-hydroxyethoxy)cyclohexane; 1,4-cyclohexyldimethylol; 1,3-bis-[2-(2-hydroxyethoxy)ethoxy]cyclohexane; 1,3-bis-{2-[2-(2-hydroxyethoxy)ethoxy]ethoxy}cyclohexane; polytetramethylene ether glycol, preferably having a molecular weight ranging from about 250 to about 3900; resorcinol-di-(beta-hydroxyethyl)ether and its derivatives; hydroquinone-di-(beta-hydroxyethyl)ether and its derivatives: 1,3-bis-(2-hydroxyethoxy)benzene; 1,3-bis-[2-(2-hydroxyethoxy)ethoxy]benzene; 1,3-bis-{2-[2-(2-hydroxyethoxy)ethoxy]ethoxy}benzene; N,N-bis(.beta.-hydroxypropyl)aniline; 2-propanol-1,1′-phenylaminobis; and mixtures thereof.</p>
+      <p id="p-00055-en" num="0057">The hydroxy-terminated curing agent may have a molecular weight of at least about 50. In one embodiment, the molecular weight of the hydroxy-terminated curing agent is about 2000 or less. In yet another embodiment, the hydroxy-terminated curing agent has a molecular weight of about 250 to about 3900. It should be understood that molecular weight, as used herein, is the absolute weight average molecular weight and would be understood as such by one of ordinary skill in the art.</p>
+      <p id="p-00056-en" num="0058">The saturated hydroxy-terminated curing agents, included in the list above, are preferred when making a light stable composition. Those saturated hydroxy-terminated curing agents include, but are not limited to, ethylene glycol; diethylene glycol; polyethylene glycol; propylene glycol; 2-methyl-1,3-propanediol; 2,-methyl-1,4-butanediol; dipropylene glycol; polypropylene glycol; 1,2-butanediol; 1,3-butanediol; 1,4-butanediol; 2,3-butanediol; 2,3-dimethyl-2,3-butanediol; trimethylolpropane; cyclohexyldimethylol; triisopropanolamine; N,N,N′,N′-tetra-(2-hydroxypropyl)-ethylene diamine; diethylene glycol bis-(aminopropyl)ether; 1,5-pentanediol; 1,6-hexanediol; 1,3-bis-(2-hydroxyethoxy)cyclohexane; 1,4-cyclohexyldimethylol; 1,3-bis-[2-(2-hydroxyethoxy)ethoxy]cyclohexane; 1,3-bis-{2-[2-(2-hydroxyethoxy)ethoxy]ethoxy}cyclohexane; polytetramethylene ether glycol having molecular weight ranging from about 250 to about 3900; and mixtures thereof.</p>
+      <p id="p-00057-en" num="0059">The amount of curing agent that is added to the coating will generally fall within the range from about 0.01 wt % to about 95 wt % of the complete coating formulation.</p>
+      <heading id="h-00010-en" level="2">Polyol Curing Agents</heading>
+      <p id="p-00058-en" num="0060">A polyol component can be added to the coating formulation. The polyol component may or may not have reactive amine functionality. An especially preferred polyurethane coating is a phenolic polyurethane made with a phenolic polyol according to a patent application that was filed with the German Patent Office under no. DE 10 2010 051 817.4 on Nov. 19, 2010 and entitled “Proppant Coating Technology”, the disclosure of which is herein incorporated by reference and summarized below in the context of the process of the present invention.</p>
+      <p id="p-00059-en" num="0061">Another preferred polyol component for the present process comprises a phenol resin that comprises a condensation product of a phenol and an aldehyde, such as formaldehyde. The phenol resin is preferably a resole or novolak phenol resin and more preferably a benzyl ether resin.</p>
+      <p id="p-00060-en" num="0062">The resole-type phenol resin can be obtained, for example, by condensation of phenol or of one or more compounds of the following formula (I), with aldehydes, preferably formaldehyde, under basic conditions.</p>
+      <p id="p-00061-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="20.91mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259592A1_00007.PNG" img-format="png" original="US20150259592A1-20150917-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00062-en" num="0063">In the formula (I):</p>
+      <p id="p-00063-en" num="0064">“R” is in each case, independently, a hydrogen atom, a halogen atom, C<sub>1-16</sub>-alkyl (preferably C<sub>1-12</sub>-alkyl more preferably C<sub>1-6</sub>-alkyl, and still more preferably methyl, ethyl, propyl or butyl) or —OH;</p>
+      <p id="p-00064-en" num="0065">“p” is an integer from 0 to 4, preferably 0, 1, 2 or 3, and more preferably 1 or 2. Those in the art will understand that when p is 0, the compound of formula (I) is phenol.</p>
+      <p id="p-00065-en" num="0066">Novolak-type phenol resin for the present invention comprises the condensation product of phenol or of one or more compounds of the formula (I) defined above, with aldehydes, preferably formaldehyde, under acidic conditions.</p>
+      <p id="p-00066-en" num="0067">In another preferred embodiment, the phenol resin is a benzyl ether resin of the general formula (II):</p>
+      <p id="p-00067-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="29.89mm" wi="118.11mm" alt="embedded image" img-content="chem" file="US20150259592A1_00008.PNG" img-format="png" original="US20150259592A1-20150917-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00068-en" num="0068">In the formula (II):</p>
+      <p id="p-00069-en" num="0069">A, B and D each are, independently, a hydrogen atom, a halogen atom, a C<sub>1-16</sub>-hydrocarbon residue, —(C<sub>1-16</sub>-alkylene)-OH, —OH, an —O—(C<sub>1-16</sub>-hydrocarbon residue), phenyl, —(C<sub>1-16</sub>-alkylene)-phenyl, or —(C<sub>1-6</sub>-alkylene)-phenylene-OH;</p>
+      <p id="p-00070-en" num="0070">The halogen atom is F, Cl, Br or I;</p>
+      <p id="p-00071-en" num="0071">The C<sub>1-16</sub>-hydrocarbon-residue is preferably C<sub>1-16</sub>-alkyl, C<sub>2-16</sub>-alkenyl or C<sub>2-16</sub>-alkinyl, more preferably C<sub>1-12</sub>-alkyl, C<sub>2-12</sub>-alkenyl or C<sub>2-12</sub>-alkinyl, still more preferably C<sub>1-6-alkyl, C</sub><sub>2-6</sub>-alkenyl or C<sub>2-6</sub>-alkinyl, and still more preferably C<sub>1-4</sub>-alkyl, C<sub>2-4</sub>-alkenyl or C<sub>2-4</sub>alkinyl, and still more preferably C<sub>1-12</sub>-alkyl, and still more preferably C<sub>1-6</sub>-alkyl, and still more preferably methyl, ethyl, propyl or butyl, and most preferably methyl;</p>
+      <p id="p-00072-en" num="0072">The residue —(C<sub>1-16</sub>-alkylene)-OH is preferably —(C<sub>1-12</sub>-alkylene)-OH, more preferably —(C<sub>1-6</sub>-alkylene)-OH, and still more preferably —(C<sub>1-4</sub>-alkylene)-OH, and most preferably a methylol group (—CH<sub>2</sub>—OH);</p>
+      <p id="p-00073-en" num="0073">The —O—(C<sub>1-16</sub>-hydrocarbon)-residue is preferably C<sub>1-16</sub>-alkoxy, more preferably C<sub>1-12</sub>-alkoxy, and still more preferably C<sub>1-6</sub>-alkoxy, and still more preferably C<sub>1-4</sub>-alkoxy, and still more preferably —O—CH<sub>3</sub>, —O—CH<sub>2</sub>CH<sub>3</sub>, —O—(CH<sub>2</sub>)<sub>2</sub>CH<sub>3 </sub>or —O—(CH<sub>2</sub>)<sub>3</sub>CH<sub>3</sub>;</p>
+      <p id="p-00074-en" num="0074">The residue —(C<sub>1-6</sub>-alkylene)-phenyl is preferably —(C<sub>1-4</sub>-alkylene)-phenyl, and more preferably —CH<sub>2</sub>-phenyl;</p>
+      <p id="p-00075-en" num="0075">The residue —(C<sub>1-6</sub>-alkykne)-phenylene-OH is preferably —(C<sub>1-4</sub>-alkylene)-phenylene-OH, and more preferably —CH<sub>2</sub>-phenylene-OH;</p>
+      <p id="p-00076-en" num="0076">R is a hydrogen atom of a C<sub>1-6</sub>-hydrocarbon residue (e.g. linear or branched C<sub>1-6</sub>-alkyl). R is particularly preferred as a hydrogen atom. This is the case, for example, when formaldehyde is used as aldehyde component in a condensation reaction with phenols in order to produce the benzyl ether resin of the formula (II);</p>
+      <p id="p-00077-en" num="0077">m<sup>1 </sup>and m<sup>2 </sup>are each, independently, 0 or 1.</p>
+      <p id="p-00078-en" num="0078">n is an integer from 0 to 100, preferably an integer from 1 to 50, more preferably from 2 to 10, and still more preferably from 2 to 5; and</p>
+      <p id="p-00079-en" num="0079">wherein the sum of n, m<sup>1 </sup>and m<sup>2 </sup>is at least 2.</p>
+      <p id="p-00080-en" num="0080">In a still further embodiment, the polyol component is a phenol resin, with monomer units based on cardol and/or cardanol. Cardol and cardanol are produced from cashew nut oil which is obtained from the seeds of the cashew nut tree. Cashew nut oil consists of about 90% anacardic acid and about 10% cardol. By heat treatment in an acid environment, a mixture of cardol and cardanol is obtained by decarboxylation of the anacardic acid. Cardol and cardanol have the structures shown below:</p>
+      <p id="p-00081-en" num="0000">
+        <chemistry id="chem-00004-en" num="00004">
+          <img id="img-00004-en" he="33.44mm" wi="58.59mm" alt="embedded image" img-content="chem" file="US20150259592A1_00009.PNG" img-format="png" original="US20150259592A1-20150917-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00082-en" num="0081">As shown in the illustration above, the hydrocarbon residue (—C<sub>15</sub>H<sub>31-n</sub>) in cardol and/or in cardanol can have one (n=2), two (n=4) or three (n=6) double bonds. Cardol specifically refers to compound CAS-No. 57486-25-6 and cardanol specifically to compound CAS-No. 37330-39-5.</p>
+      <p id="p-00083-en" num="0082">Cardol and cardanol can each be used alone or at any particular mixing ratio in the phenol resin. Decarboxylated cashew nut oil can also be used.</p>
+      <p id="p-00084-en" num="0083">Cardol and/or cardanol can be condensed into the above described phenol resins, for example, into the resole- or novolak-type phenol resins. For this purpose, cardol and/or cardanol can be condensed e.g. with phenol or with one or more of the above defined compounds of the formula (I), and also with aldehydes, preferably formaldehyde.</p>
+      <p id="p-00085-en" num="0084">The amount of cardol and/or cardanol which is condensed in the phenol resin is not particularly restricted and preferably is from about 1 wt % to about 99 wt %, more preferably about 5 wt % to about 60 wt %, and still mom preferably about 10 wt % to about 30 wt %, relative to 100 wt % of the amount of phenolic starting products used in the phenol resin.</p>
+      <p id="p-00086-en" num="0085">In another embodiment, the polyol component is a phenol resin obtained by condensation of cardol and/or cardanol with aldehydes, preferably formaldehyde.</p>
+      <p id="p-00087-en" num="0086">A phenol resin which contains monomer units based on cardol and/or cardanol as described above, or which can be obtained by condensation of cardol and/or cardanol with aldehydes, has a particularly low viscosity and can thus preferably be employed with a low addition or without addition of reactive thinners. Moreover, this kind of long-chain, substituted phenol resin is comparatively hydrophobic, which results in a favorable shelf life of the coated proppants obtained by the method according to the present invention. In addition, a phenol resin of this kind is also advantageous because cardol and cardanol are renewable raw materials.</p>
+      <p id="p-00088-en" num="0087">Apart from the phenol resin, the polyol component can still contain other compounds containing hydroxyl groups. The other compounds containing hydroxyl groups can be selected from the compounds containing hydroxyl groups that are known to be useful for making polyurethanes, e.g., hydroxy-functional polyethers, hydroxy-functional polyesters, alcohols or glycols. One preferred compound containing hydroxyl groups is, for instance, castor oil. Compounds containing hydroxyl groups such as alcohols or glycols, in particular cardol and/or cardanol, can be used as reactive thinners.</p>
+      <p id="p-00089-en" num="0088">The amount of the other compounds containing hydroxyl groups depends on the desired properties of the proppant coating and can suitably be selected by the person skilled in the art. Typical amounts of compounds containing hydroxyl groups are in the range of between about 10 wt % and about 80 wt %, preferably from about 20 wt % to about 70 wt %, relative to 100 wt % of the polyol component.</p>
+      <p id="p-00090-en" num="0089">The process of the present invention is particularly useful when the proppants are coated with a condensation reaction product that has been made with an excess of isocyanate component with respect to the polyol or curing agent component. In step (a) therefore, 100 parts by weight of the polyol component is used with about 100 to about 600, preferably about 210 to about 530, more preferably about 220 to about 420, and still more preferably about 230 to about 400 parts by weight of the isocyanate base value. Ratios of iso:polyol from about 50:50 to as low as 100:0 are usable depending on the equipment, conditions and production rate provided that the coating and reaction are completed during the coating process.</p>
+      <p id="p-00091-en" num="0090">The isocyanate base value defines the amount of the isocyanate component which is equivalent to 100 parts by weight of the polyol component. The NCO-content (%) of the isocyanate component is defined herein according to DIN ISO 53183. To determine the OH-content (%) of the polyol component, first the so-called OH-number is determined in mg KOH/g according to DIN ISO 53240 and this value is divided by 33, in order to determine the OH-content. Thus, in step (a) an excess of NCO-groups in the isocyanate component of between about 100 and about 500%, preferably about 110 to about 430%, more preferably about 120% to about 320%, and still more preferably about 130% to about 300%, relative to the OH-groups in the polyol component is used.</p>
+      <p id="p-00092-en" num="0091">Moreover, in step (a) one or more additives can be mixed with the proppant, the polyol component and the isocyanate component. These additives are not particularly restricted and can be selected from the additives known in the specific field of coated proppants. Provided that one of these additives has hydroxyl groups, it should be considered as a different hydroxyl-group-containing compound, as described above in connection with the polyol component. If one of the additives has isocyanate groups, it should be considered as a different isocyanate-group-containing compound. Additives with hydroxyl groups and isocyanate groups can be simultaneously considered as different hydroxyl-group-containing compounds and as different isocyanate-group-containing compounds.</p>
+      <heading id="h-00011-en" level="2">Reactive Amines</heading>
+      <p id="p-00093-en" num="0092">The coating formulation of the present invention also optionally includes a reactive amine component, preferably an amine-terminated compound. The coating formulation can, however, be made effectively and with good properties in the absence or substantial absence of a reactive amine component apart from the reactive polyol and isocyanate components. The reactive amine component can enhance crosslink density within the coating and, depending on component selection, can provide additional characteristics of benefit to the cured coating. Reactive amine components for use in the present invention include amine-terminated compounds such as diamines, triamines, amine-terminated glycols such as the amine-terminated polyalkylene glycols sold commercially under the trade name JEFFAMINE from Huntsman Performance Products in The Woodlands, Tex.</p>
+      <p id="p-00094-en" num="0093">Suitable diamines include primary, secondary and higher polyamines and amine-terminated compounds. Suitable compounds include, but are not limited to, ethylene diamine; propylenediamine; butanediamine; hexamethylenediamine; 1,2-diaminopropane; 1,4-diaminobutane; 1,3-diaminopentane; 1,6-diaminohexane; 2,5-diamino-2,5-dimethlhexane; 2,2,4- and/or 2,4,4-trimethyl-1,6-diaminohexane; 1,11-diaminoundecane; 1,12-diaminododecane; 1,3- and/or 1,4-cyclohexane diamine; 1-amino-3,3,5-trimethyl-5-aminomethyl-cyclohexane; 2,4- and/or 2,6-hexahydrotoluylene diamine: 2,4′ and/or 4,4′-diaminodicyclohexyl methane and 3,3′-dialkyl--4,4′-diamino-dicyclohexyl methanes such as 3,3′-dimethyl-4,4-diamino-dicyclohexyl methane and 3,3′-diethyl-4,4′-diaminodicyclohexyl methane; aromatic polyamines such as 2,4- and/or 2,6-diaminotoluene and 2,6-diaminotoluene and 2,4′ and/or 4,4′-diaminodiphenyl methane; and polyoxyalkylene polyamines (also referred to herein as amine terminated polyethers).</p>
+      <p id="p-00095-en" num="0094">Mixtures of polyamines may also be employed in preparing aspartic esters, which is a secondary amine derived from a primary polyamine and a dialkyl maleic or fumaric acid ester, for use in the invention. Representative examples of useful maleic acid esters include dimethyl maleate, diethyl maleate, dibutyl maleate, dioctyl maleate, mixtures thereof and homologs thereof.</p>
+      <p id="p-00096-en" num="0095">Suitable triamines and higher multifunctional polyamines for use in the present coating include diethylene triamine, triethylenetetramine, and higher homologs of this series.</p>
+      <p id="p-00097-en" num="0096">JEFFAMINE diamines include the D, ED, and EDR series products. The D signifies a diamine, ED signifies a diamine with a predominately polyethylene glycol (PEG) backbone, and EDR designates a highly reactive, PEG based diamine.</p>
+      <p id="p-00098-en" num="0097">JEFFAMINE D series products are amine terminated polypropylene glycols with the following representative structure:</p>
+      <p id="p-00099-en" num="0000">
+        <chemistry id="chem-00005-en" num="00005">
+          <img id="img-00005-en" he="30.73mm" wi="36.66mm" alt="embedded image" img-content="chem" file="US20150259592A1_00010.PNG" img-format="png" original="US20150259592A1-20150917-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00100-en" num="0098">JEFFAMINE EDR-148 (XTJ-504) and JEFFAMINE EDR-176 (XTJ-590) amines are much more reactive than the other JEFFAMINE diamines and triamines. They are represented by the following structure:</p>
+      <p id="p-00101-en" num="0000">
+        <chemistry id="chem-00006-en" num="00006">
+          <img id="img-00006-en" he="31.75mm" wi="68.33mm" alt="embedded image" img-content="chem" file="US20150259592A1_00011.PNG" img-format="png" original="US20150259592A1-20150917-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00102-en" num="0099">JEFFAMINE T series products are triamines prepared by reaction of propylene oxide (PO) with a triol intiator followed by animation of the terminal hydroxyl groups. They are exemplified by the following structure:</p>
+      <p id="p-00103-en" num="0000">
+        <chemistry id="chem-00007-en" num="00007">
+          <img id="img-00007-en" he="43.35mm" wi="56.56mm" alt="embedded image" img-content="chem" file="US20150259592A1_00012.PNG" img-format="png" original="US20150259592A1-20150917-C00007.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00104-en" num="0100">The SD Series and ST Series products consist of secondary amine versions of the JEFFAMINE core products. The SD signifies a secondary diamine and ST signifies a secondary trimine. The amine end-groups are reacted with a ketone (e.g. acetone) and reduced to create hindered secondary amine end groups represented by the following terminal structure;</p>
+      <p id="p-00105-en" num="0000">
+        <chemistry id="chem-00008-en" num="00008">
+          <img id="img-00008-en" he="14.82mm" wi="28.02mm" alt="embedded image" img-content="chem" file="US20150259592A1_00013.PNG" img-format="png" original="US20150259592A1-20150917-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00106-en" num="0101">One reactive hydrogen on each end group provides for more selective reactivity and makes these secondary di- and triamines useful for intermediate synthesis and intrinsically slower reactivity compared with the primary JEFFAMINE amines.</p>
+      <p id="p-00107-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>JEFFAMINE ®</entry>
+                  <entry>Base Product</entry>
+                  <entry>MW*</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>SD-231 (XTJ-584)</entry>
+                  <entry>D-230</entry>
+                  <entry>315</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>SD-401 (XTJ-585)</entry>
+                  <entry>D-400</entry>
+                  <entry>515</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>SD-2001 (XTJ-576)</entry>
+                  <entry>D-2000</entry>
+                  <entry>2050</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ST-404 (XTJ-586)</entry>
+                  <entry>T-403</entry>
+                  <entry>565</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00108-en" num="0102">See also U.S. Pat. Nos. 6,093,496; 6,306,964; 5,721,315; 7,012,043; and Publication U.S. Patent Application No. 2007/0208156 the disclosures of which are hereby incorporated by reference.</p>
+      <heading id="h-00012-en" level="2">Additives</heading>
+      <p id="p-00109-en" num="0103">The proppant coating compositions of the invention may also include various additives. For example, the coatings of the invention may also include pigments, tints, dyes, and fillers in an amount to provide visible coloration in the coatings. Other materials conventionally included in coating compositions may also be added to the compositions of the invention. These additional materials include,, but are not limited to, reaction enhancers or catalysts, crosslinking agents, optical brighteners, propylene carbonates, coloring agents, fluorescent agents, whitening agents, UV absorbers, hindered amine light stabilizers, defoaming agents, processing aids, mica, talc, nano-fillers and other conventional additives. All of these materials are well known in the art and are added for their usual purpose in typical amounts. For example, the additives are preferably present in an amount of about 15 weight percent or less. In one embodiment, the additive is present in an amount of about 5 percent or less by weight of the coating composition.</p>
+      <p id="p-00110-en" num="0104">Other additives can include, for example, solvents, softeners, surface-active agents, molecular sieves for removing the reaction water, thinners and/or adhesion agents can be used. Silanes are a particularly preferred type of adhesion agent that improves the affinity of the coating resin for the surface of the proppant. Silanes can be mixed in as additives in step (a), but can also be converted chemically with reactive constituents of the polyol component or of the isocyanate component. Functional silanes such as amino-silanes, epoxy-, aryl- or vinyl silanes are commercially available and, as described above, can be used as additives or can be converted with the reactive constituents of the polyol component or of the isocyanate component. In particular, amino-silanes and epoxy-silanes can be easily converted with the isocyanate component.</p>
+      <heading id="h-00013-en" level="2">Proppant Core Solids</heading>
+      <p id="p-00111-en" num="0105">The proppants can be virtually any small solid with an adequate crush strength and lack of chemical reactivity. Suitable examples include sand, ceramic particles (for instance, aluminum oxide, silicon dioxide, titanium dioxide, zinc oxide, zirconium dioxide, cerium dioxide, manganese dioxide, iron oxide, calcium oxide or bauxite), or also other granular materials.</p>
+      <p id="p-00112-en" num="0106">Proppant sands are a preferred type of proppant for the present invention. Sand is mainly used in the hydraulic fracturing process of natural gas and oil wells to increase their productivity of valuable natural resources. Proppant sand is monocrystalline with a high silica content of at least 80 wt %, and more typically greater than about 97 wt % silica.</p>
+      <p id="p-00113-en" num="0107">American Petroleum Institute specifications place the following limitations on sieve distribution for proppants suitable tor use in a fracture: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>At least 90% of material must fall between the two mesh sizes.</li><li>No more than 10% of the material may be coarser than the largest mesh size,</li><li>No more than 0.1 % of the material may be coarser than the next largest mesh size [e.g. for 20/40, up to 10% of the proppant may be between 16 and 20 mesh, but no more than 0.1% can exceed 16 mesh], and</li><li>No more than 1% of material is permitted to fall onto the pan.</li></ul></li></ul></p>
+      <p id="p-00114-en" num="0112">According to bulk density, proppant is divided into: low-density, medium density, high-density. According to the anti-crushing strength, proppant is divided into 52 Mpa, 69 Mpa, 86 Mpa and 103 Mpa four series. Specifications of proppant sand are generally: 12-18 mesh, 12-20 mesh, 16-20 mesh, 16-30 mesh, 20-40 mesh between 30-50 mesh, 40-60 mesh, 40-70 mesh and smaller. The proppants to be coated preferably have an average particle size within the range from about 50 μm and about 3000 μm, and more preferably within the range from about 100 μm to about 2000 μm.</p>
+      <heading id="h-00014-en" level="2">Coating Method</heading>
+      <p id="p-00115-en" num="0113">The method for the production of coated proppants according to the present invention can be implemented without the use of solvents. Accordingly, the mixture obtained in step (a) in one embodiment of the method is solvent-free, or is essentially solvent-free. The mixture is essentially solvent-free, if it contains less than 20 wt %, preferably less than 10 wt %, more preferably less than 5 wt %, and still more preferably less than 3 wt %, and most preferably less than 1 wt % of solvent, relative to the total mass of components of the mixture.</p>
+      <p id="p-00116-en" num="0114">Preferably, the method is implemented without the use of organic solvents. In this case, the mixture obtained in step (a) is free of organic solvents, or is essentially free of organic solvents. The mixture is essentially free of organic solvents, if it contains less than 20 wt %, preferably less than 10 wt %, more preferably less than 3 wt %, and still more preferably less than 3 wt %, and most preferably less than 1 wt % of solvent, relative to the total mass of components of the mixture.</p>
+      <p id="p-00117-en" num="0115">In step (a) the proppant is preferably heated to an elevated temperature and then contacted with the coating components. Preferably, the proppant is heated to a temperature within the range of about 50° C. to about 150° C. to accelerate crosslinking reactions in the applied coating.</p>
+      <p id="p-00118-en" num="0116">The temperature of the coating process is not particularly restricted outside of practical concerns for safety and component integrity. The preferred conditions for the coating/curing step of the present invention are generally at conditions within the range of about 50° to about 175° C., more preferably at a temperature within the range from about 75° C. to about 150° C., and most preferably at a temperature within the range from about 80° C. to about 135° C. This temperature avoids a number of emissions issues, reduces the amount of energy consumed in the coating process and also reduces the cooling time for the coated proppants for further handling and packaging.</p>
+      <p id="p-00119-en" num="0117">The mixer used for the coating process is not particularly restricted and can be selected from among the mixers known in the specific field. For example, a pug mill mixer, agitation mixer, drum mixer, plate-type mixer, tubular mixer, trough mixer or conical mixer can be used. The easiest way is mixing in a rotating drum. As continuous mixer, a worm gear can, for example, be used.</p>
+      <p id="p-00120-en" num="0118">Mixing can be carried out on a continuous or discontinuous basis. In suitable mixers it is possible, for example, to add adhesion agents, isocyanate, amine and optional ingredients continuously to the heated proppants. For example, isocyanate components, amine reactant and optional additives can be mixed with the proppant solids in a continuous mixer (such as a worm gear) in one or more steps to make one or more layers of cured coating.</p>
+      <p id="p-00121-en" num="0119">Preferably, the proppant, isocyanate component, curing agent, amine reactant, polyol, and optional additives are mixed homogeneously. Thus, the isocyanate component and amine reactant are distributed uniformly on the surface of the proppants. The coating ingredients are preferably kept in motion throughout the entire mixing process.</p>
+      <p id="p-00122-en" num="0120">It is also possible to arrange several mixers in parallel, series, or serially in several runs in one mixer.</p>
+      <p id="p-00123-en" num="0121">Importantly, the time, temperature, chemistry and reaction rate of the coating/curing process are combined to substantially completely react all of the —NGO groups within the applied proppant coating by the time the product is discharged as a free-flowing solid. Preferably, the proppant coating is cured to an amount less than about 10 wt % of reactive —NCO groups, more preferably less than about 5 wt % and even more preferably less than about 2 wt % of reactive —NCO groups remain, based on the originally applied weight of the proppant coating.</p>
+      <p id="p-00124-en" num="0122">The coating is preferably performed at the same time as the curing of the coating on the proppant. In the present invention, the coated proppant becomes free-flowing at a time of less than 5 minutes, preferably within the range of 1-4 minutes, more preferably within the range of 1-3 minutes, and most preferably within the range of 1-2.5 minutes to form a coated, substantially cured, free-flowing, coated proppant. This short cycle time combines with the relatively moderate coating temperatures to form a coating/curing process that provides lower energy costs, smaller equipment, reduced emissions from the process and the associated scrubbing equipment, and overall increased production for the coating facility.</p>
+      <p id="p-00125-en" num="0123">The coating material may be applied in more than one layer. In this case, the coating process is repeated as necessary (e.g. 1-5 times, 2-4 times or 2-3 times) to obtain the desired coating thickness. In this manner, the thickness of the coating of the proppant can be adjusted and used as either a relatively narrow range of proppant size or blended with proppants of other sizes, such as those with more or less numbers of coating layers of polyurethane according to the present invention, so as to form a proppant blend have more than one range of size distribution. A typical size range for coated proppant is typically within the range of about 16-100 mesh.</p>
+      <p id="p-00126-en" num="0124">The amount of coating resin, that is, of the polyurethane resin applied to a proppant, is preferably between about 0.5 and about 10 wt %, more preferably between about 1% and about 5 wt %, resin relative to the mass of the proppant as 100 wt %. With the method according to the present invention proppants can be coated at temperatures between about 10° C. and about 150° C. and preferably in a solvent-free rnanner. The coating process requires a comparatively little equipment and if necessary can also be carried out near the sand or ceramic substrate source, near the geographically location of the producing field or at/near the well itself.</p>
+      <p id="p-00127-en" num="0125">The coated proppants can additionally be treated with surtace-active agents or auxiliaries, such as talcum powder or stearate or other processing aids, to improve pourability.</p>
+      <p id="p-00128-en" num="0126">If desired, the coated proppants can be baked or heated for a period of time sufficient to further react at least substantially all of the available isocyanate, hydroxyl and reactive amine groups that might remain in the coated proppant. Such a post-coating cure may occur even if additional contact time with a catalyst is used after a first coating layer or between layers. Typically, the post-coating cure step is performed like a baking step at a temperature within the range from about 100°-200° C. for a time of about 30 minutes to 4 hours, preferably the temperature is about 125°-175° C. for 5-30 minutes.</p>
+      <p id="p-00129-en" num="0127">Even more preferably, the coated proppant is cured for a time and under conditions sufficient to produce a coated proppant that exhibits a loss of coating of less than 25 wt %, preferably less than 15 wt %, and even more preferably less than 5 wt % when tested according to simulated downhole conditions under ISO 13503-5:2006(E). Even more preferably, the coated proppant exhibits the low dust and handling characteristics of a precured proppant (see API RP 60) but also exhibits a crush test result at 10,000 psi of less than 2%, more preferably less than 1.5%, and especially less than 1%. The coated proppants of the invention preferably also have an unconfined compressive strength of greater than 100 psi and more preferably more than 500 psi with a fracture conductivity at 4000 psi that is equal to, or greater than, the conductivity of a phenolic coating at the same weight percent of coating.</p>
+      <heading id="h-00015-en" level="2">Using the Coated Proppants</heading>
+      <p id="p-00130-en" num="0128">The invention also includes the use of the coated proppants in conjunction with a fracturing liquid to increase the production of petroleum or natural gas. Techniques for fracturing an unconsolidated formation that include injection of consolidating fluids are also well known in the art. See U.S. Pat. No. 6,732,800 the disclosure of which is herein incorporated by reference. Generally speaking, a fluid is injected through the wellbore into the formation at a pressure less than the fracturing pressure of the formation. The volume of consolidating fluid to be injected into the formation is a function of the formation pore volume to be treated and the ability of the consolidating fluid to penetrate the formation and can be readily determined by one of ordinary skill in the art. As a guideline, the formation volume to be treated relates to the height of the desired treated zone and the desired depth of penetration, and the depth of penetration is preferably at least about 30 cm radially into the formation. Please note that since the consolidation fluid is injected through the perforations, the treated zone actually stems from the aligned perforations.</p>
+      <p id="p-00131-en" num="0129">Before consolidating the formation, according to a preferred embodiment, an acid treatment is performed by injection of an acidic fluid. As it is well known in the art, this acidic treatment typically includes several stages such as an acid preflush, one or more stages of acid injection and an overflush.</p>
+      <p id="p-00132-en" num="0130">After the perforation and the consolidation, the final step is the fracturing step. Although a resin treatment alone may have been sufficient in preventing early sand production the resin reduces the permeability of the formation around the wellbore. The primary purpose of the fracture treatment is to connect the wellbore to the formation and in doing so by pass any damage and act as a filter allowing the production of hydrocarbons while holding back formation material. The high surface area associated with a fracture makes it a very effective filter, for example, a 13.7 m fracture length with 25 cm height has a surface area of 368 m<sup>2</sup>, compared to the open hole flow area for a gravel pack of 3.2 m<sup>2 </sup>with the same zone height.</p>
+      <p id="p-00133-en" num="0131">Techniques for hydraulically fracturing a subterranean formation will be known to persons of ordinary skill in the art, and will involve pumping the fracturing fluid into the borehole and out into the surrounding formation. The fluid pressure is above the minimum in situ rock stress, thus creating or extending fractures in the formation. In order to maintain the fractures formed in the formation after the release of the fluid pressure, the fracturing fluid carries a proppant whose purpose is to prevent the fracturing from closing after pumping has been completed.</p>
+      <p id="p-00134-en" num="0132">The fracturing liquid is not particularly restricted and can be selected from among the frac liquids known in the specific field. Suitable fracturing liquids are described, for example, in W C Lyons, G J Plisga, <i>Standard Handbook Of Petroleum And Natural Gas Engineering</i>, Gulf Professional Publishing (2005). The fracturing liquid can be, for example, water gelled with polymers, an oil-in-water emulsion gelled with polymers, or a water-in-oil emulsion gelled with polymers. In one preferred embodiment, the fracturing liquid comprises the following constituents in the indicated proportions: 1000 l water, 20 kg potassium chloride, 0.120 kg sodium acetate, 3.6 kg guar gum (water-soluble polymer), sodium hydroxide (as needed) to adjust a pH-value from 9 to 11, 0.120 kg sodium thiosulfate, and 0.180 kg ammonium persulfate.</p>
+      <p id="p-00135-en" num="0133">In addition, the invention relates to a method for the production of petroleum or natural gas which comprises the injection of the coated proppant into the fractured stratum with the fracturing liquid, i.e., the injection of a fracturing liquid which contains the coated proppant, into a petroleum- or natural gas-bearing rock layer, and/or its introduction into a fracture in the rock layer bearing petroleum or natural gas. The method is not particularly restricted and can be implemented in the manner known in the specific field.</p>
+      <p id="p-00136-en" num="0134">Suitable proppants include, but are not limited to, sand, bauxite, glass beads, and ceramic beads and resin-coated sand versions of each. The proppant will typically exhibit a size within the range from about 8 to about 100 U.S. Standard Mesh in size. Mixtures of suitable proppants can be used. The concentration of proppant in the fracturing fluid can be any concentration known in the art, and will typically be in the range of about 0.5 to about 20 pounds of proppant added per gallon of clean fluid.</p>
+      <p id="p-00137-en" num="0135">The fracturing fluid can contain an added proppant-retention agent, e.g. a fibrous material, a curable resin coated on the proppant, platelets, deformable particles, or a sticky proppant coating to trap proppant particles in the fracture and prevent their production through the wellbore. Fibers, in concentration that preferably ranges front about 0.1% to about 5.0% by weight of proppant, for example selected from natural organic fibers, synthetic organic fibers, glass fibers, carbon fibers, ceramic fibers, inorganic fibers, metal fibers and mixtures thereof, in combination with curable resin-coated proppants are particularly preferred. The proppant-retention agent is intended to keep proppant solids in the fracture, and the proppant and proppant-retention agent keep formation particles from being produced.</p>
+      <heading id="h-00016-en" level="1">EXAMPLES</heading>
+      <p id="p-00138-en" num="0136">Conductivity testing was performed at simulated downhole conditions using the method and procedures found in ISO 13503-5:2006. In such tests, a closure stress is applied across a test unit for 50 hours to allow the proppant sample bed to reach a semi-steady state condition. As the fluid is forced through the proppant bed, the pack width, differential pressure, temperature and flow rates are measured at each stress. Proppant pack permeability and conductivity are then calculated.</p>
+      <p id="p-00139-en" num="0137">Multiple flow rates are used to verify the performance of the transducers, and to determine Darcy flow regime at each stress; an average of the data at these flow rates is reported. The test fluid is potassium chloride substitute solution filtered to 3 μm absolute. The initial conductivity, permeability and width is measured and compared to the final conductivity, permeability and width after each stress period. Stress is applied and maintained using an Isco 260D. Stress is applied at 100 psi/minute.</p>
+      <p id="p-00140-en" num="0138">Width of the proppant pack is determined by assembling the conductivity cell with the Ohio sandstone wafers and shims without the sample proppants. The distance between the width bars that are attached to each end of the conductivity cells are measured at each of the four corners and recorded. The cells are then assembled with the proppant samples. The measurements are made again at the beginning and ending of each stress period. Width is determined by subtracting the average of the zero from the average of each of the stress width values. Conductivity is calculated using Darcy's equation.</p>
+      <p id="p-00141-en" num="0000">[in-line-formulae]Conductivity; <i>kW</i><sub>f</sub>=26.78 <i>μQ</i>/(Δ<i>P</i>)[/in-line-formulae]</p>
+      <p id="p-00142-en" num="0000">[in-line-formulae]Permeability; <i>k=</i>321.4 <i>μQ</i>/[(Δ<i>P</i>)<i>W</i><sub>r</sub>][/in-line-formulae]</p>
+      <p id="p-00143-en" num="0000">wherein: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>k is the proppant pack permeability; expressed in Darcy's;</li><li>kW<sub>f </sub>is the proppant pack conductivity, expressed in millidarcy-feet</li><li>μ is the viscosity of the test liquid at test temperature, expressed in centipoises;</li><li>Q is the flow rate, expressed in cubic centimeters per minute;</li><li>ΔP is the differential pressure, expressed in psi;</li><li>W<sub>f </sub>is proppant pack width, expressed in inches.</li></ul></li></ul></p>
+      <p id="p-00144-en" num="0145">Sieve analysis is performed using the procedure found in ISO 13503-2 “Measurements of proppants used in hydraulic fracturing and gravel pack operations” Standard US mesh screens are used to separate the sample by size. Not more than 0.1% should be greater than the first specified sieve and not more than 1% should be retained in the pan. There should be at least 90% retained in the specified screens.</p>
+      <p id="p-00145-en" num="0146">To determine the magnitude of coating loss during the conductivity test, samples of the proppant pack are taken, dried in an oven, and weighed. They are then subjected to a temperature of 96° C. for 2.5 hours. At the end of this period the samples are cooled and weighed again. The difference between the sample weight after drying but before being subjected to the furnace compared to the sample weight after the time in the furnace, equates to the coating weight. Comparing this number to the same test performed on a sample of the coated material before being subjected to the conductivity test, will equate to the coating weight lost due to the long term exposure to the conditions of the conductivity tests.</p>
+      <p id="p-00146-en" num="0147">The procedure used in an autoclave test would be as follows:</p>
+      <p id="p-00147-en" num="0148">The autoclave test utilizes what amounts to a pressure cooker to subject the coated sands to a hot wet environment that is above the boiling temperature of water. Approximately 20 g of sample is placed in a jar along with 150 ml of distilled water. The lids are placed on sample jars but not tightened. The samples are placed in the autoclave and the chamber is sealed. Heat is applied until the autoclave temperature reaches 250-265° F. (121°-129° C.). The samples are maintained under these conditions for the ten day period. At the end of the test period the autoclave is cooled down, opened and the sample jars removed. Each sample is washed with distilled water and then placed in an oven to dry. The dried samples are then put through a standard test for determination of coating loss. This result is compared to the results of a coating test that was run on the original sample. The difference in coating weight before and after the autoclave test, quantifies the amount of coating that was dissolved by the exposure to a hot water environment.</p>
+      <heading id="h-00017-en" level="1">Example 1</heading>
+      <p id="p-00148-en" num="0149">Ten pounds of Minnesota 40/70 fracturing sand is heated to 200° F. in a laboratory mixer at which point the following components are added in the sequence and timing as given below in Tables 1 and 2. The weight ratio of the poly-MDI to phenolic polyol in this example is 75/25.</p>
+      <p id="p-00149-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="175pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>WEIGHT</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>(grams)</entry>
+                  <entry>COMPONENT</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="char" char="." />
+              <colspec colname="2" colwidth="175pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>4540</entry>
+                  <entry>Minnesota sand</entry>
+                </row>
+                <row>
+                  <entry>4.5</entry>
+                  <entry>silane coupling agent</entry>
+                </row>
+                <row>
+                  <entry>2.3</entry>
+                  <entry>50% red iron oxide in castor oil</entry>
+                </row>
+                <row>
+                  <entry>6.9</entry>
+                  <entry>1,3,5-tris(3-(dimethylamino)propyl)-hexahydro-s-triazine</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(JEFFCAT TR90)</entry>
+                </row>
+                <row>
+                  <entry>34.2</entry>
+                  <entry>Phenolic Polyol comprising 48% phenolic resin, 28%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>cashew nut oil, 24% castor oil</entry>
+                </row>
+                <row>
+                  <entry>102.2</entry>
+                  <entry>Poly-MDI (32% NCO content)</entry>
+                </row>
+                <row>
+                  <entry>2.5</entry>
+                  <entry>Wetting agent</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00150-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="154pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>TIME</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>(minutes:seconds)</entry>
+                  <entry>ADDITION/COMMENT</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>0:00</entry>
+                  <entry>Sand is at 200° F.</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>4.5 gms silane coupling agent is added over 30 secs</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>JEFFCAT TR90 is added over 20 secs</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>Blend of red iron oxide and Phenolic Polyol is</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>added over 60 seconds</entry>
+                </row>
+                <row>
+                  <entry>0:10</entry>
+                  <entry>Poly-MDI is added over 60 seconds</entry>
+                </row>
+                <row>
+                  <entry>2:00</entry>
+                  <entry>Product is free flowing</entry>
+                </row>
+                <row>
+                  <entry>3:30</entry>
+                  <entry>Wetting agent is added over 5 seconds</entry>
+                </row>
+                <row>
+                  <entry>4:00</entry>
+                  <entry>Product is discharged at 180° F.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00151-en" num="0150">In this and the other examples presented herein, it was noticed that the JEFFCAT TR90 catalyst increased the reaction rate sufficiently that the amperage on the associated mixer was not exceeded as the coating reactants were metered into the proppant solids in the moving mixer. This suggests that the coating became cured at a rate that was consistent with the feed rate so that the liquid viscosity did not increase the electrical load on the mixer. This same method of controlled, metered addition would also apply for other formulations and chemistries under the present invention in order to keep the contents reacting at a rate that does not tax the load on the mixing equipment.</p>
+      <p id="p-00152-en" num="0151">The resin coated sand from the example above tested at 2.75% coating loss from the mixer. When subjected to a three day 250° F. autoclave test, the coating loss was measured again at 2.34% reflecting the good resistance to hot water removal of the coating.</p>
+      <heading id="h-00018-en" level="1">Example 2</heading>
+      <p id="p-00153-en" num="0152">Ten pounds of Genoa 40/70 fracturing sand is heated to 204° F. in a laboratory mixer at which point the following components are added in the sequence and timing as given below in Tables 3 and 4. The weight ratio of the poly MDI to phenolic polyol in this example is 75/25.</p>
+      <p id="p-00154-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="168pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>WEIGHT</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>(grams)</entry>
+                  <entry>COMPONENT</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="char" char="." />
+              <colspec colname="2" colwidth="168pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>4540</entry>
+                  <entry>Genoa sand</entry>
+                </row>
+                <row>
+                  <entry>4.5</entry>
+                  <entry>A1100 silane coupling agent</entry>
+                </row>
+                <row>
+                  <entry>2.3</entry>
+                  <entry>50% red iron oxide in castor oil</entry>
+                </row>
+                <row>
+                  <entry>6.9</entry>
+                  <entry>JEFFCAT TR90</entry>
+                </row>
+                <row>
+                  <entry>18.2</entry>
+                  <entry>Phenolic Polyol comprised of 48% phenolic resin, 28%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>cashew nut oil, 24% castor oil</entry>
+                </row>
+                <row>
+                  <entry>54.5</entry>
+                  <entry>Poly-MDI (32% NCO content)</entry>
+                </row>
+                <row>
+                  <entry>2.3</entry>
+                  <entry>Wetting agent</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00155-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="147pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>TIME</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>(minutes:seconds)</entry>
+                  <entry>ADDITION/COMMENT</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>0:00</entry>
+                  <entry>Sand is at 204° F.</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>4.5 gms A1100 is added over 10 secs</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>JEFFCAT TR90 is added over 10 secs</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>blend of red iron oxide and Phenolic Polyol is</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>added over 30 seconds</entry>
+                </row>
+                <row>
+                  <entry>0:10</entry>
+                  <entry>polyMDI is added over 30 seconds</entry>
+                </row>
+                <row>
+                  <entry>2:00</entry>
+                  <entry>Product is free-flowing</entry>
+                </row>
+                <row>
+                  <entry>3:30</entry>
+                  <entry>Wetting agent is added over 5 seconds</entry>
+                </row>
+                <row>
+                  <entry>4:00</entry>
+                  <entry>Product is discharged at 182° F.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00156-en" num="0153">The resin coated sand from the example above tested at 1.48% LOI from the mixer. When subjected to a three day 250° F. autoclave test, the coating loss was measured again at 1.43% reflecting the good resistance to hot water removal of the coating.</p>
+      <heading id="h-00019-en" level="1">Example 3</heading>
+      <p id="p-00157-en" num="0154">Ten pounds of Minnesota fracturing sand is heated to 200° F. in a laboratory mixer at which point the following components are added in the sequence and timing as given below in Tables 5 and 6. The weight ratio of the poly MDI to phenolic polyol in this example is 92/8.</p>
+      <p id="p-00158-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="168pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>WEIGHT</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>(grams)</entry>
+                  <entry>COMPONENTS:</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="char" char="." />
+              <colspec colname="2" colwidth="168pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>4540</entry>
+                  <entry>Minnesota sand</entry>
+                </row>
+                <row>
+                  <entry>4.5</entry>
+                  <entry>A1100 silane coupling agent</entry>
+                </row>
+                <row>
+                  <entry>2.3</entry>
+                  <entry>50% red iron oxide in castor oil</entry>
+                </row>
+                <row>
+                  <entry>6.9</entry>
+                  <entry>JEFFCAT TR 90</entry>
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>Phenolic Polyol comprised of 48% phenolic resin, 28%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>cashew nut oil, 24% castor oil</entry>
+                </row>
+                <row>
+                  <entry>135</entry>
+                  <entry>Poly-MDI (32% NCO content)</entry>
+                </row>
+                <row>
+                  <entry>2.5</entry>
+                  <entry>Wetting agent</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00159-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="147pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>TIME</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>(minutes:seconds)</entry>
+                  <entry>ADDITION/COMMENT</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>0:00</entry>
+                  <entry>Sand is at 202° F.</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>A1100 is added over 20 secs</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>JEFFCAT TR90 is added over 20 secs</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>Blend of red iron oxide and Phenolic Polyol is</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>added over 60 seconds</entry>
+                </row>
+                <row>
+                  <entry>0:10</entry>
+                  <entry>Poly-MDI is added over 60 seconds</entry>
+                </row>
+                <row>
+                  <entry>2:00</entry>
+                  <entry>Product is free flowing</entry>
+                </row>
+                <row>
+                  <entry>3:30</entry>
+                  <entry>Wetting agent is added over 5 seconds</entry>
+                </row>
+                <row>
+                  <entry>4:00</entry>
+                  <entry>Product is discharged at 170° F.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00160-en" num="0155">The resin coated sand from example 3 tested at 2.80% coating loss from the mixer. When subjected to a three day 250° F. autoclave test, the coating loss was measured again at 2.56% reflecting the good resistance to hot water removal of the coating.</p>
+      <heading id="h-00020-en" level="1">Example 4</heading>
+      <p id="p-00161-en" num="0156">One kg of 40/70 Minnesota fracturing sand is heated to 210° F. in a laboratory mixer at which point the following components are added in the sequence and timing as given below in Tables 7 and 8. The weight ratio of the poly-MDI to the aminated polyalkyleneglycol (JEFFAMINE D230) is 63/37.</p>
+      <p id="p-00162-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="91pt" align="center" />
+              <colspec colname="2" colwidth="126pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 7</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>WEIGHT</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>(grams)</entry>
+                  <entry>COMPONENTS</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="91pt" align="char" char="." />
+              <colspec colname="2" colwidth="126pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>1000</entry>
+                  <entry>Minnesota sand</entry>
+                </row>
+                <row>
+                  <entry>1</entry>
+                  <entry>A1100 silane coupling agent</entry>
+                </row>
+                <row>
+                  <entry>20</entry>
+                  <entry>Poly-MDI (32% NCO content)</entry>
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>JEFFAMINE D230</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00163-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>TIME</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>(minutes:seconds)</entry>
+                  <entry>ADDITION/COMMENT</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>0:00</entry>
+                  <entry>Sand is at 210° F.</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>A1100 is added over 10 secs</entry>
+                </row>
+                <row>
+                  <entry>0:10</entry>
+                  <entry>Poly-MDI is added over 30 secs</entry>
+                </row>
+                <row>
+                  <entry>0:50</entry>
+                  <entry>JEFFAMINE D230 is added over 10 secs</entry>
+                </row>
+                <row>
+                  <entry>2:00</entry>
+                  <entry>Product is free flowing</entry>
+                </row>
+                <row>
+                  <entry>4:00</entry>
+                  <entry>Product is discharged at 140° F.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00164-en" num="0157">The resin coated sand from the example above tested at 2.90% coating loss from the mixer. When subjected to a three day 250° F. autoclave test, the coating loss was measured again at 2.83% reflecting the good resistance to hot water removal of the coating.</p>
+      <heading id="h-00021-en" level="1">Example 5</heading>
+      <p id="p-00165-en" num="0158">One kg of 40/70 Minnesota fracturing sand is heated to 210° F. in a laboratory mixer at which point the following components are added in the sequence and timing as given below in Tables 9 and 10. The weight ratio of the poly-MDI to the aminated polyalkyleneglycol (JEFFAMINE D230 from Huntsman Corporation) is 63/37.</p>
+      <p id="p-00166-en" num="0000">
+        <tables id="tables-00010-en" num="00010">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="91pt" align="center" />
+              <colspec colname="2" colwidth="126pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 9</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>WEIGHT</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>(grams)</entry>
+                  <entry>COMPONENTS</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="91pt" align="char" char="." />
+              <colspec colname="2" colwidth="126pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>1000</entry>
+                  <entry>Minnesota sand</entry>
+                </row>
+                <row>
+                  <entry>1</entry>
+                  <entry>A1100 silane coupling agent</entry>
+                </row>
+                <row>
+                  <entry>20</entry>
+                  <entry>Poly-MDI (32% NCO content)</entry>
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>Aminated polyalkyleneglycol</entry>
+                </row>
+                <row>
+                  <entry>0.6</entry>
+                  <entry>Triethylenediamine</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00167-en" num="0000">
+        <tables id="tables-00011-en" num="00011">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 10</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>TIME</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>(minutes:seconds)</entry>
+                  <entry>ADDITION/COMMENT</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>0:00</entry>
+                  <entry>Sand is at 210° F.</entry>
+                </row>
+                <row>
+                  <entry>0:00</entry>
+                  <entry>A1100 is added over 10 secs</entry>
+                </row>
+                <row>
+                  <entry>0:10</entry>
+                  <entry>Poly-MDI is added over 30 secs</entry>
+                </row>
+                <row>
+                  <entry>0:50</entry>
+                  <entry>Preblended Aminated polyalkyleneglycol and</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Triethylenediamine are added over 10 s</entry>
+                </row>
+                <row>
+                  <entry>2:00</entry>
+                  <entry>Product is free flowing</entry>
+                </row>
+                <row>
+                  <entry>4:00</entry>
+                  <entry>Product is discharged at 145° F.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00168-en" num="0159">The resin coated sand from the example above tested at 2.84% coating loss from the mixer. When subjected to a three day 250° F. autoclave test, the coating loss was measured again at 2.63% reflecting the good resistance to hot water removal of the coating.</p>
+      <heading id="h-00022-en" level="1">Example 6</heading>
+      <p id="p-00169-en" num="0160">In this example, a series of test results were performed to demonstrate the properties of proppant coatings that include completely reacted (precured) and partially cured phenolic coatings as compared to the coating of the present invention (“new technology coating”). The graph in <figref>FIG. 1</figref> illustrates the TMA results for (a) Precured phenolic coated sand, (b) New Technology coated sand using the formulation of Example 1, (c) a partially cured, phenolic-coated sand (also identified as Phenolic A) and (d) a somewhat more curable, phenolic-coated sand (also identified as Phenolic B)</p>
+      <p id="p-00170-en" num="0161">The ThermoMechanical Analyzer (TMA) as supplied by TA Instruments is a device that accurately imposes a small force (i.e., a load) onto a sample which is then subjected to a desired temperature over a defined time. During this increasing temperature period, the force is held constant. The probe which imposes the force is connected to a sophisticated micrometer that is capable of measuring fractions of a micron change in the position of the probe. Any change in the position of the probe can be interpreted to reflect an expansion or contraction of the sample that is brought about by the temperature change(s). In many applications, the sample merely expands as it is being heated (for instance raw sand) thereby creating a database that refers to the coefficient of themral expansion. The TMA has the ability to run the samples in a variety of environments.</p>
+      <p id="p-00171-en" num="0162">In general, a precured, phenolic-coated sand will be characterized by a plot that is essential flat (parallel to the X axis) or has a positive slope. This response is indicative of a coating that is essentially reacted in which there is little to no remaining reactivity that remains in the coating.</p>
+      <p id="p-00172-en" num="0163">If, however, a more curable or partially cured phenolic coating is tested, the TMA plot will exhibit a negative slope as early as 80° C. to 100° C., but more often after about 125° C. to about 175° C. This type of plot is characteristic of a coating that has retained a level of reactivity even after completing the manufacturing process. The more negative the slope and the lower the temperature in which the slope turns negative, the more reactivity that has been left in the coating.</p>
+      <p id="p-00173-en" num="0164">As shown in <figref>FIG. 1</figref>, the top curve is labeled “Precured” and is indicative of the response of a phenolic coating that is no longer reactive. The two lower curves are labeled “Partially Cured Phenolic A” and “More Curable Phenolic B.” These curves represent the TMA results from two levels of partially cured coatings. The second curve labeled “New Technology” shows a response that is similar to the precured coating curve but actually shows properties that fall between a precured coating and the less reactive partially cured coating. The shape of the New Technology curve indicates that the New Technology coating would exhibit some properties that are similar to a precured coating and others that may be similar to the partially cured coatings.</p>
+      <p id="p-00174-en" num="0165">The plot of “Crush Results” in <figref>FIG. 2</figref> illustrates the comparable strength of sand coated with precured phenolic coating, two partially cured coatings (labeled A and B) and the New technology coating. Historically, the precured phenolic coated sand would show a lower crush percentage (in the ISO test procedure) than partially cured coated sand. These crush test results follow this trend with the precured coating sand having a crush of 2.05% and the two partially coatings (Phenolic coatings A and B) having crushes of 3.93% and 4.95% respectively. It is important to notice that the coating having the more remaining reactivity (Phenolic B) has the highest crush value. The New Technology coating actually tested out having the lowest crush value (0.69%). So in the crush evaluation The New Technology coating performed like a superior, precured coated sand.</p>
+      <p id="p-00175-en" num="0166">The plot entitled “Unconfined Compressive Strength” in <figref>FIG. 3</figref> represents a strength measurement of the particle to particle bonds of a coated sand. Historically, a precured coated phenolic sand possess little if any ability to form particle to particle bonds of any measureable strength. In this test the coating labeled Phenolic A exhibited a bond strength UCS of 449 psi. The coating labeled Phenolic B had a UCS of 155 psi. Since the TMA indicated that Phenolic B was a more reactive coating than Phenolic A, one would expect that the UCS results should be reversed. That would be true if the coated sands had the same resin level (LOI). However the plot entitled “Coated Sand Loss On Ignition” in <figref>FIG. 5</figref>, shows that Phenolic A actually has a 3.97% phenolic coating while phenolic coating B has a 2.84% resin coating. This could be one explanation for the unexpected UCS results.</p>
+      <p id="p-00176-en" num="0167">In <figref>FIG. 3</figref>, the precured phenolic coating sand showed only a weak bonding capability with a measurement of 7 psi. This level of bonding would indicate that the precured phenolic coating is not capable of forming particle-to-particle bonds that would consolidate the proppant or be effective in controlling proppant flowback.</p>
+      <p id="p-00177-en" num="0168">The New Technology coating exhibited the TMA appearance of a precured coated sand in <figref>FIG. 1</figref>, it yielded the highest bond strength (UCS=576 psi) of any sample tested. See <figref>FIG. 3</figref>. These dual results are new and unexpected for a coated proppant.</p>
+      <p id="p-00178-en" num="0169">The plot entitled “Fracture Conductivity @ 4000 psi” in <figref>FIG. 4</figref> reveals a data point from a long term conductivity test. Presented on the plot are the conductivity numbers for the two partially cured phenolic coated sands and a sand coated with the New Technology. Historically, the conductivity test results for a partially cure phenolic coating will meet or exceed that of a precured coating. The plot shows that the New Technology coating has a conductivity similar to the partially cured coating of Phenolic A and superior to partially cured coating of Phenolic B. This is in spite of the fact the Phenolic A has a significantly higher coating level than the New technology and Phenolic B is marginally higher than the New Technology coating (see <figref>FIG. 5</figref>).</p>
+      <p id="p-00179-en" num="0170">In summary, The New Technology coated sand exhibits the TMA of a precured phenolic coated sand and crush resistance superior to a precured phenolic coating. It also shows a bonding capability superior to the partially cured phenolic coated sand and a comparable if not superior fracture conductivity (when measured at 4,000 psi in a long term conductivity test). This would seem to indicate that the new technology contains traits and performance properties from both type coating and would best be described as a “hybrid” coating technology.</p>
+      <p id="p-00180-en" num="0171">Once those skilled in the art are taught the invention, many variations and modifications are possible without departing from the inventive concepts disclosed herein. The invention, therefore, is not to be restricted except in the spirit of the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>33</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>34</b>. A coated core particle that is substantially covered with a substantially cured coating that comprises at least one isocyanate component, a hydroxy-functional polyether polyol, at least one tin complex catalyst, wherein said coating can form particle-to-particle bonds under downhole conditions.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>35</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein said coating can form particle-to-particle bonds that exhibit an unconfined compressive strength sufficient to generate proppant consolidation and provide flowback control.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>36</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein said coating can form particle-to-particle bonds under downhole conditions that exhibit an unconfined compressive strength of greater than 100 psi.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>37</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein the coated core particle resists proppant flowback at elevated temperature and pressure.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>38</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein the coated core particle exhibits a negative TMA slope within the range of about 125° C. and 175° C.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>39</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein said coated core particle exhibits a loss of coating of less than 15 wt % when tested according to ISO 13503-5:2006(E).</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>40</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein the coating comprises one or more of decarboxylated cashew nut oil, castor oil, cardol and cardanol.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>41</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein the coating further comprises an adhesion agent.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>42</b>. The coated core particle of <claim-ref idref="clm-00009-en">claim 41</claim-ref>, wherein the adhesion agent is a silane.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>43</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein the core particle is a ceramic core particle.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>44</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein the core particle is a sand particle.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>45</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein the coating further comprises a pigment, dye, or tint.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>46</b>. The coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, wherein the coating further comprises mica.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>47</b>. A process for making the coated core particle of <claim-ref idref="clm-00002-en">claim 34</claim-ref>, the process comprising mixing a core particle with at least one isocyanate component, a hydroxy-functional polyether polyol, and at least one tin complex catalyst under conditions to coat the core particle with a substantially cured coating that comprises at least one isocyanate component, a hydroxy-functional polyether polyol and at least one tin complex catalyst.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>48</b>. The process of <claim-ref idref="clm-00015-en">claim 47</claim-ref>, further comprising mixing the core particle with an adhesion agent.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>49</b>. The process of <claim-ref idref="clm-00016-en">claim 48</claim-ref>, wherein the adhesion agent is a silane.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>50</b>. The process of <claim-ref idref="clm-00015-en">claim 47</claim-ref>, wherein the core particle is a sand particle or a ceramic particle.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>51</b>. The process of <claim-ref idref="clm-00015-en">claim 47</claim-ref>, further comprising mixing the core particle with a pigment, dye, or tint.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>52</b>. The process of <claim-ref idref="clm-00015-en">claim 47</claim-ref>, wherein the process comprises:
+<claim-text>a) mixing the core particle with a silane;</claim-text><claim-text>b) mixing the product of step a) with the polyol and the tin catalyst;</claim-text><claim-text>c) mixing the product of step b) with the isocyanate.</claim-text></claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>53</b>. The process of <claim-ref idref="clm-00020-en">claim 52</claim-ref>, further comprising mixing the product of step c) with a silane.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259592A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259592A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259592A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259592A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259592A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259592A1-20150917-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259592A1-20150917-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259592A1-20150917-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259592A1-20150917-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259592A1-20150917-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259592A1-20150917-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259592A1-20150917-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150259592A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259592A1-20150917-C00008.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150259592A1.PDF" type="pdf" size="959652" pages="20" />
+</lexisnexis-patent-document>

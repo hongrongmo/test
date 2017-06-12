@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150264874A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150924" time-inserted="020943" date-changed="20151215" time-changed="165914">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121422760">
+        <country>US</country>
+        <doc-number>20150264874</doc-number>
+        <kind>A1</kind>
+        <date>20150924</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14220455</doc-number>
+        <date>20140320</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20151001">
+      <unexamined-printed-without-grant>
+        <date>20150924</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151215">
+      <classification-ipcr sequence="1">
+        <text>A01G  31/00        20060101AFI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>31</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A01G   1/00        20060101ALI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151215">
+      <classification-cpc sequence="1">
+        <text>A01G  31/02        20130101 FI20151209BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>31</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151209</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150924" lang="eng" format="original">MISTING DEVICE</invention-title>
+    <parties date-changed="20150924">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>SIMILGAEA, INC.</orgname>
+            <role>02</role>
+            <address>
+              <city>ROSLYN</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>ZILKHA</last-name>
+            <first-name>BENJAMIN</first-name>
+            <address>
+              <city>ROSLYN</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150924">
+      <main-family family-id="173798700">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150264874</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173798699">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150264874</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150924" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Technologies are generally described for systems, devices and methods effective to implement misting devices. In various examples, the misting devices may include a nutrient solution in a basin. In some other examples, the misting devices may further include a motor. In still other examples, the misting devices may include a misting apparatus connected to the motor. The misting apparatus may have an external surface at least partially submerged in the nutrient solution. In some examples, the motor and misting apparatus may be arranged such that when the motor spins the misting apparatus the nutrient solution adheres to the external surface. The nutrient solution may be atomized into a mist and the mist may be propelled toward roots of a plant.</p>
+  </abstract>
+  <legal-data date-changed="20151009">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140320</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015264874A1</docdb-publication-number>
+      <docdb-application-id>444777460</docdb-application-id>
+      <new-owner>SIMILGAEA, INC., NEW YORK</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:ZILKHA, BENJAMIN;REEL/FRAME:032485/0633</free-text-description>
+      <effective-date>
+        <date>20140320</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150924">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">Unless otherwise indicated herein, the materials described in this section are not prior art to the claims in this application and are not admitted to be prior art by inclusion in this section.</p>
+      <p id="p-00002-en" num="0002">In an aeroponic system, plants may be grown in air without the use of soil or other media by providing a nutrient mist to the plants. Plants grown using an aeroponic system may benefit from greater exposure of the root system to oxygen, relative to soil based growing systems. Increased aeration of the nutrient solution may allow for more oxygen to reach the roots and may also prevent pathogen formation, leading to higher quality and quantity yields.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00003-en" num="0003">In some examples, misting devices are generally described. In various examples, the misting devices may include a nutrient solution in a basin. In some other examples, the misting devices may further include a motor. In still other examples, the misting devices may include a misting apparatus connected to the motor. The misting apparatus may have an external surface at least partially submerged in the nutrient solution. In some examples, the motor and misting apparatus may be arranged such that when the motor spins the misting apparatus the nutrient solution adheres to the external surface. The nutrient solution may be atomized into a mist and the mist may be propelled toward roots of a plant.</p>
+      <p id="p-00004-en" num="0004">In some examples, methods for providing a nutrient mist to roots of a plant are generally described. In various examples, the methods may include adhering a nutrient solution to an external surface of a misting apparatus. The external surface may be at least partially submerged in the nutrient solution. In some other examples, the methods may include atomizing the nutrient solution into a mist by spinning of the misting apparatus. In some further examples, the methods may include propelling the mist toward roots of a plant.</p>
+      <p id="p-00005-en" num="0005">In some examples, misting devices are generally described. In various examples the misting devices may include, a nutrient solution in a basin. In some examples the misting devices may further include a motor. In some other examples the misting devices may include an enclosure. In various other examples the misting devices may include a misting apparatus connected to the motor. The misting apparatus may have an external surface at least partially submerged in the nutrient solution. In some examples, the motor and misting apparatus may be arranged such that when the motor spins the misting apparatus the nutrient solution adheres to the external surface, the nutrient solution may atomize into a mist. In some examples, the mist may be propelled toward roots of a plant in the enclosure. In various examples, the enclosure may be effective to contain the mist.</p>
+      <p id="p-00006-en" num="0006">The foregoing summary is illustrative only and is not intended to be in any way limiting. In addition to the illustrative aspects, embodiments, and features described above, further aspects, embodiments, and features will become apparent by reference to the drawings and the following detailed description.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00007-en" num="0007">The foregoing and other features of this disclosure will become more fully apparent from the following description and appended claims, taken in conjunction with the accompanying drawings. Understanding that these drawings depict only several embodiments in accordance with the disclosure and are, therefore, not to be considered limiting of its scope, the disclosure will be described with additional specificity and detail through use of the accompanying drawings, in which:</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 1</figref> illustrates an example system that can be utilized to implement a misting device;</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 2</figref> illustrates another example misting device including two misting apparatuses;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 3</figref> depicts yet another example misting device, illustrating an example where the nutrient mist is directed within an enclosure by one or more fans; and</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 4</figref> depicts an example misting system, illustrating an example where the nutrient mist is directed within an enclosure by a spray nozzle;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 5</figref> depicts a flow diagram for an example process for implementing a misting device;</p>
+      <p id="p-00013-en" num="0013">all arranged according to at least some embodiments described herein.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00014-en" num="0014">In the following detailed description, reference is made to the accompanying drawings, which form a part hereof. In the drawings, similar symbols typically identify similar components, unless context dictates otherwise. The illustrative embodiments described in the detailed description, drawings, and claims are not meant to be limiting. Other embodiments may be utilized, and other changes may be made, without departing from the spirit or scope of the subject matter presented herein. It will be readily understood that the aspects of the present disclosure, as generally described herein, and illustrated in the Figures, can be arranged, substituted, combined, separated, and designed in a wide variety of different configurations, all of which are explicitly contemplated herein.</p>
+      <p id="p-00015-en" num="0015">This disclosure is generally drawn, inter alia, to methods, apparatus, systems and devices, related to a misting device.</p>
+      <p id="p-00016-en" num="0016">Briefly stated, technologies are generally described for systems, devices and methods effective to implement misting devices. In various examples, the misting devices may include a nutrient solution in a basin. In some other examples, the misting devices may further include a motor. In still other examples, the misting devices may include a misting apparatus connected to the motor. The misting apparatus may have an external surface at least partially submerged in the nutrient solution. In some examples, the motor and misting apparatus may be arranged such that when the motor spins the misting apparatus the nutrient solution adheres to the external surface. The nutrient solution may be atomized into a mist and the mist may be propelled toward roots of a plant.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 1</figref> illustrates an example system <b>100</b> that can be utilized to implement a misting device arranged in accordance with at least some embodiments described herein. System <b>100</b> may include a basin <b>104</b>, a nutrient solution <b>102</b>, a misting apparatus <b>106</b>, a motor <b>112</b>, an enclosure <b>118</b>, and a light source <b>122</b>. Basin <b>104</b> may be a container or other reservoir and may be at least partially filled with nutrient solution <b>102</b>. Nutrient solution <b>102</b> may be a water-based solution including dissolved organic and/or inorganic molecules. Nutrient solution <b>102</b> may be adapted to provide nutrition to plants <b>120</b> when absorbed by root system <b>130</b> of plants <b>120</b>. Light source <b>122</b> may provide light to plants <b>120</b> such that photosynthesis may occur. Some examples of light source <b>122</b> may include one or more grow lamps and/or the sun.</p>
+      <p id="p-00018-en" num="0018">Misting apparatus <b>106</b> may be an object configured to spin around an axis. In some examples, misting apparatus <b>106</b> may have a cross-section that is circular, elliptical, oblong, a polygon, and/or another shape. As will be further discussed below, misting apparatus <b>106</b> may include paddles, fringes and/or other textured features. Misting apparatus <b>106</b> may be at least partially submerged in nutrient solution <b>102</b>. In some examples, an inner rim <b>132</b> of misting apparatus <b>106</b> may be made of plastic, rubber, metal, composite fiber and/or other materials. For example, inner rim <b>132</b> of misting apparatus <b>106</b> may be made from materials which are resistant to rust and/or corrosion. An external surface <b>108</b> of misting apparatus <b>106</b> may be made of a different material from inner rim <b>132</b>. In an example, surface <b>108</b> may be made from a material to promote adhesion or dispersion of nutrient solution <b>102</b>. In a further example, surface <b>108</b> may be comprised of hydrophilic or hydrophobic material.</p>
+      <p id="p-00019-en" num="0019">Misting apparatus <b>106</b> may be spun via the spinning of axle <b>110</b>. Axle <b>110</b> may be connected to and spun around an axis by a motor <b>112</b>. In some examples, axle <b>110</b> may be made of plastic, metal and/or composite fiber. Axle <b>110</b> may be resistant to corrosion and/or rust. In some examples, motor <b>112</b> may be an electric motor, a combustion motor and/or another type of motor. In an example, motor <b>112</b> may be configured in communication with a processor <b>124</b> and a memory <b>128</b>. Processor <b>124</b> may execute one or more instructions stored in memory <b>128</b>. In an example, processor <b>124</b> may execute instructions configured to operate motor <b>112</b> to spin misting apparatus <b>106</b> at a defined speed for a defined duration, beginning at a defined time. For example, processor <b>124</b> may execute instructions configured to spin misting apparatus at a speed of X km/hr, beginning at 3:00 PM and ending at 4:00 PM, each day.</p>
+      <p id="p-00020-en" num="0020">Misting apparatus <b>106</b> may be spun at a speed sufficient to produce a nutrient mist <b>116</b> with a droplet size from about 5-50 μm. For example, misting apparatus <b>106</b> may be adapted to spin through nutrient solution <b>102</b>. In some examples, misting apparatus <b>106</b> may be adapted to be at least partially submerged in nutrient solution <b>102</b>. Misting apparatus <b>106</b> may be submerged from the bottom surface of misting apparatus <b>106</b> up to axle <b>110</b>. The level of submersion of misting apparatus <b>106</b> may be adjustable. In an example, the degree of submersion of misting apparatus <b>106</b> may affect a droplet size of nutrient mist <b>116</b>. In another example, a hose <b>140</b> may be configured to drip, spray, and/or direct nutrient solution <b>102</b> onto surface <b>108</b> of misting apparatus <b>106</b>. In an example, nutrient solution <b>102</b> may be pumped through hose <b>140</b> from basin <b>104</b> or from another container.</p>
+      <p id="p-00021-en" num="0021">Because of spinning of motor <b>112</b> and features of surface <b>108</b>, nutrient solution <b>102</b> may adhere to surface <b>108</b> of misting apparatus <b>106</b>. Surface <b>108</b> may be include a tread. For example, a tread <b>140</b> of surface <b>108</b> may include features such as one or more channels, grooves, flanges, frayed panels, bumps or other textured features. In some examples, tread <b>140</b> may increase the adhesion of nutrient solution <b>102</b>. In other examples, tread <b>140</b> may be adapted to increase an amount of nutrient solution <b>102</b> which is propelled away from surface <b>108</b>. Nutrient solution <b>102</b> that has adhered to surface <b>108</b> may be propelled away from surface <b>108</b> as misting apparatus <b>106</b> is spun. Centrifugal force produced by spinning misting apparatus <b>106</b> may atomize nutrient solution <b>102</b> to produce nutrient mist <b>116</b>. Nutrient mist <b>116</b> may be propelled away from spinning misting apparatus <b>106</b> as centrifugal force overcomes adhesive/cohesive forces of the nutrient solution on surface <b>108</b>. Nutrient mist <b>116</b> may be propelled away from misting apparatus <b>106</b> as misting apparatus <b>106</b> is spun. Nutrient mist <b>116</b> may be contained by enclosure <b>118</b>. Enclosure <b>118</b> may be effective to expose root system <b>130</b> of plants <b>120</b> to nutrient mist <b>116</b>. Roots of root system <b>130</b> may be coated by nutrient mist <b>116</b> and may absorb nutrients and water from nutrient mist <b>116</b>.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 2</figref> illustrates another example misting system, including two misting apparatuses, arranged in accordance with at least some embodiments described herein. <figref>FIG. 2</figref> includes elements in system <b>100</b> of <figref>FIG. 1</figref>, with additional details. Those components in <figref>FIG. 2</figref> that are labeled identically to components of <figref>FIG. 1</figref> will not be described again for the purposes of clarity and brevity.</p>
+      <p id="p-00023-en" num="0023">Enclosure <b>118</b> may include two misting apparatuses <b>202</b> and <b>206</b> with respective surfaces <b>208</b> and <b>210</b>. At least one of misting apparatuses <b>202</b> and <b>206</b> may be at least partially submerged in nutrient solution <b>102</b>. Misting apparatus <b>206</b> may be spun via axle <b>110</b>. Axle <b>110</b> may be spun by motor <b>112</b>. Friction between surfaces <b>210</b> and <b>208</b> may cause misting apparatus <b>202</b> to spin while motor <b>112</b> is spinning misting apparatus <b>206</b>. Misting apparatuses <b>202</b> and <b>206</b> may spin along parallel axes. Although depicted in a vertical orientation in <figref>FIG. 2</figref>, misting apparatuses <b>202</b> and <b>206</b> may be oriented horizontally or at some angle relative to the bottom of basin <b>104</b>. Additionally, more than two misting apparatuses may be used to produce nutrient mist <b>116</b>. In another example, two or more misting apparatuses may be connected by a belt <b>220</b> such that nutrient mist <b>116</b> is propelled away from a surface of belt <b>220</b>. Belt <b>220</b> may include a tread, such as one or more channels, grooves, flanges, frayed panels, bumps or other textured features.</p>
+      <p id="p-00024-en" num="0024">Misting apparatus <b>206</b> may spin through nutrient solution <b>102</b>. Nutrient solution <b>102</b> may adhere to surface <b>210</b> of misting apparatus <b>206</b>. Some of nutrient solution <b>102</b> that has adhered to surface <b>210</b> may be transferred to surface <b>208</b> as misting apparatuses <b>206</b> and <b>202</b> spin in contact with one another. Nutrient solution <b>102</b> that has adhered to surface <b>208</b> of misting apparatus <b>202</b> may be propelled away from surface <b>208</b> via inertia as nutrient mist <b>116</b>. Nutrient mist <b>116</b> may be contained by enclosure <b>118</b>. Enclosure <b>118</b> may be effective to expose root system <b>130</b> of plants <b>120</b> to nutrient mist <b>116</b>. Roots of root system <b>130</b> may be coated by nutrient mist <b>116</b> and may absorb nutrients and water from nutrient mist <b>116</b>.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 3</figref> depicts an example misting system, illustrating an example where the nutrient mist is directed within an enclosure by one or more fans, arranged in accordance with at least some embodiments described herein. <figref>FIG. 3</figref> includes elements in system <b>100</b> of <figref>FIG. 1</figref> and <figref>FIG. 2</figref>, with additional details. Those components in <figref>FIG. 3</figref> that are labeled identically to components of <figref>FIG. 1</figref> and <figref>FIG. 2</figref> will not be described again for the purposes of clarity.</p>
+      <p id="p-00026-en" num="0026">Misting apparatus <b>306</b> and/or <b>308</b> may spin through nutrient solution <b>102</b> and produce nutrient mist <b>116</b>. In an example, misting apparatuses <b>306</b> and <b>308</b> may spin in contact with one another. Misting apparatuses spinning in contact with one another may result in a nutrient mist of smaller droplet size relative to one misting apparatus spinning alone. Nutrient mist <b>116</b> may be directed by one or more fans, such as fan <b>310</b>, within enclosure <b>118</b>. Fans <b>310</b> may be positioned at various points within enclosure <b>118</b> such that nutrient mist <b>116</b> is provided for root systems <b>312</b>, <b>314</b> and <b>316</b> of plants <b>318</b>, <b>320</b> and <b>322</b>.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 4</figref> depicts an example misting system, illustrating an example where the nutrient mist is directed within an enclosure by a spray nozzle, arranged in accordance with at least some embodiments described herein. <figref>FIG. 4</figref> includes elements in system <b>100</b> of <figref>FIGS. 1</figref>, <b>2</b> and <b>3</b>, with additional details. Those components in <figref>FIG. 4</figref> that are labeled identically to components of <figref>FIGS. 1</figref>, <b>2</b>, and <b>3</b> will not be described again for the purposes of clarity.</p>
+      <p id="p-00028-en" num="0028">In an example, one or more misting apparatuses (such as misting apparatus <b>406</b> and/or misting apparatus <b>408</b>) may be at least partially enclosed within a spray nozzle <b>410</b>. Spray nozzle <b>410</b> may be made of materials which are resistant to rust and/or corrosion. Spray nozzle <b>410</b> may be effective to direct nutrient mist <b>116</b> toward root systems of plants, such as roots systems <b>312</b>, <b>314</b>, and/or <b>316</b> of plants <b>318</b>, <b>320</b>, and/or <b>322</b>. In some other examples, spray nozzle <b>410</b> may concentrate nutrient mist <b>116</b> within the nozzle. Spray nozzle <b>410</b> may be used with or without one or more fans, such as fan <b>310</b>. Although misting apparatus <b>406</b> and <b>408</b> are depicted in a vertical orientation within spray nozzle <b>410</b> in <figref>FIG. 4</figref>, misting apparatuses may be oriented along any axis within spray nozzle <b>410</b>. Additionally, in some examples, spray nozzle <b>410</b> may not fully surround misting apparatuses <b>406</b> and/or <b>408</b>, but may instead be placed in such a way as to capture nutrient mist <b>116</b> as it is propelled away from misting apparatuses <b>406</b> and/or <b>408</b>.</p>
+      <p id="p-00029-en" num="0029">Among other benefits, a system in accordance with the disclosure may allow for plant nutrition in aeroponic growth systems. A spinning misting apparatus may be more resistant to wear and tear and may not clog due to inorganic crystallization and/or residue build-up. Additionally, a misting device in accordance with the disclosure may be relatively simple to clean and maintain as it does not encapsulate a nutrient solution or run nutrient solution through tubes or pipes which may otherwise clog. Droplet size and mist density may be adjusted and/or optimized based on the rotational speed of the misting device.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 5</figref> depicts a flow diagram for an example process for implementing a misting device arranged in accordance with at least some embodiments described herein. In some examples, the process in <figref>FIG. 5</figref> could be implemented using system <b>100</b> discussed above to provide nutrient mist <b>116</b> to root system <b>130</b>.</p>
+      <p id="p-00031-en" num="0031">An example process may include one or more operations, actions, or functions as illustrated by one or more blocks S<b>2</b>, S<b>4</b>, and/or S<b>6</b>. Although illustrated as discrete blocks, various blocks may be divided into additional blocks, combined into fewer blocks, or eliminated, depending on the desired implementations.</p>
+      <p id="p-00032-en" num="0032">Processing may begin at block S<b>2</b>, “Adhere a nutrient solution to an external surface of a misting apparatus, wherein the external surface is at least partially submerged in the nutrient solution.” At block S<b>2</b>, a nutrient solution may be adhered to an external surface of a misting apparatus. The external surface of the misting apparatus may be at least partially submerged in the nutrient solution. The misting apparatus may be a first misting apparatus. The external surface may be a first external surface and the mist may be a first mist. The misting device may further include a second misting apparatus with a second external surface. The second misting apparatus may be effective to spin via contact with the first misting apparatus so that the nutrient solution adheres to the second external surface via contact with the first external surface. The second misting apparatus may be effective to spin via contact with the first misting apparatus so that the nutrient solution atomizes into a second mist, and so that the second mist is propelled toward roots of the plant. In some examples, the second misting apparatus may be at least partially submerged in the nutrient solution. In other examples, the second misting apparatus may not be submerged in the nutrient solution.</p>
+      <p id="p-00033-en" num="0033">In some examples, the misting device may further include a processor. The processor may be effective to control the motor to spin the misting apparatus at a defined speed and/or for a defined duration. In other examples, the external surface of the misting apparatus may include a tread with features effective to cause the nutrient solution to adhere to the external surface. In other examples, the external surface of the misting apparatus may be made of a hydrophilic material.</p>
+      <p id="p-00034-en" num="0034">Processing may proceed from block S<b>2</b> to block S<b>4</b>, “Atomize the nutrient solution into a mist by spinning of the misting apparatus.” At block S<b>4</b>, the nutrient solution may be atomized into a mist by spinning of the misting apparatus.</p>
+      <p id="p-00035-en" num="0035">Processing may proceed from block S<b>4</b> to block S<b>6</b>, “Propel the mist toward roots of a plant.” At block S<b>6</b>, the mist may be propelled toward roots of a plant. In some examples, the misting device may include a fan effective to direct and/or propel the mist toward the roots. In other examples, the mist may be contained within an enclosure.</p>
+      <p id="p-00036-en" num="0036">While various aspects and embodiments have been disclosed herein, other aspects and embodiments will be apparent to those skilled in the art. The various aspects and embodiments disclosed herein are for purposes of illustration and are not intended to be limiting, with the true scope and spirit being indicated by the following claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150924">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A misting device, comprising:
+<claim-text>a nutrient solution in a basin;</claim-text><claim-text>a motor;</claim-text><claim-text>a misting apparatus connected to the motor, the misting apparatus having an external surface at least partially submerged in the nutrient solution, the motor and misting apparatus arranged such that when the motor spins the misting apparatus the nutrient solution adheres to the external surface, the nutrient solution atomizes into a mist, and so that the mist is propelled toward roots of a plant.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The misting device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the misting apparatus is a first misting apparatus, the external surface is a first external surface, and the mist is a first mist, the misting device further comprising:
+<claim-text>a second misting apparatus with a second external surface, the second misting apparatus effective to:
+<claim-text>spin via contact with the first misting apparatus so that the nutrient solution adheres to the second external surface via contact with the first external surface, atomizes into a second mist, and so that the second mist is propelled toward roots of the plant.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The misting device of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the second misting apparatus is at least partially submerged in the nutrient solution.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The misting device of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the second misting apparatus is not submerged in the nutrient solution.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The misting device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a fan effective to direct the mist to the roots.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The misting device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a processor, wherein the processor is effective to control the motor to spin the misting apparatus at a defined speed.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The misting device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a processor, wherein the processor is effective to control the motor to spin the misting apparatus at a defined time for a defined duration.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The misting device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a processor and a memory, wherein:
+<claim-text>the memory is effective to store one or more instructions; and</claim-text><claim-text>the processor is effective to execute the one or more instructions to cause the motor to spin the misting apparatus beginning at a defined time, for a defined duration and at a defined speed.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The misting device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the external surface of the misting apparatus includes a tread with features effective to cause the nutrient solution to adhere to the external surface.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The misting device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the external surface of the misting apparatus is made of a hydrophilic material.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A method for providing a nutrient mist to roots of a plant, the method comprising:
+<claim-text>adhering a nutrient solution to an external surface of a misting apparatus, wherein the external surface is at least partially submerged in the nutrient solution;</claim-text><claim-text>atomizing the nutrient solution into a mist by spinning of the misting apparatus; and</claim-text><claim-text>propelling the mist toward roots of a plant.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the misting apparatus is a first misting apparatus, the external surface is a first external surface, and the mist is a first mist, the method further comprising:
+<claim-text>spinning a second misting apparatus with a second external surface via contact with the first misting apparatus;</claim-text><claim-text>atomizing the nutrient solution into a second mist by spinning of the second misting apparatus; and</claim-text><claim-text>propelling the second mist toward roots of a plant.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the second misting apparatus is at least partially submerged in the nutrient solution.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the second misting apparatus is not submerged in the nutrient solution.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the mist is propelled towards the roots by at least one fan.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the external surface of the misting apparatus includes a tread with features effective to cause the nutrient solution to adhere to the external surface.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. A misting device, comprising:
+<claim-text>a nutrient solution in a basin;</claim-text><claim-text>a motor;</claim-text><claim-text>an enclosure;</claim-text><claim-text>a misting apparatus connected to the motor, the misting apparatus having an external surface at least partially submerged in the nutrient solution, the motor and misting apparatus arranged such that when the motor spins the misting apparatus the nutrient solution adheres to the external surface, the nutrient solution atomizes into a mist, and so that the mist is propelled toward roots of a plant in the enclosure; and</claim-text><claim-text>wherein the enclosure is effective to contain the mist.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The misting device of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the misting apparatus is a first misting apparatus, the external surface is a first external surface, and the mist is a first mist, the misting device further comprising:
+<claim-text>a second misting apparatus with a second external surface, the second misting apparatus effective to:</claim-text><claim-text>spin via contact with the first misting apparatus so that the nutrient solution adheres to the second external surface via contact with the first external surface, atomizes into a second mist, and so that the second mist is propelled toward roots of the plant in the enclosure.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The misting device of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the second misting apparatus is at least partially submerged in the nutrient solution.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The misting device of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the mist is propelled towards the roots in the enclosure by at least one fan. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150264874A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150264874A1-20150924-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150264874A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264874A1-20150924-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150264874A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264874A1-20150924-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150264874A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264874A1-20150924-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150264874A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264874A1-20150924-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150264874A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264874A1-20150924-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150264874A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150264874A1-20150924-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150264874A1.PDF" type="pdf" size="427135" pages="10" />
+</lexisnexis-patent-document>

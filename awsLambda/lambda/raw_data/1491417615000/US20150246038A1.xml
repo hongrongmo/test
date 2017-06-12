@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246038A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021301" date-changed="20151110" time-changed="123225">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139150">
+        <country>US</country>
+        <doc-number>20150246038</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14645947</doc-number>
+        <date>20150312</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>FR</country>
+        <doc-number>13057180</doc-number>
+        <date>20130722</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151110">
+      <classification-ipcr sequence="1">
+        <text>A61K  31/498       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>498</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K   9/20        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K   9/28        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61K  45/06        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151110">
+      <classification-cpc sequence="1">
+        <text>A61K  31/498       20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>498</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   9/2009      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2009</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K   9/2054      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2054</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K   9/2059      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2059</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K   9/2813      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2813</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K   9/286       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>286</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61K   9/2866      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2866</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61K  31/337       20130101 LI20141215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>337</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61K  31/517       20130101 LI20141215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>517</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61K  31/555       20130101 LI20141215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>555</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61K  45/06        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A61K  31/498       20130101 LI20141215BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>K</subclass>
+            <main-group>31</main-group>
+            <subgroup>498</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20141215</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A61K2300/00        20130101 LA20141215BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>K</subclass>
+            <main-group>2300</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20141215</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A61K  31/555       20130101 LI20141215BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>K</subclass>
+            <main-group>31</main-group>
+            <subgroup>555</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20141215</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A61K2300/00        20130101 LA20141215BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>K</subclass>
+            <main-group>2300</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20141215</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>3</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A61K  31/337       20130101 LI20141215BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>K</subclass>
+            <main-group>31</main-group>
+            <subgroup>337</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20141215</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A61K2300/00        20130101 LA20141215BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>K</subclass>
+            <main-group>2300</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20141215</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>4</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A61K  31/517       20130101 LI20141215BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>K</subclass>
+            <main-group>31</main-group>
+            <subgroup>517</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20141215</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A61K2300/00        20130101 LA20141215BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>K</subclass>
+            <main-group>2300</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20141215</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">33</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">TABLET FORMULATION OF A PHOSPHATIDYLINOSITOL 3-KINASE INHIBITOR</invention-title>
+    <references-cited date-changed="20150915">
+      <patent-citations name="patcit" date-changed="20150915" />
+      <citation>
+        <patcit num="1" dnum="WO2014041144A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014041144</doc-number>
+            <kind>A1</kind>
+            <name>SANOFI SA [FR]</name>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>WO</country>
+              <doc-number>/EP2013/069066</doc-number>
+              <date>20130913</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>PCT/EP2013/069066</doc-number>
+                <date>20130913</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006459</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61743980</doc-number>
+          <date>20120914</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Sanofi</orgname>
+            <address>
+              <city>Paris</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>FR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>PARIKH</last-name>
+            <first-name>Darshan</first-name>
+            <address>
+              <city>Bridgewater</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>RAJU</last-name>
+            <first-name>Praveen</first-name>
+            <address>
+              <city>Bangalore</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13069066</doc-number>
+        <date>20130913</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014041142</doc-number>
+        <date>20140320</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20160121">
+      <main-family family-id="164800600">
+        <family-member>
+          <document-id>
+            <country>UY</country>
+            <doc-number>35033</doc-number>
+            <kind>A</kind>
+            <date>20140430</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>237456</doc-number>
+            <kind>A</kind>
+            <date>20150430</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2884742</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>237456</doc-number>
+            <kind>D0</kind>
+            <date>20150430</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201424773</doc-number>
+            <kind>A</kind>
+            <date>20140701</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246038</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013314290</doc-number>
+            <kind>A1</kind>
+            <date>20150402</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>3008620</doc-number>
+            <kind>A1</kind>
+            <date>20150123</date>
+          </document-id>
+          <application-date>
+            <date>20130722</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015003365</doc-number>
+            <kind>A</kind>
+            <date>20150605</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166250310">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2895152</doc-number>
+            <kind>A1</kind>
+            <date>20150722</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>UY</country>
+            <doc-number>35033</doc-number>
+            <kind>A</kind>
+            <date>20140430</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104780913</doc-number>
+            <kind>A</kind>
+            <date>20150715</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>237456</doc-number>
+            <kind>A</kind>
+            <date>20150430</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015528481</doc-number>
+            <kind>A</kind>
+            <date>20150928</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014041142</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AR</country>
+            <doc-number>092521</doc-number>
+            <kind>A1</kind>
+            <date>20150422</date>
+          </document-id>
+          <application-date>
+            <date>20130911</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013314290</doc-number>
+            <kind>A1</kind>
+            <date>20150402</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2884742</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>3008620</doc-number>
+            <kind>A1</kind>
+            <date>20150123</date>
+          </document-id>
+          <application-date>
+            <date>20130722</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>237456</doc-number>
+            <kind>D0</kind>
+            <date>20150430</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150054860</doc-number>
+            <kind>A</kind>
+            <date>20150520</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201424773</doc-number>
+            <kind>A</kind>
+            <date>20140701</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246038</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015003365</doc-number>
+            <kind>A</kind>
+            <date>20150605</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention is directed to compositions and methods that target the PI3K signaling pathway for the treatment or prevention of cancer. In one aspect, there is provided a pharmaceutical formulation comprising Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150728</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246038A1</docdb-publication-number>
+      <docdb-application-id>444208006</docdb-application-id>
+      <new-owner>SANOFI, FRANCE</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:PARIKH, DARSHAN;RAJU, PRAVEEN;SIGNING DATES FROM 20130820 TO 20131022;REEL/FRAME:036195/0718</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">According to National Cancer Institute statistics, 41% of men and women alive today will be diagnosed with cancer at some point in their lives. The widespread occurrence of this disease underscores the need for improved anticancer regimens for the treatment of malignancy.</p>
+      <p id="p-00002-en" num="0002">One important drug target is a group of proteins called kinases. Protein kinases are a large and diverse family of enzymes that catalyze protein phosphorylation and play a critical role in cellular signaling. They may exert positive or negative regulatory effects, depending upon their target protein. Protein kinases are involved in specific signaling pathways which regulate cell functions such as, but not limited to, metabolism, cell cycle progression, cell adhesion, vascular function, apoptosis, and angiogenesis. Malfunctions of cellular signaling have been associated with many diseases, the most characterized of which include cancer and diabetes. The regulation of signal transduction by cytokines and the association of signal molecules with proto-oncogenes and tumor suppressor genes have been well documented. Similarly, the connection between diabetes and related conditions, and deregulated levels of protein kinases, has been demonstrated. See e.g., Sridhar et al. Pharmaceutical Research, 17(11):1345-1353 (2000). Viral infections and the conditions related thereto also have been associated with the regulation of protein kinases. Park et al. Cell 101 (7), 777-787 (2000).</p>
+      <p id="p-00003-en" num="0003">Phosphatidylinositol 3-kinase (PI3K or PIK3CA) is composed of an 85 kDa regulatory subunit and a 110 kDa catalytic subunit. The protein encoded by this gene represents the catalytic subunit, which uses ATP to phosphorylate PtdIns, PtdIns4P and PtdIns(4,5)P2. PTEN, a tumor suppressor which inhibits cell growth through multiple mechanisms, can dephosphorylate PIP3, the major product of PIK3CA. PIP3, in turn, is required for translocation of protein kinase B (AKT1, PKB) to the cell membrane, where it is phosphorylated and activated by upstream kinases. The effect of PTEN on cell death is mediated through the PIK3CA/AKT1 pathway.</p>
+      <p id="p-00004-en" num="0004">PI3Kα has been implicated in the control of cytoskeletal reorganization, apoptosis, vesicular trafficking, proliferation and differentiation processes. Increased copy number and expression of PIK3CA is associated with a number of malignancies such as ovarian cancer (Campbell et al., Cancer Res 2004, 64, 7678-7681; Levine et al., Clin Cancer Res 2005, 11, 2875-2878; Wang et al., Hum Mutat 2005, 25, 322; Lee et al., Gynecol Oncol 2005, 97, 26-34), cervical cancer, breast cancer (Bachman, et al. Cancer Biol Ther 2004, 3, 772-775; Li et al., Breast Cancer Res Treat 2006, 96, 91-95; Saal et al., Cancer Res 2005, 65, 2554-2559; Samuels and Velculescu, Cell Cycle 2004, 3, 1221-1224), colorectal cancer (Samuels, et al. Science 2004, 304, 554; Velho et al. Eur J Cancer 2005, 41, 1649-1654), endometrial cancer (Oda et al. Cancer Res. 2005, 65, 10669-10673), gastric carcinomas (Byun et al., Int J Cancer 2003, 104, 318-327; Lee et al., Oncogene 2005, 24, 1477-1480), hepatocellular carcinoma (Lee et al., Oncogene 2005, 24, 1477-1480), small and non-small cell lung cancer (Tang et al., Lung Cancer 2006, 51, 181-191; Massion et al., Am J Respir Crit Care Med 2004, 170, 1088-1094), thyroid carcinoma (Wu et al., J Clin Endocrinol Metab 2005, 90, 4688-4693), acute myelogenous leukemia (AML) (Sujobert et al., Blood 1997, 106, 1063-1066), chronic myelogenous leukemia (CML) (Hickey and Cotter J Biol Chem 2006, 281, 2441-2450), and glioblastomas (Hartmann et al. Acta Neuropathol (Berl) 2005, 109, 639-642).</p>
+      <p id="p-00005-en" num="0005">A number of PI3K inhibitors are presently undergoing clinical evaluation in patients with cancer, the details of which can be reviewed at the web site ClinicalTrials.gov. For example, human clinical trials are underway to evaluate a form of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide in patients with lymphoma (See trial NCT00486135), non-small-cell lung cancer (See trial NCT00692640), endometrial cancer (See trials NCT01013324 and NCT00756847) breast cancer (See trials NCT01042925 and NCT01082068) or other solid tumor (See trials NCT01357330, NCT01390818 and NCT01436565). In light the compound's established biological activity, optimized forms are needed to achieve maximal patient efficacy.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">Accordingly, there is an ongoing need for new compositions and methods that specifically target the PI3K signaling pathway for the treatment or prevention of cancer.</p>
+      <p id="p-00007-en" num="0007">In one aspect, provided herein is a pharmaceutical formulation comprising Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, a hydrogel polymer, and a diluent. In one embodiment, the hydrogel is selected from the group consisting of microcrystalline cellulose, methyl cellulose, hydroxymethyl cellulose, polyvinyl pyrrolidone, hydroxyethyl cellulose, hydroxypropyl cellulose, hydroxypropyl methylcellulose, polyethylene oxides, gums, acrylate polymers and methacrylate polymers. In another embodiment, the hydrogel is microcrystalline cellulose. In an embodiment, the diluent can be selected from the group consisting of sugars, starches or vegetable oils, lactose monohydrate, calcium phosphate, dextrin, dextrose, maltitol, maltose, starch, sucrose or talc. In one embodiment, the diluent is a starch, such as pregelatinized starch or sodium starch glycolate.</p>
+      <p id="p-00008-en" num="0008">In another aspect, provided herein is a pharmaceutical formulation comprising 40-60%, by weight, of Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide; 15-35%, by weight, of microcrystalline cellulose; 5-15%, by weight, of pregelatinized starch; and between 0.1-10.0%, by weight, each, of hypromellose, silicon dioxide, and sodium starch glycolate.</p>
+      <p id="p-00009-en" num="0009">In one embodiment, the pharmaceutical formulations provided above are in tablet form. In another embodiment, the pharmaceutical formulations provided above are in an immediate-release tablet form. The formulations can comprise approximately 50 mg, 100 mg, 150 mg, or 200 mg of Polymorph E.</p>
+      <p id="p-00010-en" num="0010">In another aspect, compressed solid dosage forms are provided comprising Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, a hydrogel polymer and a diluent. The dosage form can comprise, by weight, 40-60% Polymorph E; 15-35% microcrystalline cellulose; 5-15% pregelatinized starch and between 0.1-10.0% each of hypromellose, silicon dioxide and sodium starch glycolate. In another example, the dosage form can comprise, by weight, about 50% Polymorph E; about 27% microcrystalline cellulose; about 10% pregelatinized starch, about 3% hypromellose, about 1% silicon dioxide and about 4% sodium starch glycolate. The dosage form can comprise about 40 to 250 mg of Polymorph E or about 50 mg, 100 mg, 150 mg or 200 mg of Polymorph E. In one embodiment, the dosage form is a tablet, while in another it is a caplet.</p>
+      <p id="p-00011-en" num="0011">In another aspect, a compressed solid dosage form is provided comprising A) an active agent containing an effective amount of Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, and B) at least one pharmaceutically acceptable additive, wherein the active agent is present in an amount of more than about 40% by weight based upon the total weight of the compressed solid dosage form. The dosage form can comprise, by weight, 40-60% Polymorph E; 15-35% microcrystalline cellulose; 5-15% pregelatinized starch and between 0.1-10.0% each of hypromellose, silicon dioxide and sodium starch glycolate. In another example, the dosage form can comprise, by weight, about 50% Polymorph E; about 27% microcrystalline cellulose; about 10% pregelatinized starch, about 3% hypromellose, about 1% silicon dioxide and about 4% sodium starch glycolate.</p>
+      <p id="p-00012-en" num="0012">In one embodiment, the active agent of the dosage form comprises at least 95% Polymorph E. In another, the active agent of the dosage form comprises at least 97% Polymorph E, while in another it comprises at least 99% Polymorph E.</p>
+      <p id="p-00013-en" num="0013">In another aspect, provided herein is a method of treating cancer in a subject, comprising administering to the subject in need thereof the above pharmaceutical formulations. In an embodiment, the cancer is a solid tumor or lymphoma. In an embodiment, the lymphoma is a relapsed or refractory lymphoma. In an embodiment, the lymphoma is lymphocytic lymphoma (CLL) or small lymphocytic lymphoma (SLL).</p>
+      <p id="p-00014-en" num="0014">In one embodiment, the cancer is breast cancer, colon cancer, rectal cancer, endometrial cancer, gastric carcinoma, glioblastoma, hepatocellular carcinoma, small cell lung cancer, non-small cell lung cancer, melanoma, ovarian cancer, cervical cancer, pancreatic cancer, prostate carcinoma, acute myelogenous leukemia (AML), chronic myelogenous leukemia (CML), or thyroid carcinoma. In another embodiment, the cancer is metastatic or unresectable. The treatment also can comprise the administration of an additional anticancer agent. Non-limiting examples of such agents include carboplatin, paclitaxel, erlotinib, or trastuzumab.</p>
+      <p id="p-00015-en" num="0015">In another embodiment, kits are provided comprising pharmaceutical formulations comprising polymorph E of the compound N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide. In one example, the kit contains a pharmaceutical composition comprising polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide. In one embodiment, the kit comprises instructions for using the compound or pharmaceutical composition to treat a patient with cancer.</p>
+      <p id="p-00016-en" num="0016">Other objects, features and advantages will become apparent from the following detailed description. The detailed description and specific examples are given for illustration only since various changes and modifications within the spirit and scope of the invention will become apparent to those skilled in the art from this detailed description. Further, the examples demonstrate the principle of the invention and cannot be expected to specifically illustrate the application of this invention to all the examples where it will be obviously useful to those skilled in the prior art.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 1</figref> depicts results of a thermogravimetric analysis of polymorph E.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 2</figref> depicts a flow diagram of a manufacturing process for a pharmaceutical formulation comprising Polymorph E</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 3</figref> depicts a synthesis scheme for preparing raw Compound (I).</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 4</figref> depicts the results of optical microscopy of polymorph E.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 5</figref> depicts additional results of optical microscopy of polymorph E.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00022-en" num="0022">Pharmaceutical formulations are provided comprising Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, a hydrogel polymer, and a diluent. Compressed solid dosage forms comprising Polymorph E also are provided. The inventive compositions, which are useful for treating cancer, possess superior features over prior forms of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, including greater stability.</p>
+      <p id="p-00023-en" num="0023">Certain terms used herein are described below. Compounds of the present invention are described using standard nomenclature. Unless defined otherwise, all technical and scientific terms used herein have the same meaning as is commonly understood by one of skill in the art to which this invention belongs.</p>
+      <p id="p-00024-en" num="0024">“N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide” has the following structure:</p>
+      <p id="p-00025-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="46.91mm" wi="56.56mm" alt="embedded image" img-content="chem" file="US20150246038A1_00007.PNG" img-format="png" original="US20150246038A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00026-en" num="0000">Throughout the application, N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, or a pharmaceutically acceptable salt or solvate thereof, is referred to as “Compound (I).” It will be recognized that N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide may exist in alternate tautomeric forms. One example is N-(3-{[(3-{[2-chloro-5-(methoxy)phenyl]amino}quinoxalin-2-yl)amino]sulfonyl}phenyl)-2-methylalaninamide,</p>
+      <p id="p-00027-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="37.68mm" wi="68.07mm" alt="embedded image" img-content="chem" file="US20150246038A1_00008.PNG" img-format="png" original="US20150246038A1-20150903-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00028-en" num="0000">In another example, the compound may exist, for instance in solution, as a zwitterion, such as</p>
+      <p id="p-00029-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="34.88mm" wi="66.38mm" alt="embedded image" img-content="chem" file="US20150246038A1_00009.PNG" img-format="png" original="US20150246038A1-20150903-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00030-en" num="0025">The compound N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide is a potent and selective inhibitor of PI3K (phosphatidylinositol 3-kinase) and inhibits phosphorylation of multiple downstream components of the PI3K signaling pathway in cell lines in vitro and in human xenograft tumor tissue in vivo. This activity is associated with inhibition of tumor cell proliferation and induction of apoptosis, which results in tumor growth inhibition and tumor regression in multiple human xenograft tumor models.</p>
+      <p id="p-00031-en" num="0026">“Yield” for each of the reactions described herein is expressed as a percentage of the theoretical yield.</p>
+      <p id="p-00032-en" num="0027">“Subject” for the purposes of the present invention includes humans and other animals, particularly mammals, and other organisms. Thus the methods are applicable to both human therapy and veterinary applications. In a preferred embodiment the patient is a mammal, and in a most preferred embodiment the patient is human.</p>
+      <p id="p-00033-en" num="0028">The terms “effective amount” or “pharmaceutically effective amount” or “therapeutically effective amount” refer to a sufficient amount of an agent to provide the desired biological, therapeutic, and/or prophylactic result. That result can be reduction, amelioration, palliation, lessening, delaying, and/or alleviation of one or more of the signs, symptoms, or causes of a disease, or any other desired alteration of a biological system. In reference to cancer, an effective amount comprises an amount sufficient to cause a tumor to shrink and/or to decrease the growth rate of the tumor (such as to suppress tumor growth) or to prevent or delay other unwanted cell proliferation. In some embodiments, an effective amount is an amount sufficient to delay development. In some embodiments, an effective amount is an amount sufficient to prevent or delay recurrence. An effective amount can be administered in one or more administrations. The effective amount of the drug or composition may: (i) reduce the number of cancer cells; (ii) reduce tumor size; (iii) inhibit, retard, slow to some extent, and preferably stop cancer cell infiltration into peripheral organs; (iv) inhibit (i.e., slow to some extent and preferably stop) tumor metastasis; (v) inhibit tumor growth; (vi) prevent or delay occurrence and/or recurrence of tumor; and/or (vii) relieve to some extent one or more of the symptoms associated with the cancer. The amount can vary depending on such factors as the size and weight of the subject, the type of illness, or the particular compound of the invention. The amount also can vary depending on the compound, the disease state and its severity, the age of the patient to be treated, and the like. The effective amount can be determined by one of ordinary skill in the art having regard to their knowledge and to this disclosure.</p>
+      <p id="p-00034-en" num="0029">A “pharmaceutically acceptable salt” of a compound means a salt that is pharmaceutically acceptable and that possesses the desired pharmacological activity of the parent compound. It is understood that the pharmaceutically acceptable salts are non-toxic. Additional information on suitable pharmaceutically acceptable salts can be found in <i>Remington's Pharmaceutical Sciences, </i>17<sup>th </sup>ed., Mack Publishing Company, Easton, Pa., 1985, which is incorporated herein by reference or S. M. Berge, et al., “Pharmaceutical Salts,” J. Pharm. Sci., 1977; 66:1-19 both of which are incorporated herein by reference.</p>
+      <p id="p-00035-en" num="0030">Examples of pharmaceutically acceptable acid addition salts include those formed with inorganic acids such as hydrochloric acid, hydrobromic acid, sulfuric acid, nitric acid, phosphoric acid, and the like; as well as organic acids such as acetic acid, trifluoroacetic acid, propionic acid, hexanoic acid, cyclopentanepropionic acid, glycolic acid, pyruvic acid, lactic acid, oxalic acid, maleic acid, malonic acid, succinic acid, fumaric acid, tartaric acid, citric acid, benzoic acid, cinnamic acid, 3-(4-hydroxybenzoyl)benzoic acid, mandelic acid, methanesulfonic acid, ethanesulfonic acid, 1,2-ethanedisulfonic acid, 2-hydroxyethanesulfonic acid, benzenesulfonic acid, 4-chlorobenzenesulfonic acid, 2-naphthalenesulfonic acid, 4-toluenesulfonic acid, camphorsulfonic acid, glucoheptonic acid, 4,4′-methylenebis-(3-hydroxy-2-ene-1-carboxylic acid), 3-phenylpropionic acid, trimethylacetic acid, tertiary butylacetic acid, lauryl sulfuric acid, gluconic acid, glutamic acid, hydroxynaphthoic acid, salicylic acid, stearic acid, muconic acid, p-toluenesulfonic acid, and salicylic acid and the like.</p>
+      <p id="p-00036-en" num="0031">Examples of a pharmaceutically acceptable base addition salts include those formed when an acidic proton present in the parent compound is replaced by a metal ion, such as sodium, potassium, lithium, ammonium, calcium, magnesium, iron, zinc, copper, manganese, aluminum salts and the like. Preferable salts are the ammonium, potassium, sodium, calcium, and magnesium salts. Salts derived from pharmaceutically acceptable organic non-toxic bases include, but are not limited to, salts of primary, secondary, and tertiary amines, substituted amines including naturally occurring substituted amines, cyclic amines and basic ion exchange resins. Examples of organic bases include isopropylamine, trimethylamine, diethylamine, triethylamine, tripropylamine, ethanolamine, 2-dimethylaminoethanol, 2-diethylaminoethanol, dicyclohexylamine, lysine, arginine, histidine, caffeine, procaine, hydrabamine, choline, betaine, ethylenediamine, glucosamine, methylglucamine, theobromine, purines, piperazine, piperidine, N-ethylpiperidine, tromethamine, N-methylglucamine, polyamine resins, and the like. Exemplary organic bases are isopropylamine, diethylamine, ethanolamine, trimethylamine, dicyclohexylamine, choline, and caffeine.</p>
+      <p id="p-00037-en" num="0032">Unless otherwise indicated, “treating” or “treatment” of a disease, disorder, or syndrome, as used herein, means inhibiting the disease, disorder, or syndrome, that is, arresting its development; and relieving the disease, disorder, or syndrome, that is, causing regression of the disease, disorder, or syndrome. As is known in the art, in the context of treatment, adjustments for systemic versus localized delivery, age, body weight, general health, sex, diet, time of administration, drug interaction and the severity of the condition may be necessary, and will be ascertainable with routine experimentation by one of ordinary skill in the art.</p>
+      <p id="p-00038-en" num="0033">“Prevention” means preventing the disease, disorder, or syndrome from occurring in a human, i.e. causing the clinical symptoms of the disease, disorder, or syndrome not to develop in an animal that may be exposed to or predisposed to the disease, disorder, or syndrome but does not yet experience or display symptoms of the disease, disorder, or syndrome.</p>
+      <p id="p-00039-en" num="0034">The terms “comprising” and “including” are used herein in their open-ended and non-limiting sense unless otherwise noted.</p>
+      <p id="p-00040-en" num="0035">The terms “a” and “an” and “the” and similar references in the context of describing the invention (especially in the context of the following claims) are to be construed to cover both the singular and the plural, unless otherwise indicated herein or clearly contradicted by context. Where the plural form is used for compounds, salts, and the like, this is taken to mean also a single compound, salt, or the like.</p>
+      <p id="p-00041-en" num="0036">As used herein, the term “about” generally indicates a possible variation of no more than 10%, 5%, or 1% of a value. For example, “about 25 mg/kg” will generally indicate, in its broadest sense, a value of 22.5-27.5 mg/kg, i.e., 25±10 mg/kg.</p>
+      <p id="p-00042-en" num="0037">The term “oral dosage form,” as used herein, means any pharmaceutical composition intended to be administered to the lower gastrointestinal tract of a human or other mammal via the mouth of said human or other mammal. For the purposes of the present invention, the delivered form can be in the form of a compressed tablet containing granules or particles of a bisphosphonate and a chelating agent, a capsule (e.g., soft gelatin or hard gelatin, consisting of starch, or hydroxypropylmethylcellulose) which contains beads, particles, or suspensions of the bisphosphonate and the chelating agent, or a dry mix containing granules or particles of bisphosphonate and chelating agent for making a reconstituted suspension in water (e.g., a sachet).</p>
+      <p id="p-00043-en" num="0038">As used herein, the term “therapeutic effect” denotes achieving a desired biological, therapeutic, and/or prophylactic result. That result can be reduction, amelioration, palliation, lessening, delaying, and/or alleviation of one or more of the signs, symptoms, or causes of a disease, or any other desired alteration of a biological system. In reference to cancer, the effect may be to cause a tumor to shrink and/or to decrease the growth rate of the tumor (such as to suppress tumor growth) or to prevent or delay other unwanted cell proliferation. In some embodiments, the effect may be to delay development. In some embodiments, the effect may be to prevent or delay recurrence. In other aspects, the effect may: (i) reduce the number of cancer cells; (ii) reduce tumor size; (iii) inhibit, retard, slow to some extent, and preferably stop cancer cell infiltration into peripheral organs; (iv) inhibit (i.e., slow to some extent and preferably stop) tumor metastasis; (v) inhibit tumor growth; (vi) prevent or delay occurrence and/or recurrence of tumor; and/or (vii) relieve to some extent one or more of the symptoms associated with the cancer.</p>
+      <heading id="h-00005-en" level="2">Polymorph E</heading>
+      <p id="p-00044-en" num="0039">As used herein, the term “Polymorph E” refers to the crystalline form of Compound (I) described in Example 2, herein. Polymorph E is identifiable on the basis of, for example, characteristic peaks in an X-ray powder diffraction analysis. X-ray powder diffraction, also referred to as XRPD, is a scientific technique using X-ray, neutron, or electron diffraction on powder, microcrystalline, or other solid materials for structural characterization of the materials. In one embodiment, polymorph E exhibits an X-ray powder diffraction pattern having characteristic peaks expressed in degrees 2-Theta at angles of 18.3°±0.3° and 24.4°±0.3°. In another embodiment, polymorph E exhibits characteristic peaks at angles of 18.8°±0.3° and 23.7°±0.3°. In another embodiment, polymorph E exhibits characteristic peaks at angles of 9.8°±0.3° and 23.2°±0.3°. In another embodiment, polymorph E exhibits characteristic peaks at angles of 10.1°±0.3° and 28.3°±0.3°. In another embodiment, polymorph E exhibits characteristic peaks at angles of 9.8°±0.3°, 10.1°±0.3°, 18.3°±0.3°, 18.8°±0.3°, 23.2°±0.3°, 23.7°±0.3°, 28.3°±0.3° and 24.4°±0.3°.</p>
+      <p id="p-00045-en" num="0040">In other embodiments, polymorph E is identifiable on the basis of characteristic peaks in an FT-IR spectrum. FT-IR, also referred to as Fourier transform infrared spectroscopy, is a technique which is used to obtain an infrared spectrum of absorption, emission, photoconductivity or Raman scattering of a material. In one embodiment, polymorph E exhibits an FT-IR spectrum having characteristic peaks expressed in units of cm<sup>−1 </sup>at values of about 1682, about 1296 and about 1136. In another embodiment, polymorph E exhibits an FT-IR spectrum that possesses two or more characteristic peaks (±4 cm<sup>−1</sup>) listed in Table 1.</p>
+      <p id="p-00046-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Wavenumber (cm<sup>−1</sup>)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>3383.3</entry>
+                </row>
+                <row>
+                  <entry>3300.3</entry>
+                </row>
+                <row>
+                  <entry>3221.1</entry>
+                </row>
+                <row>
+                  <entry>2957.8</entry>
+                </row>
+                <row>
+                  <entry>2930.1</entry>
+                </row>
+                <row>
+                  <entry>1682.0</entry>
+                </row>
+                <row>
+                  <entry>1619.9</entry>
+                </row>
+                <row>
+                  <entry>1593.1</entry>
+                </row>
+                <row>
+                  <entry>1555.6</entry>
+                </row>
+                <row>
+                  <entry>1486.9</entry>
+                </row>
+                <row>
+                  <entry>1461.9</entry>
+                </row>
+                <row>
+                  <entry>1404.6</entry>
+                </row>
+                <row>
+                  <entry>1350.9</entry>
+                </row>
+                <row>
+                  <entry>1296.2</entry>
+                </row>
+                <row>
+                  <entry>1246.4</entry>
+                </row>
+                <row>
+                  <entry>1216.0</entry>
+                </row>
+                <row>
+                  <entry>1136.4</entry>
+                </row>
+                <row>
+                  <entry>1097.7</entry>
+                </row>
+                <row>
+                  <entry>1080.0</entry>
+                </row>
+                <row>
+                  <entry>1023.5</entry>
+                </row>
+                <row>
+                  <entry>973.3</entry>
+                </row>
+                <row>
+                  <entry>935.4</entry>
+                </row>
+                <row>
+                  <entry>912.3</entry>
+                </row>
+                <row>
+                  <entry>860.5</entry>
+                </row>
+                <row>
+                  <entry>842.1</entry>
+                </row>
+                <row>
+                  <entry>790.5</entry>
+                </row>
+                <row>
+                  <entry>767.3</entry>
+                </row>
+                <row>
+                  <entry>744.3</entry>
+                </row>
+                <row>
+                  <entry>714.5</entry>
+                </row>
+                <row>
+                  <entry>685.3</entry>
+                </row>
+                <row>
+                  <entry>666.3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00047-en" num="0041">In other embodiments, polymorph E is identifiable on the basis of a characteristic peak observed in a differential scanning calorimetry thermogram. Differential scanning calorimetry, or DSC, is a thermoanalytical technique in which the difference in the amount of heat required to increase the temperature of a sample and reference is measured as a function of temperature. In one embodiment, polymorph E exhibits a differential scanning calorimetry thermogram having a characteristic peak expressed in units of ° C. at a temperature of about 232±2° C. (e.g., 232.6±2° C.).</p>
+      <p id="p-00048-en" num="0042">In another embodiment, polymorph E exhibits a melting point expressed in units of ° C. at a temperature in the range of about 230-235. In one embodiment, polymorph E exhibits a melting point expressed in units of ° C. at a temperature in the rage of about 231-233. In certain embodiments, polymorph E has an enthalpy of fusion of about 114 J/g.</p>
+      <p id="p-00049-en" num="0043">In some embodiments, polymorph E is identifiable on the basis of a characteristic thermogravimetry curve. Thermogravimetry, also referred to as TG, involves analysis (i.e., thermogravimetric analysis) based on a continuous recording of mass changes of a sample of material as a function of a combination of temperature, time, and in some instances pressure. In one embodiment, polymorph E exhibits a thermogravimetry curve substantially in accordance with <figref>FIG. 1</figref>.</p>
+      <p id="p-00050-en" num="0044">Polymorph E proved to be the most stable polymorphic form of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide evaluated. In light of its superior performance characteristics, polymorph E was selected as the crystal form of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide for use in pharmaceutical compositions.</p>
+      <heading id="h-00006-en" level="2">Pharmaceutical Formulations Comprising Polymorph E</heading>
+      <p id="p-00051-en" num="0045">With the elucidation and selection of a new polymorphic form of Compound (I), a new pharmaceutical formulation was developed. Factorial studies were performed and optimal substituents and concentration levels were discovered. For example, it was determined that a range of 5-15% of pregelatinized starch could be used to yield enhanced early dissolution rates of a tablet, with 10% providing the best performance. In another example, 3% was determined to be the optimal quantity of hypromellose, which yields enhanced tablet compressability and dissolution profile. In another example, it was discovered that the use of 1% colloidal silicon dioxide in external phase produced better flowability of granules.</p>
+      <p id="p-00052-en" num="0046">Thus, in one aspect, a pharmaceutical formulation is provided comprising Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, a hydrogel polymer, and a diluent. In one embodiment, the hydrogel is selected from the group consisting of microcrystalline cellulose, methyl cellulose, hydroxymethyl cellulose, polyvinyl pyrrolidone, hydroxyethyl cellulose, hydroxypropyl cellulose, hydroxypropyl methylcellulose, polyethylene oxides, gums, acrylate polymers and methacrylate polymers. In another embodiment, the hydrogel is microcrystalline cellulose. In one embodiment, the diluent can be selected from the group consisting of sugars, starches or vegetable oils, lactose monohydrate, calcium phosphate, dextrin, dextrose, maltitol, maltose, starch, sucrose or talc. In one embodiment, the diluent is a starch, such as pregelatinized starch or sodium starch glycolate.</p>
+      <p id="p-00053-en" num="0047">In one embodiment, a pharmaceutical formulation is provided comprising 40-60%, by weight, of Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide; 15-35%, by weight, of microcrystalline cellulose; 5-15%, by weight, of pregelatinized starch; and between 0.1-10.0%, by weight, each, of hypromellose, silicon dioxide, and sodium starch glycolate.</p>
+      <p id="p-00054-en" num="0048">In another aspect, the pharmaceutical formulation comprises, by weight, 40-60% Polymorph E; 15-35% microcrystalline cellulose; 5-15% pregelatinized starch and between 0.1-10.0% each of hypromellose, silicon dioxide and sodium starch glycolate. In another embodiment, the pharmaceutical formulation comprises, by weight, about 50% Polymorph E; about 27% microcrystalline cellulose; about 10% pregelatinized starch, about 3% hypromellose, about 1% silicon dioxide and about 4% sodium starch glycolate.</p>
+      <p id="p-00055-en" num="0049">In another embodiment, the pharmaceutical formulations provided above are in tablet form. In another embodiment, the pharmaceutical formulations provided above are in an immediate-release tablet form. The formulations can comprise approximately 50 mg, 100 mg, 150 mg, or 200 mg of Polymorph E.</p>
+      <p id="p-00056-en" num="0050">In another aspect, compressed solid dosage forms are provided for ease of ingestion. In particular, compressed solid dosage forms are provided comprising Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, a hydrogel polymer and a diluent. The dosage form can comprise, by weight, 40-60% Polymorph E; 15-35% microcrystalline cellulose; 5-15% pregelatinized starch and between 0.1-10.0% each of hypromellose, silicon dioxide and sodium starch glycolate. In another example, the dosage form can comprise, by weight, about 50% Polymorph E; about 27% microcrystalline cellulose; about 10% pregelatinized starch, about 3% hypromellose, about 1% silicon dioxide and about 4% sodium starch glycolate. The dosage form can comprise about 40 to 250 mg of Polymorph E or about 50 mg, 100 mg, 150 mg or 200 mg of Polymorph E. In one embodiment, the dosage form is a tablet, while in another it is a caplet.</p>
+      <p id="p-00057-en" num="0051">In another aspect, a compressed solid dosage form is provided comprising A) an active agent containing an effective amount of Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, and B) at least one pharmaceutically acceptable additive, wherein the active agent is present in an amount of more than about 40% by weight based upon the total weight of the compressed solid dosage form. The dosage form can comprise, by weight, 40-60% Polymorph E; 15-35% microcrystalline cellulose; 5-15% pregelatinized starch and between 0.1-10.0% each of hypromellose, silicon dioxide and sodium starch glycolate. In another example, the dosage form can comprise, by weight, about 50% Polymorph E; about 27% microcrystalline cellulose; about 10% pregelatinized starch, about 3% hypromellose, about 1% silicon dioxide and about 4% sodium starch glycolate.</p>
+      <p id="p-00058-en" num="0052">In one embodiment, the active agent of the dosage form comprises at least 95% Polymorph E. In another, the active agent of the dosage form comprises at least 97% Polymorph E, while in another it comprises at least 99% Polymorph E.</p>
+      <p id="p-00059-en" num="0053">In another embodiment, the pharmaceutical formulations provided above are in an immediate-release tablet form. “Immediate release” refers to a dosage form which releases the active ingredient substantially immediately upon contact with gastric juices and will result in substantially complete dissolution within about 1 hour.</p>
+      <p id="p-00060-en" num="0054">The formulations can comprise about 50 mg, 100 mg, 150 mg, or 200 mg of Polymorph E.</p>
+      <p id="p-00061-en" num="0055">In some embodiments, pharmaceutical compositions comprising Polymorph E may take the form of film-coated tablets as detailed in Table 2.</p>
+      <p id="p-00062-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="273pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Composition of Polymorph E 50 mg film-coated tablets</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="112pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Composition per</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>unit [mg/unit]</entry>
+                  <entry />
+                  <entry>Reference to</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="112pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="left" />
+              <colspec colname="5" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Components</entry>
+                  <entry>50 mg</entry>
+                  <entry>200 mg</entry>
+                  <entry>Function</entry>
+                  <entry>standards <sup>a</sup></entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="112pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="left" />
+              <colspec colname="5" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Core tablet</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Internal phase</entry>
+                </row>
+                <row>
+                  <entry>Polymorph E</entry>
+                  <entry>50.0</entry>
+                  <entry>200.0</entry>
+                  <entry>Drug</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>substance</entry>
+                </row>
+                <row>
+                  <entry>Microcrystalline cellulose 90 μm</entry>
+                  <entry>27.0</entry>
+                  <entry>108.0</entry>
+                  <entry>Diluent</entry>
+                  <entry>Ph. Eur.-NF</entry>
+                </row>
+                <row>
+                  <entry>Pregelatinized starch</entry>
+                  <entry>10.0</entry>
+                  <entry>40.0</entry>
+                  <entry>Diluent</entry>
+                  <entry>Ph. Eur.-NF</entry>
+                </row>
+                <row>
+                  <entry>Hypromellose 6 mPa · s</entry>
+                  <entry>3.0</entry>
+                  <entry>12.0</entry>
+                  <entry>Binder</entry>
+                  <entry>Ph. Eur.-USP</entry>
+                </row>
+                <row>
+                  <entry>Colloidal anhydrous silica-Colloidal</entry>
+                  <entry>1.0</entry>
+                  <entry>4.0</entry>
+                  <entry>Flow aid</entry>
+                  <entry>Ph. Eur.-NF</entry>
+                </row>
+                <row>
+                  <entry>silicon dioxide</entry>
+                </row>
+                <row>
+                  <entry>Sodium starch glycolate (type A)</entry>
+                  <entry>4.0</entry>
+                  <entry>16.0</entry>
+                  <entry>Disintegrant</entry>
+                  <entry>Ph. Eur.-NF</entry>
+                </row>
+                <row>
+                  <entry>Purified water <sup>b</sup></entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>Granulation</entry>
+                  <entry>Ph. Eur.-USP</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>agent</entry>
+                </row>
+                <row>
+                  <entry>External phase</entry>
+                </row>
+                <row>
+                  <entry>Sodium starch glycolate (type A)</entry>
+                  <entry>3.0</entry>
+                  <entry>12.0</entry>
+                  <entry>Disintegrant</entry>
+                  <entry>Ph. Eur.-NF</entry>
+                </row>
+                <row>
+                  <entry>Colloidal anhydrous silica-Colloidal</entry>
+                  <entry>1.0</entry>
+                  <entry>4.0</entry>
+                  <entry>Flow aid</entry>
+                  <entry>Ph. Eur.-NF</entry>
+                </row>
+                <row>
+                  <entry>silicon dioxide</entry>
+                </row>
+                <row>
+                  <entry>Magnesium stearate vegetable 6-12</entry>
+                  <entry>1.0</entry>
+                  <entry>4.0</entry>
+                  <entry>Lubricant</entry>
+                  <entry>Ph. Eur.-NF</entry>
+                </row>
+                <row>
+                  <entry>m<sup>2</sup>/g</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Core tablet terminated at</entry>
+                  <entry>100.0</entry>
+                  <entry>400.0</entry>
+                </row>
+                <row>
+                  <entry>Film-coating</entry>
+                </row>
+                <row>
+                  <entry>Opadry ® II 33G94107 pink <sup>c</sup></entry>
+                  <entry>5.0</entry>
+                  <entry>20.0</entry>
+                  <entry>Film-coating</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>agent</entry>
+                </row>
+                <row>
+                  <entry>Purified water <sup>b</sup></entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>Film-coating</entry>
+                  <entry>Ph. Eur.-USP</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>solvent</entry>
+                </row>
+                <row>
+                  <entry>Film-coated tablet terminated at</entry>
+                  <entry>105.0 mg</entry>
+                  <entry>420.0 mg</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00001-en">
+                    <sup>a </sup>When a Pharmacopeia is referred to, then the current edition of this Pharmacopoeia is applied.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00002-en">
+                    <sup>b </sup>Removed during manufacture.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00003-en">
+                    <sup>c </sup>Composed of lactose monohydrate Ph. Eur.-NF-JP (21%), hypromellose 6 mPa · s Ph. Eur.-USP-JP (40%), titanium dioxide Ph. Eur.-USP-JP (24.830%), macrogol-PEG 3350 Ph. Eur.-NF (8%), triacetin Ph. Eur.-USP-JPE (6%) and iron oxide red NF-JPE (0.170%).</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00007-en" level="2">Preparation of Pharmaceutical Formulation Comprising Polymorph E</heading>
+      <p id="p-00063-en" num="0056">The flow diagram provided in <figref>FIG. 2</figref> depicts a manufacturing process, including in-process controls, for preparing Polymorph E film-coated tablets. In line with the diagram, Polymorph E film-coated tablets can be prepared via the following steps: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>1. Weigh all the components.</li><li>2. Sieve half of microcrystalline cellulose and colloidal anhydrous silica for internal phase through a 1 mm screen mesh size.</li><li>3. Mix components sieved at step 2 for about 2 minutes at about 7 r/min.</li><li>4. Add Polymorph E, remaining microcrystalline cellulose, pregelatinized starch and sodium starch glycolate for internal phase then proceed to the mixing for about 10 minutes at about 7 r/min.</li><li>5. Prepare the binding solution by adding hypromellose 6 mPa·s under stirring conditions into purified water and mix for about 30 minutes. Let degazing before use.</li><li>6. Charge the blend into a fluid bed granulator previously heated. Add the binding solution to the blend with an inlet air temperature of 65±5° C. and proceed to granulation.</li><li>7. Dry the wet granules using an inlet air temperature of 65±5° C. until a loss on drying similar to that obtained on the dry blend is achieved.</li><li>8. Pass the dried granules, colloidal anhydrous silica and sodium starch glycolate for external phase on a 1 mm screen mesh size.</li><li>9. Mix for about 15 minutes at about 7 r/min</li><li>10. Sieve magnesium stearate through a 0.8 mm screen mesh size.</li><li>11. Add magnesium stearate previously sieved to the mix and proceed to final mixing for about 15 minutes at about 7 r/min to obtain a homogeneous blend.</li><li>12. Compress the lubricated granules on a rotative press fitted with either 9×4 mm punches at a nominal mass of 100 mg per 50 mg tablet or with 6.35×14.30 mm punches at a nominal mass of 400 mg per 200 mg tablet.</li><li>13. Prepare in a mixing tank a sufficient amount of the film-coating suspension by mixing Opadry® II 33G94107 pink with purified water.</li><li>14. Place the tablets obtained in step 12 in a coating pan and spray the film-coating suspension onto the cores with an inlet air temperature of 62±5° C. Continue the coating process until not less than 5 mg of coating material is applied for 50 mg tablets and not less than 20 mg of coating material for 200 mg tablets.</li><li>15. Perform the primary packaging and labeling operations.</li><li>16. Perform the secondary packaging and labeling operations.</li></ul></li></ul></p>
+      <p id="p-00064-en" num="0073">To assure identity, quality, strength, and purity of the Drug Product before use in the clinical study, the Drug Product will be tested against the specifications listed in Table 3. These specifications will be applied to tablets manufactured under current Good Manufacturing Practice (cGMP) regulations for use in the clinical studies.</p>
+      <p id="p-00065-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="343pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Specifications for Polymorph E pink film-coated tablets</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="140pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="119pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Test Name</entry>
+                  <entry>Test Method</entry>
+                  <entry>Acceptance Criteria</entry>
+                  <entry>Stability</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Appearance</entry>
+                  <entry>Visual</entry>
+                  <entry>Light pink to pink caplet film-coated</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>tablet</entry>
+                </row>
+                <row>
+                  <entry>Identification test</entry>
+                  <entry>HPLC</entry>
+                  <entry>The retention time of sample</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>corresponds to retention time of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>reference (±5%)   <sup> </sup></entry>
+                </row>
+                <row>
+                  <entry>Identification test</entry>
+                  <entry>UV</entry>
+                  <entry>Complies to reference spectrum</entry>
+                </row>
+                <row>
+                  <entry>Assay</entry>
+                  <entry>HPLC</entry>
+                  <entry>50 mg tablets: 45.0-55.0 mg/unit of</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Polymorph E</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>200 mg tablets: 180.0-220.0 mg/unit</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>of Polymorph E</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>   (90.0 to 110.0% of label claim)</entry>
+                </row>
+                <row>
+                  <entry>Degradation products</entry>
+                  <entry>HPLC</entry>
+                  <entry />
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Rr 1.09</entry>
+                  <entry />
+                  <entry>≦0.25%</entry>
+                </row>
+                <row>
+                  <entry>SAR334884A</entry>
+                  <entry />
+                  <entry>≦0.75%</entry>
+                </row>
+                <row>
+                  <entry>Any unspecified degradation product (each)</entry>
+                  <entry />
+                  <entry>≦0.20%</entry>
+                </row>
+                <row>
+                  <entry>Total degradation products</entry>
+                  <entry />
+                  <entry> ≦4.0%</entry>
+                </row>
+                <row>
+                  <entry>Dissolution</entry>
+                  <entry />
+                  <entry>Q = 70 in 60 minutes</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Stage I</entry>
+                </row>
+                <row>
+                  <entry>Number of units out of 6 &lt; Q + 5% of label</entry>
+                  <entry>USP &lt;711&gt;</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>claim</entry>
+                  <entry>Ph Eur 2.9.3</entry>
+                </row>
+                <row>
+                  <entry>Stage II</entry>
+                </row>
+                <row>
+                  <entry>Average of 12 units</entry>
+                  <entry />
+                  <entry> ≧Q%</entry>
+                </row>
+                <row>
+                  <entry>Number of units out of 12 &lt; Q − 15% of label</entry>
+                  <entry />
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>claim</entry>
+                </row>
+                <row>
+                  <entry>Stage III</entry>
+                </row>
+                <row>
+                  <entry>Average of 24 units</entry>
+                  <entry />
+                  <entry> ≧Q%</entry>
+                </row>
+                <row>
+                  <entry>Number of units out of 24 &lt; Q − 15% of label</entry>
+                  <entry />
+                  <entry>≦2  </entry>
+                </row>
+                <row>
+                  <entry>claim</entry>
+                </row>
+                <row>
+                  <entry>Number of units out of 24 &lt; Q − 25% of label</entry>
+                  <entry />
+                  <entry> 0</entry>
+                </row>
+                <row>
+                  <entry>claim</entry>
+                </row>
+                <row>
+                  <entry>Uniformity of Dosage Units by Weight</entry>
+                </row>
+                <row>
+                  <entry>variation</entry>
+                </row>
+                <row>
+                  <entry>Stage I</entry>
+                </row>
+                <row>
+                  <entry>Acceptance value for 10 units (L1)</entry>
+                  <entry>USP &lt;905&gt;</entry>
+                  <entry>≦15.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ph Eur 2.9.40</entry>
+                </row>
+                <row>
+                  <entry>Stage II</entry>
+                </row>
+                <row>
+                  <entry>Acceptance value for 30 units (L1)</entry>
+                  <entry />
+                  <entry>≦15.0</entry>
+                </row>
+                <row>
+                  <entry>Number of units outside of 0.75*M to 1.25*M</entry>
+                  <entry />
+                  <entry> 0</entry>
+                </row>
+                <row>
+                  <entry>Water content</entry>
+                  <entry>Microcoulometry</entry>
+                  <entry>To be determined</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Microbial tests</entry>
+                  <entry />
+                  <entry />
+                  <entry> X*</entry>
+                </row>
+                <row>
+                  <entry>Total viable aerobic count</entry>
+                  <entry>USP &lt;61&gt;</entry>
+                  <entry>≦1000 cfu/g</entry>
+                </row>
+                <row>
+                  <entry>Yeasts and molds count</entry>
+                  <entry>Ph Eur 2.6.12</entry>
+                  <entry> ≦100 cfu/g</entry>
+                </row>
+                <row>
+                  <entry>
+                    <i>Escherichia coli</i>
+                  </entry>
+                  <entry />
+                  <entry>Absence in 1 g</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00004-en">*on an annual basis</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> Methods of Treating Cancer with Pharmaceutical Formulations of Polymorph E </p>
+      <p id="p-00066-en" num="0074">In one aspect, the invention provides a method of treating cancer in a subject, comprising administering to the subject an effective amount a pharmaceutical formulation comprising Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, a hydrogel polymer, and a diluent.</p>
+      <p id="p-00067-en" num="0075">“Cancer” refers to cellular-proliferative disease states, including but not limited to: Cardiac: sarcoma (angiosarcoma, fibrosarcoma, rhabdomyosarcoma, liposarcoma), myxoma, rhabdomyoma, fibroma, lipoma and teratoma; Lung: bronchogenic carcinoma (squamous cell, undifferentiated small cell, undifferentiated large cell, adenocarcinoma), alveolar (bronchiolar) carcinoma, bronchial adenoma, sarcoma, lymphoma, chondromatous hanlartoma, mesothelioma; Gastrointestinal: esophagus (squamous cell carcinoma, adenocarcinoma, leiomyosarcoma, lymphoma), stomach (carcinoma, lymphoma, leiomyosarcoma), pancreas (ductal adenocarcinoma, insulinoma, glucagonoma, gastrinoma, carcinoid tumors, vipoma), small bowel (adenocarcinoma, lymphoma, carcinoid tumors, Kaposi's sarcoma, leiomyoma, hemangioma, lipoma, neurofibroma, fibroma), large bowel (adenocarcinoma, tubular adenoma, villous adenoma, hamartoma, leiomyoma); Genitourinary tract: kidney (adeno carcinoma, Wilms' tumor [nephroblastoma], lymphoma, leukemia), bladder and urethra (squamous cell carcinoma, transitional cell carcinoma, adenocarcinoma), prostate (adenocarcinoma, sarcoma), testis (seminoma, teratoma, embryonal carcinoma, teratocarcinoma, choriocarcinoma, sarcoma, interstitial cell carcinoma, fibroma, fibroadenoma, adenomatoid tumors, lipoma); Liver: hepatoma (hepatocellular carcinoma), cholangiocarcinoma, hepatoblastoma, angiosarcoma, hepatocellular adenoma, hemangioma; Bone: osteogenic sarcoma (osteosarcoma), fibrosarcoma, malignant fibrous histiocytoma, chondrosarcoma, Ewing's sarcoma, malignant lymphoma (reticulum cell sarcoma), multiple myeloma, malignant giant cell tumor chordoma, osteochronfroma (osteocartilaginous exostoses), benign chondroma, chondroblastoma, chondromyxofibroma, osteoid osteoma and giant cell tumors; Nervous system: skull (osteoma, hemangioma, granuloma, xanthoma, osteitis deformans), meninges (meningioma, meningiosarcoma, gliomatosis), brain (astrocytoma, medulloblastoma, glioma, ependymoma, germinoma [pinealoma], glioblastoma multiform, oligodendroglioma, schwannoma, retinoblastoma, congenital tumors), spinal cord neurofibroma, meningioma, glioma, sarcoma); Gynecological: uterus (endometrial carcinoma), cervix (cervical carcinoma, pre-tumor cervical dysplasia), ovaries (ovarian carcinoma [serous cystadenocarcinoma, mucinous cystadenocarcinoma, unclassified carcinoma], granulosa-thecal cell tumors, SertoliLeydig cell tumors, dysgerminoma, malignant teratoma), vulva (squamous cell carcinoma, intraepithelial carcinoma, adenocarcinoma, fibrosarcoma, melanoma), vagina (clear cell carcinoma, squamous cell carcinoma, botryoid sarcoma (embryonal rhabdomyosarcoma], fallopian tubes (carcinoma); Hematologic: blood (myeloid leukemia [acute and chronic], acute lymphoblastic leukemia, chronic lymphocytic leukemia, myeloproliferative diseases, multiple myeloma, myelodysplastic syndrome), Hodgkin's disease, non-Hodgkin's lymphoma [malignant lymphoma]; Skin; malignant melanoma, basal cell carcinoma, squamous cell carcinoma, Kaposi's sarcoma, moles dysplastic nevi, lipoma, angioma, dermatofibroma, keloids, psoriasis; and Adrenal glands: neuroblastoma. Thus, the term “cancerous cell” as provided herein, includes a cell afflicted by any one of the above-identified conditions.</p>
+      <p id="p-00068-en" num="0076">In certain embodiments, the cancer is a solid tumor. In a particular embodiment, the solid tumor is metastatic or unresectable.</p>
+      <p id="p-00069-en" num="0077">In certain embodiments, the cancer is a lymphoma, e.g., chronic lymphocytic lymphoma (CLL) or small lymphocytic lymphoma (SLL). In a particular embodiment, the lymphoma is a relapsed or refractory lymphoma.</p>
+      <p id="p-00070-en" num="0078">In certain embodiments of the method, the pharmaceutical formulation comprising Polymorph E is formulated into a tablet. In a particular, embodiment, the tablet is an immediate-release film-coated tablet. Tablet forms of Polymorph E can be formulated to contain any required quantity of Polymorph E. In a particular embodiment, the tablet is formulated to contain 50 mg or 200 mg of 50% w/w Polymorph E free base.</p>
+      <p id="p-00071-en" num="0079">In another aspect, provided herein is the use of a pharmaceutical formulation comprising Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, a hydrogel polymer, and a diluent, for the preparation of a medicament for the treatment of cancer, as described above.</p>
+      <heading id="h-00008-en" level="2">Administration</heading>
+      <p id="p-00072-en" num="0080">Administration of pharmaceutical formulations comprising polymorph E can be carried out via any of the accepted modes of administration or agents for serving similar utilities. Administration can be, for example, orally, nasally, parenterally (intravenous, intramuscular, or subcutaneous), topically, transdermally, intravaginally, intravesically, intracistemally, or rectally, in the form of solid, semi-solid, lyophilized powder, or liquid dosage forms, such as for example, tablets, suppositories, pills, soft elastic and hard gelatin capsules, powders, solutions, suspensions, or aerosols, or the like, specifically in unit dosage forms suitable for simple administration of precise dosages. In a preferred embodiment, administration is by the oral route in tablet form.</p>
+      <p id="p-00073-en" num="0081">In the pharmaceutical compositions disclosed herein, Polymorph E is administered in an effective amount which will vary depending upon a variety of factors including the activity of the specific compound employed, the metabolic stability and length of action of the compound, the age, body weight, general health, sex, diet, mode and time of administration, rate of excretion, drug combination, the severity of the particular disease-states, and the host undergoing therapy. Polymorph E can be administered to a patient at dosage levels in the range of about 0.1 to about 2,000 mg per day.</p>
+      <p id="p-00074-en" num="0082">The specific dosage used for children will generally be lower due to the smaller size and weight of children, and the doses can be adjusted according to size and weight factors, as well as additional factors. For example, the dosage can depend on additional factors including the requirements of the child, the severity of the condition being treated, and the pharmacological activity of the compound being used. The determination of optimum dosages for a particular child is well known to one of ordinary skill in the art. If formulated as a fixed dose, such combination products employ the compounds of this invention within the dosage range described above and the other pharmaceutically active agent(s) within approved dosage ranges. Polymorph E alternatively may be used sequentially with known pharmaceutically acceptable agent(s) when a combination formulation is inappropriate.</p>
+      <heading id="h-00009-en" level="2">Kits</heading>
+      <p id="p-00075-en" num="0083">In another embodiment, kits are provided comprising pharmaceutical formulations comprising polymorph E of the compound N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide. In one example, the kit contains a pharmaceutical composition comprising polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide. In one embodiment, the kit comprises instructions for using the compound or pharmaceutical composition to treat a patient with cancer.</p>
+      <heading id="h-00010-en" level="1">Examples</heading>
+      <heading id="h-00011-en" level="1">Example 1</heading>
+      <heading id="h-00012-en" level="1">Synthesis of Compound (I)</heading>
+      <p id="p-00076-en" num="0084">
+        <figref>FIG. 3</figref> depicts a synthesis scheme for preparing compound (I). A description of the scheme is provided below.</p>
+      <heading id="h-00013-en" level="1">Synthesis of (N-(3-chloroquinoxalin-2-yl)-3-nitrobenzenesulfonamide)</heading>
+      <p id="p-00077-en" num="0085">1 kg of 2,3 dichloroquinoxaline and 1 kg of 3-nitrobenzenesulfonamide are mixed in 5 volumes of acetonitrile. The reaction mixture is heated to reflux. 2.3 kg of DBU and 1 volume of acetonitrile are added. After completion of the reaction, cool down at 5° C. Add 12 volumes of methanol and 1.53 kg of HCl, filter the reaction mixture. Wash the cake with 6 volumes of methanol and dry under vacuum.</p>
+      <heading id="h-00014-en" level="1">Synthesis of (N-(3-((2-chloro-5-methoxyphenyl)amino)quinoxalin-2-yl)-3-nitrobenzenesulfonamide)</heading>
+      <p id="p-00078-en" num="0086">Prepare a solution with 0.585 kg of 2-chloro-5-methoxyaniline-HCl, 3.5 volumes of acetonitrile and 0.46 kg of DBU. (solution A) Mix 1 kg of N-(3-chloroquinoxalin-2-yl)-3-nitrobenzenesulfonamide and 5.5 volumes of acetonitrile. Heat to reflux. Add solution A and 1 volume of acetonitrile onto the reaction mixture. After completion of the reaction at reflux, cool down at 20° C., dilute with 10 volumes of methanol and filter. Wash the cake 3 times with 5 volumes of methanol and dry it under vacuum.</p>
+      <heading id="h-00015-en" level="1">Synthesis of 3-amino-N-{3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2-yl}benzenesulfonamide hydrochloride</heading>
+      <p id="p-00079-en" num="0087">To 1 kg of N-{3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2-yl}-3-nitrobenzenesulfonamide, add a catalytic amount of platinum sulfide on carbon (Pt(S)C), 6 volumes of THF, 0.16 volume of water and 2 volumes of ethanol. The reaction mixture is stirred and heated to reflux. An aqueous potassium formate solution (1.4 volume of water+0.69 kg of potassium formate) is added. The reaction mixture is stirred at reflux until completion of the reaction and cooled down at 50° C. After the addition of 10 volumes of methanol and a one hour stirring, the catalyst is filtered off and washed with 3.4 volumes of methanol. The filtered solution is cooled down at 20° C. 0.62 kg of HCl are added. The reaction mixture is stirred at 20° C., cooled down at 5° C. and filtered. The cake is washed with methanol (6 volumes) and dried under vacuum.</p>
+      <heading id="h-00016-en" level="1">Synthesis of N-[3-({3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2-yl}sulfamoyl)phenyl]-2-methylalaninamide (crude)</heading>
+      <p id="p-00080-en" num="0088">Synthesis of 2-methylalanyl chloride hydrochloride. To 0.42 kg of 2-amino-2-methylpropanoic acid, add 3.7 volumes of acetonitrile, 0.04 volume of dimethylformamide and 0.62 kg of oxalyl chloride. The reaction mixture is stirred at 20° C. until completion of the reaction and filtered. The cake is washed twice with 1 volume of acetonitrile and dried under vacuum.</p>
+      <p id="p-00081-en" num="0089">To 1 kg of 3-amino-N-{3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2-yl}benzenesulfonamide hydrochloride, add 8 volumes of dimethylformamide and 0.385 kg of 2-methylalanyl chloride hydrochloride at 5° C. After completion of the reaction, heat at 50° C. and add a solution made of K2HPO4 (1.4 kg), water (16.5 volumes) and ethanol (7.1 volumes). Cool down the reaction mixture at 10° C., stir 2 hours at 10° C. and filter. The cake is washed 3 times with 10 volumes of water and dried under vacuum.</p>
+      <p id="p-00082-en" num="0090">Crude N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide was recrystallized from dimethylacetamide and toluene using charcoal, followed by reslurry in ethanol, and finally washings by isopropanol/ethanol mixture, resulting in the compound in pure form.</p>
+      <p id="p-00083-en" num="0091">Surprisingly and unexpectedly, the solid state compound recovered from this process was entirely N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide. That is, while a number of tautomeric forms of the compound may exist, the instant process yielded a solid compound of only N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide and not a mixture of tautomers, as confirmed by ssNMR.</p>
+      <heading id="h-00017-en" level="1">Example 2</heading>
+      <heading id="h-00018-en" level="1">Preparation of Polymorph E</heading>
+      <p id="p-00084-en" num="0092">The following crystallization takes place in a double jacket reactor; the temperature in the reactor is checked and controlled via the temperature in the double jacket. The stirring apparatus is a glasslock type and the speed of stirring is fixed at 350 rpm.</p>
+      <p id="p-00085-en" num="0093">10 g of raw compound (I) was combined with 10V (100 mL) of dimethylacetamide, the temperature of the double jacket is fixed at 95° C., and the compound is allowed to dissolve. The mixture is lowered to 70° C. and 5V (50 ml) of toluene is added. The crystallization begins during this time. The mixture is then heated up to 90° C., maintained one hour at that temperature and lowered to 20° C. with a cooling rate of −10° C./hour. Before filtration, an aliquot of suspension is withdrawn and observed by optical microscopy. The crystals of solvate appear under the shape of fine rods. See <figref>FIG. 4</figref>. The suspension is filtered, then washed three times: twice with isopropanol (20 ml for each of the washes), then once with ethanol (10 ml), to yield the DMAC solvate of compound (I).</p>
+      <p id="p-00086-en" num="0094">The wet powder is re-slurried in 10 Volumes of ethanol at the temperature of 50° C., with a speed of stirring of 200 rpm, and then seeded with 1% (w/w) of polymorph E. The mixture is maintained in isotherm under stirring for several hours. The polymorphic conversion to polymorph E takes place during this stage. The temperature is lowered again to 50° C. for filtration. This transformation can be followed by optical microscopy, by Raman spectroscopy and Lasentec probe. The crystals of polymorph E appear in the shape of rhombohedric particles. See <figref>FIG. 5</figref>.</p>
+      <p id="p-00087-en" num="0095">When the transformation is complete, the mixture is filtered at 50° C., then crystals are washed once with isopropanol (20 ml) and again with a volume of ethanol (10 ml). Crystals are dried in statics (vacuum tray dryer or oven ventilated tray dryer at the respective temperatures of 70° C. and 110° C.) for 12 at least hours.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A pharmaceutical formulation comprising Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, a hydrogel polymer and a diluent.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The pharmaceutical formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the hydrogel is selected from the group consisting of microcrystalline cellulose, methyl cellulose, hydroxymethyl cellulose, polyvinyl pyrrolidone, hydroxyethyl cellulose, hydroxypropyl cellulose, hydroxypropyl methylcellulose, polyethylene oxides, gums, acrylate polymers and methacrylate polymers.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The pharmaceutical formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the hydrogel is microcrystalline cellulose.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The pharmaceutical formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the diluent is selected from the group consisting of sugars, starches, vegetable oils, lactose monohydrate, calcium phosphate, dextrin, dextrose, maltitol, maltose, starch, sucrose and talc.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The pharmaceutical formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the diluent is a starch, and the starch is pregelatinized starch or sodium starch glycolate.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The pharmaceutical formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref> comprising, by weight, 40-60% Polymorph E; 15-35% microcrystalline cellulose; 5-15% pregelatinized starch and between 0.1-10.0% each of hypromellose, silicon dioxide and sodium starch glycolate.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The pharmaceutical formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref> comprising, by weight, about 50% Polymorph E; about 27% microcrystalline cellulose; about 10% pregelatinized starch, about 3% hypromellose, about 1% silicon dioxide and about 4% sodium starch glycolate.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The pharmaceutical formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the pharmaceutical formulation is in tablet form.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The pharmaceutical formulation of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the pharmaceutical formulation is in caplet form.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The pharmaceutical formulation of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the pharmaceutical formulation is an immediate-release tablet form.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The pharmaceutical formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the formulation comprises about 50 mg, 100 mg, 150 mg, or 200 mg of Polymorph E.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The pharmaceutical formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the formulation provides a therapeutic effect.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. A compressed solid dosage form comprising Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, a hydrogel polymer and a diluent.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The dosage form of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, comprising, by weight, 40-60% Polymorph E; 15-35% microcrystalline cellulose; 5-15% pregelatinized starch and between 0.1-10.0% each of hypromellose, silicon dioxide and sodium starch glycolate.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The dosage form of <claim-ref idref="clm-00014-en">claim 14</claim-ref> comprising, by weight, about 50% Polymorph E; about 27% microcrystalline cellulose; about 10% pregelatinized starch, about 3% hypromellose, about 1% silicon dioxide and about 4% sodium starch glycolate.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The dosage form of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the dosage form comprises about 40 to 250 mg of Polymorph E.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The dosage form of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the dosage form comprises about 50 mg, 100 mg, 150 mg or 200 mg of Polymorph E.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The dosage form of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the dosage form is a tablet.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The dosage form of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the dosage form is a caplet.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. A compressed solid dosage form comprising
+<claim-text>A) an active agent containing an effective amount of Polymorph E of N-(3-{[(2Z)-3-[(2-chloro-5-methoxyphenyl)amino]quinoxalin-2(1H)-ylidene]sulfamoyl}phenyl)-2-methylalaninamide, and</claim-text><claim-text>B) at least one pharmaceutically acceptable additive,</claim-text></claim-text>
+      <claim-text>wherein the active agent is present in an amount of more than about 40% by weight based upon the total weight of the compressed solid dosage form.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The dosage form of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, comprising, by weight, 40-60% Polymorph E; 15-35% microcrystalline cellulose; 5-15% pregelatinized starch and between 0.1-10.0% each of hypromellose, silicon dioxide and sodium starch glycolate.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The dosage form of <claim-ref idref="clm-00021-en">claim 21</claim-ref> comprising, by weight, about 50% Polymorph E; about 27% microcrystalline cellulose; about 10% pregelatinized starch, about 3% hypromellose, about 1% silicon dioxide and about 4% sodium starch glycolate.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The dosage form of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the active agent comprises at least 95% Polymorph E.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The dosage form of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein the active agent comprises at least 97% Polymorph E.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The dosage form of <claim-ref idref="clm-00024-en">claim 24</claim-ref>, wherein the active agent comprises at least 99% Polymorph E.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. A method of treating cancer in a subject, comprising administering to the subject the pharmaceutical formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. A method of treating cancer in a subject, comprising administering to the subject the dosage form of <claim-ref idref="clm-00013-en">claim 13</claim-ref>.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. The method of <claim-ref idref="clm-00026-en">claim 26</claim-ref>, wherein the cancer is a solid tumor or lymphoma.</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. The method of <claim-ref idref="clm-00028-en">claim 28</claim-ref>, wherein the lymphoma is a relapsed or refractory lymphoma.</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>30</b>. The method of <claim-ref idref="clm-00028-en">claim 28</claim-ref>, wherein the lymphoma is chronic lymphocytic lymphoma (CLL) or small lymphocytic lymphoma (SLL).</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. The method of <claim-ref idref="clm-00026-en">claim 26</claim-ref>, wherein the cancer is breast cancer, colon cancer, rectal cancer, endometrial cancer, gastric carcinoma, glioblastoma, hepatocellular carcinoma, small cell lung cancer, non-small cell lung cancer, melanoma, ovarian cancer, cervical cancer, pancreatic cancer, prostate carcinoma, acute myelogenous leukemia (AML), chronic myelogenous leukemia (CML), or thyroid carcinoma.</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>32</b>. The method of <claim-ref idref="clm-00026-en">claim 26</claim-ref>, wherein the treatment comprises the administration of an additional anticancer agent.</claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en">
+      <claim-text>
+        <b>33</b>. The method of <claim-ref idref="clm-00032-en">claim 32</claim-ref>, wherein the anticancer agent is carboplatin, paclitaxel, erlotinib, or trastuzumab.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246038A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246038A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246038A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246038A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246038A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246038A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246038A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246038A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246038A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246038A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246038A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246038A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246038A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246038A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246038A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246038A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246038A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246038A1-20150903-C00003.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150246038A1.PDF" type="pdf" size="1012947" pages="18" />
+</lexisnexis-patent-document>

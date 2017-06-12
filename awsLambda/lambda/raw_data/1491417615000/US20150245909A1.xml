@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245909A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021607" date-changed="20151221" time-changed="191143">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140966">
+        <country>US</country>
+        <doc-number>20150245909</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14669738</doc-number>
+        <date>20150326</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61F   2/24        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61F   2/90        20060101A N20080531RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>90</subgroup>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20080531</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61F   2/2418      20130101 FI20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>2418</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61F   2/2412      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>2412</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61F   2/2433      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>2433</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61F   2/2436      20130101 LA20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>2436</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61F   2/2439      20130101 LI20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>2439</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61F2220/0016      20130101 LA20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2220</main-group>
+        <subgroup>0016</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61F2220/005       20130101 LA20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2220</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61F2220/0058      20130101 LA20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2220</main-group>
+        <subgroup>0058</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61F2220/0075      20130101 LA20150216BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2220</main-group>
+        <subgroup>0075</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150216</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61F2230/005       20130101 LA20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2230</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61F2230/0054      20130101 LA20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2230</main-group>
+        <subgroup>0054</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61F2230/0065      20130101 LA20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2230</main-group>
+        <subgroup>0065</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61F2230/0078      20130101 LA20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2230</main-group>
+        <subgroup>0078</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">21</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Everting Heart Valve</invention-title>
+    <references-cited date-changed="20151103">
+      <patent-citations name="patcit" date-changed="20151103" />
+      <citation>
+        <patcit num="1" dnum="US6352554B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6352554</doc-number>
+            <kind>B2</kind>
+            <name>DE PAULIS RUGGERO [IT]</name>
+            <date>20020305</date>
+          </document-id>
+          <application-date>
+            <date>19990429</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US8992608B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8992608</doc-number>
+            <kind>B2</kind>
+            <name>HAUG ULRICH R [US], et al</name>
+            <date>20150331</date>
+          </document-id>
+          <application-date>
+            <date>20090626</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US5957949A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5957949</doc-number>
+            <kind>A</kind>
+            <name>LEONHARDT HOWARD J [US], et al</name>
+            <date>19990928</date>
+          </document-id>
+          <application-date>
+            <date>19970501</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12492512</doc-number>
+              <date>20090626</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8992608</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006697</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12269213</doc-number>
+              <date>20081112</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8668733</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12492512</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>10870340</doc-number>
+              <date>20040616</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>7780725</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12269213</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Sadra Medical, Inc.</orgname>
+            <role>02</role>
+            <address>
+              <city>Los Gatos</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Salahieh</last-name>
+            <first-name>Amr</first-name>
+            <address>
+              <city>Saratoga</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Haug</last-name>
+            <first-name>Ulrich R.</first-name>
+            <address>
+              <city>Campbell</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Valencia</last-name>
+            <first-name>Hans F.</first-name>
+            <address>
+              <city>Santa Clara</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Geshlider</last-name>
+            <first-name>Robert A.</first-name>
+            <address>
+              <city>San Francisco</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Saul</last-name>
+            <first-name>Tom</first-name>
+            <address>
+              <city>El Granada</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Morejohn</last-name>
+            <first-name>Dwight P.</first-name>
+            <address>
+              <city>Davis</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Michlitsch</last-name>
+            <first-name>Kenneth J.</first-name>
+            <address>
+              <city>Livermore</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173464332">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245909</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150326</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173464331">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245909</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150326</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides methods and apparatus for endovascularly replacing a patient's heart valve. The apparatus includes a replacement valve and an expandable anchor configured for endovascular delivery to a vicinity of the patient's heart valve. In some embodiments, the replacement valve is adapted to wrap about the anchor, for example, by everting during endovascular deployment. In some embodiments, the replacement valve is not connected to expandable portions of the anchor. In some embodiments, the anchor is configured for active foreshortening during endovascular deployment. In some embodiments, the anchor includes expandable lip and skirt regions for engaging the patient's heart valve during deployment. In some embodiments, the anchor comprises a braid fabricated from a single strand of wire. In some embodiments, the apparatus includes a lock configured to maintain anchor expansion. The invention also includes methods for endovascularly replacing a patient's heart valve. In some embodiments, the method includes the steps of endovascularly delivering a replacement valve and an expandable anchor to a vicinity of the heart valve, wrapping at least a portion of the replacement valve about the anchor, and expanding the anchor to a deployed, configuration.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150702</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015245909A1</docdb-publication-number>
+      <docdb-application-id>444207762</docdb-application-id>
+      <new-owner>BOSTON SCIENTIFIC SCIMED, INC., MINNESOTA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:SADRA MEDICAL, INC.;REEL/FRAME:036049/0194</free-text-description>
+      <effective-date>
+        <date>20150701</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of U.S. application Ser. No. 12/492,512, filed Jun. 26, 2009, now U.S. Pat. No. 8,992,608; which is a divisional of U.S. application Ser. No. 12/269,213 filed Nov. 12, 2008, now U.S. Pat. No. 8,668,733; which application is a continuation of U.S. application Ser. No. 10/870,340, filed Jun. 16, 2004, now U.S. Pat. No. 7,780,725, entitled “Everting Heart Valve”, the disclosures of which are incorporated by reference in their entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to methods and apparatus for endovascularly replacing a heart valve. More particularly, the present invention relates to methods and apparatus for endovascularly replacing a heart valve with a replacement valve and an expandable and retrievable anchor. The replacement valve preferably is not connected to the expandable anchor and may be wrapped about an end of the anchor, for example, by everting during endovascular deployment.</p>
+      <p id="p-00003-en" num="0003">Heart valve surgery is used to repair or replace diseased heart valves. Valve surgery is an open-heart procedure conducted under general anesthesia. An incision is made through the patient's sternum (sternotomy), and the patient's heart is stopped while blood flow is rerouted through a heart-lung bypass machine.</p>
+      <p id="p-00004-en" num="0004">Valve replacement may be indicated when there is a narrowing of the native heart valve, commonly referred to as stenosis, or when the native valve leaks or regurgitates. When replacing the valve, the native valve is excised and replaced with either a biologic or a mechanical valve. Mechanical valves require lifelong anticoagulant medication to prevent blood clot formation, and clicking of the valve often may be heard through the chest. Biologic tissue valves typically do not require such medication. Tissue valves may be obtained from cadavers or may be porcine or bovine, and are commonly attached to synthetic rings that are secured to the patient's heart.</p>
+      <p id="p-00005-en" num="0005">Valve replacement surgery is a highly invasive operation with significant concomitant risk. Risks include bleeding, infection, stroke, heart attack, arrhythmia, renal failure, adverse reactions to the anesthesia medications, as well as sudden death. 2-5% of patients die during surgery.</p>
+      <p id="p-00006-en" num="0006">Post-surgery, patients temporarily may be confused due to emboli and other factors associated with the heart-lung machine. The first 2-3 days following surgery are spent in an intensive care unit where heart functions can be closely monitored. The average hospital stay is between 1 to 2 weeks, with several more weeks to months required for complete recovery.</p>
+      <p id="p-00007-en" num="0007">In recent years, advancements in minimally invasive surgery and interventional cardiology have encouraged some investigators to pursue percutaneous replacement of the aortic heart valve. See, e.g., U.S. Pat. No. 6,168,614. In many of these procedures, the replacement valve is deployed across the native diseased valve to permanently hold the valve open, thereby alleviating a need to excise the native valve and to position the replacement valve in place of the native valve.</p>
+      <p id="p-00008-en" num="0008">In the endovascular aortic valve replacement procedure, accurate placement of aortic valves relative to coronary ostia and the mitral valve is critical. Standard self-expanding systems have very poor accuracy in deployment, however. Often the proximal end of the stent is not released from the delivery system until accurate placement is verified by fluoroscopy, and the stent typically jumps once released. It is therefore often impossible to know where the ends of the stent will be with respect to the native valve, the coronary ostia and the mitral valve.</p>
+      <p id="p-00009-en" num="0009">Also, visualization of the way the new valve is functioning prior to final deployment is very desirable. Visualization prior to final and irreversible deployment cannot be done with standard self-expanding systems, however, and the replacement valve is often not fully functional before final deployment.</p>
+      <p id="p-00010-en" num="0010">Another drawback of prior art self-expanding replacement heart valve systems is their lack of radial strength. In order for self-expanding systems to be easily delivered through a delivery sheath, the metal needs to flex and bend inside the delivery catheter without being plastically deformed. In arterial stents, this is not a challenge, and there are many commercial arterial stent systems that apply adequate radial force against the vessel wall and yet can collapse to a small enough of a diameter to fit inside a delivery catheter without plastic deformation. However when the stent has a valve fastened inside it, as is the case in aortic valve replacement, the anchoring of the stent to vessel walls is significantly challenged during diastole. The force to hold back arterial pressure and prevent blood from going back inside the ventricle during diastole will be directly transferred to the stent/vessel wall interface. Therefore, the amount of radial force required to keep the self-expanding stent/valve in contact with the vessel wall and not sliding will be much higher than in stents that do not have valves inside of them. Moreover, a self-expanding stent without sufficient radial force will end up dilating and contracting with each heartbeat, thereby distorting the valve, affecting its function and possibly migrating and dislodging completely. Simply increasing strut thickness of the self-expanding stent is not a practical solution as it runs the risk of larger profile and/or plastic deformation of the self-expanding stent.</p>
+      <p id="p-00011-en" num="0011">In view of drawbacks associated with previously known techniques for endovascularly replacing a heart valve, it would be desirable to provide methods and apparatus that overcome those drawbacks.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00012-en" num="0012">One aspect of the present invention provides apparatus for endovascularly replacing a patient's heart valve, the apparatus including: a replacement valve; and an expandable anchor, wherein the replacement valve and expandable anchor are configured for endovascular delivery to the vicinity of the heart valve, and wherein at least a portion of the replacement valve is configured to evert about the anchor during endovascular deployment.</p>
+      <p id="p-00013-en" num="0013">Another aspect of the invention provides a method for endovascularly replacing a patient's heart valve. In some embodiments the method includes the steps of: endovascularly delivering a replacement valve and an expandable anchor to a vicinity of the heart valve; everting at least a portion of the replacement valve about the anchor; and expanding the anchor to a deployed configuration.</p>
+      <p id="p-00014-en" num="0014">Yet another aspect of the invention provides apparatus for endovascularly replacing a patient's heart valve including: an anchor comprising a lip region and a skirt region; and a replacement valve, wherein at least a portion of the replacement valve is configured to evert about the anchor during endovascular deployment, and wherein the lip region and skirt region are configured for percutaneous expansion to engage the patient's heart valve.</p>
+      <p id="p-00015-en" num="0015">Still another aspect of the present invention provides a method for endovascularly replacing a patient's heart valve, the method including: endovascularly delivering a replacement valve and an expandable anchor to a vicinity of the heart valve, endovascularly wrapping at least a portion of the replacement valve about the anchor, and expanding the anchor to a deployed configuration.</p>
+      <p id="p-00016-en" num="0016">Another aspect of the present invention provides apparatus for endovascularly replacing a patient's heart valve, the apparatus including: a replacement valve, and an expandable anchor, wherein the replacement valve and the anchor are configured for endovascular delivery to a vicinity of the patient's heart valve, and wherein at least a portion of the replacement valve is wrapped about an end of the anchor in a deployed configuration.</p>
+      <heading id="h-00004-en" level="1">INCORPORATION BY REFERENCE</heading>
+      <p id="p-00017-en" num="0017">All publications and patent applications mentioned in this specification are herein incorporated by reference to the same extent as if each individual publication or patent application was specifically and individually indicated to be incorporated by reference.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00018-en" num="0018">The novel features of the invention are set forth with particularity in the appended claims. A better understanding of the features and advantages of the present invention will be obtained by reference to the following detailed description that sets forth illustrative embodiments, in which the principles of the invention are utilized, and the accompanying drawings of which:</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIGS. 1A-B</figref> are elevational views of a replacement heart valve and anchor according to one embodiment of the invention.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIGS. 2A-B</figref> are sectional views of the anchor and valve of <figref>FIG. 1</figref>.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIGS. 3A-B</figref> show delivery and deployment of a replacement heart valve and anchor, such as the anchor and valve of <figref>FIGS. 1 and 2</figref>.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIGS. 4A-F</figref> also show delivery and deployment of a replacement heart valve and anchor, such as the anchor and valve of <figref>FIGS. 1 and 2</figref>.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIGS. 5A-F</figref> show the use of a replacement heart valve and anchor to replace an aortic valve.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIGS. 6A-F</figref> show the use of a replacement heart valve and anchor with a positive registration feature to replace an aortic valve.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 7</figref> shows the use of a replacement heart valve and anchor with an alternative positive registration feature to replace an aortic valve.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIGS. 8A-C</figref> show another embodiment of a replacement heart valve and anchor according to the invention.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIGS. 9A-H</figref> show delivery and deployment of the replacement heart valve and anchor of <figref>FIG. 8</figref>.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 10</figref> is a cross-sectional drawing of the delivery system used with the method and apparatus of <figref>FIGS. 8 and 9</figref>.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIGS. 11A-C</figref> show alternative locks for use with replacement heart valves and anchors of this invention.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIGS. 12A-C</figref> show a vessel wall engaging lock for use with replacement heart valves and anchors of this invention.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 13</figref> demonstrates paravalvular leaking around a replacement heart valve and anchor.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 14</figref> shows a seal for use with a replacement heart valve and anchor of this invention.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIGS. 15A-E</figref> show alternative arrangements of seals on a replacement heart valve and anchor.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIGS. 16A-C</figref> show alternative seal designs for use with replacement heart valves and anchors.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIGS. 17A-B</figref> show an alternative anchor lock embodiment in an unlocked configuration.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIGS. 18A-B</figref> show the anchor lock of <figref>FIG. 17</figref> in a locked configuration.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 19</figref> shows an alternative anchor deployment tool attachment and release mechanism for use with the invention.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 20</figref> shows the attachment and release mechanism of <figref>FIG. 19</figref> in the process of being released.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 21</figref> shows the attachment and release mechanism of <figref>FIGS. 19 and 20</figref> in a released condition.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 22</figref> shows an alternative embodiment of a replacement heart valve and anchor and a deployment tool according to the invention in an undeployed configuration.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 23</figref> shows the replacement heart valve and anchor of <figref>FIG. 22</figref> in a partially deployed configuration.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 24</figref> shows the replacement heart valve and anchor of <figref>FIGS. 22 and 23</figref> in a more fully deployed configuration but with the deployment tool still attached.</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 25</figref> shows yet another embodiment of the delivery and deployment apparatus of the invention in use with a replacement heart valve and anchor.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIG. 26</figref> shows the delivery and deployment apparatus of <figref>FIG. 25</figref> in the process of deploying a replacement heart valve and anchor.</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIG. 27</figref> shows an embodiment of the invention employing seals at the interface of the replacement heart valve and anchor and the patient's tissue.</p>
+      <p id="p-00046-en" num="0046">
+        <figref>FIG. 28</figref> is a longitudinal cross-sectional view of the seal shown in <figref>FIG. 27</figref> in compressed form.</p>
+      <p id="p-00047-en" num="0047">
+        <figref>FIG. 29</figref> is a transverse cross-sectional view of the seal shown in <figref>FIG. 28</figref>.</p>
+      <p id="p-00048-en" num="0048">
+        <figref>FIG. 30</figref> is a longitudinal cross-sectional view of the seal shown in <figref>FIG. 27</figref> in expanded form.</p>
+      <p id="p-00049-en" num="0049">
+        <figref>FIG. 31</figref> is a transverse cross-sectional view of the seal shown in <figref>FIG. 30</figref>.</p>
+      <p id="p-00050-en" num="0050">
+        <figref>FIG. 32</figref> shows yet another embodiment of the replacement heart valve and anchor of this invention in an undeployed configuration.</p>
+      <p id="p-00051-en" num="0051">
+        <figref>FIG. 33</figref> shows the replacement heart valve and anchor of <figref>FIG. 32</figref> in a deployed configuration.</p>
+      <p id="p-00052-en" num="0052">
+        <figref>FIG. 34</figref> shows the replacement heart valve and anchor of <figref>FIGS. 32 and 33</figref> deployed in a patient's heart valve.</p>
+      <p id="p-00053-en" num="0053">
+        <figref>FIGS. 35A-H</figref> show yet another embodiment of a replacement heart valve, anchor and deployment system according to this invention.</p>
+      <p id="p-00054-en" num="0054">
+        <figref>FIGS. 36A-E</figref> show more detail of the anchor of the embodiment shown in <figref>FIGS. 35A-H</figref>.</p>
+      <p id="p-00055-en" num="0055">
+        <figref>FIGS. 37A-B</figref> show other embodiments of the replacement heart valve and anchor of the invention.</p>
+      <p id="p-00056-en" num="0056">
+        <figref>FIGS. 38A-C</figref> illustrate a method for endovascularly replacing a patient's diseased heart valve.</p>
+      <p id="p-00057-en" num="0057">
+        <figref>FIGS. 39A-G</figref> are side views, partially in section, as well as an isometric view, illustrating a method for endovascularly replacing a patient's diseased heart valve with an embodiment of the present invention comprising a replacement valve that is not connected to the expandable anchor, the replacement valve wrapped about the anchor, illustratively by everting during deployment.</p>
+      <p id="p-00058-en" num="0058">
+        <figref>FIGS. 40A-D</figref> are side views, partially in section, illustrating a method for endovascularly replacing a patient's diseased heart valve with another everting embodiment of the present invention.</p>
+      <p id="p-00059-en" num="0059">
+        <figref>FIGS. 41A-E</figref> are side views, partially in section, illustrating a method for endovascularly replacing a patient's diseased heart valve with yet another everting embodiment of the present invention, wherein the replacement valve and the anchor are telescoped relative to one another during endovascular delivery.</p>
+      <p id="p-00060-en" num="0060">
+        <figref>FIGS. 42A-B</figref> are side-sectional views of alternative everting apparatus comprising everting valve leaflets.</p>
+      <p id="p-00061-en" num="0061">
+        <figref>FIGS. 43A-B</figref>, are side-sectional views of further alternative everting apparatus comprising a locking mechanism coupled to the everting segment.</p>
+      <p id="p-00062-en" num="0062">
+        <figref>FIGS. 44A-B</figref> are side-sectional views of telescoping embodiments of the present invention comprising U-shaped valve frames.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00063-en" num="0063">While preferred embodiments of the present invention have been shown and described herein, it will be obvious to those skilled in the art that such embodiments are provided by way of example only. Numerous variations, changes, and substitutions will now occur to those skilled in the art without departing from the invention. It should be understood that various alternatives to the embodiments of the invention described herein may be employed in practicing the invention. For example, for the two-part locking mechanisms described hereinafter, it will be apparent that the locations of the male and female elements may be reversed. It is intended that the following claims define the scope of the invention and that methods and structures within the scope of these claims and their equivalents be covered thereby.</p>
+      <p id="p-00064-en" num="0064">With reference now to <figref>FIGS. 1-4</figref>, a first embodiment of replacement heart valve apparatus in accordance with the present invention is described, including a method of actively foreshortening and expanding the apparatus from a delivery configuration and to a deployed configuration. Apparatus <b>10</b> comprises replacement valve <b>20</b> disposed within and coupled to anchor <b>30</b>. <figref>FIG. 1</figref> schematically illustrate individual cells of anchor <b>30</b> of apparatus <b>10</b>, and should be viewed as if the cylindrical anchor has been cut open and laid flat. <figref>FIG. 2</figref> schematically illustrate a detail portion of apparatus <b>10</b> in side-section.</p>
+      <p id="p-00065-en" num="0065">Anchor <b>30</b> has a lip region <b>32</b>, a skirt region <b>34</b> and a body region <b>36</b>. First, second and third posts <b>38</b><i>a</i>, <b>38</b><i>b </i>and <b>38</b><i>c</i>, respectively, are coupled to skirt region <b>34</b> and extend within lumen <b>31</b> of anchor <b>30</b>. Posts <b>38</b> preferably are spaced 120.degree. apart from one another about the circumference of anchor <b>30</b>.</p>
+      <p id="p-00066-en" num="0066">Anchor <b>30</b> preferably is fabricated by using self-expanding patterns (laser cut or chemically milled), braids and materials, such as a stainless steel, nickel-titanium (“Nitinol”) or cobalt chromium, but alternatively may be fabricated using balloon-expandable patterns where the anchor is designed to plastically deform to its final shape by means of balloon expansion. Replacement valve <b>20</b> is preferably made from biologic tissues, e.g. porcine valve leaflets or bovine or equine pericardium tissues or human cadaver tissue. Alternatively, it can be made from tissue engineered materials (such as extracellular matrix material from Small Intestinal Submucosa (SIS)) or may be prosthetic and made from an elastomeric polymer or silicone, Nitinol or stainless steel mesh or pattern (sputtered, chemically milled or laser cut). The leaflet may also be made of a composite of the elastomeric or silicone materials and metal alloys or other fibers such Kevlar or carbon Annular base <b>22</b> of replacement valve <b>20</b> preferably is coupled to skirt region <b>34</b> of anchor <b>30</b>, while commissures <b>24</b> of replacement valve leaflets <b>26</b> are coupled to and supported by posts <b>38</b>.</p>
+      <p id="p-00067-en" num="0067">Anchor <b>30</b> may be actuated using external non-hydraulic or non-pneumatic force to actively foreshorten in order to increase its radial strength. As shown below, the proximal and distal end regions of anchor <b>30</b> may be actuated independently. The anchor and valve may be placed and expanded in order to visualize their location with respect to the native valve and other anatomical features and to visualize operation of the valve. The anchor and valve may thereafter be repositioned and even retrieved into the delivery sheath or catheter. The apparatus may be delivered to the vicinity of the patient's aortic valve in a retrograde approach in a catheter having a diameter no more than 23 french, preferably no more than 21 french, more preferably no more than 19 french, or more preferably no more than 17 french. Upon deployment the anchor and replacement valve capture the native valve leaflets and positively lock to maintain configuration and position.</p>
+      <p id="p-00068-en" num="0068">A deployment tool is used to actuate, reposition, lock and/or retrieve anchor <b>30</b>. In order to avoid delivery of anchor <b>30</b> on a balloon for balloon expansion, a non-hydraulic or non-pneumatic anchor actuator is used. In this embodiment, the actuator is a deployment tool that includes distal region control wires <b>50</b>, control rods or tubes <b>60</b> and proximal region control wires <b>62</b>. Locks <b>40</b> include posts or arms <b>38</b> preferably with male interlocking elements <b>44</b> extending from skirt region <b>34</b> and mating female interlocking elements <b>42</b> in lip region <b>32</b>. Male interlocking elements <b>44</b> have eyelets <b>45</b>. Control wires <b>50</b> pass from a delivery system for apparatus <b>10</b> through female interlocking elements <b>42</b>, through eyelets <b>45</b> of male interlocking elements <b>44</b>, and back through female interlocking elements <b>42</b>, such that a double strand of wire <b>50</b> passes through each female interlocking element <b>42</b> for manipulation by a medical practitioner external to the patient to actuate and control the anchor by changing the anchor's shape. Control wires <b>50</b> may comprise, for example, strands of suture.</p>
+      <p id="p-00069-en" num="0069">Tubes <b>60</b> are reversibly coupled to apparatus <b>10</b> and may be used in conjunction with wires <b>50</b> to actuate anchor <b>30</b>, e.g., to foreshorten and lock apparatus <b>10</b> in the fully deployed configuration. Tubes <b>60</b> also facilitate repositioning and retrieval of apparatus <b>10</b>, as described hereinafter. For example, anchor <b>30</b> may be foreshortened and radially expanded by applying a distally directed force on tubes <b>60</b> while proximally retracting wires <b>50</b>. As seen in <figref>FIG. 3</figref>, control wires <b>62</b> pass through interior lumens <b>61</b> of tubes <b>60</b>. This ensures that tubes <b>60</b> are aligned properly with apparatus <b>10</b> during deployment and foreshortening. Control wires <b>62</b> can also actuate anchor <b>60</b>; proximally directed forces on control wires <b>62</b> contacts the proximal lip region <b>32</b> of anchor <b>30</b>. Wires <b>62</b> also act to couple and decouple tubes <b>60</b> from apparatus <b>10</b>. Wires <b>62</b> may comprise, for example, strands of suture.</p>
+      <p id="p-00070-en" num="0070">
+        <figref>FIGS. 1A and 2A</figref> illustrate anchor <b>30</b> in a delivery configuration or in a partially deployed configuration (e.g., after dynamic self-expansion from a constrained delivery configuration within a delivery sheath). Anchor <b>30</b> has a relatively long length and a relatively small width in the delivery or partially deployed configuration, as compared to the foreshortened and fully deployed configuration of <figref>FIGS. 1B and 2B</figref>.</p>
+      <p id="p-00071-en" num="0071">In <figref>FIGS. 1A and 2A</figref>, replacement valve <b>20</b> is collapsed within lumen <b>31</b> of anchor <b>30</b>. Retraction of wires <b>50</b> relative to tubes <b>60</b> foreshortens anchor <b>30</b>, which increases the anchor's width while decreasing its length. Such foreshortening also properly seats replacement valve <b>20</b> within lumen <b>31</b> of anchor <b>30</b>. Imposed foreshortening will enhance radial force applied by apparatus <b>10</b> to surrounding tissue over at least a portion of anchor <b>30</b>. In some embodiments, the anchor is capable of exerting an outward radial force on surrounding tissue to engage the tissue in such way to prevent migration of anchor. This outward radial force is preferably greater than 2 psi, more preferably greater than 4 psi, more preferably greater than 6 psi, more preferably greater than 8 psi, more preferably greater than 10 psi, more preferably greater than 20 psi, or more preferably greater than 30 psi. Enhanced radial force of the anchor is also important for enhanced crush resistance of the anchor against the surrounding tissue due to the healing response (fibrosis and contraction of annulus over a longer period of time) or to dynamic changes of pressure and flow at each heart beat. In an alternative embodiment, the anchor pattern or braid is designed to have gaps or areas where the native tissue is allowed to protrude through the anchor slightly (not shown) and, as the foreshortening is applied, the tissue and anchor become intertwined and immobilized. This feature would provide additional means to prevent anchor migration and enhance long-term stability of the device.</p>
+      <p id="p-00072-en" num="0072">Deployment of apparatus <b>10</b> is fully reversible until lock <b>40</b> has been locked via mating of male interlocking elements <b>44</b> with female interlocking elements <b>42</b>. Deployment is then completed by decoupling tubes <b>60</b> from lip section <b>32</b> of anchor <b>30</b> by retracting one end of each wire <b>62</b> relative to the other end of the wire, and by retracting one end of each wire <b>50</b> relative to the other end of the wire until each wire has been removed from eyelet <b>45</b> of its corresponding male interlocking element <b>44</b>.</p>
+      <p id="p-00073-en" num="0073">As best seen in <figref>FIG. 2B</figref>, body region <b>36</b> of anchor <b>30</b> optionally may comprise barb elements <b>37</b> that protrude from anchor <b>30</b> in the fully deployed configuration, for example, for engagement of a patient's native valve leaflets and to preclude migration of the apparatus.</p>
+      <p id="p-00074-en" num="0074">With reference now to <figref>FIG. 3</figref>, a delivery and deployment system for a self-expanding embodiment of apparatus <b>10</b> including a sheath <b>110</b> having a lumen <b>112</b>. Self-expanding anchor <b>30</b> is collapsible to a delivery configuration within lumen <b>112</b> of sheath <b>110</b>, such that apparatus <b>10</b> may be delivered via delivery system <b>100</b>. As seen in <figref>FIG. 3A</figref>, apparatus <b>10</b> may be deployed from lumen <b>112</b> by retracting sheath <b>110</b> relative to apparatus <b>10</b>, control wires <b>50</b> and tubes <b>60</b>, which causes anchor <b>30</b> to dynamically self-expand to a partially deployed configuration. Control wires <b>50</b> then are retracted relative to apparatus <b>10</b> and tubes <b>60</b> to impose foreshortening upon anchor <b>30</b>, as seen in <figref>FIG. 3B</figref>.</p>
+      <p id="p-00075-en" num="0075">During foreshortening, tubes <b>60</b> push against lip region <b>32</b> of anchor <b>30</b>, while wires <b>50</b> pull on posts <b>38</b> of the anchor. Wires <b>62</b> may be retracted along with wires <b>50</b> to enhance the distally directed pushing force applied by tubes <b>60</b> to lip region <b>32</b>. Continued retraction of wires <b>50</b> relative to tubes <b>60</b> would lock locks <b>40</b> and fully deploy apparatus <b>10</b> with replacement valve <b>20</b> properly seated within anchor <b>30</b>, as in <figref>FIGS. 1B and 2B</figref>. Apparatus <b>10</b> comprises enhanced radial strength in the fully deployed configuration as compared to the partially deployed configuration of <figref>FIG. 3A</figref>. Once apparatus <b>10</b> has been fully deployed, wires <b>50</b> and <b>62</b> may be removed from apparatus <b>10</b>, thereby separating delivery system <b>100</b> and tubes <b>60</b> from the apparatus.</p>
+      <p id="p-00076-en" num="0076">Deployment of apparatus <b>10</b> is fully reversible until locks <b>40</b> have been actuated. For example, just prior to locking the position of the anchor and valve and the operation of the valve may be observed under fluoroscopy. If the position needs to be changed, by alternately relaxing and reapplying the proximally directed forces exerted by control wires <b>50</b> and/or control wires <b>62</b> and the distally directed forces exerted by tubes <b>60</b>, expansion and contraction of the lip and skirt regions of anchor <b>30</b> may be independently controlled so that the anchor and valve can be moved to, e.g., avoid blocking the coronary ostia or impinging on the mitral valve. Apparatus <b>10</b> may also be completely retrieved within lumen <b>112</b> of sheath <b>110</b> by simultaneously proximally retracting wires <b>50</b> and tubes <b>60</b>/wires <b>62</b> relative to sheath <b>110</b>. Apparatus <b>10</b> then may be removed from the patient or repositioned for subsequent redeployment.</p>
+      <p id="p-00077-en" num="0077">Referring now to <figref>FIG. 4</figref>, step-by-step deployment of apparatus <b>10</b> via delivery system <b>100</b> is described. In <figref>FIG. 4A</figref>, sheath <b>110</b> is retracted relative to apparatus <b>10</b>, wires <b>50</b> and tubes <b>60</b>, thereby causing self-expandable anchor <b>30</b> to dynamically self-expand apparatus <b>10</b> from the collapsed delivery configuration within lumen <b>112</b> of sheath <b>110</b> to the partially deployed configuration. Apparatus <b>10</b> may then be dynamically repositioned via tubes <b>60</b> to properly orient the apparatus, e.g. relative to a patient's native valve leaflets.</p>
+      <p id="p-00078-en" num="0078">In <figref>FIG. 4B</figref>, control wires <b>50</b> are retracted while tubes <b>60</b> are advanced, thereby urging lip region <b>32</b> of anchor <b>30</b> in a distal direction while urging posts <b>38</b> of the anchor in a proximal direction. This foreshortens apparatus <b>10</b>, as seen in <figref>FIG. 4C</figref>. Deployment of apparatus <b>10</b> is fully reversible even after foreshortening has been initiated and has advanced to the point illustrated in <figref>FIG. 4C</figref>.</p>
+      <p id="p-00079-en" num="0079">In <figref>FIG. 4D</figref>, continued foreshortening causes male interlocking elements <b>44</b> of locks <b>40</b> to engage female interlocking elements <b>42</b>. The male elements mate with the female elements, thereby locking apparatus <b>10</b> in the foreshortened configuration, as seen in <figref>FIG. 4E</figref>. Wires <b>50</b> are then pulled through eyelets <b>45</b> of male elements <b>44</b> to remove the wires from apparatus <b>10</b>, and wires <b>62</b> are pulled through the proximal end of anchor <b>30</b> to uncouple tubes <b>60</b> from the apparatus, thereby separating delivery system <b>100</b> from apparatus <b>10</b>. Fully deployed apparatus <b>10</b> is shown in <figref>FIG. 4F</figref>.</p>
+      <p id="p-00080-en" num="0080">Referring to <figref>FIG. 5</figref>, a method of endovascularly replacing a patient's diseased aortic valve with apparatus <b>10</b> and delivery system <b>100</b> is described. As seen in <figref>FIG. 5A</figref>, sheath <b>110</b> of delivery system <b>100</b>, having apparatus <b>10</b> disposed therein, is endovascularly advanced over guide wire G, preferably in a retrograde fashion (although an antegrade or hybrid approach alternatively may be used), through a patient's aorta A to the patient's diseased aortic valve AV. A nosecone <b>102</b> precedes sheath <b>110</b> in a known manner. In <figref>FIG. 5B</figref>, sheath <b>110</b> is positioned such that its distal region is disposed within left ventricle LV of the patient's heart H.</p>
+      <p id="p-00081-en" num="0081">Apparatus <b>10</b> is deployed from lumen <b>112</b> of sheath <b>110</b>, for example, under fluoroscopic guidance, such that anchor <b>30</b> of apparatus <b>10</b> dynamically self-expands to a partially deployed configuration, as in <figref>FIG. 5C</figref>. Advantageously, apparatus <b>10</b> may be retracted within lumen <b>112</b> of sheath <b>110</b> via wires <b>50</b>—even after anchor <b>30</b> has dynamically expanded to the partially deployed configuration, for example, to abort the procedure or to reposition apparatus <b>10</b> or delivery system <b>100</b>. As yet another advantage, apparatus <b>10</b> may be dynamically repositioned, e.g. via sheath <b>110</b> and/or tubes <b>60</b>, in order to properly align the apparatus relative to anatomical landmarks, such as the patient's coronary ostia or the patient's native valve leaflets L. When properly aligned, skirt region <b>34</b> of anchor <b>30</b> preferably is disposed distal of the leaflets, while body region <b>36</b> is disposed across the leaflets and lip region <b>32</b> is disposed proximal of the leaflets.</p>
+      <p id="p-00082-en" num="0082">Once properly aligned, wires <b>50</b> are retracted relative to tubes <b>60</b> to impose foreshortening upon anchor <b>30</b> and expand apparatus <b>10</b> to the fully deployed configuration, as in <figref>FIG. 5D</figref>. Foreshortening increases the radial strength of anchor <b>30</b> to ensure prolonged patency of valve annulus An, as well as to provide a better seal for apparatus <b>10</b> that reduces paravalvular regurgitation. As seen in <figref>FIG. 5E</figref>, locks <b>40</b> maintain imposed foreshortening. Replacement valve <b>20</b> is properly seated within anchor <b>30</b>, and normal blood flow between left ventricle LV and aorta A is thereafter regulated by apparatus <b>10</b>. Deployment of apparatus <b>10</b> advantageously is fully reversible until locks <b>40</b> have been actuated.</p>
+      <p id="p-00083-en" num="0083">As seen in <figref>FIG. 5F</figref>, wires <b>50</b> are pulled from eyelets <b>45</b> of male elements <b>44</b> of locks <b>40</b>, tubes <b>60</b> are decoupled from anchor <b>30</b>, e.g. via wires <b>62</b>, and delivery system <b>100</b> is removed from the patient, thereby completing deployment of apparatus <b>10</b>. Optional barb elements <b>37</b> engage the patient's native valve leaflets, e.g. to preclude migration of the apparatus and/or reduce paravalvular regurgitation.</p>
+      <p id="p-00084-en" num="0084">With reference now to <figref>FIG. 6</figref>, a method of endovascularly replacing a patient's diseased aortic valve with apparatus <b>10</b> is provided, wherein proper positioning of the apparatus is ensured via positive registration of a modified delivery system to the patient's native valve leaflets. In <figref>FIG. 6A</figref>, modified delivery system <b>100</b>′ delivers apparatus <b>10</b> to diseased aortic valve AV within sheath <b>110</b>. As seen in <figref>FIGS. 6B and 6C</figref>, apparatus <b>10</b> is deployed from lumen <b>112</b> of sheath <b>110</b>, for example, under fluoroscopic guidance, such that anchor <b>30</b> of apparatus <b>10</b> dynamically self-expands to a partially deployed configuration. As when deployed via delivery system <b>100</b>, deployment of apparatus <b>10</b> via delivery system <b>100</b>′ is fully reversible until locks <b>40</b> have been actuated.</p>
+      <p id="p-00085-en" num="0085">Delivery system <b>100</b>′ comprises leaflet engagement element <b>120</b>, which preferably self-expands along with anchor <b>30</b>. Engagement element <b>120</b> is disposed between tubes <b>60</b> of delivery system <b>100</b>′ and lip region <b>32</b> of anchor <b>30</b>. Element <b>120</b> releasably engages the anchor. As seen in <figref>FIG. 6C</figref>, the element is initially deployed proximal of the patient's native valve leaflets L. Apparatus <b>10</b> and element <b>120</b> then may be advanced/dynamically repositioned until the engagement element positively registers against the leaflets, thereby ensuring proper positioning of apparatus <b>10</b>. Also, delivery system <b>100</b>′ includes filter structure <b>61</b>A (e.g., filter membrane or braid) as part of push tubes <b>60</b> to act as an embolic protection element. Emboli can be generated during manipulation and placement of anchor, from either diseased native leaflet or surrounding aortic tissue, and can cause blockage. Arrows <b>61</b>B in <figref>FIG. 6E</figref> show blood flow through filter structure <b>61</b>A where blood is allowed to flow but emboli is trapped in the delivery system and removed with it at the end of the procedure.</p>
+      <p id="p-00086-en" num="0086">Alternatively, foreshortening may be imposed upon anchor <b>30</b> while element <b>120</b> is disposed proximal of the leaflets, as in <figref>FIG. 6D</figref>. Upon positive registration of element <b>120</b> against leaflets L, element <b>120</b> precludes further distal migration of apparatus <b>10</b> during additional foreshortening, thereby reducing a risk of improperly positioning the apparatus. <figref>FIG. 6E</figref> details engagement of element <b>120</b> against the native leaflets. As seen in <figref>FIG. 6F</figref>, once apparatus <b>10</b> is fully deployed, element <b>120</b>, wires <b>50</b> and tubes <b>60</b> are decoupled from the apparatus, and delivery system <b>100</b>′ is removed from the patient, thereby completing the procedure.</p>
+      <p id="p-00087-en" num="0087">With reference to <figref>FIG. 7</figref>, an alternative embodiment of the apparatus of <figref>FIG. 6</figref> is described, wherein leaflet engagement element <b>120</b> is coupled to anchor <b>30</b> of apparatus <b>10</b>′, rather than to delivery system <b>100</b>. Engagement element <b>120</b> remains implanted in the patient post-deployment of apparatus <b>10</b>′. Leaflets L are sandwiched between lip region <b>32</b> of anchor <b>30</b> and element <b>120</b> in the fully deployed configuration. In this manner, element <b>120</b> positively registers apparatus <b>10</b>′ relative to the leaflets and precludes distal migration of the apparatus over time.</p>
+      <p id="p-00088-en" num="0088">Referring now to <figref>FIG. 8</figref>, an alternative delivery system adapted for use with a balloon expandable embodiment of the present invention is described. In <figref>FIG. 8A</figref>, apparatus <b>10</b>″ comprises anchor <b>30</b>′ that may be fabricated from balloon-expandable materials. Delivery system <b>100</b>″ comprises inflatable member <b>130</b> disposed in a deflated configuration within lumen <b>31</b> of anchor <b>30</b>′. In <figref>FIG. 8B</figref>, optional outer sheath <b>110</b> is retracted, and inflatable member <b>130</b> is inflated to expand anchor <b>30</b>′ to the fully deployed configuration. As inflatable member <b>130</b> is being deflated, as in earlier embodiments, wires <b>50</b> and <b>62</b> and tubes <b>60</b> may be used to assist deployment of anchor <b>30</b>′ and actuation of locks <b>40</b>, as well as to provide reversibility and retrievability of apparatus <b>10</b>″ prior to actuation of locks <b>40</b>. Next, wires <b>50</b> and <b>62</b> and tubes <b>60</b> are removed from apparatus <b>10</b>″, and delivery system <b>100</b>″ is removed, as seen in <figref>FIG. 8C</figref>.</p>
+      <p id="p-00089-en" num="0089">As an alternative delivery method, anchor <b>30</b>′ may be partially deployed via partial expansion of inflatable member <b>130</b>. The inflatable member would then be advanced within replacement valve <b>20</b> prior to inflation of inflatable member <b>130</b> and full deployment of apparatus <b>10</b>″. Inflation pressures used will range from about 3 to 6 atm, or more preferably from about 4 to 5 atm, though higher and lower atm pressures may also be used (e.g., greater than 3 atm, more preferably greater than 4 atm, more preferably greater than 5 atm, or more preferably greater than 6 atm). Advantageously, separation of inflatable member <b>130</b> from replacement valve <b>20</b>, until partial deployment of apparatus <b>10</b>″ at a treatment site, is expected to reduce a delivery profile of the apparatus, as compared to previously known apparatus. This profile reduction may facilitate retrograde delivery and deployment of apparatus <b>10</b>″, even when anchor <b>30</b>′ is balloon-expandable.</p>
+      <p id="p-00090-en" num="0090">Although anchor <b>30</b>′ has illustratively been described as fabricated from balloon-expandable materials, it should be understood that anchor <b>30</b>′ alternatively may be fabricated from self-expanding materials whose expansion optionally may be balloon-assisted. In such a configuration, anchor <b>30</b>′ would expand to a partially deployed configuration upon removal of outer sheath <b>110</b>. If required, inflatable member <b>130</b> then would be advanced within replacement valve <b>20</b> prior to inflation. Inflatable member <b>130</b> would assist full deployment of apparatus <b>10</b>″, for example, when the radial force required to overcome resistance from impinging tissue were too great to be overcome simply by manipulation of wires <b>50</b> and tubes <b>60</b>. Advantageously, optional placement of inflatable member <b>130</b> within replacement valve <b>20</b>, only after dynamic self-expansion of apparatus <b>10</b>″ to the partially deployed configuration at a treatment site, is expected to reduce a delivery profile of the apparatus, as compared to previously known apparatus. This reduction may facilitate retrograde delivery and deployment of apparatus <b>10</b>″.</p>
+      <p id="p-00091-en" num="0091">With reference to <figref>FIGS. 9 and 10</figref>, methods and apparatus for a balloon-assisted embodiment of the present invention are described in greater detail. <figref>FIGS. 9 and 10</figref> illustratively show apparatus <b>10</b>′ of <figref>FIG. 7</figref> used in combination with delivery system <b>100</b>″ of <figref>FIG. 8</figref>. <figref>FIG. 10</figref> illustrates a sectional view of delivery system <b>100</b>″ Inner shaft <b>132</b> of inflatable member <b>130</b> preferably is about 4 Fr in diameter, and comprises lumen <b>133</b> configured for passage of guidewire G, having a diameter of about 0.035″, therethrough. Push tubes <b>60</b> and pull wires <b>50</b> pass through guidetube <b>140</b>, which preferably has a diameter of about 15 Fr or smaller. Guide tube <b>140</b> is disposed within lumen <b>112</b> of outer sheath <b>110</b>, which preferably has a diameter of about 17 Fr or smaller.</p>
+      <p id="p-00092-en" num="0092">In <figref>FIG. 9A</figref>, apparatus <b>10</b>′ is delivered to diseased aortic valve AV within lumen <b>112</b> of sheath <b>110</b>. In <figref>FIG. 9B</figref>, sheath <b>110</b> is retracted relative to apparatus <b>10</b>′ to dynamically self-expand the apparatus to the partially deployed configuration. Also retracted and removed is nosecone <b>102</b>, which is attached to a pre-slit lumen (not shown) that facilitates its removal prior to loading and advancing of a regular angioplasty balloon catheter over guidewire and inside delivery system <b>110</b>.</p>
+      <p id="p-00093-en" num="0093">In <figref>FIG. 9C</figref>, pull wires <b>50</b> and push tubes <b>60</b> are manipulated from external to the patient to foreshorten anchor <b>30</b> and sufficiently expand lumen <b>31</b> of the anchor to facilitate advancement of inflatable member <b>130</b> within replacement valve <b>20</b>. Also shown is the tip of an angioplasty catheter <b>130</b> being advanced through delivery system <b>110</b>.</p>
+      <p id="p-00094-en" num="0094">The angioplasty balloon catheter or inflatable member <b>130</b> then is advanced within the replacement valve, as in <figref>FIG. 9D</figref>, and additional foreshortening is imposed upon anchor <b>30</b> to actuate locks <b>40</b>, as in <figref>FIG. 9E</figref>. The inflatable member is inflated to further displace the patient's native valve leaflets L and ensure adequate blood flow through, and long-term patency of, replacement valve <b>20</b>, as in <figref>FIG. 9F</figref>. Inflatable member <b>130</b> then is deflated and removed from the patient, as in <figref>FIG. 9G</figref>. A different size angioplasty balloon catheter could be used repeat the same step if deemed necessary by the user. Push tubes <b>60</b> optionally may be used to further set leaflet engagement element <b>120</b>, or optional barbs B along posts <b>38</b>, more deeply within leaflets L, as in <figref>FIG. 9H</figref>. Then, delivery system <b>100</b>″ is removed from the patient, thereby completing percutaneous heart valve replacement.</p>
+      <p id="p-00095-en" num="0095">As will be apparent to those of skill in the art, the order of imposed foreshortening and balloon expansion described in <figref>FIGS. 9 and 10</figref> is only provided for the sake of illustration. The actual order may vary according to the needs of a given patient and/or the preferences of a given medical practitioner. Furthermore, balloon-assist may not be required in all instances, and the inflatable member may act merely as a safety precaution employed selectively in challenging clinical cases.</p>
+      <p id="p-00096-en" num="0096">Referring now to <figref>FIG. 11</figref>, alternative locks for use with apparatus of the present invention are described. In <figref>FIG. 11A</figref>, lock <b>40</b>′ comprises male interlocking element <b>44</b> as described previously. However, female interlocking element <b>42</b>′ illustratively comprises a triangular shape, as compared to the round shape of interlocking element <b>42</b> described previously. The triangular shape of female interlocking element <b>42</b>′ may facilitate mating of male interlocking element <b>44</b> with the female interlocking element without necessitating deformation of the male interlocking element.</p>
+      <p id="p-00097-en" num="0097">In <figref>FIG. 11B</figref>, lock <b>40</b>″ comprises alternative male interlocking element <b>44</b>′ having multiple in-line arrowheads <b>46</b> along posts <b>38</b>. Each arrowhead comprises resiliently deformable appendages <b>48</b> to facilitate passage through female interlocking element <b>42</b>. Appendages <b>48</b> optionally comprise eyelets <b>49</b>, such that control wire <b>50</b> or a secondary wire may pass therethrough to constrain the appendages in the deformed configuration. To actuate lock <b>40</b>″, one or more arrowheads <b>46</b> of male interlocking element <b>44</b>′ are drawn through female interlocking element <b>42</b>, and the wire is removed from eyelets <b>49</b>, thereby causing appendages <b>48</b> to resiliently expand and actuate lock <b>40</b>″.</p>
+      <p id="p-00098-en" num="0098">Advantageously, providing multiple arrowheads <b>46</b> along posts <b>38</b> yields a ratchet that facilitates in-vivo determination of a degree of foreshortening imposed upon apparatus of the present invention. Furthermore, optionally constraining appendages <b>48</b> of arrowheads <b>46</b> via eyelets <b>49</b> prevents actuation of lock <b>40</b>″ (and thus deployment of apparatus of the present invention) even after male element <b>44</b>′ has been advanced through female element <b>42</b>. Only after a medical practitioner has removed the wire constraining appendages <b>48</b> is lock <b>40</b>″ fully engaged and deployment no longer reversible.</p>
+      <p id="p-00099-en" num="0099">Lock <b>40</b>′″ of <figref>FIG. 11C</figref> is similar to lock <b>40</b>″ of <figref>FIG. 11B</figref>, except that optional eyelets <b>49</b> on appendages <b>48</b> have been replaced by optional overtube <b>47</b>. Overtube <b>47</b> serves a similar function to eyelets <b>49</b> by constraining appendages <b>48</b> to prevent locking until a medical practitioner has determined that apparatus of the present invention has been foreshortened and positioned adequately at a treatment site. Overtube <b>47</b> is then removed, which causes the appendages to resiliently expand, thereby fully actuating lock <b>40</b>″.</p>
+      <p id="p-00100-en" num="0100">With reference to <figref>FIG. 12</figref>, an alternative locking mechanism is described that is configured to engage the patient's aorta. Male interlocking elements <b>44</b>″ of locks <b>40</b>″″ comprise arrowheads <b>46</b>′ having sharpened appendages <b>48</b>′. Upon expansion from the delivery configuration of <figref>FIG. 12A</figref> to the foreshortened configuration of <figref>FIG. 12B</figref>, apparatus <b>10</b> positions sharpened appendages <b>48</b>′ adjacent the patient's aorta A. Appendages <b>48</b>′ engage the aortic wall and reduce a risk of device migration over time.</p>
+      <p id="p-00101-en" num="0101">With reference now to <figref>FIG. 13</figref>, a risk of paravalvular leakage or regurgitation around apparatus of the present invention is described. In <figref>FIG. 13</figref>, apparatus <b>10</b> has been implanted at the site of diseased aortic valve AV, for example, using techniques described hereinabove. The surface of native valve leaflets L is irregular, and interface I between leaflets L and anchor <b>30</b> may comprise gaps where blood B may seep through. Such leakage poses a risk of blood clot formation or insufficient blood flow.</p>
+      <p id="p-00102-en" num="0102">Referring to <figref>FIG. 14</figref>, optional elements for reducing regurgitation or leakage are described. Compliant sacs <b>200</b> may be disposed about the exterior of anchor <b>30</b> to provide a more efficient seal along irregular interface I. Sacs <b>200</b> may be filled with an appropriate material, for example, water, blood, foam or a hydrogel. Alternative fill materials will be apparent.</p>
+      <p id="p-00103-en" num="0103">With reference to <figref>FIG. 15</figref>, illustrative arrangements for sacs <b>200</b> are provided. In <figref>FIG. 15A</figref>, sacs <b>200</b> are provided as discrete sacs at different positions along the height of anchor <b>30</b>. In <figref>FIG. 15B</figref>, the sacs are provided as continuous cylinders at various heights. In <figref>FIG. 15C</figref>, a single sac is provided with a cylindrical shape that spans multiple heights. The sacs of <figref>FIG. 15D</figref> are discrete, smaller and provided in larger quantities. <figref>FIG. 15E</figref> provides a spiral sac. Alternative sac configurations will be apparent to those of skill in the art.</p>
+      <p id="p-00104-en" num="0104">With reference to <figref>FIG. 16</figref>, exemplary techniques for fabricating sacs <b>200</b> are provided. In <figref>FIG. 16A</figref>, sacs <b>200</b> comprise ‘fish-scale’ slots <b>202</b> that may be back-filled, for example, with ambient blood passing through replacement valve <b>20</b>. In <figref>FIG. 16B</figref>, the sacs comprise pores <b>204</b> that may be used to fill the sacs. In <figref>FIG. 16C</figref>, the sacs open to lumen <b>31</b> of anchor <b>30</b> and are filled by blood washing past the sacs as the blood moves through apparatus <b>10</b>.</p>
+      <p id="p-00105-en" num="0105">
+        <figref>FIGS. 17 and 18</figref> show yet another alternative embodiment of the anchor lock. Anchor <b>300</b> has a plurality of male interlocking elements <b>302</b> having eyelets <b>304</b> formed therein. Male interlocking elements are connected to braided structure <b>300</b> by inter-weaving elements <b>302</b> (and <b>308</b>) or alternatively suturing, soldering, welding, or connecting with adhesive. Valve commissures <b>24</b> are connected to male interlocking elements <b>302</b> along their length. Replacement valve <b>20</b> annular base <b>22</b> is connected to the distal end <b>34</b> of anchor <b>300</b> (or <b>30</b>) as is illustrated in <figref>FIGS. 1A and 1B</figref>. Male interlocking elements <b>302</b> also include holes <b>306</b> that mate with tabs <b>310</b> extending into holes <b>312</b> in female interlocking elements <b>308</b>. To lock, control wires <b>314</b> passing through eyelets <b>304</b> and holes <b>312</b> are pulled proximally with respect to the proximal end of braided anchor <b>300</b> to draw the male interlocking elements through holes <b>312</b> so that tabs <b>310</b> engage holes <b>306</b> in male interlocking elements <b>302</b>. Also shown is release wires <b>314</b>B that pass through eyelet <b>304</b>B in female interlocking element <b>308</b>. If needed, during the procedure, the user may pull on release wires <b>314</b>B, thereby reversing orientation of tabs <b>310</b>, releasing the anchor and allowing for repositioning of the device or its removal from the patient. Only when finally positioned as desired by the operating physician, would release wire <b>314</b>B and control wire <b>314</b> be cut and removed from the patient with the delivery system.</p>
+      <p id="p-00106-en" num="0106">
+        <figref>FIGS. 19-21</figref> show an alternative way of releasing the connection between the anchor and its actuating tubes and control wires. Control wires <b>62</b> extend through tubes <b>60</b> from outside the patient, loop through the proximal region of anchor <b>30</b> and extend partially back into tube <b>60</b>. The doubled up portion of control wire <b>62</b> creates a force fit within tube <b>60</b> that maintains the control wire's position with respect to tube <b>60</b> when all control wires <b>62</b> are pulled proximally to place a proximally directed force on anchor <b>30</b>. When a single control wire <b>62</b> is pulled proximally, however, the frictional fit between that control wire and the tube in which it is disposed is overcome, enabling the end <b>63</b> of control wire <b>62</b> to pull free of the tube, as shown in <figref>FIG. 21</figref>, thereby releasing anchor <b>30</b>.</p>
+      <p id="p-00107-en" num="0107">
+        <figref>FIGS. 22-24</figref> show an alternative embodiment of the anchor. Anchor <b>350</b> is made of a metal braid, such as Nitinol or stainless steel. A replacement valve <b>354</b> is disposed within anchor <b>350</b> and supported by a replacement valve support, such as the posts described in earlier embodiments. Anchor <b>350</b> preferably is fabricated from a single strand of metal wire wound into the braid. It is expected that fabricating anchor <b>350</b> from a single strand of wire will facilitate deployment of the anchor, as well as retrieval of the anchor, by more evenly distributing forces applied to the anchor. Fabrication from a single strand is also expected to facilitate coupling of replacement valve <b>354</b> to the anchor, as well as coupling and decoupling of control wires (not shown) and tubes <b>352</b> thereto. Anchor <b>350</b> is actuated in substantially the same way as anchor <b>30</b> of <figref>FIGS. 1-4</figref> through the application of proximally and distally directed forces from control wires and tubes <b>352</b> and may be locked in its expanded deployed configuration, as described above. The employed configuration of anchor <b>354</b> may have the shape and anchoring characteristics described with respect to other embodiments as well.</p>
+      <p id="p-00108-en" num="0108">The braid forming anchor <b>350</b> (as well as that forming previously described anchor <b>30</b>) optionally may be locally increased in diameter, e.g. via dipping in silicone or a hydrogel, in order to provide a better or complete seal against the patient's anatomy. An improved seal is expected to reduce paravalvular leakage, as well as migration of the anchor over time. The local increase in diameter of the braid may, for example, be provided over a full radial segment of anchor <b>350</b>.</p>
+      <p id="p-00109-en" num="0109">
+        <figref>FIGS. 25 and 26</figref> show yet another embodiment of the delivery and deployment apparatus of the invention. As an alternative to the balloon expansion method described with respect to <figref>FIG. 8</figref>, in this embodiment the nosecone (e.g., element <b>102</b> of <figref>FIG. 5</figref>) is replaced by an angioplasty balloon catheter <b>360</b>. Thus, angioplasty balloon catheter <b>360</b> precedes sheath <b>110</b> on guidewire G. When anchor <b>30</b> and valve <b>20</b> are expanded through the operation of tubes <b>60</b> and the control wires (not shown) as described above, balloon catheter <b>360</b> is retracted proximally within the expanded anchor and valve and expanded further as described above with respect to <figref>FIG. 8</figref>.</p>
+      <p id="p-00110-en" num="0110">As an alternative, or in addition, to further expansion of balloon catheter <b>360</b> within valve <b>20</b> and expanded anchor <b>30</b> to further expand the anchor, the balloon may be deflated prior to proximal retraction within and past the valve and anchor. In this manner, balloon catheter <b>360</b> may act as an atraumatic nosecone during delivery of valve <b>20</b> and anchor <b>30</b>, but then may be deflated to provide a reduced profile, as compared to a standard nosecone, during retrieval of the balloon catheter through the deployed valve. It is expected that a smaller balloon catheter <b>360</b> may be provided when the catheter is utilized merely in place of a nosecone than when the catheter is also utilized to complete expansion of anchor <b>30</b>.</p>
+      <p id="p-00111-en" num="0111">
+        <figref>FIGS. 27-31</figref> show seals <b>370</b> that expand over time to seal the interface between the anchor and valve and the patient's tissue. Seals <b>370</b> are preferably formed from Nitinol wire surrounded by an expandable foam. As shown in cross-section in <figref>FIGS. 28 and 29</figref>, at the time of deployment, the foam <b>372</b> is compressed about the wire <b>374</b> and held in the compressed form by a time-released coating <b>376</b>. After deployment, coating <b>376</b> dissolves in vivo to allow foam <b>372</b> to expand, as shown in <figref>FIGS. 30 and 31</figref>.</p>
+      <p id="p-00112-en" num="0112">
+        <figref>FIGS. 32-34</figref> show another way to seal the replacement valve against leakage. A fabric seal <b>380</b> extends from the distal end of valve <b>20</b> and back proximally over anchor <b>30</b> during delivery. When deployed, as shown in <figref>FIGS. 33 and 34</figref>, fabric seal <b>380</b> bunches up to create fabric flaps and pockets that extend into spaces formed by the native valve leaflets <b>382</b>, particularly when the pockets are filled with blood in response to backflow blood pressure. This arrangement creates a seal around the replacement valve.</p>
+      <p id="p-00113-en" num="0113">
+        <figref>FIGS. 35A-H</figref> show another embodiment of a replacement heart valve apparatus in accordance with the present invention. Apparatus <b>450</b> comprises replacement valve <b>460</b> (see <figref>FIGS. 37B and 38C</figref>) disposed within and coupled to anchor <b>470</b>. Replacement valve <b>460</b> is preferably biologic, e.g. porcine, but alternatively may be synthetic. Anchor <b>470</b> preferably is fabricated from self-expanding materials, such as a stainless steel wire mesh or a nickel-titanium alloy (“Nitinol”), and comprises lip region <b>472</b>, skirt region <b>474</b>, and body regions <b>476</b><i>a</i>, <b>476</b><i>b </i>and <b>476</b><i>c</i>. Replacement valve <b>460</b> preferably is coupled to skirt region <b>474</b>, but alternatively may be coupled to other regions of the anchor. As described hereinbelow, lip region <b>472</b> and skirt region <b>474</b> are configured to expand and engage/capture a patient's native valve leaflets, thereby providing positive registration, reducing paravalvular regurgitation, reducing device migration, etc.</p>
+      <p id="p-00114-en" num="0114">As seen in <figref>FIG. 35A</figref>, apparatus <b>450</b> is collapsible to a delivery configuration, wherein the apparatus may be delivered via delivery system <b>410</b>. Delivery system <b>410</b> comprises sheath <b>420</b> having lumen <b>422</b>, as well as wires <b>424</b><i>a </i>and <b>424</b><i>b </i>seen in <figref>FIGS. 35D-35G</figref>. Wires <b>424</b><i>a </i>are configured to expand skirt region <b>474</b> of anchor <b>470</b>, as well as replacement valve <b>460</b> coupled thereto, while wires <b>424</b><i>b </i>are configured to expand lip region <b>472</b>.</p>
+      <p id="p-00115-en" num="0115">As seen in <figref>FIG. 35B</figref>, apparatus <b>450</b> may be delivered and deployed from lumen <b>422</b> of catheter <b>420</b> while the apparatus is disposed in the collapsed delivery configuration. As seen in <figref>FIGS. 35B-35D</figref>, catheter <b>420</b> is retracted relative to apparatus <b>450</b>, which causes anchor <b>470</b> to dynamically self-expand to a partially deployed configuration. Wires <b>424</b><i>a </i>are then retracted to expand skirt region <b>474</b>, as seen in <figref>FIGS. 35E and 35F</figref>. Preferably, such expansion may be maintained via locking features described hereinafter.</p>
+      <p id="p-00116-en" num="0116">In <figref>FIG. 35G</figref>, wires <b>424</b><i>b </i>are retracted to expand lip region <b>472</b> and fully deploy apparatus <b>450</b>. As with skirt region <b>474</b>, expansion of lip region <b>472</b> preferably may be maintained via locking features. After both lip region <b>472</b> and skirt region <b>474</b> have been expanded, wires <b>424</b> may be removed from apparatus <b>450</b>, thereby separating delivery system <b>410</b> from the apparatus. Delivery system <b>410</b> then may be removed, as seen in <figref>FIG. 35H</figref>.</p>
+      <p id="p-00117-en" num="0117">As will be apparent to those of skill in the art, lip region <b>472</b> optionally may be expanded prior to expansion of skirt region <b>474</b>. As yet another alternative, lip region <b>472</b> and skirt region <b>474</b> optionally may be expanded simultaneously, in parallel, in a step-wise fashion or sequentially. Advantageously, delivery of apparatus <b>450</b> is fully reversible until lip region <b>472</b> or skirt region <b>474</b> has been locked in the expanded configuration.</p>
+      <p id="p-00118-en" num="0118">With reference now to <figref>FIGS. 36A-E</figref>, individual cells of anchor <b>470</b> of apparatus <b>450</b> are described to detail deployment and expansion of the apparatus. In <figref>FIG. 36A</figref>, individual cells of lip region <b>472</b>, skirt region <b>474</b> and body regions <b>476</b><i>a</i>, <b>476</b><i>b </i>and <b>476</b><i>c </i>are shown in the collapsed delivery configuration, as they would appear while disposed within lumen <b>422</b> of sheath <b>420</b> of delivery system <b>410</b> of <figref>FIG. 35</figref>. A portion of the cells forming body regions <b>476</b>, for example, every ‘nth’ row of cells, comprises locking features.</p>
+      <p id="p-00119-en" num="0119">Body region <b>476</b><i>a </i>comprises male interlocking element <b>482</b> of lip lock <b>480</b>, while body region <b>476</b><i>b </i>comprises female interlocking element <b>484</b> of lip lock <b>480</b>. Male element <b>482</b> comprises eyelet <b>483</b>. Wire <b>424</b><i>b </i>passes from female interlocking element <b>484</b> through eyelet <b>483</b> and back through female interlocking element <b>484</b>, such that there is a double strand of wire <b>424</b><i>b </i>that passes through lumen <b>422</b> of catheter <b>420</b> for manipulation by a medical practitioner external to the patient. Body region <b>476</b><i>b </i>further comprises male interlocking element <b>492</b> of skirt lock <b>490</b>, while body region <b>476</b><i>c </i>comprises female interlocking element <b>494</b> of the skirt lock. Wire <b>424</b><i>a </i>passes from female interlocking element <b>494</b> through eyelet <b>493</b> of male interlocking element <b>492</b>, and back through female interlocking element <b>494</b>. Lip lock <b>480</b> is configured to maintain expansion of lip region <b>472</b>, while skirt lock <b>490</b> is configured to maintain expansion of skirt region <b>474</b>.</p>
+      <p id="p-00120-en" num="0120">In <figref>FIG. 36B</figref>, anchor <b>470</b> is shown in the partially deployed configuration, e.g., after deployment from lumen <b>422</b> of sheath <b>420</b>. Body regions <b>476</b>, as well as lip region <b>472</b> and skirt region <b>474</b>, self-expand to the partially deployed configuration. Full deployment is then achieved by retracting wires <b>424</b> relative to anchor <b>470</b>, and expanding lip region <b>472</b> and skirt region <b>474</b> outward, as seen in <figref>FIGS. 36C and 36D</figref>. As seen in <figref>FIG. 36E</figref>, expansion continues until the male elements engage the female interlocking elements of lip lock <b>480</b> and skirt lock <b>490</b>, thereby maintaining such expansion (lip lock <b>480</b> shown in <figref>FIG. 36E</figref>). Advantageously, deployment of apparatus <b>450</b> is fully reversible until lip lock <b>480</b> and/or skirt lock <b>490</b> has been actuated.</p>
+      <p id="p-00121-en" num="0121">With reference to <figref>FIGS. 37A-B</figref>, isometric views, partially in section, further illustrate apparatus <b>450</b> in the fully deployed and expanded configuration. <figref>FIG. 37A</figref> illustrates the wireframe structure of anchor <b>470</b>, while <figref>FIG. 37B</figref> illustrates an embodiment of anchor <b>470</b> covered in a biocompatible material B. Placement of replacement valve <b>460</b> within apparatus <b>450</b> may be seen in <figref>FIG. 37B</figref>. The patient's native valve is captured between lip region <b>472</b> and skirt region <b>474</b> of anchor <b>470</b> in the fully deployed configuration (see <figref>FIG. 38B</figref>).</p>
+      <p id="p-00122-en" num="0122">Referring to <figref>FIGS. 38A-C</figref>, in conjunction with <figref>FIGS. 35 and 36</figref>, a method for endovascularly replacing a patient's diseased aortic valve with apparatus <b>450</b> is described. Delivery system <b>410</b>, having apparatus <b>450</b> disposed therein, is endovascularly advanced, preferably in a retrograde fashion, through a patient's aorta A to the patient's diseased aortic valve AV. Sheath <b>420</b> is positioned such that its distal end is disposed within left ventricle LV of the patient's heart H. As described with respect to <figref>FIG. 35</figref>, apparatus <b>450</b> is deployed from lumen <b>422</b> of sheath <b>420</b>, for example, under fluoroscopic guidance, such that skirt section <b>474</b> is disposed within left ventricle LV, body section <b>476</b><i>b </i>is disposed across the patient's native valve leaflets L, and lip section <b>472</b> is disposed within the patient's aorta A. Advantageously, apparatus <b>450</b> may be dynamically repositioned to obtain proper alignment with the anatomical landmarks. Furthermore, apparatus <b>450</b> may be retracted within lumen <b>422</b> of sheath <b>420</b> via wires <b>424</b>, even after anchor <b>470</b> has dynamically expanded to the partially deployed configuration, for example, to abort the procedure or to reposition sheath <b>420</b>.</p>
+      <p id="p-00123-en" num="0123">Once properly positioned, wires <b>424</b><i>a </i>are retracted to expand skirt region <b>474</b> of anchor <b>470</b> within left ventricle LV. Skirt region <b>474</b> is locked in the expanded configuration via skirt lock <b>490</b>, as previously described with respect to <figref>FIG. 36</figref>. In <figref>FIG. 38A</figref>, skirt region <b>474</b> is maneuvered such that it engages the patient's valve annulus An and/or native valve leaflets L, thereby providing positive registration of apparatus <b>450</b> relative to the anatomical landmarks.</p>
+      <p id="p-00124-en" num="0124">Wires <b>424</b><i>b </i>are then actuated external to the patient in order to expand lip region <b>472</b>, as previously described in <figref>FIG. 35</figref>. Lip region <b>472</b> is locked in the expanded configuration via lip lock <b>480</b>. Advantageously, deployment of apparatus <b>450</b> is fully reversible until lip lock <b>480</b> and/or skirt lock <b>490</b> has been actuated. Wires <b>424</b> are pulled from eyelets <b>483</b> and <b>493</b>, and delivery system <b>410</b> is removed from the patient. As will be apparent, the order of expansion of lip region <b>472</b> and skirt region <b>474</b> may be reversed, concurrent, etc.</p>
+      <p id="p-00125-en" num="0125">As seen in <figref>FIG. 38B</figref>, lip region <b>472</b> engages the patient's native valve leaflets L, thereby providing additional positive registration and reducing a risk of lip region <b>472</b> blocking the patient's coronary ostia O. <figref>FIG. 38C</figref> illustrates the same in cross-sectional view, while also showing the position of replacement valve <b>460</b>. The patient's native leaflets are engaged and/or captured between lip region <b>472</b> and skirt region <b>474</b>. Advantageously, lip region <b>472</b> precludes distal migration of apparatus <b>450</b>, while skirt region <b>474</b> precludes proximal migration. It is expected that lip region <b>472</b> and skirt region <b>474</b> also will reduce paravalvular regurgitation.</p>
+      <p id="p-00126-en" num="0126">Referring now to <figref>FIG. 39</figref>, an embodiment of apparatus in accordance with the present invention is described, wherein the replacement valve is not connected to the expandable portion of the anchor. Rather, the replacement valve is wrapped about an end of the anchor. Such wrapping may be achieved, for example, by everting the valve during endovascular deployment.</p>
+      <p id="p-00127-en" num="0127">In <figref>FIG. 39</figref>, apparatus <b>500</b> comprises expandable anchor <b>30</b>′ and everting replacement valve <b>520</b>, as well as delivery system <b>100</b>′ for endoluminally delivering and deploying the expandable anchor and everting valve. Expandable anchor <b>30</b>′ illustratively is described as substantially the same as previously described anchor <b>30</b> of <figref>FIGS. 1-4</figref>; however, it should be understood that anchor <b>30</b>′ alternatively may be substantially the same as anchor <b>300</b> of <figref>FIGS. 17 and 18</figref>, anchor <b>350</b> of <figref>FIGS. 24-26</figref>, or anchor <b>470</b> of <figref>FIG. 35</figref>. As with anchor <b>30</b>, anchor <b>30</b>′ comprises posts <b>38</b> and locks (comprised of elements <b>523</b> and <b>532</b>). Alternative locks may be provided, such as locks <b>40</b>′, <b>40</b>″, <b>40</b>′″ or <b>40</b>″″ of <figref>FIGS. 11 and 12</figref>, or the reversible lock of anchor <b>300</b> described with respect to <figref>FIGS. 17 and 18</figref>.</p>
+      <p id="p-00128-en" num="0128">Everting valve <b>520</b> is similar to previously described valve <b>20</b>, in that commissures <b>524</b> of replacement valve leaflets <b>526</b> are coupled to and supported by posts <b>38</b> of anchor <b>30</b>′. However, annular base <b>522</b> of replacement valve <b>520</b> is not coupled to anchor <b>30</b>′. Rather, annular base <b>522</b> is coupled to everting segment <b>528</b> of everting replacement valve <b>520</b>. Everting segment <b>528</b> is disposed distal of anchor <b>30</b>′ in the delivery configuration and is configured to wrap about the distal end of the anchor during deployment, such as by everting, thereby holding (such as by friction locking) replacement valve <b>520</b> between the anchor and the patient's tissue, thereby creating a seal between the anchor and the patient's tissue. In this manner, replacement valve <b>520</b> is entirely disconnected from the expandable/collapsible portion of anchor <b>30</b>′, and a delivery profile of apparatus <b>500</b> is reduced, as compared to previously described apparatus <b>10</b>.</p>
+      <p id="p-00129-en" num="0129">Everting segment <b>528</b> of valve <b>520</b> may be fabricated from the same material as valve leaflets <b>526</b>, e.g., a biologic tissue or a polymeric material. Alternatively, the segment may comprise a fabric, such as a permeable or impermeable fabric, a fabric that promotes or retards tissue ingrowth, a sealing foam, etc. Additional materials will be apparent.</p>
+      <p id="p-00130-en" num="0130">Delivery system <b>100</b>′ for use with anchor <b>30</b>′ and replacement valve <b>520</b>, is similar to previously described delivery system <b>100</b>. The delivery system comprises sheath <b>110</b>′ having lumen <b>112</b>′, in which anchor <b>30</b>′ may be collapsed for delivery. Control wires <b>50</b>, tubes <b>60</b> and control wires <b>62</b> have been provided to deploy, foreshorten, retrieve, etc., anchor <b>30</b>′, as discussed previously, and optional balloon catheter <b>360</b> has been provided as a collapsible nosecone (see <figref>FIG. 25</figref>). In delivery system <b>100</b>′, the posts are connected to the distal end of the anchor and the everting valve is connected to the posts. Delivery system <b>100</b>′ differs from system <b>100</b> in that it further comprises eversion control wires <b>550</b>, which may, for example, be fabricated from suture.</p>
+      <p id="p-00131-en" num="0131">Control wires <b>550</b> are coupled to a distal region of everting segment <b>528</b> of valve <b>520</b>, and then pass proximally out of the patient external to anchor <b>30</b>′ for manipulation by a medical practitioner. Control wires <b>550</b> preferably are kept taut to keep everting segment <b>528</b> in tension. Upon retraction of sheath <b>110</b>′ relative to anchor <b>30</b>′ and valve <b>520</b> (or advancement of the anchor and valve relative to the sheath), the tension applied to segment <b>528</b> by wires <b>550</b> causes the segment to evert and wrap about the distal end of anchor <b>30</b>′. Anchor <b>30</b>′ then may be expanded and deployed as described previously, thereby friction locking everting segment <b>528</b> between the anchor and the patient's anatomy.</p>
+      <p id="p-00132-en" num="0132">
+        <figref>FIG. 39</figref> illustrate a device and method for endovascularly replacing a patient's diseased aortic valve utilizing apparatus <b>500</b>. In <figref>FIG. 39A</figref>, sheath <b>110</b>′ of delivery system <b>100</b>′, having expandable anchor <b>30</b>′ and everting valve <b>520</b> disposed therein within lumen <b>112</b>′, is endovascularly advanced over guide wire G, preferably in a retrograde fashion (although an antegrade or hybrid approach alternatively may be used), through a patient's aorta A to the patient's diseased aortic valve AV. Balloon catheter nosecone <b>360</b> precedes sheath <b>110</b>′. Sheath <b>110</b>′ is positioned such that its distal region is disposed within left ventricle LV of the patient's heart H. In <figref>FIG. 39A</figref>, wires <b>550</b> pass from segment <b>528</b> and lumen <b>112</b>′ to the exterior of sheath <b>110</b>′ via through-holes <b>111</b><i>a</i>′, and then more proximally pass back into the interior of sheath <b>110</b>′ via through-holes <b>111</b><i>b</i>′, which are disposed proximal of anchor <b>30</b>′.</p>
+      <p id="p-00133-en" num="0133">
+        <figref>FIG. 39B</figref> is a blow-up of the intersection of tubes <b>60</b>, wires <b>62</b> and anchor <b>30</b>′.</p>
+      <p id="p-00134-en" num="0134">
+        <figref>FIG. 39C</figref> illustrates the beginning of the everting process wherein everting segment <b>528</b> is being pulled proximally over the exterior of anchor <b>30</b>′. As seen in <figref>FIG. 39C</figref>, which provides and isometric view of the device, the inflatable element of balloon catheter <b>360</b> is deflated and further distally advanced within left ventricle LV along guide wire G relative to sheath <b>110</b>′. Anchor <b>30</b>′ and replacement valve <b>520</b> then are advanced relative to the sheath via tubes <b>60</b> and control wires <b>62</b>, thereby deploying everting segment <b>528</b> of valve <b>520</b>, as well as a distal region of anchor <b>30</b>′, from the distal end of lumen <b>112</b>′. Tension applied to everting segment <b>528</b> via control wires <b>550</b> connected through eyelets <b>529</b> causes the segment to wrap about the distal region of anchor <b>30</b>′ by everting.</p>
+      <p id="p-00135-en" num="0135">In <figref>FIG. 39C</figref>, wires <b>550</b> may pass distally from everting segment <b>528</b> out the distal end of lumen <b>112</b>′ of sheath <b>110</b>′, then proximally along the interior surface of the sheath all the way out of the patient. Optional through-holes <b>111</b><i>b</i>′ allow wires <b>550</b> to be disposed within lumen <b>112</b>′ along a majority of their length. Wires <b>550</b> may also pass back into multi-lumen sheath <b>180</b>.</p>
+      <p id="p-00136-en" num="0136">
+        <figref>FIG. 39D</figref> provides a cross sectional view of apparatus <b>500</b> after replacement valve <b>520</b> has everted about anchor <b>30</b>′. This and other cross sectional figures portray a 120.degree. view of the apparatus herein. Sheath <b>10</b>′ is then retracted relative to anchor <b>30</b>′ and valve <b>520</b>, which deploys a remainder of the anchor and the replacement valve from lumen <b>112</b>′ of the sheath. Such deployment may be conducted, for example, under fluoroscopic guidance. Anchor <b>30</b>′ dynamically self-expands to a partially deployed configuration.</p>
+      <p id="p-00137-en" num="0137">Advantageously, anchor <b>30</b>′ and replacement valve <b>520</b> may be retrieved and retracted within the lumen of sheath <b>110</b>′ via retraction of multi-lumen catheter <b>180</b> to which tubes <b>60</b> are attached and release of wires <b>50</b>. Such retrieval of apparatus <b>500</b> may be achieved even after segment <b>528</b> has been wrapped about anchor <b>30</b>′, and even after anchor <b>30</b>′ has dynamically expanded to the partially deployed configuration. Retrieval of apparatus <b>500</b> may be utilized, for example, to abort the procedure or to reposition the apparatus. As yet another advantage, anchor <b>30</b>′ and valve <b>520</b> may be dynamically repositioned, e.g. via proximal retraction of multi-lumen catheter <b>180</b> and/or release of wires <b>50</b>, in order to properly align the apparatus relative to anatomical landmarks, such as the patient's coronary ostia O or the patient's native valve leaflets L.</p>
+      <p id="p-00138-en" num="0138">Once properly aligned sheath <b>110</b>′, tubes <b>60</b> and wires <b>62</b> are advanced relative to wires <b>50</b> and <b>550</b> to impose foreshortening upon anchor <b>30</b>′, thereby expanding the anchor to the fully deployed configuration, as in <figref>FIG. 39G</figref>. Foreshortening friction locks everting segment <b>528</b> of valve <b>520</b> between anchor <b>30</b>′ and annulus An/leaflets L of the patient's diseased valve, thus properly seating the valve within the anchor while providing an improved seal between the replacement and native valves that is expected to reduce paravalvular regurgitation. Foreshortening also increases a radial strength of anchor <b>30</b>′, which is expected to prolong patency of valve annulus An. Furthermore, foreshortening actuates the anchor's locks, which maintain such imposed foreshortening.</p>
+      <p id="p-00139-en" num="0139">Deployment of anchor <b>30</b>′ and replacement valve <b>520</b> advantageously is fully reversible until the anchor locks have been actuated. Furthermore, if the anchor's locks are reversible locks or buckles, such as those described in conjunction with anchor <b>300</b> of <figref>FIGS. 17 and 18</figref>, deployment of the anchor and valve may be fully reversible even after actuation of the locks/buckles, right up until delivery system <b>100</b>′ is decoupled from the replacement apparatus.</p>
+      <p id="p-00140-en" num="0140">As seen in <figref>FIG. 39G</figref>, in order to complete deployment of anchor <b>30</b>′ and replacement valve <b>520</b>, wires <b>50</b> of delivery system <b>100</b>′ are decoupled from posts <b>38</b> of anchor <b>30</b>′, tubes <b>60</b> are decoupled from anchor <b>30</b>′, e.g. via wires <b>62</b>, and wires <b>550</b> are decoupled from friction-locked everting segment <b>528</b> of replacement valve <b>520</b>. <figref>FIG. 39E</figref> illustrates how wires <b>50</b> are associated with posts <b>38</b>. In one example, wires <b>50</b> are decoupled from posts <b>38</b> by pulling on one of the wires. Decoupling of the wires and tubes may also be achieved, for example, via eyelets (see <figref>FIGS. 4E</figref>, <b>19</b>-<b>21</b> and <b>39</b>E) or via cutting of the wires. Delivery system <b>100</b>′ then is removed from the patient, as are deflated balloon catheter <b>360</b> and guide wire G, both of which are retracted proximally across the replacement valve and anchor. Normal blood flow between left ventricle LV and aorta A thereafter is regulated by replacement valve <b>520</b>. <figref>FIG. 39F</figref> is a blow up illustration of replacement valves <b>526</b> which are connected to everting segment <b>528</b>, wherein everting segment <b>528</b> has been everted around anchor <b>30</b>′.</p>
+      <p id="p-00141-en" num="0141">Referring now to <figref>FIG. 40</figref>, an alternative embodiment of everting apparatus in accordance with the present invention is described, wherein the posts are connected and the everting valve is disposed within the anchor to the proximal end of the anchor in the delivery configuration. In <figref>FIG. 40</figref>, apparatus <b>600</b> comprises everting replacement valve <b>620</b> and anchor <b>630</b>, as well as previously described delivery system <b>100</b>′. Replacement valve <b>620</b> and anchor <b>630</b> are substantially the same as valve <b>520</b> and anchor <b>30</b>′ of <figref>FIG. 39</figref>, except that valve <b>620</b> is initially seated more proximally within anchor <b>630</b>, such that everting segment <b>628</b> of valve <b>620</b> is initially disposed within the anchor. Locking mechanisms as described previously may be implemented at the distal end of the post and anchor or proximal end of everted segment and anchor.</p>
+      <p id="p-00142-en" num="0142">As with replacement valve <b>520</b>, everting segment <b>628</b> of valve <b>620</b> is configured to wrap about the distal end of anchor <b>630</b> by everting during deployment, thereby friction locking the replacement valve between the anchor and the patient's anatomy. Furthermore, replacement valve <b>620</b> is entirely disconnected from the expandable/collapsible portion of anchor <b>630</b>. In the delivery configuration, since only a single circumferential layer of valve <b>620</b> is present along any cross section of apparatus <b>600</b>, a delivery profile of the apparatus is reduced, as compared to previously described apparatus <b>10</b>. With apparatus <b>10</b>, two circumferential layers of valve <b>20</b> are present in the cross section where annular base <b>22</b> of the valve is coupled to the expandable anchor <b>30</b>.</p>
+      <p id="p-00143-en" num="0143">
+        <figref>FIG. 40</figref> illustrate a method of endovascularly replacing a patient's diseased aortic valve utilizing apparatus <b>600</b>. In <figref>FIG. 40A</figref>, apparatus <b>600</b> is endovascularly advanced into position with valve <b>620</b> and anchor <b>630</b> disposed within lumen <b>112</b>′ of sheath <b>110</b>′ of delivery system <b>100</b>′. As seen in <figref>FIG. 40B</figref>, the valve and anchor are advanced relative to the sheath and/or the sheath is retracted relative to the valve and anchor, which deploys everting segment <b>628</b> of the valve, as well as a distal region of the anchor. Tension applied to the everting segment via control wires <b>550</b> causes the segment to evert and wrap about the distal region of anchor <b>630</b>. Control wires <b>550</b> may enter the multi-lumen catheter at the distal end of the catheter or more proximally as is illustrated in <b>40</b>C. Further retraction of sheath <b>110</b>′ deploys a remainder of replacement valve <b>620</b> and anchor <b>630</b> from lumen <b>112</b>′ of the sheath. Such deployment may be conducted, for example, under fluoroscopic guidance. Anchor <b>630</b> dynamically self-expands to a partially deployed configuration.</p>
+      <p id="p-00144-en" num="0144">Once the anchor and valve have been properly aligned in relation to anatomical landmarks, foreshortening is imposed upon anchor <b>630</b> to expand the anchor to the fully deployed configuration, as in <figref>FIG. 40C</figref>. At this point, Locks may be actuated as previously described. Foreshortening friction locks everting segment <b>628</b> of valve <b>620</b> between anchor <b>630</b> and annulus An/leaflets L of the patient's diseased valve, thus properly seating the valve within the anchor while providing an improved seal between the replacement and native valves. Foreshortening also increases a radial strength of anchor <b>630</b>, which is expected to prolong patency of valve annulus An. Deployed valve <b>620</b> and anchor <b>630</b> then are decoupled from delivery system <b>100</b>′, as in <figref>FIG. 40D</figref>, thereby completing deployment of apparatus <b>600</b>. Thereafter, normal blood flow between left ventricle LV and aorta A is regulated by replacement valve <b>620</b>.</p>
+      <p id="p-00145-en" num="0145">As with apparatus <b>500</b>, apparatus <b>600</b> may be dynamically repositioned during deployment, for example, in order to properly align the apparatus relative to anatomical landmarks. Furthermore, apparatus <b>600</b> advantageously may be retrieved at any point at least up until actuation of optimal locks maintaining foreshortening. When the optional locks are reversible, retrieval may be achieved until valve <b>620</b> and anchor <b>630</b> are separated from delivery system <b>100</b>′.</p>
+      <p id="p-00146-en" num="0146">
+        <figref>FIG. 41</figref> illustrate an alternative embodiment of the present invention wherein the everting valve is distal to the anchor and the posts are not connected to the braid in the delivery configuration. As is illustrated in <figref>FIG. 41A</figref>, apparatus <b>700</b> comprises everting valve <b>720</b> and expandable anchor <b>730</b>, as well as delivery system <b>750</b>. Delivery system <b>750</b> includes multi-lumen catheter <b>180</b>. Anchor <b>730</b> is fabricated from an expandable braid and comprises female/male element <b>732</b> of a locking mechanism, which is preferably reversible. Everting valve <b>720</b> comprises valve leaflets <b>726</b> and everting segment <b>728</b>. Everting valve <b>720</b> further comprises posts <b>722</b> to which valve leaflets <b>726</b> are attached to provide commissure support. Posts <b>722</b>, which are non-expandable and non-collapsible, comprise opposite male/female elements <b>723</b> of locking mechanism comprising eyelets. In the delivery configuration of FIG. <b>41</b>A, anchor <b>730</b> may extend distally far enough to just overlap the proximal-most section of valve <b>720</b>.</p>
+      <p id="p-00147-en" num="0147">Delivery system <b>750</b> is similar to previously described delivery system <b>100</b>′ and includes multi-lumen catheter <b>180</b>. As with previous embodiments, delivery system <b>750</b> facilitates dynamic repositioning and/or retrieval of apparatus <b>700</b> after partial or full deployment of the apparatus, e.g., right up until the apparatus is separated from the delivery system.</p>
+      <p id="p-00148-en" num="0148">As seen in <figref>FIG. 41A</figref>, wires <b>50</b> pass from the multi-lumen catheter <b>180</b> through the female/male locking mechanism <b>732</b>, which is associated with anchor <b>730</b>. Wires <b>50</b> then further pass through female/male locking mechanism <b>723</b>, which is at the proximal end of posts <b>722</b>. Preferably, a double strand of each wire <b>50</b> is provided to facilitate decoupling of wires <b>50</b> from valve <b>720</b> and anchor <b>730</b> in the manner described previously. When wires <b>50</b> are pulled proximally into the multi lumen catheter <b>180</b>, posts <b>722</b> move proximally within anchor <b>730</b>, and the female/male element <b>723</b> interacts with female/male element <b>732</b> of anchor <b>730</b>. In this embodiment, when element <b>723</b> is male, then element <b>732</b> is female, and vice versa.</p>
+      <p id="p-00149-en" num="0149">Thus, valve <b>720</b> and anchor <b>730</b> are entirely decoupled from one another in the delivery configuration. Wires <b>50</b> are configured to approximate the telescoped valve and anchor, as well as to actuate locking mechanism <b>740</b> and contribute to foreshortening of anchor <b>730</b>. By separating valve <b>720</b> and anchor <b>730</b> within lumen <b>112</b>′ of sheath <b>110</b>′, a delivery profile of apparatus <b>700</b> may be reduced.</p>
+      <p id="p-00150-en" num="0150">In <figref>FIG. 41A</figref>, apparatus <b>700</b> is endovascularly advanced into position with valve <b>720</b> and anchor <b>730</b> spaced from one another within lumen <b>112</b>′ of sheath <b>110</b>′ of delivery system <b>750</b>. Substantially all of valve <b>720</b> and its supporting posts <b>722</b> are disposed distal to the anchor during delivery. As seen in <figref>FIG. 41B</figref>, to evert valve <b>720</b>, sheath <b>110</b>′ is pulled proximally around anchor <b>730</b>.</p>
+      <p id="p-00151-en" num="0151">Next, in <figref>FIG. 41C</figref>, to approximate anchor <b>730</b> and valve <b>720</b>, the elongated braid of anchor <b>730</b> is pushed distally to the base of posts <b>722</b> using tubes <b>60</b> maintained in association with anchor <b>730</b> by wire <b>62</b>. Anchor <b>730</b> will engage with the distal end of posts <b>722</b>—an anchor engagement feature <b>729</b>. In some embodiments, as illustrated in <figref>FIG. 41C</figref>, wires <b>550</b> re-enter sheath <b>110</b>′ proximal to the distal end of the multi-lumen catheter <b>180</b>.</p>
+      <p id="p-00152-en" num="0152">In <figref>FIG. 41D</figref>, the multi-lumen catheter <b>180</b> is held steady, while wires <b>50</b> are pulled proximally. This allows the foreshortening of anchor <b>730</b> and the engagement of the male and female elements of locking mechanism of <b>740</b>. Foreshortening friction locks segment <b>728</b> of valve <b>720</b> against valve annulus An/leaflets L, thereby properly seating the valve within anchor <b>730</b>. Foreshortening also completes expansion of anchor <b>730</b> and actuates locking mechanism <b>740</b>, which maintains such expansion of the anchor. Delivery system <b>750</b> then may be decoupled from valve <b>720</b> and anchor <b>730</b>, thereby completing deployment of apparatus <b>700</b>. Normal blood flow between left ventricle LV and aorta A thereafter is regulated by replacement valve <b>720</b>.</p>
+      <p id="p-00153-en" num="0153">With reference now to <figref>FIG. 42</figref>, yet another alternative embodiment of everting apparatus in accordance with the present invention is described, wherein the replacement valve leaflets evert and wrap about the distal region of the anchor. Apparatus <b>800</b> comprises everting replacement valve <b>820</b> and expandable anchor <b>830</b>. Valve <b>820</b> comprises posts <b>822</b>, to which valve leaflets <b>826</b> are attached. The valve further comprises everting segment <b>828</b>. Proximal regions <b>823</b> of posts <b>822</b> are rotatably coupled to a distal region of anchor <b>830</b>, while distal regions <b>824</b> of the posts are coupled to control wires <b>50</b>.</p>
+      <p id="p-00154-en" num="0154">In the delivery configuration of <figref>FIG. 42A</figref>, posts <b>822</b> (and, thus, valve leaflets <b>826</b>) and everting segment <b>828</b> of replacement valve <b>820</b> are disposed distal of anchor <b>830</b>. <figref>FIG. 42B</figref> illustrates deployment of apparatus <b>800</b>, whereby tubes <b>60</b>/wires <b>62</b> (see, e.g., <figref>FIG. 41</figref>) are actuated in conjunction with control wires <b>50</b> to actively foreshorten anchor <b>830</b> and rotate posts <b>822</b> into position within the lumen of anchor <b>830</b>, thereby everting valve leaflets <b>826</b> into position within the anchor. Furthermore, eversion wires <b>550</b> are actuated to evert segment <b>828</b> and wrap the segment about the exterior of anchor <b>830</b>. Locks <b>840</b> maintain expansion and foreshortening of anchor <b>830</b>.</p>
+      <p id="p-00155-en" num="0155">Referring to <figref>FIG. 43</figref>, an everting embodiment of the present invention is described wherein a portion of the locking mechanism configured to maintain expansion of the anchor is coupled to the everting segment of the replacement valve instead of, or in addition to, the anchor posts and anchor posts P are only loosely associated with the anchor <b>930</b>. Apparatus <b>900</b> comprises replacement valve <b>920</b> and anchor <b>930</b>. Everting segment <b>928</b> of the replacement valve comprises male elements <b>942</b> of locks <b>940</b>, while anchor <b>930</b> comprises female elements <b>944</b> of locks <b>940</b>. Upon deployment of apparatus <b>900</b> from the delivery configuration of <figref>FIG. 43A</figref> to the deployed configuration of <figref>FIG. 43B</figref>, segment <b>928</b> of replacement valve <b>920</b> everts to wrap about the exterior of anchor <b>930</b>, which is actively foreshortened during expansion. Locks <b>940</b> maintain anchor expansion.</p>
+      <p id="p-00156-en" num="0156">With reference to <figref>FIG. 44</figref>, another telescoping embodiment of the present invention is described wherein the replacement valve comprises a U-shaped frame configured to receive the anchor. Optionally, the valve may comprise an everting segment that everts about the frame and/or the anchor during deployment. Apparatus <b>1000</b> comprises replacement valve <b>1020</b> and expandable anchor <b>1030</b>. Replacement valve <b>1020</b> comprises frame <b>1022</b>, leaflets <b>1026</b> and optional everting segment <b>1028</b>.</p>
+      <p id="p-00157-en" num="0157">Valve <b>1020</b> and anchor <b>1030</b> are configured for relative movement, such that the valve and anchor may be telescoped and spaced apart during delivery, thereby reducing a delivery profile of apparatus <b>1000</b>, but may be approximated during deployment. Everting segment <b>1028</b> of valve <b>1020</b> optionally may be disposed distal of valve frame <b>1022</b> during delivery, thereby further reducing a delivery profile of apparatus <b>1000</b>, then everted during deployment.</p>
+      <p id="p-00158-en" num="0158">As seen in <figref>FIG. 44A</figref>, the U-shape of valve frame <b>1022</b> preferably tilts leaflets <b>1026</b> of replacement valve <b>1020</b> slightly inward relative to blood flow through apparatus <b>1000</b>. As seen in <figref>FIG. 44B</figref>, valve frame <b>1022</b> optionally may comprise a symmetric U-shape, which captures anchor <b>1030</b> on both sides in the deployed configuration. Frame <b>1022</b> may comprise lock <b>1040</b> that closes the frame's U-shape into an elliptical shape in the deployed configuration, thereby maintaining expansion of anchor <b>1030</b>.</p>
+      <p id="p-00159-en" num="0159">Prior to implantation of one of the replacement valves described above, it may be desirable to perform a valvuloplasty on the diseased valve by inserting a balloon into the valve and expanding it using saline mixed with a contrast agent. In addition to preparing the valve site for implant, fluoroscopic viewing of the valvuloplasty will help determine the appropriate size of replacement valve implant to use.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>7</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>8</b>. A medical device comprising:
+<claim-text>an anchor configured to be deployed in a diseased heart valve;</claim-text><claim-text>a replacement valve disposed within an interior of the anchor; and</claim-text><claim-text>a seal having a bunched-up portion, the bunched-up portion disposed around the exterior of the anchor and adapted to prevent blood flow around the anchor when the anchor is deployed.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>9</b>. The medical device of <claim-ref idref="clm-00002-en">claim 8</claim-ref>, wherein the seal is a fabric seal.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>10</b>. The medical device of <b>8</b>, wherein the bunched-up portion of the seal is adapted to fill with blood in response to backflow blood pressure.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>11</b>. The medical device of <claim-ref idref="clm-00002-en">claim 8</claim-ref>, wherein the bunched-up portion of the seal is adapted to be filled with a foam.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>12</b>. The medical device of <claim-ref idref="clm-00002-en">claim 8</claim-ref>, wherein the bunched-up portion of the seal is adapted to be filled with a hydrogel.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>13</b>. The medical device of <claim-ref idref="clm-00002-en">claim 8</claim-ref>, wherein the bunched-up portion of the seal is adapted to be filled with water.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>14</b>. A medical device comprising:
+<claim-text>an anchor configured to be deployed in a diseased heart valve;</claim-text><claim-text>a replacement valve disposed within the interior of the anchor; and</claim-text><claim-text>a seal having an exterior portion disposed around an exterior of the anchor, the exterior portion of the seal comprising one or more sacs, the sacs adapted to prevent blood flow around the anchor when the anchor is deployed.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>15</b>. The medical device of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, wherein the seal is a fabric seal.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>16</b>. The medical device of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, wherein the one or more sacs are adapted to fill with blood in response to backflow blood pressure.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>17</b>. The medical device of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, wherein the one or more sacs are continuously cylindrical.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>18</b>. The medical device of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, wherein the one or more sacs are adapted to be filled with a foam.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>19</b>. The medical device of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, wherein the one or more sacs are adapted to be filled with hydrogel.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>20</b>. The medical device of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, wherein the one or more sacs are adapted to be filled with water.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>21</b>. A medical device comprising:
+<claim-text>an expandable anchor configured to be deployed in a diseased heart valve;</claim-text><claim-text>a replacement heart valve disposed within an interior of the expandable anchor; and</claim-text><claim-text>a seal that, during delivery, extends from a distal end of the replacement valve, within the interior of the expandable anchor, and back proximally over an exterior of the anchor.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>22</b>. The medical device of <claim-ref idref="clm-00015-en">claim 21</claim-ref> wherein, when deployed, the portion of the seal exterior to the anchor bunches up and extends into spaces formed by native valve leaflets of the diseased heart valve.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>23</b>. The medical device of <claim-ref idref="clm-00015-en">claim 21</claim-ref>, wherein the seal includes at least one pocket disposed around the exterior of the anchor.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>24</b>. The medical device of <claim-ref idref="clm-00017-en">claim 23</claim-ref>, wherein the at least one pocket is adapted to prevent blood flow around the anchor when the anchor is deployed.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>25</b>. The medical device of <claim-ref idref="clm-00017-en">claim 23</claim-ref>, wherein the at least one pocket is adapted to fill with blood in response to backflow blood pressure and to extend into spaces formed by native leaflets of the diseased heart valve, thereby forming a seal around the anchor.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>26</b>. The medical device of <claim-ref idref="clm-00017-en">claim 23</claim-ref>, wherein the at least one pocket is continuously cylindrical.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>27</b>. The medical device of <claim-ref idref="clm-00020-en">claim 26</claim-ref>, wherein the at least one continuously cylindrical pocket is disposed around a distal region of the anchor.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00017.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00018.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00019.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00020.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00021.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00022.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00024.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00023.TIF" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00025.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00024.TIF" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00026.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00025.TIF" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00027.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00026.TIF" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00028.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00027.TIF" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00029.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00028.TIF" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00030.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00029.TIF" />
+    </figure>
+    <figure num="31">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00031.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00030.TIF" />
+    </figure>
+    <figure num="32">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00032.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00031.TIF" />
+    </figure>
+    <figure num="33">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00033.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00032.TIF" />
+    </figure>
+    <figure num="34">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00034.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00033.TIF" />
+    </figure>
+    <figure num="35">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00035.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00034.TIF" />
+    </figure>
+    <figure num="36">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00036.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00035.TIF" />
+    </figure>
+    <figure num="37">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00037.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00036.TIF" />
+    </figure>
+    <figure num="38">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00038.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00037.TIF" />
+    </figure>
+    <figure num="39">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00039.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00038.TIF" />
+    </figure>
+    <figure num="40">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00040.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00039.TIF" />
+    </figure>
+    <figure num="41">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00041.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00040.TIF" />
+    </figure>
+    <figure num="42">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00042.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00041.TIF" />
+    </figure>
+    <figure num="43">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00043.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00042.TIF" />
+    </figure>
+    <figure num="44">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00044.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00043.TIF" />
+    </figure>
+    <figure num="45">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00045.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00044.TIF" />
+    </figure>
+    <figure num="46">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00046.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00045.TIF" />
+    </figure>
+    <figure num="47">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00047.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00046.TIF" />
+    </figure>
+    <figure num="48">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00048.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00047.TIF" />
+    </figure>
+    <figure num="49">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00049.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00048.TIF" />
+    </figure>
+    <figure num="50">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00050.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00049.TIF" />
+    </figure>
+    <figure num="51">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00051.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00050.TIF" />
+    </figure>
+    <figure num="52">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00052.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00051.TIF" />
+    </figure>
+    <figure num="53">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00053.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00052.TIF" />
+    </figure>
+    <figure num="54">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00054.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00053.TIF" />
+    </figure>
+    <figure num="55">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00055.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00054.TIF" />
+    </figure>
+    <figure num="56">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00056.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00055.TIF" />
+    </figure>
+    <figure num="57">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00057.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00056.TIF" />
+    </figure>
+    <figure num="58">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00058.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00057.TIF" />
+    </figure>
+    <figure num="59">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00059.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00058.TIF" />
+    </figure>
+    <figure num="60">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00060.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00059.TIF" />
+    </figure>
+    <figure num="61">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00061.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00060.TIF" />
+    </figure>
+    <figure num="62">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00062.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00061.TIF" />
+    </figure>
+    <figure num="63">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00063.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00062.TIF" />
+    </figure>
+    <figure num="64">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00064.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00063.TIF" />
+    </figure>
+    <figure num="65">
+      <img he="N/A" wi="N/A" file="US20150245909A1_00065.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150245909A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150245909A1.PDF" type="pdf" size="3269325" pages="76" />
+</lexisnexis-patent-document>

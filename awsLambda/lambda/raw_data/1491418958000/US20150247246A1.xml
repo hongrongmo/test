@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247246A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021517" date-changed="20150918" time-changed="025314">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140358">
+        <country>US</country>
+        <doc-number>20150247246</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14430053</doc-number>
+        <date>20130131</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012253606</doc-number>
+        <date>20121119</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C25B   9/08        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C25B   1/13        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>13</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C25B   9/08        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C01B  13/11        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>11</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C01B2201/14        20130101 LA20140630BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>2201</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140630</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C01B2201/32        20130101 LA20140630BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>2201</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140630</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C02F2201/782       20130101 LA20140730BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2201</main-group>
+        <subgroup>782</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140730</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C25B   1/13        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>13</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">TUBE-TYPE OZONE GENERATOR AND MANUFACTURING METHOD THEREFOR</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>SUMITOMO PRECISION PRODUCTS CO., LTD.</orgname>
+            <role>03</role>
+            <address>
+              <city>Hyogo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Katayama</last-name>
+            <first-name>Nobuhide</first-name>
+            <address>
+              <city>Hyogo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Toriyabe</last-name>
+            <first-name>Masanori</first-name>
+            <address>
+              <city>Hyogo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Terashima</last-name>
+            <first-name>Yuji</first-name>
+            <address>
+              <city>Hyogo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kimoto</last-name>
+            <first-name>Tadashi</first-name>
+            <address>
+              <city>Hyogo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Yoshida</last-name>
+            <first-name>Hisaji</first-name>
+            <address>
+              <city>Hyogo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13000546</doc-number>
+        <date>20130131</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014076851</doc-number>
+        <date>20140522</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150923">
+      <main-family family-id="165776106">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2921454</doc-number>
+            <kind>A1</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20130131</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247246</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130131</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103958399</doc-number>
+            <kind>A</kind>
+            <date>20140730</date>
+          </document-id>
+          <application-date>
+            <date>20130131</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014101245</doc-number>
+            <kind>A</kind>
+            <date>20140605</date>
+          </document-id>
+          <application-date>
+            <date>20121119</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201420493</doc-number>
+            <kind>A</kind>
+            <date>20140601</date>
+          </document-id>
+          <application-date>
+            <date>20130204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014076851</doc-number>
+            <kind>A1</kind>
+            <date>20140522</date>
+          </document-id>
+          <application-date>
+            <date>20130131</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165776105">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2921454</doc-number>
+            <kind>A1</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20130131</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247246</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130131</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103958399</doc-number>
+            <kind>A</kind>
+            <date>20140730</date>
+          </document-id>
+          <application-date>
+            <date>20130131</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014101245</doc-number>
+            <kind>A</kind>
+            <date>20140605</date>
+          </document-id>
+          <application-date>
+            <date>20121119</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201420493</doc-number>
+            <kind>A</kind>
+            <date>20140601</date>
+          </document-id>
+          <application-date>
+            <date>20130204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014076851</doc-number>
+            <kind>A1</kind>
+            <date>20140522</date>
+          </document-id>
+          <application-date>
+            <date>20130131</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A tube-type ozone generator <b>1</b> including an ozone generation unit <b>30</b>A is provided. The ozone generation unit <b>30</b>A includes an outer electrode tube <b>31</b> and an inner electrode tube <b>32</b> provided inside the outer electrode tube with a discharge gap <b>36</b> interposed between the outer and inner electrode tubes <b>31</b> and <b>32</b>. The inner electrode tube <b>32</b> has a dielectric tube <b>33</b> and a cylindrical electrode <b>34</b> being in close contact with an inner circumferential surface of the dielectric tube <b>33</b>. The electrode <b>34</b> is removably disposed inside the dielectric tube <b>33. </b></p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150323</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247246A1</docdb-publication-number>
+      <docdb-application-id>444210388</docdb-application-id>
+      <new-owner>SUMITOMO PRECISION PRODUCTS CO., LTD., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KATAYAMA, NOBUHIDE;TERASHIMA, YUJI;KIMOTO, TADASHI;AND OTHERS;SIGNING DATES FROM 20150210 TO 20150219;REEL/FRAME:035225/0605</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a tube-type ozone generator and a manufacturing method of the same.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Ozone has a strong oxidizing power. After oxidizing other substances, ozone decomposes into harmless substances such as oxygen. Therefore, ozone is widely used for, e.g., cleaning process, sterilization process, and deodorization process in the fields of semiconductor device manufacturing, food production, water treatment, etc.</p>
+      <p id="p-00003-en" num="0003">Many of ozone generators in actual use are of the silent discharge type.</p>
+      <p id="p-00004-en" num="0004">Each ozone generator of the silent discharge type includes two electrodes facing each other via a dielectric, and a gap (a discharge gap) is provided between the two electrodes. When a high voltage is applied between the two electrodes, a silent discharge occurs in the discharge gap. Ozone is generated by causing a source gas containing oxygen to flow into the discharge gap, where the source gas is ozonized.</p>
+      <p id="p-00005-en" num="0005">The ozone generators of the silent discharge type are classified into the plate type and the tube type according to their structural difference. The plate-type ozone generator includes an ozone generation unit in a plate shape. On the other hand, the tube-type ozone generator includes an ozone generation unit in a tube shape.</p>
+      <p id="p-00006-en" num="0006">While the plate-type ozone generator is generally unsuitable for upsizing, the tube-type ozone generator does not have such a disadvantage and is capable of operating with an increased number of the units. Thus, the tube-type ozone generator is advantageous in that it can be upsized easier than the plate-type one.</p>
+      <p id="p-00007-en" num="0007">For example, Patent Documents 1 and 2 describe prior art related to the present invention.</p>
+      <p id="p-00008-en" num="0008">Patent Document 1 discloses a tube-type ozone generator. This ozone generator includes a glass dielectric tube having a cylindrical shape and a spherically closed end. A first electrode made of a metal such as stainless steel is formed on the inner surface of the dielectric tube, specifically, on a portion of the inner surface extending from the spherical end to the side of the dielectric tube.</p>
+      <p id="p-00009-en" num="0009">A rod-shaped high-voltage feeder electrically connected to a high-voltage power supply is provided inside the dielectric tube. The first electrode is electrically connected to the high-voltage feeder through a stainless steel wool material. A cylindrical second electrode surrounds the outer surface of the dielectric tube. A discharge gap is provided between the dielectric tube and the second electrode.</p>
+      <p id="p-00010-en" num="0010">A source gas is ozonized while passing through the discharge gap under application of a high voltage. The ozonized gas is let out through an ozonized gas outlet near which the spherical end is located.</p>
+      <p id="p-00011-en" num="0011">Patent Document 2 also discloses a tube-type ozone generator similar to that of Patent Document 1. Specifically, the ozone generator of Patent Document 2 includes a dielectric electrode corresponding to the glass dielectric tube, and a conductive film corresponding to the first electrode. The conductive film is formed on the inner surface of the dielectric electrode by vapor deposition or thermal spraying, for example.</p>
+      <p id="p-00012-en" num="0012">A feeder axis corresponding to the high-voltage feeder has stainless steel constituent wires attached thereto and bundled in a twisted brush-like shape. These constituent wires are pressed onto a cylinder made of a metal plate and attached to part of the inner surface of the conductive film, thereby electrically connecting the conductive film to the feeder axis.</p>
+      <heading id="h-00003-en" level="1">CITATION LIST</heading>
+      <heading id="h-00004-en" level="1">Patent Document</heading>
+      <p id="p-00013-en" num="0013">PATENT DOCUMENT 1: Japanese Unexamined Patent Publication No. 2012-144425</p>
+      <p id="p-00014-en" num="0014">PATENT DOCUMENT 2: International Publication No. WO 2010/021022 A1</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <heading id="h-00006-en" level="1">Technical Problem</heading>
+      <p id="p-00015-en" num="0015">According to the tube-type ozone generator of Patent Document 1 or 2, an end of the dielectric tube located in an upstream portion where the source gas flows is opened, and the other end located in a downstream portion where ozone flows is sealed. Accordingly, in a normal state, the source gas may be allowed to enter the dielectric tube whereas ozone is not allowed to do so.</p>
+      <p id="p-00016-en" num="0016">When the ozone generator is out of operation, however, ozone may flow backward to or diffuse in the upstream portion to enter the dielectric tube. The entry of ozone into the dielectric tube may cause a defect such as rust, thereby creating a need for replacement of the electrode.</p>
+      <p id="p-00017-en" num="0017">Unfortunately, the conventional ozone generators have the structure including the electrode formed by, e.g., vapor deposition, and accordingly, this structure does not allow separation of the electrode from the dielectric tube. Thus, when the need arises, the electrode must be replaced, together with the dielectric tube to which it is attached.</p>
+      <p id="p-00018-en" num="0018">In addition, since the formation of the electrode by vapor deposition or the like requires a large number of manufacturing steps, the productivity of the conventional ozone generators is insufficient.</p>
+      <p id="p-00019-en" num="0019">It is therefore an object of the present invention to provide a tube-type ozone generator of which an electrode can be easily replaced, and a manufacturing method of the ozone generator.</p>
+      <heading id="h-00007-en" level="1">Solution to the Problem</heading>
+      <p id="p-00020-en" num="0020">The present invention relates to a tube-type ozone generator comprising a tubular ozone generation unit. The ozone generation unit includes a cylindrical outer electrode tube, and an inner electrode tube provided inside the outer electrode tube with a discharge gap interposed between the outer and inner electrode tubes. The inner electrode tube includes a cylindrical dielectric tube, and a cylindrical electrode being in close contact with an inner circumferential surface of the dielectric tube. The electrode is removably disposed inside the dielectric tube.</p>
+      <p id="p-00021-en" num="0021">Thus, the ozone generator includes the cylindrical electrode removably disposed inside the dielectric tube and being in close contact with the inner circumferential surface of the dielectric tube. Therefore, the electrode can be removed from the dielectric tube for replacement.</p>
+      <p id="p-00022-en" num="0022">Specifically, the electrode may be a plate-shaped conductor having elasticity, and may be in close contact with the inner circumferential surface of the dielectric tube as a result of having been spread inside the dielectric tube by its own elasticity.</p>
+      <p id="p-00023-en" num="0023">Thus, the installation of the electrode can be performed simply by rolling up the conductor and inserting the rolled up conductor into the dielectric tube. This makes easy the replacement of the electrode.</p>
+      <p id="p-00024-en" num="0024">In that case, for example, the electrode may be electrically connected to an external power supply through a terminal lead extending from the electrode.</p>
+      <p id="p-00025-en" num="0025">The inner electrode tube may further includes a terminal rod disposed inside the dielectric tube, an edge of a portion of the conductor extending in a radial direction may be joined to the terminal rod, and the electrode may be electrically connected to an external power supply through the terminal rod.</p>
+      <p id="p-00026-en" num="0026">In the former case where the terminal lead is employed, the ozone generator can be manufactured by a method including, e.g., preparing the conductor by rolling up the conductor in a cylindrical shape, inserting the rolled up conductor into the dielectric tube, and spreading the conductor inside the dielectric tube without applying external force.</p>
+      <p id="p-00027-en" num="0027">In the latter case where the terminal rod is employed, the ozone generator can be manufactured by a method including, e.g., joining the edge of the conductor to the terminal rod, winding the conductor around the terminal rod, inserting the terminal rod having the conductor wound therearound into the dielectric tube, and spreading the conductor inside the dielectric tube without applying external force.</p>
+      <heading id="h-00008-en" level="1">Advantages of the Invention</heading>
+      <p id="p-00028-en" num="0028">According to the ozone generator of the present invention and the method for manufacturing the ozone generator, replacement of the electrode of the ozone generation unit can be easily performed.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00009-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 1</figref> is a perspective view schematically illustrating an ozone generator according to a first embodiment.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 2</figref> schematically illustrates an inner structure of a body of the ozone generator.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 3</figref> is a schematic cross-sectional view taken along the line X-X in <figref>FIG. 2</figref>.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 4</figref> is a cross-sectional view schematically illustrating a structure of an ozone generation unit.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 5</figref> is a schematic cross-sectional view taken along the line Y-Y in <figref>FIG. 4</figref>.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIGS. 6A and 6B</figref> are perspective views schematically illustrating parts of manufacturing steps of the ozone generator according to the first embodiment.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIGS. 7A and 7B</figref> are perspective views schematically illustrating parts of manufacturing steps of the ozone generator according to the first embodiment.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 8</figref> is a cross-sectional view schematically illustrating ozone generator according to a second embodiment.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 9</figref> is a perspective view schematically illustrating part of manufacturing steps of the ozone generator according to the second embodiment.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00010-en" level="1">DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00038-en" num="0038">Embodiments of the present invention will be described hereinafter with reference to the drawings. Note that the following embodiments are merely illustrative examples in nature, and are not intended to limit the scope, applications, and use of the invention.</p>
+      <heading id="h-00011-en" level="1">First Embodiment</heading>
+      <heading id="h-00012-en" level="1">Configuration of Ozone Generator</heading>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 1</figref> illustrates a tube-type ozone generator <b>1</b> according to a first embodiment.</p>
+      <p id="p-00040-en" num="0040">The ozone generator <b>1</b> includes, e.g., a body <b>2</b> and accessory equipment <b>3</b> including a controller, an operating panel, etc. which cooperate with the body <b>2</b>.</p>
+      <p id="p-00041-en" num="0041">The body <b>2</b> is a pressure-resistant container which is made of stainless steel of high corrosion resistance, and inside which ozone is generated. The body <b>2</b> has a barrel portion <b>11</b> in a cylindrical shape and two lids <b>12</b> closing both ends of the barrel portion <b>11</b>. The body <b>2</b> is horizontally oriented, and supported by a pair of legs <b>13</b> and <b>13</b>. One of the lids <b>12</b> is attached to the barrel portion <b>11</b> with a hinge and serves as a door.</p>
+      <p id="p-00042-en" num="0042">For example, a source gas pipe <b>14</b>, an ozone pipe <b>15</b>, and coolant pipes <b>16</b> are connected to the body <b>2</b>. Specifically, the source gas pipe <b>14</b> is connected to a source gas supply (not shown). A source gas such as air or oxygen is supplied to the body <b>2</b> through the source gas pipe <b>14</b>. The ozone pipe <b>15</b> is connected to a target (not shown) to which ozone is to be supplied. Ozone generated in the body <b>2</b> is sent to the target through the ozone pipe <b>15</b>.</p>
+      <p id="p-00043-en" num="0043">The coolant pipes <b>16</b> include two pipes, i.e., a coolant inlet pipe <b>16</b><i>a </i>and a coolant outlet pipe <b>16</b><i>b</i>. Each of the pipes <b>16</b><i>a </i>and <b>16</b><i>b </i>is connected to a heat exchanger (not shown), for example. A coolant is supplied to and circulated through the body <b>2</b> through the coolant pipes <b>16</b><i>a </i>and <b>16</b><i>b. </i></p>
+      <p id="p-00044-en" num="0044">As illustrated in <figref>FIG. 2</figref>, two partition plates <b>17</b> and <b>17</b> made of stainless steel partition the inner space of the body <b>2</b> into a source gas chamber <b>18</b>, a cooling chamber <b>19</b>, and an ozone chamber <b>20</b>. The source gas chamber <b>18</b> is located in an end portion of the body <b>2</b>, and communicates with the source gas pipe <b>14</b>. The ozone chamber <b>20</b> is located in the other end portion of the body <b>2</b>, and communicates with the ozone pipe <b>15</b>.</p>
+      <p id="p-00045-en" num="0045">The cooling chamber <b>19</b> is located between the source gas chamber <b>18</b> and the ozone chamber <b>20</b>, and occupies the major portion of the body <b>2</b>. A lower corner portion of the cooling chamber <b>19</b> located toward the ozone chamber <b>20</b> communicates with the coolant inlet pipe <b>16</b><i>a</i>. An upper corner portion of the cooling chamber <b>19</b> located toward the source gas chamber <b>18</b> communicates with the coolant outlet pipe <b>16</b><i>b</i>. A plurality of regulation plates <b>21</b> are arranged at predetermined intervals in the cooling chamber <b>19</b>. The regulation panels <b>21</b> define a vertically serpentine path through which the coolant meanders in the cooling chamber <b>19</b>.</p>
+      <p id="p-00046-en" num="0046">As illustrated in <figref>FIG. 3</figref>, a plurality of tubular ozone generation units <b>30</b>A are densely arranged in the body <b>2</b>. Each ozone generation unit <b>30</b>A extends along the longitudinal direction of the barrel portion <b>11</b> and across the cooling chamber <b>19</b>. The upstream end of each ozone generation unit <b>30</b>A projects into the source gas chamber <b>18</b>. The downstream end of each ozone generation unit <b>30</b>A projects into the ozone chamber <b>20</b>.</p>
+      <p id="p-00047-en" num="0047">It is not essential that the ends of each ozone generation unit <b>30</b>A project into the source gas chamber <b>18</b> and the ozone chamber <b>20</b>. The end of each ozone generation unit <b>30</b>A may be located inside the cooling chamber <b>19</b> or at the interface between the cooling chamber <b>19</b> and the source gas chamber <b>18</b>, for example. In each ozone generation unit <b>30</b>A, ozone is generated from the source gas.</p>
+      <p id="p-00048-en" num="0048">(Configuration of Ozone Generation Unit)</p>
+      <p id="p-00049-en" num="0049">
+        <figref>FIG. 4</figref> illustrates the ozone generation unit <b>30</b>A in detail. The ozone generation unit <b>30</b>A includes an outer electrode tube <b>31</b> and an inner electrode tube <b>32</b>.</p>
+      <p id="p-00050-en" num="0050">The outer electrode tube <b>31</b> is made of a cylindrical stainless steel tube, and has both ends joined to the partition plates <b>17</b> without leaving any clearance. The outer electrode tube <b>31</b> is electrically grounded through the partition plates <b>17</b>, and serves as an electrode of a low-voltage side. The space surrounding the outer electrode tube <b>31</b> is filled with the coolant, and thus, each ozone generation unit <b>30</b>A is cooled by the coolant. The inner electrode tube <b>32</b> is located inside and concentrically with the outer electrode tube <b>31</b>.</p>
+      <p id="p-00051-en" num="0051">The inner electrode tube <b>32</b> of this embodiment includes, e.g., a dielectric tube <b>33</b>, an electrode <b>34</b>, and a terminal rod <b>35</b>.</p>
+      <p id="p-00052-en" num="0052">The dielectric tube <b>33</b> is a long and narrow cylindrical member made of, e.g., ceramic or glass, and having a closed end. The outer circumferential surface of the dielectric tube <b>33</b> faces the inner circumferential surface of the outer electrode tube <b>31</b> with a slight gap (a discharge gap <b>36</b>) interposed therebetween. The closed end (the closed end <b>33</b><i>a</i>) of the dielectric tube <b>33</b> is located in the ozone chamber <b>20</b>, and the other end which is open (the open end <b>33</b><i>b</i>) is located in the source gas chamber <b>18</b>.</p>
+      <p id="p-00053-en" num="0053">The terminal rod <b>35</b> is a rod-shaped conductor made of stainless steel, for example. The terminal rod <b>35</b> is disposed inside the dielectric tube <b>33</b> such that the front end of the terminal rod <b>35</b> reaches the vicinity of the closed end <b>33</b><i>a</i>. The rear end of the terminal rod <b>35</b> projects from the open end <b>33</b><i>b</i>. A high-voltage side of an external power supply <b>37</b> is connected to the rear end of the terminal rod <b>35</b>.</p>
+      <p id="p-00054-en" num="0054">The electrode <b>34</b> is a cylindrical member made of a conductor <b>40</b> having high elasticity and high electric conductivity and being in a thin rectangular plate shape. An example of the material for the electrode <b>34</b> is a stainless steel spring plate.</p>
+      <p id="p-00055-en" num="0055">Specifically, as illustrated in <figref>FIG. 5</figref>, a portion near a long edge (a fixed edge <b>40</b><i>a</i>) of the conductor <b>40</b> is joined to the terminal rod <b>35</b>. The conductor <b>40</b> is spread, by its own elasticity, radially outwardly in the dielectric tube <b>33</b>. Accordingly, a portion near the other long edge (the free edge <b>40</b><i>b</i>) of the conductor <b>40</b> is radially outwardly moved toward the inner circumferential surface of the dielectric tube <b>33</b>, thereby comes into close contact with the inner circumferential surface of the dielectric tube <b>33</b>.</p>
+      <p id="p-00056-en" num="0056">On the inner circumferential surface of the dielectric tube <b>33</b>, the free edge <b>40</b><i>b </i>overlaps a middle portion of the conductor <b>40</b> each other in the radial direction. Thus, the inner circumferential surface of the dielectric tube <b>33</b> is entirely covered with the conductor <b>40</b>. In this manner, the conductor <b>40</b> forms the cylindrical electrode <b>34</b>.</p>
+      <p id="p-00057-en" num="0057">In other words, according to the ozone generation unit <b>30</b>A, the conductor <b>40</b>, which is rolled up to have a helical cross section, has a portion extending in the circumferential direction and serving as the electrode <b>34</b> and a portion (a relay portion <b>34</b><i>a</i>) extending in the radial direction and connecting the electrode <b>34</b> to the terminal rod <b>35</b>. Thus, the electrode <b>34</b> is in direct connection with the terminal rod <b>35</b>, through which the electrode <b>34</b> is in electrical connection with the external power supply <b>37</b>.</p>
+      <p id="p-00058-en" num="0058">(Operation of Ozone Generator)</p>
+      <p id="p-00059-en" num="0059">The coolant is supplied to and circulated through the cooling chamber <b>19</b>, and cools the ozone generation units <b>30</b>A. The external power supply <b>37</b> applies a high voltage between the outer electrode tube <b>31</b> and the inner electrode tube <b>32</b> of each ozone generation unit <b>30</b>A being cooled by the coolant, thereby causing a silent discharge in each discharge gap <b>36</b>.</p>
+      <p id="p-00060-en" num="0060">A source gas supplied to the body <b>2</b> flows from the source gas chamber <b>18</b> into each discharge gap <b>36</b>. During passage of the source gas through each discharge gap <b>36</b>, ozone is generated. The generated ozone flows out of each discharge gap <b>36</b> to enter the ozone chamber <b>20</b>, and then, is sent to the target through the ozone pipe <b>15</b>. Accordingly, when the ozone generator is in operation, the source gas is constantly flowing into the source gas chamber <b>18</b>, which prevents ozone from entering the source gas chamber <b>18</b>.</p>
+      <p id="p-00061-en" num="0061">When the ozone generator <b>1</b> is halted and supply of the source gas is stopped, ozone remaining in the discharge gaps <b>36</b> and the ozone chamber <b>20</b> may flow backward and enter the source gas chamber <b>18</b>. When the ozone having entered the source gas chamber <b>18</b> reaches the inside of the dielectric tube <b>33</b>, corrosion is caused on the electrode <b>34</b>, for example.</p>
+      <p id="p-00062-en" num="0062">Since the electrode <b>34</b> of the ozone generator <b>1</b> is configured to be installed simply by inserting the same into the dielectric tube <b>33</b>, the electrode <b>34</b> can be easily removed from the ozone generator <b>1</b> when a need for replacement of the electrode <b>34</b> and the like arises. Specifically, the replacement can be performed by simply pulling out the electrode rod <b>35</b> and the electrode <b>34</b> together from the dielectric tube <b>33</b>. In a case where the ozone generator <b>1</b> is large-sized and includes hundreds of ozone generation units <b>30</b>A, this configuration can significantly reduce the costs for replacement.</p>
+      <p id="p-00063-en" num="0063">(Manufacturing Method of Ozone Generator)</p>
+      <p id="p-00064-en" num="0064">
+        <figref>FIGS. 6 and 7</figref> illustrate steps of manufacturing an ozone generator <b>1</b>. Specifically, <figref>FIGS. 6 and 7</figref> illustrate the steps of installing a terminal rod <b>35</b> and an electrode <b>34</b> into a dielectric tube <b>33</b>. These steps constitute part of steps of fabricating an ozone generation unit <b>30</b>A.</p>
+      <p id="p-00065-en" num="0065">As illustrated in <figref>FIG. 6A</figref>, an edge portion of a conductor <b>40</b> is joined to the terminal rod <b>35</b> (a joining step). Specifically, a portion near a fixed edge <b>40</b><i>a </i>of the conductor <b>40</b> is joined to the terminal rod <b>35</b> by spot welding. Thereafter, as illustrated in <figref>FIG. 6B</figref>, the conductor <b>40</b> is wound around the terminal rod <b>35</b> (a winding step).</p>
+      <p id="p-00066-en" num="0066">Next, as illustrated in <figref>FIG. 7A</figref>, the terminal rod <b>35</b> having the conductor <b>40</b> wound therearound is inserted into the dielectric tube <b>33</b> (an insertion step). Finally, as illustrated in <figref>FIG. 7B</figref>, a restraint is removed from the conductor <b>40</b>, and the terminal rod <b>35</b> is rotated in the direction opposite to the winding direction of the conductor <b>40</b>, for example, thereby spreading the conductor <b>40</b> inside the dielectric tube <b>33</b> until the conductor <b>40</b> has the shape as illustrated in <figref>FIG. 5</figref> (a spreading step).</p>
+      <p id="p-00067-en" num="0067">Thus, the ozone generation unit <b>30</b>A can be considerably easily fabricated. Since a large number of the ozone generation units <b>30</b>A are installed in the ozone generator <b>1</b>, this method can increase the productivity.</p>
+      <heading id="h-00013-en" level="1">Second Embodiment</heading>
+      <p id="p-00068-en" num="0068">
+        <figref>FIG. 8</figref> illustrates an ozone generation unit <b>30</b>B that is the main part of an ozone generator according to a second embodiment. The ozone generation unit <b>30</b>B of this embodiment is structurally different from the ozone generation unit <b>30</b>A of the first embodiment in that the unit <b>30</b>B is devoid of the terminal rod <b>35</b>.</p>
+      <p id="p-00069-en" num="0069">The other components such as the body <b>2</b> of the second embodiment are the same as those of the ozone generator <b>1</b> of the first embodiment. The same components are denoted by the same reference characters, and the descriptions of the same components are not repeated.</p>
+      <p id="p-00070-en" num="0070">In the ozone generation unit <b>30</b>B, an electrode <b>34</b> is electrically connected to an external power supply <b>37</b> through a terminal lead. Specifically, a narrow piece <b>50</b> of a highly conductive metal plate made of, e.g., stainless steel is joined to an edge of the electrode <b>34</b> located toward an open end <b>33</b><i>b</i>. Part of the metal piece <b>50</b> projects from the open end <b>33</b><i>b </i>and serves as the terminal lead, which is electrically connected to the external power supply <b>37</b>.</p>
+      <p id="p-00071-en" num="0071">The ozone generation unit <b>30</b>B can also be fabricated easily.</p>
+      <p id="p-00072-en" num="0072">For example, the metal piece <b>50</b> is joined to a short edge of the conductor <b>40</b> in advance. Thereafter, as illustrated in <figref>FIG. 9</figref>, the conductor <b>40</b> is rolled up into a cylindrical shape such that the metal piece <b>50</b> is positioned inside the cylindrical shape (a preparation step). The conductor <b>40</b> is then inserted, from the other short edge, into a dielectric tube <b>33</b> (an insertion step). A guide rod G may be inserted into the rolled up conductor <b>40</b> so as to facilitate these steps.</p>
+      <p id="p-00073-en" num="0073">After these steps, the conductor <b>40</b> is spread inside the dielectric tube <b>33</b> (a spreading step), in a manner similar to that of the ozone generator <b>1</b> of the first embodiment. The guide rod G, if used, can be pulled out at this time.</p>
+      <p id="p-00074-en" num="0074">In the ozone generation unit <b>30</b>B, the whole of the conductor <b>40</b> is spread along the inner circumferential surface of the dielectric tube <b>33</b>. Thus, the whole of the conductor <b>40</b> extends in the circumferential direction to form the electrode <b>34</b>, with no portion extending in the redial direction.</p>
+      <p id="p-00075-en" num="0075">&lt;Modifications&gt;</p>
+      <p id="p-00076-en" num="0076">The terminal lead may be integral with the conductor <b>40</b> forming the electrode <b>34</b>. Specifically, a short edge of the conductor <b>40</b> may have a portion projecting and forming the terminal lead. Alternatively, the metal piece <b>50</b> forming the terminal lead may be attached after the spreading step.</p>
+      <p id="p-00077-en" num="0077">Since the electrode <b>34</b> can be replaced, the electrode <b>34</b> does not necessarily have to have high resistance to corrosion. An inexpensive and highly conductive metal conductor other than stainless steel can be used as the material for the electrode <b>34</b>. It is sufficient that one ozone generator includes at least one ozone generation unit.</p>
+      <heading id="h-00014-en" level="1">DESCRIPTION OF REFERENCE CHARACTERS</heading>
+      <p id="p-00078-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>
+            <ul id="ul-00002-en" list-style="none">
+              <li>
+                <b>1</b> Ozone Generator</li>
+              <li>
+                <b>2</b> Body</li>
+              <li>
+                <b>30</b>A, <b>30</b>B Ozone Generation Unit</li>
+              <li>
+                <b>31</b> Outer Electrode Tube</li>
+              <li>
+                <b>32</b> Inner Electrode Tube</li>
+              <li>
+                <b>33</b> Dielectric Tube</li>
+              <li>
+                <b>34</b> Electrode</li>
+              <li>
+                <b>35</b> Terminal Rod</li>
+              <li>
+                <b>36</b> Discharge Gap</li>
+              <li>
+                <b>37</b> External Power Supply</li>
+              <li>
+                <b>40</b> Conductor</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A tube-type ozone generator comprising a tubular ozone generation unit, wherein
+<claim-text>the ozone generation unit includes
+<claim-text>a cylindrical outer electrode tube, and</claim-text><claim-text>an inner electrode tube provided inside the outer electrode tube with a discharge gap interposed between the outer and inner electrode tubes,</claim-text></claim-text><claim-text>the inner electrode tube includes
+<claim-text>a cylindrical dielectric tube, and</claim-text><claim-text>a cylindrical electrode being in close contact with an inner circumferential surface of the dielectric tube, and</claim-text></claim-text><claim-text>the electrode is removably disposed inside the dielectric tube.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The ozone generator of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein
+<claim-text>the electrode is a plate-shaped conductor having elasticity, and is in close contact with the inner circumferential surface of the dielectric tube as a result of having been spread inside the dielectric tube by the own elasticity.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The ozone generator of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein
+<claim-text>the electrode is electrically connected to an external power supply through a terminal lead extending from the electrode.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The ozone generator of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein
+<claim-text>the inner electrode tube further includes a terminal rod disposed inside the dielectric tube,</claim-text><claim-text>an edge of a portion of the conductor extending in a radial direction is joined to the terminal rod, and</claim-text><claim-text>the electrode is electrically connected to an external power supply through the terminal rod.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A method for manufacturing the ozone generator of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, comprising:
+<claim-text>preparing the conductor by rolling up the conductor in a cylindrical shape,</claim-text><claim-text>inserting the rolled up conductor into the dielectric tube, and</claim-text><claim-text>spreading the conductor inside the dielectric tube without applying external force.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A method for manufacturing the ozone generator of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, comprising:
+<claim-text>joining the edge of the conductor to the terminal rod,</claim-text><claim-text>winding the conductor around the terminal rod,</claim-text><claim-text>inserting the terminal rod having the conductor wound therearound into the dielectric tube, and</claim-text><claim-text>spreading the conductor inside the dielectric tube without applying external force. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150247246A1_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150247246A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247246A1.PDF" type="pdf" size="475076" pages="14" />
+</lexisnexis-patent-document>

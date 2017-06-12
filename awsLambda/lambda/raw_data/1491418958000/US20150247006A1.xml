@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247006A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021442" date-changed="20151201" time-changed="000154">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140036">
+        <country>US</country>
+        <doc-number>20150247006</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14309440</doc-number>
+        <date>20140619</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151201">
+      <classification-ipcr sequence="1">
+        <text>C08G  81/00        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>81</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151201">
+      <classification-cpc sequence="1">
+        <text>C08G  81/00        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>81</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08G  83/005       20130101 LI20151116BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>83</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151116</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">22</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Block Copolymers Based on Linear Poly(oxymethylene)(POM) and Hyperbranched Poly(glycerol): Combining Polyacetals with Polyethers</invention-title>
+    <references-cited date-changed="20151020">
+      <patent-citations name="patcit" date-changed="20151020" />
+      <citation>
+        <patcit num="1" dnum="US4594366A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4594366</doc-number>
+            <kind>A</kind>
+            <name>TAYLOR GLENN A [US], et al</name>
+            <date>19860610</date>
+          </document-id>
+          <application-date>
+            <date>19841207</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US6225404B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6225404</doc-number>
+            <kind>B1</kind>
+            <name>SORENSEN KENT [SE], et al</name>
+            <date>20010501</date>
+          </document-id>
+          <application-date>
+            <date>19990304</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2002002242A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020002242</doc-number>
+            <kind>A1</kind>
+            <name>MCNAMARA JOHN JAMES [US], et al</name>
+            <date>20020103</date>
+          </document-id>
+          <application-date>
+            <date>20010207</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2007010633A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070010633</doc-number>
+            <kind>A1</kind>
+            <name>PARK YONG-SOEN [JP], et al</name>
+            <date>20070111</date>
+          </document-id>
+          <application-date>
+            <date>20031230</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US2011217750A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110217750</doc-number>
+            <kind>A1</kind>
+            <name>PANDIT ABHAY [IE], et al</name>
+            <date>20110908</date>
+          </document-id>
+          <application-date>
+            <date>20090319</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="WO2011163657A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011163657</doc-number>
+            <kind>A1</kind>
+            <name>DU PONT [US], et al</name>
+            <date>20111229</date>
+          </document-id>
+          <application-date>
+            <date>20110627</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61837446</doc-number>
+          <date>20130620</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Ticona GmbH</orgname>
+            <address>
+              <city>Sulzbach</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Klein</last-name>
+            <first-name>Rebecca</first-name>
+            <address>
+              <city>Mainz</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Schüll</last-name>
+            <first-name>Christoph</first-name>
+            <address>
+              <city>Mainz</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Haubs</last-name>
+            <first-name>Michael</first-name>
+            <address>
+              <city>Bad Kreuznach</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kurz</last-name>
+            <first-name>Klaus</first-name>
+            <address>
+              <city>Kelsterbach</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Frey</last-name>
+            <first-name>Holger</first-name>
+            <address>
+              <city>Mainz</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463088">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247006</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20140619</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463087">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247006</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20140619</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Synthesis of hyperbranched-linear-hyperbranched ABA triblock copolymers based on linear poly(oxy methylene) (POM) and hyperbranched poly(glycerol) (hbPG) blocks is described. The polymers having a polyacetal polyether structure were prepared from linear bishydroxy functional POM macroinititators, obtained by cationic ring-opening polymerization of trioxane and dioxane with formic acid as transfer agent and following hydrolysis of the formiate group. Partial deprotonation of the resulting hydroxyl groups permitted the hypergrafting by anionic ring-opening multibranching polymerization (ROMBP) of glycidol.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150715</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247006A1</docdb-publication-number>
+      <docdb-application-id>444209912</docdb-application-id>
+      <new-owner>TICONA GMBH, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KLEIN, REBECCA;SHUELL, CHRISTOPH;HAUBS, MICHAEL;AND OTHERS;SIGNING DATES FROM 20150304 TO 20150316;REEL/FRAME:036100/0646</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">The present application is based upon and claims priority to U.S. Provisional Patent Application having Ser. No. 61/837,446, filed on Jun. 20, 2013, and which is incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">Polyoxymethylene, which is obtained by cationic or anionic polymerization of formaldehyde, but mostly by the ring opening polymerization of trioxane is a highly useful material because of its excellent mechanical properties such as high tensile strength and high impact strength. Furthermore, polyoxymethylene is stable over a broad temperature range, has low moisture absorption and is resistant to most organic solvents and water. Due to the polyacetal repeat units, polyoxymethylene can degrade slowly when heated causing formaldehyde release. To prevent this so called “unzipping” mechanism, trioxane is copolymerized with cyclic ethers, e.g., ethylene oxide, 1,3-dioxolane, 1,3-dioxepane or comparable structures. The unzipping still takes place, but the degradation stops, as soon as the polyacetal structure is interrupted by a C—C-bond of the comonomer. The copolymerization affects the crystallinity of polyoxymethylene resulting in a lower melting point. Copolymerization improves the processibility and opens the broad application spectrum for this material, such as for use as bearings, gearwheels and housing parts often under extremely high loads.</p>
+      <p id="p-00003-en" num="0003">Still high crystallinity and insolubility in common solvents are demanding challenges for further chemical functionalization of the polymer. There have been some attempts to vary the properties of polyoxymethylene by introducing functional groups into the polymer. These attempts rely mainly on three ways: The conversion of hydroxyl end groups with suitable reagents, the integration of functional groups by transfer reactions during the polymerization, or the copolymerization of trioxane with functional monomers.</p>
+      <p id="p-00004-en" num="0004">Although some advances have been made to modify polyoxymethylene polymers, further improvements are still needed. In particular, a need exists for a process for producing a polyoxymethylene polymer with a greater amount of functional groups. A need also exists for a process for controlling the properties of a polyoxymethylene polymer in order to tailor the polymer to an end use application. A need also exists for a process that can vary different properties of the polyoxymethylene polymer, such as the hydrophilic properties of the polymer and/or the solubility of the polymer in various solvents.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00005-en" num="0005">In general, the present disclosure is directed to hyperbranched polyoxymethylene polymers and to a process for producing the polymers. As used herein, a “hyperbranched” polymer refers to a polymer having a highly branched molecular architecture that has tree-like macromolecules and a large number of end groups. Hyperbranched polymers are part of a class of polymers referred to as dendritic polymers. Dendrimers are polymers defined as monodisperse hyperbranched polymers. Other hyperbranched polymers, on the other hand, may be polydisperse. In accordance with the present disclosure, any hyperbranched polymer structure may be formed by controlling the reactants and the reaction conditions.</p>
+      <p id="p-00006-en" num="0006">In one embodiment, hyperbranched polymers according to the present disclosure, as opposed to having an almost spherical shape, have a high degree of branching and a less well-defined intramolecular cargo space. For instance, hyperbranched polymers according to the present disclosure can have random branching and irregular structures.</p>
+      <p id="p-00007-en" num="0007">In one embodiment, the hyperbranched polymer of the present disclosure includes a polyoxymethylene middle portion or core. The polyoxymethylene core structure may be linear. The polyoxymethylene core portion may be grafted at each end to hyperbranched portions. The hyperbranched portions may have a densely branched structure with a large number of end groups. In accordance with the present disclosure, at least some of the end groups and, in one embodiment, all of the end groups, may comprise a functional group. In this manner, polymers can be produced having a unique combination of properties.</p>
+      <p id="p-00008-en" num="0008">In one particular embodiment, the present disclosure is directed to a hyperbranched-linear-hyperbranched ABA triblock copolymer that includes a linear polyoxymethylene middle portion grafted to hyperbranched blocks, such as polyglycerol blocks. The polyglycerol blocks may provide the polymer with a significant number of hydroxyl end groups. The resulting polymer not only has excellent mechanical and thermal properties, but also has excellent solubility properties due to the presence of the hyperbranched polyether polyols. The resulting polymer may be produced to have hydrophilic surfaces. In one embodiment, the polymer can be produced in the form of nanoparticles. In one embodiment, the polymer molecules may have an amphiphilic structure.</p>
+      <p id="p-00009-en" num="0009">In one particular embodiment, the present disclosure is directed to a polyoxymethylene polymer comprising a hyperbranched polyoxymethylene homopolymer or copolymer. The polyoxymethylene homopolymer or copolymer comprises a middle portion positioned between a first end portion and a second end portion. At least one of the end portions has a hyperbranched structure. For instance, in one embodiment, both end portions may have a hyperbranched structure. The middle portion may comprise a linear structure having repeating oxymethylene units and optionally other oxyalkylene units.</p>
+      <p id="p-00010-en" num="0010">Each hyperbranched portion of the molecule may have at least about 10 branches per molecule, such as at least 15 branches per molecule, such as at least 20 branches per molecule, such as at least 25 branches per molecule, such as at least 30 branches per molecule, such as at least 35 branches per molecule, such as at least 40 branches per molecule, such as at least 45 branches per molecule, such as at least 50 branches per molecule. In general, each hyperbranched portion has less than about 500 branches, such as less than about 400 branches, such as less than about 300 branches, such as less than about 200 branches.</p>
+      <p id="p-00011-en" num="0011">Each hyperbranched portion can include end units. The end units may comprise functional groups, such as hydroxyl groups. In one embodiment, at least 80% of the end groups, such as at least about 90% of the end groups, such as up to about 100% of the end groups can comprise the functional groups. The hyperbranched portion of the molecule may be aliphatic and can include ether linkages.</p>
+      <p id="p-00012-en" num="0012">The present disclosure is also directed to a process for producing a hyperbranched polyoxymethylene polymer. The process includes the steps of at least partially deprotonating hydroxy terminal groups on a polyoxymethylene polymer or oligomer. The deprotonated polyoxymethylene polymer or oligomer is then reacted with a multi-functional hyperbranching monomer. The multi-functional hyperbranching monomer grafts to the polymer or oligomer and further polymerizes to form a polyoxymethylene polymer with at least one hyperbranched portion. In one embodiment, the polyoxymethylene polymer or oligomer comprises a bishydroxy polyoxymethylene. The multi-functional hyperbranching monomer may comprise glycidol or another suitable monomer.</p>
+      <p id="p-00013-en" num="0013">Other features and aspects of the present disclosure are discussed in greater detail below.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00014-en" num="0014">A full and enabling disclosure of the present disclosure is set forth more particularly in the remainder of the specification, including reference to the accompanying figures, in which:</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIGS. 1-4</figref> are graphical representations of the results obtained in the examples below.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00016-en" num="0016">Repeat use of reference characters in the present specification and drawings is intended to represent the same or analogous features or elements of the present invention.</p>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00017-en" num="0017">It is to be understood by one of ordinary skill in the art that the present discussion is a description of exemplary embodiments only, and is not intended as limiting the broader aspects of the present disclosure.</p>
+      <p id="p-00018-en" num="0018">In general, the present disclosure is directed to hyperbranched polyoxymethylene polymers. In one embodiment, the hyperbranched polymer includes a middle portion or core portion that comprises a polyoxymethylene homopolymer or copolymer. For example, the middle portion may comprise oxymethylene repeat units alone or in combination with other oxyalkylene units, such as oxyethylene units. The polymer may include at least one end portion that has a hyperbranched structure. In one embodiment, the core portion made from a polyoxymethylene polymer is grafted at one end to a hyperbranched structure and grafted at an opposite end to another hyperbranched structure.</p>
+      <p id="p-00019-en" num="0019">The hyperbranched polyoxymethylene polymers of the present disclosure offer many advantages and benefits. For example, the hyperbranched structures provide the polymer with a large number of end groups. In accordance with the present disclosure, different end groups can be attached to the polymer for providing the polymer with various properties. In one embodiment, for instance, the hyperbranched polymer may include a significant number of hydroxy end groups. The hydroxy end groups can provide reactive sites for grafting, coupling, or otherwise attaching the polymer to other compounds. The hydroxy end groups may also increase the hydrophilic properties of the polymer.</p>
+      <p id="p-00020-en" num="0020">In addition to hydroxyl groups, various other functional groups can be incorporated into the hyperbranched structure of the polyoxymethylene polymer. The functional groups may occupy greater than about 20% of all the terminal groups present on the polymer, such as greater than about 30%, such as greater than about 40%, such as greater than about 50%, such as greater than about 60%, such as greater than about 70%, such as even greater than about 80% of all the terminal groups on the polymer. The functional groups, for instance, can occupy up to 100% of the terminal groups on the polyoxymethylene polymer molecule.</p>
+      <p id="p-00021-en" num="0021">In one embodiment, the hyperbranched polyoxymethylene polymer of the present disclosure may be amphiphilic. In particular, the polyoxymethylene core portion of the polymer may be hydrophobic, while the highly branched structures may be hydrophilic. Such a polymer may have many different and unique applications that previously were not available for polyoxymethylene polymers.</p>
+      <p id="p-00022-en" num="0022">Another property that may be improved by the presence of the hyperbranched structure in the polyoxymethylene polymer is the solubility of the polymer. The hyperbranched structure, for instance, may make the polymer more soluble in some solvents, such as organic solvents.</p>
+      <p id="p-00023-en" num="0023">The hyperbranched structure incorporated into the polymer may also influence the viscosity characteristics of the polyoxymethylene polymer. Hyperbranched polymers, for instance, sometimes demonstrate a non-Newtonian relationship between viscosity and molecular weight. In particular, hyperbranched polymers may have lower viscosities at higher molecular weights.</p>
+      <p id="p-00024-en" num="0024">In order to produce hyperbranched polyoxymethylene polymers in accordance with the present disclosure, in one embodiment, a hydroxy terminated polyoxymethylene polymer or oligomer is at least partially deprotonated. The polyoxymethylene polymer may comprise a polyoxymethylene homopolymer or a polyoxymethylene copolymer. For example, in one embodiment, the polyoxymethylene polymer may have a linear structure having repeating oxymethylene units and other oxyalkylene units, such as oxyethylene units.</p>
+      <p id="p-00025-en" num="0025">In order to partially deprotonate the polyoxymethylene polymer or oligomer, the polymer is contacted with a base while water is removed. In one embodiment, a strong base is used. The strong base, for instance, may comprise a hydroxide, such as a metal hydroxide. For instance, the base may comprise cesium hydroxide, potassium hydroxide, sodium hydroxide, or mixtures thereof. Strong organic bases may also be used. An example of a strong organic base is a bicyclic guanidine. Besides guanidines, various other nitrogen-containing organic bases can be used including phosphazenes or amidines, as long as the organic base does not adversely affect the properties of the polyoxymethylene polymer.</p>
+      <p id="p-00026-en" num="0026">Once the polyoxymethylene polymer or oligomer is at least partially deprotonated, the deprotonated polyoxymethylene is then reacted with a multi-functional hyperbranching monomer. The multi-functional hyperbranching monomer grafts to the polymer or oligomer and then further polymerizes to form a polyoxymethylene polymer with a hyperbranched portion.</p>
+      <p id="p-00027-en" num="0027">In one embodiment, the process for producing the hyperbranched polyoxymethylene polymer may be represented as follows:</p>
+      <p id="p-00028-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="112.52mm" wi="157.99mm" alt="embedded image" img-content="chem" file="US20150247006A1_00003.PNG" img-format="png" original="US20150247006A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00029-en" num="0028">As shown above, the hyperbranched polyoxymethylene polymer includes a middle portion positioned in between a first end portion and a second end portion. In the embodiment above, both end portions have a hyperbranched structure.</p>
+      <p id="p-00030-en" num="0029">The middle portion in the embodiment above comprises a linear polyoxymethylene copolymer. In one embodiment, the polyoxymethylene copolymer can be produced by polymerizing trioxane with 1,3-dioxolane. The end portions having the hyperbranched structure can include multiple ether linkages. In addition, the hyperbranched structures can include terminal groups R. The terminal groups R may comprise the same groups or different groups. In one embodiment, the terminal groups comprise functional groups. Functional groups that may be incorporated into the polymer include hydroxy groups, amino groups, alkoxyl groups, esters or amides.</p>
+      <p id="p-00031-en" num="0030">As shown above, the hyperbranched structures include a significant number of branches and therefore a significant number of terminal groups. For instance, each hyperbranched portion on the polymer molecule may have at least 10 branches, such as at least 15 branches, such as at least 20 branches, such as at least 25 branches, such as at least 30 branches, such as at least 35 branches, such as at least 40 branches, such as at least 45 branches, such as at least 50 branches. In general, each hyperbranched portion will have less than about 500 branches, such as less than about 400 branches, such as less than about 300 branches.</p>
+      <p id="p-00032-en" num="0031">Depending upon the multi-functional hyperbranching monomer used to produce the hyperbranched polymer, in one embodiment, a triblock copolymer can be produced. The triblock copolymer may have an ABA structure in which the A units are the repeating units that make up the hyperbranched portion while the B units comprise the oxymethylene units. In the embodiment illustrated above, the hyperbranched portions are aliphatic.</p>
+      <p id="p-00033-en" num="0032">The multi-functional hyperbranching monomer is generally any suitable multi-functional monomer capable of grafting to the polyoyxmethylene polymer chain while also producing a hyperbranched structure. In one embodiment, for instance, the multi-functional hyperbranching monomer may comprise glycidol. Glycidol includes an epoxy group in conjunction with a CH<sub>2</sub>OH group.</p>
+      <p id="p-00034-en" num="0033">In one particular embodiment, when using glycidol as the multi-functional hyperbranching monomer, the reaction sequence for producing a hyperbranched polyoxymethylene polymer in accordance with the present disclosure is illustrated below.</p>
+      <p id="p-00035-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="158.67mm" wi="154.69mm" alt="embedded image" img-content="chem" file="US20150247006A1_00004.PNG" img-format="png" original="US20150247006A1-20150903-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00036-en" num="0034">In the first step, linear bishydroxyalkylfunctional poly(oxy methylene) polymer was prepared by cationic ring-opening polymerization of trioxane and dioxolane with formic acid as a transfer agent. The resulting formate end groups were hydrolyzed to obtain the bishydroxy end-functional POM, which serves as a macroinitiator for the ensuing hypergrafting reaction of glycidol to build up the two hyperbranched blocks. The high stability of the POM macroinitiators ensures chemical stability during the basic conditions of the anionic ring-opening multibranching polymerization (ROMBP) of glycidol. To prepare the reactive initiator for the ROMBP, the hydroxyl groups of POM were partially deprotonated (10 mol %) using cesium hydroxide. As shown above, only one hydroxyl group at each chain end can serve as initiator. This is due to the crystalline structure of POM, where the functional end groups always stick out of the surface of the crystal and thereby can be addressed by the glycidol monomers. In some embodiments, the molecular weight of the hbPG-blocks can be limited on each side of the POM macroinitiator. This is due to the increasing viscosity of the products and the low number of alkoxide end groups at high degree of polymerization. For instance, in some embodiments, the molecular weight of the hyperbranched polyglycerol blocks can be less than about 6,000 g/mol, such as less than about 5,000 g/mol. In other embodiments, however, higher molecular weight end blocks may be possible.</p>
+      <p id="p-00037-en" num="0035">In order to produce the hyperbranched portions, the multi-functional hyperbranching monomer may be added gradually to the polyoxymethylene polymer or oligomer that serves as the macroinitiator. The amount of monomer added to the macroinitiator can vary depending upon the particular application and the particular monomer used. In general, the weight ratio of the macroinitiator (deprotonated polymer) to the multi-functional hyperbranched monomer is from about 1:0.1 to about 1:10, such as from about 1:0.5 to about 1:5.</p>
+      <p id="p-00038-en" num="0036">In the embodiment described above, the polyoxymethylene polymer or oligomer that undergoes deprotonization includes terminal hydroxy groups. The polyoxymethylene preferably has terminal hydroxyl groups, for example hydroxyethylene groups (—OCH<sub>2</sub>CH<sub>2</sub>—OH) and hemi-acetal groups (—OCH<sub>2</sub>—OH). According to one embodiment, at least 50%, more preferably at least 75% of the terminal groups of the polyoxymethylene are hydroxyl groups, especially hydroxyethylene groups.</p>
+      <p id="p-00039-en" num="0037">The content of hydroxyl groups end groups is especially preferred at least 80%, based on all terminal groups. The term “all terminal groups” is to be understood as meaning all terminal and—if present—all side terminal groups. As described above, in one embodiment, the polyoxymethylene polymer or oligomer comprises a bis-hydroxy polyoxymethylene.</p>
+      <p id="p-00040-en" num="0038">In addition to the terminal hydroxyl groups, the POM may also have other terminal groups usual for these polymers. Examples of these are alkoxy groups, formate groups, acetate groups or aldehyde groups. According to a preferred embodiment of the present invention the polyoxymethylene (A) is a homo- or copolymer which comprises at least 50 mol-%, preferably at least 75 mol-%, more preferably at least 90 mol-% and most preferably at least 95 mol-% of CH<sub>2</sub>O-repeat units.</p>
+      <p id="p-00041-en" num="0039">The polyoxymethylene generally can have a melt volume rate MVR of less than 1000 cm<sup>3</sup>/10 min, preferably ranging from 1 to 500 cm<sup>3</sup>/10 min, further preferably ranging from 1 to 200 cm<sup>3</sup>/10 min, more preferably ranging from 1 to 100 cm<sup>3</sup>/10 min, determined according to ISO 1133 at 190° C. and 2.16 kg.</p>
+      <p id="p-00042-en" num="0040">The polyoxymethylene can have a content of terminal hydroxyl groups of at least 5 mmol/kg, preferably at least 10 mmol/kg, more preferably at least 50 mmol/kg and most preferably ranging from 50 to 500 mmol/kg.</p>
+      <p id="p-00043-en" num="0041">The content of terminal hydroxyl groups can be determined as described in K. Kawaguchi, E. Masuda, Y. Tajima, Journal of Applied Polymer Science, Vol. 107, 667-673 (2008).</p>
+      <p id="p-00044-en" num="0042">The preparation of the polyoxymethylene can be carried out by polymerization of polyoxymethylene-forming monomers, such as trioxane or a mixture of trioxane and dioxolane, in the presence of a molecular weight regulator or transfer agent. The transfer agent may comprise, for instance, formic acid or ethylene glycol. The polymerization can be effected as precipitation polymerization or in particular in the melt. Initiators which may be used are the compounds known per se, such as trifluoromethane sulfonic acid or triflic acid. The procedure and termination of the polymerization and working-up of the product obtained can be effected according to processes known per se. By a suitable choice of the polymerization parameters, such as duration of polymerization or amount of molecular weight regulator, the molecular weight and hence the MVR value of the resulting polymer can be adjusted. The criteria for choice in this respect are known to the person skilled in the art. The above-described procedure for the polymerization leads as a rule to polymers having comparatively small proportions of low molecular weight constituents.</p>
+      <p id="p-00045-en" num="0043">The hydroxy functional POM, in accordance with the present disclosure, is partially deprotonized and then reacted with a multi-functional hypergrafting monomer in order to form hyperbranching structures on the polymer molecule. The hyperbranching structures can be initiated at a hydroxy end group. In one embodiment, the resulting polyoxymethylene polymer may include a hyperbranched structure at one end of the polymer or at both ends of the polymer.</p>
+      <p id="p-00046-en" num="0044">Hyperbranched polyoxymethylene polymers made in accordance with the present disclosure can be produced to have different properties. For instance, depending upon the monomers used and the macroinitiator, low molecular weight polymers or high molecular weight polymers can be produced. In one embodiment, for instance, a low molecular weight polymer may be produced that has a molecular weight of less than about 10,000 g/mol, such as less than about 8,000 g/mol. In general, the molecular weight is greater than about 1,000 g/mol. In other embodiments, the molecular weight may be greater than about 10,000 g/mol, such as greater than about 20,000 g/mol, such as greater than about 25,000 g/mol, such as greater than about 30,000 g/mol, such as greater than about 35,000 g/mol, such as greater than about 40,000 g/mol. The polydispersity M<sub>w</sub>/M<sub>n</sub>) of the polymer can be relatively narrow. For instance, the polydispersity can be in the range of from about 1.3 to about 1.9.</p>
+      <p id="p-00047-en" num="0045">In addition to the above, material properties such as thermal behavior and thermal stability, degree of crystallization, and surface properties can also be adjusted based upon the monomers used and the reaction conditions. For instance, the addition of the hyperbranched structures allows for control over the hydrophilicity of the polyoxymethylene polymer.</p>
+      <p id="p-00048-en" num="0046">The hyperbranched polyoxymethylene polymer of the present disclosure can be used in numerous and diverse applications. Because of the possibility for adjusting hydrophilicity, the hyperbranched polymer can be used as an additive in polyoxymethylene polymer compositions. For instance, the hyperbranched polyoxymethylene polymer may be combined with a non-hyperbranched polyoxymethylene polymer. In this embodiment, the hyperbranched polymer may be present in the composition in an amount from about 0.5% to about 50% by weight, such as in an amount from about 3% to about 30% by weight. Combining the hyperbranched polyoxymethylene polymer with a more conventional polyoxymethylene polymer may control the overall hydrophobicity of the resulting composition. The hyperbranched polyoxymethylene polymer may also have an impact on the viscosity of the resulting composition.</p>
+      <p id="p-00049-en" num="0047">As described above, the hyperbranched polyoxymethylene polymer may also have an amphiphilic structure. In this regard, the hyperbranched polyoxymethylene polymer may be used to form soluble, acid labile polyoxymethylene nanoparticles.</p>
+      <p id="p-00050-en" num="0048">The hyperbranched polyoxymethylene polymer of the present disclosure can also be used as the basis for a polymer composition for producing molded articles. When used to produce molded articles, for instance, the hyperbranched polymer may be pelletized and mixed with various additives. For instance, the composition may be combined with colorants, light stabilizers, antioxidants, heat stabilizers, processing aids, and fillers.</p>
+      <p id="p-00051-en" num="0049">Colorants that may be used include any desired inorganic pigments, such as titanium dioxide, ultramarine blue, cobalt blue, and other organic pigments and dyes, such as phthalocyanines, anthraquinones, and the like. Other colorants include carbon black or various other polymer-soluble dyes. The colorants can generally be present in the composition in an amount up to about 2 percent by weight.</p>
+      <p id="p-00052-en" num="0050">Still another additive that may be present in the composition is a sterically hindered phenol compound, which may serve as an antioxidant. Examples of such compounds, which are available commercially, are pentaerythrityl tetrakis[3-(3,5-di-tert-butyl-4-hydroxyphenyl)propionate] (Irganox 1010, BASF), triethylene glycol bis[3-(3-tert-butyl-4-hydroxy-5-methylphenyl)propionate] (Irganox 245, BASF), 3,3′-bis[3-(3,5-di-tert-butyl-4-hydroxyphenyl)propionohydrazide] (Irganox MD 1024, BASF), hexamethylene glycol bis[3-(3,5-di-tert-butyl-4-hydroxyphenyl)propionate] (Irganox 259, BASF), and 3,5-di-tert-butyl-4-hydroxytoluene (Lowinox BHT, Chemtura). Preference is given to Irganox 1010 and especially Irganox 245. The above compounds may be present in the composition in an amount less than about 2% by weight, such as in an amount from about 0.01% to about 1% by weight.</p>
+      <p id="p-00053-en" num="0051">Light stabilizers that may be present in the composition include sterically hindered amines. Such compounds include 2,2,6,6-tetramethyl-4-piperidyl compounds, e.g., bis(2,2,6,6-tetramethyl-4-piperidyl) sebacate (Tinuvin 770, BASF) or the polymer of dimethyl succinate and 1-(2-hydroxyethyl)-4-hydroxy-2,2,6,6-tetramethyl-4-piperidine (Tinuvin 622, BASF). In one embodiment, the light stabilizer may comprise 2-(2H-benzzotriazol-2-yl) 4,6-bis(1-ethyl-1-phenyl-ethyl)phenol (Tinuvin 234). Other hindered amine light stabilizers that may be used include oligomeric compounds that are N-methylated. For instance, another example of a hindered amine light stabilizer comprises ADK STAB LA-63 light stabilizer available from Adeka Palmarole.</p>
+      <p id="p-00054-en" num="0052">One or more light stabilizers may be present in the composition in an amount generally less than about 5% by weight, such as in an amount less than 4% by weight, such as in an amount less than about 2% by weight. The light stabilizers, when present, can be included in amounts greater than about 0.1% by weight, such as in amounts greater than about 0.5% by weight.</p>
+      <p id="p-00055-en" num="0053">The above light stabilizers may protect the composition from ultraviolet light. In addition to the above light stabilizers, UV stabilizers or absorbers that may also be present in the composition include benzophenones or benzotriazoles.</p>
+      <p id="p-00056-en" num="0054">Fillers that may be included in the composition include glass beads, wollastonite, loam, molybdenum disulfide or graphite, inorganic or organic fibers such as glass fibers, carbon fibers or aramid fibers. The glass fibers, for instance, may have a length of greater than about 3 mm, such as from 5 to about 50 mm. The composition can further include thermoplastic or thermoset polymeric additives, or elastomers such as polyethylene, polyurethane, polymethyl methacrylate, polybutadiene, polystyrene, or else graft copolymers whose core has been prepared by polymerizing 1,3-butadiene, isoprene, n-butyl acrylate, ethylhexyl acrylate, or mixtures of these, and whose shell has been prepared by polymerizing styrene, acrylonitrile or (meth)acrylates.</p>
+      <p id="p-00057-en" num="0055">The composition can be melt processed to form various different articles.</p>
+      <p id="p-00058-en" num="0056">The present disclosure may be better understood with reference to the following examples.</p>
+      <heading id="h-00006-en" level="1">EXAMPLES</heading>
+      <p id="p-00059-en" num="0057">Instrumentation. <sup>1</sup>H-NMR spectra were recorded at 600 MHz on a Bruker Avance III at 37° C. and are referenced internally to residual proton signals of the deuterated solvent.</p>
+      <p id="p-00060-en" num="0058">For SEC measurements in HFIP (containing a 0.05 molar solution of KFAc in HFIP), a Jasco LC-NetII/ADC was used as an integrated instrument including a PSS PFG 100 A column and a RI detector. Calibration was achieved with poly(methyl methacrylate) provided by Polymer Standards Service (PSS). DSC measurements were carried out on a Perkin-Elmer DSC 8500 in the temperature range of −95° C. to 180° C. at heating rates of 10 K min<sup>−1 </sup>under nitrogen.</p>
+      <p id="p-00061-en" num="0059">TGA measurements were carried out on a Perkin-Elmer Pyris 6 in the temperature range of 30° C. to 700° C. at heating rates of 30° C. min<sup>−1</sup>.</p>
+      <p id="p-00062-en" num="0060">FT-IR measurements were performed on a Thermo scientific Nicolet iS10 and an ATR unit in the wave number range of 500 cm<sup>−1 </sup>to 3500 cm<sup>−1 </sup></p>
+      <p id="p-00063-en" num="0061">Matrix-assisted laser desorption and ionization time-of-flight mass spectrometry (MALDI-ToF MS) measurements were carried out on a Shimadzu Axima CFR MALDI-ToF mass spectrometer using dithranol (1,8,9-tris(hydroxyanthracene)) as a matrix. The samples were prepared from HFIP and ionized by adding aliquots of potassium triflate.</p>
+      <p id="p-00064-en" num="0062">Contact angle measurements were performed on a Dataphysics Contact Angle System OCA using water as interface agent.</p>
+      <p id="p-00065-en" num="0063">General Procedures, Polymerization. Trioxane, preheated to 80° C., dioxolane and formic acid were presented in a beaker glass and stirred vigorously. Triflic acid was added and the resulting polymer diluted in NMP, some triethylamine and water were added and heated to 100° C. After 30 min the water was removed by distillation and the solution was again heated to 140° C. for 2 h. Then the mixture was allowed to cool down to 65° C. and filtrated. The filter cake was diluted in methanol and again heated to 70° C. for 1 h. The polymer was dried in vacuo after filtration of the mixture (yield: 42%). SEC (HFIP, PMMA-Std.): M<sub>n</sub>=13 400 g/mol; M<sub>w</sub>=24 200 g/mol; PDI=1.81. <sup>1</sup>H-NMR (HFIP-d<sub>2</sub>, 600 MHz): δ [ppm]=5.20-5.00 (—CH<sub>2</sub>-polymer main chain); 5.00-4.95 (—CH<sub>2</sub>-dioxolane); 3.95-3.90 (—CH<sub>2</sub>-dioxolane).</p>
+      <p id="p-00066-en" num="0064">Hypergrafting. The linear macroinitiator was placed in a Schlenk flask and suspended in benzene (10 wt %). Subsequently the appropriate amount of cesium hydroxide was added to achieve 10% of deprotonation of the hydroxyl groups. After stirring for 30 min, benzene was removed in vacuo at 60° C. over night. DMAc was added and the mixture was heated to 140° C. to ensure complete dissolving of the macroinitiator. A 10 wt % solution of glycidol in DMAc was added slowly with a syringe pump over a period of approximately 24 h. The reaction was terminated by addition of an excess of methanol and weak acidic cation exchange resin. The products were separated by centrifugation and washed with methanol three times. The resulting triblock copolymer was dried in vacuo for 2 days (yield: 58%). SEC (HFIP, PMMA-Std.): M<sub>n</sub>=14 000 g/mol; M<sub>w</sub>=24 900 g/mol; PDI=1.77. <sup>1</sup>H-NMR (HFIP-d<sub>2</sub>, 600 MHz): δ [ppm]=5.15-5.00 (—CH<sub>2</sub>-POM chain); 5.00-4.95 (—CH<sub>2</sub>-dioxolane); 4.10-3.60 (—CH<sub>2</sub>-dioxolane+hbPG backbone). <sup>13</sup>C solid state NMR (8 kHz): δ[ppm]=100-80 (—CH<sub>2</sub>-POM-chain); 75-65 (—CH<sub>2</sub>-hbPG-chain).</p>
+      <p id="p-00067-en" num="0065">Proof of successful hypergrafting. The solubility of the hyperbranched POM in polar solvents was not significantly influenced. This might be due to the high crystallinity of POM, having a stronger influence on the solubility of the polymers than the increasing quantity of hydroxyl groups on the hbPG blocks. The preservation of insolubility despite the introduction of the hbPG blocks is very positive, because the copolymerization approach has only low influence on this important property. The polymers do show an excellent solubility in HFIP. <sup>1</sup>H-NMR spectroscopy (<figref>FIG. 1</figref>) in HFIP-d<sub>2</sub>opened the possibility to follow the hypergrafting step. The <sup>1</sup>H NMR spectrum of the hbPG-b-POM-b-hbPG triblock proves successful hypergrafting of glycidol and buildup of the hyperbranched blocks, which can be seen by the newly emerging peaks from 3.50 to 4.20 ppm corresponding to the polyether backbone of hbPG. The hbPG signals can only belong to successfully hypergrafted glycidol, because hbPG homopolymer is separated by washing the reaction mixture with methanol.</p>
+      <p id="p-00068-en" num="0066">Additionally, the materials were investigated by <sup>13</sup>C solid state NMR because of the insolubility of the polymer, where the signals for POM (80-100 ppm) as well as hbPG(65-75 ppm) can be assigned. For further verification of the successful hypergrafting the samples were additionally characterized by FT-IR and MALDI-ToF mass spectrometry. In the FT-IR spectra the triblock copolymer shows strong increase of the hydroxyl peak at around 3400 cm<sup>−1</sup>in comparison to the POM macroinitiator. Secondary, the methylene stretch signal at 2920 cm<sup>−1 </sup>increases. By hypergrafting with glycidol the number of methylene and hydroxyl groups increases, which explains the described results. Therefore, the FT-IR indicates a successful hypergrafting. Also, the MALDI-Tof MS spectra, exemplary shown for sample hbPG<sub>13</sub>-b-POM<sub>200</sub>-b-hbPG<sub>13 </sub>confirm these results, because all three repeating units (—CH<sub>2</sub>—O—; 30.03 g/mol; —CH<sub>2</sub>—CH<sub>2</sub>—O—: 44.05 g/mol and —CH<sub>2</sub>—CHO—CH<sub>2</sub>O—: 73.07 g/mol) can be assigned. Considering the described characterization methods, a hyperbranched-linear-hyperbranched triblock copolymer based on linear POM and hbPG was produced.</p>
+      <p id="p-00069-en" num="0067">Molecular weight determination. The molecular weight determination in solution was carried out in HFIP because of the insolubility of the polymers in conventional organic solvents. POM has no functional end-groups, which can be used for the relative integration in the <sup>1</sup>H NMR spectrum to determine the number average molecular weight. Therefore, the hydroxyl groups of the POM macroinitiator were functionalized with phenyl isocyanate. The aromatic signals (7.30-7.50 ppm) can be clearly assigned, which allows relative integration of the end-group and the backbone signals assuming quantitative functionalization of the end groups, which can be explained with the high reactivity of isocyanates against hydroxyl groups. Analytical data of the POM<sub>450 </sub>macroinitiator and the corresponding triblock copolymers is summarized in Table 1. The molecular weight determined via <sup>1</sup>H NMR spectroscopy ranges of 13,900 g mol<sup>−1 </sup>for the POM macroinitiator to 23,200 g mol<sup>−1 </sup>for the biggest triblock copolymer, which equates to two 4600 g mol<sup>−1 </sup>hbPG blocks. In SEC, the resulting molecular weights are in the range of 13,100 to 22,100 g mol<sup>−1</sup>. Moreover, moderate to narrow molecular weight distributions (PDI=1.3-1.8) confirm the well-defined structure of the triblock copolymer. The molecular weights determined with SEC do not accompany the molecular weights calculated with <sup>1</sup>H NMR. One reason is a changing in the hydrodynamic volume due to numerous hydroxyl functions undergoing hydrogen bonding. Furthermore, the polymer-column interaction increases, which increases the retention time on the column. The combination of both explanations can lead to steady molecular weights. But in comparison with the POM macroinitiator the molecular weight of the triblock copolymers changes in all cases. In some SEC traces (<figref>FIG. 2</figref>), a second mode is observable, which may be caused by incomplete functionalized POM.</p>
+      <p id="p-00070-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Characterization Data for Triblock Copolymers Based on POM<sub>450</sub></entry>
+                </row>
+                <row>
+                  <entry>Obtained from <sup>1</sup>H NMR Spectroscopy and SEC</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="center" />
+              <colspec colname="2" colwidth="91pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>no.</entry>
+                  <entry>composition (NMR)</entry>
+                  <entry>M<sub>n,</sub><sup>a</sup>/gmol<sup>−1</sup></entry>
+                  <entry>M<sub>n,</sub><sup>b</sup>/gmol<sup>−1</sup></entry>
+                  <entry>M<sub>w</sub>/M<sub>n</sub><sup>b</sup></entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>1</entry>
+                  <entry>POM<sub>450</sub></entry>
+                  <entry>13900</entry>
+                  <entry>13400</entry>
+                  <entry>1.81</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>hbPG<sub>15</sub>-b-POM<sub>450</sub>-b-hbPG<sub>15</sub></entry>
+                  <entry>16100</entry>
+                  <entry>13800</entry>
+                  <entry>1.81</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>hbPG<sub>20</sub>-b-POM<sub>450</sub>-b-hbPG<sub>20</sub></entry>
+                  <entry>16900</entry>
+                  <entry>18500</entry>
+                  <entry>1.40</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>hbPG<sub>31</sub>-b-POM<sub>450</sub>-b-hbPG<sub>31</sub></entry>
+                  <entry>18500</entry>
+                  <entry>14500</entry>
+                  <entry>1.70</entry>
+                </row>
+                <row>
+                  <entry>5</entry>
+                  <entry>hbPG<sub>60</sub>-b-POM<sub>450</sub>-b-hbPG<sub>60</sub></entry>
+                  <entry>22900</entry>
+                  <entry>22100</entry>
+                  <entry>1.33</entry>
+                </row>
+                <row>
+                  <entry>6</entry>
+                  <entry>hbPG<sub>62</sub>-b-POM<sub>450</sub>-b-hbPG<sub>62</sub></entry>
+                  <entry>23200</entry>
+                  <entry>13100</entry>
+                  <entry>1.32</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00001-en">
+                    <sup>a</sup>Calculated from <sup>1</sup>H NMR spectra.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00002-en">
+                    <sup>b</sup>Determined by SEC-RI in HFIP using PMMA standards.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00071-en" num="0068">Thermal Properties and Crystallinity. In order to further evaluate the properties of the triblock copolymers, the thermal properties were investigated via differential scanning calorimetry (DSC) and thermogravimetric analysis (TGA) measurements. POM shows a melting range from 175 to 185° C. for homopolymers (only trioxane) and of 165° C. for copolymers in strong dependency of the dioxolane content and a glass transition temperature at −82 ° C. In contrast, hbPG shows glass transitions around −20° C. depending on molecular weight and number of free hydroxyl groups. The hbPG-b-POM-b-hbPG triblock copolymers showed lower melting points compared to the POM macroinitiators ranging from 144.3° C. to 165.4° C. (Table 2). For the triblock copolymer with 14.1% relative hbPG content there is no glass transition observable, because the influence of the small hbPG blocks is too low to change the thermal behavior of the POM block. But for a hbPG content of 18.0%, a T<sub>g </sub>of −67.0° C. appears, which goes up to −47.4° C. for 39.7% relative hbPG content. The glass transition changes from POM-like to hbPG-like with increasing hbPG content and therefore higher influence of the hbPG properties on the thermal properties of the whole triblock. blend of POM<sub>450 </sub>and hbPG<sub>14 </sub>was measured showing a melting point of 161.7° C. and a glass transition at −33.5° C., which correlates to a POM melting temperature and a hbPG glass transition. So, the observed thermal behavior of the triblock copolymers is another proof for the successful hypergrafting and covalent linkage between hbPG and ROM. Additionally, with increasing hbPG content the melting enthalpy decreases from 138.0 to 90.2 Jg<sup>−1</sup>, which allows conclusions on the crystallinity of the polymers. The crystallinity (X<sub>c</sub>) can be calculated by dividing the melting enthalpy (ΔH<sub>m</sub>) by the melting enthalpy for POM with 100% crystallinity (ΔH<sub>m</sub><sup>∞</sup>) and multiplying this with the relative fraction of POM (f<sub>ω</sub><sup>POM</sup>) (eq. 1).</p>
+      <p id="p-00072-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <msub>
+                      <mi>X</mi>
+                      <mi>c</mi>
+                    </msub>
+                    <mo>=</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mi>Δ</mi>
+                          <mo></mo>
+                          <mstyle>
+                            <mspace width="0.3em" height="0.3ex" />
+                          </mstyle>
+                          <mo></mo>
+                          <msub>
+                            <mi>H</mi>
+                            <mi>m</mi>
+                          </msub>
+                        </mrow>
+                        <mrow>
+                          <mi>Δ</mi>
+                          <mo></mo>
+                          <mstyle>
+                            <mspace width="0.3em" height="0.3ex" />
+                          </mstyle>
+                          <mo></mo>
+                          <msubsup>
+                            <mi>H</mi>
+                            <mi>m</mi>
+                            <mi>∞</mi>
+                          </msubsup>
+                        </mrow>
+                      </mfrac>
+                      <mo></mo>
+                      <msubsup>
+                        <mi>f</mi>
+                        <mi>ω</mi>
+                        <mi>POM</mi>
+                      </msubsup>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>1</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00003-en" wi="N/A" he="N/A" file="US20150247006A1_00005.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150247006A1-20150903-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00073-en" num="0000">The melting enthalpy for 100% crystalline POM (ΔH<sub>m</sub><sup>∞</sup>) is 326.3 J/g, while a POM homopolymer has a degree of crystallinity around 65%. In our case the crystallinity for the POM macroinitiator containing trioxane and dioxolane amounts 42.3% and decreases to 16.8% for the biggest triblock copolymer with only 60.3% POM weight fraction. The growth of POM-crystals corresponds directly to the chain growth of the POM. By addition of trioxane to the reactive chain end, localized on the surface of the crystal, a two dimensional growth of the crystal is achieved. The POM chain ends lie stretched side-by-side while the functional end groups stick out of the surface. By using these functional groups as initiators for the ring-opening polymerization of glycidol, the crystal structure is disturbed because of higher place requirement of the hbPG blocks. The bigger the hbPG block the higher the place requirement and the lower the crystallinity. Therefore, it is possible to adjust the crystallinity of the triblock copolymers depending on the desired properties.</p>
+      <p id="p-00074-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>DSC Data and Crystallinity for Hyperbranched-Linear-</entry>
+                </row>
+                <row>
+                  <entry>Hyperbranched Triblock Copolymers (measured at 10° C./min, second</entry>
+                </row>
+                <row>
+                  <entry>heating run).</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>ΔH<sub>m</sub>/</entry>
+                  <entry>Crystallinity/</entry>
+                  <entry>POM</entry>
+                </row>
+                <row>
+                  <entry>sample</entry>
+                  <entry>T<sub>m</sub>/° C.</entry>
+                  <entry>T<sub>g</sub>/° C.</entry>
+                  <entry>Jg<sup>−1</sup></entry>
+                  <entry>%</entry>
+                  <entry>fraction/%</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="char" char="." />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>POM<sub>450</sub></entry>
+                  <entry>161.7</entry>
+                  <entry>—</entry>
+                  <entry>138.0</entry>
+                  <entry>42.3</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>hbPG<sub>15</sub>-b-</entry>
+                  <entry>153.9</entry>
+                  <entry>—</entry>
+                  <entry>115.9</entry>
+                  <entry>41.1</entry>
+                  <entry>85.9</entry>
+                </row>
+                <row>
+                  <entry>POM<sub>450</sub>-b-hbPG<sub>15</sub></entry>
+                </row>
+                <row>
+                  <entry>hbPG<sub>20</sub>-b-</entry>
+                  <entry>155.1</entry>
+                  <entry>−67.0</entry>
+                  <entry>110.0</entry>
+                  <entry>40.9</entry>
+                  <entry>82.0</entry>
+                </row>
+                <row>
+                  <entry>POM<sub>450</sub>-b-hbPG<sub>20</sub></entry>
+                </row>
+                <row>
+                  <entry>hbPG<sub>31</sub>-b-</entry>
+                  <entry>150.7</entry>
+                  <entry>—</entry>
+                  <entry>82.6</entry>
+                  <entry>33.7</entry>
+                  <entry>74.6</entry>
+                </row>
+                <row>
+                  <entry>POM<sub>450</sub>-b-hbPG<sub>31</sub></entry>
+                </row>
+                <row>
+                  <entry>hbPG<sub>60</sub>-b-</entry>
+                  <entry>157.4</entry>
+                  <entry>−47.4</entry>
+                  <entry>90.2</entry>
+                  <entry>16.8</entry>
+                  <entry>60.3</entry>
+                </row>
+                <row>
+                  <entry>POM<sub>450</sub>-b-hbPG<sub>60</sub></entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00075-en" num="0069">To complete the investigation of the thermal properties, thermogravimetric analysis (TGA) of a POM macroinitiator, a triblock copolymer and a comparable homo-hbPG were performed. The triblock copolymer shows a higher degradation temperature than homo-POM starting at 380° C. The slight degradation starting at 200° C. can be explained by the initial degradation of unconverted POM macroinitiator. The degradation of the homo-POM starts at 220° C. Furthermore, the hbPG degrades between 320° C. and 440° C.</p>
+      <p id="p-00076-en" num="0070">Surface Properties. To investigate the surface behavior of the novel triblock copolymers, the contact angles of some POM/triblock copolymer blends were measured. Therefore, a solution of the blends in HFIP were spin coated on silanized glass slides and the static contact angles at the liquid/vapor interface were measured by adding a droplet of water on the thin polymer film. The contact angle for POM constitutes 76.7° (Lit.: 76.8°)and with increasing content of hbPG<sub>60</sub>-b-POM<sub>450</sub>-b-hbPG<sub>60 </sub>the it decreases linearly until reaching an angle of 54.5° for 100% hbPG<sub>60</sub>-b-POM<sub>450</sub>-b-hbPG<sub>60 </sub>(<figref>FIG. 4</figref>). The hypergrafting results in a higher amount of hydroxyl groups in the polymer, which enlarges the hydrophilicity and simultaneously reduces the contact angle. In contrast, the contact angle increases by just mixing POM and hbPG. There is no bonding between the two different polymers and a phase separation is observable. Because of covalent bonding, this separation is not possible for the triblock copolymers in the same extent. So it is possible to adjust the hydrophilicity of a POM surface by adding different amounts of the triblock copolymer. In addition, this is verification for the successful hypergrafting.</p>
+      <p id="p-00077-en" num="0071">These and other modifications and variations to the present invention may be practiced by those of ordinary skill in the art, without departing from the spirit and scope of the present invention, which is more particularly set forth in the appended claims. In addition, it should be understood that aspects of the various embodiments may be interchanged both in whole or in part. Furthermore, those of ordinary skill in the art will appreciate that the foregoing description is by way of example only, and is not intended to limit the invention so further described in such appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A polymer comprising a hyperbranched polyoxymethylene homopolymer or copolymer, the polyoxymethylene homopolymer or copolymer comprising a middle portion positioned between a first end portion and a second end portion, at least one of the end portions having a hyperbranched structure.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. A polymer as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein both end portions have a hyperbranched structure.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. A polymer as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the middle portion comprises a linear structure having repeating oxymethylene units and optionally other oxyalkylene units.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A polymer as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the hyperbranched polyoxymethylene polymer comprises a triblock copolymer.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A polymer as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each hyperbranched portion includes at least 10 branches per molecule and generally less than about 500 branches per molecule.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A polymer as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each hyperbranched portion includes end units and wherein the end units comprise functional groups.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A polymer as defined in <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein at least about 80% of the end units comprise the functional groups.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A polymer as defined in <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the functional groups comprise hydroxyl groups, amino groups, alkoxyl groups, esters or amides.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A polymer as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the hyperbranched portions are aliphatic.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A polymer as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the hyperbranched portions include ether linkages.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A polymer as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the hyperbranched portions comprise hyperbranched polyglycerol.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A polymer as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the polymer is amphiphilic.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. A process for producing a hyperbranched polyoxymethylene polymer comprising:
+<claim-text>at least partially deprotonating hydroxy terminal groups on a polyoxymethylene polymer or oligomer;</claim-text><claim-text>reacting the deprotonated polyoxymethylene polymer or oligomer with a multi-functional hyperbranching monomer, the multi-functional hyperbranching monomer grafting to the polymer or oligomer and further polymerizing to form a polyoxymethylene polymer with a hyperbranched portion.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A process as defined in <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the polyoxymethylene polymer or oligomer comprises a bishydroxy polyoxymethylene.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A process as defined in <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the polyoxymethylene polymer or oligomer is deprotonated by contacting with a base, while removing water.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A process as defined in <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the base comprises a hydroxide, such as cesium hydroxide, potassium hydroxide, sodium hydroxide, or mixtures thereof.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. A process according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the polyoxymethylene polymer or oligomer has a linear structure.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. A process according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the resulting polyoxymethylene polymer with a hyperbranched portion comprises a triblock copolymer.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. A process as defined in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the triblock copolymer includes a polyoxymethylene block positioned in between two hyperbranched blocks.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. A process according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the multi-functional hyperbranching monomer comprises glycidol.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. A process as defined in <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the polyoxymethylene polymer with a hyperbranched portion is produced through hypergrafting by anionic ring-opening multi-branching polymerization.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. A process according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the weight ratio of the deprotonated polyoxymethylene polymer or oligomer to the multi-functional hyperbranching monomer is from about 1:0.1 to about 1:10.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247006A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247006A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247006A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247006A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247006A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247006A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247006A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247006A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247006A1_00005.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150247006A1-20150903-M00001.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150247006A1.PDF" type="pdf" size="544067" pages="11" />
+</lexisnexis-patent-document>

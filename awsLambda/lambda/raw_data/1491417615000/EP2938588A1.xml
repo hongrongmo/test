@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2938588A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091139" date-changed="20160115" time-changed="145934">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939884">
+        <country>EP</country>
+        <doc-number>2938588</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13869440</doc-number>
+        <date>20131223</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>13729528</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>201213729528</doc-number>
+        <kind>A</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>US</country>
+        <doc-number>2013077376</doc-number>
+        <kind>W</kind>
+        <date>20131223</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201213729528</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013077376</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US201213729528</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013US77376</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150728</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151211">
+      <classification-ipcr sequence="1">
+        <text>C04B  35/80        20060101AFI20151125BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>80</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B29K 105/06        20060101ALN20151125BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>105</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B29K 307/04        20060101ALN20151125BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>307</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>B29L  31/00        20060101ALN20151125BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>29</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C04B  35/565       20060101ALI20151125BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>565</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C04B  35/626       20060101ALI20151125BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>626</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>C04B  35/628       20060101ALI20151125BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>628</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>C04B  35/83        20060101ALI20151125BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>83</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151125</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151211">
+      <classification-cpc sequence="1">
+        <text>C04B  35/806       20130101 FI20150523BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>806</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150523</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B05D   3/002       20130101 LI20150521BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>002</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150521</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B05D2601/00        20130101 LA20150521BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>2601</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150521</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B29C  66/712       20130101 LI20150521BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>C</subclass>
+        <main-group>66</main-group>
+        <subgroup>712</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150521</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B29K2105/06        20130101 LA20150521BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>2105</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150521</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B29K2307/04        20130101 LA20150521BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>2307</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150521</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>B29L2031/731       20130101 LA20150521BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>L</subclass>
+        <main-group>2031</main-group>
+        <subgroup>731</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150521</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C04B  35/565       20130101 LI20150523BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>565</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150523</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C04B  35/62675     20130101 LI20141029BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>62675</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141029</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C04B  35/6268      20130101 LI20151112BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>6268</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151112</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C04B  35/62868     20130101 LI20141029BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>62868</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141029</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C04B  35/62871     20130101 LI20151112BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>62871</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151112</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C04B  35/62884     20130101 LI20141029BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>62884</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141029</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C04B  35/62894     20130101 LI20151112BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>62894</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151112</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C04B  35/62897     20130101 LI20151112BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>62897</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151112</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>C04B  35/80        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>80</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>C04B  35/83        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>83</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>C04B2235/3826      20130101 LA20150521BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>2235</main-group>
+        <subgroup>3826</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150521</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>C04B2235/386       20130101 LA20150521BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>2235</main-group>
+        <subgroup>386</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150521</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="20">
+        <text>C04B2235/425       20130101 LA20141029BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>2235</main-group>
+        <subgroup>425</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141029</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="21">
+        <text>C04B2235/5248      20130101 LA20150523BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>2235</main-group>
+        <subgroup>5248</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150523</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="22">
+        <text>C04B2235/96        20130101 LA20151112BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>2235</main-group>
+        <subgroup>96</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151112</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">GLASFASERVERSTÄRKTER ARTIKEL UND VERFAHREN DAFÜR</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">CARBON FIBER-REINFORCED ARTICLE AND METHOD THEREFOR</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">OBJET RENFORCÉ PAR DES FIBRES DE CARBONE ET PROCÉDÉ CORRESPONDANT</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>United Technologies Corporation</orgname>
+            <registered-number>101421796</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>One Financial Plaza</address-1>
+              <city>Hartford, CT 06101</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>KMETZ, Michael A.</name>
+            <address>
+              <address-1>234 Bull Hill Road</address-1>
+              <city>Colchester, Connecticut 06415</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>FRUEH, Sam</name>
+            <address>
+              <address-1>75 Hockanum Boulevard Unit 912</address-1>
+              <city>Vernon, Connecticut 06066</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Leckey, David Herbert</name>
+            <registered-number>100034578</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Dehns St Bride's House 10 Salisbury Square</address-1>
+              <city>London EC4Y 8JD</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13077376</doc-number>
+        <date>20131223</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014105772</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20160104">
+      <main-family family-id="166468999">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2938588</doc-number>
+            <kind>A4</kind>
+            <date>20151230</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150141235</doc-number>
+            <kind>A1</kind>
+            <date>20150521</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2938588</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014105772</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166468998">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2938588</doc-number>
+            <kind>A4</kind>
+            <date>20151230</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150141235</doc-number>
+            <kind>A1</kind>
+            <date>20150521</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2938588</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014105772</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151105" lang="eng" format="equivalent" country="US" doc-number="2015141235" kind="A1">
+    <p>A method of fabricating a carbon fiber-reinforced article includes providing carbon fibers that have surfaces that include an initial interfacial bonding strength capacity with respect to bonding with boron nitride. The surfaces are then modified to reduce the initial interfacial bonding strength capacity. A layer of boron nitride is then deposited on the modified surfaces and the carbon fibers are then embedded in a ceramic matrix. A carbon fiber-reinforced article includes the carbon fibers, the layer of boron nitride on the surfaces of the carbon fibers, and the ceramic matrix. The article exhibits non-brittle fracture.</p>
+  </abstract>
+  <legal-data date-changed="20160115">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151230</date>
+      </publication-date>
+      <event-code-1>A4</event-code-1>
+      <effect>+</effect>
+      <legal-description>SUPPLEMENTARY SEARCH REPORT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2938588A1</docdb-publication-number>
+      <docdb-application-id>419622400</docdb-application-id>
+      <effective-date>
+        <date>20151201</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151230</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2938588A1</docdb-publication-number>
+      <docdb-application-id>419622400</docdb-application-id>
+      <ipc>C04B  35/565       20060101ALI20151125BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151230</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2938588A1</docdb-publication-number>
+      <docdb-application-id>419622400</docdb-application-id>
+      <ipc>B29K 105/06        20060101ALI20151125BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20151230</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2938588A1</docdb-publication-number>
+      <docdb-application-id>419622400</docdb-application-id>
+      <ipc>C04B  35/83        20060101ALI20151125BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20151230</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2938588A1</docdb-publication-number>
+      <docdb-application-id>419622400</docdb-application-id>
+      <ipc>C04B  35/628       20060101ALI20151125BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20151230</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2938588A1</docdb-publication-number>
+      <docdb-application-id>419622400</docdb-application-id>
+      <ipc>C04B  35/80        20060101AFI20151125BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20151230</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2938588A1</docdb-publication-number>
+      <docdb-application-id>419622400</docdb-application-id>
+      <ipc>C04B  35/626       20060101ALI20151125BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20151230</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2938588A1</docdb-publication-number>
+      <docdb-application-id>419622400</docdb-application-id>
+      <ipc>B29K 307/04        20060101ALI20151125BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20151230</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2938588A1</docdb-publication-number>
+      <docdb-application-id>419622400</docdb-application-id>
+      <ipc>B29L  31/00        20060101ALI20151125BHEP</ipc>
+    </legal-event>
+  </legal-data>
+</lexisnexis-patent-document>

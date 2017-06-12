@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257757A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030159" date-changed="20151027" time-changed="110537">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315433">
+        <country>US</country>
+        <doc-number>20150257757</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14657396</doc-number>
+        <date>20150313</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151027">
+      <classification-ipcr sequence="1">
+        <text>A61B  17/10        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151027">
+      <classification-cpc sequence="1">
+        <text>A61B  17/1285      20130101 FI20151022BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>1285</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151022</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B  17/083       20130101 LA20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>083</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B  17/122       20130101 LI20150512BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>122</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150512</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B  17/1227      20130101 LA20150512BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>1227</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150512</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B2017/00336     20130101 LA20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>00336</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B2017/00477     20130101 LA20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>00477</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B2019/302       20130101 LA20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2019</main-group>
+        <subgroup>302</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B2019/303       20130101 LA20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2019</main-group>
+        <subgroup>303</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">21</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">METHODS AND APPARATUS FOR CLIPPING TISSUE</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61953312</doc-number>
+          <date>20140314</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Boston Scientific Scimed, Inc.</orgname>
+            <address>
+              <city>Maple Grove</city>
+              <state>MN</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>POWERS</last-name>
+            <first-name>Michael</first-name>
+            <address>
+              <city>Pepperell</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Smith</last-name>
+            <first-name>Paul</first-name>
+            <address>
+              <city>Smithfield</city>
+              <state>RI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Raybin</last-name>
+            <first-name>Samuel</first-name>
+            <address>
+              <city>Marlborough</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Schwartz</last-name>
+            <first-name>Bernard B.</first-name>
+            <address>
+              <city>East Dorset</city>
+              <state>VT</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Golden</last-name>
+            <first-name>John B.</first-name>
+            <address>
+              <city>Norton</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Suon</last-name>
+            <first-name>Naroun</first-name>
+            <address>
+              <city>Lawrence</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bean</last-name>
+            <first-name>Jeff V.</first-name>
+            <address>
+              <city>Fitchburg</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173668764">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257757</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668763">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257757</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A system for clipping tissue includes a clip having first and second jaws. Each of the first and second jaws defines an opening through which a control wire passes. A collapsible member is coupled between the first and second jaws. The member is biased to urge the first and second jaws away from one another along an axis of the control wire to a first expanded configuration. The first and second jaws are movable against the bias of the member via the control wire to a second contracted configuration in which the first and second jaws are moved along the axis of the control wire toward one another to lockingly engage tissue received therebetween. The movement of control wire causes a corresponding movement of the first jaw relative to the second jaw to move the first and second jaws from the first expanded configuration to the second contracted configuration.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150326</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257757A1</docdb-publication-number>
+      <docdb-application-id>444511194</docdb-application-id>
+      <new-owner>BOSTON SCIENTIFIC SCIMED, INC., MINNESOTA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:POWERS, MICHAEL;SMITH, PAUL;RAYBIN, SAMUEL;AND OTHERS;SIGNING DATES FROM 20150217 TO 20150316;REEL/FRAME:035264/0366</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">PRIORITY CLAIM</heading>
+      <p id="p-00001-en" num="0001">The present invention claims priority to U.S. Provisional Patent Application Ser. No. 61/953,312 filed Mar. 14, 2014; the disclosure of which is incorporated herewith by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE DISCLOSURE</heading>
+      <p id="p-00002-en" num="0002">Embodiments of the present disclosure relate to devices, systems, and methods for treating body tissues, and more particularly for clipping and/or compressing body tissues.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Surgical clips are used during a variety of medical procedures to, for example, hold or clamp tissues together, squeeze blood vessels or other bodily lumens to reduce or prevent bleeding, etc. Clips may be introduced into a patient's body using various approaches, such as a subcutaneous approach, a minimally invasive approach, etc. In a subcutaneous approach, a patient's skin is penetrated to obtain entrance to a target site within the body to deploy a clip over target tissue, (e.g., to close a wound or surgical opening). In one approach, a clip is maneuvered to a target site within the body via an endoscope or other introducer inserted through a body lumen accessed, for example by a natural anatomical opening such as the mouth.</p>
+      <p id="p-00004-en" num="0004">Certain treatments involve the deployment of multiple clips within the body. Many related art systems deliver only one clip at a time. If a second clip is required, the system or delivery instrument must be removed from the body to receive another clip or an entirely new clipping device. This process must be repeated until the desired number of clips has been deployed. As a result, the deployment of multiple clips may be complicated, time consuming, and expensive.</p>
+      <p id="p-00005-en" num="0005">The following implementations may reduce the time and effort required to deploy multiple clips, simplifying the system, and/or performing this process more economically.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">The present disclosure is directed to a clipping device, comprising a flexible insertion member extending from a proximal end which, during use remains outside a body accessible to a user to a distal end which is inserted into the body through a naturally occurring body lumen along with a control wire extending through the insertion member from the proximal end and a first clip including first and second jaws, each of the first and second jaws including an opening through which the control wire passes and a collapsible member coupled between the first and second jaws, the collapsible member being biased to urge the first and second jaws away from one another along an axis of the control wire to a first expanded configuration, the first and second jaws being movable against the bias of the collapsible member via the control wire to a second contracted configuration in which the first and second jaws are moved along the axis of the control wire toward one another to lockingly engage tissue received therebetween. The clipping device of claim <b>1</b>, wherein the first clip further comprises a first locking member coupled to the first jaw and extending from the first jaw toward the second jaw, the first locking member being constructed so that, when the first and second jaws are moved toward one another into the second configuration, the first locking member lockingly engages the first jaw member.</p>
+      <p id="p-00007-en" num="0007">In an embodiment, the first locking member may be formed as a rod extending from the first jaw toward the second jaw.</p>
+      <p id="p-00008-en" num="0008">In an embodiment, a free end of the rod of the first locking member may include a locking arm extending away from the rod at an angle offset from a longitudinal axis of the rod to engage the second jaw.</p>
+      <p id="p-00009-en" num="0009">In an embodiment, a proximal surface of the free end of the locking arm may be angled relative to a surface of the second jaw so that, as the free end of the rod moves proximally into contact with the second jaw, the locking arm deflects until the locking arm passes over the second jaw and locks against a proximal side thereof.</p>
+      <p id="p-00010-en" num="0010">In an embodiment, the first jaw may extend from a first end including a first body engaging the collapsible member to a second end including a first tissue gripping tip.</p>
+      <p id="p-00011-en" num="0011">In an embodiment, the second jaw may extend from a first end including a second body engaging the collapsible member to a second end including a second tissue gripping tip.</p>
+      <p id="p-00012-en" num="0012">In an embodiment, the second end of the second jaw may include a third tissue gripping tip.</p>
+      <p id="p-00013-en" num="0013">In an embodiment, the control wire may include an enlarged distal end engaging distal side of the opening in the first jaw so that proximal movement of the control wire relative to the first jaw draws the first jaw proximally relative to the second jaw, the enlarged end being configured to be movable to a second configuration to permit separation thereof from the first jaw to release the first clip.</p>
+      <p id="p-00014-en" num="0014">In an embodiment, the enlarged distal end of the control wire may engage the opening in the first jaw with a pressure fit.</p>
+      <p id="p-00015-en" num="0015">In an embodiment, the opening in the second jaw may include a rod receiving space and the rod may be lockingly received within the second channel in the second contracted configuration.</p>
+      <p id="p-00016-en" num="0016">In an embodiment, the second and third tissue gripping tips may be separated from one another by an opening, the opening receiving at least a portion of the first jaw therein in the second contracted configuration, the opening includes an angled wall configured to lockingly engage the locking arm of the first locking member.</p>
+      <p id="p-00017-en" num="0017">In an embodiment, the collapsible member may include first and second tabs received within corresponding slots formed in the first and second jaw.</p>
+      <p id="p-00018-en" num="0018">In an embodiment, the device may further comprise a collapsible body portion connecting the first and second tabs, including first and second portions connected to one another at a joint, wherein in the first expanded configuration, the first and second portions are moved apart to enclose a first angle therebetween and wherein, in the second contracted configuration, the first and second arms enclose a second angle smaller than the first angle.</p>
+      <p id="p-00019-en" num="0019">In an embodiment, the second angle may be 0.</p>
+      <p id="p-00020-en" num="0020">In an embodiment, an outer profile of the first clip may be reduced when housed within the flexible insertion member, the outer profile expanding to a biased configuration when the first clip is advanced out of the flexible insertion member.</p>
+      <p id="p-00021-en" num="0021">In an embodiment, the device may further comprise a second clip including third and fourth jaws, each of the third and fourth jaws including an opening through which the control wire passes and a second clip collapsible member coupled between the third and fourth jaws, the second clip collapsible member being biased to urge the third and fourth jaws away from one another along an axis of the control wire to a first expanded configuration, the third and fourth jaws being movable against the bias of the second clip collapsible member via the control wire to a second contracted configuration in which the third and fourth jaws are moved along the axis of the control wire toward one another to lockingly engage tissue received therebetween.</p>
+      <p id="p-00022-en" num="0022">The present disclosure is also directed to a system for clipping tissue, comprising a clip including first and second jaws, each of the first and second jaws including an opening through which a control wire passes and a collapsible member coupled between the first and second jaws, the collapsible member being biased to urge the first and second jaws away from one another along an axis of the control wire to a first expanded configuration, the first and second jaws being movable against the bias of the collapsible member via the control wire to a second contracted configuration in which the first and second jaws are moved along the axis of the control wire toward one another to lockingly engage tissue received therebetween, wherein movement of the control wire causes a corresponding movement of the first jaw relative to the second jaw to move the first and second jaws from the first expanded configuration to the second contracted configuration.</p>
+      <p id="p-00023-en" num="0023">In an embodiment, the control wire may extend through a flexible insertion member from a proximal end actuatable by a user to a distal end connected to the first and second jaws, the control wire including an increased thickness portion at the distal end.</p>
+      <p id="p-00024-en" num="0024">In an embodiment, the first jaw may extend from a first end including a first body engaging the collapsible member to a second end including a first tissue gripping tip and the second jaw extends from a first end including a second body engaging the collapsible member to a second end including second and third tissue gripping tips.</p>
+      <p id="p-00025-en" num="0025">A method for causing hemostasis includes advancing a clip through a flexible insertion member to a target tissue site. The clip includes a first jaw and a second jaw coupled to one another by a collapsible member. Each of the first and second jaws includes an opening through which a control wire passes. The collapsible member is biased to urge the first and second jaws away from one another along an axis of the control wire. The method further includes actuating the control wire to move the first and second jaws out of the insertion member and then drawing tissue into a space between the first and second jaws. The method further includes withdrawing the control wire proximally a first distance to move the first jaw along an axis of the control wire proximally toward the second jaw until a locking element couples the first and second jaws to one another to lockingly engage tissue received therebetween. The method further includes withdrawing the control wire proximally by a second distance to disengage the control wire from the first and second jaws to release the clip from the control wire.</p>
+      <p id="p-00026-en" num="0026">It is to be understood that both the foregoing general description and the following detailed description are exemplary and explanatory only and are not restrictive of the disclosure, as claimed.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00027-en" num="0027">The accompanying drawings, which are incorporated in and constitute a part of this specification, illustrate exemplary embodiments of the present disclosure and together with the description, serve to explain the principles of the disclosure.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 1</figref> is a schematic side view of an exemplary embodiment of a clipping device.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 2</figref> is a schematic side view of a clipping device according to a first alternate embodiment of the disclosure.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 3</figref> is a schematic side view of a clipping device according to a second alternate embodiment of the disclosure.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 4</figref> is a schematic side view of a clipping device according to a third alternate embodiment of the disclosure.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 5</figref> is a schematic side view of a clipping device according to a fourth alternate embodiment of the disclosure.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 6</figref> is a schematic side view of a clipping device according to a fifth alternate embodiment of the disclosure.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 7</figref> is a schematic side view of a clipping device according to a sixth alternate embodiment of the disclosure.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 8</figref> is a perspective view of a clipping device according to a seventh alternate embodiment of the present disclosure.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 9</figref> is a perspective view of a clip of the device of <figref>FIG. 8</figref>, in an open configuration.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 10</figref> is a perspective view of the clip of the device of <figref>FIG. 8</figref>, in a partially closed configuration.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 11</figref> is a perspective view of the clip of the device of <figref>FIG. 8</figref>, locked in a closed configuration.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 12</figref> is an enlarged perspective view showing contact between two adjacent clips of the device of <figref>FIG. 8</figref>.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 13</figref> is a schematic side view of the device of <figref>FIG. 8</figref>.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 14</figref> is an enlarged schematic perspective view of a portion of the clip of the device of <figref>FIG. 8</figref>.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 15</figref> is a longitudinal cross-sectional side view of the portion of the clip of <figref>FIG. 14</figref>.</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 16</figref> is a longitudinal cross-sectional side view of a portion of a clip according to an alternate embodiment of the present disclosure.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIG. 17</figref> is a schematic perspective view of the portion of the clip of <figref>FIG. 16</figref>.</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIG. 18</figref> is a perspective view of a clip according to an eighth alternate embodiment of the present disclosure.</p>
+      <p id="p-00046-en" num="0046">
+        <figref>FIG. 19</figref> is a schematic side view of the clip of <figref>FIG. 18</figref>.</p>
+      <p id="p-00047-en" num="0047">
+        <figref>FIG. 20</figref> is a perspective view of a clip according to a ninth alternate embodiment of the present disclosure.</p>
+      <p id="p-00048-en" num="0048">
+        <figref>FIG. 21</figref> is a partially transparent perspective view of the clip of <figref>FIG. 21</figref>, in a closed configuration.</p>
+      <p id="p-00049-en" num="0049">
+        <figref>FIG. 22</figref> is a perspective view of a clip according to a tenth alternate embodiment of the present disclosure.</p>
+      <p id="p-00050-en" num="0050">
+        <figref>FIG. 23</figref> is a perspective view of a clip according to an eleventh alternate embodiment of the present disclosure.</p>
+      <p id="p-00051-en" num="0051">
+        <figref>FIG. 24</figref> is a perspective view of a clip according to a twelfth alternate embodiment of the present disclosure.</p>
+      <p id="p-00052-en" num="0052">
+        <figref>FIG. 25</figref> is an enlarged perspective view of a portion of the clip of <figref>FIG. 24</figref>.</p>
+      <p id="p-00053-en" num="0053">
+        <figref>FIG. 26</figref> is a perspective view of a clip according to a thirteenth alternate embodiment of the present disclosure, in an open configuration.</p>
+      <p id="p-00054-en" num="0054">
+        <figref>FIG. 27</figref> is a perspective view of the clip of <figref>FIG. 26</figref>, in a closed configuration.</p>
+      <p id="p-00055-en" num="0055">
+        <figref>FIG. 28</figref> is a perspective view of a clip according to a fourteenth alternate embodiment of the present disclosure.</p>
+      <p id="p-00056-en" num="0056">
+        <figref>FIG. 29</figref> is a perspective view of the clip of <figref>FIG. 28</figref>, in a closed configuration.</p>
+      <p id="p-00057-en" num="0057">
+        <figref>FIG. 30</figref> is a perspective view of a clip according to a fifteenth alternate embodiment of the present disclosure.</p>
+      <p id="p-00058-en" num="0058">
+        <figref>FIG. 31</figref> is an enlarged cross-sectional view of a portion of the clip of <figref>FIG. 30</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DESCRIPTION OF THE EMBODIMENTS</heading>
+      <p id="p-00059-en" num="0059">Reference will now be made in detail to embodiments of the present disclosure, examples of which are illustrated in the accompanying drawings. Wherever possible, the same reference numbers will be used throughout the drawings to refer to the same or like parts.</p>
+      <p id="p-00060-en" num="0060">Embodiments of the present disclosure relate to devices, systems, and methods for clipping tissue. The clipping device includes a flexible insertion member that can be inserted into a body along a tortuous path (e.g., through a natural body lumen accessed via a natural body opening, such as the mouth). The flexible insertion member is configured to receive one or more clips therethrough, the clips being configured to engage a portion of body tissue within the body. The exemplary clip includes first and second jaws, each including an opening through which a control wire passes. A collapsible member coupled between the first and second jaws is biased to urge the first and second jaws away from one another along an axis of the control wire to a first expanded configuration. The first and second jaws are moved toward one another against the bias of the collapsible member via the control wire to a second retracted configuration to lockingly engage tissue received therebetween.</p>
+      <p id="p-00061-en" num="0061">Those skilled in the art will recognize that the present disclosure may be manifested in a variety of forms other than the specific embodiments described and contemplated herein. Accordingly, departure in form and detail may be made without departing from the scope and spirit of the present disclosure as described in the appended claims.</p>
+      <p id="p-00062-en" num="0062">
+        <figref>FIG. 1</figref> is a schematic side view of an exemplary embodiment of a clipping device <b>100</b>. The clipping device <b>100</b> includes a flexible insertion member <b>102</b> which, in this embodiment, is sized and shaped for insertion through a working channel of an insertion device (e.g., an endoscope) (not shown). The insertion member <b>102</b> defines a lumen <b>101</b> extending along an axial length thereof between a proximal end (not shown) and a distal end <b>103</b>. The insertion member <b>102</b> is sized so that, when a distal end <b>103</b> thereof is inserted to a target site within the body, a proximal end thereof (not shown) remains outside the body accessible to a user. Typically, the insertion member <b>102</b> is introduced into the patient's body through a naturally occurring anatomical opening, such as the mouth.</p>
+      <p id="p-00063-en" num="0063">The insertion member <b>102</b> in this exemplary embodiment is formed of a flexible biocompatible material. For example, the insertion member <b>102</b> may be formed of a polymer such as polytetrafluoroethylene (PTFE), polyurethane, and so forth. Other suitable materials such as composites, metals, and so forth may also be used without deviating from the scope of the disclosure.</p>
+      <p id="p-00064-en" num="0064">The clipping device <b>100</b> further includes one or more clips <b>106</b> housed within the lumen <b>101</b>. Dimensions of the lumen <b>101</b> are selected to facilitate uninterrupted advancement of the clips <b>106</b> therethrough and out of a distal opening of the insertion member <b>102</b>. To this end, the diameter of the lumen <b>101</b> is selected to be equal to or slightly larger than a profile of the clip <b>106</b>.</p>
+      <p id="p-00065-en" num="0065">The clip <b>106</b> includes a first jaw <b>110</b> and a second jaw <b>112</b> coupled to each other via a clip collapsible member <b>116</b>. The collapsible member <b>116</b> includes first and second portions <b>111</b> and <b>113</b> connected to one another at a joint <b>109</b> forming an angle a therebetween. In some embodiments, the collapsible member <b>116</b> may be formed of a flexible, resilient material. The collapsible member <b>116</b> is biased toward an open position in which the angle a is increased may be moved when subjected to a compressive force to a closed, tissue-receiving position in which the angle a is reduced to bring the first and second jaws <b>110</b>, <b>112</b> toward one another, as will be described in greater detail with respect to the exemplary method below. The first jaw <b>110</b> includes a first tissue gripping tip <b>122</b>. The second jaw <b>112</b> includes two tissue gripping tips <b>124</b>, <b>126</b> which form a V-shaped configuration defining an opening <b>108</b> therebetween. The second and third tips <b>124</b>, <b>126</b> are configured to permit insertion of the first tip <b>122</b> therebetween when the clip <b>106</b> is moved to a locked configuration, as will be described in greater detail later on with respect to the exemplary method. The first and second jaws <b>110</b>, <b>112</b> also include openings <b>114</b> extending therethrough sized to permit slidable insertion of a control wire <b>104</b> therethrough. A diameter of the opening <b>114</b> is selected to be equal to or slightly greater than a diameter of an increased diameter portion <b>128</b>, <b>129</b> provided on the control wire <b>104</b>. As will be described in greater detail later on, the increased diameter portion <b>128</b>, <b>129</b> is adapted to be pulled through the opening <b>114</b> upon application of a predetermined threshold pressure thereto. It is noted that although the embodiments depicted herein include two increased diameter portions <b>128</b>, <b>129</b>, an alternate embodiment may include only one increased diameter portion <b>128</b> without changing the mode of operation of the device <b>100</b>.</p>
+      <p id="p-00066-en" num="0066">As indicated above, the collapsible member <b>116</b> is biased toward an open position, in which the distal end of the portion <b>111</b> is separated from the proximal end of the portion <b>113</b> while their joined ends form an angle a therebetween. In the open position, the angle a is selected to be sufficiently close to 180 degrees so that the clip <b>106</b> may pass through the lumen <b>101</b>. In the open position, the angle a between the two portions <b>111</b> and <b>113</b> can be as great as 180 degrees such that the two portions <b>111</b> and <b>113</b> are substantially co-linear substantially parallel to a longitudinal axis of the control wire <b>104</b>, although a smaller angle may be used without deviating from the scope of the disclosure. For example, any angle smaller than 180 degrees may be used as long as an outer profile of the collapsible member <b>116</b> is small enough to permit insertion of the assembled clip through the lumen <b>101</b>.</p>
+      <p id="p-00067-en" num="0067">The collapsible member <b>116</b> is movable to a closed position by pulling the control wire <b>104</b> proximally to cause the first jaw <b>110</b> to move proximally toward the second jaw <b>112</b>, as will be described in greater detail with respect to the exemplary method below. A hypotube (not shown) is positioned proximally of a proximalmost one of the clips <b>106</b> to prevent the clips <b>106</b> from being withdrawn proximally as the control wire <b>104</b> is retracted. Rather, the hypotube (not shown) remains in position against a proximal end of the proximalmost clip <b>106</b>, countering the proximally directed force from the control wire <b>104</b> and causing the collapsible member <b>116</b> to move to the closed position. The hypotube (not shown) is formed as an elongated hollow tube housed within the lumen <b>101</b> and having an opening extending therethrough, the opening being sized to permit the control wire <b>104</b> to be slidably received therethrough and prevent the clip <b>106</b> from being drawn thereinto. In the closed configuration, the angle a formed between the two portions <b>111</b>, <b>113</b> is reduced relative to the open configuration. In one embodiment, the angle a is 0 degrees in the closed position such that the two portions <b>111</b> and <b>113</b> are pressed against one another. The collapsible member <b>116</b> further includes a first tab <b>115</b> coupling the collapsible member <b>116</b> to the first jaw <b>110</b> and a second tab <b>117</b> coupling the collapsible member <b>116</b> to the second jaw <b>112</b>. The first and second jaws <b>110</b> and <b>112</b> include first and second slots <b>140</b>, <b>142</b> configured to receive the first and second tabs <b>115</b> and <b>117</b>, therein. The collapsible member <b>116</b> may be permanently attached to the first and second jaws <b>110</b>, <b>112</b> using an adhesive or any other attachment means known in the art.</p>
+      <p id="p-00068-en" num="0068">Generally, the clips <b>106</b> may remain in the open, expanded configuration when housed within the lumen <b>101</b> of the insertion member <b>102</b>. In the expanded configuration, the jaws <b>110</b>, <b>112</b> of clips <b>106</b>, are separated from one another by a distance substantially equal to the length of the collapsible member <b>116</b>.</p>
+      <p id="p-00069-en" num="0069">The clip <b>106</b> further includes a locking member <b>118</b> extending from an inner surface of the first jaw <b>110</b> toward the second jaw <b>112</b>. The locking member <b>118</b> in this embodiment is a rod <b>119</b> extending proximally from a first end coupled to the first jaw <b>110</b> to a free end with a locking arm <b>121</b> extending away therefrom at an angle. The rod <b>119</b> in this embodiment is substantially parallel to a longitudinal axis of the control wire <b>104</b> while the locking arm <b>121</b> extends away from the free end as an extension angled downward relative to the rod <b>119</b> and forming an acute angle therewith. In an operative configuration, the first jaw <b>110</b> is drawn toward the second jaw <b>112</b> and, as the locking member <b>118</b> passes through the opening <b>108</b>, the locking arm <b>121</b> engages a wall <b>144</b> at the opening <b>108</b>. The wall <b>108</b> is angled so that, as the locking member <b>118</b> slides thereover, the locking member <b>118</b> is deflected upward. Once the locking arm <b>121</b> has passed proximally beyond the wall <b>144</b>, a biasing force causes the locking member <b>118</b> to deflect downward to its original configuration. In this position, the locking arm <b>121</b> lockingly engages a proximal wall of the second jaw <b>112</b> locking the first and second jaws <b>110</b>, <b>112</b> together in the locked configuration. As would be understood by those skilled in the art, the locking member <b>118</b> is formed of a material that is substantially flexible so that the locking member <b>118</b> is capable of deflecting over the wall <b>108</b> without fracturing. Alternatively, the locking member <b>118</b> may include a predetermined structure, such as a bend that can be deflected upon meeting the second jaw <b>112</b>, such that the two jaws <b>110</b> and <b>112</b> can be engaged in the locked state.</p>
+      <p id="p-00070-en" num="0070">In accordance with an exemplary method, the insertion device <b>102</b> is loaded with a predetermined number of clips <b>106</b> corresponding to the requirements of a particular procedure. The insertion device <b>102</b> is then advanced to a target site in the body. Once the target location is reached, the control wire <b>104</b> and hypotube (not shown) are advanced distally to effect a corresponding distal advancement of the clips <b>106</b> until a distal-most one of the clips <b>106</b> exits the lumen <b>101</b> facing the target tissue site. Specifically, the control wire <b>104</b> includes first and second enlarged portions <b>128</b>, <b>129</b> provided thereon, the enlarged portions having substantially spherical shapes although other shapes are envisioned within the scope of the disclosure. As the control wire <b>104</b> is advanced distally, engagement of the second enlarged portion <b>129</b> with the opening <b>114</b> causes the second jaw <b>112</b> to move distally. In another embodiment, the hypotube (not shown) may be advanced distally to cause a corresponding distal movement of the clips <b>106</b>, wherein distal advancement of the hypotube causes a corresponding distal advancement of the control wire <b>104</b>. As the distal-most clip <b>106</b> exits the lumen <b>101</b>, the collapsible member <b>116</b> remains in the open configuration so that the first and second portions <b>111</b>, <b>113</b> enclose an angle of approximately 180 degrees. Once the clip <b>106</b> has been moved to a desired position (e.g., under visual guidance), target tissue is drawn into the space between the first and second jaws <b>110</b>, <b>112</b> using graspers or any mechanism known in the art. The control wire <b>104</b> is then retracted proximally to draw the first enlarged portion <b>128</b> proximally to exert a proximally directed force on the first jaw <b>110</b>, moving the first jaw <b>110</b> proximally toward the second jaw <b>112</b>. As the first jaw <b>110</b> moves proximally, the first and second portions <b>111</b>, <b>113</b> bend about the joint <b>109</b> so that the angle a begins to approach 0 degrees. Continued retraction of the control wire <b>104</b> causes the locking member <b>118</b> to penetrate the target tissue and advance toward the opening <b>108</b> until the locking arm <b>121</b> extends proximally past the wall <b>144</b> and locks the first and second jaws <b>110</b>, <b>112</b> in a locked configuration with the target tissue lockingly received between the jaws <b>110</b>, <b>112</b>. In this position, contact between the first and second portions <b>111</b>, <b>113</b> of the collapsible member <b>116</b> prevents the first jaw <b>110</b> from moving further proximally toward the second jaw <b>112</b>. Furthermore, the increased profile of the bent collapsible member <b>116</b> prevents the clip <b>106</b> from being retracted back into the insertion member <b>102</b>. As the control wire <b>104</b> is retracted further proximally, a force exerted by the first enlarged portion <b>128</b> against the material surrounding opening <b>114</b> increases until a threshold level is exceeded. At this point, the first enlarged portion <b>128</b> is forced through the opening <b>114</b> and drawn proximally away from the first jaw <b>110</b>. Continued proximal withdrawal of the control wire <b>104</b> now exerts an increasing force against the material surrounding the opening <b>114</b> of the second jaw <b>112</b> to separate the clip <b>106</b> from the control wire <b>104</b>. This process may then be repeated as necessary to deploy any number of clips <b>106</b> within the body using the same insertion member <b>102</b> and control wire <b>104</b>. Although the illustrated embodiment shows only two clips <b>106</b>, it should be understood that any number of clips <b>106</b> can be employed including, but not limited to, three, four, five, six, and so forth. In fact, some embodiments only include a single clip <b>106</b>, even though the above structure lends itself to multiple clips <b>106</b>.</p>
+      <p id="p-00071-en" num="0071">Since the clipping device <b>100</b> is capable of passing multiple clips <b>106</b> through the insertion member <b>102</b>, the clipping device <b>100</b> may be suited for treating larger tissue wounds. For example, a distal-most clip <b>106</b> may be deployed at a first end of the tissue wound, the first and second jaws <b>110</b>, <b>112</b> grasping tissue along opposing edges of the tissue wound in the open configuration. The first clip <b>106</b> may then be moved to the closed configuration to draw the tissue along opposing edges toward one another. Subsequent clips <b>106</b> may be deployed along a length of the tissue wound in a similar manner, until the entire tissue wound is closed.</p>
+      <p id="p-00072-en" num="0072">
+        <figref>FIG. 2</figref> illustrates another exemplary clipping device <b>200</b>. As shown, the clipping device <b>200</b> includes a clip <b>206</b> that is inserted into the body using an endoscope <b>202</b>. However, any other suitable insertion member, such as an introduction sheath, cannula, and so forth may also be employed to introduce the clip <b>206</b> into the body.</p>
+      <p id="p-00073-en" num="0073">The endoscope <b>202</b> may receive one or more clips, such as the clip <b>206</b> in its working channel <b>204</b>. Although not referenced, the endoscope may have multiple working channels each having a similar form and function as that of the working channel <b>204</b>. In the illustrated embodiment, the clip <b>206</b> includes a first jaw <b>208</b> and a second jaw <b>210</b> coupled to one another via a collapsible member <b>212</b>. Each of the first and second jaws <b>208</b> and <b>210</b> defines an opening <b>216</b>, <b>217</b> through which a control wire <b>220</b> passes. The control wire <b>220</b> includes an enlarged distal end <b>218</b> that prevents any inadvertent dislodgement of the clip <b>206</b>. Whereas the locking arm <b>121</b> of the clip <b>106</b> extended away from the was bent away from the locking member <b>118</b> toward the collapsible member <b>116</b>, a locking member <b>214</b> of the clip <b>206</b> includes a locking arm <b>216</b> bent toward tips <b>122</b>, <b>124</b>, <b>126</b>. When moved to the locking configuration, the locking member <b>214</b> enters the opening <b>217</b> and bends away from the edge of the opening until the end thereof passes this edge. That is, the opening <b>217</b> is sized to permit insertion of the locking member <b>214</b> thereinto without interfering with slidable movement of the control wire <b>220</b>. At this point, the locking member <b>214</b> straightens to its original shape and the locking arm <b>216</b> locks the first jaw <b>208</b> to the second jaw <b>210</b>.</p>
+      <p id="p-00074-en" num="0074">It should be understood that the components of the clip <b>206</b>, as discussed above, are similar in form and function to the components of clip <b>106</b> of <figref>FIG. 1</figref>. However, for the purpose of clarity and brevity, the components of the clip <b>206</b> are labeled differently.</p>
+      <p id="p-00075-en" num="0075">
+        <figref>FIG. 3</figref> depicts a device <b>300</b> according to another embodiment of the disclosure. The device <b>300</b> is substantially similar to the device <b>100</b>, wherein like elements have been referenced with like reference numerals, except as noted below. Specifically, whereas the control wire <b>104</b> includes an enlarged substantially spherical abutment <b>128</b> at a distal end thereof, a control wire <b>304</b> of the device <b>300</b> includes a disc-shaped abutment <b>328</b> formed to engage a circular opening <b>314</b> in a first jaw <b>310</b>. The disc-shaped abutment <b>328</b> includes a first linearly tapered wall <b>330</b> extending from an outer wall of the control wire <b>304</b> to a maximum diameter region <b>332</b>. The abutment <b>328</b> also includes a curved tapered wall <b>334</b> extending to an apex at a distalmost end thereof. The opening <b>314</b> is formed as a circular cutout extending through the first jaw <b>310</b> and including a plurality of slots <b>316</b> extending radially thereoutof through the first jaw <b>310</b>. A curved wall <b>318</b> leads into the opening <b>314</b> from a distal end thereof, a curvature of the curved wall <b>318</b> being selected to seat the abutment <b>328</b> flush therein in an operative configuration.</p>
+      <p id="p-00076-en" num="0076">In an operative configuration, the abutment <b>328</b> is positioned distally of the opening <b>314</b> in the same manner disclosed above with respect to the device <b>100</b>. When it is desired to bring the first jaw <b>310</b> proximally toward the second jaw <b>112</b>, the control wire <b>304</b> is retracted proximally to cause a corresponding proximal retraction of the first jaw <b>310</b> until the locking member <b>118</b> (not depicted in <figref>FIG. 3</figref>) lockingly engages the second jaw <b>112</b>. Further proximal retraction of the control wire <b>304</b> causes the abutment <b>328</b> to exert a pressure on the opening <b>314</b>. Once this pressure exceeds a predetermined threshold value, the slots <b>316</b> are radially compressed to temporarily increase a diameter of the opening <b>314</b> and permit the abutment <b>328</b> to be separated therefrom.</p>
+      <p id="p-00077-en" num="0077">
+        <figref>FIG. 4</figref> depicts a device <b>400</b> according to another embodiment of the disclosure. The device <b>400</b> is substantially similar to the device <b>100</b>, wherein like elements have been referenced with like reference numerals, except as noted below. Specifically, <figref>FIG. 4</figref> depicts yet another attachment mechanism removably coupling a control wire <b>404</b> to a first jaw <b>410</b>. The control wire <b>404</b> extends to an abutment <b>428</b> at a distal end thereof, the abutment <b>428</b> formed as a projection having a rectangular cross-section. The first jaw <b>410</b> includes an opening <b>414</b> extending therethrough. The opening <b>414</b> has a rectangular shape corresponding to the rectangular shape of the abutment <b>428</b> and <b>410</b> further comprises a recessed portion <b>416</b> extending thereinto from a distal surface <b>411</b> thereof by a distance less than a thickness of the first jaw <b>410</b>. In one embodiment, a depth of the recessed portion <b>416</b> is substantially equivalent to a thickness of the abutment <b>428</b> so that the abutment <b>428</b> may be seated flush therein in an operative configuration. In another embodiment, the depth of the recessed portion <b>416</b> may be smaller than a thickness of the abutment <b>428</b>. The recessed portion <b>416</b> is centered relative to the opening <b>414</b> and is oriented to extend perpendicular to the opening <b>414</b>. It is noted that this orientation is exemplary only and that any other angular orientation of the recessed portion <b>416</b> relative to the opening <b>414</b> is envisioned within the scope of the disclosure. Similar to the opening <b>414</b>, the recessed portion <b>416</b> has a rectangular cross-section to correspond to the rectangular shape of the abutment <b>428</b>.</p>
+      <p id="p-00078-en" num="0078">In an operative configuration, the abutment <b>428</b> is positioned distally of the opening <b>414</b> in the same manner disclosed above with respect to the device <b>100</b> such that the abutment is seated within the recessed portion <b>416</b>. When it is desired to bring the first jaw <b>410</b> proximally toward the second jaw <b>112</b>, the control wire <b>404</b> is retracted proximally to cause a corresponding proximal retraction of the first jaw <b>410</b> until the locking member <b>118</b> (not depicted in <figref>FIG. 4</figref>) lockingly engages the second jaw <b>112</b> as described in regard to the previous embodiments. One the first and second jaws <b>410</b>, <b>112</b> are locked relative to one another, the control wire <b>404</b> is advanced distally a short distance to move the abutment <b>428</b> distally out of the recessed portion <b>416</b>. The control wire <b>404</b> is then rotated 90° to align the abutment <b>428</b> with the opening <b>414</b>. Once aligned, the control wire <b>404</b> is retracted proximally through the opening <b>141</b> to disengage the first jaw <b>410</b>. The second jaw (not shown) of the device <b>400</b> may include an opening (not shown) sized to permit the abutment <b>428</b> to be retracted proximally therefrom, the opening (not shown) being aligned, for example, with the opening <b>414</b> so that the control wire <b>404</b> does not need to be rotated to disengage the second jaw. It is noted that although the abutment <b>428</b> is rectangular, any other polygonal shape is envisioned within the scope of the disclosure such that the abutment <b>428</b> is capable of engaging the first jaw <b>410</b> in the above-disclosed manner.</p>
+      <p id="p-00079-en" num="0079">As shown in <figref>FIG. 5</figref> a device <b>500</b> according to yet another embodiment of the disclosure, is substantially similar to the device <b>100</b> except as noted below. The exemplary embodiment of <figref>FIG. 5</figref> omits the need for a locking member <b>118</b> on the first jaw and instead, employs a ratchet mechanism to lock a clip <b>506</b> in a closed configuration. The device <b>500</b> includes first and second jaws <b>510</b>, <b>512</b> connected to one another by a ratchet member <b>516</b>. The ratchet member <b>516</b> extends from a proximal end <b>518</b> permanently attached the second jaw <b>512</b> to a distal end <b>520</b>. A first side wall <b>522</b> of the ratchet member <b>516</b> includes one or more first protrusions <b>524</b> extending therefrom and a second side wall <b>526</b> includes one or more second protrusions <b>528</b> extending therefrom. The first and second protrusions <b>524</b>, <b>528</b> include angled walls formed to engage in a ratcheting manner an opening <b>530</b> extending through the first jaw <b>510</b>, as will be described in greater detail hereinafter. The opening <b>530</b> has a rectangular cross-section conforming to the shape of the ratchet member <b>516</b> although other shapes are envisioned within the scope of the disclosure (e.g., square, oblong, etc.).</p>
+      <p id="p-00080-en" num="0080">In an operative configuration, the device <b>500</b> is inserted through an endoscope to a target tissue site in the same manner disclosed above with respect to the device <b>100</b>. As also disclosed above, a hypotube (not shown) or a control wire <b>104</b> is then advanced distally to move clip out of the endoscope. Once properly positioned, the control wire <b>104</b> or hypotube is retracted proximally to move the first jaw <b>510</b> proximally toward the second jaw <b>512</b>. As the first jaw <b>510</b> slides proximally, the opening <b>530</b> ratchets over the first and second protrusions <b>524</b>, <b>528</b> of the ratchet member <b>516</b>. As those skilled in the art will understand, the ratchet mechanism <b>516</b> allows movement of the first jaw <b>510</b> in only one direction. Accordingly, once the first jaw <b>510</b> has moved proximally of any of the first and second protrusions <b>524</b>, <b>528</b>, the first jaw <b>510</b> is prevented from returning to a position distal thereof due to engagement of a wall (not shown) of the opening <b>530</b> with a wall (not shown) of the first and second protrusions <b>524</b>, <b>528</b>. The control wire <b>104</b> or hypotube is moved proximally until engagement of the first jaw <b>510</b> with the second jaw <b>512</b> prevents further proximal movement thereof. In this position, further proximal retraction of the control wire <b>504</b> or hypotube causes the abutment <b>128</b> to disengage from the opening <b>114</b> as disclosed in greater detail earlier.</p>
+      <p id="p-00081-en" num="0081">In another embodiment, the device <b>500</b> may be formed so that the ratchet member <b>516</b> engages in a ratcheting manner an opening extending through the second jaw <b>512</b> instead of the first jaw <b>510</b>.</p>
+      <p id="p-00082-en" num="0082">As shown in <figref>FIG. 6</figref>, a device <b>600</b> according to another embodiment of the disclosure is substantially similarly to the device <b>100</b> except as noted below. The device <b>600</b> includes first and second jaws <b>610</b>, <b>612</b>. The first jaw <b>610</b> includes a base portion <b>622</b> and a body portion <b>624</b> rotatably connected to one another by a pivot pin <b>626</b>, with the body portion <b>624</b> extending to a first tissue gripping tip <b>122</b>. A lower surface of the first jaw <b>610</b> includes a notch <b>628</b>, whose purpose will be described in greater detail later on. The second jaw <b>612</b> extends from a body <b>614</b> to a second tissue gripping tip <b>616</b>. The body <b>614</b> is formed of a material having elastic properties permitting the second jaw <b>612</b> to be folded about an apex <b>618</b> during insertion thereof through a working channel of an endoscope. In another embodiment, the second jaw <b>612</b> may be formed with a base and body rotatable about a pivot point as with the first jaw <b>610</b>. In yet another embodiment, both the first and second jaws <b>610</b>, <b>612</b> may be formed with a solid construction and formed of an elastic material as disclosed above. The second jaw <b>612</b> also includes an opening <b>620</b> extending therethrough to slidably receive a cross-bar <b>630</b> therethrough, as will be described in greater detail below. A lower surface of the second jaw <b>612</b> includes a rail <b>617</b> having an angled protrusion <b>619</b> formed to lockingly engage the notch <b>628</b> in an operative configuration.</p>
+      <p id="p-00083-en" num="0083">The cross-bar <b>630</b> extends from a distal end <b>632</b> permanently attached to the first jaw <b>610</b> to a proximal end (not shown) accessible to a physician or other user. In one embodiment, the proximal end (not shown) may be coupled to an actuation mechanism controlling movement of the cross-bar <b>630</b> through the endoscope (not shown). It is noted that although the cross-bar <b>630</b> is depicted with a rectangular cross-section, other cross-sectional shapes are envisioned within the scope of the disclosure including, but not limited to, circular, oval, oblong, square, etc. The cross-bar <b>630</b> includes a break point <b>634</b> formed as a reduced diameter portion thereof. In an insertion configuration, the break point <b>634</b> is seated between the first and second jaws <b>610</b>, <b>612</b>, as shown in <figref>FIG. 6</figref>. In a deployed configuration, the break point <b>634</b> is positioned proximally of the second jaw <b>612</b> so that, when the cross-bar <b>630</b> is broken at the break point <b>634</b>, clip <b>606</b> is deployed in the body.</p>
+      <p id="p-00084-en" num="0084">In an operative configuration, the clip <b>606</b> is inserted into a working channel of an endoscope (not shown). Walls of the working channel compress the first and second jaws <b>610</b>, <b>612</b> to a reduced profile. This configuration bypasses the need for a larger diameter endoscope while still providing a clips jaws <b>610</b>, <b>612</b> having a length sufficient to ensure that target tissue region is captured therebetween. The clip is advanced out of the endoscope to a desired position.</p>
+      <p id="p-00085-en" num="0085">When properly positioned, the control bar <b>630</b> is retracted proximally so the first jaw <b>610</b> moves proximally toward the second jaw <b>610</b>. As the first jaw moves proximally, the rail <b>617</b> slides below the first jaw such that the angled protrusion <b>619</b> lockingly engages the notch <b>628</b>. The endoscope (not shown) is then rotated or angled to cause the cross-bar <b>630</b> to fracture at the break point <b>634</b>. Thus, a portion of the cross-bar <b>630</b> located distally of the break point <b>634</b> remains coupled to the clip <b>606</b> while a proximal portion thereof is withdrawn from the body through the endoscope.</p>
+      <p id="p-00086-en" num="0086">
+        <figref>FIG. 7</figref> depicts a device <b>700</b> according to yet another embodiment, the device <b>700</b> being formed substantially similar to the device <b>600</b>, wherein like elements are referenced with like reference numerals, except as noted below. Whereas the cross-bar <b>630</b> of the device <b>600</b> is permanently attached to the first jaw <b>610</b> at a distal end <b>632</b>, the cross-bar <b>730</b> of the device <b>700</b> is removably attached to a first jaw <b>710</b>. Specifically, the cross-bar <b>730</b> is connected to the first jaw <b>710</b> via a friction fit mechanism although other temporary attachment mechanisms are envisioned within the scope of the disclosure. The first and second jaws <b>710</b>, <b>712</b> further including openings <b>114</b> extending therethrough to slidably receive the control wire <b>104</b> therethrough.</p>
+      <p id="p-00087-en" num="0087">In an operative configuration, as clip <b>706</b> is slid out of an endoscope <b>102</b>, the first and second jaws <b>710</b>, <b>712</b> expand to a biased expanded configuration. The device is positioned in a target position relative to target tissue and the control wire <b>104</b> is retracted proximally to cause a corresponding proximal retraction of the first jaw <b>710</b>. The first jaw <b>710</b> moves proximally until the angled protrusion <b>619</b> lockingly engages the notch <b>628</b>. Further proximal retraction of the control wire <b>104</b> causes the abutment <b>128</b> to disengage the opening <b>114</b>. The cross-bar <b>730</b> is then retracted proximally to cause a disengagement thereof from the first jaw <b>710</b>. The cross-bar <b>730</b> is then retracted until the distal end <b>732</b> thereof is seated within an opening (not shown) extending through a second clip <b>706</b> positioned in the endoscope <b>102</b>. It is noted that although the method is described with a separate disengagement of the control wire and cross-bar <b>730</b> from the first jaw <b>710</b>, an alternate method may be directed to the simultaneous disengagement thereof. Specifically, once the clip <b>706</b> has been moved to the locked configuration, the control wire <b>104</b> and cross-bar <b>730</b> may be simultaneously retracted proximally to cause a simultaneous disengagement thereof from the clip <b>706</b>. The exemplary device <b>700</b> permits the deployment of multiple clips <b>706</b> in a single procedure.</p>
+      <p id="p-00088-en" num="0088">In another embodiment, as shown in <figref>FIGS. 8-15</figref>, a clipping device <b>800</b> is substantially similar to the clipping device <b>100</b>-<b>700</b> described above except as noted below. As described above in regard to the device <b>100</b>, one or more clips <b>806</b> may be passed through an insertion member <b>802</b> for treating, for example, a tissue opening. The clip <b>806</b> comprises a first jaw <b>810</b> and a second jaw <b>812</b> coupled to each other via a collapsible member <b>816</b>. The collapsible member <b>816</b> is movable between a biased open configuration, in which the collapsible member <b>816</b> extends along a substantially straight line, and a closed configuration, in which the collapsible member <b>816</b> bends at three bending points <b>850</b>, <b>852</b>, <b>854</b> to draw the first and second jaws <b>810</b>, <b>812</b> toward one another to grip a tissue therebetween. Each of the first and second jaws <b>810</b>, <b>812</b> includes an axially aligned opening <b>814</b> for receiving a control wire <b>804</b>, substantially as described above in regard to the device <b>100</b>.</p>
+      <p id="p-00089-en" num="0089">As shown in <figref>FIGS. 9-11</figref>, the collapsible member <b>816</b> includes at least three bending points—the first bending point <b>850</b> proximate the first jaw <b>810</b>, a second bending point <b>852</b> proximate the second jaw <b>812</b> and a third bending point <b>854</b> at a joint <b>809</b> between first and second portions <b>811</b>, <b>813</b> of the collapsible member. Thus, when collapsible member <b>816</b> is moved from the open position toward the closed position, the collapsible member <b>816</b> is bent at each of these bending points <b>850</b>, <b>852</b>, <b>854</b>, moving the first and second jaws <b>810</b>, <b>812</b> toward one another to grip tissue therebetween. As described above in regard to the clipping device <b>100</b>, an angle at the third bending point <b>854</b> between the first and second portions <b>811</b>, <b>813</b> of the collapsible member <b>816</b> may be approximately 180 degrees in the open configuration. When the collapsible member <b>816</b> is moved to the closed configuration, however, the angle between the first and second portions <b>811</b>, <b>813</b> approaches 0 degrees, as shown in <figref>FIG. 11</figref>. While the angle at the bending point <b>854</b> may approach 0 degrees when the clip <b>106</b> is moved toward the closed position, the angles at the first and second bending points <b>850</b>, <b>852</b> may approach 90 degrees. The collapsible member <b>816</b> along these bending points <b>850</b>, <b>852</b>, <b>854</b> may be thinned, for example, to approximately half the width of a remaining portion of the collapsible member <b>816</b>. The thinned sections act as a hinge, permitting the collapsible member <b>816</b> to bend at these points. The bending points <b>850</b>, <b>852</b>, <b>854</b> may also be thinned to promote bending of the collapsible member <b>816</b> in a particular direction.</p>
+      <p id="p-00090-en" num="0090">The clip <b>806</b>, however, comprises a locking mechanism <b>818</b> including a pair of arms <b>819</b> extending from the first jaw <b>810</b> toward the second jaw <b>812</b>, on opposing sides of the opening <b>814</b> extending therethrough. Each of the arms <b>819</b> extends from a first end <b>856</b> connected to a lateral surface of the first jaw <b>810</b> to a second end <b>858</b> extending proximally toward the second jaw <b>812</b>. The second end <b>858</b> includes a tab <b>821</b> extending radially inward to engage a corresponding notch <b>844</b> of the second jaw <b>812</b>. The second jaw <b>812</b> includes corresponding receiving notches <b>844</b> extending along lateral sides thereof so that, when the clip <b>806</b> is moved from the open configuration to the closed configuration, the tab <b>821</b> of each of the arms <b>819</b> engages a corresponding one of the notches <b>844</b>. The receiving notches <b>844</b> extend longitudinally along lateral surfaces <b>845</b> thereof. A position of the receiving notches <b>844</b> along the lateral surfaces corresponds to a position of the arms <b>819</b> so that, when the collapsible member <b>816</b> is closed with the first and second jaws <b>810</b>, <b>812</b> adjacent to one another, the tab <b>821</b> of each of the arms <b>819</b> engages a corresponding one of the receiving notches <b>844</b>. The receiving notches <b>844</b> may include a chamfered surface <b>860</b> so that, when the tab <b>821</b> slides therealong, the pair of arms <b>819</b> engages the chamfered surface to be deflected radially outwardly. Once the tab <b>821</b> has passed proximally beyond the chamfered surface <b>860</b>, a biasing force causes each of the arms <b>819</b> to deflect radially inward toward its original configuration. In this position, the tab <b>821</b> of each of the arms <b>819</b> engages a proximal wall of the second jaw <b>812</b>, locking the first and second jaws <b>810</b>, <b>812</b> in the closed configuration.</p>
+      <p id="p-00091-en" num="0091">The first jaw <b>810</b> may also include a pair of distal notches <b>862</b> in a distal face <b>864</b> thereof, on opposing sides of the opening <b>814</b> so that when the locking mechanism <b>818</b> is moved toward the closed configuration, the tabs <b>821</b> of the arms <b>819</b> are received within the distal notches <b>862</b> of an immediately proximal clip <b>806</b>, as shown in <figref>FIG. 12</figref>. The distal notches <b>862</b> are thus sized and shaped to permit arms <b>819</b> of an adjacent clip to be received therein, in the biased radially inward position. The distal face <b>864</b> may also include an overhang <b>866</b> extending distally therefrom to maintain adjacent clips <b>806</b> in alignment with one another and prevent rotation of a distal-most clip <b>806</b> about the control wire <b>804</b>. In particular arms <b>819</b> of a distal-most clip <b>806</b><i>a </i>in the closed position is engaged via an overhang <b>866</b><i>b </i>of an immediately proximal clip <b>806</b><i>b </i>and received in distal notches <b>864</b><i>b </i>of the immediately proximal clip <b>806</b><i>b </i>to maintain an alignment therebetween.</p>
+      <p id="p-00092-en" num="0092">Although the clip <b>806</b> is described as having arms <b>819</b> extending proximally from the first jaw <b>810</b> to engage receiving notches <b>844</b> of the second jaw <b>812</b>, in another embodiment, arms may similarly extend distally from the second jaw <b>812</b> to engage receiving notches formed in the first jaw <b>810</b>. It will be understood that distal notches would not be required in this embodiment.</p>
+      <p id="p-00093-en" num="0093">The clip <b>806</b> may be deployed from the insertion member <b>802</b> in a manner substantially similar to the device <b>100</b>. In another embodiment, however, the control wire <b>804</b> includes a single enlarged portion <b>828</b> at a distal end thereof. The enlarged portion <b>828</b> engages the opening <b>814</b> of the first jaw <b>810</b> of a distal-most clip <b>806</b>. The control wire <b>804</b> may also include a bend along a portion of a length thereof positioned along the control wire <b>804</b> so that, when the distal-most clip <b>806</b><i>a </i>is moved distally beyond a distal end <b>803</b> of the insertion member <b>802</b>, the distal-most clip <b>806</b> is slightly angled with respect to the immediately proximal-clip <b>806</b><i>b, </i>as shown in <figref>FIG. 13</figref>. Thus, even when the insertion member <b>802</b> is inserted into a living body at an angle relative to a tissue opening to be treated, the distal-most clip <b>806</b><i>a </i>may be placed to move parallel to a surface of the tissue. Since the distal-most clip <b>806</b> is permitted to move parallel to the tissue surface, the first and second jaws <b>810</b>, <b>812</b> may more properly grasp the opposing sides of the tissue wound.</p>
+      <p id="p-00094-en" num="0094">As shown in <figref>FIGS. 14-15</figref>, the opening <b>814</b> of the first jaw <b>810</b> includes panels <b>868</b> extending radially thereinto to for engaging the enlarged portion <b>828</b> of the control wire <b>804</b>. The panels <b>868</b> are designed to flex when a predetermined threshold force is exerted thereon via the enlarged portion <b>828</b>. In this embodiment, the enlarged portion <b>828</b> is positioned distally of the panels <b>868</b>. The panels <b>868</b> have a rigidity selected to be sufficient to support the first jaw <b>810</b> as a plurality of clips <b>806</b> housed within the insertion lumen <b>802</b> are moved distally relative thereto to move the distal-most clip <b>806</b><i>a </i>distally beyond the distal end <b>803</b> of the insertion member <b>802</b>. Once the distal-most clip <b>806</b><i>a </i>has been positioned over a tissue opening to be treated (e.g., with the first jaw <b>810</b> along a first edge of the tissue opening and the second jaw <b>812</b> along a second edge of the tissue opening substantially opposing the first edge), the control wire <b>804</b> may be drawn proximally draw the first jaw <b>810</b> toward the second jaw <b>812</b> toward the closed configuration. The predetermined threshold force required to flex the panels <b>868</b> is selected to be greater than a force required to draw the clip <b>806</b> to the closed configuration. Once the jaws <b>810</b>, <b>812</b> have been locked via the locking mechanism <b>818</b> as described above, the control wire <b>804</b> may be moved further proximally relative to the clips <b>806</b> until the panels <b>868</b> give way to the proximal force exerted thereon via the enlarged portion <b>828</b>, releasing the enlarged portion <b>828</b> and permitting the distal-most clip <b>806</b><i>a </i>to be deployed. The control wire <b>804</b> is moved proximally until the enlarged portion engages the panels <b>868</b> of the immediately proximal clip <b>806</b><i>b. </i></p>
+      <p id="p-00095-en" num="0095">In another embodiment, rather than flexing to permit the enlarged portion <b>828</b> to be passed therebetween, releasing the enlarged portion <b>828</b> from the distal-most clip <b>806</b><i>a, </i>the panels <b>868</b> may be designed to snap off or crush under a predetermined threshold force. Substantially similarly to the embodiment described above, this predetermined threshold force is selected to be greater than the force required to move the first jaw <b>810</b> toward the second jaw <b>812</b> and lock the clip <b>806</b> in the closed configuration. Once the distal-most clip <b>806</b><i>a </i>has been locked in the closed configuration, the control wire <b>804</b> may be moved further proximally, exerting an additional proximal force on the panels <b>868</b> until the panels <b>868</b> are broken or crushed, deploying the distal-most clip <b>806</b><i>a </i>and permitting the enlarged portion <b>828</b> to engage the panels <b>868</b> of the immediately proximal clip <b>806</b><i>b. </i></p>
+      <p id="p-00096-en" num="0096">In a further embodiment, as shown in <figref>FIGS. 16-17</figref>, a first jaw <b>810</b>′ may include a first set of panels <b>868</b>′ and a second set of panels <b>870</b>′ extending radially into an opening <b>814</b>′ thereof. The first set of panels <b>868</b>′ may be positioned proximally of the second set of panels <b>870</b>′ so that an enlarged portion <b>828</b>′ of a control wire <b>804</b>′ is positionable therebetween. Substantially similarly to the clip <b>806</b> described above, the first set of panels <b>868</b>′ may be configured to break, snap off or be crushed under a first predetermined threshold pressure. This first predetermined threshold pressure is selected to be greater than the pressure required to close and lock the clip <b>806</b>′. The second set of panels <b>870</b>′ may be configured to flex under a second predetermined threshold force. This second predetermined threshold force permits the enlarged portion <b>828</b>′ to be passed proximally therethrough to be housed between the first and second sets of panels <b>868</b>′, <b>870</b>′ while preventing the enlarged portion <b>828</b>′ from moving distally therepast while moving a distal-most clip <b>806</b>′ distally past a distal end of an insertion member.</p>
+      <p id="p-00097-en" num="0097">As shown in <figref>FIGS. 18-19</figref>, a clip <b>906</b> according to another exemplary embodiment of the present disclosure is also substantially similar to the clips <b>106</b>-<b>806</b> described above except as noted below. The clip <b>906</b> comprises a first jaw <b>910</b> and a second jaw <b>912</b> connected to another and movable relative to one another between an open configuration and a closed configuration via a collapsible member <b>916</b>. A locking mechanism <b>918</b> that locks the first and second jaws <b>918</b> in the closed configuration, however, includes a tubular rod <b>919</b> extending proximally from a proximal face of the first jaw <b>910</b>, a channel <b>920</b> extending longitudinally through the rod <b>919</b> in axial alignment with openings <b>914</b> extending through the first and second jaws <b>910</b>, <b>912</b>. Thus, when the clip <b>906</b> is moved toward the closed configuration, the tubular rod <b>919</b> is received within the opening <b>914</b> of the second jaw <b>912</b>. The channel <b>920</b> is sized to slidably accommodate a control wire (e.g., control wire <b>104</b> or <b>804</b> from either of the devices <b>100</b>, <b>800</b> described above) therein.</p>
+      <p id="p-00098-en" num="0098">The tubular rod <b>919</b> includes a pair of longitudinal slots <b>923</b> extending therealong and diametrically opposing one another separating the tubular rod <b>919</b> into first and second portions <b>960</b>, <b>962</b> that are deflectable toward one another to be received through the opening <b>914</b> of the second jaw <b>912</b>. An exterior surface <b>964</b> of the tubular rod <b>919</b> may include a ridge <b>921</b> protruding therefrom to engage a proximal wall of the second jaw <b>912</b> upon being passed proximally through the opening <b>914</b> thereof. In another exemplary embodiment, the tubular rod <b>919</b> includes a plurality of ridges <b>921</b>, which may be evenly spaced relative to one another, to allow different levels of closure of the clip <b>806</b>, depending one the amount of tissue gripped between the first and second jaws <b>910</b>, <b>912</b>. The ridges <b>921</b> may be shaped so that the tubular rod <b>919</b> is slidable through the opening <b>914</b> of the second jaw <b>912</b> in a proximal direction but, once one of the ridges <b>921</b> is moved proximally therebeyond to engage a proximal wall of the second jaw <b>912</b>, the tubular member <b>919</b> is prevented from moving distally relative to the second jaw <b>912</b>. The opening <b>914</b> extending through the second jaw <b>912</b> are specifically sized and shaped to accommodate the tubular rod <b>919</b>. For example, the opening <b>914</b> may include a pair of diametrically opposed grooves extending therealong for receiving the ridges first and second portions <b>960</b>, <b>962</b> along with the control wire.</p>
+      <p id="p-00099-en" num="0099">According to an exemplary method using the clip <b>906</b>, once the clip <b>906</b> is located so that a desired portion of tissue is positioned between the first and second jaws <b>910</b>, <b>912</b>, the clip <b>906</b> is moved to the closed configuration via the control wire. As the first and second jaws <b>910</b>, <b>912</b> are moved toward one another, a proximal end <b>958</b> of the tubular rod <b>919</b> enters the opening <b>914</b> of the second jaw <b>912</b>, the first and second portions <b>960</b>, <b>962</b> portions deflecting radially inward as the ridges <b>921</b> are received within the opening <b>914</b>. Once a desired one of the ridges <b>921</b> extends proximally past the opening <b>914</b>, the first and second portions <b>960</b>, <b>962</b> revert to their original biased configuration relative to one another so that the desired one of the ridges extends proximally beyond the opening <b>914</b> to engage the proximal wall of the second jaw <b>912</b>. Although the tubular rod <b>919</b> is shown and described as extending proximally from the first jaw <b>910</b> to be received within the second jaw <b>912</b>, it will be understood by those of skill in the art that the tubular rod <b>919</b> may similarly extend distally from the second jaw <b>912</b> to be distally received within an opening of the first jaw <b>910</b>.</p>
+      <p id="p-00100-en" num="0100">As shown in <figref>FIGS. 20-21</figref>, a clip <b>1006</b> according to another exemplary embodiment of the present disclosure is substantially similar to the clip <b>906</b> described above except as described below. The clip <b>1006</b> comprises a first jaw <b>1010</b> and a second <b>1012</b> connected to one another via a collapsible member <b>1016</b> for moving the clip <b>1006</b> between an open and a closed configuration. A locking mechanism <b>1018</b> of the clip <b>1006</b> includes a tubular rod <b>1019</b> substantially similar to the tubular rod <b>919</b> described in regard to the clip <b>906</b>. Rather than ridges engaging a proximal wall of the second jaw <b>1012</b>, however, the locking mechanism <b>1018</b> further includes a flexible member <b>1044</b> extending inward from a surface of the opening <b>1014</b>. The flexible member <b>1044</b> is biased radially inward but is deformable as protrusions <b>1021</b> of the tubular member <b>1019</b> are moved proximally therepast. The protrusions <b>1021</b> and the flexible member <b>1014</b> are configured to permit the tubular rod <b>1019</b> to be moved proximally through the opening <b>1014</b>, but prevent the tubular member <b>1019</b> from being slid distally therethrough. Thus, once a desired protrusion has moved proximally past the flexible member <b>1044</b>, the first and second jaws <b>1010</b>, <b>1012</b> are locked relative to one another.</p>
+      <p id="p-00101-en" num="0101">As shown in <figref>FIG. 22</figref>, a clip <b>1106</b> according to another exemplary embodiment of the present disclosure may be substantially similar to the clips <b>906</b>, <b>1006</b> described above. Similarly to the clips <b>906</b>, <b>1006</b>, a locking mechanism <b>1118</b> of the clip <b>1106</b> includes a tubular rod <b>1119</b> extending proximally from a first jaw <b>1110</b> toward the second jaw <b>1112</b> to be received within an opening <b>1114</b> of the second jaw <b>1112</b>. Rather than multiple ridges or protrusions extending along a length of the tubular rod <b>1119</b>, however, the tubular rod <b>1119</b> includes an enlarged portion <b>1021</b> at a proximal end <b>1158</b> thereof. The enlarged end <b>1121</b> may extend from the proximal end <b>1158</b> along a length longer than either of the ridge <b>921</b> or protrusion <b>1021</b>, which may provide a stronger hold between the tubular member <b>1119</b> and the second jaw <b>1112</b>.</p>
+      <p id="p-00102-en" num="0102">As shown in <figref>FIG. 23</figref>, a clip <b>1206</b> according to another exemplary embodiment of the present disclosure is substantially similar to the clips <b>906</b>-<b>1106</b> described above except as noted below. A locking mechanism <b>1218</b> of the clip <b>1206</b>, however, includes a rectangular locking rod <b>1219</b> rather than a tubular rod. The locking rod <b>1219</b> extends proximally from a first jaw <b>1210</b> toward a second jaw <b>1212</b> to be received within an opening <b>1214</b> of the second jaw <b>1214</b>. The locking rod <b>1219</b> extends substantially adjacent and parallel to a control wire received within the openings <b>1214</b> extending through first and second jaws <b>1210</b>, <b>1212</b> so that, when the clip <b>1206</b> is moved to the closed configuration, a proximal end <b>1258</b> of the rod <b>1219</b> is received within the opening <b>1214</b> of the second jaw <b>1212</b>. The opening <b>1214</b> of the second jaw <b>1212</b> is specifically sized and shaped to receive both the locking rod <b>1219</b> and the control wire. Since the locking rod <b>1219</b> is rectangularly shaped, once the locking rod <b>1219</b> is received within the opening <b>1214</b> of the second jaw <b>1212</b>, the clip <b>1206</b> is prevented from rotating about the control wire.</p>
+      <p id="p-00103-en" num="0103">The locking rod <b>1219</b> includes a plurality of notches <b>1021</b> along a length thereof. Similarly to the clip <b>1006</b>, the opening <b>1214</b> of the second jaw <b>1212</b> includes a flexible member biased radially inward to engage the notches <b>1221</b> as the locking rod <b>1219</b> is slid proximally through the opening <b>1214</b>. The notches <b>1221</b> are shaped (e.g., angled) so that the locking rod <b>1219</b> is permitted to be slid proximally through the opening <b>1214</b>, but prevented from being moved distally therethrough.</p>
+      <p id="p-00104-en" num="0104">Although the locking rods <b>919</b>-<b>1219</b> of the clips <b>906</b>-<b>1206</b> are described and shown as extending proximally from the first jaws <b>910</b>-<b>1210</b> to be received within openings <b>914</b>-<b>1214</b> of second jaws <b>912</b>-<b>1212</b>, it will be understood by those of skill in the art that the locking rods <b>919</b>-<b>1219</b> may similarly extend distally from the second jaws <b>912</b>-<b>1212</b> to be received within openings of the first jaws <b>910</b>-<b>1210</b>.</p>
+      <p id="p-00105-en" num="0105">As shown in <figref>FIGS. 24-25</figref>, a clip <b>1306</b> according to another exemplary embodiment is substantially similar to the clips <b>906</b>-<b>1206</b> except as noted below. The clip <b>1306</b> comprises a first jaw <b>1310</b> and a second jaw <b>1312</b> connected to one another via a collapsible member <b>1316</b>. A locking mechanism <b>1318</b>, however, comprises a locking member <b>1319</b> extending distally from the second jaw <b>1312</b> to be received within an opening <b>1314</b> of the first jaw <b>1310</b>. The lateral cross-section of the locking member <b>1319</b> may be substantially hemispherical to be received within the opening <b>1314</b> alongside a control wire <b>1304</b> received within the opening <b>1314</b>. The locking member <b>1319</b> may extend along an underside of the control wire <b>1304</b> (e.g., a surface of the control wire <b>1304</b> facing a tissue to be treated in an operative position), to protect the control wire from tissue interference. The locking member <b>1319</b> includes ratchet teeth <b>1321</b> along longitudinal edges thereof for engaging a corresponding engaging element <b>1044</b> within the opening <b>1314</b>. The ratchet teeth <b>1321</b> permit the locking member <b>1319</b> to be moved distally through the opening <b>1314</b> while preventing the locking member <b>1319</b> from being moved proximally therein.</p>
+      <p id="p-00106-en" num="0106">The control wire <b>1304</b> in this embodiment is not required to be cylindrical. The control wire <b>1304</b> may, for example, be substantially rectangular with a rounded underside for engaging the hemispherical shape of the locking member <b>1319</b>. The control wire <b>1304</b>, however, may take any of a variety of shapes and sizes so long as the opening <b>1314</b> and the locking member <b>1319</b> are correspondingly sized and shaped.</p>
+      <p id="p-00107-en" num="0107">Although the locking member <b>1319</b> is shown and described as extending distally from the second jaw <b>1312</b> to be received within the opening <b>1314</b> of the first jaw <b>1310</b>, it will be understood by those of skill in the art that the locking member <b>1319</b> may similarly extend proximally from the first jaw <b>1310</b> to be proximally received within the opening of the second jaw <b>1312</b>.</p>
+      <p id="p-00108-en" num="0108">As shown in <figref>FIGS. 26-27</figref>, a clip <b>1406</b> is substantially similar to the clips described above except as noted below. The clip <b>1406</b> comprises a first jaw <b>1410</b> and a second jaw <b>1412</b> connected to one another via a collapsible member <b>1416</b> for moving the clip <b>1406</b> between open and closed configurations. A locking mechanism <b>1418</b> of the clip <b>1406</b>, however, includes a ring <b>1419</b> movable over a length of the first and second portions <b>1411</b>, <b>1413</b> of the collapsible member <b>1416</b> as the collapsible member <b>1416</b> is moved toward the closed configuration. In particular, the ring <b>1019</b> may slide from a joint <b>1409</b> connecting the first and second portions <b>1411</b>, <b>1413</b> toward the first and second jaws <b>1410</b>, <b>1412</b>. In a locked closed configuration, the ring <b>1419</b> engages a thinned out portion of first and second bending points <b>1450</b>, <b>1452</b> proximate the first and second jaws <b>1410</b>, <b>1412</b>, respectively. Once the ring <b>1419</b> have engaged the thinned out portions of the first and second bending points <b>1450</b>, <b>1452</b>, the strip is prevented from moving along the first and second portions <b>1411</b>, <b>1413</b> toward the joint <b>1409</b>. In the open configuration, the ring <b>1419</b> may engage hooks <b>1456</b> at the joint <b>1409</b>, which prevent the ring <b>1419</b> from being disengaged from the collapsible member <b>1416</b>, when the collapsible member <b>1416</b> is in a substantially straight configuration.</p>
+      <p id="p-00109-en" num="0109">In one embodiment, the ring <b>1419</b> moves along the first and second portions <b>1411</b>, <b>1413</b> toward the locked configuration via, e.g., the pull of gravity. Where the natural force of gravity is not utilized, the ring <b>1419</b> may include a feature that simulates the force of gravity. For example, a line under tension may be attached to the ring <b>1419</b> at two or more points, e.g., opposing sides of the ring <b>1419</b>, attaching to one of the first and second jaws <b>1410</b>. In one example, one or more lines are attached to the first jaw <b>1410</b>, while one or more lines are attached to the second jaw <b>1412</b>. Thus, as the first and second jaws <b>1410</b>, <b>1412</b> are moved toward one another, the lines under tension draw the ring <b>1419</b> along the length of the first and second portions <b>1411</b>, <b>1413</b> of the collapsible member <b>1419</b> toward the first and second jaws <b>1410</b>, <b>1412</b> and into the thinned out portions of the first and second bending points <b>1450</b>, <b>1452</b>.</p>
+      <p id="p-00110-en" num="0110">As shown in <figref>FIGS. 28-29</figref>, a clip <b>1506</b> according to another exemplary embodiment is substantially similar to the clips described above except as noted below. The clip <b>1506</b> comprises a first jaw <b>1510</b> and a second jaw <b>1512</b> connected to one another via a collapsible member <b>1516</b> for moving the clip <b>1506</b> between an open configuration and a closed configuration. A locking mechanism <b>1518</b> of the clip <b>1506</b>, however, includes a latch <b>1519</b> extending proximally from the first jaw <b>1518</b> to be engagable with a corresponding engaging surface <b>1544</b> along the second jaw <b>1512</b>. The latch <b>1519</b> include a plurality of ratchet teeth <b>1521</b> extending therealong while the engaging surface <b>1544</b> includes corresponding set of ratchet teeth <b>1545</b>. The latch <b>1519</b> extends from a proximal face of the first jaw <b>1510</b> so that, when the clip <b>1506</b> is in the open configuration, the latch <b>1519</b> is substantially flush with the collapsible member <b>1516</b>. When the clip <b>1506</b> is moved to the closed configuration, the latch <b>1519</b> passes through an opening <b>1560</b> in the collapsible member <b>1516</b> to engage the engaging surface <b>1544</b> of the second jaw <b>1512</b>. The ratchet teeth <b>1521</b> and the corresponding ratchet teeth <b>1545</b> are configured so that the latch <b>1519</b> is permitted slide proximally relative to the engaging surface <b>1544</b> but prevented from moving distally relative thereto.</p>
+      <p id="p-00111-en" num="0111">As shown in <figref>FIGS. 30-31</figref>, a clip <b>1606</b> according to another exemplary embodiment is substantially similar to the clips described above except as noted below. The clip <b>1506</b> comprises a first jaw <b>1610</b> and a second jaw <b>1612</b> connected to one another via a collapsible member <b>1616</b> for moving the clip <b>1606</b> between an open configuration and a closed configuration. A locking mechanism <b>1618</b> of the clip <b>1606</b>, however, includes two flexible ratchet strips <b>1619</b> extending proximally from the first jaw <b>1610</b> adjacent and parallel to the collapsible member <b>1616</b>, in the open configuration. The flexible ratchet strips <b>1619</b> may be substantially similar to zip-tie strips including ratchet teeth <b>1621</b> extending along lengths thereof and are received within an opening extending through the second jaw <b>1612</b>. An interior surface of the opening <b>1614</b> includes corresponding ratchet teeth <b>1645</b> for engaging the ratchet teeth <b>1621</b>. The second jaw <b>1612</b> also includes a pair of lateral openings <b>1644</b> extending therethrough in communication with the opening <b>1614</b> through which proximal ends <b>1658</b> of the ratchet strips <b>1619</b> extend out of.</p>
+      <p id="p-00112-en" num="0112">In the open configuration, a length of the ratchet strips <b>1619</b> extend substantially parallel to the collapsible member <b>1616</b>, with the proximal ends <b>1658</b> bent laterally to extend out of the lateral openings <b>1644</b>. The proximal ends <b>1658</b> extend out of these lateral openings <b>1644</b> so that the ratchet strips <b>1619</b> do not interfere with an immediately proximal clip in an insertion member of a device (e.g., device <b>100</b>, <b>800</b>) through which this clip <b>1606</b> is inserted. As the clip <b>1606</b> is moved to the closed configuration, the proximal ends <b>1658</b> of the ratchet strips <b>1619</b> are drawn proximally so that ratchet teeth <b>1621</b> of the ratchet strips are slid proximally along the corresponding ratchet teeth <b>1654</b> of the opening <b>1614</b>. The ratchet teeth <b>1621</b>, <b>1654</b> are configured to permit the ratchet strips <b>1619</b> to be slid proximally through the opening <b>1614</b> but prevented from distally relative thereto.</p>
+      <p id="p-00113-en" num="0113">It should be understood that this disclosure is, in many respects, only illustrative. Changes may be made in details, particularly in matters of shape, size, and arrangement of steps without exceeding the scope of the disclosure. This may include, to the extent that it is appropriate, the use of any of the features of one example embodiment being used in other embodiments. The disclosure's scope is, of course, defined in the language in which the appended claims are expressed.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A clipping device, comprising:
+<claim-text>a flexible insertion member extending from a proximal end which, during use remains outside a body accessible to a user to a distal end which is inserted into the body through a naturally occurring body lumen;</claim-text><claim-text>a control wire extending through the insertion member from the proximal end; and</claim-text><claim-text>a first clip including first and second jaws, each of the first and second jaws including an opening through which the control wire passes and a collapsible member coupled between the first and second jaws, the collapsible member being biased to urge the first and second jaws away from one another along an axis of the control wire to a first expanded configuration, the first and second jaws being movable against the bias of the collapsible member via the control wire to a second contracted configuration in which the first and second jaws are moved along the axis of the control wire toward one another to lockingly engage tissue received therebetween.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The clipping device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first clip further comprises a first locking member coupled to the first jaw and extending from the first jaw toward the second jaw, the first locking member being constructed so that, when the first and second jaws are moved toward one another into the second configuration, the first locking member lockingly engages the first jaw member.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The clipping device of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the first locking member is formed as a rod extending from the first jaw toward the second jaw.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The clipping device of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein a free end of the rod of the first locking member includes a locking arm extending away from the rod at an angle offset from a longitudinal axis of the rod to engage the second jaw.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The clipping device of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein a proximal surface of the free end of the locking arm is angled relative to a surface of the second jaw so that, as the free end of the rod moves proximally into contact with the second jaw, the locking arm deflects until the locking arm passes over the second jaw and locks against a proximal side thereof.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The clipping device of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the first jaw extends from a first end including a first body engaging the collapsible member to a second end including a first tissue gripping tip.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The clipping device of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the second jaw extends from a first end including a second body engaging the collapsible member to a second end including a second tissue gripping tip.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The clipping device of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the second end of the second jaw includes a third tissue gripping tip.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The clipping device of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the control wire includes an enlarged distal end engaging distal side of the opening in the first jaw so that proximal movement of the control wire relative to the first jaw draws the first jaw proximally relative to the second jaw, the enlarged end being configured to be movable to a second configuration to permit separation thereof from the first jaw to release the first clip.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The clipping device of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the enlarged distal end of the control wire engages the opening in the first jaw with a pressure fit.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The clipping device of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the opening in the second jaw includes a rod receiving space and wherein the rod is lockingly received within the second channel in the second contracted configuration.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The clipping device of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the second and third tissue gripping tips are separated from one another by an opening, the opening receiving at least a portion of the first jaw therein in the second contracted configuration, the opening includes an angled wall configured to lockingly engage the locking arm of the first locking member.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The clipping device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the collapsible member includes first and second tabs received within corresponding slots formed in the first and second jaw.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The clipping device of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, further comprising a collapsible body portion connecting the first and second tabs, including first and second portions connected to one another at a joint, wherein in the first expanded configuration, the first and second portions are moved apart to enclose a first angle therebetween and wherein, in the second contracted configuration, the first and second arms enclose a second angle smaller than the first angle.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The clipping device of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the second angle is 0.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The clipping device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein an outer profile of the first clip is reduced when housed within the flexible insertion member, the outer profile expanding to a biased configuration when the first clip is advanced out of the flexible insertion member.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The clipping device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a second clip including third and fourth jaws, each of the third and fourth jaws including an opening through which the control wire passes and a second clip collapsible member coupled between the third and fourth jaws, the second clip collapsible member being biased to urge the third and fourth jaws away from one another along an axis of the control wire to a first expanded configuration, the third and fourth jaws being movable against the bias of the second clip collapsible member via the control wire to a second contracted configuration in which the third and fourth jaws are moved along the axis of the control wire toward one another to lockingly engage tissue received therebetween.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. A system for clipping tissue, comprising:
+<claim-text>a clip including first and second jaws, each of the first and second jaws including an opening through which a control wire passes and a collapsible member coupled between the first and second jaws, the collapsible member being biased to urge the first and second jaws away from one another along an axis of the control wire to a first expanded configuration, the first and second jaws being movable against the bias of the collapsible member via the control wire to a second contracted configuration in which the first and second jaws are moved along the axis of the control wire toward one another to lockingly engage tissue received therebetween, wherein movement of the control wire causes a corresponding movement of the first jaw relative to the second jaw to move the first and second jaws from the first expanded configuration to the second contracted configuration.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The system of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the control wire extends through a flexible insertion member from a proximal end actuatable by a user to a distal end connected to the first and second jaws, the control wire including an increased thickness portion at the distal end.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The system of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the first jaw extends from a first end including a first body engaging the collapsible member to a second end including a first tissue gripping tip and the second jaw extends from a first end including a second body engaging the collapsible member to a second end including second and third tissue gripping tips.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en" independent="true">
+      <claim-text>
+        <b>21</b>. A method for capturing tissue, comprising:
+<claim-text>advancing a clip through a flexible insertion member to a target tissue site, the clip including first and second jaws coupled to one another by a collapsible member, each of the first and second jaws including an opening through which a control wire passes, wherein the collapsible member is biased to urge the first and second jaws away from one another along an axis of the control wire;</claim-text><claim-text>actuating the control wire to advance the first and second jaws out of the insertion member;</claim-text><claim-text>drawing tissue between the first and second jaws;</claim-text><claim-text>withdrawing the control wire proximally by a first distance to cause the first jaw to move along an axis of the control wire proximally toward the second jaw until a locking member coupled to the first jaw lockingly engages the second jaw to lockingly engage tissue received therebetween; and</claim-text><claim-text>withdrawing the control wire proximally by a second distance to cause the control wire to disengage from the first and second jaws to release the clip from the control wire.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150257757A1_00018.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257757A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257757A1.PDF" type="pdf" size="1058030" pages="28" />
+</lexisnexis-patent-document>

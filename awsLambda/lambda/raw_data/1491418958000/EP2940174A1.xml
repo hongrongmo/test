@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940174A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091134" date-changed="20151223" time-changed="095908">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939717">
+        <country>EP</country>
+        <doc-number>2940174</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13868330</doc-number>
+        <date>20131225</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012288610</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012288610</doc-number>
+        <kind>A</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013084757</doc-number>
+        <kind>W</kind>
+        <date>20131225</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012288610</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013084757</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120288610</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP84757</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150625</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>C22C  38/00        20060101AFI20140723BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140723</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C21D   6/00        20060101ALI20140723BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140723</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C21D   6/02        20060101ALI20140723BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140723</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C22C  30/00        20060101ALI20140723BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>30</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140723</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C22C  38/50        20060101ALI20140723BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140723</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C22C  38/54        20060101ALI20140723BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>54</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140723</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>C21D   6/00        20130101 FI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C21D   6/004       20130101 LI20151212BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>004</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151212</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C21D   6/005       20130101 LI20151212BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151212</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C21D   6/008       20130101 LI20151212BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>008</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151212</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C21D   6/02        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C22C  38/00        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C22C  38/004       20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>004</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C22C  38/02        20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C22C  38/04        20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C22C  38/06        20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C22C  38/44        20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C22C  38/48        20130101 LI20151212BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>48</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151212</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C22C  38/50        20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C22C  38/54        20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>54</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">LEGIERUNG AUF FE-NI-BASIS MIT HERVORRAGENDEN HOCHTEMPERATUREIGENSCHAFTEN UND BESTÄNDIGKEIT GEGEN WASSERSTOFFVERSPRÖDUNG UND VERFAHREN ZUR HERSTELLUNG DAVON</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">Fe-Ni-BASED ALLOY HAVING EXCELLENT HIGH-TEMPERATURE CHARACTERISTICS AND HYDROGEN EMBRITTLEMENT RESISTANCE CHARACTERISTICS, AND METHOD FOR PRODUCING SAME</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">ALLIAGE À BASE DE Fe-Ni EXCELLENT EN TERMES DE PROPRIÉTÉS AUX HAUTES TEMPÉRATURES ET DE PROPRIÉTÉS DE RÉSISTANCE À LA FRAGILISATION PAR L'HYDROGÈNE AINSI QUE PROCÉDÉ DE FABRICATION ASSOCIÉ</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>The Japan Steel Works, Ltd.</orgname>
+            <registered-number>101045579</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>11-1 Osaki 1-chome Shinagawa-ku</address-1>
+              <city>Tokyo 141-0032</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>SATO Shinya</name>
+            <address>
+              <address-1>c/o The Japan Steel Works Ltd. 4 Chatsumachi</address-1>
+              <city>Muroran-shi Hokkaido 051-8505</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>KAYANO Rinzo</name>
+            <address>
+              <address-1>c/o The Japan Steel Works Ltd. 4 Chatsumachi</address-1>
+              <city>Muroran-shi Hokkaido 051-8505</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>TAKAHASHI Tatsuya</name>
+            <address>
+              <address-1>c/o The Japan Steel Works Ltd. 4 Chatsumachi</address-1>
+              <city>Muroran-shi Hokkaido 051-8505</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>TAKASAWA Koichi</name>
+            <address>
+              <address-1>c/o The Japan Steel Works Ltd. 4 Chatsumachi</address-1>
+              <city>Muroran-shi Hokkaido 051-8505</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Grünecker Patent- und Rechtsanwälte PartG mbB</name>
+            <registered-number>100060488</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Leopoldstraße 4</address-1>
+              <city>80802 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13084757</doc-number>
+        <date>20131225</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014104138</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151210">
+      <main-family family-id="166465182">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5769204</doc-number>
+            <kind>B2</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150354039</doc-number>
+            <kind>A1</kind>
+            <date>20151210</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104884662</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940174</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014129576</doc-number>
+            <kind>A</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104138</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150092361</doc-number>
+            <kind>A</kind>
+            <date>20150812</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166465180">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5769204</doc-number>
+            <kind>B2</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150354039</doc-number>
+            <kind>A1</kind>
+            <date>20151210</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104884662</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940174</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014129576</doc-number>
+            <kind>A</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104138</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150092361</doc-number>
+            <kind>A</kind>
+            <date>20150812</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to an Fe-Ni-based alloy which has a composition containing, in mass%, 0.005%-0.10% of C, 0.01%-0.10% of Si, 0.015% or less of P, 0.003% or less of S, 23.0%-27.0% of Ni, 12.0%-16.0% of Cr, 0.01% or less of Mo, 0.01% or less of Nb, 2.5%-6.0% of W, 1.5%-2.5% of Al and 1.5%-2.5% of Ti, with the balance made up of Fe and other unavoidable impurities, and which has excellent high-temperature characteristics and hydrogen embrittlement resistance characteristics.<img id="imga-00001-en" wi="153" he="63" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">
+      <b>Technical Field</b>
+    </heading>
+    <p id="p-00001-en" num="0001">The present invention relates to an Fe-Ni-based alloy capable of being used in a high-temperature and high-pressure environment or a high-pressure hydrogen environment, or an environment where the both are superposed and a method for producing the same.</p>
+    <heading id="h-00002-en">
+      <b>Background Art</b>
+    </heading>
+    <p id="p-00002-en" num="0002">As structural materials capable of being used under a high-temperature and high-pressure environment such as 600°C or higher, an Ni-based alloy and an Fe-Ni-based alloy having excellent high-temperature strength may be mentioned. An Ni-based alloy has an excellent high-temperature tensile strength and creep characteristics and the alloy capable of being used even at a high temperature of 700°C or higher has been developed and used in power generation plants and jet engine components. However, since an Ni-based alloy tends to cause macroscopic segregation during ingot production, it is considered difficult to produce a large ingot free from segregation. As heat-resistant alloys from which it is relatively easy to produce a large ingot, for example, Inconel (trademark, the same shall apply hereinafter) Alloy 718, Inconel Alloy 706, A286, and the like may be mentioned. These alloys are excellent in productivity of a relatively large ingot and a gas turbine disk or a rotor shaft material for power generation has been produced from an ingot of about 10 tons.</p>
+    <p id="p-00003-en" num="0003">Furthermore, in the case of the use under a high-pressure hydrogen environment, it is necessary to use a material having low susceptibility to hydrogen embrittlement as a structural material of a pressure vessel. Since strength and ductility are remarkably lowered upon hydrogen embrittlement, the lowering of safety becomes a big problem. In general, a material having higher strength exhibits increased susceptibility to hydrogen embrittlement and, in particular, when a harmful precipitated phase is present, it is known that the susceptibility to hydrogen embrittlement greatly increases. As alloys achieving both of hydrogen embrittlement resistance and high strength, there are, for example, those proposed in PTLs 1 and 2. In PTL 1, it is considered that it becomes possible to attain high strength without increasing the susceptibility to hydrogen embrittlement by subjecting JIS SUH 660 steel (hereinafter, A286 alloy) to cold-working. In PTL 2, it is reported that the susceptibility to hydrogen embrittlement can be reduced by defining the upper limit of the area ratio of NbC in an FeNi-based alloy.</p>
+    <heading id="h-00003-en">
+      <b>Citation List</b>
+    </heading>
+    <heading id="h-00004-en">
+      <b>Patent Literature</b>
+    </heading>
+    <p id="p-00004-en" num="0004">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>PTL 1: <patcit id="pcit-00001" dnum="JP2011068919A"><text>JP-A-2011-68919</text></patcit></li>
+        <li>PTL 2: <patcit id="pcit-00002" dnum="JP2008144237A"><text>JP-A-2008-144237</text></patcit></li>
+      </ul>
+    </p>
+    <heading id="h-00005-en">
+      <b>Summary of Invention</b>
+    </heading>
+    <heading id="h-00006-en">
+      <b>Technical Problem</b>
+    </heading>
+    <p id="p-00005-en" num="0005">As mentioned above, since the Ni-based alloy tends to cause macroscopic segregation during ingot production, it is difficult to produce a large ingot free from segregation and an ingot size capable of being produced is limited depending on the alloy composition. Therefore, the application to a relatively large structural component is difficult in the current steel making technology.</p>
+    <p id="p-00006-en" num="0006">Although an Fe-Ni-based alloy is inferior to an Ni-based alloy in short-time high-temperature characteristics, there is a possibility that the Fe-Ni-based alloy can be applied to a large structural component to be used at high temperature since the alloy is excellent in productivity of a large ingot. On the other hand, with regard to the susceptibility to hydrogen embrittlement, the characteristics are different among alloys. As for principal alloys, for example, Inconel Alloy 718 is excellent in high-temperature strength but, since a δ phase is precipitated on grain boundaries, it has high susceptibility to hydrogen embrittlement. Since Inconel Alloy 706 has a high Nb content and a precipitated phase harmful to the susceptibility to hydrogen embrittlement is precipitated when aged for a long time, its use as a structural material to be heated at a high temperature for a long time is no suitable. Since A286 does not contain any precipitated phase harmful to the susceptibility to hydrogen embrittlement, it is known to be a material having low susceptibility to hydrogen embrittlement. However, since it is inferior to the aforementioned alloys in high-temperature strength, there is a problem that the use as a structural component leads to a weight increase and a cost increase.</p>
+    <p id="p-00007-en" num="0007">Also, with regard to the high strength attained by cold-working as proposed in PTL 1, since the effect is considered to be lost in the case where it is used in a high-temperature environment, its use is limited to the use at a relatively low temperature. With regard to the method proposed in PTL 2, its effect is not clear in the case where hydrogen concentration exceeds 25 ppm and in the case of the use at a high temperature.</p>
+    <p id="p-00008-en" num="0008">The present invention has been made to solve the problems of the above-mentioned conventional ones, and an object thereof is to provide an Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance, which can be used as a structural component of a large pressure vessel and the like to be used in a high-temperature and high-pressure environment or a high-pressure hydrogen environment, or an environment where the both are superposed, and a method for producing the alloy.</p>
+    <heading id="h-00007-en">
+      <b>Solution to Problem</b>
+    </heading>
+    <p id="p-00009-en" num="0009">That is, in an Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance of the invention, a first aspect of the invention is characterized in that a composition comprises, in terms of % by mass, C: 0.005% to 0.10%, Si: 0.01% to 0.10%, P: 0.015% or less, S: 0.003% or less, Ni: 23.0% to 27.0%, Cr: 12.0% to 16.0%, Mo: 0.01% or less, Nb: 0.01% or less, W: 2.5% to 6.0%, Al: 1.5% to 2.5%, and Ti: 1.5% to 2.5%, the balance being Fe and other unavoidable impurities.</p>
+    <p id="p-00010-en" num="0010">The Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance according to a second aspect of the invention, in the first aspect of the invention, the alloy contains P: 0.003% to 0.015% in terms of % by mass.</p>
+    <p id="p-00011-en" num="0011">The Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance according to a third aspect of the invention, in the first or second aspects of the invention, the composition further contains one or two kinds of B: 0.0020% to 0.0050% and Zr: 0.02% to 0.05%.</p>
+    <p id="p-00012-en" num="0012">The Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance according to a fourth aspect of the invention, in any one of the first to third aspects of the invention, the alloy does not contain an η phase and 15% or more of a γ' phase in terms of a volume ratio in the metal structure.</p>
+    <p id="p-00013-en" num="0013">The Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance according to a fifth aspect of the invention, in any one of the first to fourth aspects of the invention, in a tensile test at 625°C, a hydrogen embrittlement resistance index (reduction of area ratio in the tensile test: hydrogen-charged material/As material) is 0.4 or more.</p>
+    <p id="p-00014-en" num="0014">A method for producing an Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance, which is a sixth aspect of the invention, is characterized in that, after the alloy having the composition according to any of the first to third aspects of the invention is subjected to a solution treatment at 950°C or higher, the alloy is subjected to a first-stage aging heat treatment in the range of 700 to 800°C and is then subjected to a second-stage aging heat treatment at a temperature lower than the temperature at the first-stage aging heat treatment in the range of 700 to 800°C.</p>
+    <heading id="h-00008-en">
+      <b>Advantageous Effects of Invention</b>
+    </heading>
+    <p id="p-00015-en" num="0015">As described above, according to the present invention, an Fe-Ni-based alloy having excellent high-temperature strength and hydrogen embrittlement resistance can be produced. Also, since it contains much inexpensive Fe, raw material costs can be reduced as compared with the case of an Ni-based alloy and, since the Fe-Ni-based alloy is based on an Fe-Ni base that is satisfactory in the productivity of a large ingot, the application to a large component becomes possible.</p>
+    <heading id="h-00009-en">
+      <b>Brief Description of Drawings</b>
+    </heading>
+    <p id="p-00016-en" num="0016">
+      <ul id="ul-00002-en" list-style="none" compact="compact">
+        <li>[<figref>FIG. 1] FIG. 1</figref> is a drawing showing age-hardening curves in Examples of the invention.</li>
+        <li>[<figref>FIG. 2] FIGs. 2(a) to 2(c)</figref> are photographs substituted for drawings obtained by scanning microscope observation, which show microstructures of test materials after a solution heat treatment and an aging heat treatment. <figref>FIG. 2(a)</figref> relates to the test material of Example 1, <figref>FIG. 2(b)</figref> relates to the test material of Comparative Example 2, and <figref>FIG. 2(c)</figref> relates to the test material of Comparative Example 3.</li>
+        <li>[<figref>FIG. 3] FIG. 3</figref> is a drawing showing creep test results of Example 1 and Comparative Examples 1 to 3.</li>
+        <li>[<figref>FIG. 4] FIG. 4</figref> is a drawing showing tensile test results on the hydrogen charged materials of Example 1 and Comparative Examples 1 to 3.</li>
+      </ul>
+    </p>
+    <heading id="h-00010-en">
+      <b>Description of Embodiments</b>
+    </heading>
+    <p id="p-00017-en" num="0017">The following will explain the contents defined in the present invention together with reasons for the limitation. Incidentally, the content of each component in the composition is shown in terms of % by mass. Moreover, "% by mass" and "% by weight" have the same meaning.</p>
+    <heading id="h-00011-en">Alloy Composition</heading>
+    <heading id="h-00012-en">C: 0.005% to 0.10%</heading>
+    <p id="p-00018-en" num="0018">C is an additive element that forms carbides to suppress coarsening of crystal grains of an alloy and precipitates on the grain boundaries to improve high-temperature strength but, since a sufficient effect for improving the strength is not exhibited when the content is small, it is necessary to contain C in an amount of at least 0.005% or more. However, when the content is too large, there is a concern that the volume fraction of the other effective precipitated phases such as a γ' phase is lowered by excessive carbide formation or the susceptibility to hydrogen embrittlement is adversely affected, so that the upper limit is set at 0.10%. For the same reason, it is desirable to set the lower limit at 0.01% and the upper limit at 0.08%.</p>
+    <heading id="h-00013-en">Si: 0.01% to 0.10%</heading>
+    <p id="p-00019-en" num="0019">Si is a component effective for deoxidation and the like and, in order to obtain the effect, it is necessary to contain it in an amount of at least 0.01 % or more. However, since Si promotes the macrosegregation characteristics and is a constituent element of a precipitated phase harmful to the toughness and the susceptibility to hydrogen embrittlement, the upper limit of the content is set at 0.10%. For the same reason, it is desirable to set the lower limit at 0.01% and the upper limit at 0.08%.</p>
+    <heading id="h-00014-en">P: 0.015% or less</heading>
+    <p id="p-00020-en" num="0020">When P is excessively contained, there is a possibility that the segregation of P on the grain boundaries becomes excessive to lower the consistency of the grain boundaries and thus the effect of reducing the susceptibility to hydrogen embrittlement is lost. Therefore, the content of P is limited to 0.015% or less.</p>
+    <p id="p-00021-en" num="0021">Moreover, in addition to the case where P is inevitably contained, P can be intentionally contained for the following reason. That is, when P is contained in an appropriate amount, it is considered that there is an effect of suppressing excessive accumulation of hydrogen on the grain boundaries and lowering the susceptibility to hydrogen embrittlement by increasing the consistency of the grain boundaries. In order to obtain the effect, it is necessary to contain P in an amount of 0.003% or more. Therefore, it is desirable to contain P in the range of 0.003 to 0.015%.</p>
+    <heading id="h-00015-en">S: 0.003% or less</heading>
+    <p id="p-00022-en" num="0022">The content of S is set at 0.003% that is industrially realizable, as an upper limit.</p>
+    <heading id="h-00016-en">Ni: 23.0% to 27.0%</heading>
+    <p id="p-00023-en" num="0023">Ni is an austenite stabilization element and also is an element that becomes necessary for precipitating the γ' phase. However, when Ni is excessively contained, there is a concern that nickel hydride is formed, so that the lower limit of the content is set at 23.0% and the upper limit thereof is set at 27.0%. For the same reason, it is desirable to set the lower limit at 23.5% and the upper limit at 26.0%.</p>
+    <heading id="h-00017-en">Cr: 12.0% to 16.0%</heading>
+    <p id="p-00024-en" num="0024">Cr is effective for improving corrosion resistance and oxidation resistance and also contributes the improvement of the high-temperature strength through carbide formation. However, since Cr causes the lowering of the toughness by the precipitation of α-Cr in the case where Cr is excessively contained, the lower limit of the content is set at 12.0% and the upper limit thereof is set at 16.0%. For the same reason, it is desirable to set the lower limit at 13.0% and the upper limit at 15.0%.</p>
+    <heading id="h-00018-en">Mo: 0.01% or less</heading>
+    <p id="p-00025-en" num="0025">Mo is effective for improving strength as a solid solution strengthening element and also is an element that suppresses the diffusion of the alloy elements to improve structural stability. On the other hand, since Mo is a constituent element of a harmful precipitated phase and also worsens the macrosegregation characteristics, the productivity of a large ingot is greatly lowered. Therefore, in the present invention, the content thereof is limited to 0.01% or less.</p>
+    <heading id="h-00019-en">Nb: 0.01% or less</heading>
+    <p id="p-00026-en" num="0026">Nb is an element that is effective for strength improvement through precipitation strengthening. However, on the other hand, since Nb is a constituent element of a harmful precipitated phase and also worsens the macrosegregation characteristics, the productivity of a large ingot is greatly lowered. Therefore, in the invention, the content thereof is limited to 0.01% or less.</p>
+    <p id="p-00027-en" num="0027">The above-described S, Mo, and Nb are positioned as unavoidable impurities in the invention, so that it is not essential to contain them.</p>
+    <heading id="h-00020-en">W: 2.5% to 6.0%</heading>
+    <p id="p-00028-en" num="0028">W is an element having effects similar to those of Mo and improves the structural stability together with solution strengthening but the influence on the deterioration of the macrosegregation characteristics, the formation of a harmful precipitated phase, and the like is small as compared with Mo. As a content effective for the structural stability, the lower limit value is set at 2.5%. On the other hand, when W is excessively added, there is a possibility of causing the lowering of the structural stability and the deterioration of the hot-workability resulting from the precipitation of an α-W phase and a Laves phase, so that the upper limit is set at 6.0%. For the same reason, it is desirable to set the lower limit at 3.0% and the upper limit at 5.5%.</p>
+    <heading id="h-00021-en">Al: 1.5% to 2.5%</heading>
+    <p id="p-00029-en" num="0029">Al combines with Ni and Ti in the present alloy system to precipitate a γ' phase, thereby improving the high-temperature strength. Since an increase in the γ' phase volume ratio is required in order to attain high strength by the γ' phase, it is necessary to contain Al in an amount of 1.5% or more. However, when Al is excessively contained, there is a concern of coarse aggregation of the γ' phase on the grain boundaries or the deterioration of hot-workability, so that the upper limit of the content is set at 2.5%. For the same reason, it is desirable to set the lower limit at 1.7% and the upper limit at 2.3%.</p>
+    <heading id="h-00022-en">Ti: 1.5% to 2.5%</heading>
+    <p id="p-00030-en" num="0030">Ti is an element constituting the γ' phase similarly to Al and is an element effective for strength improvement. It is necessary to increase the γ' phase volume ratio in order to improve the high-temperature strength and hence the Ti content is set at 1.5% or more in consideration of the balance with Al. However, since an excessive content thereof causes coarse aggregation of carbides to lower the toughness and also has an adverse influence on the susceptibility to hydrogen embrittlement, the upper limit is set at 2.5%. For the same reason, it is desirable to set the lower limit at 1.7% and the upper limit at 2.3%.</p>
+    <heading id="h-00023-en">B: 0.0020% to 0.0050%, Zr: 0.02% to 0.05%</heading>
+    <p id="p-00031-en" num="0031">B is effective for high-temperature strength improvement through the segregation mainly on the crystal grain boundaries and can be contained as desired. However, since a borate is formed and makes the grain boundaries brittle when B is excessively contained, in the case where it is contained as desired, the lower limit of the content is set at 0.0020% and the upper limit thereof is set at 0.0050%. For the same reason, it is desirable to set the lower limit at 0.0025% and the upper limit at 0.0045%.</p>
+    <p id="p-00032-en" num="0032">Zr is effective for high-temperature strength improvement through the segregation mainly on the crystal grain boundaries and can be contained as desired. However, since the hot-workability is lowered when Zr is excessively contained, in the case where it is contained as desired, the lower limit of the content is set at 0.025% and the upper limit thereof is set at 0.045%.</p>
+    <heading id="h-00024-en">Metal Structure</heading>
+    <p id="p-00033-en" num="0033">η phase: not contained</p>
+    <p id="p-00034-en" num="0034">γ' phase: volume ratio of 15% or more</p>
+    <p id="p-00035-en" num="0035">In an Fe-Ni-based alloy, in the case where the η phase is precipitated, the toughness and the high-temperature characteristics are lowered and the susceptibility to hydrogen embrittlement is deteriorated. The η phase in the Fe-Ni-based alloy is precipitated through the diffusion of the intraparticle γ' phase that is metastable, resulting from elevated temperature holding. In order to suppress the precipitation of the η phase, it is effective to add Mo that has an effect of suppressing the diffusion. However, since Mo is an element that forms harmful precipitated phases such as Laves phases (Fe<sub>2</sub>(Ti, Mo)) and an X phase (Mo<sub>5</sub>Cr<sub>6</sub>Fe<sub>18</sub>), Mo is desirably not contained in order to improve the structural stability for a long time. In the present alloy, the precipitation of the harmful precipitated phases is prevented by restricting Mo to 0.01% or less in terms of % by mass and the precipitation of the η phase is suppressed by containing W that is effective similarly to Mo in an amount of 2.5 to 6.0% in terms of % by mass. Thereby, the η phase is not contained in the structure and the precipitation of the η phase can be avoided in the high-temperature and long-time use or precipitation initiation time can be shifted to a long time side.</p>
+    <p id="p-00036-en" num="0036">Moreover, in order to improve the high-temperature strength, precipitation strengthening by a finely precipitated phase is effective but, since specific precipitated phases such as a σ phase and the Laves phase in addition to the aforementioned η phase increase the susceptibility to hydrogen embrittlement though the influence is small as compared with the η phase, these phases are desirably not contained. Therefore, in the present alloy, precipitation strengthening is performed only by the γ' phase that has small influence on the susceptibility to hydrogen embrittlement and is also effective for the improvement of the high-temperature strength. In order to obtain high strength only by the γ' phase, it is necessary to increase the volume ratio of the γ' phase. As a result of investigation, high-temperature strength more excellent than that of the conventional A286 steel is obtained when the γ' phase volume ratio is 15% or more.</p>
+    <p id="p-00037-en" num="0037">When the volume ratio is less than 15%, the precipitation strength is insufficient and strength almost equal to that of A286 is only obtained.</p>
+    <p id="p-00038-en" num="0038">As mentioned above, the γ' phase changes to the η phase through high-temperature long-time holding and it is known that the change is accelerated under a stress loading state. Since the susceptibility to hydrogen embrittlement greatly increases when the η phase is precipitated, in order to use the present alloy safely in a high-temperature and high-pressure environment and in a high-pressure hydrogen environment, these structural characteristic features should be maintained even in the case where the alloy is held at a high temperature for a long period of time.</p>
+    <heading id="h-00025-en">Hydrogen Embrittlement Resistance Index (reduction of area ratio in the tensile test at 625°C: hydrogen-charged material/As material): 0.4 or more</heading>
+    <p id="p-00039-en" num="0039">In the case where the alloy is used in a high-temperature and high-pressure hydrogen environment, it is surmised that hydrogen solves in the alloy during the use. For indicating the hydrogen embrittlement resistance in such a use situation, a hydrogen embrittlement resistance index is defined.</p>
+    <p id="p-00040-en" num="0040">When the index is 0.4 or more, the alloy is judged to have good resistance to hydrogen embrittlement. When the index is less than 0.4, a decrease in reduction of area by hydrogen charging is large, so that it is judged that the resistance to hydrogen embrittlement is insufficient.</p>
+    <p id="p-00041-en" num="0041">Incidentally, at the measurement of the hydrogen embrittlement resistance index, hydrogen is forcibly charged into the alloy by holding the material under a hydrogen environment at a high temperature under a high pressure using a high-temperature and high-pressure autoclave (hereinafter referred to as hydrogen charging). The hydrogen embrittlement resistance index at a high temperature can be determined by performing a tensile test of a hydrogen-charged material and a material as received, at 625°C.</p>
+    <p id="p-00042-en" num="0042">The hydrogen charging is performed under the conditions of 450°C, 25 MPa, and 72 hours. By the hydrogen charging, about 60 ppm of hydrogen is added in terms of mass ratio.</p>
+    <heading id="h-00026-en">Solution Treatment: 950°C or higher</heading>
+    <p id="p-00043-en" num="0043">The solution temperature is set at 950°C or higher where a recrystallization structure is obtained. The upper limit of the solution temperature is not particularly defined but the treatment is carried out at a temperature where remarkable grain growth occurs or a temperature lower than the temperature (e.g., 1100°C or lower).</p>
+    <heading id="h-00027-en">Aging Heat Treatment Conditions</heading>
+    <p id="p-00044-en" num="0044">First stage: 700 to 800°C</p>
+    <p id="p-00045-en" num="0045">Second stage: 700 to 800°C (provided that a temperature lower than the temperature at the first stage)</p>
+    <p id="p-00046-en" num="0046">After the solution treatment, subsequently to the aging heat treatment at a first stage, by performing aging at a second stage at a temperature lower than the temperature at the first stage, the volume fraction of the γ' phase can be increased without coarsening the γ' phase that has precipitated at the first stage. As a result of investigating the age hardening behavior, most suitable aging temperature is between 700°C and 800°C and the highest strength is obtained by performing the aging between 700°C and 800°C at both of the first stage and the second stage. Incidentally, the aging heat treatment at the second stage is performed at a temperature lower than the temperature at the first stage.</p>
+    <p id="p-00047-en" num="0047">When the temperature at the first stage and at the second stage is lower than 700°C, a peak of hardness exists at a long time side and thus sufficient hardness is not obtained within a practical time range. When the temperature at the first stage and at the second stage is higher than 800°C, the hardness decreases owing to over aging.</p>
+    <p id="p-00048-en" num="0048">Incidentally, the aging heat treatment may be performed by cooling the alloy after the solution treatment and subsequently heating it or the aging heat treatment may be performed by keeping a temperature in the middle of cooling after the solution treatment.</p>
+    <p id="p-00049-en" num="0049">The following will describe one example of the embodiment of the invention.</p>
+    <p id="p-00050-en" num="0050">The Fe-Ni-based alloy of the invention is prepared so as to have a composition containing, in terms of% by mass, C: 0.005% to 0.10%, Si: 0.01% to 0.10%, P: 0.015% or less (preferably 0.003 to 0.015%), S: 0.003% or less, Ni: 23.0% to 27.0%, Cr: 12.0% to 16.0%, Mo: 0.01% or less, Nb: 0.01% or less, W: 2.5% to 6.0%, Al: 1.5% to 2.5%, and Ti: 1.5% to 2.5% and further containing one or two kinds of B: 0.0020% to 0.0050% and Zr: 0.02% to 0.05% as desired, the balance being Fe and other unavoidable impurities. The Fe-Ni-based alloy of the invention can be melted by usual methods and the method for melting is not particularly limited in the invention. In the above composition, for example, a large ingot having more than 10 tons can be produced without causing the macroscopic segregation problem.</p>
+    <p id="p-00051-en" num="0051">The Fe-Ni-based alloy can be subjected to processing such as forging as desired and also can be subjected to a solution treatment and a heat treatment by aging.</p>
+    <p id="p-00052-en" num="0052">The solution treatment can be performed, for example, under conditions of 950°C to 1100°C and 1 to 20 hours.</p>
+    <p id="p-00053-en" num="0053">Moreover, the aging heat treatment is desirably a two-stage treatment within a temperature range of 700 to 800°C at each stage, the temperature at the second stage being lower than the temperature at the first stage. By adopting the conditions, tensile strength of 900 MPa or more in the tensile strength test at 625°C and reduction of area of 25% or more can be secured.</p>
+    <p id="p-00054-en" num="0054">Incidentally, when the former temperature is lower than 650°C or higher than 825°C, the γ' phase cannot sufficiently grow and the above tensile strength cannot be secured.</p>
+    <p id="p-00055-en" num="0055">The Fe-Ni-based alloy obtained above can be suitably utilized for power generation plants, jet engine materials, and the like to be used under a high-temperature and high-pressure environment of 600°C or higher.</p>
+    <heading id="h-00028-en">Examples</heading>
+    <heading id="h-00029-en">&lt;Examples 1 to 5 and Comparative Examples 1 to 4&gt;</heading>
+    <p id="p-00056-en" num="0056">The following will describe Examples of the invention.</p>
+    <p id="p-00057-en" num="0057">Fe-Ni-based alloys of Examples and Comparative Examples are melted with the compositions (the balance being Fe and unavoidable impurities) shown in Table 1. Incidentally, Comparative Example 1 has a composition of common A286 alloy.</p>
+    <p id="p-00058-en" num="0058">A test material having a composition of Table 1 was melted in a vacuum melting furnace and, after a diffusion heat treatment at 1200°C, a forged plate having a thickness of 35 mm was made by hot forging. <tables id="tables-00001-en" num="0001"><table frame="all"><title>[Table 1]</title><tgroup cols="17"><colspec colnum="1" colname="col1" colwidth="36mm" /><colspec colnum="2" colname="col2" colwidth="11mm" /><colspec colnum="3" colname="col3" colwidth="14mm" /><colspec colnum="4" colname="col4" colwidth="12mm" /><colspec colnum="5" colname="col5" colwidth="12mm" /><colspec colnum="6" colname="col6" colwidth="16mm" /><colspec colnum="7" colname="col7" colwidth="17mm" /><colspec colnum="8" colname="col8" colwidth="12mm" /><colspec colnum="9" colname="col9" colwidth="12mm" /><colspec colnum="10" colname="col10" colwidth="12mm" /><colspec colnum="11" colname="col11" colwidth="12mm" /><colspec colnum="12" colname="col12" colwidth="12mm" /><colspec colnum="13" colname="col13" colwidth="14mm" /><colspec colnum="14" colname="col14" colwidth="14mm" /><colspec colnum="15" colname="col15" colwidth="16mm" /><colspec colnum="16" colname="col16" colwidth="16mm" /><colspec colnum="17" colname="col17" colwidth="11mm" /><thead><row><entry namest="col1" nameend="col17" align="right" valign="middle">(mass%)</entry></row><row><entry namest="col1" nameend="col2" align="center" valign="middle">Test material</entry><entry align="center" valign="middle">C</entry><entry align="center" valign="middle">Si</entry><entry align="center" valign="middle">Mn</entry><entry align="center" valign="middle">P</entry><entry align="center" valign="middle">S</entry><entry align="center" valign="middle">Ni</entry><entry align="center" valign="middle">Cr</entry><entry align="center" valign="middle">Mo</entry><entry align="center" valign="middle">Al</entry><entry align="center" valign="middle">Ti</entry><entry align="center" valign="middle">W</entry><entry align="center" valign="middle">Nb</entry><entry align="center" valign="middle">Zr</entry><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">Fe</entry></row></thead><tbody><row><entry morerows="4" align="center" valign="middle">Example</entry><entry align="center" valign="middle">1</entry><entry align="center" valign="middle">0.011</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">0.003</entry><entry align="center" valign="middle">&lt;0.0003</entry><entry align="center" valign="middle">24.7</entry><entry align="center" valign="middle">13.6</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">1.82</entry><entry align="center" valign="middle">1.94</entry><entry align="center" valign="middle">4.83</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">0.004</entry><entry align="center" valign="middle">Bal.</entry></row><row><entry align="center" valign="middle">2</entry><entry align="center" valign="middle">0.007</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">0.011</entry><entry align="center" valign="middle">&lt;0.0003</entry><entry align="center" valign="middle">24.4</entry><entry align="center" valign="middle">14.1</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">1.79</entry><entry align="center" valign="middle">1.89</entry><entry align="center" valign="middle">4.84</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">&lt;0.005</entry><entry align="center" valign="middle">0.003</entry><entry align="center" valign="middle">Bal.</entry></row><row><entry align="center" valign="middle">3</entry><entry align="center" valign="middle">0.042</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">0.012</entry><entry align="center" valign="middle">&lt;0.0003</entry><entry align="center" valign="middle">24.6</entry><entry align="center" valign="middle">14.1</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">1.81</entry><entry align="center" valign="middle">1.95</entry><entry align="center" valign="middle">4.96</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">&lt;0.005</entry><entry align="center" valign="middle">0.003</entry><entry align="center" valign="middle">Bal.</entry></row><row><entry align="center" valign="middle">4</entry><entry align="center" valign="middle">0.008</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">0.004</entry><entry align="center" valign="middle">&lt;0.0003</entry><entry align="center" valign="middle">24.4</entry><entry align="center" valign="middle">14.1</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">1.80</entry><entry align="center" valign="middle">1.88</entry><entry align="center" valign="middle">4.86</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">&lt;0.005</entry><entry align="center" valign="middle">0.003</entry><entry align="center" valign="middle">Bal.</entry></row><row><entry align="center" valign="middle">5</entry><entry align="center" valign="middle">0.007</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">&lt;0.003</entry><entry align="center" valign="middle">&lt;0.0003</entry><entry align="center" valign="middle">24.4</entry><entry align="center" valign="middle">14.0</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">1.79</entry><entry align="center" valign="middle">1.90</entry><entry align="center" valign="middle">4.85</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">&lt;0.005</entry><entry align="center" valign="middle">&lt;0.001</entry><entry align="center" valign="middle">Bal.</entry></row><row><entry morerows="3" align="center" valign="middle">Comparative Example</entry><entry align="center" valign="middle">1</entry><entry align="center" valign="middle">0.017</entry><entry align="center" valign="middle">0.47</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">&lt;0.003</entry><entry align="center" valign="middle">0.0003</entry><entry align="center" valign="middle">25.1</entry><entry align="center" valign="middle">14.0</entry><entry align="center" valign="middle">1.25</entry><entry align="center" valign="middle">0.20</entry><entry align="center" valign="middle">2.33</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">&lt;0.005</entry><entry align="center" valign="middle">0.004</entry><entry align="center" valign="middle">Bal.</entry></row><row><entry align="center" valign="middle">2</entry><entry align="center" valign="middle">0.017</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">&lt;0.003</entry><entry align="center" valign="middle">0.0003</entry><entry align="center" valign="middle">25.0</entry><entry align="center" valign="middle">14.2</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">1.78</entry><entry align="center" valign="middle">1.91</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">0.004</entry><entry align="center" valign="middle">Bal.</entry></row><row><entry align="center" valign="middle">3</entry><entry align="center" valign="middle">0.010</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">&lt;0.003</entry><entry align="center" valign="middle">0.0003</entry><entry align="center" valign="middle">24.8</entry><entry align="center" valign="middle">13.9</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">1.80</entry><entry align="center" valign="middle">1.91</entry><entry align="center" valign="middle">2.45</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">0.04</entry><entry align="center" valign="middle">0.004</entry><entry align="center" valign="middle">Bal.</entry></row><row><entry align="center" valign="middle">4</entry><entry align="center" valign="middle">0.012</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">&lt;0.003</entry><entry align="center" valign="middle">0.0003</entry><entry align="center" valign="middle">24.5</entry><entry align="center" valign="middle">14.0</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">1.79</entry><entry align="center" valign="middle">1.92</entry><entry align="center" valign="middle">7.44</entry><entry align="center" valign="middle">&lt;0.01</entry><entry align="center" valign="middle">&lt;0.005</entry><entry align="center" valign="middle">0.003</entry><entry align="center" valign="middle">Bal.</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00059-en" num="0059">With regard to the heat treatment conditions, most suitable solution conditions and aging conditions were investigated. Table 2 shows the relationship between the heat treatment conditions and the hardness and <figref>FIG. 1</figref> shows age-hardening curves. HV10 in the Table indicates Vickers hardness at a load of 10 kg.</p>
+    <p id="p-00060-en" num="0060">A recrystallization structure was obtained at a solution temperature of 980°C and the hardness after aging was a value equal to that of a solution-treated material at 1060°C. With regard to the aging heat treatment conditions, it is realized that high hardness is obtained within a practical time range by performing the aging treatment in the range of 700°C to 800°C. When the temperature exceeds 800°C, the hardness decreases owing to over aging and, when it is lower than 700°C, since a peak of hardness exists at a long time side, sufficient hardness is not obtained within a practical time range. <tables id="tables-00002-en" num="0002"><table frame="all"><title>[Table 2]</title><tgroup cols="4"><colspec colnum="1" colname="col1" colwidth="23mm" /><colspec colnum="2" colname="col2" colwidth="31mm" /><colspec colnum="3" colname="col3" colwidth="55mm" /><colspec colnum="4" colname="col4" colwidth="30mm" /><thead><row><entry morerows="1" align="center" valign="middle">Test material</entry><entry namest="col2" nameend="col3" align="center" valign="middle">Heat treatment conditions</entry><entry morerows="1" align="center" valign="middle">Hardness (HV10)</entry></row><row><entry align="center" valign="middle">Solution treatment</entry><entry align="center" valign="middle">Aging heat treatment</entry></row></thead><tbody><row><entry morerows="2" align="center" valign="middle">Example 1</entry><entry align="center" valign="middle">980°C×3 hours</entry><entry align="center" valign="middle">780°C× 10 hours+750°C×24 hours</entry><entry align="center" valign="middle">323</entry></row><row><entry morerows="1" align="center" valign="middle">1060°C×3 hours</entry><entry align="center" valign="middle">725°C×24 hours+650°C× 16 hours</entry><entry align="center" valign="middle">285</entry></row><row><entry align="center" valign="middle">780°C×10 hours+750°C×24 hours</entry><entry align="center" valign="middle">321</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00061-en" num="0061">Then, structural observation after the solution heat treatment and the aging heat treatment was carried out. <figref>FIGs. 2(a) to 2(c)</figref> show microstructures on SEM observation for Example 1 and Comparative Examples 2 and 3. In all alloys, the treatments were carried out under heat treatment conditions where the hardness became maximum hardness. In Comparative Example 2 where no W is contained, a large number of the η phases are observed on the grain boundaries (the portion indicated by an arrow). Also, in Comparative Example 3 where W is contained in an amount of 2.45% by mass, the η phase is observed on the grain boundaries though the precipitation amount is smaller than that in Comparative Example 2 (the portion indicated by an arrow). In Example 1, the precipitation of the η phase was not observed on the grain boundaries. Therefore, it is judged that W should be contained in an amount of 2.5% by mass or more for suppressing the precipitation of the η phase.</p>
+    <p id="p-00062-en" num="0062">Table 3 shows precipitated phases in the case where the test materials are held at 650°C. Since the test for evaluating long-time structural stability requires a huge amount of time, the γ' phase volume ratio and the precipitated phases upon long-time and elevated temperature holding were determined by a thermodynamic calculation program (Thermo-Calc Software AB, Thermo-Calc version S) in which an equilibrium state can be predicted. Since it is surmised that the η phase is not contained even when the material reaches an equilibrium state by the long-time and elevated temperature holding in the case of Example 1 where the volume ratio of the γ' phase is 15% or more, it is expected that a change in material characteristics is small. On the other hand, it is surmised that the η phase is precipitated in Comparative Examples 1 and 3, and it is surmised that the Laves phase is precipitated in Comparative Example 4, so that it is expected that the material characteristics are deteriorated in both cases. Incidentally, in the prediction results by the above program, including Example 1, the precipitation of a small amount of the σ phase (volume ratio of less than 5%) is predicted but, in Example 1, the η phase is not precipitated and satisfactory material characteristics are maintained even upon the long-term and elevated temperature holding. <tables id="tables-00003-en" num="0003"><table frame="all"><title>[Table 3]</title><tgroup cols="4"><colspec colnum="1" colname="col1" colwidth="36mm" /><colspec colnum="2" colname="col2" colwidth="12mm" /><colspec colnum="3" colname="col3" colwidth="39mm" /><colspec colnum="4" colname="col4" colwidth="42mm" /><thead><row><entry namest="col1" nameend="col2" align="center" valign="middle">Test material</entry><entry align="center" valign="middle">γ' phase volume ratio (%)</entry><entry align="center" valign="middle">Other precipitated phases</entry></row></thead><tbody><row><entry namest="col1" nameend="col2" align="center" valign="middle">Example 1</entry><entry align="center" valign="middle">20</entry><entry align="center" valign="middle">σ</entry></row><row><entry morerows="2" align="center" valign="middle">Comparative Example</entry><entry align="center" valign="middle">1</entry><entry align="center" valign="middle">3</entry><entry align="center" valign="middle">η, σ</entry></row><row><entry align="center" valign="middle">3</entry><entry align="center" valign="middle">18</entry><entry align="center" valign="middle">η, σ</entry></row><row><entry align="center" valign="middle">4</entry><entry align="center" valign="middle">17</entry><entry align="center" valign="middle">σ, Laves</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00063-en" num="0063">Table 4 shows results of the tensile test at a high temperature. With assuming a case of the use in a high-temperature environment, the test temperature was set at 625°C. Incidentally, as the heat treatment conditions, the test was carried out under conditions where the hardness of each alloy became maximum hardness. In Table 4, 0.2%Y.S. and T.S. are results of the tensile test in accordance with JIS G0567. In Examples 1 to 4, higher strength is obtained in the tensile test at 625°C as compared with the cases of Comparative Examples 1 and 3 and also, as for elongation and reduction of area, values having no problem in practical use are obtained. Particularly, as compared with Comparative Example 1 that is a material equal to A286, strength is greatly improved in Examples. <tables id="tables-00004-en" num="0004"><table frame="all"><title>[Table 4]</title><tgroup cols="7"><colspec colnum="1" colname="col1" colwidth="30mm" /><colspec colnum="2" colname="col2" colwidth="11mm" /><colspec colnum="3" colname="col3" colwidth="38mm" /><colspec colnum="4" colname="col4" colwidth="23mm" /><colspec colnum="5" colname="col5" colwidth="16mm" /><colspec colnum="6" colname="col6" colwidth="26mm" /><colspec colnum="7" colname="col7" colwidth="24mm" /><thead><row><entry namest="col1" nameend="col2" align="center" valign="middle">Test material</entry><entry align="center" valign="middle">Tensile test temperature (°C)</entry><entry align="center" valign="middle">0.2%Y.S. (MPa)</entry><entry align="center" valign="middle">T.S. (MPa)</entry><entry align="center" valign="middle">Elongation (%)</entry><entry align="center" valign="middle">Reduction of area (%)</entry></row></thead><tbody><row><entry morerows="4" align="center" valign="middle">Example</entry><entry align="center" valign="middle">1</entry><entry morerows="4" align="center" valign="middle">625</entry><entry align="center" valign="middle">682</entry><entry align="center" valign="middle">929</entry><entry align="center" valign="middle">22</entry><entry align="center" valign="middle">41</entry></row><row><entry align="center" valign="middle">2</entry><entry align="center" valign="middle">698</entry><entry align="center" valign="middle">927</entry><entry align="center" valign="middle">17</entry><entry align="center" valign="middle">45</entry></row><row><entry align="center" valign="middle">3</entry><entry align="center" valign="middle">716</entry><entry align="center" valign="middle">949</entry><entry align="center" valign="middle">18</entry><entry align="center" valign="middle">45</entry></row><row><entry align="center" valign="middle">4</entry><entry align="center" valign="middle">697</entry><entry align="center" valign="middle">935</entry><entry align="center" valign="middle">17</entry><entry align="center" valign="middle">31</entry></row><row><entry align="center" valign="middle">5</entry><entry align="center" valign="middle">677</entry><entry align="center" valign="middle">934</entry><entry align="center" valign="middle">19</entry><entry align="center" valign="middle">33</entry></row><row><entry morerows="1" align="center" valign="middle">Comparative Example</entry><entry align="center" valign="middle">1</entry><entry morerows="1" align="center" valign="middle">625</entry><entry align="center" valign="middle">618</entry><entry align="center" valign="middle">884</entry><entry align="center" valign="middle">30</entry><entry align="center" valign="middle">55</entry></row><row><entry align="center" valign="middle">3</entry><entry align="center" valign="middle">681</entry><entry align="center" valign="middle">892</entry><entry align="center" valign="middle">20</entry><entry align="center" valign="middle">41</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00064-en" num="0064">
+      <figref>FIG. 3</figref> shows results of a creep rupture test. As shown in <figref>FIG. 2</figref>, in Comparative Examples 2 and 3 where the η phase was precipitated, a rupture was caused with a short period of time as compared with the case of Example 1 and thus a decrease in high-temperature characteristics caused by the precipitation of the η phase was observed. Particularly in Comparative Example 3, although the tensile strength at 625°C is equal to that of Examples, the creep rupture time is shortened by 2000 hours or more as compared to the case of Example 1. Thus, it is obvious from the result that the creep characteristics are remarkably deteriorated when the η phase is precipitated. In Comparative Example 1, the precipitation of the η phase was not observed but the creep strength is lower than that of Example 1, so that an increase in thickness may be invited, for example, in the case of the use as a pressure vessel.</p>
+    <p id="p-00065-en" num="0065">Then, a tensile test of the hydrogen charged material was carried out. The hydrogen charging was carried out using a high-temperature and high-pressure autoclave and a test specimen was held under a hydrogen gas atmosphere of 450°C and 25 MPa for 72 hours. After the hydrogen charging, hydrogen concentration of the test specimen was measured and it was confirmed that about 60 ppm of hydrogen was added in terms of mass ratio.</p>
+    <p id="p-00066-en" num="0066">The tensile test was carried out in the atmospheric air and carried out at a test temperature of 625°C at a rate that corresponded to a strain rate of 2×10<sup>-5</sup>. <figref>FIG. 4</figref> shows hydrogen embrittlement resistance indices of the hydrogen charged materials and the materials as received, the indices being determined by the tensile test at 625°C. It was confirmed that the hydrogen embrittlement resistance index was large in Example 1 as compared with Comparative Examples. Particularly, it was confirmed that the hydrogen embrittlement resistance was greatly improved in Example 1 as compared with Comparative Example 1 that was a material equal to A286. In Example 1, in addition to the suppression of precipitation of the η phase, since the γ' phase finely dispersed in the grains acts as a trapping site of hydrogen, the degree of embrittlement caused by hydrogen can be reduced.</p>
+    <p id="p-00067-en" num="0067">While the invention has been described in detail and with reference to specific embodiments thereof, it will be apparent to one skilled in the art that various changes and modifications can be made therein without departing from the spirit and scope thereof. The present application is based on Japanese Patent Application No. <patcit id="pcit-00003" dnum="JP2012288610A"><text>2012-288610 filed on December 28, 2012</text></patcit>, and the contents are incorporated herein by reference.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>An Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance, which has a composition comprising, in terms of % by mass, C: 0.005% to 0.10%, Si: 0.01 % to 0.10%, P: 0.015% or less, S: 0.003% or less, Ni: 23.0% to 27.0%, Cr: 12.0% to 16.0%, Mo: 0.01% or less, Nb: 0.01% or less, W: 2.5% to 6.0%, Al: 1.5% to 2.5%, and Ti: 1.5% to 2.5%, the balance being Fe and other unavoidable impurities.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance according to claim 1, wherein the alloy contains P: 0.003% to 0.015% in terms of % by mass.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance according to claim 1 or 2, wherein the composition further contains one or two kinds of B: 0.0020% to 0.0050% and Zr: 0.02% to 0.05%.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance according to any one of claims 1 to 3, wherein the alloy does not contain an η phase and 15% or more of a γ' phase in terms of a volume ratio in the metal structure.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The Fe-Ni-based alloy according to any one of claims 1 to 4, wherein, in a tensile test at 625°C, a hydrogen embrittlement resistance index (reduction of area ratio in the tensile test: hydrogen-charged material/As material) is 0.4 or more.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en" independent="true">
+      <claim-text>A method for producing an Fe-Ni-based alloy having excellent high-temperature characteristics and hydrogen embrittlement resistance, comprising:
+<claim-text>subjecting an alloy, which has a composition comprising, in terms of % by mass, C: 0.005% to 0.10%, Si: 0.01% to 0.10%, P: 0.015% or less, S: 0.003% or less, Ni: 23.0% to 27.0%, Cr: 12.0% to 16.0%, Mo: 0.01% or less, Nb: 0.01% or less, W: 2.5% to 6.0%, Al: 1.5% to 2.5%, and Ti: 1.5% to 2.5%, the balance being Fe and other unavoidable impurities, to a solution treatment at 950°C or higher;</claim-text><claim-text>then, subjecting the alloy to a first-stage aging heat treatment in the range of 700 to 800°C; and</claim-text><claim-text>then, subjecting the alloy to a second-stage aging heat treatment at a temperature lower than the temperature at the first-stage aging heat treatment in the range of 700 to 800°C.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940174A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940174A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940174A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940174A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940174A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940174A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940174A1.PDF" type="pdf" size="781632" pages="18" />
+</lexisnexis-patent-document>

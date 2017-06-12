@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252351A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021824" date-changed="20150922" time-changed="051841">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229349">
+        <country>US</country>
+        <doc-number>20150252351</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14717724</doc-number>
+        <date>20150520</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150922">
+      <classification-ipcr sequence="1">
+        <text>C12N   9/96        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>96</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C12N   9/12        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C12P  19/34        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>19</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150922">
+      <classification-cpc sequence="1">
+        <text>C12N   9/96        20130101 FI20150912BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>96</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150912</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12N   9/1241      20130101 LI20150912BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>1241</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150912</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12N   9/1252      20130101 LI20150611BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>1252</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150611</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12P  19/34        20130101 LI20150721BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>19</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C12Q   1/686       20130101 LI20150723BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>686</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150723</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C12Q   1/6869      20130101 LI20150721BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>6869</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C12Q   1/686       20130101 LI20150702BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>12</class>
+            <subclass>Q</subclass>
+            <main-group>1</main-group>
+            <subgroup>686</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150702</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C12Q2527/125       20130101 LA20150702BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>12</class>
+            <subclass>Q</subclass>
+            <main-group>2527</main-group>
+            <subgroup>125</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150702</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">Methods and Compositions for Amplification of Nucleic Acids</invention-title>
+    <related-documents date-changed="20150910">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13791164</doc-number>
+              <date>20130308</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9085761</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007177</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61659542</doc-number>
+          <date>20120614</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Affymetrix, Inc.</orgname>
+            <address>
+              <city>Santa Clara</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>McGall</last-name>
+            <first-name>Glenn H.</first-name>
+            <address>
+              <city>Palo Alto</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Barone</last-name>
+            <first-name>Anthony D.</first-name>
+            <address>
+              <city>San Jose</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kubu</last-name>
+            <first-name>Christopher J.</first-name>
+            <address>
+              <city>Twinsburg</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173566236">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252351</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150520</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566235">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252351</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150520</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides methods, compositions, and kits for storing and enhancing the activity of polymerases and particularly thermostable polymerases. The methods comprise mixing a thermostable polymerase with at least one zwitterionic or ylide surfactant that has at least one PEO group. In another aspect the polymerase is mixed with a blocker such as PLURONIC® or TETRONIC® or an amine N-oxide derivative thereof. The thermostable polymerase may be reversibly inactivated by treatment with 2-(Methylsulfonyl)ethyl 4-nitrophenyl carbonate. Compositions and kits for performing the process according to the invention are also provided.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of U.S. patent application Ser. No. 13/791,164 filed Mar. 8, 2013, which claims the benefit of U.S. Provisional Patent Application Ser. No. 61/659,542 filed Jun. 14, 2012, the contents of each of which are incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention is generally in the field of nucleic acid amplification.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">Compositions of thermostable nucleic acid polymerases are useful for amplification of nucleic acids by multiple cycles of the polymerase chain reaction. Various compositions for stabilizing polymerases using surfactants have been disclosed. In an early study it was observed that viral DNA polymerase activity was stimulated and stabilized against thermal inactivation by nonionic detergent (see, Wu and Cetta, Biochemistry (1975) 14(4):789-795). U.S. Pat. No. 6,127,155 discloses stabilization of thermostable DNA polymerases in a composition containing non-ionic polymeric detergents. U.S. Pat. No. 6,242,235 discloses cationic polyethoxylated amine surfactants as polymerase stabilization agents, WO 2008152102 (Liu et al.) and US Pat. Pub. No. 20100099150 (Fang et al.) disclose polymerase stabilization by anionic detergents. US Pat. Pub. No. 20080064071 (Hogrefe et al.) discloses zwitterionic detergents for storage and use of DNA polymerases and US Pat. Pub. No. 2008145910 (Ward et al.) discloses stabilization of DNA polymerase using anionic or zwitterionic detergents during thermal cycling.</p>
+      <p id="p-00004-en" num="0004">Amplification of nucleic acids involves the thermal cycling of a reaction mixture containing a nucleic acid polymerase to generate an amplified target nucleic acid. An example of this thermal cycling process is that which occurs in Polymerase Chain Reaction (PCR), a laboratory technique that can theoretically take one molecule of DNA and produce measurable amounts of identical DNA in a short period of time. PCR is a widely used method in the fields of biotechnology, forensics, medicine, and genetic research. In this method, oligonucleotides are used as primers for a series of synthetic reactions that are catalyzed by a DNA polymerase. The reaction mixture is subjected to multiple cycles of denaturation, annealing, and synthesis performed at different temperatures. Thermostable polymerases are generally used to amplify the target nucleic acid sequences in these thermal cycling reactions because they are not inactivated by the heat denaturation step and, therefore, do not need to be replaced in every round of the amplification cycle. Although efficient, exponential amplification of target sequences is not an unlimited process. Under normal reaction conditions, the amount of DNA polymerase becomes limiting after a certain number of cycles of amplification.</p>
+      <p id="p-00005-en" num="0005">Attempts have been made to improve the PCR amplification process by employing detergents and/or surfactants. For example, U.S. Pat. No. 6,127,155 discloses that the non-ionic detergents NP-40 and Tween stabilize Taq DNA polymerase. However, this patent does not disclose the use of non-detergent surfactants or zwitterionic detergents for the stability of thermostable polymerases in PCR reactions. As another example, US Pat. Pub. No. 20030017567 discloses a method for performing an amplification reaction utilizing a dye that converts electromagnetic energy into thermal energy to heat the reaction mixture. A zwitterionic surfactant is added to the reaction mixture to reduce interference of the dye with the functioning of the nucleic acid polymerase. Additionally, U.S. Pat. Pub. No. 20020168658 discloses the use of zwitterions in combination with a compound that disrupts base pairing, e.g., DMSO, to improve the amplification of nucleic acids that are G+C rich. However, this publication does not disclose the use of zwitterionic detergents alone in improving the amplification of nucleic acids and actually teaches that the zwitterionic detergents used should be selected carefully so as not to inhibit the activity of the DNA polymerase in the reaction.</p>
+      <p id="p-00006-en" num="0006">Given the widespread use and importance of thermal cycling processes, there is a need in the art for ways to improve the stability and/or enhance the activity of thermostable enzymes used in DNA amplification.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00007-en" num="0007">In one aspect, stabilization of nucleic acid polymerases by zwitterionic derivatives of poly-alkoxylated alkyl derivatives and particularly amine-N-oxide derivatives is disclosed. Amine-N-oxide surfactants containing a fatty alkyl group, that is preferably linear, and one or more polyoxyethylene groups are particularly preferred for stabilizing polymerase activity.</p>
+      <p id="p-00008-en" num="0008">In another aspect, stabilization of nucleic acid polymerases by nonionic poly(propylene oxide)-poly(ethylene oxide) block copolymer surfactants is disclosed.</p>
+      <p id="p-00009-en" num="0009">In another aspect, stabilization of nucleic acid polymerases by cationic poly(propylene oxide)-poly(ethylene oxide) block copolymer surfactants based on ethylenediamine is disclosed.</p>
+      <p id="p-00010-en" num="0010">In another aspect, a thermostable polymerase that has been modified with 2-(Methylsulfonyl)ethyl 4-nitrophenyl carbonate (MSEC) is disclosed. This modification inactivates the polymerase so that it is inactive until incubated at temperatures greater than about 50° C. for at least 10 minutes.</p>
+      <p id="p-00011-en" num="0011">In another aspect, compositions including a thermostable polymerase that has been modified with MSEC and an ylide surfactant are disclosed.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 1</figref> shows a gel image of products of PCR in the presence of different non-ionic and zwitterionic detergents.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 2</figref> shows a gel image of products of PCR in the presence of varying amounts of a PEO<sub>n </sub>detergent or non-ionic detergents Tween-20 and NP-40 with detergent-free Taq DNA Polymerase.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 3</figref> shows a gel image of PEO<sub>n </sub>length and zwitterion variations with “detergent-free” Taq DNA Polymerase.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 4</figref> shows a gel image of various zwitterionic detergents without PEO<sub>n </sub>groups and a non-ionic, non-polymeric detergent (lauryl maltoside) with “detergent-free” Taq DNA Polymerase.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 5</figref> shows a gel image of PCR products from reactions that include various alkyl chains with PEO<sub>n </sub>groups and a polyethylene glycol.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 6</figref> shows a gel image of PCR products from reactions that included blocked co-polymers under extreme conditions with detergent-free Taq DNA Polymerase.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00018-en" num="0018">Unless defined otherwise, all technical and scientific terms used herein have the same meaning as commonly understood by one of ordinary skill in the art to which the invention pertains. The following definitions supplement those in the art and are directed to the current application and are not to be imputed to any related or unrelated case, e.g., to any commonly owned patent or application. Although any methods and materials similar or equivalent to those described herein can be used in the practice for testing of the present invention, the preferred materials and methods are described herein. Accordingly, the terminology used herein is for the purpose of describing particular embodiments only, and is not intended to be limiting.</p>
+      <p id="p-00019-en" num="0019">As used in this specification and the appended claims, the singular forms “a,” “an” and “the” include plural referents unless the context clearly dictates otherwise. Thus, for example, reference to “a molecule” includes a plurality of such molecules, and the like.</p>
+      <p id="p-00020-en" num="0020">The term “about” as used herein indicates the value of a given quantity varies by +/−10% of the value, or optionally +/−5% of the value, or in some embodiments, by +/−1% of the value so described.</p>
+      <p id="p-00021-en" num="0021">Throughout this disclosure, various aspects of this invention can be presented in a range format. It should be understood that when a description is provided in range format, this is merely for convenience and brevity and should not be construed as an inflexible limitation on the scope of the invention. Accordingly, the description of a range should be considered to have specifically disclosed all the possible sub-ranges as well as individual numerical values within that range. For example, description of a range such as from 1 to 6 should be considered to have specifically disclosed sub-ranges such as from 1 to 3, from 1 to 4, from 1 to 5, from 2 to 4, from 2 to 6, from 3 to 6, for example, as well as individual numbers within that range, for example, 1, 2, 3, 4, 5, and 6. This applies regardless of the breadth of the range.</p>
+      <p id="p-00022-en" num="0022">Many of the methods and systems disclosed herein utilize enzyme activities. A variety of enzymes are well known, have been characterized and many are commercially available from one or more supplier. For a review of enzyme activities commonly used in molecular biology see, for example, Rittie and Perbal, <i>J. Cell Commun. Signal. </i>(2008) 2:25-45, incorporated herein by reference in its entirety.</p>
+      <p id="p-00023-en" num="0023">There are a variety of methods for amplification that may be used in combination with the methods disclosed herein include. Amplification of nucleic acids is widely used in research, forensics, medicine and agriculture. One of the best-known amplification methods is the polymerase chain reaction (PCR), (See for example, U.S. Pat. Nos. 4,683,195, 4,683,202 and 4,800,159). A PCR reaction typically utilizes two oligonucleotide primers, which are hybridized to the 5′ and 3′ borders of the target sequence and a DNA polymerase, which can extend the annealed primers by adding on deoxynucleoside-triphosphates (dNTPs) to generate double-stranded products. By raising and lowering the temperature of the reaction mixture, the two strands of the DNA product are separated and can serve as templates for the next round of annealing and extension, and the process is repeated.</p>
+      <p id="p-00024-en" num="0024">The invention provides compositions, kits and methods that include a polymerase and a zwitterionic or non-ionic surfactant that may be a detergent or non-detergent. Such compositions and methods are useful in, among other things, the storage and use of DNA polymerases in thermal cycling reactions, including, but not limited to PCR and all of its variants (e.g., real-time PCR or quantitative PCR). The present invention identifies novel surfactants that increase stability and enhance activity of thermostable DNA polymerases.</p>
+      <p id="p-00025-en" num="0025">It has been previously observed that product yields are dramatically higher when PCR amplification reactions are conducted in buffers containing one or more non-ionic detergents (NP-40, TWEEN-20), zwitterionic detergents (e.g., CHAPS, CHAPSO, Anzergent 3-10, and Anzergent 3-12) or non-detergent surfactants (e.g., Surfynol 465). Similarly, detergents and non-detergent surfactants are known to produce higher amplification efficiencies, higher total fluorescence, and earlier Ct values in QPCR reactions employing thermostable DNA polymerase and SYBR Green to monitor duplex DNA formation.</p>
+      <p id="p-00026-en" num="0026">In general, the invention is directed to storage and reaction compositions having a polymerase and at least one surfactant. In one embodiment, the storage and reaction compositions comprise a polymerase and two or more surfactants. Generally, a reaction mixture will include some or all of the necessary components to perform a nucleic acid synthesis reaction, such as primers, dNTPs, and buffers. A storage mixture may or may not include all the components necessary to perform a nucleic acid synthesis reaction.</p>
+      <p id="p-00027-en" num="0027">The polymerases may be stored in a storage buffer comprising a zwitterionic detergent, which may be an ylide, a non-detergent surfactant, or both. The polymerases of the invention, described herein, may be obtained commercially or produced by methods well known to one of skill in the art. The storage buffer and reaction buffers may include from about 0.001% to 5% volume/volume of each zwitterionic detergent or non-detergent surfactant employed.</p>
+      <p id="p-00028-en" num="0028">The terms “surfactant” as used herein refers to compounds that are amphiphilic, meaning they contain both hydrophobic groups (their tails) and hydrophilic groups (their heads). Surfactants lower the surface tension of a liquid, the interfacial tension between two liquids, or that between a liquid and a solid. Surfactants may act as detergents, wetting agents, emulsifiers, foaming agents, and dispersants. The terms surfactant and detergent may be used interchangeably herein, but detergents typically have the additional quality of having cleaning properties in dilute solution. Surfactants or detergents may be anionic, (e.g. alkylbenzenesulfonates), cationic, non-ionic (e.g. Tween, Triton and Brij series detergents) and zwitterionic (e.g. CHAPS).</p>
+      <p id="p-00029-en" num="0029">The term “ylide” or “ylides” refers to a subset of zwitterionic compounds in which an anionic site Y− is attached directly to a heteroatom X+ (usually nitrogen, phosphorus or sulfur) carrying a formal positive charge. They are thus 1,2-dipolar species of the type RmX+-Y−Rn. If X is a saturated atom of an element from the first row of the periodic system, the ylide is commonly represented by a charge-separated form. If X is a second, third, etc. row element uncharged canonical forms are available RmX═YRn. If X is an unsaturated atom, doubly bonded to another first row element Z, the negative charge on Y may be stabilized by p-conjugation, Z═X+-Y−Rn&lt;&lt;Z−X+═YRn. Such ylides belong to the class 1,3-dipolar compounds. Note that ylide is a complete word, not to be confused with the suffix -ylide, used for some radical anions. Subclasses of ylides: Ylides RmX+-C−R2 having the negative charge on carbon are classified by citing the name of the element X before the word ylide. For example, nitrogen ylide, phosphorus ylide, oxygen ylide, and sulfur ylide. A further specification may be achieved by citing the class name of RmX before the word ylide. Thus nitrogen ylides include amine ylides, R3N+-C−R2, azomethine ylides, R2C═N+R−C−R2, and nitrile ylides, RC°N+-C−R2.</p>
+      <p id="p-00030-en" num="0030">A “zwitterion” is a neutral compound having formal unit electrical charges of opposite sign, for example, H<sub>3</sub>N+CH<sub>2</sub>C(═O)O<sup>−</sup> ammonioacetate (glycine). The compound betaine ((CH<sub>3</sub>)<sub>3</sub>N<sup>+</sup>—CH<sub>2</sub>C(═O)O<sup>−</sup>N,N,N-trimethylammonioacetate) and other “betaines” (neutral molecules having charge-separated forms with an onium atom which bears no hydrogen atoms and that is not adjacent to the anionic atom) are also zwitterionic compounds. As used herein the term refers to compounds with the charges on either adjacent or non-adjacent atoms. Zwitterionic compounds with charges on adjacent atoms may also be referred to herein as ylides. Such compounds include, but are not limited to, CHAPS and sulfobetaines sold under the brand names ZWITTERGENT® (Calbiochem, San Diego, Calif.) and ANZERGENT® (Anatrace, Inc., Maumee, Ohio).</p>
+      <p id="p-00031-en" num="0031">An “amine oxide” or “amine N-oxide” is a compound derived from tertiary amines by the attachment of one oxygen atom to the nitrogen atom R<sub>3</sub>N<sup>+</sup>—O<sup>−</sup>. By extension the term includes the analogous derivatives of primary and secondary amines. Because the charges are on adjacent atoms, amine oxides are considered to be ylides herein.</p>
+      <p id="p-00032-en" num="0032">In some aspects, zwitterionic or ylide derivatives of poly-alkoxylated alkyl derivatives, particularly the amine N-oxides are used to stabilize polymerases. These surfactants have the following general characteristics: a hydrophobic group comprising a linear alkyl or poly(propylene oxide) chain; a hydrophilic polyether group comprising a poly(ethylene oxide) or a random copolymer of polyethylene oxide/poly(propylene oxide); and an ylide or zwitterionic group comprising an amine oxide, carboxy-alkylammonium, or sulfo-alkylammonium.</p>
+      <p id="p-00033-en" num="0033">In other aspects, the surfactant is block co-polymer that may be a poloxamer or a poloxamine. The term “block co-polymer” herein refers to a polymer composed of two or more different polymers (“co-polymer”) arranged in segments or “blocks” of each constituent polymer. Both poloxamers and poloxamines are block copolymers.</p>
+      <p id="p-00034-en" num="0034">The term “poloxamer” herein refers to any di- or tri-block copolymer composed of polypropylene oxide and polyethylene oxide blocks arranged in a basic A-B-A structure: PEO<sub>x</sub>-PPO<sub>y</sub>-PEO<sub>x</sub>. Polypropylene oxide (PPO or polyoxypropylene, also (poly(propylene oxide))) has the formula (C<sub>3</sub>H<sub>6</sub>O)<sub>x</sub>, (thus a subunit mw of 58) and is a hydrophobe. Polyethylene oxide (PEO or polyoxyethylene) is a nonionic homopolymer of ethylene oxide and can be represented by the formula (OCH<sub>2</sub>CH<sub>2</sub>)<sub>x </sub>where x represent the average number of oxyethylene groups, it may also be represented by the formula (C<sub>2</sub>H<sub>4</sub>O)<sub>x</sub>, (thus a subunit mw of 44) and is a hydrophile. Poloxamers are nonionic and have a central hydrophobic chain of PPO flanked by two hydrophilic chains of PEO. For a more comprehensive description see U.S. Pat. No. 3,740,421. The common chemical name for poloxamers is polyoxypropylene-polyoxyethylene block copolymer. The CAS number is 9003-11-6.</p>
+      <p id="p-00035-en" num="0035">There are many species of poloxamers differing in total molecular weight, polyoxypropylene to polyoxyethylene ratio, surfactant properties and physical form in undiluted solution. Physical forms include Liquids (L), Pastes (P) and Flakable solids (F). The manner in which poloxamers are typically synthesized results in a population of molecules in a relatively circumscribed range of molecular weights characterized by a hydrophobe having a defined average molecular weight and total average percentage of hydrophile groups. Because the lengths of the polymer blocks can be customized, many different poloxamers exist with slightly different properties. Properties include, for example, hydrophilic-lipophilic balance or HLB and cloud point.</p>
+      <p id="p-00036-en" num="0036">Poloxamers are also known by the trade name PLURONIC® in the US and LUTROL® in Europe (BASF). BASF developed a PLURONIC® grid to provide a graphic representation of the relationship between copolymer structure, physical form and surfactant characteristics. On the PLURONIC® surfactant grid the molecular weight ranges of the PPO are plotted against the weight-percent of the PEO present in each molecule. Poloxamer species defined by their location on the PLURONIC® grid can be expected to have shared properties that are a function of their total molecular weight and relative hydrophobicity. For a description of the PLURONIC® grid and an explanation of the nomenclature used by BASF in naming PLURONICS® see US Pat. Pub. No. 20110044929.</p>
+      <p id="p-00037-en" num="0037">Copolymers with a short hydrophilic poly-PEO block or/and an extended lipophilic poly-PPO block (such as PLURONIC® L121 and L101) are highly lipophilic and are characterized by a relatively low CMC and low HLB. In contrast, copolymers with an extended hydrophilic poly-PEO block or/and short lipophilic poly-PPO block (such as PLURONIC® F108 and F88) are hydrophilic and are characterized by relatively high CMC and high HLB. PLURONIC®compositions such as P85 or P103 are intermediate in their lipophilicity and have CMC and HLB values that fall between the two extremes identified above.</p>
+      <p id="p-00038-en" num="0038">As used herein, the term “poloxamine” refers to poly(oxyethylene)-poly(oxypropylene) (PEO-PPO) block copolymers where a PEO-PPO unit is linked to another PEO-PPO unit by an amine and having the general structure (PEO<sub>n</sub>-PPO<sub>m</sub>)<sub>2</sub>-N—C<sub>2</sub>H<sub>4</sub>—N-(PPO<sub>m</sub>-PEO<sub>n</sub>)-<sub>2</sub>. TETRONIC® and TETRONIC® R nonionic surfactants produced by BASF are exemplary poloxamines.</p>
+      <p id="p-00039-en" num="0039">Poloxamines are in the alkoxylated amine chemical family and have a hydrophobic center consisting of two tertiary amino groups carrying both two hydrophobic PPO chains of equal length each followed by a hydrophilic PEO chain. Poloxamines can still be described as a tri-block copolymer although bulkier than poloxamers. Poloxamines of the BASF TETRONIC® type have the chemical name: 1,2-Ethanediamine, polymer with the and the CAS number: 11111-34-5. Reverse TETRONICS® have the formula (PPO<sub>n</sub>-PEO<sub>m</sub>)<sub>2</sub>-N—C2H4-N-(PEO<sub>m</sub>-PPO<sub>n</sub>)<sub>2 </sub>and the CAS number: 26316-40-5.</p>
+      <p id="p-00040-en" num="0040">In another aspect polymerases are stabilized by inclusion of poly-alkoxylated alkylamine derivatives, particularly amine N-oxides. Although alkyl (C<sub>8</sub>-C<sub>18</sub>)-dimethylamine N-oxides are commonly available, we did not observe them to be effective for polymerase stabilization. On the other hand amine oxide detergents containing a fatty alkyl group (preferably linear) and one or more polyoxyethylene groups were observed to be particularly effective for stabilizing polymerase activity. The following general structures are exemplary of the compounds found to be effective for polymerase stabilization:</p>
+      <p id="p-00041-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="16.59mm" wi="68.83mm" alt="embedded image" img-content="chem" file="US20150252351A1_00007.PNG" img-format="png" original="US20150252351A1-20150910-C00001.TIF" />
+        </chemistry>
+        <ul id="ul-00001-en" list-style="none">
+          <li>where Q=-O<sup>⊖</sup> or —X—Y; where X═C<sub>1</sub>-C<sub>3 </sub>alkyl; and Y═CO<sub>2</sub><sup>⊖</sup>, SO<sub>3</sub><sup>⊖</sup>;</li>
+          <li>m+n=2-200 and more preferably 5-50;</li>
+          <li>R1=C<sub>1</sub>-C<sub>30 </sub>alkyl and more preferably C<sub>10</sub>-C<sub>20</sub>;</li>
+          <li>R2=CH<sub>3</sub>, CH<sub>2</sub>CH<sub>3</sub>; x=1,2; and</li>
+          <li>R3=H, CH<sub>3</sub>, or CH<sub>2</sub>OH.</li>
+        </ul>
+      </p>
+      <p id="p-00042-en" num="0046">In another aspect polymerases are stabilized using ylide or zwitterionic surfactants derived from alkanediamine block copolymers (for example TETRONIC® surfactants). The following structures are exemplary:</p>
+      <p id="p-00043-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="31.67mm" wi="69.51mm" alt="embedded image" img-content="chem" file="US20150252351A1_00008.PNG" img-format="png" original="US20150252351A1-20150910-C00002.TIF" />
+        </chemistry>
+        <ul id="ul-00002-en" list-style="none">
+          <li>Q=−O<sup>⊖</sup>; or —X—Y; where X═C<sub>1</sub>-C<sub>3 </sub>alkyl; and Y═CO<sub>2</sub><sup>⊖</sup>, SO<sub>3</sub><sup>⊖</sup></li>
+          <li>m (avg)=2-100; n (avg)=2-200</li>
+          <li>R1=C<sub>2</sub>-C<sub>6 </sub>Alkyl (preferably 2-3)</li>
+          <li>R2=CH<sub>3</sub>, CH<sub>2</sub>CH<sub>3</sub>; x=1,2</li>
+        </ul>
+      </p>
+      <p id="p-00044-en" num="0051">In another embodiment polymerases are stabilized using cationic polypropylene oxide/polyethylene oxide block copolymer surfactants based on alkyl diamines (for example TETRONIC® surfactants). The following general structures are exemplary:</p>
+      <p id="p-00045-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="23.79mm" wi="69.93mm" alt="embedded image" img-content="chem" file="US20150252351A1_00009.PNG" img-format="png" original="US20150252351A1-20150910-C00003.TIF" />
+        </chemistry>
+        <ul id="ul-00003-en" list-style="none">
+          <li>m (avg)=2-100; (avg) n=2-200</li>
+          <li>R1=C<sub>2</sub>-C<sub>6 </sub>Alkyl (preferably 2-3)</li>
+          <li>R2=CH<sub>3</sub>, CH<sub>2</sub>CH<sub>3</sub>; x=1,2.</li>
+        </ul>
+      </p>
+      <p id="p-00046-en" num="0055">In another aspect, the TETRONIC® surfactants are modified to an amine oxide and the amine oxide form is used for stabilization. In particular TETRONIC® 1107 amine oxide was found to be particularly preferred. (TETRONIC® 1107 is tetrafunctional, ethoxylated and propoxylated ethylenediamine block copolymer surfactant, which has a cloud point (10% aqueous solution) greater than 100° C., an average molecular weight of 15000, a specific gravity of 1.04 at 25° C., a viscosity of 1100 cps at 77° C. and a melt point of 51° C.).</p>
+      <p id="p-00047-en" num="0056">In another embodiment polymerases are stabilized using nonionic polypropylene poloxamers, for example, the PLURONIC® surfactants. The following general structure is exemplary:</p>
+      <p id="p-00048-en" num="0000">
+        <chemistry id="chem-00004-en" num="00004">
+          <img id="img-00004-en" he="6.35mm" wi="70.61mm" alt="embedded image" img-content="chem" file="US20150252351A1_00010.PNG" img-format="png" original="US20150252351A1-20150910-C00004.TIF" />
+        </chemistry>
+        <ul id="ul-00004-en" list-style="none">
+          <li>m (avg)=2-100 and n (avg)=2-200.</li>
+        </ul>
+      </p>
+      <p id="p-00049-en" num="0058">In one aspect the general structure of the surfactant additive is an amine oxide ylide or zwitterion derived from polyethoxylated alkylamines having the general structure:</p>
+      <p id="p-00050-en" num="0000">
+        <chemistry id="chem-00005-en" num="00005">
+          <img id="img-00005-en" he="13.72mm" wi="56.56mm" alt="embedded image" img-content="chem" file="US20150252351A1_00011.PNG" img-format="png" original="US20150252351A1-20150910-C00005.TIF" />
+        </chemistry>
+        <ul id="ul-00005-en" list-style="none">
+          <li>where Q=−O<sup>⊖</sup> or —(CH<sub>2</sub>)<sub>p</sub>Y, where p=1-6 and Y=CO<sub>2</sub>—, SO<sub>3</sub>—, PO<sub>3</sub>H—; OSO<sub>3</sub>—, or OPO<sub>3</sub>H—;</li>
+          <li>m+n=2-200 (preferably 5-50):</li>
+          <li>x=1 or 2;</li>
+          <li>R1=C<sub>8</sub>-C<sub>20 </sub>Alkyl (eg., —(CH<sub>2</sub>)<sub>n</sub>CH<sub>3</sub>)</li>
+          <li>R2 =CH<sub>3</sub>, CH<sub>2</sub>CH<sub>3</sub>, CH<sub>2</sub>OCH<sub>3</sub>, CH<sub>2</sub>CH<sub>2</sub>OCH<sub>3</sub>, or CH<sub>2</sub>CH<sub>2</sub>OH, and</li>
+          <li>R3=CH3, CH<sub>2</sub>OH , CH<sub>2</sub>CH<sub>3</sub>, CH<sub>2</sub>OCH<sub>3</sub>, CH<sub>2</sub>CH<sub>2</sub>OCH<sub>3</sub>, or CH<sub>2</sub>CH<sub>2</sub>OH.</li>
+        </ul>
+      </p>
+      <p id="p-00051-en" num="0065">In another aspect, the surfactant has the following general structure:</p>
+      <p id="p-00052-en" num="0000">
+        <chemistry id="chem-00006-en" num="00006">
+          <img id="img-00006-en" he="14.31mm" wi="74.17mm" alt="embedded image" img-content="chem" file="US20150252351A1_00012.PNG" img-format="png" original="US20150252351A1-20150910-C00006.TIF" />
+        </chemistry>
+        <ul id="ul-00006-en" list-style="none">
+          <li>where m+n=2-200 (preferably 5-50); x=1-2</li>
+          <li>R1=C<sub>8</sub>-C<sub>24 </sub>Alkyl (e.g. —(CH<sub>2</sub>)<sub>n</sub>CH<sub>3</sub>)</li>
+          <li>R2=CH<sub>3</sub>, CH<sub>2</sub>CH<sub>3</sub>, CH<sub>2</sub>OCH<sub>3</sub>, CH<sub>2</sub>CH<sub>2</sub>OCH<sub>3 </sub>or CH<sub>2</sub>CH<sub>2</sub>OH</li>
+          <li>R3=CH<sub>3</sub>, CH<sub>2</sub>CH<sub>3</sub>, CH<sub>2</sub>OCH<sub>3</sub>, CH<sub>2</sub>CH<sub>2</sub>OCH<sub>3 </sub>or CH<sub>2</sub>CH<sub>2</sub>OH</li>
+          <li>R4=CH<sub>3</sub>, CH<sub>2</sub>OH, CH<sub>2</sub>CH<sub>3</sub>, CH<sub>2</sub>OCH<sub>3</sub>, or CH<sub>2</sub>CH<sub>2</sub>OCH<sub>3</sub>.</li>
+        </ul>
+      </p>
+      <p id="p-00053-en" num="0071">In another aspect, the surfactant has the following general structure:</p>
+      <p id="p-00054-en" num="0000">
+        <chemistry id="chem-00007-en" num="00007">
+          <img id="img-00007-en" he="13.72mm" wi="74.68mm" alt="embedded image" img-content="chem" file="US20150252351A1_00013.PNG" img-format="png" original="US20150252351A1-20150910-C00007.TIF" />
+        </chemistry>
+        <ul id="ul-00007-en" list-style="none">
+          <li>where m+n=2-200 (preferably 5-50); x=1-2</li>
+          <li>R1=C<sub>8</sub>-C<sub>24 </sub>Alkyl (e.g. —(CH<sub>2</sub>)<sub>n</sub>CH<sub>3</sub>)</li>
+          <li>R2=CH<sub>3</sub>, CH<sub>2</sub>CH<sub>3</sub>, CH<sub>2</sub>OCH<sub>3</sub>, CH<sub>2</sub>CH<sub>2</sub>OCH<sub>3 </sub>or CH<sub>2</sub>CH<sub>2</sub>OH</li>
+          <li>R3=CH<sub>3</sub>, CH<sub>2</sub>CH<sub>3</sub>, CH<sub>2</sub>OCH<sub>3</sub>, CH<sub>2</sub>CH<sub>2</sub>OCH<sub>3 </sub>or CH<sub>2</sub>CH<sub>2</sub>OH</li>
+          <li>R4=CH<sub>3</sub>, CH<sub>2</sub>OH, CH<sub>2</sub>CH<sub>3</sub>, CH<sub>2</sub>OCH<sub>3</sub>, or CH<sub>2</sub>CH<sub>2</sub>OCH<sub>3</sub>.</li>
+        </ul>
+      </p>
+      <p id="p-00055-en" num="0077">In another aspect, the surfactant has the following general structure:</p>
+      <p id="p-00056-en" num="0000">
+        <chemistry id="chem-00008-en" num="00008">
+          <img id="img-00008-en" he="12.11mm" wi="55.20mm" alt="embedded image" img-content="chem" file="US20150252351A1_00014.PNG" img-format="png" original="US20150252351A1-20150910-C00008.TIF" />
+        </chemistry>
+        <ul id="ul-00008-en" list-style="none">
+          <li>Q=−O<sup>⊖</sup>; or —(CH<sub>2</sub>)<sub>p</sub>Y, where p=1-6, and Y=CO<sub>2</sub><sup>−</sup>, SO<sub>3</sub><sup>−</sup>, PO<sub>3</sub>H<sup>−</sup>, OSO<sub>3</sub><sup>−</sup>, OPO<sub>3</sub>H<sup>−</sup>;</li>
+        </ul>
+      </p>
+      <p id="p-00057-en" num="0079">m+n=2-200 (preferably 5-50); x=1-2 <ul id="ul-00009-en" list-style="none"><li>R1=C<sub>8</sub>-C<sub>24 </sub>Alkyl (e.g. —(CH<sub>2</sub>)<sub>n</sub>CH<sub>3</sub>)</li><li>R2=CH<sub>3</sub>, CH<sub>2</sub>OH, CH<sub>2</sub>CH<sub>3</sub>, CH<sub>2</sub>OCH<sub>3</sub>, or CH<sub>2</sub>CH<sub>2</sub>OCH<sub>3</sub>.</li></ul></p>
+      <heading id="h-00007-en" level="1">EXAMPLE 1</heading>
+      <p id="p-00058-en" num="0082">Amine oxide derivatives of selected surfactants were prepared as follows: amine containing surfactants (10 mmole in amine equivalents) were dissolved in ˜3-4 volumes of ethanol. H<sub>2</sub>O<sub>2 </sub>(30%; 2.3 ml; 20 mmole) was added, and the solution stirred at 55° C. for 24-48 hrs. After cooling to room temperature, ˜20 mg of 10% Pt° on C (platinum on activated carbon) was added, and stirring continued for another 4 h to decompose the excess peroxide. The solution was filtered through celite and evaporated under vacuum. The <sup>1</sup>H-NMR was recorded in MeOH-d<sub>4</sub>.</p>
+      <p id="p-00059-en" num="0083">The procedure above was used to prepare amine N-oxides from the following polyalkoxylated amine surfactants: PEO(15) Laurylamine (DeThoxamine C-15, Deforest); PEO(5) Isodecyloxypropylamine (Tomamine E-14-5, Air Products); PEO(5) Isotridecyloxypropylamine (Tomamine E-17-5, Air Products); PEO(5) Stearylamine; PEO(10) Stearylamine; PEO(15) Stearylamine; PEO(50) Stearylamine; TETRONIC® 304 (MW 1650); TETRONIC® 904; and TETRONIC® 1107. When using “PEO(X)” herein the (X) is the number of moles of ethylene oxide.</p>
+      <p id="p-00060-en" num="0084">For testing, several additional amine oxide surfactants were obtained directly from commercial sources, including MACAT AO-12-2 (N,N-Bis(2-hydroxyethyl)laurylamine N-Oxide, available from Mason Chemicals) which is an ylide lacking the PEO groups and having the following structure:</p>
+      <p id="p-00061-en" num="0000">
+        <chemistry id="chem-00009-en" num="00009">
+          <img id="img-00009-en" he="27.18mm" wi="71.29mm" alt="embedded image" img-content="chem" file="US20150252351A1_00015.PNG" img-format="png" original="US20150252351A1-20150910-C00009.TIF" />
+        </chemistry>
+        <ul id="ul-00010-en" list-style="none">
+          <li>TOMAMINE® AO-405 Surfactant (Air Products) (Polyethoxylated/Polypropoxylated (isodecyloxypropyl)amine N-Oxide (CAS #218141-38-9), falls into a series of amine oxide compounds available from Air Products under the brand name TOMAMINE® and having the general structure:</li>
+        </ul>
+      </p>
+      <p id="p-00062-en" num="0000">
+        <chemistry id="chem-00010-en" num="00010">
+          <img id="img-00010-en" he="12.19mm" wi="44.03mm" alt="embedded image" img-content="chem" file="US20150252351A1_00016.PNG" img-format="png" original="US20150252351A1-20150910-C00010.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00063-en" num="0000">and Lauryldimethylamine N-oxide (available from Anatrace):</p>
+      <p id="p-00064-en" num="0000">
+        <chemistry id="chem-00011-en" num="00011">
+          <img id="img-00011-en" he="8.89mm" wi="66.04mm" alt="embedded image" img-content="chem" file="US20150252351A1_00017.PNG" img-format="png" original="US20150252351A1-20150910-C00011.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00065-en" num="0086">PEO(10) Stearyl (3-sulfo-propyl)-ammonium was prepared as follows: a mixture of propanesultone (0.36 g, 3 mmole) and PEO(10) Stearylamine (1.6 g, 2 mmole) was stirred in a sealed vial at 50-55° C. for 24 hr, producing a viscous yellow oil. Ethanolamine (0.12 ml, 2 mmole) was added and stirring continued at 50-55° C. for another 24 hr to quench the unreacted propanesultone. The <sup>1</sup>H-NMR was recorded in MeOH-d<sub>4</sub>.</p>
+      <heading id="h-00008-en" level="1">EXAMPLE 2</heading>
+      <p id="p-00066-en" num="0087">In order to test the efficacy of detergents on Taq DNA Polymerase, a stock of Taq DNA Polymerase at a base concentration of 111 units/ul was diluted to 5 units/ul in a storage buffer that lacked detergents. The standard Taq DNA Polymerase storage buffer has 0.5% Tween-20 and 0.5% NP-40. In this example 0.625 units of Taq were added per 25 ul reaction, so that represents a change in final detergent concentration of 0.0025% each detergent to 0.00011% of each. A 455 bp single-copy target from the human numb gene was PCR-amplified from 1 ng human genomic DNA in a 25 ul reaction with 0.625 units of the diluted Taq DNA polymerase. The cycling conditions were 95° C. for 2 minutes; 35 cycles of 95° C. for 10 seconds, 55° C. for 20 seconds, and 72° C. for 30 seconds; 72° C. for 5 minutes; and 10° C. until required. An aliquot of 10 ul was run on a 1.5% agarose/ethidium bromide gel.</p>
+      <p id="p-00067-en" num="0088">In <figref>FIG. 1</figref>, the results of the initial screen of several non-ionic and zwitterionic detergents are shown. In this example there is residual Tween-20 and NP-40 in the enzyme storage buffer. The concentrations of surfactants listed are the final concentration of that surfactant in the assay. All conditions in the example, including the “no detergent” condition, have 0.00011% Tween-20 and 0.00011% NP-40 resulting from carry-over from the enzyme storage buffer. As can be seen from the “no detergent” lanes on both gels, the carry over is not sufficient to promote the production of a visible PCR product of the expected size. As expected Tween-20 and NP-40 worked when present at 0.01% and 0.1%. PMAL-C8, -C10, -C12 or -C16, which are zwitterions but do not contain PEO did not. A0-12-2 worked at 0.01% and PEO(10)SAP worked at 0.01, 0.1 and 1%. It is clear that in addition to the standard non-ionic detergents with PEO<sub>n</sub>, a zwitterionic or ylide with that polymer will also contribute to PCR product generation.</p>
+      <p id="p-00068-en" num="0089">AO-12-2 is Dihydroxyethyl Cocamine Oxide; AO-405 is Polyethoxylated/Polypropoxylated(isodecyloxypropyl)amine N-Oxide; and PEO(10)SAO is Polyethoxylated (10) Stearylamine N-Oxide. The AO-12-2 resulted in a product at 0.01% but not at 0.1 or 1%. AO-405 results in no visible product. The PEO(10)SAO at between 0.01% and 1% showed similar amounts of product as the inclusion of 0.1% Tween-20. The number in parenthesis (X) refers to the average total number of ethylene oxide units, so if there are two PEO groups and X is 5 then the average length (n) is 2.5.</p>
+      <p id="p-00069-en" num="0090">PMAL®-C12 is Poly (Maleic Anhydride-alt-1-Tetradecene) substituted with 3-(Dimethylamino)Propylamine and has the following structure:</p>
+      <p id="p-00070-en" num="0000">
+        <chemistry id="chem-00012-en" num="00012">
+          <img id="img-00012-en" he="44.96mm" wi="74.34mm" alt="embedded image" img-content="chem" file="US20150252351A1_00018.PNG" img-format="png" original="US20150252351A1-20150910-C00012.TIF" />
+        </chemistry>
+        <ul id="ul-00011-en" list-style="none">
+          <li>PMAL®-C8 is Poly (Maleic Anhydride-alt-1-Decene) substituted with 3-(Dimethylamino)Propylamine and has the following structure:</li>
+        </ul>
+      </p>
+      <p id="p-00071-en" num="0000">
+        <chemistry id="chem-00013-en" num="00013">
+          <img id="img-00013-en" he="44.96mm" wi="54.86mm" alt="embedded image" img-content="chem" file="US20150252351A1_00019.PNG" img-format="png" original="US20150252351A1-20150910-C00013.TIF" />
+        </chemistry>
+        <ul id="ul-00012-en" list-style="none">
+          <li>PMAL®-C16 is Poly (Maleic Anhydride-Alt-1-Octadecene) substituted with 3-(Dimethylamino)Propylamine and has the following structure:</li>
+        </ul>
+      </p>
+      <p id="p-00072-en" num="0000">
+        <chemistry id="chem-00014-en" num="00014">
+          <img id="img-00014-en" he="36.24mm" wi="74.00mm" alt="embedded image" img-content="chem" file="US20150252351A1_00020.PNG" img-format="png" original="US20150252351A1-20150910-C00014.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00073-en" num="0093">Because a small amount of Tween-20 and NP-40 was carried over in the previous experiment, Taq DNA Polymerase was purified without the addition of detergents after the lysis step to provide a “detergent-free” Taq for use in the next example. The previous numb target and reaction conditions were used with 0.625 units of Taq per reaction. As can be seen in <figref>FIG. 2</figref>, without detergent no PCR product is generated while both non-ionic and zwitterionic surfactants with PEO<sub>n </sub>groups generate product.</p>
+      <p id="p-00074-en" num="0094">The results shown in <figref>FIG. 3</figref>, demonstrate that PEO<sub>n </sub>of different lengths and using amine-sulfoxide as the zwitterion rather than amine-oxide also led to positive results using detergent-free Taq DNA Polymerase.</p>
+      <p id="p-00075-en" num="0095">PEO(X)SA0 is polyethyoxylated (X) stearylamine N-oxide, where X is the sum of the number of PEO groups, and has the general structure:</p>
+      <p id="p-00076-en" num="0000">
+        <chemistry id="chem-00015-en" num="00015">
+          <img id="img-00015-en" he="10.50mm" wi="74.85mm" alt="embedded image" img-content="chem" file="US20150252351A1_00021.PNG" img-format="png" original="US20150252351A1-20150910-C00015.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00077-en" num="0000">and PEO(X)SAPS is polyethyoxylated (X) Stearylammoniumpropylsulfonic acid, inner salt and has the general structure:</p>
+      <p id="p-00078-en" num="0000">
+        <chemistry id="chem-00016-en" num="00016">
+          <img id="img-00016-en" he="8.72mm" wi="111.93mm" alt="embedded image" img-content="chem" file="US20150252351A1_00022.PNG" img-format="png" original="US20150252351A1-20150910-C00016.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00079-en" num="0096">Because the results demonstrate that PEO polymeric groups are useful in the methods, detergent-free Taq was tested using the same assay against various other detergents without PEO<sub>n </sub>groups. The results are shown in <figref>FIG. 4</figref> and demonstrate the need for a specific type of polymer surfactant. Note that the band in the Amphipol lane is background fluorescence. <figref>FIG. 4</figref> shows the results of testing other zwitterionic detergents without PEO<sub>n </sub>groups and a non-ionic, non-polymeric detergent, lauryl maltoside, with detergent-free Taq DNA Polymerase. LAPAO is 3-Dodecylamido-N,N′-dimethylpropyl amine oxide</p>
+      <p id="p-00080-en" num="0000">
+        <chemistry id="chem-00017-en" num="00017">
+          <img id="img-00017-en" he="12.70mm" wi="75.35mm" alt="embedded image" img-content="chem" file="US20150252351A1_00023.PNG" img-format="png" original="US20150252351A1-20150910-C00017.TIF" />
+        </chemistry>
+        <ul id="ul-00013-en" list-style="none">
+          <li>DDDAO is n-dodecyl-n,n-dimethylamine-n-oxide;</li>
+          <li>TDDAO is n-tetradecyl-n,n-dimethylamine-n-oxide;</li>
+        </ul>
+      </p>
+      <p id="p-00081-en" num="0000">
+        <chemistry id="chem-00018-en" num="00018">
+          <img id="img-00018-en" he="8.30mm" wi="71.20mm" alt="embedded image" img-content="chem" file="US20150252351A1_00024.PNG" img-format="png" original="US20150252351A1-20150910-C00018.TIF" />
+        </chemistry>
+        <ul id="ul-00014-en" list-style="none">
+          <li>FOS-CHOLINE® is n-Dodecylphosphocholine;</li>
+        </ul>
+      </p>
+      <p id="p-00082-en" num="0000">
+        <chemistry id="chem-00019-en" num="00019">
+          <img id="img-00019-en" he="28.45mm" wi="49.11mm" alt="embedded image" img-content="chem" file="US20150252351A1_00025.PNG" img-format="png" original="US20150252351A1-20150910-C00019.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00083-en" num="0000">and <ul id="ul-00015-en" list-style="none"><li>LM is Lauryl maltoside</li></ul></p>
+      <p id="p-00084-en" num="0000">
+        <chemistry id="chem-00020-en" num="00020">
+          <img id="img-00020-en" he="27.18mm" wi="101.77mm" alt="embedded image" img-content="chem" file="US20150252351A1_00026.PNG" img-format="png" original="US20150252351A1-20150910-C00020.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00085-en" num="0000">As can be seen from the results, PCR product was observed in the presence of the non-ionic detergent Tween-20 and in the presence of the PEO(10)SAO, but not when the other detergents lacking PEO<sub>n </sub>groups were tested.</p>
+      <p id="p-00086-en" num="0101">
+        <figref>FIG. 5</figref> shows the effect of different alkyl groups on zwitterionic amine-oxide derivatives as well as polyethylene glycol (chain length 1000) “PEG-1000”. The data indicates that PEG-1000 does not function as a stabilizer, suggesting that micelle formation may be important for stabilization.</p>
+      <p id="p-00087-en" num="0102">To further test the effectiveness of PEO<sub>n</sub>-derivatives, the denaturation temperature was changed from 95° C. to 98° C. in the cycling protocol. This increase in temperature adds additional stress to the function of Taq DNA Polymerase. A selection of PLURONIC® and TETRONIC® surfactants were tested (labels in the figures are abbreviated, for example, “T908” refers to TETRONIC® 908 and “P F87” refers to PLURONIC® F87). In addition, TETRONIC® 904 and 1107 were modified to amine-oxide, forms and then tested. <figref>FIG. 6</figref> shows that not only are blocked co-polymers effective, the amine-oxide TETRONIC® derivatives also function as thermal stabilizers of DNA polymerases.</p>
+      <p id="p-00088-en" num="0103">In some aspects surfactants are selected for use in the methods because they have a cloud point (temperature at which the solid begins to precipitate and give the fluid a cloudy appearance) greater than or equal to 80° C., greater than or equal to 90° C. and in particularly preferred aspects the cloud point is greater than about 100° C. (in each case when measured at about 1% aqueous). The cloud point is the temperature above which a surfactant solution separates into a detergent rich phase and a detergent poor phase (see, Rosen et al. Surfactants and interfacial Phenomena, <sup>3rd </sup>ed. 2004, Hoboken; John Wiley &amp; Sons, Inc. and Neugebauer, J.M. Detergents: an overview, <i>Methods Enzymol, </i>1990, 182, p. 239-53). The separation is visualized as turbidity within the solution. An increase in temperature favors micelle formation; the rapid growth of micelles along with intermicellar attraction likely results in the formation of large particles that can precipitate out of solution, thus causing turbidity. This phase separation is reversible upon cooling. Nonpolar additives (i.e., hydrocarbons) tend to increase the cloud point whereas polar compounds (i.e., alcohols) and salts tend to decrease the cloud point. For stabilization of thermal stable enzymes that are used for PCR, which typically includes a denaturation step above 90° C., higher cloud points are desirable.</p>
+      <p id="p-00089-en" num="0104">The amine oxide detergents of the present invention have higher cloud points than their non-amine oxide counterparts. For example, PEO(10)stearlyamine has a cloud point of 60° C. compared to PEO(10)stearylamine N-oxide's cloud point of greater than 100° C., in both cases when measured at about 1% detergent concentration in 6× SSPE buffer. In some aspects detergents with cloud points above 90° C. are preferred.</p>
+      <p id="p-00090-en" num="0105">Table 1 summarizes the surfactants or blocked co-polymers that worked in the assay used and those that did not.</p>
+      <p id="p-00091-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Surfactant</entry>
+                  <entry>Function</entry>
+                  <entry>AO</entry>
+                  <entry>Y/Z/NI</entry>
+                  <entry>PEO groups</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Tween 20</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>NP 40</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>PEO (5)SAO</entry>
+                  <entry>YES</entry>
+                  <entry>YES</entry>
+                  <entry>Y</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PEO (10)SAO</entry>
+                  <entry>YES</entry>
+                  <entry>YES</entry>
+                  <entry>Y</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PEO (15)SAO</entry>
+                  <entry>YES</entry>
+                  <entry>YES</entry>
+                  <entry>Y</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PEO(10)SAPS</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>Z</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PEO(5)LAO</entry>
+                  <entry>YES</entry>
+                  <entry>YES</entry>
+                  <entry />
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>TETRONIC ® 304</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>Y/Z</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>TETRONIC ® 1107</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>Y/Z</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>TETRONIC ® 904 AO</entry>
+                  <entry>YES</entry>
+                  <entry>YES</entry>
+                  <entry>Y/Z</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>TETRONIC ® 1107 AO</entry>
+                  <entry>YES</entry>
+                  <entry>YES</entry>
+                  <entry>Y/Z</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>TETRONIC ® 908</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>Y/Z</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>TETRONIC ® 1307</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>Y/Z</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® P85</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® 10R5</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® L35</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® L64</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® P65</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® P84</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® P1036</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® P103</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® P104</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® P105</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® P123</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® F68</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® F77</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® F87</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PLURONIC ® F127</entry>
+                  <entry>YES</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>AO-12-2</entry>
+                  <entry>NO</entry>
+                  <entry>YES</entry>
+                  <entry>Y</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>AO-405</entry>
+                  <entry>NO</entry>
+                  <entry>YES</entry>
+                  <entry>Y</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>LAPAO</entry>
+                  <entry>NO</entry>
+                  <entry>YES</entry>
+                  <entry>Y</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>DDDAO</entry>
+                  <entry>NO</entry>
+                  <entry>YES</entry>
+                  <entry>Y</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>TDDAO</entry>
+                  <entry>NO</entry>
+                  <entry>YES</entry>
+                  <entry>Y</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>Amphipol A8-35</entry>
+                  <entry>NO</entry>
+                  <entry>NO</entry>
+                  <entry>Z</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>Lauryl Maltoside</entry>
+                  <entry>NO</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>PEG-1000</entry>
+                  <entry>NO</entry>
+                  <entry>NO</entry>
+                  <entry>NI</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>PEO (5) E17 AO</entry>
+                  <entry>NO</entry>
+                  <entry>YES</entry>
+                  <entry>Z</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>TETRONIC ® 304-AO</entry>
+                  <entry>NO</entry>
+                  <entry>YES</entry>
+                  <entry>Z</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>FOS-CHOLINE ®-12</entry>
+                  <entry>NO</entry>
+                  <entry>NO</entry>
+                  <entry>z</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>PMAL ®-C8</entry>
+                  <entry>NO</entry>
+                  <entry>NO</entry>
+                  <entry>Z</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>PMAL ®-C10</entry>
+                  <entry>NO</entry>
+                  <entry>NO</entry>
+                  <entry>Z</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>PMAL ®-C12</entry>
+                  <entry>NO</entry>
+                  <entry>NO</entry>
+                  <entry>Z</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>PMAL ®-C16</entry>
+                  <entry>NO</entry>
+                  <entry>NO</entry>
+                  <entry>Z</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00092-en" num="0106">In some aspects, the stabilization of thermostable polymerases using the compounds disclosed herein are combined with methods for modifying thermostable polymerases to be inactive until activated by heating. Specifically, methods for inactivating polymerases until they are heated for at least 10 minutes at a temperature at or above 50° C. are disclosed. Inhibiting the activity of thermostable polymerases at lower temperature is known to mitigate non-specific amplification that can generate non-specific primer extension products that compete with amplification of the desired target sequences. This non-specific amplification can decrease the efficiency of the amplification of the desired target. Problems caused by non-specific amplification are discussed in Chou et al., 1992, Nucleic Acids Research 20(7):1717-1723, incorporated herein by reference. See also, Birch et al. U.S. Pat. No. 5,677,152, which is incorporated herein by reference.</p>
+      <p id="p-00093-en" num="0107">Non-specific amplification can be reduced by reducing the formation of extension products from primers bound to non-target sequences prior to the start of the reaction. Several strategies have been developed for minimizing non-specific extension. These methods, referred to as a “hot-start” approaches, generally rely on withholding one or more reagent until the temperature is raised sufficiently to provide the necessary hybridization specificity. Some hot-start methods use a heat labile material, such as wax, to separate or sequester reaction components (see, U.S. Pat. No. 5,411,876). Another method of reducing the formation of non-specific extension products relies on inhibition of the DNA polymerase using a compound which non-covalently binds to the DNA polymerase in a heat-reversible manner. U.S. Pat. No. 5,338,671, describes polymerase inactivation by the use of antibodies specific for a thermostable DNA polymerase. The antibodies are incubated with the DNA polymerase to allow formation of the antibody-DNA polymerase complex. Antibody inhibition of DNA polymerase activity is inactivated by a high temperature pre-reaction incubation.</p>
+      <p id="p-00094-en" num="0108">Another hot-start method uses the non-covalently binding of a compound to the primers in a heat-reversible manner, thereby preventing the primers from hybridization to any sequence, target or otherwise. For example, single-stranded binding protein added to a reaction mixture will bind the primers, thereby preventing primer hybridization and inhibiting primer extension. Improvements in the yield of PCR products using gene 32 protein are described in Schwarz et al., 1990, Nucleic Acids Research 18(4):10.</p>
+      <p id="p-00095-en" num="0109">Other hot-start methods rely on a reaction between the enzyme and a modifier reagent, which results in a reversible chemical modification of the enzyme, resulting in the loss of all, or nearly all, of the enzyme activity. The modification consists of the covalent attachment of the modifier group to the protein. The modifier compound is chosen such that the modification is reversed by incubation at an elevated temperature in the amplification reaction buffer. The use of 2,3-substituted maleic anhydrides for such inactivation has been disclosed, see U.S. Pat. No. 5,773,258.</p>
+      <p id="p-00096-en" num="0110">The methods disclosed herein are similar to those of the methods disclosed in U.S. Pat. No. 5,773,258, but involve incubating the polymerase in the presence of 2-(Methylsulfonyl)ethyl 4-nitrophenyl carbonate (MSEC) under conditions where lysines in the polymerase are modified reversibly. The modification is reversed, activating the enzyme, by heating for about 5-10 min at a temperature above 50° C., preferably at a temperature of about 90 to 95° C. and more preferably about 95° C. Typical reaction conditions for PCR may be (i) 5 min at 95° C., (ii) 15 sec at 95° C., (iii) 60 sec at 60° C., (iv) 2 min at 68° C., (v) repeat steps (ii), (iii) and (iv) 35 times, (vi) 10 min at 68° C. The reaction conditions for the PCR using the MSEC modified enzyme may also contain 5 mM-500 mM betaine. The dNTP concentration in the reaction is may be about 100-400 uM of each of four dNTPs, (dATP, dGTP, dTTP and dCTP). In one aspect the reaction conditions are 40 mM Tricine-KOH pH 8.0, 16 mM KCl, 3.5 mM MgCl2, 3.75 ug/ml BSA, 400 mM betaine, 1.4 mM dNTP (350 uM of each) and 2.5 to 30 U enzyme in a 50 ul reaction. In one aspect the enzyme is present in the reaction at about 0.25 units per ul. In another aspect, the reaction contains 20 mM EPPS, pH 8.5, 50 mM NaOAc, 3.5 mM MgCl2, 5% glycerol, 0.01% Tetronic-AO-1107, 400 uM each of dATP, dTTP, dGTP and dCTP, and about 0.005 mg/ml modified enzyme. Primer concentration may be 0.1 uM each primer for products greater than 500 bp in length or 0.2 uM each primer for products less than 500 bp in length. Betaine may also be added to the reaction under any of the disclosed reaction conditions, preferably to about 400 mM. In another aspect the PCR may be set up as follows:</p>
+      <p id="p-00097-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Reagents</entry>
+                  <entry>A (μl)</entry>
+                  <entry>B (μl)</entry>
+                  <entry>C (μl)</entry>
+                  <entry>Final Conc.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="21pt" align="char" char="." />
+              <colspec colname="4" colwidth="21pt" align="char" char="." />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Nuclease-free water</entry>
+                  <entry>33.75</entry>
+                  <entry>33.75</entry>
+                  <entry>33.0</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>10X PCR Reaction Buffer 1</entry>
+                  <entry>5</entry>
+                  <entry />
+                  <entry />
+                  <entry>1X</entry>
+                </row>
+                <row>
+                  <entry>(71165)</entry>
+                </row>
+                <row>
+                  <entry>10X PCR Reaction Buffer 2</entry>
+                  <entry />
+                  <entry>5</entry>
+                  <entry />
+                  <entry>1X</entry>
+                </row>
+                <row>
+                  <entry>(74155)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="21pt" align="char" char="." />
+              <colspec colname="4" colwidth="21pt" align="char" char="." />
+              <colspec colname="5" colwidth="21pt" align="right" />
+              <colspec colname="6" colwidth="28pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>PCR Nucleotide Mix (10 mM)</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>200</entry>
+                  <entry>μM ea</entry>
+                </row>
+                <row>
+                  <entry>Taq DNA Polymerase (5 U/μl)</entry>
+                  <entry>0.25</entry>
+                  <entry />
+                  <entry />
+                  <entry>2.5</entry>
+                  <entry>units</entry>
+                </row>
+                <row>
+                  <entry>Exo-free Taq DNA Polymerase</entry>
+                  <entry />
+                  <entry>0.25</entry>
+                  <entry />
+                  <entry>2.5</entry>
+                  <entry>units</entry>
+                </row>
+                <row>
+                  <entry>(5 U/μl)</entry>
+                </row>
+                <row>
+                  <entry>MSEC Taq DNA Polymerase</entry>
+                  <entry />
+                  <entry />
+                  <entry>1</entry>
+                  <entry>12.5</entry>
+                  <entry>units</entry>
+                </row>
+                <row>
+                  <entry>(12.5 U/μl)</entry>
+                </row>
+                <row>
+                  <entry>Forward/λ Primer #1 (10 μM)</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>0.5</entry>
+                  <entry>μM</entry>
+                </row>
+                <row>
+                  <entry>Reverse/λPrimer #2 (10 μM)</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>0.5</entry>
+                  <entry>μM</entry>
+                </row>
+                <row>
+                  <entry>DNA Template (1 ng/μl)</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>10</entry>
+                  <entry>ng</entry>
+                </row>
+                <row>
+                  <entry>Total volume</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00098-en" num="0111">Three classes of protecting groups were evaluated: 2,3-substituted maleic anhybrides, alpha-activated compounds that can undergo beta-elimination and molecules that can undergo intramolecular cyclic displacement or assisted elimination. The experimental compounds had the general structure:</p>
+      <p id="p-00099-en" num="0000">
+        <chemistry id="chem-00021-en" num="00021">
+          <img id="img-00021-en" he="10.33mm" wi="26.33mm" alt="embedded image" img-content="chem" file="US20150252351A1_00027.PNG" img-format="png" original="US20150252351A1-20150910-C00021.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00100-en" num="0112">Where Y could be NHS, pNP, or imidazole and X could be CONMe<sub>2</sub>, MeSO<sub>2</sub>, CN, NO<sub>2</sub>, CO<sub>2</sub>Me, (CH<sub>2</sub>)<sub>2</sub>SMe, N(CH<sub>3</sub>)CHO, or CH<sub>2</sub>C(O)CH<sub>3</sub>. The reactivity was tested in Tris pH 8 or Tricine pH 8.8. Buffer pH measurements are at room temperature (˜25° C.). The compound found to be most effective of the test compounds was 2-(Methylsulfonyl)ethyl 4-nitrophenyl carbonate or MSEC. MSEC has the following structure:</p>
+      <p id="p-00101-en" num="0000">
+        <chemistry id="chem-00022-en" num="00022">
+          <img id="img-00022-en" he="21.67mm" wi="54.78mm" alt="embedded image" img-content="chem" file="US20150252351A1_00028.PNG" img-format="png" original="US20150252351A1-20150910-C00022.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00102-en" num="0113">The MSEC modifies lysines in the enzyme. The enzyme to be modified is preferably a thermostable DNA polymerase and may be a 5′ exonuclease domain deletion mutant (exo−), e.g. of Taq DNA polymerase (exo−), or may retain the 5′ exonuclease domain (exo+). In preferred aspects MSEC is used to reversibly modify Taq DNA polymerase. To inactivate the Taq DNA polymerase an appropriate volume of a freshly prepared 100× solution (120 mM) of MSEC (SIGMA PN 69227) is added to a 1 mg/ml solution of Taq in acylation buffer (100 mM Bicine pH 8.5, 1 mM EDTA, 100 mM KCl). The MSEC solution should preferably be added to the Taq within about 5 min of preparation as it degrades over time. After adding the MSEC solution to the Taq the solution is mixed by inverting, preferably end over end about 5 times, and then placed in a 25° C. incubator for 2 hours without rotating or stirring. The MSEC reaction with lysines results in a change of the buffer to a yellow color. Following this incubation the Taq is dialyzed against transition buffer (20 mM EPPS pH 7.5, 100 mM KCl, 0.1 mM EDTA, 1% Tetronic-AO, 10% glycerol and 1 mM DTT) and then against a final buffer (20 mM EPPS pH 7.5, 100 mM KCl, 0.1 mM EDTA, 1% Tetronic-AO, 50% glycerol and 1 mM DTT).</p>
+      <p id="p-00103-en" num="0114">In another aspect FRET-based molecules to be used as passive reference dyes for qPCR are included in the reaction mixture. The sample being amplified in a PCR reaction may contain one or more types of dye molecules that serve as a “passive” reference having some fluorescence in the same wavelength range as the DNA binding dye. This reference dye is made up, for example, of a nucleic acid sequence labeled with Rhodamine and Fluorescein dye derivatives. These passive dye molecules do not take part in the PCR reaction, so that their fluorescence is substantially without influence from DNA and remains constant during the reaction. This fluorescence can be used to normalize the fluorescence from the DNA binding dye with a standard concentration of passive dye included in the ingredients of at least one vial, preferably in every vial. Passive reference dyes have been described, for example, in U.S. Pat. No. 6,818,437. The dye is used as an internal reference for fluorescent signal normalization and correction of well-to-well optical variation and pipetting errors. The dye is preferably matched to the excitation optics of the instrument being used. The dye may be made available in a solution, for example a 25 um solution, and may be in a buffer, for example, 10 mM Tris-HCl (pH 8.6), 0.1 mM EDTA and 0.01% Tween-20.</p>
+      <p id="p-00104-en" num="0115">In preferred embodiments the compounds will be compatible with a broad range of commercial qPCR platforms, molecules will preferably exhibit good solubility, thermal stability, and efficient and stable 488 nm excitation and 610 nm emission characteristics under typical conditions used in RT PCR. The molecules of this invention consist of combinations of a fluorescein (FAM) or FAM analog as the donor dye and a rhodamine-101 (ROX) or ROX analog as acceptor dye, the two being connected by a stable covalent attachment to allow efficient FRET. The following molecules were evaluated. The first compound was referred to as “Dye 592” and has structure:</p>
+      <p id="p-00105-en" num="0000">
+        <chemistry id="chem-00023-en" num="00023">
+          <img id="img-00023-en" he="90.17mm" wi="62.23mm" alt="embedded image" img-content="chem" file="US20150252351A1_00029.PNG" img-format="png" original="US20150252351A1-20150910-C00023.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00106-en" num="0116">The second was FRET Dye 1 where the donor is 6FAM and the acceptor is ROX. The structure is:</p>
+      <p id="p-00107-en" num="0000">
+        <chemistry id="chem-00024-en" num="00024">
+          <img id="img-00024-en" he="51.31mm" wi="157.99mm" alt="embedded image" img-content="chem" file="US20150252351A1_00030.PNG" img-format="png" original="US20150252351A1-20150910-C00024.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00108-en" num="0117">FRET Dyes 2-4 where the donor is 6-FAM and the acceptor is CalFluorRed 610 with structures:</p>
+      <p id="p-00109-en" num="0000">
+        <chemistry id="chem-00025-en" num="00025">
+          <img id="img-00025-en" he="127.93mm" wi="158.75mm" alt="embedded image" img-content="chem" file="US20150252351A1_00031.PNG" img-format="png" original="US20150252351A1-20150910-C00025.TIF" />
+        </chemistry>
+      </p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A composition comprising a thermostable polymerase that has been reversibly modified with a polymerase-modifying reagent of the following structure:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00026">
+          <img id="imgc-00001-en" he="10.33mm" wi="26.33mm" alt="embedded image" img-content="chem" file="US20150252351A1_00032.PNG" img-format="png" original="US20150252351A1-20150910-C00026.TIF" />
+        </chemistry><claim-text>wherein Y═N-hydroxysuccinimide (NHS), p-nitrophenol (pNP) or imidazole;
+<claim-text>X═CONMe<sub>2</sub>, MeSO<sub>2</sub>, CN, NO<sub>2</sub>, CO<sub>2</sub>Me, (CH<sub>2</sub>)<sub>2</sub>SMe, N(CH<sub>3</sub>)CHO, or CH<sub>2</sub>C(O)CH<sub>3</sub>.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the polymerase-modifying reagent is</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00027">
+          <img id="imgc-00002-en" he="21.67mm" wi="54.78mm" alt="embedded image" img-content="chem" file="US20150252351A1_00033.PNG" img-format="png" original="US20150252351A1-20150910-C00027.TIF" />
+        </chemistry><claim-text>(2-(methylsulfonyl)ethyl 4-nitrophenyl carbonate (MSEC)).</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the thermostable polymerase is a Pfu DNA polymerase, a thermostable DNA polymerase fusion protein, a Pfu DNA polymerase-Sso7 fusion polypeptide, or a Taq DNA polymerase.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The composition of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the thermostable polymerase is a Taq DNA polymerase.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a non-ionic or a cationic surfactant.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The composition of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the surfactant is a poloxamer.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The composition of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the poloxamer has the following structure:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00003-en" num="00028">
+          <img id="imgc-00003-en" he="3.39mm" wi="61.72mm" alt="embedded image" img-content="chem" file="US20150252351A1_00034.PNG" img-format="png" original="US20150252351A1-20150910-C00028.TIF" />
+        </chemistry><claim-text>m (avg)=2-100 and n (avg)=2-200.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The composition of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the surfactant is an alkyl diamine.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The composition of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the alkyl diamine has the following structure:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00004-en" num="00029">
+          <img id="imgc-00004-en" he="17.44mm" wi="60.20mm" alt="embedded image" img-content="chem" file="US20150252351A1_00035.PNG" img-format="png" original="US20150252351A1-20150910-C00029.TIF" />
+        </chemistry><claim-text>m (avg)=2-100; (avg) n=2-200</claim-text><claim-text>R1=C2-C<sub>6 </sub>Alkyl (preferably 2-3)</claim-text><claim-text>R2=CH<sub>3</sub>, CH<sub>2</sub>CH<sub>3</sub>; x=1,2.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. A method for the amplification of a nucleic acid contained in a sample comprising the steps of:
+<claim-text>(a) modifying a thermostable polymerase with a polymerase-modifying reagent of the structure:</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00005-en" num="00030">
+          <img id="imgc-00005-en" he="10.33mm" wi="26.33mm" alt="embedded image" img-content="chem" file="US20150252351A1_00036.PNG" img-format="png" original="US20150252351A1-20150910-C00030.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>wherein Y═N-hydroxysuccinimide (NHS), p-nitrophenol (pNP) or imidazole;
+<claim-text><claim-text>X═CONMe<sub>2</sub>, MeSO<sub>2</sub>, CN, NO<sub>2</sub>, CO<sub>2</sub>Me, (CH<sub>2</sub>)<sub>2</sub>SMe, N(CH<sub>3</sub>)CHO, or CH<sub>2</sub>C(O)CH<sub>3 </sub>to provide a modified thermostable polymerase;</claim-text></claim-text><claim-text>(b) forming a mixture comprising the sample, the modified thermostable polymerase and a primer complementary to the nucleic acid;</claim-text><claim-text>(c) incubating the resulting mixture of step (b) at a temperature which is greater than about 50° C. for a time sufficient to reactivate the enzyme; and</claim-text><claim-text>(d) generating one or more amplification products of the nucleic acid.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the contacting a thermostable polymerase with a polymerase-modifying reagent results in essentially complete inactivation of the modified polymerase at about 25° C., and wherein incubation of the modified polymerase at a temperature greater than about 50° C. results in an increase in polymerase activity.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the polymerase-modifying reagent is</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00006-en" num="00031">
+          <img id="imgc-00006-en" he="21.67mm" wi="54.78mm" alt="embedded image" img-content="chem" file="US20150252351A1_00037.PNG" img-format="png" original="US20150252351A1-20150910-C00031.TIF" />
+        </chemistry><claim-text>(2-(methylsulfonyl)ethyl 4-nitrophenyl carbonate (MSEC)).</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein a solution of polymerase-modifying reagent is added to the thermostable polymerase within about 5 minutes of preparing the solution.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the temperature of step (c) is about 90° C. to about 95° C.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the temperature is about 95° C.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the time to reactivate the enzyme is about 5 to 10 minutes.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the amplification reaction mixture further comprises betaine.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the amplification reaction mixture further comprises one or more surfactants selected from the group consisting of zwitterionic surfactants, cationic surfactants, non-ionic surfactants and mixtures thereof.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the surfactant is an amine-N-oxide.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the thermostable enzyme is present in an amount of about 0.25 units per 4.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252351A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252351A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252351A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252351A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252351A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252351A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00020.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00014.TIF" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00021.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00015.TIF" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00022.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00016.TIF" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00023.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00017.TIF" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00024.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00018.TIF" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00025.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00019.TIF" inline="yes" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00026.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00020.TIF" inline="yes" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00027.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00021.TIF" inline="yes" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00028.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00022.TIF" inline="yes" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00029.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00023.TIF" inline="yes" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00030.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00024.TIF" inline="yes" />
+    </figure>
+    <figure num="31">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00031.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00025.TIF" inline="yes" />
+    </figure>
+    <figure num="32">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00032.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00026.TIF" inline="yes" />
+    </figure>
+    <figure num="33">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00033.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00027.TIF" inline="yes" />
+    </figure>
+    <figure num="34">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00034.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00028.TIF" inline="yes" />
+    </figure>
+    <figure num="35">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00035.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00029.TIF" inline="yes" />
+    </figure>
+    <figure num="36">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00036.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00030.TIF" inline="yes" />
+    </figure>
+    <figure num="37">
+      <img he="N/A" wi="N/A" file="US20150252351A1_00037.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252351A1-20150910-C00031.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150252351A1.PDF" type="pdf" size="859681" pages="18" />
+</lexisnexis-patent-document>

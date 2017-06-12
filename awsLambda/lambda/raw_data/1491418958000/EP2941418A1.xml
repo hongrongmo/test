@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2941418A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151111" time-inserted="082352" date-changed="20160112" time-changed="114838">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="122016319">
+        <country>EP</country>
+        <doc-number>2941418</doc-number>
+        <kind>A1</kind>
+        <date>20151111</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>14748929</doc-number>
+        <date>20140206</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151111">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020130014175</doc-number>
+        <date>20130207</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>KR</country>
+        <doc-number>1020130014176</doc-number>
+        <date>20130207</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>KR</country>
+        <doc-number>20130014175</doc-number>
+        <kind>A</kind>
+        <date>20130207</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>KR</country>
+        <doc-number>20130014176</doc-number>
+        <kind>A</kind>
+        <date>20130207</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="docdb">
+        <country>KR</country>
+        <doc-number>2014001006</doc-number>
+        <kind>W</kind>
+        <date>20140206</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>20130014175</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>20130014176</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="original">
+        <doc-number>2014001006</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>KR20130014175</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>KR20130014176</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="epodoc">
+        <doc-number>WO2014KR01006</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151112">
+      <gazette-reference>
+        <date>20151111</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151111</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151111</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151112">
+      <request-for-examination>
+        <date>20150807</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20160112">
+      <classification-ipcr sequence="1">
+        <text>C07C 279/26        20060101AFI20140826BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>279</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  31/155       20060101ALI20140826BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>155</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C07C 277/02        20060101ALI20140826BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>277</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160112">
+      <classification-cpc sequence="1">
+        <text>C07D 211/70        20130101 FI20160106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>211</main-group>
+        <subgroup>70</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07D 207/20        20130101 LI20160106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>207</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C07D 211/14        20130101 LI20160106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>211</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C07D 211/16        20130101 LI20141126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>211</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <invention-title id="title_ger" date-changed="20151111" lang="ger" format="original">N1-CYCLISCHE AMIN-N5-SUBSTITUIERTE BIGUANIDDERIVATE, VERFAHREN ZUR HERSTELLUNG DAVON UND PHARMAZEUTISCHE ZUSAMMENSETZUNG DAMIT</invention-title>
+    <invention-title id="title_eng" date-changed="20151111" lang="eng" format="original">N1-CYCLIC AMINE-N5-SUBSTITUTED BIGUANIDE DERIVATIVES, METHODS OF PREPARING THE SAME AND PHARMACEUTICAL COMPOSITION COMPRISING THE SAME</invention-title>
+    <invention-title id="title_fre" date-changed="20151111" lang="fre" format="original">DÉRIVÉS DE BIGUANIDE À SUBSTITUTION N1-AMINE CYCLIQUE-N5, LEURS PROCÉDÉS DE PRÉPARATION ET COMPOSITION PHARMACEUTIQUE LES COMPRENANT</invention-title>
+    <parties date-changed="20151111">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Hanall Biopharma Co., Ltd.</orgname>
+            <registered-number>101363054</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>43 Sangseodang 1-gil Daedeok-gu</address-1>
+              <city>Daejeon 306-120</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>MIN, Chang Hee</name>
+            <address>
+              <address-1>105-1202 50 Hallimmal-gil Seongdong-gu</address-1>
+              <city>Seoul 133-765</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>KIM, Yong Eun</name>
+            <address>
+              <address-1>84 Bomunsan-ro Jung-gu</address-1>
+              <city>Daejeon 301-819</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>OH, Byung Kyu</name>
+            <address>
+              <address-1>413 5 Seogeumam 3-gil</address-1>
+              <city>Gyeryong-si Chungcheongnam-do 321-900</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>LEE, Ji Sun</name>
+            <address>
+              <address-1>113-802 6 Baeul 2-ro Yuseong-gu</address-1>
+              <city>Daejeon 305-741</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>HEO, Hye Jin</name>
+            <address>
+              <address-1>302 34-2 Gwandeul 4-gil Yuseong-gu</address-1>
+              <city>Daejeon 305-509</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>OH, Ju Hoon</name>
+            <address>
+              <address-1>202-202 25 Noganinam-gil</address-1>
+              <city>Gangneung-si Gangwon-do 210-932</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7">
+          <addressbook lang="eng">
+            <name>CHO, Woong</name>
+            <address>
+              <address-1>302 58 Gwandeul 4-gil Yuseong-gu</address-1>
+              <city>Daejeon 305-509</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Vossius &amp; Partner Patentanwälte Rechtsanwälte mbB</name>
+            <registered-number>100751388</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Siebertstrasse 3</address-1>
+              <city>81675 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151111">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR14001006</doc-number>
+        <date>20140206</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014123364</doc-number>
+        <date>20140814</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151224">
+      <main-family family-id="167202792">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014123364</doc-number>
+            <kind>A1</kind>
+            <date>20140814</date>
+          </document-id>
+          <application-date>
+            <date>20140206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150368198</doc-number>
+            <kind>A1</kind>
+            <date>20151224</date>
+          </document-id>
+          <application-date>
+            <date>20140206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2941418</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20140206</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="167815191">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014123364</doc-number>
+            <kind>A1</kind>
+            <date>20140814</date>
+          </document-id>
+          <application-date>
+            <date>20140206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140101074</doc-number>
+            <kind>A</kind>
+            <date>20140819</date>
+          </document-id>
+          <application-date>
+            <date>20130207</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2941418</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20140206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140101073</doc-number>
+            <kind>A</kind>
+            <date>20140819</date>
+          </document-id>
+          <application-date>
+            <date>20130207</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150368198</doc-number>
+            <kind>A1</kind>
+            <date>20151224</date>
+          </document-id>
+          <application-date>
+            <date>20140206</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20160112" lang="eng" format="equivalent" country="US" doc-number="2015368198" kind="A1">
+    <p>The present invention provides an N1-cyclic amine-N5-substituted biguanide derivative compound represented by Formula 1, a method of preparing the same and a pharmaceutical composition including the biguanide derivative or the pharmaceutically acceptable salt thereof as an active ingredient. The biguanide derivatives have an effect of inhibiting cancer cell proliferation, cancer metastasis and cancer recurrence by activation of AMPK, even when administered in a small dose compared with conventional drugs.</p>
+  </abstract>
+  <legal-data date-changed="20151223">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941418A1</docdb-publication-number>
+      <docdb-application-id>420904463</docdb-application-id>
+      <effective-date>
+        <date>20150807</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941418A1</docdb-publication-number>
+      <docdb-application-id>420904463</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941418A1</docdb-publication-number>
+      <docdb-application-id>420904463</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+</lexisnexis-patent-document>

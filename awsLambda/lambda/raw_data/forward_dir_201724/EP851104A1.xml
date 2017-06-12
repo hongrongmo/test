@@ -1,0 +1,1463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170309" file="EP851104A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170308" time-changed="095544">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="1324005">
+        <country>EP</country>
+        <doc-number>851104</doc-number>
+        <kind>A1</kind>
+        <date>19980701</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>0851104</doc-number>
+        <kind>A1</kind>
+      </document-id>
+      <document-id data-format="docdb">
+        <doc-number>0851104</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>EP0851104</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id id="7837751">
+        <country>EP</country>
+        <doc-number>97810878</doc-number>
+        <kind>A</kind>
+        <date>19971118</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>97810878</doc-number>
+      </document-id>
+      <document-id data-format="docdb" id="17254601">
+        <doc-number>97810878</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>EP19970810878</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>ger</language-of-publication>
+    <priority-claims date-changed="20090309">
+      <priority-claim sequence="1" kind="national">
+        <country>DE</country>
+        <doc-number>19654472</doc-number>
+        <date>19961227</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>DE</country>
+        <doc-number>19654472</doc-number>
+        <date>19961227</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>19654472</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>DE1996154472</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090309">
+      <unexamined-printed-without-grant>
+        <date>19980701</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>19980701</date>
+      </examined-printed-without-grant>
+      <publication-of-grant-date>
+        <date>20020918</date>
+      </publication-of-grant-date>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20090309">
+      <request-for-examination>
+        <date>19981223</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classification-ipc date-changed="20130820">
+      <main-classification>
+        <text> 6F 02C   7/16   A</text>
+        <edition>6</edition>
+        <section>F</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>7</main-group>
+        <subgroup>16</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+      <further-classification sequence="1">
+        <text> 6F 02C   3/30   B</text>
+        <edition>6</edition>
+        <section>F</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>30</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+      <further-classification sequence="2">
+        <text> 6F 01K  21/04   B</text>
+        <edition>6</edition>
+        <section>F</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>21</main-group>
+        <subgroup>04</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20130820">
+      <classification-ipcr sequence="1">
+        <text>F01K  17/04        20060101AFI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>17</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>F01K  21/04        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>21</main-group>
+        <subgroup>04</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>F01K  23/10        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>23</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>F01K  23/16        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>23</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>F02C   3/30        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>30</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>F02C   6/18        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>6</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>F02C   7/16        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>7</main-group>
+        <subgroup>16</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>F02C   7/18        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>7</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20130820">
+      <classification-cpc sequence="1">
+        <text>F01K  21/047       20130101 FI20130816BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>21</main-group>
+        <subgroup>047</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130816</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>F02C   3/30        20130101 LI20130816BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130816</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>F02C   7/16        20130101 LI20130816BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>7</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130816</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>F05D2260/2322      20130101 LA20130508BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>2260</main-group>
+        <subgroup>2322</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130508</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>Y02E  20/16        20130101 LA20130816BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>20</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130816</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classifications-ecla date-changed="20130820">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>F01K 21/04E</text>
+        <section>F</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>21</main-group>
+        <subgroup>04</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">E  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>F02C  3/30</text>
+        <section>F</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>30</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="EC" country="EP">
+        <text>F02C  7/16</text>
+        <section>F</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>7</main-group>
+        <subgroup>16</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="1" classification-scheme="ICO" country="EP">
+        <text>R05B260:233</text>
+        <section>R</section>
+        <class>05</class>
+        <subclass>B</subclass>
+        <main-group>260</main-group>
+        <subgroup>233</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="ICO" country="EP">
+        <text>Y02E 20:16</text>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>20</main-group>
+        <subgroup>16</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_ger" date-changed="20100622" lang="ger" format="original">Gasturbine mit Wärmerückwinnungsdampfgenerator zur Kühlung der Brennkammer, dann zur Einspritzung abwärts der Verbrennungzone</invention-title>
+    <invention-title id="title_eng" date-changed="20100622" lang="eng" format="original">Gas turbine with heat recovery steam generator for cooling the combustion chamber, then injecting downstream of the combustion zone</invention-title>
+    <invention-title id="title_fre" date-changed="20100622" lang="fre" format="original">Turbine à gaz avec générateur de vapeur à récupération pour le refroidissement de la chambre de combustion, puis l'injection en aval de la zone de combustion</invention-title>
+    <references-cited date-changed="20140318">
+      <patent-citations name="patcit" date-changed="20110222" />
+      <forward-citations name="fwdcit" date-changed="20140318" />
+      <citation srep-phase="0">
+        <patcit num="1" dnum="0674099">
+          <document-id>
+            <country>EP</country>
+            <doc-number>674099</doc-number>
+            <kind>A1</kind>
+            <date>19950927</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>0674099</doc-number>
+          </document-id>
+          <application-date>
+            <date>19950303</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="2" dnum="343772">
+          <document-id>
+            <country>FR</country>
+            <doc-number>343772</doc-number>
+            <kind>A</kind>
+            <date>19041014</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>343772</doc-number>
+          </document-id>
+          <application-date>
+            <date>19040607</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="3" dnum="2236145">
+          <document-id>
+            <country>GB</country>
+            <doc-number>2236145</doc-number>
+            <kind>A</kind>
+            <date>19910327</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>2236145</doc-number>
+          </document-id>
+          <application-date>
+            <date>19900727</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="4" dnum="2187273">
+          <document-id>
+            <country>GB</country>
+            <doc-number>2187273</doc-number>
+            <kind>A</kind>
+            <date>19870903</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>2187273</doc-number>
+          </document-id>
+          <application-date>
+            <date>19851031</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="5" dnum="1140757">
+          <document-id>
+            <country>GB</country>
+            <doc-number>1140757</doc-number>
+            <kind>A</kind>
+            <date>19690122</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>1140757</doc-number>
+          </document-id>
+          <application-date>
+            <date>19661011</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="6" dnum="0314112">
+          <document-id>
+            <country>EP</country>
+            <doc-number>314112</doc-number>
+            <kind>A1</kind>
+            <date>19890503</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>0314112</doc-number>
+          </document-id>
+          <application-date>
+            <date>19881026</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="7" dnum="0318706">
+          <document-id>
+            <country>EP</country>
+            <doc-number>318706</doc-number>
+            <kind>A1</kind>
+            <date>19890607</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>0318706</doc-number>
+          </document-id>
+          <application-date>
+            <date>19881031</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="8" dnum="3238719">
+          <document-id>
+            <country>US</country>
+            <doc-number>3238719</doc-number>
+            <kind>A</kind>
+            <date>19660308</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>3238719</doc-number>
+          </document-id>
+          <application-date>
+            <date>19630319</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>8671688</doc-number>
+            <kind>B2</kind>
+            <date>20140318</date>
+          </document-id>
+          <application-date>
+            <date>20110413</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20130514">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>ASEA BROWN BOVERI</orgname>
+            <address>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdb">
+          <addressbook lang="eng">
+            <orgname>ASEA BROWN BOVERI</orgname>
+            <address>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdba">
+          <addressbook lang="eng">
+            <orgname>ASEA BROWN BOVERI AG</orgname>
+            <address>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>BENIM ALI CEMAL PROF DR</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>JOOS FRANZ DR</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdb">
+          <addressbook lang="eng">
+            <name>BENIM ALI CEMAL PROF DR</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdba">
+          <addressbook lang="eng">
+            <name>BENIM, ALI CEMAL, PROF. DR.</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdba">
+          <addressbook lang="eng">
+            <name>JOOS, FRANZ, DR.</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdb">
+          <addressbook lang="eng">
+            <name>JOOS FRANZ DR</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <designation-of-states date-changed="20061019">
+      <designation-epc>
+        <contracting-states>
+          <country>DE</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>IT</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20130514">
+      <main-family family-id="157937914">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6085514</doc-number>
+            <kind>A</kind>
+            <date>20000711</date>
+          </document-id>
+          <application-date>
+            <date>19971229</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>851104</doc-number>
+            <kind>B1</kind>
+            <date>20020918</date>
+          </document-id>
+          <application-date>
+            <date>19971118</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>19654472</doc-number>
+            <kind>A1</kind>
+            <date>19980702</date>
+          </document-id>
+          <application-date>
+            <date>19961227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>59708255</doc-number>
+            <kind>D1</kind>
+            <date>20021024</date>
+          </document-id>
+          <application-date>
+            <date>19971118</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>851104</doc-number>
+            <kind>A1</kind>
+            <date>19980701</date>
+          </document-id>
+          <application-date>
+            <date>19971118</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>10196314</doc-number>
+            <kind>A</kind>
+            <date>19980728</date>
+          </document-id>
+          <application-date>
+            <date>19971226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>4272718</doc-number>
+            <kind>B2</kind>
+            <date>20090603</date>
+          </document-id>
+          <application-date>
+            <date>19971226</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="157937913">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6085514</doc-number>
+            <kind>A</kind>
+            <date>20000711</date>
+          </document-id>
+          <application-date>
+            <date>19971229</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>851104</doc-number>
+            <kind>B1</kind>
+            <date>20020918</date>
+          </document-id>
+          <application-date>
+            <date>19971118</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>19654472</doc-number>
+            <kind>A1</kind>
+            <date>19980702</date>
+          </document-id>
+          <application-date>
+            <date>19961227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>59708255</doc-number>
+            <kind>D1</kind>
+            <date>20021024</date>
+          </document-id>
+          <application-date>
+            <date>19971118</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>851104</doc-number>
+            <kind>A1</kind>
+            <date>19980701</date>
+          </document-id>
+          <application-date>
+            <date>19971118</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>10196314</doc-number>
+            <kind>A</kind>
+            <date>19980728</date>
+          </document-id>
+          <application-date>
+            <date>19971226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>4272718</doc-number>
+            <kind>B2</kind>
+            <date>20090603</date>
+          </document-id>
+          <application-date>
+            <date>19971226</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_ger" date-changed="20071009" lang="ger" format="original">
+    <p>Bei einem Verfahren zur Kühlung der thermisch hochbeanspruchten Aggregate einer Gasturbine wird eine Dampfmenge (31, 32) eingesetzt, welche zuerst eine Turbine (3, 5) kühlt, anschliessend wird dieselbe Dampfmenge in eine Brennkammer (2, 4) geführt. Nach Kühlung dieser Brennkammer wird diese Dampfmenge in die Ausbrandzone der betreffenden Brennkammer eingeleitet. Hierdurch wird durch diese Einleitung die auf niedrige NOx-Emissionen ausgelegte Verbrennung der betreffenden Brennkammer nicht tangiert; darüber hinaus lässt sich mit dieser eingeleiteten Dampfmenge die Ausbrandzone auf Minimierung der übrigen Schadstoff-Emissionen moderieren. &lt;IMAGE&gt;</p>
+  </abstract>
+  <abstract id="abstr_eng" date-changed="20071009" lang="eng" format="original">
+    <p>The gas turbine comprises a compressor, a combustion chamber 2,4), a turbine and a generator. Steam (31,32) used to cool the combustion chamber (2,4) is mixed, after cooling, with the hot gas from the chamber downstream of the final combustion zone. It can first be used to cool a turbine (3,5) in a closed circuit and then a chamber in an open one, and can be derived from a steam circuit (7) after the gas-turbine set, and typically from a waste-heat steam-generator (17), which works in conjunction with a boiler drum (28). Mixture with the exhaust gas can take place in the final third of the combustion chamber.</p>
+  </abstract>
+  <legal-data date-changed="20170308">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>19980701</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>DE</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>IT</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>19980701</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <free-text-description>AL;LT;LV;MK;RO;SI</free-text-description>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>19990303</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <effective-date>
+        <date>19981223</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>19990317</date>
+      </publication-date>
+      <event-code-1>AKX</event-code-1>
+      <effect>+</effect>
+      <legal-description>PAYMENT OF DESIGNATION FEES</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <free-text-description>DE FR GB IT</free-text-description>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>19990317</date>
+      </publication-date>
+      <event-code-1>RBV</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES (CORRECTION):</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <legal-designated-states>
+        <country>DE</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>IT</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20000510</date>
+      </publication-date>
+      <event-code-1>17Q</event-code-1>
+      <effect>+</effect>
+      <legal-description>FIRST EXAMINATION REPORT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <effective-date>
+        <date>20000323</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20000628</date>
+      </publication-date>
+      <event-code-1>RAP1</event-code-1>
+      <legal-description>TRANSFER OF RIGHTS OF AN EP PUBLISHED APPLICATION</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <new-owner>ABB ALSTOM POWER (SCHWEIZ) AG</new-owner>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20011212</date>
+      </publication-date>
+      <event-code-1>RAP1</event-code-1>
+      <legal-description>TRANSFER OF RIGHTS OF AN EP PUBLISHED APPLICATION</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <new-owner>ALSTOM</new-owner>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20020918</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <corresponding-kind>B1</corresponding-kind>
+      <legal-designated-states>
+        <country>DE</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>IT</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="10">
+      <publication-date>
+        <date>20020918</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG4D</designated-state-event-code>
+      <designated-state-description>EUROPEAN PATENT GRANTED</designated-state-description>
+      <free-text-description>NOT ENGLISH</free-text-description>
+    </legal-event>
+    <legal-event sequence="11">
+      <publication-date>
+        <date>20021024</date>
+      </publication-date>
+      <event-code-1>REF</event-code-1>
+      <legal-description>CORRESPONDS TO:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>EP</country>
+      </designated-state-authority>
+      <corresponding-publication-number>59708255</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <corresponding-publication-date>
+        <date>20021024</date>
+      </corresponding-publication-date>
+    </legal-event>
+    <legal-event sequence="12">
+      <publication-date>
+        <date>20021211</date>
+      </publication-date>
+      <event-code-1>RAP2</event-code-1>
+      <legal-description>TRANSFER OF RIGHTS OF AN EP GRANTED PATENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <new-owner>ALSTOM (SWITZERLAND) LTD</new-owner>
+    </legal-event>
+    <legal-event sequence="13">
+      <publication-date>
+        <date>20021218</date>
+      </publication-date>
+      <event-code-1>GBT</event-code-1>
+      <effect>+</effect>
+      <legal-description>GB: TRANSLATION OF EP PATENT FILED (GB SECTION 77(6)(A)/1977)</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <effective-date>
+        <date>20021127</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="14">
+      <publication-date>
+        <date>20030307</date>
+      </publication-date>
+      <event-code-1>ET</event-code-1>
+      <effect>+</effect>
+      <legal-description>FR: TRANSLATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="15">
+      <publication-date>
+        <date>20030910</date>
+      </publication-date>
+      <event-code-1>26N</event-code-1>
+      <effect>+</effect>
+      <legal-description>NO OPPOSITION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <effective-date>
+        <date>20030619</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="16">
+      <publication-date>
+        <date>20031031</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>TP</designated-state-event-code>
+      <designated-state-description>TRANSMISSION OF PROPERTY</designated-state-description>
+    </legal-event>
+    <legal-event sequence="17">
+      <publication-date>
+        <date>20120713</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <designated-state-event-code>R082</designated-state-event-code>
+      <designated-state-description>CHANGE OF REPRESENTATIVE</designated-state-description>
+      <corresponding-publication-number>59708255</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <representative-name>UWE ROESLER, DE</representative-name>
+    </legal-event>
+    <legal-event sequence="18">
+      <publication-date>
+        <date>20120906</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <designated-state-event-code>R081</designated-state-event-code>
+      <designated-state-description>CHANGE OF APPLICANT/PATENTEE</designated-state-description>
+      <corresponding-publication-number>59708255</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <new-owner>ALSTOM TECHNOLOGY LTD., CH</new-owner>
+      <free-text-description>FORMER OWNER: ALSTOM (SWITZERLAND) LTD., BADEN, CH</free-text-description>
+      <effective-date>
+        <date>20120713</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="19">
+      <publication-date>
+        <date>20120906</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <designated-state-event-code>R082</designated-state-event-code>
+      <designated-state-description>CHANGE OF REPRESENTATIVE</designated-state-description>
+      <corresponding-publication-number>59708255</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <representative-name>ROESLER, UWE, DIPL.-PHYS.UNIV., DE</representative-name>
+      <effective-date>
+        <date>20120713</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="20">
+      <publication-date>
+        <date>20120906</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <designated-state-event-code>R081</designated-state-event-code>
+      <designated-state-description>CHANGE OF APPLICANT/PATENTEE</designated-state-description>
+      <corresponding-publication-number>59708255</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <new-owner>GENERAL ELECTRIC TECHNOLOGY GMBH, CH</new-owner>
+      <free-text-description>FORMER OWNER: ALSTOM (SWITZERLAND) LTD., BADEN, CH</free-text-description>
+      <effective-date>
+        <date>20120713</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="21">
+      <publication-date>
+        <date>20121019</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>TP</designated-state-event-code>
+      <designated-state-description>TRANSMISSION OF PROPERTY</designated-state-description>
+      <new-owner>ALSTOM TECHNOLOGY LTD., CH</new-owner>
+      <effective-date>
+        <date>20120918</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="22">
+      <publication-date>
+        <date>20130213</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <designated-state-event-code>732E</designated-state-event-code>
+      <designated-state-description>AMENDMENTS TO THE REGISTER IN RESPECT OF CHANGES OF NAME OR CHANGES AFFECTING RIGHTS (SECT. 32/1977)</designated-state-description>
+      <free-text-description>REGISTERED BETWEEN 20130117 AND 20130123</free-text-description>
+    </legal-event>
+    <legal-event sequence="23">
+      <publication-date>
+        <date>20151119</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>PLFP</designated-state-event-code>
+      <designated-state-description>FEE PAYMENT</designated-state-description>
+      <fee-payment-year>19</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="24">
+      <publication-date>
+        <date>20160809</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <designated-state-event-code>R081</designated-state-event-code>
+      <designated-state-description>CHANGE OF APPLICANT/PATENTEE</designated-state-description>
+      <corresponding-publication-number>59708255</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <new-owner>GENERAL ELECTRIC TECHNOLOGY GMBH, CH</new-owner>
+      <free-text-description>FORMER OWNER: ALSTOM TECHNOLOGY LTD., BADEN, CH</free-text-description>
+    </legal-event>
+    <legal-event sequence="25">
+      <publication-date>
+        <date>20160809</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <designated-state-event-code>R082</designated-state-event-code>
+      <designated-state-description>CHANGE OF REPRESENTATIVE</designated-state-description>
+      <corresponding-publication-number>59708255</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <representative-name>ROESLER, UWE, DIPL.-PHYS.UNIV., DE</representative-name>
+    </legal-event>
+    <legal-event sequence="26">
+      <publication-date>
+        <date>20161118</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>PLFP</designated-state-event-code>
+      <designated-state-description>FEE PAYMENT</designated-state-description>
+      <fee-payment-year>20</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="27">
+      <publication-date>
+        <date>20161216</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>CD</designated-state-event-code>
+      <designated-state-description>CHANGE OF NAME OR COMPANY NAME</designated-state-description>
+      <new-owner>ALSTOM TECHNOLOGY LTD, CH</new-owner>
+      <effective-date>
+        <date>20161110</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="28">
+      <publication-date>
+        <date>20170131</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161121</date>
+      </payment-date>
+      <fee-payment-year>20</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="29">
+      <publication-date>
+        <date>20170131</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161122</date>
+      </payment-date>
+      <fee-payment-year>20</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="30">
+      <publication-date>
+        <date>20170131</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161118</date>
+      </payment-date>
+      <fee-payment-year>20</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="31">
+      <publication-date>
+        <date>20170228</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     0851104A1</docdb-publication-number>
+      <docdb-application-id>17254601</docdb-application-id>
+      <designated-state-authority>
+        <country>IT</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161123</date>
+      </payment-date>
+      <fee-payment-year>20</fee-payment-year>
+    </legal-event>
+  </legal-data>
+  <description id="descr_ger" lang="ger" format="original" date-changed="20100625">
+    <p />
+    <p>Technisches Gebiet </p>
+    <p>Die vorliegende Erfindung betrifft ein Verfahren gemäss Oberbegriff des Anspruchs 1. </p>
+    <p>Stand der Technik </p>
+    <p>Es ist üblich, zur Kühlung von thermisch hochbelasteten Aggregaten einer Gasturbogruppe, beispielsweise einer Brennkammer, Druckluft einzusetzen, welche intermediär oder nach erfolgter Kompression zu diesem Zweck abgezweigt wird. Nun ist es aber so, dass in modernen Gasturbinen zur Erzielung einer schadstoffarmen Verbrennung bei maximiertem Wirkungsgrad der Brennstoff mit möglichst der gesamten Verdichterluft vorgemischt werden sollte. Luftverluste, wie sie bei den bekanntgewordenen Luftkühlungen der thermisch hochbelasteten Aggregate entstehen, sind deshalb zu vermeiden.Eine weitere Problematik bei solchen Luftkühlungen besteht darin, dass die thermisch verbrauchte Luft jeweils an passender Stelle in den Turbinenprozess rückgeführt werden muss, wobei eine Luftmenge, welche beispielsweise die Turbine gekühlt hat, dann nicht ohne weiteres als Kühlmedium in die Brennkammer geleitet werden kann, da dort regelmässig höhere Drücke vorherrschen. Demnach geht bei der Rückführung dieser Kühlluft in den Turbinenprozess immer Kühlpotential verloren, das mit anderen Mitteln ersetzt werden muss. </p>
+    <p>Diese Ausgangslage akzentuiert sich zum Beispiel, wenn die Gasturbogruppe für eine sequentielle Befeuerung ausgelegt ist. </p>
+    <p>Bei Gasturbogruppen, die in Kombination mit einem nachgeschalteten Dampfkreislauf betrieben werden, ist man dazu übergangen, ein ohnehin zur Verfügung stehender Dampf für die Kühlung der thermisch hochbelasteten Aggregate einzusetzen, ausgehend von der Tatsache, dass die zur Verfügung stehende Abwärme aus einer letzten Gasturbine mehr Dampf zu erzeugen vermag, als zum Betrieb der zum Dampfkreislauf gehörenden Dampfturbine notwendig ist. Es ist bekanntgeworden, diesen zur freien Verfügung stehenden Dampf zur Leistungssteigerung in den Gasturbinenprozess einzuführen. Dabei wird aus thermodynamischen und strömungstechnischen Ueberlegungen darauf geachtet, dass die Beimischung mit der Verbrennungsluft die Verbrennung als solche nicht beeinträchtigen kann.Dies führt aber regelmässig zu komplizierten Eindüsungstechniken, die nicht zuletzt mit der Gemischbildung zweier in Temperatur, Druck und Verhalten unterschiedlicher Medien im Zusammenhang stehen. Danebst darf nicht unerwähnt bleiben, dass hier die Brennstoffregelung äusserst diffizil zu handhaben ist. </p>
+    <p>Darstellung der Erfindung </p>
+    <p>Hier will die Erfindung Abhilfe schaffen. Der Erfindung, wie sie in den Ansprüchen gekennzeichnet ist, liegt die Aufgabe zugrunde, bei einem Verfahren der eingangs genannten Art die freie zur Verfügung stehende Dampfmenge weiternutzend zu verwenden, dergestalt, dass deren anschliessende Zumischung an passender Stelle in die Gasturbogruppe die Verbrennung in der Brennkammer nicht zu beeinträchtigt vermag. </p>
+    <p>Erfindungsgemäss soll die Kühlung der Brennkammer ausschliesslich mit einer Dampfmenge durchgeführt werden. Da dieser Dampf aus obigen Ueberlegungen frei zur Verfügung steht, soll er nicht in herkömmlicher Weise im Kreislauf geführt werden, sondern nach erfolgtem Kühlungszweck an passender Stelle in die Heissgasströmung der vorgängig gekühlten Brennkammer zugemischt werden, womit sich unter anderen die Konfiguration der Kühlelemente gegenüber einem an sich auch denkbaren geschlossenen Kühldampfkreislauf stark vereinfacht, da Dampfverluste bei dem erfindungsgemässen Vorschlag in einem gewissen Umfang in Kauf genommen werden können. </p>
+    <p>Die passende Stelle für die Zumischung der vorgängig zu Kühlzwecken eingesetzten Dampfmenge steht in einer Interdependenz mit dem anvisierten Ziel, die Verbrennung mit minimierten Schadstoff-Emissionen, insbesondere was die NOx-Emissionen betrifft, zu bewerkstelligen. Durch eine magere Verbrennung sind niedrige NOx-Emissionen zu erwarten, so dass die Zumischung der vorgängig zu Kühlzwecken eingesetzten Dampfmenge einerseits losgelöst von dieser Verbrennung, andererseits nach erfolgtem vollständigem Ausbrand erfolgen soll, so dass damit auch die CO- und UHC-Emissionen minimiert werden können. Diese passende Stelle ist im letzten Drittel einer solchen Brennkammer lokalisiert.Die vorgeschlagene Dampfkühlung kann selbstverständlich bei jeder Brennkammer zur Anwendung gelangen; hier erfolgen dann die Korrekturen für eine optimale Eindüsung von Fall zu Fall durch die Bestimmung der hierzu passenden Stelle in Abhängigkeit zur Ausdehnung der Ausbrandzone der betreffenden Brennkammer. </p>
+    <p>Diese Zumischung kann dabei homogen über den Umfang verteilt erfolgen, da der Dampf durch die erfolgte Kühlung bereits umfangsmässig verteilt vorliegt. Ausserdem kann hier durch eine einfache Auslegung der Eindüsungsöffnungen stromauf der Turbine jenes optimale Brennkammeraustrittsprofil für deren Beaufschlagung erzeugt werden. </p>
+    <p>Die Kühlung lässt sich in Gleichstrom oder Gegenstrom zur Heissgasströmung durchführen. Eine Kombination der beiden Arten ist auch möglich. Des weiteren ist es ohne weiteres möglich, vorgängig der Kühlung der Brennkammer die Dampfmenge zu Kühlzwecken im geschlossenen Strömungspfad durch die Turbine strömen zu lassen. Dies ist hier nur möglich, weil die Druckverhältnisse zwischen Turbine und Dampfmenge eine solche Führung zulassen. </p>
+    <p>Vorteilhafte und zweckmässige Weiterbildungen der erfindungsgemässen Aufgabenstellung sind in den weiteren Ansprüchen gekennzeichnet. </p>
+    <p>Im folgenden wird anhand der Figur ein Ausführungsbeispiel der Erfindung näher erläutert. Alle für das unmittelbare Verständnis der Erfindung nicht erforderlichen Elemente sind fortgelassen worden. Die Strömungrichtung der Medien ist mit Pfeilen angegeben. </p>
+    <p>Kurze Beschreibung der Zeichnung </p>
+    <p>Die einzige Figur zweigt eine Kombinierte Gas/Dampf-Anlage (Kombianlage) mit der Führung einer Dampfmenge zu Kühlzwecken der thermisch belasteten resp. hochbelasteten Aggregate. </p>
+    <p>Wege zur Ausführung der Erfindung, gewerbliche Verwendbarkeit </p>
+    <p>Die Figur zeigt eine Kombianlage, welche aus einer Gasturbogruppe und einem nachgeschalteten Dampfkreislauf 7 besteht. Die Gasturbogruppe selbst besteht aus einer Verdichtereinheit 1, einer der Verdichtereinheit 1 nachgeschalteten ersten Brennkammer 2, im folgenden HD-Brennkammer genannt, einer stromab dieser Brennkammer wirkenden HD-Turbine 3, einer der HD-Turbine nachgeschalteten zweiten Brennkammer 4, im folgenden ND-Brennkammer genannt, und einer stromab dieser Brennkammer wirkenden ND-Turbine 5. Ein Generator 6 sorgt für die Stromerzeugung. Die von der Verdichtereinheit 1 angesaugte Luft 16 wird nach erfolgter Kompression als verdichtete Luft 8 in die HD-Brennkammer 2 geleitet. Diese Brennkammer 2 wird mit einem Brennstoff 9 befeuert, der an sich gasförmig und/oder flüssig sein kann, je nach Art des in dieser Brennkammer eingesetzten Brenners.Brennkammern werden normalerweise mit einem Diffusionsbrenner betrieben; diese Brennkammer 2 soll indessen vorzugsweise mit einem Vormischbrenner betrieben werden, wie er in EP-B1-0 321 809 beschrieben ist, wobei dieser Erfindungsgegenstand integrierender Bestandteil dieser Beschreibung ist. Die Heissgase 10 aus der HD-Brennkammer 2 beaufschlagen zunächst die HD-Turbine 3. Dabei ist diese Turbine 3 so ausgelegt, dass hier eine minimale Expansion stattfindet, dergestalt, dass deren Abgase 11 eine verhältnismässig hohe Temperatur aufweisen. Stromab dieser Turbine 3 befindet sich die ND-Brennkammer 4, welche im wesentlichen die Form eines ringförmigen Zylinders hat. Diese Brennkammer 4 weist keine herkömmliche Brennerkonfiguration auf: Die Verbrennung geschieht hier durch Selbstzündung eines in die heissen Abgase 11 eingedüsten Brennstoffes 13.Ausgehend davon, dass es sich hier um einen gasförmigen Brennstoff, also beispielsweise Erdgas, handelt, müssen für eine Selbstzündung gewisse unabdingbare Voraussetzungen erfüllt werden: Zunächst ist davon auszugehen, dass eine Selbstzündung nach vorliegender Konstellation erst bei einer Temperatur um die 1000 DEG C vonstatten geht, und dies soll auch bei Teillastbetrieb der Fall sein. Diese Forderung kann aber gewichtig eine optimale thermodynamische Auslegung des Gasturbinenprozesses negativ tangieren. Deshalb darf aus thermodynamischen Gründen das Druckverhältnis der HD-Turbine 3 nicht so weit angehoben werden, dass sich daraus eine niedrige Austrittstemperatur von beispielsweise ca. 500 DEG C ergibt, wie sie für einen sicheren Betrieb einer nachgeschalteten konventionellen Brennkammer vorteilhaft wäre.Um eine gesicherte Selbstzündung in der ND-Brennkammer 4 auch bei ungünstigen Bedingungen zu gewährleisten, kann der in die ND-Brennkammer 4 eingedüste gasförmige Brennstoff 13 mit einer Menge eines anderen Brennstoffes 12, der eine niedrige Zündtemperatur aufweist, gemischt werden. Als Hilfsbrennstoff eines gasförmigen Basisbrennstoffes eignet sich hier Oel vorzüglich. Dieser flüssige Hilfsbrennstoff 12, entsprechend eingedüst, fungiert sozusagen als Zündschnur, und ermöglicht auch dann eine Selbstzündung in der ND-Brennkammer 4, wenn die Abgase 11 aus der HD-Turbine 3 eine Temperatur aufweisen, die unterhalb jener optimalen Selbstzündtemperatur liegt. Die in der ND-Brennkammer 4 bereitgestellten Heissgase 14 beaufschlagen anschliessend die ND-Turbine 5.Das kalorische Potential der Abgase 15 aus dieser ND-Turbine 5 kann weitergehend genutzt werden, beispielsweise durch Nachschaltung eines Dampfkreislaufes 7 zur Bereitstellung einer Dampfmenge zum Betreiben einer Dampfturbine und/oder Vorwärmung des Einspritzwassers. </p>
+    <p>Insbesondere bei einer solchen Konfiguration ist die thermische Belastung der Brennkammern sowie der Turbinen recht hoch, weshalb die Kühlung auch äusserst effizient ausfallen muss. Dabei muss gleichzeitig noch berücksichtigt werden, dass Gasturbogruppen dieser Hochleistungsstufe im allgemeinen wenig Luft zu Kühlzwecken freistellen können, sollen der Wirkungsgrad und die spezifische Leistung nicht markant sinken. Die Kühlung der thermisch belasteten Aggregate kann aber vorteilhaft durch Dampf geschehen, der bei dem hier nachgeschalteten Dampfkreislauf 7 ohnehin in genügender Menge und Qualität vorhanden ist. Ist ein solcher Dampfkreislauf nicht vorhanden, so lässt sich die hierzu benötigte Dampfmenge leicht anhand einer abgezweigten Teilmenge der Abwärme aus der letzten Turbine bereitstellen. </p>
+    <p>Die hochkalorischen Abgase 15 durchströmen einen Abhitzedampferzeuger 17 , in welchem in Wärmetauschverfahren Dampf erzeugt wird, der das Arbeitsmedium für eine nachgeschaltete mit einem Generator 20 gekoppelten Dampfturbine 18 bildet. Die dann thermisch ausgenutzten Abgase strömen als Rauchgase 19 vorzugsweise über eine nicht dargestellte Reinigungsanlage ins Freie. Möglich ist auch eine Weiternutzung dieser Rauchgase zu anderen Zwecken. Selbstverständlich ist es auch möglich, in Wirkverbindung mit dem Abhitzedampferzeuger 17 eine Zwischenüberhitzung vorzunehmen. Der entspannte Dampf 21 aus der genannten Dampfturbine 18 wird in einem wasser- oder luftgekühlten Kondensator 22 kondensiert. Durch eine stromab des Kondensators 22 angeordnete Förderpumpe 23 wird das Kondensat 24 in einen Speisewasserbehälter und Entgaser 25 gefördert.Durch Entnahme einer bestimmten Menge Anzapfdampf aus der Dampfturbine 18 kann das zersprühte Kondensat 24 auf Siedezustand gebracht und entgast werden. Eine weitere nachgeschaltete Förderpumpe 26 pumpt dann das Wasser 27 durch den Abhitzedampferzeuger 17. Zuerst durchläuft das Wasser 27 eine ND-Dampferzeugung 17a, anschliessend strömt dieser Dampf in eine Kesseltrommel 28. Im geschlossenen Kreislauf ist die Kesseltrommel 28 mit einer MD-Dampferzeugung 17b verbunden, dergestalt, dass hierein ein Sattdampf 29 entsteht, der dann durch eine HD-Dampferzeugung 17c beschickt wird, in welcher die qualitative Dampfbereitstellung für die Beaufschlagung der Dampfturbine 18 geschieht. </p>
+    <p>Zur Kühlung der Aggregate der Gasturbogruppe wird aus der Kesseltrommel 28 eine überschüssige Dampfmenge 30 entnommen. Durch Regelorgane lässt sich die benötigte Dampfmenge dann zu den einzelnen Aggregate führen. In der Figur sind zwei Kühldampfstränge 31, 32 ersichtlich. Mit der Dampfmenge 32 wird zunächst die HD-Turbine 3 im geschlossenen Strömungspfad, d.h. ohne Zumischung, gekühlt, anschliessend wird mit dieser Dampfmenge die Brennkammer 2, in Gleich- oder Gegenstrom zur Heissgasströmung, gekühlt. Nach abgeschlossener Kühlung wird die Dampfmenge dann an geeigneter Stelle, vorzugsweise innerhalb des letzten Drittels dieser Brennkammer der Heissgasströmung zugemischt. Damit lässt sich ohne Beeinflussung der auf minimierte NOx-Emissionen ausgelegten Verbrennung eine maximierte Leistungssteigerung der Anlage erreichen.Darüber hinaus geschieht die Eindüsung thermodynamisch und strömungstechnisch an optimaler Stelle, wobei ferner mit dieser Vorkehrung eine gewichtige Reduzierung der aus der Ausbrandzone verbleibenden CO- und UHC-Emissionen erreicht wird. Die andere Dampfmenge 31 wird zu gleichen Kühlzwecken, in analoger Weise zum oben beschriebenen Kühlungspfad für die ND-Brennkammer 4 und ND-Turbine 5 eingesetzt. Die Entnahme der hier benötigte Kühldampfmenge ist nicht auf die Kesseltrommel 28 beschränkt. </p>
+    <p>Die zu kühlenden Aggregate 2, 3, 4, 5 lassen sich auch, im Gegensatz zu den in der Figur gezeigten Serieschaltungen, individuell kühlen, wobei dann die Zumischung der einzelnen Dampfmenge in die Heissgasströmungen von Fall zu Fall vorgenommen werden muss. Grundsätzlich ist hier eine individuelle Zumischung der zu Kühlzwecken eingesetzten Dampfmenge in die jeweilige Brennkammer, abströmungsseitig der Ausbrandzone, auch möglich. Bei individueller Kühlung der thermisch hochbelasteten Aggregate der Gasturbogruppe lassen sich sodann verschiedene Dampfmenge zusammenfassen, bevor sie in die Brennkammern 2, 4 eingeleitet werden. </p>
+    <p>Bezugszeichenliste </p>
+    <p> 1   Verdichtereinheit 2   Hochdruck-Brennkammer, HD-Brennkammer 3   Hochdruck-Turbine, HD-Turbine 4   Niederdruck-Brennkammer, ND-Brennkammer 5   Niederdruck-Brennkammer, ND-Brennkammer 6   Generator 7   Dampfkreislauf 8   Verdichtete Luft 9   Brennstoff 10   Heissgase 11   Heisse Abgase 12   Hilfsbrennstoff 13   13 Brennstoff 14   Heissgase 15   15 Abgase 16   Ansaugluft 17   Abhitzedampferzeuger 17a   Niederdruck-Dampferzeuger 17b   Mitteldruck-Dampferzeuger 17c   Hochdruck-Dampferzeuger 18   Dampfturbine 19   Rauchgase 20   Generator 21   Abdampf, Entspannter Dampf 22   Kondensator 23   Förderpumpe 24   Kondensat 25   Speisewasserbehälter und Entgase 26   Förderpumpe 27   Wasser 28   Kesseltrommel 29   Sattdampf 30   Kühldampf 31   Kühldampfpfad 32   Kühldampfpfad </p>
+  </description>
+  <description id="descr_eng" lang="eng" format="machine translation" date-changed="20100625">
+    <p />
+    <p>Technical area  </p>
+    <p>The available invention concerns a procedure in accordance with generic term of the requirement 1.  </p>
+    <p>State of the art  </p>
+    <p>It is usual to begin for the cooling of thermally highly loaded aggregates of a gas turbo-'s group, for example a combustion chamber, compressed air which is for this purpose branched off intermediately or after compression. Now is it however like that in modern gas turbines for the achievement of a low-pollution burn with maximised efficiency the fuel with as entire an compressor air as possible should be before-mixed. Air losses, as they develop with the become known air cooling of the thermally highly loaded aggregates, are to be avoided therefore. A further problem with such air cooling consists of the fact that thermally used air must be reconducted in each case in suitable place into the turbine process, whereby an amount of air, which cooled for example the turbine, cannot be led then so easily as cooling agent into the combustion chamber, since there regularly higher pressures predominate. Therefore always cooling potential is lost during the feedback of this cooling air into the turbine process, which must be replaced with other means.  </p>
+    <p>This initial position accents itself for example, if the gas turbo-'s group is appropriate for a sequential beaconing.  </p>
+    <p>At gas turbo-'s groups, which are operated in combination with a steam cycle downstream, one is to be used in addition turned into, a steam anyway the available for the cooling of the thermally highly loaded aggregates, on the basis of the fact the fact that the waste heat from a last gas turbine more steam, the available, is able to produce than for the enterprise of the steam turbine belonging to the steam cycle is necessary. It is become known to introduce this steam the free available for increase in output into the gas turbine process. From thermodynamic and flowtechnical considerations it is made certain that the admixture with the combustion air cannot impair the burn as such. This leads however regularly to complicated Eindüsungstechniken, which not least with the air/fuel mixture of two in temperature, pressure and behavior of different media in the connection. Danebst may not remain unmentioned that the fuel regulation is to be handled extremely difficult here.  </p>
+    <p>Representation of the invention  </p>
+    <p>Here the invention wants to create remedy. The invention, how it is characterized in the requirements, the task is the basis to use with a procedure of the kind initially specified the free steam quantity the available further-using such that their following mixing in suitable place is not able the burn in the combustion chamber into the gas turbo-'s group too impaired.  </p>
+    <p>According to invention the cooling of the combustion chamber is to be accomplished exclusively with a steam quantity. Since this steam from above considerations is available freely, it is to be led not in conventional way in the cycle, but be added after cooling purpose in suitable place into the hot gas current of the previous cooled combustion chamber, with which under others the configuration of the cooling sections simplifies itself in relation to an actually also conceivable closed cooling steam cycle highly, since steam losses can be taken with the proposal according to invention to a certain extent in purchase.  </p>
+    <p>The suitable place for the mixing that previous for cooling purposes used steam quantity stands in an interdependence with sighted the goal, which burn with minimized pollutant emissions, in particular which concerns the NOx emissions, of managing. Low NOx emissions are to be expected by a lean burn, so that the mixing that is to take place previous for cooling purposes used steam quantity on the one hand detached by this burn, on the other hand after complete Ausbrand, so that thereby also the COund UHC emissions can be minimized. This suitable place is located in the last third of such a combustion chamber. The suggested vapor cooling can naturally with each combustion chamber at application arrive; here then the corrections for an optimal Eindüsung take place for each individual case via the determination of the place for this fitting in dependence for the expansion of the Ausbrandzone of the combustion chamber concerned.  </p>
+    <p>This mixing can take place thereby homogeneous distributed over the extent, since steam is present by the cooling taken place already extent-moderately distributed. In addition here by a simple design of the Eindüsungsöffnungen currentup that optimal combustion chamber withdrawal profile for their admission can be produced for the turbine.  </p>
+    <p>The cooling leaves itself in direct current or counter current for hot gas current would drive through. A combination of the two kinds is also possible. The moreover it is easily possible to let previous the cooling of the combustion chamber the steam quantity flow for cooling purposes in the closed flow path by the turbine. This is here only possible, because the pressure ratios between turbine and steam quantity permit such a guidance.  </p>
+    <p>Favourable and appropriate further educations of setting of tasks according to invention are characterized in the further requirements.  </p>
+    <p>In the following on the basis the figure a remark example of the invention is more near described. All elements not necessary for the direct understanding of the invention were let go away. The flow direction of the media is indicated as arrows.  </p>
+    <p>Short description of the design  </p>
+    <p>The only figure branches combined gas/steam generating unit (combination plant) with the guidance of a steam quantity for cooling purposes of the thermally loaded respectable highly loaded aggregates.  </p>
+    <p>Ways to the execution of the invention, commercial usefulness  </p>
+    <p>The figure shows a combination plant, which consists of a gas turbo-'s group and a steam cycle downstream 7. The gas turbo-'s group consists 1 first combustion chamber downstream 2, in the following hp combustion chamber mentioned, of a compressor unit 1, one the compressor unit one downstream this combustion chamber working hp turbine 3, one the hp turbine second combustion chamber downstream 4, in the following lp combustion chamber mentioned, and one downstream this combustion chamber working lp turbine 5. a generator 6 provides for the generation of current. Air 16 sucked in by the compressor unit 1 is led after compression as compressed air 8 into the hp combustion chamber 2. This combustion chamber 2 will become beaconed with a fuel 9, which can be actually gaseous and/or liquid, burner combustion chambers used depending upon kind in this combustion chamber normally with a diffusion burner operated; this combustion chamber 2 is to be preferably operated meanwhile with a Vormischbrenner, as it is descriptive in EP-B1-0 321,809, whereby this invention article is an integrating component of this description. The hot gases 10 from the hp combustion chamber 2 subject first the hp turbine 3. thereby are in such a way laid out this turbine 3 that a minimum expansion takes place here, such that their exhaust gases 11 exhibits a relatively high temperature. Downstream this turbine 3 is the lp combustion chamber 4, which has essentially the form of a circular cylinder. This combustion chamber 4 does not exhibit a conventional burner configuration: The burn is done here via compression ignition one into the hot exhaust gases of 11 eingedüsten fuel 13.Ausgehend of it that it concerns here a gaseous fuel, thus for example natural gas, must for a compression ignition certain indispensable conditions be fulfilled: First is to be assumed a compression ignition goes to available constellation only at a temperature around the 1000 DEG C, and this should be also with partial load operation the case. This demand can affect however weightily an optimum thermodynamic design of the gas turbine process negatively. Therefore the pressure ratio of the hp turbine 3 may not be so far raised for thermodynamic reasons that from it a low outlet temperature of for example approx. 500 DEG C results, how it would be favourable for a safe enterprise of a conventional combustion chamber downstream. In order to ensure a secured compression ignition in the lp combustion chamber 4 also with unfavorable conditions, the gaseous fuel 13 with a quantity of another fuel 12, which exhibits a low ignition temperature, eingedüste into the lp combustion chamber 4, can be mixed. As auxiliary fuel of a gaseous basis fuel is suitable here oils excellently. This liquid auxiliary fuel 12, accordingly eingedüst, functions as it were as igniter cord, and makes also then a compression ignition possible in the lp combustion chamber 4, if the exhaust gases 11 from the hp turbine 3 exhibit a temperature, which lies below that optimal self ignition temperature. In the lp combustion chamber 4 made available hot gases 14 subject afterwards the lp turbine 5.Das kalorische potential of the exhaust gases 15 from this lp turbine 5 can large be used, for example by connecting a steam cycle 7 at the outlet side for the supply of a steam quantity for the operation of a steam turbine and/or preliminary heating of the injection water.  </p>
+    <p>In particular with such a configuration the thermal load of the combustion chambers as well as the turbines is quite high, why the cooling must fail also extremely efficiently. That gas turbo-'s groups of this high speed stage can release generally little air for cooling purposes, are the efficiency and the specific achievement do not have to be still considered at the same time saliently to sink. The cooling of the thermally loaded aggregates is possible however favourably with steam, which anyway is present with the steam cycle connected at the outlet side here 7 in sufficient quantity and quality. If such a steam cycle is missing, then the steam quantity for this needed can be made available easily on the basis a branched subset of the waste heat from the last turbine.  </p>
+    <p>The hochkalorischen exhaust gases 15 flow through a waste heat steam generator 17, in which in heat exchange procedures steam one produces, which forms the working medium for a steam turbine downstream 18 coupled with a generator 20. Then the thermally used exhaust gases preferably flow as flue gases 19 over not represented cleaning equipment into the free. Possible also a far use of these flue gases is for other purposes. Of course it is also possible to make in effect connection with the waste heat steam generator 17 a resuperheating. Relaxed steam 21 from the steam turbine mentioned 18 is condensed in a more wasseroder air-cooled condenser 22. By downstream the condenser 22 arranged feed pump 23 the condensate 24 is promoted to a Speisewasserbehälter and a deaerator 25. By withdrawal the zersprühte condensate 24 can be brought and degassed to a certain quantity bleeder steam from the steam turbine 18 on simmering condition. A further feed pump downstream 26 pumps then the water 27 by the waste heat steam generator 17. First the water 27 goes through a lp steam generation 17a, afterwards flows this steam into a boiler drum 28. In the closed cycle the boiler drum is 28 connected with a MD steam generation 17b, such that a saturated steam 29 develops here, which is then fed by a hp steam generation 17c, in which the qualitative steam supply for the admission of the steam turbine 18 happens.  </p>
+    <p>For the cooling of the aggregates out of the boiler drum 28 a surplus steam quantity of 30 is taken to the gas turbo-'s group. By rule organs the necessary steam quantity can be led then to individual aggregates. In the figure two cooling steaming ranks 31, 32 are evident. With the steam quantity 32 first the hp turbine 3 in the closed flow path becomes, i.e. without mixing, cooled, afterwards with this steam quantity the combustion chamber 2, in Gleichoder counter current for hot gas current, is cooled. After final cooling the steam quantity is then added to this combustion chamber of the hot gas current in suitable place, preferably within the last third. Thus a maximised increase in output of the plant can be reached without influence of the burn designed for minimized NOx emissions. Beyond that the Eindüsung happens thermodynamically and flowtechnically on optimal place, whereby furthermore with this precaution a weighty reduction is reached from the Ausbrandzone remaining COund UHC emissions. The other steam quantity of 31 is used for same cooling purposes, in similar way to the cooling path descriptive above for the lp combustion chamber 4 and lp turbine 5. The withdrawal of the cooling steam quantity needed here is not limited to the boiler drum 28.  </p>
+    <p>The aggregates 2, 3, 4, 5 which can be cooled leave themselves also, contrary to which serial switchings shown in the figure, individually cools, whereby then the mixing of the individual steam quantity must be made into the hot gas currents for each individual case. In principle here an individual mixing of the steam quantity used for cooling purposes is into the respective combustion chamber, outflow-laterally the Ausbrandzone, also possible. In the case of individual cooling of the thermally highly loaded aggregates of the gas turbo-'s group can be summarized then different steam quantity, before they are introduced into the combustion chambers 2, 4.  </p>
+    <p>Reference symbol list  </p>
+    <p> 1 compressor unit 2 high pressure combustion chamber, hp combustion chamber 3 high pressure turbine, hp turbine 4 low pressure combustion chamber, lp combustion chamber 5 low pressure combustion chamber, lp combustion chamber 6 generator 7 steam cycle 8 compressed air 9 fuel of 10 hot gases of 11 hot exhaust gases 12 auxiliary fuel 13 13 fuel of 14 hot gases of 15 15 exhaust gases 16 intake air of 17 waste heat steam generators 17a low pressure steam generator 17b medium pressure steam generator 17c high pressure steam generator 18 steam turbine of 19 flue gases 20 generator 21 evaporate, relaxed steam 22 condenser 23 feed pump 24 condensate of 25 Speisewasserbehälter and degas 26 feed pump 27 water 28 boiler drum 29 saturated steam 30 cooling steam 31 cooling steam path 32 cooling steam path</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="machine translation" date-changed="20100625">
+    <claim num="1">
+      <claim-text>1. Procedure for the cooling a gas turbo-'s group marked by a steam quantity, whereby the gas turbo-'s group essentially consists of a compressor unit, at least one combustion chamber at least one turbine and at least one generator, by the fact that at least for cooling the combustion chamber (2, 4) are added assigned steam quantity (of 31, 32) after cooling process into the Heisgasströmung of the combustion chamber, outflow-laterally the Ausbrandszone working there. </claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>2. Procedure according to requirement 1 that the assigned steam quantity (31, 32) first a turbine (3, 5) in the closed flow path and afterwards in the open flow path a combustion chamber (2, 4) cools. </claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text>3. Procedure according to requirement 1, by the fact characterized that the steam quantity used for cooling purposes (31, 32) one the gas turbo-'s group steam cycle downstream (7) is taken. </claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>4. Procedure according to requirement 3, by the fact characterized that the used the steam quantity for cooling purposes (31, 32) one to the steam cycle (7) belonging waste heat steam generator (17) is taken. </claim-text>
+    </claim>
+    <claim num="5">
+      <claim-text>5. Procedure according to requirement 4, by the fact characterized that the steam quantity used for cooling purposes (31, 32) is inferred from a boiler drum (28), standing with the waste heat steam generator (17) in effect connection. </claim-text>
+    </claim>
+    <claim num="6">
+      <claim-text>6. Procedure according to the requirements 1 or 2, by the fact characterized that the mixing of the assigned steam quantity (31, 32) after cooling within the last third of the combustion chamber (2, 4) is made. </claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_ger" lang="ger" format="original" date-changed="20100625">
+    <claim num="1" id="clm-00001-de" independent="true">
+      <claim-text>1. Verfahren zur Kühlung einer Gasturbogruppe mit einer Dampfmenge, wobei die Gasturbogruppe im wesentlichen aus einer Verdichtereinheit, mindestens einer Brennkammer mindestens einer Turbine und mindestens einem Generator besteht, dadurch gekennzeichnet, dass die mindestens zur Kühlung der Brennkammer (2, 4) eingesetzte Dampfmenge (31, 32) nach erfolgten Kühlungsprozess in die Heisgasströmung der Brennkammer, abströmungsseitig der dort wirkenden Ausbrandszone zugemischt wird. </claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-de">
+      <claim-text>2. Verfahren nach Anspruch 1, dass die eingesetzte Dampfmenge (31, 32) zuerst eine Turbine (3, 5) im geschlossenen Strömungspfad und anschliessend im offenen Strömungspfad eine Brennkammer (2, 4) kühlt. </claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-de">
+      <claim-text>3. Verfahren nach Anspruch 1, dadurch gekennzeichnet, dass die zu Kühlzwecken eingesetzte Dampfmenge (31, 32) einem der Gasturbogruppe nachgeschalteten Dampfkreislauf (7) entnommen wird. </claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-de">
+      <claim-text>4. Verfahren nach Anspruch 3, dadurch gekennzeichnet, dass die zu Kühlzwecken eingesetzte Dampfmenge (31, 32) einem zum Dampfkreislauf (7) gehörenden Abhitzedampferzeuger (17) entnommen wird. </claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-de">
+      <claim-text>5. Verfahren nach Anspruch 4, dadurch gekennzeichnet, dass die zu Kühlzwecken eingesetzte Dampfmenge (31, 32) einer mit dem Abhitzedampferzeuger (17) in Wirkverbindung stehenden Kesseltrommel (28) entnommen wird. </claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-de">
+      <claim-text>6. Verfahren nach den Ansprüchen 1 oder 2, dadurch gekennzeichnet, dass die Zumischung der eingesetzten Dampfmenge (31, 32) nach erfolgter Kühlung innerhalb des letzten Drittels der Brennkammer (2, 4) vorgenommen wird. </claim-text>
+    </claim>
+  </claims>
+  <image file="EP851104A1.PDF" type="pdf" size="156266" pages="8" />
+</lexisnexis-patent-document>

@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252072A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021755" date-changed="20160120" time-changed="080805">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229065">
+        <country>US</country>
+        <doc-number>20150252072</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14433251</doc-number>
+        <date>20131008</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160120">
+      <classification-ipcr sequence="1">
+        <text>C07K   5/062       20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>062</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160120">
+      <classification-cpc sequence="1">
+        <text>C07K   5/06026     20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>06026</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07D 471/04        20130101 LI20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>471</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">36</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">AZAINDOLINES</invention-title>
+    <references-cited date-changed="20151027">
+      <forward-citations name="fwdcit" date-changed="20151027" />
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>20150266879</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20131008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150910">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61712330</doc-number>
+          <date>20121011</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Hoffmann-La Roche Inc.</orgname>
+            <address>
+              <city>Nutley</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hogg</last-name>
+            <first-name>Joan Heather</first-name>
+            <address>
+              <city>Caldwell</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lou</last-name>
+            <first-name>Yan</first-name>
+            <address>
+              <city>Pleasanton</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13070877</doc-number>
+        <date>20131008</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014056867</doc-number>
+        <date>20140417</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173565892">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252072</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131008</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173565890">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252072</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131008</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed are compounds of Formula (I) or pharmaceutically acceptable salts thereof, wherein W, Y, Z, R<sup>1</sup>, R<sup>2</sup>, R<sup>3 </sup>and R<sup>4 </sup>are as described in this application, and methods of using the compounds in the treatment of cancer.</p>
+    <p id="p-a-00002-en" num="0000">
+      <chemistry id="chema-00001-en" num="00001">
+        <img id="imga-00001-en" he="29.13mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150252072A1_00001.PNG" img-format="png" original="US20150252072A1-20150910-C00001.TIF" />
+      </chemistry>
+    </p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150421</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252072A1</docdb-publication-number>
+      <docdb-application-id>444310209</docdb-application-id>
+      <new-owner>HOFFMANN-LA ROCHE INC., NEW JERSEY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HOGG, JOAN HEATHER;LOU, YAN;REEL/FRAME:035456/0032</free-text-description>
+      <effective-date>
+        <date>20121019</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150421</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252072A1</docdb-publication-number>
+      <docdb-application-id>444310209</docdb-application-id>
+      <new-owner>F. HOFFMANN-LA ROCHE AG, SWITZERLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:HOFFMANN-LA ROCHE INC.;REEL/FRAME:035456/0115</free-text-description>
+      <effective-date>
+        <date>20130206</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to azaindolines which act as inhibitors of SMAC protein binding to Inhibitor of Apoptosis Proteins (IAPs), and/or inhibitors of activated caspase protein binding to IAPs. These molecules are useful in the amelioration, treatment or control of cancer, especially solid tumors.</p>
+      <p id="p-00002-en" num="0002">These compounds bind to the BIR2 and/or BIR3 regions of IAP proteins, including XIAP and cIAP, resulting in activation or reactivation of the caspase cascade and, as such, are useful for the treatment of proliferative diseases, including cancer.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">Cancer is a disease of uncontrolled cell growth causing local expansion of a tumor and, potentially, distant metastases. One mechanism by which cancer cells grow is by avoidance of apoptosis, or programmed cell death. Alterations in apoptotic pathways have been linked to cancer cells being resistant to standard treatments, e.g., chemotherapeutics or radiation, and to the incidence and progression of cancer. See, e.g., E. Dean et al., “X-linked inhibitor of apoptosis protein as a therapeutic target,” Expert Opin. Ther. Targets (2007) 11(11):1459-1471</p>
+      <p id="p-00004-en" num="0004">The two basic pathways for apoptotic cell death are the intrinsic pathway and the extrinsic pathway. The intrinsic apoptotic pathway can be initiated by various mechanisms including cellular stress and drug-induced DNA damage. The extrinsic pathway can be initiated by activation of the death receptors by a chemokine. Initiation of either pathway results in the activation of a family of proteases called caspases. Once activated, the caspases can act to cleave a variety of substrates creating a cascade of events that lead to the activation of the effector caspases 3 and 7 and eventual cell death. The IAP family of proteins can bind to and inhibit the activity of caspases thus inhibiting apoptosis. See, e.g., Dean, supra at 1460.</p>
+      <p id="p-00005-en" num="0005">The IAPs can contain up to three copies of homologous structural domains called baculoviral IAP repeat (BIR) domains, BIR1, BIR2 and BIR3. The BIR3 domain of the prototypical IAPs, cIAP and XIAP, can bind to and inhibit activated caspase 9. The BIR2 domain, in contrast, binds to and inhibits caspases 3 and 7. The proapoptotic protein Smac (also known as DIABLO) can block the BIR2 and BIR3 domains of IAPs competing with activated caspases resulting in release of the activated caspases from the IAPs and completion of the apoptotic program. See, e.g., S. Wang, “Design of Small-Molecule Smac Mimetics as IAP Antagonists,” Current Topics in Microbiology and Immunology 348, DOI 10.1007/82<sub>—</sub>2010<sub>—</sub>111, pp. 89-113.</p>
+      <p id="p-00006-en" num="0006">Peptides and small molecules have been reported to bind to the BIR3 region of XIAP and cIAP, mimicking the action of Smac protein and releasing activated caspases. See, e.g., Dean, supra; and M. Gyrd-Hanse et al., “IAPs: From caspase inhibitors to modulators of NF-κB, inflammation and cancer,” Nature Review/Cancer, August 2010, Vol 10:561-574.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00007-en" num="0007">One aspect of the present invention is a compound of Formula I</p>
+      <p id="p-00008-en" num="0000">
+        <chemistry id="chem-00001-en" num="00002">
+          <img id="img-00001-en" he="26.25mm" wi="50.80mm" alt="embedded image" img-content="chem" file="US20150252072A1_00002.PNG" img-format="png" original="US20150252072A1-20150910-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00009-en" num="0008">or pharmaceutically acceptable salts thereof, wherein W, Y, Z, R<sup>1</sup>, R<sup>2</sup>, R<sup>3 </sup>and R<sup>4 </sup>are as described in this application.</p>
+      <p id="p-00010-en" num="0009">The present invention also relates to pharmaceutical compositions comprising one or more compounds of the invention, or a pharmaceutically acceptable salt thereof, and a pharmaceutically acceptable carrier or excipient.</p>
+      <p id="p-00011-en" num="0010">The present invention further relates to a method of ameliorating, controlling or treating cancer, including specifically solid tumors, for example lung, pancreatic, colon, breast, bone and prostate cancers in a mammal, specifically a human, comprising administering to said mammal a therapeutically effective amount of a compound according to the invention or a pharmaceutically acceptable salt thereof.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <heading id="h-00005-en" level="1">Definitions</heading>
+      <p id="p-00012-en" num="0011">Unless otherwise defined, all technical and scientific terms used herein have the same meaning as commonly understood by one of ordinary skill in the art to which this invention belongs.</p>
+      <p id="p-00013-en" num="0012">As used herein, the following terms shall have the following definitions.</p>
+      <p id="p-00014-en" num="0013">“Alkyl” means a monovalent linear or branched saturated hydrocarbon of 1 to 12 carbon atoms. In particular embodiments, alkyl has 1 to 6 carbon atoms, and in more particular embodiments 1 to 4 carbon atoms. As used herein, “lower alkyl” denotes an alkyl group having from 1-6 carbon atoms (“C<sub>1-6</sub>-alkyl”). Examples of alkyl include methyl, ethyl, propyl, isopropyl, butyl (also known as n-butyl), iso-butyl, sec-butyl, tert-butyl, pentyl, hexyl, and the like. The alkyl group can be optionally enriched in deuterium, e.g., —CD<sub>3</sub>, —CD<sub>2</sub>CD<sub>3 </sub>and the like.</p>
+      <p id="p-00015-en" num="0014">“Aryl” means a monovalent aromatic carbocyclic mono-, bi- or tricyclic ring system comprising 6 to 19 carbon ring atoms. Examples of aryl moieties include, but are not limited to, phenyl, naphthyl (also known as naphthalenyl), tolyl, xylyl, pyridinyl, quinolinyl, pyrimidinyl, imidazolyl, thiazolyl, anthracenyl, tetrazolyl, and fluorenyl.</p>
+      <p id="p-00016-en" num="0015">“Benzyl” means —CH<sub>2</sub>-phenyl.</p>
+      <p id="p-00017-en" num="0016">“Cyano” means —C≡n.</p>
+      <p id="p-00018-en" num="0017">“Cycloalkyl” means a substituted on unsubstituted stable monovalent saturated monocyclic, bicyclic or tricyclic system which consists of 3 to 10 ring carbon atoms. In particular embodiments cycloalkyl denotes a monovalent saturated monocyclic hydrocarbon group of 3 to 8 ring carbon atoms, in particular monovalent saturated monocyclic hydrocarbon group of 3 to 7 ring carbon atoms (“C<sub>3-7</sub>-cycloalkyl”). Particular cycloalkyl groups are monocyclic. Examples for monocyclic cycloalkyl are cyclopropyl, cyclobutnyl, cyclopentyl, cyclohexyl or cycloheptyl. Bicyclic means consisting of two saturated carbocycles having one or more carbon atoms in common. Examples for bicyclic cycloalkyl are bicyclo[2.2.1]heptanyl, or bicyclo[2.2.2]octanyl. Tricyclic means consisting of three saturated carbocycles having two or more carbon atoms in common. Examples of tricyclic cycloalkyl include adamantane.</p>
+      <p id="p-00019-en" num="0018">“Halogen” or “Halo” means at atom selected from F, Cl, Br or I. In particular embodiments Halogen means F and Cl.</p>
+      <p id="p-00020-en" num="0019">“Heteroatom” means at atom selected from N, O or S.</p>
+      <p id="p-00021-en" num="0020">“Heteroaryl” means a substituted or unsubstituted aromatic heterocyclic ring system containing up to two rings, at least one ring of which includes 1, 2, or 3 heteroatoms, the remaining ring atoms being carbon. Examples of heteroaryl groups include, but are not limited to, thienyl (also known as thiophenyl), furyl (also known as furanyl), indolyl, pyrrolyl, pyridinyl, pyrazinyl, oxazolyl, isoxazolyl, oxadiazolyl, thiazolyl, quinolinyl, isoquinolinyl, indazolyl, pyrimidinyl, imidazolyl, triazolyl, tetrazolyl, triazinyl, pyrazolyl, benzo[d]isoxazolyl, 2-oxo-2H-chromen-4-yl, benzo[d]isoxazolyl, benzothiophenyl, benzoimidazolyl, naphthyridinyl and cinnolinyl.</p>
+      <p id="p-00022-en" num="0021">In the case of a heteroaryl that is bicyclic it should be understood that one ring may be aryl while the other is heteroaryl and both may be independently substituted or unsubstituted.</p>
+      <p id="p-00023-en" num="0022">“Heterocyclyl,” “heterocycle” or “heterocyclic ring” means a substituted or unsubstituted monovalent saturated or partly unsaturated mono- or bicyclic ring, non-aromatic hydrocarbon system of 3 to 9 ring atoms, comprising 1, 2, or 3 ring heteroatoms selected from N, O and S, the remaining ring atoms being carbon. In particular embodiments, heterocycloalkyl is a monovalent saturated monocyclic ring system of 4 to 7 ring atoms, comprising 1, 2, or 3 ring heteroatoms selected from N, O and S, the remaining ring atoms being carbon. Examples for monocyclic saturated heterocycloalkyl are aziridinyl, oxiranyl, azetidinyl, oxetanyl, pyrrolidinyl, tetrahydrofuranyl, tetrahydro-thienyl, pyrazolidinyl, imidazolidinyl, oxazolidinyl, isoxazolidinyl, thiazolidinyl, piperidinyl, tetrahydropyranyl, tetrahydrothiopyranyl, tetrahydrofuranyl, piperazinyl, morpholinyl, thiomorpholinyl, 1,1-dioxo-thiomorpholin-4-yl, azepanyl, diazepanyl, homopiperazinyl, or oxazepanyl. Examples of partly unsaturated heterocycloalkyl are dihydrofuryl, imidazolinyl, dihydro-oxazolyl, dihydro-oxadiazolyl, dihydro-triazolyl, tetrahydro-pyridinyl, tetrahydro-triazinyl or dihydropyranyl.</p>
+      <p id="p-00024-en" num="0023">In the case of a heterocycle that is bicyclic it should be understood that one ring may be heterocycle while the other is cycloalkyl, and either or both may be independently substituted. Examples for bicyclic saturated heterocycloalkyl are 8-aza-bicyclo[3.2.1]octyl, quinuclidinyl, 8-oxa-3-aza-bicyclo[3.2.1]octyl, 9-aza-bicyclo[3.3.1]nonyl, 3-oxa-9-aza-bicyclo[3.3.1]nonyl, or 3-thia-9-aza-bicyclo[3.3.1]nonyl.</p>
+      <p id="p-00025-en" num="0024">“IC<sub>50</sub>” refers to the concentration of a particular compound required to inhibit 50% of a specific measured activity. IC<sub>50 </sub>can be measured, inter alia, as is described subsequently in Example 15.</p>
+      <p id="p-00026-en" num="0025">“Pharmaceutically acceptable,” such as pharmaceutically acceptable carrier, excipient, etc., means pharmacologically acceptable and substantially non-toxic to the subject to which the particular compound is administered.</p>
+      <p id="p-00027-en" num="0026">“Pharmaceutically acceptable salt” refers to conventional acid-addition salts or base-addition salts that retain the biological effectiveness and properties of the compounds of the present invention and are formed from suitable non-toxic organic or inorganic acids or organic or inorganic bases. Sample acid-addition salts include those derived from inorganic acids such as hydrochloric acid, hydrobromic acid, hydroiodic acid, sulfuric acid, sulfamic acid, phosphoric acid and nitric acid, and those derived from organic acids such as p-toluenesulfonic acid, salicylic acid, methanesulfonic acid, oxalic acid, succinic acid, citric acid, malic acid, lactic acid, fumaric acid, trifluoroacetic acid and the like. Sample base-addition salts include those derived from ammonium, potassium, sodium and, quaternary ammonium hydroxides, such as for example, tetramethylammonium hydroxide. Chemical modification of a pharmaceutical compound (i.e. drug) into a salt is a technique well known to pharmaceutical chemists to obtain improved physical and chemical stability, hygroscopicity, flowability and solubility of compounds. See, e.g., Ansel et al., Pharmaceutical Dosage Forms and Drug Delivery Systems (1995) at pgs. 456-457.</p>
+      <p id="p-00028-en" num="0027">“Substituted,” as in substituted alkyl, aryl or heteroaryl means that the substitution (i.e. replacement of one hydrogen atom) can occur at one or more positions and, unless otherwise indicated, that the substituents at each substitution site are independently selected from the specified options. The term “optionally substituted” refers to the fact that one or more hydrogen atoms of a chemical group (with one or more hydrogen atoms) can be, but does not necessarily have to be, substituted with another substituent.</p>
+      <p id="p-00029-en" num="0028">As used in this application, if a formula or group appears to be missing a substituent, that is it appears the valence is not complete, it is presumed the missing substituent is an H.</p>
+      <p id="p-00030-en" num="0029">In the structural formulae presented herein a broken bond (a) denotes that the substituent is below the plane of the paper and a wedged bond (b) denotes that the substituent is above the plane of the paper.</p>
+      <p id="p-00031-en" num="0030">In one embodiment, the present invention relates to compounds of Formula I</p>
+      <p id="p-00032-en" num="0000">
+        <chemistry id="chem-00002-en" num="00003">
+          <img id="img-00002-en" he="29.13mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150252072A1_00003.PNG" img-format="png" original="US20150252072A1-20150910-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00033-en" num="0000">wherein <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>W is selected from the group</li><li>a) H,</li><li>b) alkyl that optionally includes 1-3 deuterium atoms,</li><li>c) alkyl that optionally may be substituted with SO<sub>2</sub>R<sup>5 </sup>and OR<sup>5 </sup></li><li>Y is alkyl that optionally may be substituted with OR<sup>5</sup>;</li></ul></li></ul></p>
+      <p id="p-00034-en" num="0036">Z is N; <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>R<sup>1 </sup>is selected from the group</li><li>a) lower alkyl that optionally may be substituted with SO<sub>2</sub>R<sup>5</sup>,</li><li>b) cycloalkyl,</li><li>c) heterocyclic, and</li><li>d) aryl;</li><li>R<sup>2 </sup>is lower alkyl that optionally may be substituted with NHC(O)R<sup>6</sup>, NHSO<sub>2</sub>R<sup>5</sup>, NHCOOR<sup>6 </sup>and NHR<sup>6</sup>;</li><li>R<sup>3 </sup>and R<sup>4 </sup>may be the same or different and each is independently selected from the group</li><li>a) H, and</li><li>b) lower alkyl;</li><li>R<sup>5 </sup>is selected from the group</li><li>a) H,</li><li>b) lower alkyl,</li><li>c) NR<sup>7</sup>R<sup>8</sup>, and</li><li>d) aryl;</li><li>R<sup>6 </sup>is selected from the group</li><li>a) H</li><li>b) aryl that optionally may be substituted with lower alkyl, OR<sup>5</sup>, halogen, C(O)OR<sup>5</sup>, C(O)NR<sup>7</sup>R<sup>8</sup>, aryl, heterocyclyl, C(O)R<sup>9</sup>, SO<sub>2</sub>R<sup>5</sup>, cyano and CF<sub>3</sub>,</li><li>c) lower alkyl that optionally may be substituted with CF<sub>3</sub>, SO<sub>2</sub>R<sup>5 </sup>and aryl that optionally may be substituted with lower alkyl and halogen,</li><li>d) OR<sup>5</sup>,</li><li>e) NR<sup>7</sup>R<sup>8</sup>,</li><li>f) heteroaryl that optionally may be substituted with lower alkyl, OR<sup>5</sup>, halogen, aryl and oxo, and</li><li>g) heterocyclyl;</li></ul></li></ul></p>
+      <p id="p-00035-en" num="0059">R<sup>7 </sup>and R<sup>8 </sup>may be the same or different and each is independently selected from the group <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>a) H,</li><li>b) lower alkyl, and</li><li>c) aryl; and</li><li>R<sup>9 </sup>is selected from the group</li><li>a) lower alkyl, and</li><li>b) aryl;</li><li>or a pharmaceutically acceptable salt thereof.</li></ul></li></ul></p>
+      <p id="p-00036-en" num="0067">One embodiment of the invention relates to compounds of Formula I wherein W is selected from the group <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>a) H,</li><li>b) C<sub>1-6</sub>-alkyl that optionally includes 1-3 deuterium atoms,</li><li>c) C<sub>1-6</sub>-alkyl that optionally may be substituted with SO<sub>2</sub>R<sup>5 </sup>and OR<sup>5 </sup></li><li>Y is C<sub>1-6</sub>-alkyl that optionally may be substituted with OR<sup>5</sup>;</li><li>Z is N;</li><li>R<sup>1 </sup>is selected from the group</li><li>a) C<sub>1-6</sub>-alkyl that optionally may be substituted with SO<sub>2</sub>R<sup>5</sup>,</li><li>b) C<sub>3-7</sub>-cycloalkyl,</li><li>c) heterocyclic, and</li><li>d) aryl;</li><li>R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that optionally may be substituted with NHC(O)R<sup>6</sup>, NHSO<sub>2</sub>R<sup>5</sup>, NHCOOR<sup>6 </sup>and NHR<sup>6</sup>;</li><li>R<sup>3 </sup>and R<sup>4 </sup>may be the same or different and each is independently selected from the group</li><li>a) H, and</li><li>b) C<sub>1-6</sub>-alkyl;</li><li>R<sup>5 </sup>is selected from the group</li><li>a) H,</li><li>b) C<sub>1-6</sub>-alkyl,</li><li>c) NR<sup>7</sup>R<sup>8</sup>, and</li><li>d) aryl;</li><li>R<sup>6 </sup>is selected from the group</li><li>a) H</li><li>b) aryl that optionally may be substituted with C<sub>1-6</sub>-alkyl, OR<sup>5</sup>, halogen, C(O)OR<sup>5</sup>, C(O)NR<sup>7</sup>R<sup>8</sup>, aryl, heterocyclyl, C(O)R<sup>9</sup>, SO<sub>2</sub>R<sup>5</sup>, cyano and CF<sub>3</sub>,</li><li>c) C<sub>1-6</sub>-alkyl that optionally may be substituted with CF<sub>3</sub>, SO<sub>2</sub>R<sup>5 </sup>and aryl that optionally may be substituted with C<sub>1-6</sub>-alkyl and halogen,</li><li>d) OR<sup>5</sup>,</li><li>e) NR<sup>7</sup>R<sup>8</sup>,</li><li>f) heteroaryl that optionally may be substituted with C<sub>1-6</sub>-alkyl, OR<sup>5</sup>, halogen, aryl and oxo, and</li><li>g) heterocyclyl;</li></ul></li></ul></p>
+      <p id="p-00037-en" num="0095">R<sup>7 </sup>and R<sup>8 </sup>may be the same or different and each is independently selected from the group <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>a) H,</li><li>b) C<sub>1-6</sub>-alkyl, and</li><li>c) aryl; and</li><li>R<sup>9 </sup>is selected from the group</li><li>a) C<sub>1-6</sub>-alkyl, and</li><li>b) aryl;</li><li>or a pharmaceutically acceptable salt thereof.</li></ul></li></ul></p>
+      <p id="p-00038-en" num="0103">One embodiment of the invention relates to compounds of Formula I wherein <ul id="ul-00011-en" list-style="none"><li><ul id="ul-00012-en" list-style="none"><li>W is C<sub>1-6</sub>-alkyl;</li><li>Y is C<sub>1-6</sub>-alkyl;</li><li>Z is N;</li><li>R<sup>1 </sup>is C<sub>1-6</sub>-alkyl;</li><li>R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that optionally may be substituted with NHC(O)R<sup>6</sup>, NHSO<sub>2</sub>R<sup>5</sup>, NHCOOR<sup>6 </sup>and NHR<sup>6</sup>;</li><li>R<sup>3 </sup>and R<sup>4 </sup>are both H; R<sup>5 </sup>is selected from the group</li><li>a) C<sub>1-6</sub>-alkyl, and</li><li>b) aryl;</li><li>R<sup>6 </sup>is selected from the group</li><li>a) aryl,</li><li>b) C<sub>1-6</sub>-alkyl that optionally may be substituted with aryl, and</li><li>c) NR<sup>7</sup>R<sup>8</sup>,</li><li>R<sup>7 </sup>and R<sup>8 </sup>may be the same or different and each is independently selected from the group</li><li>a) H,</li><li>b) C<sub>1-6</sub>-alkyl, and</li><li>c) aryl;</li><li>or a pharmaceutically acceptable salt thereof.</li></ul></li></ul></p>
+      <p id="p-00039-en" num="0121">One embodiment of the invention relates to compounds of Formula I wherein <ul id="ul-00013-en" list-style="none"><li><ul id="ul-00014-en" list-style="none"><li>W is C<sub>1-6</sub>-alkyl;</li><li>Y is C<sub>1-6</sub>-alkyl;</li><li>Z is N;</li><li>R<sup>1 </sup>is C<sub>1-6</sub>-alkyl;</li><li>R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that optionally may be substituted with NHC(O)R<sup>6</sup>, NHSO<sub>2</sub>R<sup>5</sup>, NHCOOR<sup>6 </sup>and NHR<sup>6</sup>;</li><li>R<sup>3 </sup>and R<sup>4 </sup>are both H;</li><li>R<sup>5 </sup>is selected from the group</li><li>a) methyl, and</li><li>b) phenyl</li></ul></li></ul></p>
+      <p id="p-00040-en" num="0131">R<sup>6 </sup>is selected from the group <ul id="ul-00015-en" list-style="none"><li><ul id="ul-00016-en" list-style="none"><li>a) phenyl,</li><li>b) benzyl,</li><li>c) —C(H,CH<sub>3</sub>)-phenyl,</li><li>d) naphthyl,</li><li>e) methyl,</li><li>f) NH<sub>2</sub>,</li><li>g) N(methyl)<sub>2</sub>,</li><li>h) N(H,methyl); and</li><li>i) N(H,phenyl);</li><li>or a pharmaceutically acceptable salt thereof.</li></ul></li></ul></p>
+      <p id="p-00041-en" num="0142">One embodiment of the invention relates to compounds of Formula I wherein <ul id="ul-00017-en" list-style="none"><li><ul id="ul-00018-en" list-style="none"><li>W is C<sub>1-6</sub>-alkyl;</li><li>Y is C<sub>1-6</sub>-alkyl;</li><li>Z is N;</li><li>R<sup>1 </sup>is C<sub>1-6</sub>-alkyl;</li><li>R<sup>2 </sup>is —CH<sub>2</sub>—NHC(O)R<sup>6</sup>,</li><li>R<sup>3 </sup>and R<sup>4 </sup>are both H;</li><li>R<sup>6 </sup>is selected from the group</li><li>a) phenyl,</li><li>b) benzyl,</li><li>c) —C(H,CH<sub>3</sub>)-phenyl,</li><li>d) naphthyl,</li><li>e) methyl,</li><li>f) NH<sub>2</sub>,</li><li>g) N(methyl)<sub>2</sub>,</li><li>h) N(H,methyl); and</li><li>i) N(H,phenyl);</li><li>or a pharmaceutically acceptable salt thereof.</li></ul></li></ul></p>
+      <p id="p-00042-en" num="0160">One embodiment of the invention relates to compounds of Formula I wherein <ul id="ul-00019-en" list-style="none"><li><ul id="ul-00020-en" list-style="none"><li>W is C<sub>1-6</sub>-alkyl;</li><li>Y is C<sub>1-6</sub>-alkyl;</li><li>Z is N;</li><li>R<sup>1 </sup>is C<sub>1-6</sub>-alkyl;</li><li>R<sup>2 </sup>is —CH<sub>2</sub>—NHC(O)R<sup>6</sup>,</li><li>R<sup>3 </sup>and R<sup>4 </sup>are both H;</li><li>R<sup>6 </sup>is selected from the group</li><li>a) phenyl,</li><li>b) —C(H,CH<sub>3</sub>)-phenyl,</li><li>c) methyl,</li><li>d) N(methyl)<sub>2</sub>,</li><li>e) N(H,methyl); and</li><li>f) N(H,phenyl);</li><li>or a pharmaceutically acceptable salt thereof.</li></ul></li></ul></p>
+      <p id="p-00043-en" num="0175">One embodiment of the invention relates to compounds of Formula I wherein W is C<sub>1-6</sub>-alkyl.</p>
+      <p id="p-00044-en" num="0176">One embodiment of the invention relates to compounds of Formula I wherein W is methyl.</p>
+      <p id="p-00045-en" num="0177">One embodiment of the invention relates to compounds of Formula I wherein Y is C<sub>1-6</sub>-alkyl.</p>
+      <p id="p-00046-en" num="0178">One embodiment of the invention relates to compounds of Formula I wherein Y is methyl.</p>
+      <p id="p-00047-en" num="0179">One embodiment of the invention relates to compounds of Formula I wherein R<sup>1 </sup>is C<sub>1-6</sub>-alkyl, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00048-en" num="0180">One embodiment of the invention relates to compounds of Formula I wherein R<sup>1 </sup>is propanyl.</p>
+      <p id="p-00049-en" num="0181">One embodiment of the invention relates to compounds of Formula I wherein R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that is substituted with NHC(O)R<sup>6</sup>, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00050-en" num="0182">One embodiment of the invention relates to compounds of Formula I wherein R<sup>2 </sup>is methyl that is substituted with NHC(O)R<sup>6 </sup>and R<sup>6 </sup>is selected from aryl and C<sub>1-6</sub>-alkyl, or a pharmaceutically acceptable salty thereof.</p>
+      <p id="p-00051-en" num="0183">One embodiment of the invention relates to compounds of Formula I wherein R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that is substituted with NHSO<sub>2</sub>R<sup>5</sup>, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00052-en" num="0184">One embodiment of the invention relates to compounds of Formula I wherein R<sup>2 </sup>is methyl that is substituted with NHSO<sub>2</sub>R<sup>5</sup>.</p>
+      <p id="p-00053-en" num="0185">One embodiment of the invention relates to compounds of Formula I wherein R<sup>5 </sup>is methyl or phenyl.</p>
+      <p id="p-00054-en" num="0186">One embodiment of the invention relates to compounds of Formula I wherein R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that is substituted with NHCOOR<sup>6</sup>, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00055-en" num="0187">One embodiment of the invention relates to compounds of Formula I wherein R<sup>6 </sup>is benzyl or methyl that optionally may be substituted with phenyl, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00056-en" num="0188">One embodiment of the invention relates to compounds of Formula I wherein R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that is substituted with NHR<sup>6</sup>, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00057-en" num="0189">One embodiment of the invention relates to compounds of Formula I wherein R<sup>6 </sup>is aryl, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00058-en" num="0190">One embodiment of the invention relates to compounds of Formula I wherein R<sup>6 </sup>is phenyl or naphathanelyl, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00059-en" num="0191">One embodiment of the invention relates to compounds of Formula I wherein R<sup>3 </sup>and R<sup>4 </sup>are H, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00060-en" num="0192">One embodiment of the invention relates to compounds of Formula I wherein R<sup>6 </sup>is phenyl that optionally may be substituted with C<sub>1-6</sub>-alkyl, OR<sup>5</sup>, halogen, C(O)OR<sup>5</sup>, C(O)NR<sup>7</sup>R<sup>8</sup>, aryl, heterocyclyl, C(O)R<sup>9</sup>, SO<sub>2</sub>R<sup>5</sup>, cyano and CF<sub>3</sub>, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00061-en" num="0193">One embodiment of the invention relates to compounds of Formula I wherein wherein R<sup>6 </sup>is NR<sup>7</sup>R<sup>8</sup>, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00062-en" num="0194">One embodiment of the invention relates to compounds of Formula I wherein R<sup>7 </sup>and R<sup>8 </sup>are independently selected from H, methyl and phenyl.</p>
+      <p id="p-00063-en" num="0195">One embodiment of the invention relates to compounds of Formula I wherein W, Y and R<sup>1 </sup>are C<sub>1-6</sub>-alkyl; and R<sup>2 </sup>is C<sub>1-6</sub>-alkyl substituted by NHCOR<sup>6</sup>; R<sup>6 </sup>is selected from a) phenyl, b) C<sub>1-6</sub>-alkyl that optionally may be substituted with phenyl, and c) NR<sup>7</sup>R<sup>8</sup>; and R<sup>7 </sup>and R<sup>8 </sup>are each independently selected from H, C<sub>1-6</sub>-alkyl and phenyl; or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00064-en" num="0196">One embodiment of the invention relates to compounds of Formula I wherein W, Y and R<sup>1 </sup>are C<sub>1-6</sub>-alkyl; R<sup>2 </sup>is C<sub>1-6</sub>-alkyl substituted by NHSO<sub>2</sub>R<sup>5</sup>; and R<sup>5 </sup>is C<sub>1-6</sub>-alkyl or phenyl; or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00065-en" num="0197">One embodiment of the invention relates to compounds of Formula I wherein R<sup>5 </sup>is methyl or phenyl.</p>
+      <p id="p-00066-en" num="0198">One embodiment of the invention relates to compounds of Formula I wherein W, Y and R<sup>1 </sup>are C<sub>1-6</sub>-alkyl; R<sup>2 </sup>is C<sub>1-6</sub>-alkyl substituted by NHCOOR<sup>6</sup>; and R<sup>6 </sup>is selected from a) aryl and b) C<sub>1-6</sub>-alkyl that optionally may be substituted with aryl; or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00067-en" num="0199">One embodiment of the invention relates to compounds of Formula I wherein R<sup>6 </sup>is selected from a) methyl that optionally may be substituted with phenyl, and b) phenyl; or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00068-en" num="0200">One embodiment of the invention relates to compounds of Formula I wherein W, Y and R<sup>1 </sup>are C<sub>1-6</sub>-alkyl; R<sup>2 </sup>is C<sub>1-6</sub>-alkyl substituted by NHR<sup>6</sup>; and R<sup>6 </sup>is aryl, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00069-en" num="0201">One embodiment of the invention relates to compounds of Formula I wherein R<sup>6 </sup>is selected from phenyl and naphthalenyl.</p>
+      <p id="p-00070-en" num="0202">One embodiment of the invention relates to compounds of Formula I wherein it is selected from: <ul id="ul-00021-en" list-style="none"><li>N-{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-benzamide hydrochloride;</li><li>(S)—N-{(S)-1-[2-(Acetylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride;</li><li>(S)-2-Methylamino-N—((S)-2-methyl-1-{2-[(3-methyl-ureido)-methyl]-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-propionamide hydrochloride;</li><li>(S)-2-Methylamino-N-{(S)-2-methyl-1-[(S)-2-(phenylacetylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-propyl}-propionamide hydrochloride;</li><li>(S)—N-{(S)-1-[(S)-2-(3,3-Dimethyl-ureidomethyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride;</li><li>(S)-2-Methylamino-N—((S)-2-methyl-1-{(S)-2-[(3-phenyl-ureido)-methyl]-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-propionamide hydrochloride; and</li><li>(S)-2-Methylamino-N—((S)-2-methyl-1-{(S)-2-[(2-phenyl-propionylamino)-methyl]-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-propionamide hydrochloride;</li></ul></p>
+      <p id="p-00071-en" num="0210">or a pharmaceutically acceptable salt of any of the foregoing compounds. <ul id="ul-00022-en" list-style="none"><li>One embodiment of the invention relates to compounds of Formula I wherein it is selected from:</li><li>(S)—N-{(S)-1-[(S)-2-(Methanesulfonylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride; and</li><li>(S)—N-{(S)-1-[(S)-2-(Benzenesulfonylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride; or a pharmaceutically acceptable salt of any of the foregoing compounds.</li></ul></p>
+      <p id="p-00072-en" num="0214">One embodiment of the invention relates to compounds of Formula I wherein it is selected from: <ul id="ul-00023-en" list-style="none"><li>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic acid methyl ester hydrochloride;</li><li>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic acid methyl ester hydrochloride; and</li><li>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic acid phenyl ester hydrochloride;</li></ul></p>
+      <p id="p-00073-en" num="0218">or a pharmaceutically acceptable salt of any of the foregoing compounds. <ul id="ul-00024-en" list-style="none"><li>One embodiment of the invention relates to compounds of Formula I wherein it is selected from:</li><li>(S)-2-Methylamino-N—[(S)-2-methyl-1-((S)-2-phenylaminomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-propyl]-propionamide hydrochloride; and</li><li>(S)-2-Methylamino-N-{(S)-2-methyl-1-[(S)-2-(naphthalen-2-ylaminomethyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-propyl}-propionamide hydrochloride;</li></ul></p>
+      <p id="p-00074-en" num="0222">or a pharmaceutically acceptable salt of any of the foregoing compounds.</p>
+      <p id="p-00075-en" num="0223">One embodiment of the invention relates to a pharmaceutical composition comprising any of the compounds as described herein, or a pharmaceutically acceptable salt thereof, as an active ingredient together with a pharmaceutically acceptable carrier or excipient.</p>
+      <p id="p-00076-en" num="0224">One embodiment of the invention relates to compounds of Formula I as described herein for use as a therapeutically active substance.</p>
+      <p id="p-00077-en" num="0225">One embodiment of the invention relates to compounds of Formula I as described herein for use for the therapeutic and/or prophylactic treatment of cancer.</p>
+      <p id="p-00078-en" num="0226">One embodiment of the invention relates to the use of a compound as described herein, or a pharmaceutically acceptable salt thereof, for the manufacture of a medicament for the therapeutic and/or prophylactic treatment of cancer.</p>
+      <p id="p-00079-en" num="0227">One embodiment of the invention relates to a method of treating or ameliorating cancer comprising administering to a subject in need of such treatment a therapeutically effective amount of a compound as described herein.</p>
+      <p id="p-00080-en" num="0228">One embodiment of the invention relates to compounds of Formula I wherein W is lower alkyl. In a particular embodiment W is methyl.</p>
+      <p id="p-00081-en" num="0229">Another embodiment of the invention relates to compounds of Formula I wherein Y is lower alkyl. In a particular embodiment Y is methyl.</p>
+      <p id="p-00082-en" num="0230">Another embodiment of the invention relates to compounds of Formula I where I where R<sup>1 </sup>is lower alkyl, or a pharmaceutically acceptable salt thereof. In a particular embodiment R<sup>1 </sup>is propanyl.</p>
+      <p id="p-00083-en" num="0231">Another embodiment of the invention relates to compounds of Formula I where R<sup>2 </sup>is lower akyl that is substituted with NHC(O)R<sup>6</sup>, or a pharmaceutically acceptable salt thereof. In a particular embodiment, R<sup>2 </sup>is methyl that is substituted with NHC(O)R<sup>6 </sup>and R<sup>6 </sup>is selected from aryl and lower alkyl, each of which may be substituted as define above, or a pharmaceutically acceptable salty thereof.</p>
+      <p id="p-00084-en" num="0232">Another embodiment of the invention relates to compounds of Formula I where R<sup>2 </sup>is lower akyl that is substituted with NHSO<sub>2</sub>R<sup>5</sup>, or a pharmaceutically acceptable salt thereof. In a particular embodiment, R<sup>2 </sup>is methyl that is substituted with NHSO<sub>2</sub>R<sup>5 </sup>and R<sup>5 </sup>is methyl or phenyl.</p>
+      <p id="p-00085-en" num="0233">Another embodiment of the invention relates to compounds of Formula I where R<sup>2 </sup>is lower akyl that is substituted with NHCOOR<sup>6</sup>, or a pharmaceutically acceptable salt thereof. In a particular embodiment, R<sup>2 </sup>is methyl that is substituted with NHCOOR<sup>6 </sup>and R<sup>6 </sup>is benzyl or methyl that optionally may be substituted with phenyl.</p>
+      <p id="p-00086-en" num="0234">Another embodiment of the invention relates to compounds of Formula I where R<sup>2 </sup>is lower akyl that is substituted with NHR<sup>6</sup>, or a pharmaceutically acceptable salt thereof. In a particular embodiment R<sup>2 </sup>is lower alkyl that is substituted with NHR<sup>6 </sup>and R<sup>6 </sup>is aryl, in particular phenyl or naphathanelyl, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00087-en" num="0235">Another embodiment of the invention relates to compounds of Formula I where R<sup>3 </sup>and R<sup>4 </sup>are H, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00088-en" num="0236">Another embodiment of the invention relates to compounds of Formula I where R<sup>5 </sup>is lower alkyl or aryl. In a particular embodiment R<sup>5 </sup>is methyl. In another embodiment R<sup>5 </sup>is phenyl.</p>
+      <p id="p-00089-en" num="0237">Another embodiment of the invention relates to compounds of Formula I where R<sup>6 </sup>is phenyl that optionally may be substituted with lower alkyl, OR<sup>5</sup>, halogen, C(O)OR<sup>5</sup>, C(O)NR<sup>7</sup>R<sup>8</sup>, aryl, heterocyclyl, C(O)R<sup>9</sup>, SO<sub>2</sub>R<sup>5</sup>, cyano and CF<sub>3</sub>, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00090-en" num="0238">Another embodiment of the invention relates to compounds of Formula I where R<sup>6 </sup>is selected from lower alkyl and aryl, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00091-en" num="0239">Another embodiment of the invention relates to compounds of Formula I where R<sup>6 </sup>is NR<sup>7</sup>R<sup>8</sup>, or a pharmaceutically acceptable salt thereof. In a particular embodiment R<sup>7 </sup>and R<sup>8 </sup>are independently selected from H, methyl and phenyl.</p>
+      <p id="p-00092-en" num="0240">Another embodiment of the invention relates to compounds of Formula I where W, Y and R<sup>1 </sup>are lower alkyl, and R<sup>2 </sup>is lower alkyl substituted by NHCOR<sup>6 </sup>and R<sup>6 </sup>is selected from a) phenyl, b) lower alkyl that optionally may be substituted with phenyl, c) NR<sup>7</sup>R<sup>8</sup>, and R<sup>7 </sup>and R<sup>8 </sup>are each independently selected from H, lower alkyl and phenyl, or a pharmaceutically acceptable salt thereof.</p>
+      <p id="p-00093-en" num="0241">Another embodiment of the invention relates to compounds of Formula I where W, Y and R<sup>1 </sup>are lower alkyl, R<sup>2 </sup>is lower alkyl substituted by NHSO<sub>2</sub>R<sup>5</sup>, and R<sup>5 </sup>is lower alkyl or phenyl, or a pharmaceutically acceptable salt thereof. In one embodiment R<sup>5 </sup>is methyl. In another embodiment R<sup>5 </sup>is phenyl.</p>
+      <p id="p-00094-en" num="0242">Another embodiment of the invention relates to compounds of Formula I where W, Y and R<sup>1 </sup>are lower alkyl, R<sup>2 </sup>is lower alkyl substituted by NHCOOR<sup>6 </sup>and R<sup>6 </sup>is selected from a) aryl, b) lower alkyl that may be substituted with aryl, or a pharmaceutically acceptable salt thereof. In one embodiment R<sup>6 </sup>is methyl that optionally may be substituted with phenyl. In another embodiment R<sup>6 </sup>is phenyl.</p>
+      <p id="p-00095-en" num="0243">Another embodiment of the invention relates to compounds of Formula I where W, Y and R<sup>1 </sup>are lower alkyl, R<sup>2 </sup>is lower alkyl substituted by NHR<sup>6 </sup>and R<sup>6 </sup>is aryl, or a pharmaceutically acceptable salt thereof. In one embodiment R<sup>6 </sup>is phenyl. In another embodiment R<sup>6 </sup>is naphthalenyl.</p>
+      <p id="p-00096-en" num="0244">Compounds according to the invention wherein R<sup>2 </sup>is lower alkyl that is substituted with NHCOR<sup>6 </sup>include: <ul id="ul-00025-en" list-style="none"><li>N-{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-benzamide hydrochloride (Example 1);</li><li>(S)—N-{(S)-1-[2-(Acetylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride (Example 2);</li><li>(S)-2-Methylamino-N—((S)-2-methyl-1-{2-[(3-methyl-ureido)-methyl]-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-propionamide hydrochloride (Example 3);</li><li>(S)-2-Methylamino-N-{(S)-2-methyl-1-[(S)-2-(phenylacetylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-propyl}-propionamide hydrochloride (Example 4);</li><li>(S)—N-{(S)-1-[(S)-2-(3,3-Dimethyl-ureidomethyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride (Example 6);</li><li>(S)-2-Methylamino-N—((S)-2-methyl-1-{(S)-2-[(3-phenyl-ureido)-methyl]-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-propionamide hydrochloride (Example 7); and</li><li>(S)-2-Methylamino-N—((S)-2-methyl-1-{(S)-2-[(2-phenyl-propionylamino)-methyl]-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-propionamide hydrochloride (Example 8); or a pharmaceutically acceptable salt of any of the foregoing compounds.</li></ul></p>
+      <p id="p-00097-en" num="0252">Compounds according to the invention wherein R<sup>2 </sup>is lower alkyl that is substituted with NHSO<sub>2</sub>R<sup>5 </sup>include: <ul id="ul-00026-en" list-style="none"><li>(S)—N-{(S)-1-[(S)-2-(Methanesulfonylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride (Example 9); and</li><li>(S)—N-{(S)-1-[(S)-2-(Benzenesulfonylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride (Example 10);</li></ul></p>
+      <p id="p-00098-en" num="0255">or a pharmaceutically acceptable salt of any of the foregoing compounds.</p>
+      <p id="p-00099-en" num="0256">Compounds according to the invention wherein R<sup>2 </sup>is lower alkyl that is substituted by NHCOOR<sup>6 </sup>include: <ul id="ul-00027-en" list-style="none"><li>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic acid methyl ester hydrochloride (Example 5);</li><li>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic acid methyl ester hydrochloride (Example 11); and</li><li>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic acid phenyl ester hydrochloride (Example 12);</li></ul></p>
+      <p id="p-00100-en" num="0260">or a pharmaceutically acceptable salt of any of the foregoing compounds.</p>
+      <p id="p-00101-en" num="0261">Compounds according to the invention wherein R<sup>2 </sup>is lower alkyl that is substituted by NHR<sup>6 </sup>include: <ul id="ul-00028-en" list-style="none"><li>(S)-2-Methylamino-N—[(S)-2-methyl-1-((S)-2-phenylaminomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-propyl]-propionamide hydrochloride (Example 13); and</li><li>(S)-2-Methylamino-N-{(S)-2-methyl-1-[(S)-2-(naphthalen-2-ylaminomethyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-propyl}-propionamide hydrochloride (Example 14); or a pharmaceutically acceptable salt of any of the foregoing compounds.</li></ul></p>
+      <p id="p-00102-en" num="0264">The compounds of Formula I as well as their salts have at least one asymmetric carbon atom and therefore may be present as mixtures of different stereoisomers. The various isomers can be isolated by known separation methods, e.g., chromatography.</p>
+      <p id="p-00103-en" num="0265">Compounds disclosed herein and covered by formula I above may exhibit tautomerism or structural isomerism. It is intended that the invention encompasses any tautomeric or structural isomeric form of these compounds, or mixtures of such forms, and is not limited to any one tautomeric or structural isomeric form depicted in the formulas above.</p>
+      <p id="p-00104-en" num="0266">Dosages</p>
+      <p id="p-00105-en" num="0267">The compounds of the invention preferably bind to BIR domains of an IAP preventing the IAP from binding to other proteins. Examples of Bir binding proteins include, but are not limited to, caspase 3, caspase 7, caspase 9, Smac and the like. Examples of IAPs include, but are not limited to, XIAP, cIAP1, cIAP2 or NAIP. In one aspect, the compound of the invention bind to the BIR2 and/or BIR3 domains of XIAP, cIAP1 and/or cIAP2. In another aspect, the compounds of the invention bind to the BIR2 domain of XIAP, cIAP1 and/or cIAP2.</p>
+      <p id="p-00106-en" num="0268">Compounds of the invention are useful for inducing apoptosis in cells or sensitizing cells to apoptotic signals, in particular cancer cells. Apoptotic signals can be induced in cancer cells by, e.g., radiation therapy or antineoplastic chemotherapy. Alternatively, apoptotic signals can be induced in cancer cells by activation of the death receptors by death receptor agonists. Death receptor agonists can be naturally occurring, e.g., tumor necrosis factor α, (TNF-α) or non-naturally occurring, e.g., a synthetic antibody such as a DR4 or DRS antibody.</p>
+      <p id="p-00107-en" num="0269">The compounds of the present invention are thus useful in the amelioration, control or treatment of cell proliferative disorders such as, in particular, oncological disorders. These compounds and formulations containing said compounds are anticipated to be useful in the treatment or control of blood cancers, such as, for example, acute myeloid leukemia, or solid tumors, such as, for example, breast, colon, lung and prostate tumors.</p>
+      <p id="p-00108-en" num="0270">A “therapeutically effective amount” or “effective amount” of a compound in accordance with this invention means an amount of compound that is effective to prevent, alleviate or ameliorate symptoms of disease or prolong the survival of the subject being treated. Determination of a therapeutically effective amount is within the skill in the art.</p>
+      <p id="p-00109-en" num="0271">The therapeutically effective amount or dosage of a compound according to this invention can vary within wide limits and may be determined in a manner known in the art. Such dosage will be adjusted to the individual requirements in each particular case including the specific compound(s) being administered, the route of administration, the condition being treated, as well as the patient being treated. In general, in the case of oral or parenteral administration to adult humans weighing approximately 70 Kg, a daily dosage of about 10 mg to about 10,000 mg, preferably from about 200 mg to about 1,000 mg, should be appropriate, although the upper limit may be exceeded when indicated. The daily dosage can be administered as a single dose or in divided doses, or for parenteral administration, it may be given as one or more bolus injections or as a continuous infusion.</p>
+      <p id="p-00110-en" num="0272">Pharmaceutical preparations useful in the practice of the invention, i.e., comprising the compounds of the invention can be administered internally, such as orally (e.g. in the form of tablets, coated tablets, dragées, hard and soft gelatin capsules, solutions, emulsions or suspensions), nasally (e.g. in the form of nasal sprays) or rectally (e.g. in the form of suppositories). However, the administration can also be effected parentally, such as intramuscularly or intravenously (e.g. in the form of injection solutions). Moreover, administration can be effected topically (e.g. in the form of ointments, creams or oils).</p>
+      <p id="p-00111-en" num="0273">Compositions/Formulations</p>
+      <p id="p-00112-en" num="0274">In an alternative embodiment, the present invention includes pharmaceutical compositions comprising at least one compound of formula I, or a pharmaceutically acceptable salt thereof, and a pharmaceutically acceptable excipient and/or carrier.</p>
+      <p id="p-00113-en" num="0275">These pharmaceutical compositions can be suitable for oral, nasal, topical (including buccal and sublingual), rectal, vaginal and/or parenteral administration. The formulations may conveniently be presented in unit dosage form and may be prepared by any methods well known in the art of pharmacy. The amount of active ingredient which can be combined with a carrier material to produce a single dosage form will vary depending upon the host being treated, as well as the particular mode of administration. The amount of active ingredient which can be combined with a carrier material to produce a single dosage form will generally be that amount of a formula I compound which produces a therapeutic effect. Generally, out of one hundred percent, this amount will range from about 1 percent to about ninety-nine percent of active ingredient, preferably from about 5 percent to about 70 percent, most preferably from about 10 percent to about 30 percent.</p>
+      <p id="p-00114-en" num="0276">Methods of preparing these formulations or compositions include the step of bringing into association a compound of the present invention with the carrier and, optionally, one or more accessory ingredients. In general, the formulations are prepared by uniformly and intimately bringing into association a compound of the present invention with liquid carriers, or finely divided solid carriers, or both, and then, if necessary, shaping the product.</p>
+      <p id="p-00115-en" num="0277">The compounds of Formula I and their pharmaceutically acceptable salts and esters can be processed with pharmaceutically inert, inorganic or organic adjuvants for the production of tablets, coated tablets, dragées and hard gelatin capsules. Lactose, polyvinylpyrrolidone, hydroxypropylmethylcellulose, hydroxypropylcellulose, microcrystalline cellulose, corn starch or derivatives thereof, talc, stearic acid or its salts etc. can be used, for example, as such adjuvants for tablets, dragées and hard gelatin capsules.</p>
+      <p id="p-00116-en" num="0278">Suitable adjuvants for soft gelatin capsules, are, for example, vegetable oils, waxes, fats, semi-solid substances and liquid polyols, etc. Suitable adjuvants for the production of solutions and syrups are, for example, H<sub>2</sub>O, polyols, saccharose, invert sugar, glucose, etc.</p>
+      <p id="p-00117-en" num="0279">Suitable adjuvants for injection solutions are, for example, H<sub>2</sub>O, alcohols, polyols, glycerol, vegetable oils, etc. Suitable adjuvants for suppositories are, for example, natural or hardened oils, waxes, fats, semi-solid or liquid polyols, etc. Suitable adjuvants for topical preparations are glycerides, semi-synthetic and synthetic glycerides, hydrogenated oils, liquid waxes, liquid paraffins, liquid fatty alcohols, sterols, polyethylene glycols and cellulose derivatives.</p>
+      <p id="p-00118-en" num="0280">Moreover, the pharmaceutical preparations can contain preservatives, solubilizers, viscosity-increasing substances, stabilizers, wetting agents, emulsifiers, sweeteners, colorants, flavors, salts for varying the osmotic pressure, buffers, masking agents or antioxidants. They can also contain other therapeutic substances.</p>
+      <p id="p-00119-en" num="0281">The compounds in the present invention (compounds of general Formula I) can be prepared using the general reaction scheme set out in the schemes below.</p>
+      <p id="p-00120-en" num="0000">
+        <chemistry id="chem-00003-en" num="00004">
+          <img id="img-00003-en" he="234.44mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150252072A1_00004.PNG" img-format="png" original="US20150252072A1-20150910-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00121-en" num="0282">The amine protecting group PG2 of a suitably protected indoline or azaindoline of general structure 2 can be removed to afford compounds of general formula 3. Compounds of general formula 3 can be acylated with compounds of general formula 4 to give compounds of general formula 5. The acylation methods include, but are not limited to, acyl halides, acyl azides, and standard peptide coupling reagents. The amine protecting group PG3 in compounds of general formula 5 can be removed to afford compounds of general formula 6. Compounds of general formula 6 can be acylated with compounds of general formula 7 to give compounds of general formula 8. The acylation methods include, but are not limited to, standard peptide coupling reagents. The carboxylic acid protecting group PG1 of compounds of general structure 8 can be removed to form compounds of general structure 9.</p>
+      <p id="p-00122-en" num="0000">
+        <chemistry id="chem-00004-en" num="00005">
+          <img id="img-00004-en" he="228.43mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150252072A1_00005.PNG" img-format="png" original="US20150252072A1-20150910-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00123-en" num="0283">The carboxylic acid group of a suitably protected indoline or azaindoline of general structure 9 can then be reduced to afford compounds of general formula 21. Reduction methods included, but are not limited to, the conversion of the acid to the acyl chloride or mixed anhydride and subsequent treatment with sodium borohydride. The hydroxyl group of compounds of general formula 21 can be converted to an appropriate leaving group to give compounds of general formula 22. Methods for this conversion include treatment with methansulfonyl chloride or toluenesulfonyl chloride. Compounds of general formula 22 can be converted to amines of general formula 23 by treatment with an appropriate nitrogen nucleophile and subsequent unmasking of the primary amine moiety. Methods for this transformation include the use of sodium azide followed by reduction to the amine. The amine moiety of compounds of general formula 23 can be acylated or sulfonylated with compounds of general formula 24, where Q is CO or SO<sub>2</sub>, to give compounds of general formula 25. The amine protecting group PG4 can be then removed to afford compounds of general formula 26.</p>
+      <p id="p-00124-en" num="0000">
+        <chemistry id="chem-00005-en" num="00006">
+          <img id="img-00005-en" he="120.82mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150252072A1_00006.PNG" img-format="png" original="US20150252072A1-20150910-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00125-en" num="0284">Compounds of general formula 22 can be converted to amines of general formula 28 by treatment with an appropriate aromatic nitrogen nucleophile. The amine protecting group PG4 can be then removed to afford compounds of general formula 29.</p>
+      <p id="p-00126-en" num="0000">
+        <chemistry id="chem-00006-en" num="00007">
+          <img id="img-00006-en" he="158.92mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150252072A1_00007.PNG" img-format="png" original="US20150252072A1-20150910-C00007.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00127-en" num="0285">Compounds of general formula 21 can be oxidized to compounds of general formula 30 with standard oxidation reagents. Compounds of general formula 30 can be converted to amines of general formula 28 by treatment with an appropriate aromatic nitrogen nucleophile of formula 27 under reducing conditions. The amine protecting group PG4 can be then removed to afford compounds of general formula 29.</p>
+      <p id="p-00128-en" num="0286">Methods to perform the above described reactions and processes would be apparent to those of ordinary skill in the art based on the present disclosure, or can be deduced in analogy from the examples. Starting materials are commercially available or can be made by methods analogous to those described in the Examples below.</p>
+      <p id="p-00129-en" num="0287">Crystal Forms</p>
+      <p id="p-00130-en" num="0288">When the compounds of the invention are solids, it is understood by those skilled in the art that these compounds, and their salts, may exist in different crystal or polymorphic forms, all of which are intended to be within the scope of the present invention and specified formulas.</p>
+      <heading id="h-00006-en" level="1">EXAMPLES</heading>
+      <p id="p-00131-en" num="0289">The compounds of the present invention may be synthesized according to known techniques. The following examples and references are provided to aid the understanding of the present invention. The examples are not intended, however, to limit the invention, the true scope of which is set forth in the appended claims. The names of the final products in the examples were generated using AutoNom 2000 Add-in v4.0 SP2 (function in ISIS Draw, Elsevier/MDL), or AutoNom 2000 TT v4.01.305 (Elsevier/MDL), or functions available in ChemDraw Pro Control 11.0.2 (CambridgeSoft Corp.), or Struct=Name feature of electronic notebooks.</p>
+      <p id="p-00132-en" num="0290">Preparation of Intermediates</p>
+      <heading id="h-00007-en" level="1">Intermediate 1</heading>
+      <heading id="h-00008-en" level="1">(S)-1-{(S)-2-[(S)-2-(tert-Butoxycarbonyl-methyl-amino)-propionylamino]-3-methyl-butyryl}-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylic acid</heading>
+      <p id="p-00133-en" num="0291">
+        <chemistry id="chem-00007-en" num="00008">
+          <img id="img-00007-en" he="28.96mm" wi="62.23mm" alt="embedded image" img-content="chem" file="US20150252072A1_00008.PNG" img-format="png" original="US20150252072A1-20150910-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00134-en" num="0292">Step 1: To a solution of (S)-2-(tert-butoxycarbonylamino)-3-methylbutanoic acid (6.3 g, 29.0 mmol, Eq: 1.00) in DCM at rt was added pyridine (4.01 g, 4.1 mL, 50.7 mmol, Eq: 1.75) followed by cyanuric fluoride (5.98 g, 3.8 mL, 44.3 mmol, Eq: 1.53). The resulting mixture was stirred at rt for 2 h. Ice (160 mL) was added and the resulting mixture was stirred rapidly for 15 min. The resulting mixture was filtered through a coarse frit funnel, using DCM (2×60 mL) to wash the precipitate. The combined filtrate was put into a separatory funnel and the layers were separated. The aqueous layer was extracted with DCM (1×50 mL) and then the combined organic layers were washed with ice-cold water (2×100 mL), dried briefly over Na<sub>2</sub>SO<sub>4</sub>, then concentrated in vacuo to a volume of −20 mL. This solution was added to a solution of ethyl(R,S)-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylate (2.7 g, 14.0 mmol, Eq: 1.00) and N-methylmorpholine (5.7 g, 6.2 mL, 56.4 mmol, Eq: 4.01) in DCM (50 mL) and the reaction mixture was stirred at rt overnight. The reaction mixture was diluted with EtOAc (200 mL) and washed with 0.1 M aqueous KHSO<sub>4</sub>. The aqueous layer was back-extracted with EtOAc (50 mL at a time) to until all product was in the EtOAc layer. The combined EtOAc layers were concentrated to −250 mL, washed with 0.2 M aqueous NaOH and brine and concentrated in vacuo. The crude material was purified by flash chromatography (silica gel, 80 g, 0% to 30% EtOAc in hexanes). The material obtained was taken up in EtOAc/hexanes (−200 mL), washed with 0.1 M NaOH, and concentrated in vacuo to give the racemic desired product (4.48 g) as a colorless viscous oil. The diastereomers were then separated by flash chromatography (silica gel, 120 g, 0% to 20 EtOAc/toluene) to give (S)-ethyl 1-((S)-2-(tert-butoxycarbonylamino)-3-methylbutanoyl)-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylate (1.9 g) and (R)-ethyl 1-((S)-2-(tert-butoxycarbonylamino)-3-methylbutanoyl)-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylate (2.1 g), m/z=392 (M+H).</p>
+      <p id="p-00135-en" num="0293">Step 2: To a solution of (S)-ethyl 1-((S)-2-(tert-butoxycarbonylamino)-3-methylbutanoyl)-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylate (1.9 g, 4.85 mmol, Eq: 1.00) in EtOH (10.1 mL) was added HCl (2 M in ether, 38.0 mL, 76.0 mmol, Eq: 15.7) and the resulting solution was stirred at rt overnight. The reaction mixture was concentrated in vacuo and azeotroped with n-heptane (1×75 mL) to give (S)-ethyl 1-((S)-2-amino-3-methylbutanoyl)-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylate hydrochloride as a white solid (1.6 g).</p>
+      <p id="p-00136-en" num="0294">Step 3: To a solution of (S)-ethyl 1-((S)-2-amino-3-methylbutanoyl)-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylate hydrochloride (1.6 g, 4.88 mmol, Eq: 1.00) in DMF (20 mL) was added (S)-2-(tert-butoxycarbonyl(methyl)amino)propanoic acid (1.2 g, 5.9 mmol, Eq: 1.21) and HATU (2.2 g, 5.79 mmol, Eq: 1.19). Diisopropylethylamine (1.63 g, 2.2 mL, 12.6 mmol, Eq: 2.58) was then added and the resulting yellow solution was stirred at rt for 1 h. The reaction mixture was diluted with EtOAc (100 mL) and hexanes (50 mL) and washed with 0.1 M aqueous KHSO<sub>4</sub>, 0.1 M aqueous NaOH, and brine and concentrated in vacuo. The crude material was purified by flash chromatography (silica gel, 80 g, 0% to 20% EtOAc/(DCM:hexanes 1:1) then 20% to 40% EtOAc/(DCM:hexanes 1:1) after first spot has eluted) to give (S)-ethyl 1-((S)-2-((S)-2-(tert-butoxycarbonyl(methyl)amino)propanamido)-3-methylbutanoyl)-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylate (1.9 g), m/z=477 (M+H).</p>
+      <p id="p-00137-en" num="0295">Step 4: A solution of (S)-ethyl 1-((S)-2-((S)-2-(tert-butoxycarbonyl(methyl)amino)propanamido)-3-methylbutanoyl)-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylate (1.9 g, 3.99 mmol, Eq: 1.00) in THF (36 mL) and MeOH (12 mL) was cooled in an ice bath. To this solution was added a solution of lithium hydroxide monohydrate (0.5 g, 11.9 mmol, Eq: 2.99) in water (12 mL) and the cooling bath was removed. After 1 h, the reaction was quenched by adding 0.1 M aqueous KHSO<sub>4 </sub>(200 mL) and the mixture was extracted with DCM (2×100 mL). The combined DCM layers were dried over Na<sub>2</sub>SO<sub>4 </sub>and concentrated in vacuo. The residue was azeotroped with n-heptane (1×100 mL) to give of (S)-1-((S)-2-((S)-2-(tert-butoxycarbonyl(methyl)amino)propanamido)-3-methylbutanoyl)-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylic acid (1.8 g) as a white solid, m/z=449 (M+H).</p>
+      <heading id="h-00009-en" level="1">Intermediate 2</heading>
+      <heading id="h-00010-en" level="1">Toluene-4-sulfonic acid (S)-1-{(S)-2-[(S)-2-(tert-butoxycarbonyl-methyl-amino)-propionylamino]-3-methyl-butyryl}-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl ester</heading>
+      <p id="p-00138-en" num="0296">
+        <chemistry id="chem-00008-en" num="00009">
+          <img id="img-00008-en" he="26.42mm" wi="59.77mm" alt="embedded image" img-content="chem" file="US20150252072A1_00009.PNG" img-format="png" original="US20150252072A1-20150910-C00009.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00139-en" num="0297">Step 1: To a stirred solution of 1-{(S)-2-[(S)-2-(tert-butoxycarbonyl-methyl-amino)-propionyl amino]-3-methyl-butyryl}-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylic acid (Intermediate 1) (3.8 g, 8.48 mmol) in THF (65 mL) were added N-methylmorpholine (1.11 mL, 10.17 mmol) followed by the addition of isobutyl chloroformate (1.32 mL, 10.17 mmol) at −20° C. The reaction mixture was stirred at −20° C. for 10 min and the white precipitate of N-methylmorpholine hydrochloride salt was removed by filtration. The filtrate was cooled to −20° C., NaBH<sub>4 </sub>(483 mg, 12.72 mmol) was added followed by cold water (30 mL) at −20° C. After 30 min the reaction mixture was poured into water (25 mL) and extracted with ethyl acetate (80 mL×2). The combined organic layers were washed with water, brine, dried over Na<sub>2</sub>SO<sub>4 </sub>and concentrated in vacuo. The resulting residue was purified by flash chromatography (silica gel, 28% EtOAc in hexanes) to give {(S)-1-[(S)-1-(2-hydroxymethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester (2.7 g), m/z=435 (M+H)</p>
+      <p id="p-00140-en" num="0298">Step 2: To a solution of {(S)-1-[(S)-1-(2-hydroxymethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester (4.5 g, 10.36 mmol) in DCM (150 mL), was added triethylamine (4.25 mL, 31.106 mmol) followed by the slow addition of tosyl chloride (3.0 g, 15.55 mmol) at 0° C. The reaction mixture was stirred at rt for 16 hand then the reaction mixture was concentrated in vacuo. Water was added to the residue and the resulting mixture was extracted with EtOAc (300 mL×2). The combined organic layers were dried (Na<sub>2</sub>SO<sub>4</sub>) and concentrated in vacuo. The resulting residue was purified by flash chromatography (silica gel, 18% EtOAc in hexanes) to give toluene-4-sulfonic acid (S)-1-{(S)-2-[(S)-2-(tert-butoxycarbonyl-methyl-amino)-propionylamino]-3-methyl-butyryl}-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl ester (2.7 g) and toluene-4-sulfonic acid (R)-1-{(S)-2-[(S)-2-(tert-butoxycarbonyl-methyl-amino)-propionylamino]-3-methyl-butyryl}-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl ester (1 g), m/z=589 (M+H).</p>
+      <heading id="h-00011-en" level="1">Intermediate 3</heading>
+      <heading id="h-00012-en" level="1">{(S)-1-[(S)-1-((S)-2-aminomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester</heading>
+      <p id="p-00141-en" num="0299">
+        <chemistry id="chem-00009-en" num="00010">
+          <img id="img-00009-en" he="26.42mm" wi="57.40mm" alt="embedded image" img-content="chem" file="US20150252072A1_00010.PNG" img-format="png" original="US20150252072A1-20150910-C00010.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00142-en" num="0300">Step 1: To a stirred solution of toluene-4-sulfonic acid (S)-1-{(S)-2-[(S)-2-(tert-butoxycarbonyl-methyl-amino)-propionylamino]-3-methyl-butyryl}-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl ester (Intermediate 2) (200 mg, 0.34 mmol) in DMF (4 mL) was added NaN<sub>3 </sub>(26.53 mg, 0.408 mmol) and the resulting mixture was heated at 90° C. for 3 h. The reaction was concentrated in vacuo and the obtained residue was dissolved in ethyl acetate (25 mL) and washed with water and brine, dried (Na<sub>2</sub>SO<sub>4</sub>) and concentrated in vacuo. The resulting residue was purified by flash chromatography (silica gel, 12% EtOAc in hexanes) to give {(S)-1-[(S)-1-((S)-2-azidomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester (140 mg), m/z=460 (M+H).</p>
+      <p id="p-00143-en" num="0301">Step 2: A mixture of {(S)-1-[(S)-1-((S)-2-azidomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester (550 mg) and 10% palladium on carbon in methanol (4 mL) was stirred under a hydrogen atmosphere (balloon) for 2 h. The reaction mixture was filtered through a Celite pad and the filtrate was evaporated to dryness to give {(S)-1-[(S)-1-((S)-2-aminomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester (470 mg), m/z=434 (M+H).</p>
+      <heading id="h-00013-en" level="1">Example 1</heading>
+      <heading id="h-00014-en" level="1">N-{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-benzamide, hydrochloride</heading>
+      <p id="p-00144-en" num="0302">
+        <chemistry id="chem-00010-en" num="00011">
+          <img id="img-00010-en" he="33.10mm" wi="66.46mm" alt="embedded image" img-content="chem" file="US20150252072A1_00011.PNG" img-format="png" original="US20150252072A1-20150910-C00011.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00145-en" num="0303">Step 1: A solution of {(S)-1-[(S)-1-((S)-2-aminomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester (intermediate 3) (100 mg 0.23 mmol) in DCM (4 mL) was cooled to 0-5° C. and triethylamine (0.08 mL 0.57 mmol) followed by benzoyl chloride (0.027 mL, 0.23 mmol) were added. The reaction was stirred at rt for 4 h. The reaction mixture was partitioned between water and DCM and the organic layer was then washed with water (30 mL×2) and brine (30 mL). The combined organic layers were dried over Na<sub>2</sub>SO<sub>4 </sub>and concentrated in vacuo. The resulting residue was purified by preparative-HPLC (acetonitrile and NH<sub>4</sub>OAc] to give ((S)-1-{(S)-1-[(S)-2-(benzoylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propylcarbamoyl}-ethyl)-methyl-carbamic acid tert-butyl ester as a white solid (35 mg), m/z=538 (M+H).</p>
+      <p id="p-00146-en" num="0304">Step 2: To a solution of ((S)-1-{(S)-1-[(S)-2-(benzoylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propylcarbamoyl}-ethyl)-methyl-carbamic acid tert-butyl ester (30 mg, 0.056 mmol) in dioxane (0.5 mL) was added dropwise 4 M HCl in dioxane (0.3 mL) at 0° C. The reaction mixture was stirred for 2 h at rt and then the solvent removed in vacuo. Trituration of the residue with hexane gave N-{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-benzamide, hydrochloride as an off white solid (25 mg), m/z=438 (M+H).</p>
+      <p id="p-00147-en" num="0305">The following examples in Table 1 were prepared using the same procedures as for Example 1 with the noted reactant modifications.</p>
+      <p id="p-00148-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="21pt" align="left" />
+              <colspec colname="2" colwidth="217pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Step 1 Acylating </entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>or sulfonylating</entry>
+                  <entry>m/z </entry>
+                </row>
+                <row>
+                  <entry>EX #</entry>
+                  <entry />
+                  <entry>Agent</entry>
+                  <entry>(M + H)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry> 2</entry>
+                  <entry>
+                    <chemistry id="chem-00011-en" num="00012">
+                      <img id="img-00011-en" he="35.81mm" wi="56.30mm" alt="embedded image" img-content="table" file="US20150252072A1_00012.PNG" img-format="png" original="US20150252072A1-20150910-C00012.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>acetyl chloride</entry>
+                  <entry>376</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 3</entry>
+                  <entry>
+                    <chemistry id="chem-00012-en" num="00013">
+                      <img id="img-00012-en" he="37.85mm" wi="59.01mm" alt="embedded image" img-content="table" file="US20150252072A1_00013.PNG" img-format="png" original="US20150252072A1-20150910-C00013.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>N- methylcarbamoyl chloride</entry>
+                  <entry>391</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 4</entry>
+                  <entry>
+                    <chemistry id="chem-00013-en" num="00014">
+                      <img id="img-00013-en" he="48.85mm" wi="64.69mm" alt="embedded image" img-content="table" file="US20150252072A1_00014.PNG" img-format="png" original="US20150252072A1-20150910-C00014.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>benzoyl chloride</entry>
+                  <entry>452</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 5</entry>
+                  <entry>
+                    <chemistry id="chem-00014-en" num="00015">
+                      <img id="img-00014-en" he="37.85mm" wi="57.83mm" alt="embedded image" img-content="table" file="US20150252072A1_00015.PNG" img-format="png" original="US20150252072A1-20150910-C00015.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>methyl chloroformate</entry>
+                  <entry>392</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 6</entry>
+                  <entry>
+                    <chemistry id="chem-00015-en" num="00016">
+                      <img id="img-00015-en" he="37.85mm" wi="60.28mm" alt="embedded image" img-content="table" file="US20150252072A1_00016.PNG" img-format="png" original="US20150252072A1-20150910-C00016.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>N,N- dimethyl- carbamoyl chloride</entry>
+                  <entry>405</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 7</entry>
+                  <entry>
+                    <chemistry id="chem-00016-en" num="00017">
+                      <img id="img-00016-en" he="48.85mm" wi="64.69mm" alt="embedded image" img-content="table" file="US20150252072A1_00017.PNG" img-format="png" original="US20150252072A1-20150910-C00017.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>phenyl isocyanate</entry>
+                  <entry>453</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 8</entry>
+                  <entry>
+                    <chemistry id="chem-00017-en" num="00018">
+                      <img id="img-00017-en" he="48.85mm" wi="64.69mm" alt="embedded image" img-content="table" file="US20150252072A1_00018.PNG" img-format="png" original="US20150252072A1-20150910-C00018.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>2-phenyl- propionyl chloride</entry>
+                  <entry>466</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 9</entry>
+                  <entry>
+                    <chemistry id="chem-00018-en" num="00019">
+                      <img id="img-00018-en" he="36.75mm" wi="56.30mm" alt="embedded image" img-content="table" file="US20150252072A1_00019.PNG" img-format="png" original="US20150252072A1-20150910-C00019.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>methanesulfonyl chloride</entry>
+                  <entry>412</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>10</entry>
+                  <entry>
+                    <chemistry id="chem-00019-en" num="00020">
+                      <img id="img-00019-en" he="39.45mm" wi="67.23mm" alt="embedded image" img-content="table" file="US20150252072A1_00020.PNG" img-format="png" original="US20150252072A1-20150910-C00020.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>benzenesulfonyl chloride</entry>
+                  <entry>472</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>11</entry>
+                  <entry>
+                    <chemistry id="chem-00020-en" num="00021">
+                      <img id="img-00020-en" he="46.31mm" wi="74.17mm" alt="embedded image" img-content="table" file="US20150252072A1_00021.PNG" img-format="png" original="US20150252072A1-20150910-C00021.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>benzyl chloroformate</entry>
+                  <entry>468</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>
+                    <chemistry id="chem-00021-en" num="00022">
+                      <img id="img-00021-en" he="48.85mm" wi="64.69mm" alt="embedded image" img-content="table" file="US20150252072A1_00022.PNG" img-format="png" original="US20150252072A1-20150910-C00022.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>phenyl chloroformate</entry>
+                  <entry>454</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00015-en" level="1">Example 13</heading>
+      <p id="p-00149-en" num="0306">(S)-2-Methylamino-N—[(S)-2-methyl-1-((S)-2-phenylaminomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-propyl]-propionamide, hydrochloride</p>
+      <p id="p-00150-en" num="0000">
+        <chemistry id="chem-00022-en" num="00023">
+          <img id="img-00022-en" he="41.99mm" wi="55.12mm" alt="embedded image" img-content="chem" file="US20150252072A1_00023.PNG" img-format="png" original="US20150252072A1-20150910-C00023.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00151-en" num="0307">Step 1: To the stirred solution of toluene-4-sulfonic acid (S)-1-{(S)-2-[(S)-2-(tert-butoxycarbonyl-methyl-amino)-propionylamino]-3-methyl-butyryl}-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl ester (Intermediate 2) (50 mg, 0.085 mmol) in 1,4-dioxane (0.5 mL), K<sub>2</sub>CO<sub>3 </sub>(29.3 mg, 0.127 mmol), was added aniline (0.012 mL, 0.127 mmol) and the reaction mixture irradiated in a microwave at 125° C. for 1 h. The reaction mixture was diluted with DCM (10 mL), washed with water and brine and the separated organic layer was concentrated in vacuo. The crude product was purified by preparative HPLC (X Bridge Prep C18 (250×19.0 mm) 5μ, acetonitrile and 0.05% formic acid) to give methyl-{(S)-1-[(S)-2-methyl-1-((S)-2-phenylaminomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-propylcarbamoyl]-ethyl}-carbamic acid tert-butyl ester (30 mg), m/z=510.6 (M+H).</p>
+      <p id="p-00152-en" num="0308">To a solution of methyl-{(S)-1-[(S)-2-methyl-1-((S)-2-phenylaminomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-propylcarbamoyl]-ethyl}-carbamic acid tert-butyl ester (25 mg, 0.05 mmol) in 1,4-dioxane (0.5 mL) was added 4 M HCl in dioxane (0.5 mL) dropwise at 0° C. The reaction mixture was stirred at rt for 3 h then concentrated in vacuo to obtain (S)-2-methylamino-N—[(S)-2-methyl-1-((S)-2-phenylaminomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-propyl]-propionamide hydrochloride (18 mg), m/z=410.4 (M+H).</p>
+      <heading id="h-00016-en" level="1">Example 14</heading>
+      <heading id="h-00017-en" level="1">(S)-2-methylamino-N-{(S)-2-methyl-1-[(S)-2-(naphthalen-2-ylaminomethyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-propyl}-propionamide hydrochloride</heading>
+      <p id="p-00153-en" num="0309">
+        <chemistry id="chem-00023-en" num="00024">
+          <img id="img-00023-en" he="36.58mm" wi="69.93mm" alt="embedded image" img-content="chem" file="US20150252072A1_00024.PNG" img-format="png" original="US20150252072A1-20150910-C00024.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00154-en" num="0310">Step 1: To a stirred solution of 1-{(S)-2-[(S)-2-(tert-butoxycarbonyl-methyl-amino)-propionyl amino]-3-methyl-butyryl}-2,3-dihydro-1H-pyrrolo[2,3-b]pyridine-2-carboxylic acid (Intermediate 1) (3.8 g, 8.48 mmol) in THF (65 mL) were added N-methylmorpholine (1.11 mL, 10.17 mmol) followed by the addition of isobutyl chloroformate (1.32 mL, 10.17 mmol) at −20° C. The reaction mixture was stirred at −20° C. for 10 min and the white precipitate of N-methylmorpholine hydrochloride salt was removed by filtration. The filtrate was cooled to −20° C., NaBH<sub>4 </sub>(483 mg, 12.72 mmol) was added followed by cold water (30 mL) at −20° C. After 30 min the reaction mixture was poured into water (25 mL) and extracted with ethyl acetate (80 mL×2). The combined organic layers were washed with water, brine, dried over Na<sub>2</sub>SO<sub>4 </sub>and concentrated in vacuo. The resulting residue was purified by flash chromatography (silica gel, 28% EtOAc in hexanes) to give {(S)-1-[(S)-1-(2-hydroxymethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester (2.7 g), m/z=435 (M+H)</p>
+      <p id="p-00155-en" num="0311">Step 2: To {(S)-1-[(S)-1-(2-hydroxymethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester (16.5 mg, 0.038 mmol) in DCM (0.4 mL) at 0° C. was added sequentially KBr (3.1 g, 0.027 mmol), TEMPO (0.3 mg) and 8% NaOC1 solution (0.35 mL, 10 eq) and the reaction was stirred vigorously for 1 h. The reaction mixture was diluted with DCM and washed with water and brine and then concentrated in vacuo to give {(S)-1-[(S)-1-((S)-2-formyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester (12 mg).</p>
+      <p id="p-00156-en" num="0312">Step 3: To a stirred solution of {(S)-1-[(S)-1-((S)-2-formyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-2-methyl-propylcarbamoyl]-ethyl}-methyl-carbamic acid tert-butyl ester (30 mg, 0.07 mmol) in dry MeOH (1.0 mL) was added 2-napthylamine (20 mg, 0.14 mmol) was the reaction was stirred at rt for 18 h. Acetic acid was added to adjust to pH ˜4. NaCNBH<sub>3 </sub>(8.7 mg, 0.139 mmol) was added and the reaction was stirred at rt for 18 h. The reaction mixture was concentrated in vacuo. The residue was taken up in EtOAc (25 mL) and washed with saturated aqueous NaHCO<sub>3 </sub>(10 mL×2), water (10 mL×2) and brine (4 mL×2) and concentrated in vacuo. The crude material was purified by preparative HPLC (X Bridge Prep C18 (250×19 0 mm) 5μ, acetonitrile and 5 mM NH<sub>4</sub>OAc) to give methyl-((S)-1-{(S)-2-methyl-1-[(S)-2-(naphthalen-2-ylaminomethyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-propylcarbamoyl}-ethyl)-carbamic acid tert-butyl ester (32 mg), m/z=560 (M+H).</p>
+      <p id="p-00157-en" num="0313">Step 4: To a solution of methyl-((S)-1-{(S)-2-methyl-1-[(S)-2-(naphthalen-2-ylaminomethyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-propylcarbamoyl}-ethyl)-carbamic acid tert-butyl ester (27 mg, 0.05 mmol) in 1,4-dioxane (0.5 mL) was added 4 M HCl in dioxane (0.5 mL) dropwise at 0° C. The reaction mixture was stirred at rt for 3 h and then the solvent was removed in vacuo to give (S)-2-methylamino-N-{(S)-2-methyl-1-[(S)-2-(naphthalen-2-ylaminomethyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-propyl}-propionamide hydrochloride (23 mg), m/z=460 (M+H).</p>
+      <heading id="h-00018-en" level="1">Example 15</heading>
+      <heading id="h-00019-en" level="1">Biochemical Assays</heading>
+      <p id="p-00158-en" num="0314">TR-FRET Assay for BIR2 and BIR3</p>
+      <p id="p-00159-en" num="0315">The ability of a test compound to inhibit the binding of BIR2 and/or BIR3 domains of the XIAP protein to Peptide A (a SMAC-derived peptide described below) evidences that the test compound acts as a SMAC-mimetic resulting in reactivation of a cell's apoptotic pathway.</p>
+      <p id="p-00160-en" num="0316">The peptide AVPIAQKSEK-(ε-biotin)-OH 1:2 TFA (“Peptide A”) was identified as a substrate for the TR-FRET assay by screening the 6× Histidine-tagged BIR2 domain and BIR3 domain of XIAP against a set of 29 peptides synthesized based on sequences reported by Sweeny et al. (<i>Biochemistry, </i>2006, 45, 14740 14748). The peptides were labeled with the fluorescent tags FITC or TAMRA and Kd values were determined by fluorescence polarization assay. The sequence AVPIAQKSEK was identified as optimal for using in an assay. The peptide sequence was derivatized with biotin to provide AVPIAQKSEK-(ε-biotin)-OH 1:2 TFA as the substrate for the TR-FRET assay.</p>
+      <p id="p-00161-en" num="0317">The XIAP protein sequence was obtained from the SWISS-PROT protein sequence database and the BIR2 and BIR3 domains were derived from that. The sequence of the BIR2 domain used for the TR-FRET assay is MRHHHHHHRDHFALDRPSETHADYLLRTGQVVDISDTIYPRNPAMYSEEARLKSF QNWPDYAHLTPRELASAGLYYTGIGDQVQCFACGGKLKNWEPGDRAWSEHRRHE PNCFFVLGRNLNIRSE.</p>
+      <p id="p-00162-en" num="0318">The sequence of the BIR3 domain used for the TR-FRET assay is MRHHHHHHRSDAVSSDRNFPNSTNLPRNPSMADYEARIFTEGTWIYSVNK</p>
+      <p id="p-00163-en" num="0319">EQLARAGFYALGEGDKVKCFHCGGGLTDWKPSEDPWEQHAKWYPGCKYL L</p>
+      <p id="p-00164-en" num="0320">EQKGQEYINNIHLTHSLEECLVRTT.</p>
+      <p id="p-00165-en" num="0321">Ten nanomolar of 6× Histidine-tagged BIR2 domain, corresponding to amino acids 124-240 of XIAP, or BIR3 domain, corresponding to amino acids 241-356 of XIAP, was mixed with 20 nM of the peptide AVPIAQKSEK-(ε-biotin)-OH 1:2 TFA, in the presence of 50 mM Tris-Cl, pH 7.5, 100 mM NaCl, 1 mM dithiothreitol (DTT) and 0.1 mg/mL bovine serum albumin (BSA). Following a 45 mM incubation at 37° C., Europium-Streptavidin and Allophycocyanin conjugated anti-Histidine antibody were added to a final concentration of 1.5 nM and 15 nM, respectively. Time-resolved fluorescence resonance energy transfer (TR-FRET) signals were measured 1 hour later at room temperature. Test compound potency was assessed at 10 serially diluted concentrations. Percentage of inhibition at each concentration was determined to generate an IC<sub>50 </sub>value for each test compound.</p>
+      <p id="p-00166-en" num="0322">These values are listed below in Table 2.</p>
+      <p id="p-00167-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="21pt" align="center" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ic50</entry>
+                  <entry>Ic50</entry>
+                </row>
+                <row>
+                  <entry>EX</entry>
+                  <entry>Systematic Name</entry>
+                  <entry>BIR2</entry>
+                  <entry>BIR3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="21pt" align="char" char="." />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>N-{(S)-1-[(S)-3-Methyl-2-((S)-2-</entry>
+                  <entry>0.888</entry>
+                  <entry>52.98</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>methylamino-propionylamino)-butyryl]-2,3-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dihydro-1H-pyrrolo[2,3-b]pyridin-2-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ylmethyl}-benzamide hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>(S)-N-{(S)-1-[2-(Acetylamino-methyl)-2,3-</entry>
+                  <entry>4.665</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>methyl-propyl}-2-methylamino-propionamide</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>(S)-2-Methylamino-N-((S)-2-methyl-1-{2-[(3-</entry>
+                  <entry>4.875</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>methyl-ureido)-methyl]-2,3-dihydro-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>propionamide hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>(S)-2-Methylamino-N-{(S)-2-methyl-1-[(S)-2-</entry>
+                  <entry>1.57</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(phenylacetylamino-methyl)-2,3-dihydro-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pyrrolo[2,3-b]pyridine-1-carbonyl]-propyl}-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>propionamide hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>5</entry>
+                  <entry>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-</entry>
+                  <entry>1.669</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>propionylamino)-butyryl]-2,3-dihydro-1H-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acid methyl ester hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>6</entry>
+                  <entry>(S)-N-{(S)-1-[(S)-2-(3,3-Dimethyl-</entry>
+                  <entry>6.167</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ureidomethyl)-2,3-dihydro-pyrrolo[2,3-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>b]pyridine-1-carbonyl]-2-methyl-propyl}-2-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>methylamino-propionamide hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>7</entry>
+                  <entry>(S)-2-Methylamino-N-((S)-2-methyl-1-{(S)-2-</entry>
+                  <entry>1.544</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>[(3-phenyl-ureido)-methyl]-2,3-dihydro-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>propionamide hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>8</entry>
+                  <entry>(S)-2-Methylamino-N-((S)-2-methyl-1-{(S)-2-</entry>
+                  <entry>2.561</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>[(2-phenyl-propionylamino)-methyl]-2,3-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl}-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>propyl)-propionamide hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>9</entry>
+                  <entry>(S)-N-{(S)-1-[(S)-2-(Methanesulfonylamino-</entry>
+                  <entry>1.236</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>carbonyl]-2-methyl-propyl}-2-methylamino-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>propionamide hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>10</entry>
+                  <entry>(S)-N-{(S)-1-[(S)-2-(Benzenesulfonylamino-</entry>
+                  <entry>0.82</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>carbonyl]-2-methyl-propyl}-2-methylamino-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>propionamide hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>11</entry>
+                  <entry>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-</entry>
+                  <entry>1.047</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>propionylamino)-butyryl]-2,3-dihydro-1H-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acid benzyl ester</entry>
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-</entry>
+                  <entry>1.622</entry>
+                  <entry>&gt;54.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>propionylamino)-butyryl]-2,3-dihydro-1H-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acid phenyl ester hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>13</entry>
+                  <entry>(S)-2-Methylamino-N-[(S)-2-methyl-1-((S)-2-</entry>
+                  <entry>0.307</entry>
+                  <entry>5.343</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>phenylaminomethyl-2,3-dihydro-pyrrolo[2,3-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>b]pyridine-1-carbonyl)-propyl]-propionamide</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>hydrochloride</entry>
+                </row>
+                <row>
+                  <entry>14</entry>
+                  <entry>(S)-2-Methylamino-N-{(S)-2-methyl-1-[(S)-2-</entry>
+                  <entry>0.506</entry>
+                  <entry>3.952</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(naphthalen-2-ylaminomethyl)-2,3-dihydro-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pyrrolo[2,3-b]pyridine-1-carbonyl]-propyl}-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>propionamide hydrochloride</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A compound of Formula I:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00025">
+          <img id="imgc-00001-en" he="29.13mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150252072A1_00025.PNG" img-format="png" original="US20150252072A1-20150910-C00025.TIF" />
+        </chemistry><claim-text>wherein:</claim-text><claim-text>W is selected from the group</claim-text><claim-text>a) H,</claim-text><claim-text>b) C<sub>1-6</sub>-alkyl that optionally includes 1-3 deuterium atoms,</claim-text><claim-text>c) C<sub>1-6</sub>-alkyl that optionally may be substituted with SO<sub>2</sub>R<sup>5 </sup>and OR<sup>5 </sup></claim-text><claim-text>Y is C<sub>1-6</sub>-alkyl that optionally may be substituted with OR<sup>5</sup>;</claim-text><claim-text>Z is N;</claim-text><claim-text>R<sup>1 </sup>is selected from the group</claim-text><claim-text>a) C<sub>1-6</sub>-alkyl that optionally may be substituted with SO<sub>2</sub>R<sup>5</sup>,</claim-text><claim-text>b) C<sub>3-7</sub>-cycloalkyl,</claim-text><claim-text>c) heterocyclic, and</claim-text><claim-text>d) aryl;</claim-text><claim-text>R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that optionally may be substituted with NHC(O)R<sup>6</sup>, NHSO<sub>2</sub>R<sup>5</sup>, NHCOOR<sup>6 </sup>and NHR<sup>6</sup>;</claim-text><claim-text>R<sup>3 </sup>and R<sup>4 </sup>may be the same or different and each is independently selected from the group</claim-text><claim-text>a) H, and</claim-text><claim-text>b) C<sub>1-6</sub>-alkyl;</claim-text><claim-text>R<sup>5 </sup>is selected from the group</claim-text><claim-text>a) H,</claim-text><claim-text>b) C<sub>1-6</sub>-alkyl,</claim-text><claim-text>c) NR<sup>7</sup>R<sup>8</sup>, and</claim-text><claim-text>d) aryl;</claim-text><claim-text>R<sup>6 </sup>is selected from the group</claim-text><claim-text>a) H</claim-text><claim-text>b) aryl that optionally may be substituted with C<sub>1-6</sub>-alkyl, OR<sup>5</sup>, halogen, C(O)OR<sup>5</sup>, C(O)NR<sup>7</sup>R<sup>8</sup>, aryl, heterocyclyl, C(O)R<sup>9</sup>, SO<sub>2</sub>R<sup>5</sup>, cyano and CF<sub>3</sub>,</claim-text><claim-text>c) C<sub>1-6</sub>-alkyl that optionally may be substituted with CF<sub>3</sub>, SO<sub>2</sub>R<sup>5 </sup>and aryl that optionally may be substituted with C<sub>1-6</sub>-alkyl and halogen,</claim-text><claim-text>d) OR<sup>5</sup>,</claim-text><claim-text>e) NR<sup>7</sup>R<sup>8</sup>,</claim-text><claim-text>f) heteroaryl that optionally may be substituted with C<sub>1-6</sub>-alkyl, OR<sup>5</sup>, halogen, aryl and oxo, and</claim-text><claim-text>g) heterocyclyl;</claim-text><claim-text>R<sup>7 </sup>and R<sup>8 </sup>may be the same or different and each is independently selected from the group</claim-text><claim-text>a) H,</claim-text><claim-text>b) C<sub>1-6</sub>-alkyl, and</claim-text><claim-text>c) aryl; and</claim-text><claim-text>R<sup>9 </sup>is selected from the group</claim-text><claim-text>a) C<sub>1-6</sub>-alkyl, and</claim-text><claim-text>b) aryl;</claim-text><claim-text>or a pharmaceutically acceptable salt thereof.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein W is C<sub>1-6</sub>-alkyl.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The compound of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein W is methyl.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein Y is C<sub>1-6</sub>-alkyl.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein Y is methyl.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein R<sup>1 </sup>is C<sub>1-6</sub>-alkyl, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The compound of <claim-ref idref="clm-00006-en">claim 6</claim-ref> wherein R<sup>1 </sup>is propanyl.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that is substituted with NHC(O)R<sup>6</sup>, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The compound of <claim-ref idref="clm-00008-en">claim 8</claim-ref> wherein R<sup>2 </sup>is methyl that is substituted with NHC(O)R<sup>6 </sup>and R<sup>6 </sup>is selected from aryl and C<sub>1-6</sub>-alkyl, or a pharmaceutically acceptable salty thereof.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that is substituted with NHSO<sub>2</sub>R<sup>5</sup>, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The compound of <claim-ref idref="clm-00010-en">claim 10</claim-ref> wherein R<sup>2 </sup>is methyl that is substituted with NHSO<sub>2</sub>R<sup>5</sup>.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The compound of <claim-ref idref="clm-00011-en">claim 11</claim-ref> wherein R<sup>5 </sup>is methyl or phenyl.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that is substituted with NHCOOR<sup>6</sup>, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The compound of <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein R<sup>6 </sup>is benzyl or methyl that optionally may be substituted with phenyl, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein R<sup>2 </sup>is C<sub>1-6</sub>-alkyl that is substituted with NHR<sup>6</sup>, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The compound of <claim-ref idref="clm-00015-en">claim 15</claim-ref> wherein R<sup>6 </sup>is aryl, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The compound of <claim-ref idref="clm-00016-en">claim 16</claim-ref> wherein R<sup>6 </sup>is phenyl or naphathanelyl, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein R<sup>3 </sup>and R<sup>4 </sup>are H, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The compound of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein R<sup>6 </sup>is phenyl that optionally may be substituted with C<sub>1-6</sub>-alkyl, OR<sup>5</sup>, halogen, C(O)OR<sup>5</sup>, C(O)NR<sup>7</sup>R<sup>8</sup>, aryl, heterocyclyl, C(O)R<sup>9</sup>, SO<sub>2</sub>R<sup>5</sup>, cyano and CF<sub>3</sub>, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein R<sup>6 </sup>is NR<sup>7</sup>R<sup>8</sup>, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The compound of <claim-ref idref="clm-00020-en">claim 20</claim-ref> wherein R<sup>7 </sup>and R<sup>8 </sup>are independently selected from H, methyl and phenyl.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The compound of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein W, Y and R<sup>1 </sup>are C<sub>1-6</sub>-alkyl; and R<sup>2 </sup>is C<sub>1-6</sub>-alkyl substituted by NHCOR<sup>6</sup>; R<sup>6 </sup>is selected from a) phenyl, b) C<sub>1-6</sub>-alkyl that optionally may be substituted with phenyl, and c) NR<sup>7</sup>R<sup>8</sup>; and R<sup>7 </sup>and R<sup>8 </sup>are each independently selected from H, C<sub>1-6</sub>-alkyl and phenyl; or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The compound of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein W, Y and R<sup>1 </sup>are C<sub>1-6</sub>-alkyl; R<sup>2 </sup>is C<sub>1-6</sub>-alkyl substituted by NHSO<sub>2</sub>R<sup>5</sup>; and R<sup>5 </sup>is C<sub>1-6</sub>-alkyl or phenyl; or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The compound of <claim-ref idref="clm-00023-en">claim 23</claim-ref> wherein R<sup>5 </sup>is methyl or phenyl.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The compound of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein W, Y and R<sup>1 </sup>are C<sub>1-6</sub>-alkyl; R<sup>2 </sup>is C<sub>1-6</sub>-alkyl substituted by NHCOOR<sup>6</sup>; and R<sup>6 </sup>is selected from a) aryl and b) C<sub>1-6</sub>-alkyl that optionally may be substituted with aryl; or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The compound of <claim-ref idref="clm-00025-en">claim 25</claim-ref> wherein R<sup>6 </sup>is selected from a) methyl that optionally may be substituted with phenyl, and b) phenyl; or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The compound of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein W, Y and R<sup>1 </sup>are C<sub>1-6</sub>-alkyl; R<sup>2 </sup>is C<sub>1-6</sub>-alkyl substituted by NHR<sup>6</sup>; and R<sup>6 </sup>is aryl, or a pharmaceutically acceptable salt thereof.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. The compound of <claim-ref idref="clm-00027-en">claim 27</claim-ref> wherein R<sup>6 </sup>is selected from phenyl and naphthalenyl.</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. The compound of <claim-ref idref="clm-00001-en">claim 1</claim-ref> selected from:
+<claim-text>N—{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-benzamide hydrochloride;</claim-text><claim-text>(S)—N—{(S)-1-[2-(Acetylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride;</claim-text><claim-text>(S)-2-Methylamino-N—((S)-2-methyl-1-{2-[(3-methyl-ureido)-methyl]-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-propionamide hydrochloride;</claim-text><claim-text>(S)-2-Methylamino-N-{(S)-2-methyl-1-[(S)-2-(phenylacetylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-propyl}-propionamide hydrochloride;</claim-text><claim-text>(S)—N—{(S)-1-[(S)-2-(3,3-Dimethyl-ureidomethyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride;</claim-text><claim-text>(S)-2-Methylamino-N—((S)-2-methyl-1-{(S)-2-[(3-phenyl-ureido)-methyl]-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-propionamide hydrochloride; and</claim-text><claim-text>(S)-2-Methylamino-N—((S)-2-methyl-1-{(S)-2-[(2-phenyl-propionylamino)-methyl]-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl}-propyl)-propionamide hydrochloride;</claim-text><claim-text>or a pharmaceutically acceptable salt of any of the foregoing compounds.</claim-text></claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>30</b>. The compound of <claim-ref idref="clm-00001-en">claim 1</claim-ref> selected from:
+<claim-text>(S)—N-{(S)-1-[(S)-2-(Methanesulfonylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride; and</claim-text><claim-text>(S)—N-{(S)-1-[(S)-2-(Benzenesulfonylamino-methyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-2-methyl-propyl}-2-methylamino-propionamide hydrochloride; or a pharmaceutically acceptable salt of any of the foregoing compounds.</claim-text></claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. The compound of <claim-ref idref="clm-00001-en">claim 1</claim-ref> selected from:
+<claim-text>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic acid methyl ester hydrochloride;</claim-text><claim-text>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic acid methyl ester hydrochloride; and</claim-text><claim-text>{(S)-1-[(S)-3-Methyl-2-((S)-2-methylamino-propionylamino)-butyryl]-2,3-dihydro-1H-pyrrolo[2,3-b]pyridin-2-ylmethyl}-carbamic acid phenyl ester hydrochloride;</claim-text><claim-text>or a pharmaceutically acceptable salt of any of the foregoing compounds.</claim-text></claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>32</b>. The compound of <claim-ref idref="clm-00001-en">claim 1</claim-ref> selected from:
+<claim-text>(S)-2-Methylamino-N—[(S)-2-methyl-1-((S)-2-phenylaminomethyl-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl)-propyl]-propionamide hydrochloride; and</claim-text><claim-text>(S)-2-Methylamino-N-{(S)-2-methyl-1-[(S)-2-(naphthalen-2-ylaminomethyl)-2,3-dihydro-pyrrolo[2,3-b]pyridine-1-carbonyl]-propyl}-propionamide hydrochloride;</claim-text><claim-text>or a pharmaceutically acceptable salt of any of the foregoing compounds.</claim-text></claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en">
+      <claim-text>
+        <b>33</b>. A pharmaceutical composition, comprising a therapeutically effective amount of a compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, or a pharmaceutically acceptable salt thereof, as an active ingredient together with a pharmaceutically acceptable carrier or excipient.</claim-text>
+    </claim>
+    <claim num="34" id="clm-00034-en">
+      <claim-text>
+        <b>34</b>-<b>36</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="35" id="clm-00035-en">
+      <claim-text>
+        <b>37</b>. A method of treating or ameliorating cancer, comprising the step of administering to a subject in need of such treatment a therapeutically effective amount of a compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="36" id="clm-00036-en">
+      <claim-text>
+        <b>38</b>. (canceled)</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00014.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00015.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00016.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00017.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00018.TIF" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00019.TIF" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00020.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00020.TIF" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00021.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00021.TIF" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00022.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00022.TIF" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00023.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00023.TIF" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00024.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00024.TIF" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150252072A1_00025.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252072A1-20150910-C00025.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150252072A1.PDF" type="pdf" size="975046" pages="21" />
+</lexisnexis-patent-document>

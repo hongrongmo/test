@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257532A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030127" date-changed="20160118" time-changed="124252">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314643">
+        <country>US</country>
+        <doc-number>20150257532</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14494096</doc-number>
+        <date>20140923</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>A47B  47/02        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A47B  47/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>H05K   7/18        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>7</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>A47B  47/027       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>027</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47B  47/0083      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>0083</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>H02B   1/012       20130101 LA20151215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>012</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>H02B   1/013       20130101 LI20151215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>013</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>H02B   1/301       20130101 LA20151215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>301</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>H04Q   1/09        20130101 LI20151215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>09</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>H05K   7/18        20130101 LI20150919BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>7</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150919</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">17</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">RACK FRAME ASSEMBLY</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61952525</doc-number>
+          <date>20140313</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Middle Atlantic Products, Inc.</orgname>
+            <role>02</role>
+            <address>
+              <city>Fairfield</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Corbo</last-name>
+            <first-name>Nico</first-name>
+            <address>
+              <city>Blairstown</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Franetovich</last-name>
+            <first-name>John</first-name>
+            <address>
+              <city>Glenwood</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Fluhr</last-name>
+            <first-name>Richard</first-name>
+            <address>
+              <city>Ogdensburg</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173667602">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257532</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140923</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173667600">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2919570</doc-number>
+            <kind>A2</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257532</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140923</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An end unit has an end wall and first and second side walls forming a corner. One end of an L-shaped rail with first and second flanges seats in the corner against the end wall, with the flanges flat against the side walls. One side wall has a protrusion abutting the first flange to restrict movement of the rail away from the other side wall. The first side wall has a tab in a slot in the first flange, engaging the flange on a side of the slot away from the end wall, preventing movement of the rail away from the first side wall, while permitting movement of the rail away from the end wall to a position where the tab aligns with the slot to permit movement of the rail away from the first side wall. A pin in aligned holes prevents the movement away from the end wall.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140923</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257532A1</docdb-publication-number>
+      <docdb-application-id>444510750</docdb-application-id>
+      <new-owner>MIDDLE ATLANTIC PRODUCTS, INC., NEW JERSEY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:CORBO, NICO;FRANETOVICH, JOHN;FLUHR, RICHARD;REEL/FRAME:033800/0693</free-text-description>
+      <effective-date>
+        <date>20140916</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">The application claims benefit of U.S. provisional patent application No. 61/952,525, filed on Mar. 13, 2014 by Corbo et al. for a “Rack Frame Assembly,” the entire contents of which are incorporated by reference as if set forth fully herein.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">The invention relates to an improved metal rack frame assembly for electronics equipment that facilitates assembly of the frame. Most frame assemblies include a top shelf, a base, and four vertical support rails that are screwed into the top and base through the use of generally 32 screws and multiple components, which makes assembly time consuming. The present invention reduces the screws down to 8 through a uniquely designed set of components.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00003-en" num="0003">One aspect of the invention provides an assembly for a frame, comprising an end unit comprising an end wall, a first side wall extending perpendicularly from the end wall, and a second side wall extending perpendicularly from the end wall and forming a corner with the first side wall; and an elongate rail, comprising a first flange and a second flange together forming an L-shaped cross section. In a first position one end of the rail is seated in the corner, with an end face of the rail against the end wall, the first flange flat against the first side wall, and the second flange flat against the second side wall.</p>
+      <p id="p-00004-en" num="0004">The first side wall has at least one protrusion abutting an outer edge of the first flange in the first position to laterally restrict movement of the rail away from the second side wall parallel to the end wall and the first side wall. The first side wall has at least one tab extending through a slot in the first flange and engaging the first flange adjacent to the slot on a side of the slot away from the end wall, the tab in the first position preventing movement of the rail away from the first side wall parallel to the end wall and the second side wall, while permitting movement of the rail away from the end wall to a second position where the at least one tab aligns with the at least one slot to permit movement of the rail away from the first side wall.</p>
+      <p id="p-00005-en" num="0005">The second side wall has a hole aligning with a hole in the second flange in the first position, the aligned holes receiving a pin preventing relative movement of the rail and the end unit from the first position to the second position.</p>
+      <p id="p-00006-en" num="0006">The assembly may comprise two of the end units, each having two of the first side walls and two of the second side walls together forming four corners, and four of the rails, each rail having two ends and positioned with one end in a respective corner of one end unit, and with its other end in a respective corner of the other end unit.</p>
+      <p id="p-00007-en" num="0007">Another aspect of the invention provides a frame for a rack, comprising a base comprising a bottom wall, two first base side walls extending upwards from the bottom wall, and two second base side walls extending upwards from the bottom wall alternately with the first base side walls, the two first base side walls and two second base side walls forming four corners; a top shelf comprising a top wall, two first top side walls extending downwards from the top wall, and two second top side walls extending downwards from the top wall alternately with the first top side walls, the two first top side walls and two second top side walls forming four corners; and four elongate rails, each comprising a first flange and a second flange together forming an L-shaped cross section.</p>
+      <p id="p-00008-en" num="0008">In a first position, each rail extends from the top wall to the bottom wall in respective corners of the top shelf and of the base, with its first flange against one of the first base side walls and one of the first top side walls, and its second flange against one of the second base side walls and one of the second top side walls.</p>
+      <p id="p-00009-en" num="0009">The respective first base side wall and first top side wall each have at each corner at least one protrusion abutting an outer edge of the first flange of the respective rail to prevent movement of the rail away from the respective second base side wall and second top side wall in the first position. The respective first base side wall and first top side wall each have at each corner at least one tab extending through a slot in the first flange and engaging the first flange adjacent to the slot on a side of the slot away from the respective top wall or bottom wall, the tabs preventing movement of the rail away from the respective first base side wall and first top side wall in the first position, while permitting movement of the rail away from the base wall and the top wall to a second position where the tabs align with the slots to permit movement of the rail away from the respective first base side wall and first top side wall.</p>
+      <p id="p-00010-en" num="0010">The second base side walls and second top side walls each have at each corner a hole aligning with a respective hole in the second flange in the first position, each pair of aligned holes receiving a pin preventing relative movement of the rail and the top shelf or the base, respectively, from the first position to the second position.</p>
+      <p id="p-00011-en" num="0011">At least one end wall, or the top wall and/or the base wall, may comprise a planar flange defining an aperture.</p>
+      <p id="p-00012-en" num="0012">The pin, or each of the pins, may include a screw thread that engages with a screw thread in one of the aligned holes, the pin being retained in the aligned holes by engagement of the screw threads.</p>
+      <p id="p-00013-en" num="0013">The aforementioned at least one protrusion may comprise at least two protrusions. At least one of the protrusions may then be closer to the neighboring top, base, or end wall than is the hole in the second side wall, and at least one of the protrusions may then be further from the top, base, or end wall than is the hole in the second side wall.</p>
+      <p id="p-00014-en" num="0014">The aforementioned at least one tab may comprise at least two such tabs spaced apart perpendicular to the top, base, or end wall, the at least one slot in the first flange may comprise at least two slots, and the tabs may extend through respective slots.</p>
+      <p id="p-00015-en" num="0015">One of the first and second side walls may comprise a first web upstanding from the end wall, a second web extending inwards generally in a plane parallel to the end wall, and a third web upstanding from an inner edge of the second web. In the first position the respective flange of the rail may then be flat against the third web of that side wall. The top and base walls may comprise matching first, second, and third webs on the same side of the frame.</p>
+      <p id="p-00016-en" num="0016">Another aspect of the invention provides a set of parts for the aforementioned frame, comprising at least a base, a top shelf, and four rails.</p>
+      <p id="p-00017-en" num="0017">The set of parts may further comprise eight pins.</p>
+      <p id="p-00018-en" num="0018">The foregoing and other features of the invention and advantages of the present invention will become more apparent in light of the following detailed description of the preferred embodiments, as illustrated in the accompanying figures. As will be realized, the invention is capable of modifications in various respects, all without departing from the invention. Accordingly, the drawings and the description are to be regarded as illustrative in nature, and not as restrictive.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00019-en" num="0019">For the purpose of illustrating the invention, the drawings show a form of the invention which is presently preferred. However, it should be understood that this invention is not limited to the precise arrangements and instrumentalities shown in the drawings.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 1</figref> is an exploded view of the frame assembly according to the present invention.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 2</figref> is a fully assembled view of the frame assembly of <figref>FIG. 1</figref>.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 3</figref> is an enlarged inside view of one corner of the base of the frame in <figref>FIG. 2</figref>, illustrating the attachment of the vertical rails to the base.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 4</figref>. is a view of <figref>FIG. 3</figref> from the outside showing how one screw attaches and secures the rail to the base.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00024-en" num="0024">As shown in the figures, the assembly <b>10</b> includes a top shelf <b>12</b>, a base <b>14</b>, and four or more vertical rails <b>16</b>. Each end of each vertical rail attaches to the top shelf with one pin, which in this embodiment is in the form of a screw or bolt <b>18</b> and the base with one pin, which in this embodiment is in the form of a screw or bolt <b>18</b>. The top shelf <b>12</b> includes a top wall <b>20</b>, and four side walls <b>22</b> that generally project downward from the top wall <b>20</b>. For simplicity the top side walls <b>22</b> are referenced as <b>22</b>A, <b>22</b>B, <b>22</b>C, <b>22</b>D in the figures. Similarly, the base includes a bottom wall <b>24</b> and four side walls <b>26</b> that generally project upward from the bottom wall <b>24</b>. As shown for the bottom wall <b>24</b> in <figref>FIGS. 1 and 2</figref>, either or both of the top and bottom walls <b>20</b> and <b>24</b> may be in the form of a planar flange surrounding an opening. For simplicity, the base side walls <b>26</b> are referenced as <b>26</b>A, <b>26</b>B, <b>26</b>C, <b>26</b>D in the figures. As may be seen from the drawings, the top wall <b>20</b> and the top side walls <b>22</b> may be formed from a single piece of sheet metal or other suitable material. Similarly, the bottom wall <b>24</b> and the base side walls <b>26</b> may be formed from a single piece of sheet metal or other suitable material.</p>
+      <p id="p-00025-en" num="0025">At least two of the side walls <b>22</b>A, <b>22</b>C on the top shelf and two of the side walls <b>26</b>A, <b>26</b>C of the base include at least one or more inwardly projecting protrusions or stubs <b>28</b> on each end of the side walls <b>22</b>A, <b>22</b>C, <b>26</b>A, <b>26</b>C. For simplicity, the following description will refer to the components on the base <b>14</b>. However, it is intended that the same connection can also be used on the top shelf <b>12</b>. The protrusions <b>28</b> are preferably formed as an inwardly pressed piece of the side wall <b>26</b>A, <b>26</b>C. Preferably there are two protrusions <b>28</b> on each end of the side walls <b>26</b>A, <b>26</b>C. The protrusions <b>28</b> are spaced from the end of the side wall a sufficient distance to receive a first side flange <b>30</b> of one vertical rail <b>16</b> so as to laterally restrict movement of the rail in the plane of the side wall <b>26</b>A, <b>26</b>C as shown in <figref>FIG. 3</figref>.</p>
+      <p id="p-00026-en" num="0026">A second side flange <b>34</b> of the vertical rail <b>16</b> is positioned against an adjacent side wall <b>26</b>B, <b>26</b>D. More particularly, as shown in <figref>FIG. 3</figref>, the bottom wall <b>24</b> projects outwards beyond the rails <b>16</b>. A vertical first web forming the first part of the adjacent side wall <b>26</b>B, <b>26</b>D rises from the outer edge of the bottom wall <b>24</b>. The adjacent side wall <b>26</b>B, <b>26</b>D preferably includes a flange or second web <b>36</b> extending inwards from the top of the first web, parallel to the plane of the bottom wall <b>24</b>. At the inner end of the second web <b>36</b> is a vertical flange or third web <b>38</b> against which the second side flange <b>32</b> of the vertical rail <b>16</b> rests. The top shelf <b>12</b> has a similar projection. The projections permit a door or cover panel (not shown) to be installed, with the outer face of the door flush with the vertical first webs. The projections may be provided on only one side of the frame assembly or, as shown in the drawings, on two opposite sides.</p>
+      <p id="p-00027-en" num="0027">A screw or bolt <b>18</b> attaches the vertical flange <b>36</b> to the third web <b>38</b> of the second side flange <b>32</b>. Thus, side walls <b>26</b>B, <b>26</b>D and the protrusions <b>28</b> prevent any lateral movement of the vertical rails along the plane of side wall <b>26</b>A, <b>26</b>C, and the screw or bolt <b>18</b> and side walls <b>26</b>A, <b>26</b>C prevent any lateral movement of the vertical rails <b>16</b> along the plane of side walls <b>26</b>B, <b>26</b>D. The screw or bolt <b>18</b> also prevents the removal of the rail from the top/base.</p>
+      <p id="p-00028-en" num="0028">To further secure the rails <b>16</b> to the base <b>14</b>, the side walls <b>26</b>A, <b>26</b>C include tabs <b>40</b> that extend inward from the side walls <b>26</b>A, <b>26</b>C and include a joggled portion that is bent upward as shown (the tabs on the top shelf which are shown in less detail in <figref>FIGS. 1 and 2</figref> are, of course, bent downward). The tabs <b>40</b> are preferably formed from a punched section of the side wall <b>26</b>A, <b>26</b>C. The tabs <b>40</b> are spaced away from the side wall <b>26</b>A, <b>26</b>C a sufficient distance to receive the first side flange <b>30</b> of the rail <b>16</b>. As shown, the first side flange <b>30</b> includes one or more slots <b>42</b> which are cut into the rail <b>16</b> and are sized to receive the tabs <b>40</b>. In the illustrated embodiment, there are two tabs <b>40</b> located at each end of each side wall <b>26</b>A, <b>26</b>C of the base. The first side flange <b>30</b> of each rail <b>16</b> has at least two slots <b>42</b> formed at each end and that are vertically spaced and aligned with each other and configured to engage with the tabs <b>40</b>.</p>
+      <p id="p-00029-en" num="0029">While one corner is shown in the figures, it should be readily apparent that all four corners of the base and the top would preferably have similar features, assembled in the similar manner.</p>
+      <p id="p-00030-en" num="0030">To assemble the frame, the slots <b>42</b> in a rail <b>16</b> are aligned with the tabs <b>40</b> in the side wall <b>26</b>A and then the rail is slid downward so that the tabs engage the first side flange <b>30</b>. A screw or bolt <b>18</b> is then placed through a hole <b>44</b> in the vertical flange <b>38</b> to secure the vertical flange <b>38</b> of the side wall <b>26</b>B to the second side flange <b>34</b> of the vertical rail <b>16</b>. This is repeated with the remaining three vertical rails <b>16</b> on the base <b>24</b>. The top shelf <b>12</b> is then attached in a similar fashion to the other end of the vertical rails <b>16</b>.</p>
+      <p id="p-00031-en" num="0031">Thus the entire rack frame assembly <b>10</b> consists of six components <b>12</b>, <b>14</b>, and <b>16</b> and eight screws <b>18</b>.</p>
+      <p id="p-00032-en" num="0032">While the invention has been disclosed with reference to certain preferred embodiments, numerous modifications, alterations, and changes to the described embodiments are possible without departing from the sphere and scope of the invention, as defined in the appended claims and equivalents thereof. Accordingly, it is intended that the invention not be limited to the described embodiments, but that it have the full scope defined by the language of the following claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An assembly for a frame, comprising:
+<claim-text>an end unit comprising an end wall, a first side wall extending perpendicularly from the end wall, and a second side wall extending perpendicularly from the end wall and forming a corner with the first side wall;</claim-text><claim-text>an elongated rail, comprising a first flange and a second flange together forming an L-shaped cross section;</claim-text><claim-text>wherein in a first position one end of the rail is seated in the corner, with an end face of the rail against the end wall, the first flange flat against the first side wall, and the second flange flat against the second side wall;</claim-text><claim-text>wherein the first side wall has at least one protrusion abutting an outer edge of the first flange in the first position to laterally restrict movement of the rail away from the second side wall parallel to the end wall and the first side wall;</claim-text><claim-text>wherein the first side wall has at least one tab extending through a slot in the first flange and engaging the first flange adjacent to the slot on a side of the slot away from the end wall, the tab in the first position preventing movement of the rail away from the first side wall parallel to the end wall and the second side wall, while permitting movement of the rail away from the end wall to a second position where the at least one tab aligns with the at least one slot to permit movement of the rail away from the first side wall; and</claim-text><claim-text>wherein the second side wall has a hole aligning with a hole in the second flange in the first position, the aligned holes receiving a pin preventing relative movement of the rail and the end unit from the first position to the second position.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. An assembly according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising two said end units, each having two said first side walls and two said second side walls together forming four said corners, and four said rails, each rail having two said ends and positioned with one end in a respective said corner of one said end unit, and with its other end in a respective said corner of the other said end unit.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. An assembly according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein at least one said end wall comprises a planar flange defining an aperture.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. An assembly according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said pin includes a screw thread that engages with a screw thread in one of said aligned holes, said pin being retained in said aligned holes by engagement of the screw threads.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. An assembly according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said at least one protrusion comprises at least two protrusions, at least one said protrusion is closer to said end wall than is said hole in said second side wall, and at least one said protrusion is further from said end wall than is said hole in said second side wall.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. An assembly according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said at least one tab comprises at least two said tabs spaced apart perpendicular to the end wall, said at least one slot in the first flange comprises at least two slots, and respective said tabs extend through respective said slots.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. An assembly according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein one of said first and second side walls comprises a first web upstanding from said end wall, a second web extending inwards generally in a plane parallel to said end wall, and a third web upstanding from an inner edge of said second web, and wherein when in said first position the respective flange of said rail is flat against said third web of said one side wall.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>
+        <b>8</b>. A frame for a rack, comprising:
+<claim-text>a base comprising a bottom wall, two first base side walls extending upwards from the bottom wall, and two second base side walls extending upwards from the bottom wall alternately with the first base side walls, said two first base side walls and two second base side walls forming four corners;</claim-text><claim-text>a top shelf comprising a top wall, two first top side walls extending downwards from the top wall, and two second top side walls extending downwards from the top wall alternately with the first top side walls, said two first top side walls and two second top side walls forming four corners; and</claim-text><claim-text>four elongate rails, each comprising a first flange and a second flange together forming an L-shaped cross section;</claim-text><claim-text>wherein in a first position each rail extends from the top wall to the bottom wall in respective corners of the top shelf and of the base, with its first flange against one of the first base side walls and one of the first top side walls, and its second flange against one of the second base side walls and one of the second top side walls;</claim-text><claim-text>wherein the respective first base side wall and first top side wall each have at each corner at least one protrusion abutting an outer edge of the first flange of the respective rail to prevent movement of the rail away from the respective second base side wall and second top side wall in the first position;</claim-text><claim-text>wherein the respective first base side wall and first top side wall each have at each corner at least one tab extending through a slot in the first flange and engaging the first flange adjacent to the slot on a side of the slot away from the respective top wall or bottom wall, the tabs preventing movement of the rail away from the respective first base side wall and first top side wall in the first position, while permitting movement of the rail away from the base wall and the top wall to a second position where the tabs align with the slots to permit movement of the rail away from the respective first base side wall and first top side wall; and</claim-text><claim-text>wherein the second base side walls and second top side walls each have at each corner a hole aligning with a respective hole in the second flange in the first position, each pair of aligned holes receiving a pin preventing relative movement of the rail and the top shelf or the base, respectively, from the first position to the second position.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A frame according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein said pins include screw threads that engage with screw threads in one of each pair of said aligned, said pins being retained in said aligned holes by engagement of said screw threads.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A frame according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein said at least one protrusion at each corner comprises at least two protrusions, at least one said protrusion is closer to the respective top or bottom wall than is said hole in said second side wall, and at least one said protrusion is further from the respective top or bottom wall than is said hole in said second side wall.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A frame according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein said at least one tab at each corner comprises at least two said tabs spaced apart perpendicular to the respective top or bottom wall and extending through respective said slots in the respective first side flange.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A frame according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein at least one of said top shelf and said bottom wall comprises a planar flange defining an aperture.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A frame according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein each of said first side walls or each of said second side walls comprises a first web upstanding from said end wall, a second web extending inwards generally in a plane parallel to said end wall, and a third web upstanding from an inner edge of said second web, and wherein in said first position the respective flange of the respective said rail is flat against said third web of the respective side wall.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A set of parts for a frame according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, comprising at least said base, top shelf, and four rails.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A set of parts according to <claim-ref idref="clm-00014-en">claim 14</claim-ref>, further comprising said eight pins.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. An assembly for a frame, comprising:
+<claim-text>an end unit comprising an end wall, a first side wall extending perpendicularly from the end wall, and a second side wall extending perpendicularly from the end wall and forming a corner with the first side wall;</claim-text><claim-text>an elongate rail, comprising a first flange and a second flange together forming an L-shaped cross section;</claim-text><claim-text>wherein in a first position one end of the rail is seated in the corner, with an end face of the rail against the end wall, the first flange flat against the first side wall, and the second flange flat against the second side wall;</claim-text><claim-text>wherein the first side wall has at least two protrusions abutting an outer edge of the first flange in the first position to laterally restrict movement of the rail away from the second side wall parallel to the end wall and the first side wall;</claim-text><claim-text>wherein the first side wall has at least two tabs extending through respective slots in the first flange, each said tab engaging the first flange adjacent to the respective slot on a side of the respective slot away from the end wall, the tabs in the first position preventing movement of the rail away from the first side wall parallel to the end wall and the second side wall, while permitting movement of the rail away from the end wall to a second position where the tabs align with the respective slots to permit movement of the rail away from the first side wall; and</claim-text><claim-text>wherein the second side wall has a hole aligning with a hole in the second flange in the first position, at least one of the holes comprising a screw thread, the aligned holes receiving a pin preventing relative movement of the rail and the end unit from the first position to the second position, wherein said pin includes a screw thread that engages with the screw thread in one of said aligned holes, the pin being retained in said aligned holes by engagement of the screw threads.</claim-text><claim-text>wherein at least one said protrusion is closer to said end wall than is said hole in said second side wall, and at least one said protrusion is further from said end wall than is said hole in said second side wall.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. (canceled)</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257532A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257532A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257532A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257532A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257532A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257532A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257532A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257532A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257532A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257532A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257532A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257532A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257532A1.PDF" type="pdf" size="413449" pages="9" />
+</lexisnexis-patent-document>

@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940153A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091308" date-changed="20151211" time-changed="141323">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121940793">
+        <country>EP</country>
+        <doc-number>2940153</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15157136</doc-number>
+        <date>20100824</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>61275860</doc-number>
+        <date>20090902</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>27586009</doc-number>
+        <kind>P</kind>
+        <date>20090902</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>EP</country>
+        <doc-number>10814252</doc-number>
+        <kind>A</kind>
+        <date>20100824</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>275860 P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>10814252.2</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US20090275860P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>EP20100814252</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151211">
+      <classification-ipcr sequence="1">
+        <text>C12Q   1/68        20060101AFI20150902BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150902</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151211">
+      <classification-cpc sequence="1">
+        <text>G01N  33/50        20130101 FI20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01F  13/0071      20130101 LI20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>0071</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B01F  13/0079      20130101 LI20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>0079</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B01J  19/0046      20130101 LI20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>19</main-group>
+        <subgroup>0046</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B01J  19/0093      20130101 LI20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>19</main-group>
+        <subgroup>0093</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B01J2219/00286     20130101 LA20150827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00286</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>B01J2219/00418     20130101 LA20150827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00418</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>B01J2219/00495     20130101 LA20150827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00495</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>B01J2219/0059      20130101 LA20150827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>0059</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>B01J2219/00599     20130101 LA20150827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00599</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>B01J2219/00873     20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00873</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>B01J2219/00894     20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00894</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>B01J2219/00903     20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00903</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>B01J2219/00957     20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00957</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>B01L   3/502784    20130101 LI20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>502784</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>B01L   7/525       20130101 LI20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>7</main-group>
+        <subgroup>525</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>B01L2200/0673      20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2200</main-group>
+        <subgroup>0673</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>B01L2200/16        20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2200</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>B01L2300/0867      20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2300</main-group>
+        <subgroup>0867</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="20">
+        <text>B01L2300/0883      20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2300</main-group>
+        <subgroup>0883</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="21">
+        <text>B01L2300/18        20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2300</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="22">
+        <text>B01L2400/0487      20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2400</main-group>
+        <subgroup>0487</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="23">
+        <text>B01L2400/0677      20130101 LA20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2400</main-group>
+        <subgroup>0677</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="24">
+        <text>C12Q   1/6844      20130101 LI20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>6844</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="25">
+        <text>C40B  50/08        20130101 LA20150827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>40</class>
+        <subclass>B</subclass>
+        <main-group>50</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="26">
+        <text>C40B  60/14        20130101 LA20150827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>40</class>
+        <subclass>B</subclass>
+        <main-group>60</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="27">
+        <text>G01N  21/75        20130101 LI20151126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>21</main-group>
+        <subgroup>75</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="28">
+        <text>G01N  35/08        20130101 LI20150710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>35</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C12Q   1/6844      20130101 LI20150710BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>12</class>
+            <subclass>Q</subclass>
+            <main-group>1</main-group>
+            <subgroup>6844</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150710</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C12Q2547/107       20130101 LA20150710BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>12</class>
+            <subclass>Q</subclass>
+            <main-group>2547</main-group>
+            <subgroup>107</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150710</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">System zum Mischen von Flüssigkeiten durch Gerinnung mehrerer Emulsionen</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">System for mixing fluids by coalescence of multiple emulsions</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">Système permettant de mélanger des fluides par coalescence d'émulsions multiples</invention-title>
+    <references-cited date-changed="20151110">
+      <patent-citations name="patcit" date-changed="20151110" />
+      <non-patent-citations name="nplcit" date-changed="20151110" />
+      <citation>
+        <patcit num="1" dnum="WO2008109176A2" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2008109176</doc-number>
+            <kind>A2</kind>
+            <name>HARVARD COLLEGE [US], et al</name>
+            <date>20080912</date>
+          </document-id>
+          <application-date>
+            <date>20080307</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO2007081387A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2007081387</doc-number>
+            <kind>A1</kind>
+            <name>RAINDANCE TECHNOLOGIES INC [US], et al</name>
+            <date>20070719</date>
+          </document-id>
+          <application-date>
+            <date>20060601</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2009131543A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090131543</doc-number>
+            <kind>A1</kind>
+            <name>WEITZ DAVID A [US], et al</name>
+            <date>20090521</date>
+          </document-id>
+          <application-date>
+            <date>20060303</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2008044543A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080044543</doc-number>
+            <kind>A1</kind>
+            <name>MCCLEMENTS DAVID J [US], et al</name>
+            <date>20080221</date>
+          </document-id>
+          <application-date>
+            <date>20070817</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US7041481B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7041481</doc-number>
+            <kind>B2</kind>
+            <name>ANDERSON BRIAN L [US], et al</name>
+            <date>20060509</date>
+          </document-id>
+          <application-date>
+            <date>20030314</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US2010173394A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100173394</doc-number>
+            <kind>A1</kind>
+            <name>COLSTON JR BILLY WAYNE [US], et al</name>
+            <date>20100708</date>
+          </document-id>
+          <application-date>
+            <date>20090923</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>BEER N R ET AL: "On-chip single-copy real-time reverse-transcription PCR in isolated picoliter droplets", ANALYTICAL CHEMISTRY, AMERICAN CHEMICAL SOCIETY, US, vol. 80, no. 6, 15 March 2008 (2008-03-15), pages 1854 - 1858, XP002575963, ISSN: 0003-2700, [retrieved on 20080216], DOI: 10.1021/AC800048K</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-41449096970&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>BEER N R ET AL: "On-chip, real-time, single-copy polymerase chain reaction in picoliter droplets", ANALYTICAL CHEMISTRY, AMERICAN CHEMICAL SOCIETY, US, vol. 79, no. 22, 15 November 2007 (2007-11-15), pages 8471 - 8475, XP002575962, ISSN: 0003-2700, [retrieved on 20071011], DOI: 10.1021/AC701809W</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-36448957253&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>NATHAN BLOW: "PCR's next frontier", NATURE METHODS, vol. 4, no. 10, 1 October 2007 (2007-10-01), pages 869 - 875, XP055047883, ISSN: 1548-7091, DOI: 10.1038/nmeth1007-869</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-35848953169&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="4">
+          <text>LINAS MAZUTIS ET AL: "Droplet-Based Microfluidic Systems for High-Throughput Single DNA Molecule Isothermal Amplification and Analysis", ANALYTICAL CHEMISTRY, AMERICAN CHEMICAL SOCIETY, US, vol. 81, no. 12, 15 June 2009 (2009-06-15), pages 4813 - 4821, XP008148031, ISSN: 0003-2700, [retrieved on 20090518], DOI: 10.1021/AC900403Z</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-67249135232&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="5">
+          <text>MARGULIES MARCEL ET AL: "Genome sequencing in microfabricated high-density picolitre reactors", NATURE, NATURE PUBLISHING GROUP, UNITED KINGDOM, vol. 437, no. 7057, 15 September 2005 (2005-09-15), pages 376 - 380, XP002398505, ISSN: 0028-0836</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-24044455869&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="6">
+          <text>JOSEPH R. LAKOWICZ: "PRINCIPLES OF FLUORESCENCE SPECTROSCOPY(2nd Ed. )", 1999</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20151104">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>EP</country>
+              <doc-number>10814252.2</doc-number>
+              <date>20100824</date>
+            </document-id>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>EP</country>
+              <doc-number>15157136</doc-number>
+              <date>20100824</date>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Bio-Rad Laboratories, Inc.</orgname>
+            <registered-number>100788306</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>1000 Alfred Nobel Drive</address-1>
+              <city>Hercules, CA 94547</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Hindson, Benjamin J</name>
+            <address>
+              <address-1>1039 Bannock Street</address-1>
+              <city>Livermore, CA 94551</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Colston, Billy W. Jr.</name>
+            <address>
+              <address-1>9981 Torreon Avenue</address-1>
+              <city>San Ramon, CA 94583</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Ness, Kevin</name>
+            <address>
+              <address-1>24 Baytree Way 10</address-1>
+              <city>San Mateo, CA 94402</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>Masquelier, Donald A</name>
+            <address>
+              <address-1>440 Fiesta Court</address-1>
+              <city>Tracy, CA 95376</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Stainthorpe, Vanessa Juliet</name>
+            <registered-number>101207017</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>HGF Limited Fountain Precinct Balm Green</address-1>
+              <city>Sheffield S1 2JA</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151104">
+      <main-family family-id="142481383">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940153</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2013503630</doc-number>
+            <kind>A</kind>
+            <date>20130204</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2767056</doc-number>
+            <kind>A1</kind>
+            <date>20110310</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2473618</doc-number>
+            <kind>A1</kind>
+            <date>20120711</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2473618</doc-number>
+            <kind>B1</kind>
+            <date>20150304</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011028539</doc-number>
+            <kind>A1</kind>
+            <date>20110310</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="155551576">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940153</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2013503630</doc-number>
+            <kind>A</kind>
+            <date>20130204</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2473618</doc-number>
+            <kind>A1</kind>
+            <date>20120711</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2473618</doc-number>
+            <kind>A4</kind>
+            <date>20130123</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2473618</doc-number>
+            <kind>B1</kind>
+            <date>20150304</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011028539</doc-number>
+            <kind>A1</kind>
+            <date>20110310</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2767056</doc-number>
+            <kind>A1</kind>
+            <date>20110310</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">System, including methods, apparatus, compositions, and kits, for the mixing of small volumes of fluid by coalescence of multiple emulsions. <img id="imga-00001-en" wi="83" he="91" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">
+      <b>
+        <u>Cross-Reference to Priority Application</u>
+      </b>
+    </heading>
+    <p id="p-00001-en" num="0001">This application is based upon and claims the benefit under all applicable national and international law, including 35 U.S.C. § 119(e), of <patcit id="pcit-00001" dnum="US61275860A"><text>U.S. Provisional Patent Application Serial No. 61/275,860, filed September 2, 2009</text></patcit>, which is incorporated herein by reference in its entirety for all purposes.</p>
+    <heading id="h-00002-en">
+      <b>
+        <u>Cross-References to Additional Materials</u>
+      </b>
+    </heading>
+    <p id="p-00002-en" num="0002">This application incorporates by reference in their entireties for all purposes the following materials: <patcit id="pcit-00002" dnum="US7041481B"><text>U.S. Patent No. 7,041,481, issued May 9, 2006</text></patcit>; U.S. Patent Application Publication No. <patcit id="pcit-00003" dnum="US20100173394A1"><text>US-2010-0173394-A1, published July 8, 2010</text></patcit>; and <nplcit id="ncit-00001" npl-type="b"><text>Joseph R. Lakowicz, PRINCIPLES OF FLUORESCENCE SPECTROSCOPY (2nd Ed. 1999</text></nplcit>).</p>
+    <heading id="h-00003-en">
+      <b>
+        <u>Introduction</u>
+      </b>
+    </heading>
+    <p id="p-00003-en" num="0003">Many biomedical applications rely on high-throughput assays of samples combined with reagents. For example, in research and clinical applications, high-throughput genetic tests using target-specific reagents can provide high-quality information about samples for drug discovery, biomarker discovery, and clinical diagnostics, among others. As another example, infectious disease detection often requires screening a sample for multiple genetic targets to generate high-confidence results.</p>
+    <p id="p-00004-en" num="0004">The trend is toward reduced volumes and detection of more targets. However, mixing smaller volumes can require more complex instrumentation, which increases cost. Accordingly, improved technology is needed to permit testing more combinations of samples and reagents, at a higher speed, a lower cost, and/or with reduced instrument complexity.</p>
+    <p id="p-00005-en" num="0005">Emulsions hold substantial promise for revolutionizing high-throughput assays. Emulsification techniques can create billions of aqueous droplets that function as independent reaction chambers for biochemical reactions. For example, an aqueous sample (e.g., 200 microliters) can be partitioned into droplets (e.g., four million droplets of 50 picoliters each) to allow individual sub-components (e.g., cells, nucleic acids, proteins) to be manipulated, processed, and studied discretely in a massively high-throughput manner.</p>
+    <p id="p-00006-en" num="0006">Splitting a sample into droplets offers numerous advantages. Small reaction volumes (picoliters to nanoliters) can be utilized, allowing earlier detection by increasing reaction rates and forming more concentrated products. Also, a much greater number of independent measurements (thousands to millions) can be made on the sample, when compared to conventional bulk volume reactions performed on a micoliter scale. Thus, the sample can be analyzed more accurately (i.e., more repetitions of the same test) and in greater depth (i.e., a greater number of different tests). In addition, small reaction volumes use less reagent, thereby lowering the cost per test of consumables. Furthermore, microfluidic technology can provide control over processes used for generation, mixing, incubation, splitting, sorting, and detection of droplets, to attain repeatable droplet-based measurements.</p>
+    <p id="p-00007-en" num="0007">Aqueous droplets can be suspended in oil to create a water-in-oil emulsion (W/O). The emulsion can be stabilized with a surfactant to reduce or prevent coalescence of droplets during heating, cooling, and transport, thereby enabling thermal cycling to be performed. Accordingly, emulsions have been used to perform single-copy amplification of nuclei acid target molecules in droplets using the polymerase chain reaction (PCR).</p>
+    <p id="p-00008-en" num="0008">Compartmentalization of single molecules of a nucleic acid target in droplets of an emulsion alleviates problems encountered in amplification of larger sample volumes. In particular, droplets can promote more efficient and uniform amplification of targets from samples containing complex heterogeneous nucleic acid populations, because sample complexity in each droplet is reduced. The impact of factors that lead to biasing in bulk amplification, such as amplification efficiency, G+C content, and amplicon annealing, can be minimized by droplet compartmentalization. Unbiased amplification can be critical in detection of rare species, such as pathogens or cancer cells, the presence of which could be masked by a high concentration of background species in complex clinical samples.</p>
+    <p id="p-00009-en" num="0009">Despite their allure, emulsion-based assays present technical challenges for high-throughput testing, which can require tens, hundreds, thousands, or even millions of individual sample/reagent combinations. Samples and reagents for emulsion-based assays generally can be mixed more easily and reliably in relatively large volumes (e.g., microliters) before formation of emulsions, but this approach consumes substantial quantities of sample and reagent. In contrast, controlled mixing of picoliter to nanoliter volumes of samples with reagents conserves sample and reagent. However, mixing of these small volumes in emulsions can require complex instrumentation that is difficult to scale-up for performing high-throughput, emulsion-based assays with many different samples and/or reagents. For example, emulsions of sample droplets and of reagent droplets can be formed separately, and then individual droplets of sample and reagent can brought into proximity and merged using electro-coalescence. Nevertheless, this technique generally requires precise timing of trains of sample droplets and reagent droplets, active feedback loops, and smooth flow, thereby increasing complexity and cost.</p>
+    <p id="p-00010-en" num="0010">There remains a need for methods and apparatus to accomplish mixing of sub-microliter volumes of samples and reagents, such as mixing of selected samples and reagents on-demand.</p>
+    <heading id="h-00004-en">
+      <b>
+        <u>Summary</u>
+      </b>
+    </heading>
+    <p id="p-00011-en" num="0011">The present disclosure provides a system, including methods, apparatus, compositions, and kits, for the mixing of small volumes of fluid by coalescence of multiple emulsions.</p>
+    <heading id="h-00005-en">
+      <b>
+        <u>Brief Description of the Drawings</u>
+      </b>
+    </heading>
+    <p id="p-00012-en" num="0012">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>
+          <figref>Figure 1</figref> is a diagram illustrating exemplary coalescence of inner and outer droplets within a compound droplet of a multiple emulsion to achieve mixing of small volumes of sample and reagent within compound droplets, in accordance with aspects of the present disclosure.</li>
+        <li>
+          <figref>Figure 2</figref> is a schematic view of an exemplary system (a) for forming and coalescing multiple emulsions and (b) for analyzing assay mixtures produced by coalescence of the multiple emulsions, in accordance with aspects of the present disclosure.</li>
+        <li>
+          <figref>Figure 3</figref> is a flowchart of an exemplary method of testing one or more samples using a multiple emulsion, in accordance with aspects of the present disclosure.</li>
+        <li>
+          <figref>Figure 4</figref> is a schematic view of an exemplary device for forming a precursor emulsion that can be modified to create a multiple emulsion, in accordance with aspects of the present disclosure.</li>
+        <li>
+          <figref>Figure 5</figref> is a schematic view of an exemplary composition formed by mixing precursor emulsions of different types, in accordance with aspects of present disclosure.</li>
+        <li>
+          <figref>Figure 6</figref> is a schematic view of an exemplary device for creating and coalescing multiple emulsions, with the device (a) transforming a coded mixture of precursor emulsions into a multiple emulsion and (b) fusing inner and outer droplets of compound droplets within the multiple emulsion, in accordance with aspects of present disclosure.</li>
+        <li>
+          <figref>Figure 7</figref> is a schematic view of another exemplary device for creating and coalescing multiple emulsions, with the device in the process of (a) transforming individual precursor emulsions serially into spatially and temporally resolved multiple emulsions and (b) fusing inner and outer droplets of compound droplets within each multiple emulsion, in accordance with aspects of present disclosure.</li>
+        <li>
+          <figref>Figure 8</figref> is a diagram illustrating exemplary coalescence of another multiple emulsion to achieve mixing of small volumes of a sample and a reagent within a compound droplet by fusion of inner droplets, namely, at least one sample droplet and at least one reagent droplet, in accordance with aspects of the present disclosure.</li>
+        <li>
+          <figref>Figure 9</figref> is a schematic view of an exemplary device for forming a precursor emulsion of reagent droplets (e.g., primer droplets), which can be modified to create the multiple emulsion of <figref>Figure 8</figref>, in accordance with aspects of the present disclosure.</li>
+        <li>
+          <figref>Figure 10</figref> is a schematic view of an exemplary device for forming a precursor emulsion of sample droplets, which can be combined with the reagent droplets of <figref>Figure 8</figref> in a multiple emulsion, in accordance with aspects of the present disclosure.</li>
+        <li>
+          <figref>Figure 11</figref> is a schematic view of an exemplary system for forming a library of reagent droplets and a library of sample droplets, with members of each library disposed in an array that can be accessed dynamically, in accordance with aspects of the present disclosure.</li>
+        <li>
+          <figref>Figure 12</figref> is a schematic view of a yet another exemplary device for creating and coalescing multiple emulsions, with the device in the process of (a) transforming a mixture of a sample emulsion and a primer emulsion into a multiple emulsion and (b) fusing sample and primer droplets within individual compound droplets of the multiple emulsion, in accordance with aspects of present disclosure.</li>
+      </ul>
+    </p>
+    <heading id="h-00006-en">
+      <b>
+        <u>Detailed Description</u>
+      </b>
+    </heading>
+    <p id="p-00013-en" num="0013">The present disclosure provides a system, including methods, apparatus, compositions, and kits, for mixing small volumes of fluid by coalescence of multiple emulsions. The multiple emulsions may be configured to be inducibly coalesced, such as by heating, to provide controlled mixing of small volumes of fluid.</p>
+    <p id="p-00014-en" num="0014">A multiple emulsion, also termed a compound emulsion and/or droplets within droplets, generally comprises compound droplets dispersed in an immiscible carrier fluid (e.g., oil or water) that forms a continuous phase. Each compound droplet may include at least one sample droplet (i.e., at least one sample-containing droplet) and at least one reagent droplet (i.e., at least one reagent-containing droplet). The at least one sample droplet and the at least one reagent droplet of a compound droplet may be inner droplets or may be at least one inner droplet disposed within an outer droplet (or vice versa). In any event, the sample and reagent droplets may be miscible with one another (e.g., both being aqueous), but may be separated from one another by at least one layer of immiscible fluid (e.g., an oil), which may have the same composition as, or a distinct composition from, the continuous phase. The layer of immiscible fluid may be provided by a barrier droplet. The barrier droplet may be an outer droplet that encapsulates both the sample droplet and the reagent droplet (if both the sample and reagents droplets are inner droplets) or an intermediate droplet that encapsulates the sample droplet or the reagent droplet, but not both (if the sample and reagent droplets are inner and outer droplets (or vice versa)). In any event, immiscible fluid may serve as a barrier that keeps the sample and reagent droplets of each compound droplet isolated from one another, such as until mixing is desired. In some embodiments, the multiple emulsion may be a water-in-oil-in-water-in-oil (W/OW/O) emulsion or a water-in-oil-in-water (W/O/W) emulsion, when described according to the fluid predominant in each phase.</p>
+    <p id="p-00015-en" num="0015">The sample and reagent droplets of a compound droplet, collectively, may provide an assay mixture for performing a test of interest on a partition of the sample. For example, the sample droplet may include a partition of a sample to be tested and the reagent droplet (or two or more types of reagent droplets within a compound droplet) may include at least one reagent for the test. Prior to coalescence, the sample and the reagent droplets may be isolated from one another by the barrier droplet. In some embodiments, the sample droplet and the reagent droplet, collectively, may provide a complete assay composition that includes a partition of a sample and all of the chemical components necessary to perform a particular test on the sample partition.</p>
+    <p id="p-00016-en" num="0016">The sample and reagent droplets of individual compound droplets may be fused (coalesced) to cause mixing of the contents of the sample and reagent droplets. Mixing may, for example, start a reaction, stop a reaction, and/or permit a reaction to occur, among others. Fusion may occur spontaneously and/or may be induced to initiate mixing at a desired time. If fusion is inducible, fusion may be induced controllably and/or selectively by any suitable treatment, such as changing (e.g., elevating) the temperature of the multiple emulsion. At a first temperature or in a first temperature range, such as a lower temperature or temperature range (e.g., from about 0 ° C to 40 ° C), the sample and reagent droplets may remain isolated from one another. Also, at a second temperature or in a second temperature range, such as an elevated (higher) temperature or range (e.g., above about 40 ° C), fusion of the sample and reagent droplets within compound droplets may be induced. Thus, fusion may be induced by heating (or cooling) the multiple emulsion.</p>
+    <p id="p-00017-en" num="0017">The multiple emulsions disclosed herein may have any other suitable features. Each size of droplet within a multiple emulsion (e.g., inner droplets, outer droplets, intermediate droplets, and/or barrier droplets, among others) may be sized uniformly, for example, with a standard deviation of the diameter that is less than about 20%, 10%, or 5% of the mean diameter for that size of droplet. Alternatively, or in addition, any of the compound droplets disclosed herein may be labeled with a predefined code. Code labeling may permit analysis of a mixture of distinct types of compound droplets and/or fused droplets, by using corresponding, distinguishable codes to identify the distinct types. The distinct types of compound droplets/fused droplets may contain distinct samples, distinct reagents, or both, with each distinct sample and/or reagent being identifiable through its associated, distinguishable code. Accordingly, the multiple emulsion may permit assay of a plurality of samples with the same reagent (i.e., performing the same test on different samples), assay of a sample with a plurality of different reagents (i.e., performing different tests on the same sample), or assay of a plurality of samples with a plurality of reagents (i.e., performing a plurality of tests on each of a plurality of samples).</p>
+    <p id="p-00018-en" num="0018">The multiple emulsion may include at least one surfactant, or two or more different surfactants, which may stabilize the multiple emulsion. The concentration of each surfactant may be selected to stabilize the multiple emulsion for preparation and storage, while enabling destabilization of particular types of droplets of the multiple emulsion when coalescence is induced, such as at an elevated temperature. In some examples, a hydrophilic surfactant may be present in at least one aqueous phase and a hydrophobic surfactant in at least one immiscible phase (e.g., an oil phase) of the multiple emulsion, in corresponding fluid streams used to form any these phases of the multiple emulsion, and/or in corresponding phases of a fused emulsion produced from the multiple emulsion.</p>
+    <p id="p-00019-en" num="0019">The present disclosure also provides methods for testing samples. A multiple emulsion may be obtained. The multiple emulsion may include a plurality of compound droplets containing one or more samples and disposed in an immiscible continuous phase. Each compound droplet may include an inner droplet and an outer droplet separated by a layer of immiscible fluid. The inner droplet and the outer droplet of individual compound droplets may be fused to form fused droplets that mix partitions of a sample with a reagent. The sample may be provided by the inner droplet and the reagent by the outer droplet, or vice versa. Fusion may occur, optionally, with induction, such as by elevating a temperature of the compound droplets. Signals may be detected from the fused droplets, with the signals representing a result of a test performed on the partitions of the sample with the reagent in the fused droplets.</p>
+    <p id="p-00020-en" num="0020">The systems disclosed herein may offer substantial advantages over other approaches to mixing small volumes of fluid. These advantages may include any combination of the following: (1) an ability to mix small volumes of reactants with a sample on-demand; (2) scalable methods and apparatus to accomplish mixing of a large number of reagents with a sample in small-volume reaction vessels (e.g., femtoliter, picoliter, or nanoliter), a large numbers of samples with a reagent in small-volume reaction vessels, and/or reagents with samples in small volumes using reproducible processes on low-cost instrumentation; (3) high-throughput fluid mixing that uses minimum amounts of reagents to reduce assay costs; (4) an ability to screen a sample for the presence of one or up to thousands or more targets on the same instrument; (5) an activation step that can initiate mixing of small volumes and that does not require complex timing of droplet streams using precision instrumentation; (6) an ability to perform more complex mixing steps at a centralized facility, to permit an end user's instrument to have less complexity, thereby making tests easier to perform; (7) a high-throughput assay platform that reduces the number of consumables per test; and/or (8) accommodation of many test reagents and samples with a simplified instrument architecture with minimized fluidic complexity (such as by reducing the number of fluidic connections, valves, etc.).</p>
+    <p id="p-00021-en" num="0021">Further aspects of the present disclosure are presented in the following sections: <ul id="ul-00002-en" list-style="none" compact="compact"><li>(I) definitions, (II) coalescence of a multiple emulsion, (III) system overview, (IV) formation and mixing of precursor emulsions, (V) formation and coalescence of a mixed emulsion, (VI) multiple emulsions providing fusion of inner droplets with one another, and (VII) selected embodiments.</li></ul></p>
+    <heading id="h-00007-en">
+      <b>I. <u>Definitions</u></b>
+    </heading>
+    <p id="p-00022-en" num="0022">Technical terms used in this disclosure have the meanings that are commonly recognized by those skilled in the art. However, the following terms may have additional meanings, as described below.</p>
+    <p id="p-00023-en" num="0023">
+      <u>Emulsion -</u> a composition comprising liquid droplets disposed in an immiscible liquid. The droplets are formed by at least one dispersed phase, and the immiscible liquid forms a continuous phase. The continuous phase can also or alternatively be termed a carrier and/or a carrier phase. The dispersed phase (or at least one of the dispersed phases of a multiple emulsion) is immiscible with the continuous phase, which means that the dispersed phase (i.e., the droplets) and the continuous phase (i.e., the immiscible liquid) do not mix to attain homogeneity. The droplets can have any uniform or nonuniform distribution in the continuous phase. The droplets are isolated from one another by the continuous phase and encapsulated (i.e., enclosed/surrounded) by the continuous phase. An emulsion may be monodisperse, that is, composed of droplets of uniform size, or may be polydisperse, that is, composed of droplets of various sizes. If monodisperse, the droplets of the emulsion may vary in size by a standard deviation of the volume (or diameter) that is less than about 50%, 20%, 10%, or 5% of the average droplet volume (or diameter).</p>
+    <p id="p-00024-en" num="0024">An emulsion may have any suitable composition. The emulsion may be characterized by the predominant liquid compound or type of liquid compound in each phase. The predominant liquid compounds in the emulsion may be water and oil. For example, the emulsion may be a water-in-oil (W/O) emulsion (i.e., a dispersed aqueous phase in a continuous oil phase), an oil-in-water (O/W) emulsion, an oil-in-water-in-oil (O/W/O) emulsion, a water-in-oil-in-water-in-oil (W/O/W/O) emulsion, or the like. Any other suitable components may be present in any of the emulsion phases, such as at least one surfactant, reagent, sample, other additive, label, or any combination thereof.</p>
+    <p id="p-00025-en" num="0025">"Oil" may be any liquid (or liquefiable) compound or mixture of liquid compounds that is immiscible with water. The oil may be synthetic or naturally occurring. The oil may or may not include carbon and/or silicon, and may or may not include hydrogen and/or fluorine. The oil may be lipophilic or lipophobic. In other words, the oil may be generally miscible or immiscible with organic solvents. Exemplary oils may include at least one silicone oil, mineral oil, fluorocarbon oil, vegetable oil, or a combination thereof, among others.</p>
+    <p id="p-00026-en" num="0026">
+      <u>Partition -</u> a separated portion of a bulk volume. The partition may be a sample partition (or a reagent partition) generated from a sample (or a reagent) included in the bulk volume. Partitions generated from a bulk volume may be substantially uniform in size or may have distinct sizes (e.g., sets of partitions of two or more discrete, uniform sizes). Partitions may be liquid partitions, which are partitions that have a liquid periphery and/or are at least predominantly, by volume, a liquid phase. Exemplary liquid partitions are droplets or slugs.</p>
+    <p id="p-00027-en" num="0027">
+      <u>Droplet -</u> a small volume of a first liquid that is encapsulated by an immiscible second liquid, such as a continuous phase of an emulsion (and/or by a larger droplet). The volume of a droplet, and/or the average volume of droplets in an emulsion, may, for example, be less than about one microliter (or between about one microliter and one nanoliter or between about one microliter and one picoliter), less than about one nanoliter (or between about one nanoliter and one picoliter), or less than about one picoliter (or between about one picoliter and one femtoliter), among others. A droplet (or droplets of an emulsion) may have a diameter (or an average diameter) of less than about 1000, 100, or 10 micrometers, or about 1000 to 10 micrometers, among others. A droplet may be spherical or nonspherical. A droplet may be a simple droplet or a compound droplet.</p>
+    <p id="p-00028-en" num="0028">
+      <u>Compound droplet -</u> a droplet in which at least one droplet encapsulates at least one other droplet. A compound droplet includes at least two immiscible liquids, with one of the liquids encapsulating the other liquid in the compound droplet to form at least one droplet within a droplet. A droplet that is encapsulated by another droplet may be described as an inner droplet, which may or may not be the innermost droplet of a compound droplet. A droplet encapsulating another droplet may be described as an outer droplet, which may or may not be the outermost droplet of a compound droplet. In contrast to a compound droplet, a simple droplet is not encapsulated by another droplet.</p>
+    <p id="p-00029-en" num="0029">
+      <u>Multiple emulsion -</u> an emulsion including compound droplets. A multiple emulsion can be characterized according to the level of encapsulation of its constituent compound droplets, with a higher-order emulsion having more levels of encapsulation than a lower-order emulsion. For example, a double emulsion contains compound droplets structured as a droplet within a droplet, a triple emulsion contains compound droplets structured as a droplet within a droplet within a droplet, and so on. In contrast, a single emulsion contains simple droplets in a continuous phase.</p>
+    <p id="p-00030-en" num="0030">
+      <u>Precursor emulsion</u> - an emulsion that provides pre-existing droplets for further encapsulation. A precursor emulsion may be a single emulsion, which may be processed by further encapsulation to form a multiple emulsion, or may be a lower-order multiple emulsion, which may be processed by further encapsulation to form a higher-order multiple emulsion.</p>
+    <p id="p-00031-en" num="0031">
+      <u>Surfactant -</u> a surface-active substance capable of reducing the surface tension of a liquid in which it is dissolved. A surfactant, which also or alternatively may be described as a detergent and/or a wetting agent, may incorporate both a hydrophilic portion and a hydrophobic portion, which may collectively confer a dual hydrophilic-hydrophobic character on the surfactant. A surfactant may, in some cases, be characterized according to its hydrophilicity relative to its hydrophobicity. A hydrophilic surfactant may have a greater affinity for water than oil, while a hydrophobic surfactant may have a greater affinity for oil than water. The emulsions disclosed herein and/or any phase thereof, may include at least one hydrophilic surfactant, at least one hydrophobic surfactant, or a combination thereof. Alternatively, or in addition, the emulsions disclosed herein and/or any phase thereof, may include at least one nonionic (and/or ionic) detergent. Furthermore, an emulsion disclosed herein and/or any phase thereof may include a surfactant comprising polyethyleneglycol, polypropyleneglycol, or Tween 20, among others.</p>
+    <p id="p-00032-en" num="0032">
+      <u>Test -</u> a procedure(s) and/or reaction(s) used to characterize something, and any signal(s), value(s), data, and/or result(s) obtained from the procedure(s) and/or reaction(s). A test also may be described as an assay. A test may be performed using at least one "test mixture" or "assay mixture," which is a composition from which one or more test signals are detected, before, during, and/or after processing of the composition to permit a reaction, if any, to occur. A test or assay may determine a presence (e.g., concentration) or activity, among others, of one or more analytes in a sample.</p>
+    <p id="p-00033-en" num="0033">
+      <u>Reaction -</u> a chemical reaction, a binding interaction, a phenotypic change, or a combination thereof. An exemplary reaction is enzyme-catalyzed conversion of a substrate to a product and/or binding of a substrate or product to a binding partner.</p>
+    <p id="p-00034-en" num="0034">
+      <u>Sample -</u> a compound, composition, and/or mixture of interest, from any suitable source(s). A sample is the general subject of interest for a test that analyzes an aspect of the sample, such as an aspect related to at least one analyte that may be present in the sample. Samples may be analyzed in their natural state, as collected, and/or in an altered state, for example, following storage, preservation, extraction, lysis, dilution, concentration, purification, filtration, mixing with one or more reagents, partitioning, further processing, or any combination thereof, among others. Clinical samples may include blood, saliva, urine, stool, sputum, mucous, milk, a fluid aspirate, and/or tissue, among others. Environmental samples may include water, soil, and/or air, among others. Research samples may include cultured cells, primary cells, viruses, small organisms, or the like. Additional samples may include foodstuffs, weapons components, suspected contaminants, and so on.</p>
+    <p id="p-00035-en" num="0035">
+      <u>Analyte</u> - a component(s) or potential component(s) of a sample that is analyzed in a test. An analyte is a specific subject of interest in a test for which the sample is the general subject of interest. An analyte may, for example, be a nucleic acid, a protein, an enzyme, a cell, a virus, an organelle, a macromolecular assembly, a drug candidate (and/or potential drug), a lipid, a carbohydrate, an inorganic substance, or any combination thereof, among others. An analyte may be tested for its presence, activity, and/or other characteristic in a sample. The presence of an analyte may relate to an absolute or relative number, concentration, binary assessment (e.g., present or absent), or the like, of the analyte in a sample or in one or more partitions thereof.</p>
+    <p id="p-00036-en" num="0036">
+      <u>Reagent -</u> a compound, set of compounds, and/or composition that is combined with a sample in order to perform a particular test on the sample. A reagent may be a target-specific reagent, which is any reagent composition that confers specificity for detection of a particular target or analyte in a test. A reagent optionally may include a chemical reactant and/or a binding partner for the test. A reagent may, for example, include at least one nucleic acid, protein (e.g., an enzyme), cell, virus, organelle, macromolecular assembly, a potential drug, a lipid, a carbohydrate, an inorganic substance, or any combination thereof, among others. In exemplary embodiments, the reagent may be an amplification reagent, such as at least one primer or a pair of primers for amplification of a target, and/or at least one probe to provide an amplification signal.</p>
+    <p id="p-00037-en" num="0037">
+      <u>Nucleic acid -</u> a compound comprising a chain of nucleotide monomers. A nucleic acid may be single-stranded or double-stranded (i.e., base-paired with another nucleic acid), among others. The chain of a nucleic acid may be composed of any suitable number of monomers, such as at least about ten or one hundred, among others. Generally, the length of a nucleic acid chain corresponds to its source, with synthetic nucleic acids (e.g., nucleic acid reagents such as primers and probes) typically being shorter and biologically produced nucleic acids (e.g., nucleic acid analytes) typically being longer.</p>
+    <p id="p-00038-en" num="0038">A nucleic acid can have a natural or artificial structure, or a combination thereof. Nucleic acids with a natural structure, namely, deoxyribonucleic acid (DNA) and ribonucleic acid (RNA), have a backbone of alternating pentose sugar groups and phosphate groups. Each pentose group is linked to a nucleobase (e.g., a purine (such as adenine (A) or guanine (T)) or a pyrimidine (such as cytosine (C), thymine (T), or uracil (U))). Nucleic acids with an artificial structure are analogs of natural nucleic acids and may, for example, be created by changes to the pentose and/or phosphate groups of the natural backbone. Exemplary artificial nucleic acids include glycol nucleic acids (GNA), peptide nucleic acids (PNA), locked nucleic acid (LNA), threose nucleic acids (TNA), and the like.</p>
+    <p id="p-00039-en" num="0039">The sequence of a nucleic acid is defined by the order in which nucleobases are arranged along the backbone. This sequence generally determines the ability of the nucleic acid to bind specifically to a partner chain (or to form an intramolecular duplex) by hydrogen bonding. In particular, adenine pairs with thymine (or uracil) and guanine pairs with cytosine. A nucleic acid that can bind to another nucleic acid in an antiparallel fashion by forming a consecutive string of adenine-thymine and guanine-cytosine base pairs with the other nucleic acid is termed "complementary."</p>
+    <p id="p-00040-en" num="0040">
+      <u>Replication -</u> a process forming a complementary copy of a nucleic acid or a segment thereof. The nucleic acid and/or segment replicated is a template (and/or a target) for replication.</p>
+    <p id="p-00041-en" num="0041">
+      <u>Amplification -</u> a process in which a copy number increases. Amplification may be a process in which replication occurs repeatedly over time to form multiple copies of a template. Amplification can produce an exponential or linear increase in the number of copies as amplification proceeds. Exemplary amplification strategies include polymerase chain reaction (PCR), loop-mediated isothermal amplification (LAMP), rolling circle replication (RCA), cascade-RCA, nucleic acid based amplification (NASBA), and the like. Also, amplification can utilize a linear or circular template. Amplification can be performed under any suitable temperature conditions, such as with thermal cycling or isothermally. Furthermore, amplification can be performed, or tested for its occurrence, in an amplification mixture, which is any composition capable of amplifying a nucleic acid target, if any, in the mixture. An amplification mixture can include any combination of at least one primer, at least one probe, at least one replication enzyme (e.g., at least one polymerase, such as at least one DNA and/or RNA polymerase), deoxynucleotide (and/or nucleotide) triphosphates (dNTPs and/or NTPs), or any combination thereof, among others.</p>
+    <p id="p-00042-en" num="0042">
+      <u>PCR -</u> amplification that relies on repeated cycles of heating and cooling (i.e., thermal cycling) to achieve successive rounds of replication. PCR can be performed by thermal cycling between two or more temperature setpoints, such as a higher denaturation temperature and a lower annealing/extension temperature, or among three or more temperature setpoints, such as a higher denaturation temperature, a lower annealing temperature, and an intermediate extension temperature, among others. PCR can be performed with a thermostable polymerase, such as Taq DNA polymerase. PCR generally produces an exponential increase in the amount of a product amplicon over successive cycles.</p>
+    <p id="p-00043-en" num="0043">
+      <u>RT-PCR (reverse transcription-PCR) -</u> PCR utilizing a complementary DNA template produced by reverse transcription of RNA. RT-PCR permits analysis of an RNA sample by (1) forming complementary DNA copies of RNA, such as with a reverse transcriptase enzyme, and (2) PCR amplification using the complementary DNA as a template.</p>
+    <p id="p-00044-en" num="0044">
+      <u>Real-time PCR -</u> a PCR-based analysis in which amplicon formation is measured during the reaction, such as after completion of each thermal cycle. Real-time PCR generally provides quantification of a target based on the kinetics of target amplification.</p>
+    <p id="p-00045-en" num="0045">
+      <u>Endpoint PCR -</u> a PCR-based analysis in which amplicon formation is measured after completion of thermal cycling. Endpoint PCR generally provides a qualitative (yes/no) determination of whether a nucleic acid target is present (at a detectable level) in an amplification mixture.</p>
+    <p id="p-00046-en" num="0046">
+      <u>Amplicon -</u> a product of an amplification reaction. An amplicon can be single-stranded or double-stranded, or a combination thereof. An amplicon corresponds to any suitable segment or the entire length of a nucleic acid target.</p>
+    <p id="p-00047-en" num="0047">
+      <u>Primer -</u> a nucleic acid capable of, and/or used for, priming replication of a nucleic acid template. Thus, a primer is a shorter nucleic acid that is complementary to a longer template. During replication, the primer is extended, based on the template sequence, to produce a longer nucleic acid that is a complementary copy of the template. A primer may be DNA, RNA, or an analog thereof (i.e., an artificial nucleic acid), and may have any suitable length, such as at least about 10, 15, or 20 nucleotides. Exemplary primers are synthesized chemically. Primers may be supplied as a pair of primers for amplification of a nucleic acid target. The pair of primers may be a sense primer and an antisense primer that collectively define the opposing ends (and thus the size) of a resulting amplicon.</p>
+    <p id="p-00048-en" num="0048">
+      <u>Probe -</u> a nucleic acid connected to a label. A probe may be a sequence-specific binding partner for a nucleic acid target and/or amplicon. An exemplary probe includes one or more nucleic acids connected to a pair of dyes that collectively exhibit fluorescence resonance energy transfer (FRET) when proximate one another. The pair of dyes may respectively provide first and second emitters or an emitter (a reporter) and a quencher. Fluorescence emission from the pair of dyes changes when the dyes are separated from one another, such as by cleavage of the probe (e.g., a Taqman probe) during primer extension, or when the probe (e.g., a molecular beacon probe) binds to an amplicon.</p>
+    <p id="p-00049-en" num="0049">
+      <u>Label -</u> an identifying and/or distinguishing marker or identifier connected to or incorporated into any entity, such as a molecule, molecular complex, compound, biological particle, or droplet. The label may be described as labeling the particular entity to produce a labeled entity. A label may, for example, be a dye that renders an entity optically detectable or at least more optically detectable. Exemplary dyes used for labeling are fluorescent dyes (fluorophores) and fluorescence quenchers.</p>
+    <p id="p-00050-en" num="0050">
+      <u>Code -</u> a mechanism for differentiating one type of droplet (e.g., containing a first sample and/or reagent) from one or more other types of droplet (e.g., containing a second sample and/or reagent) in a mixture of the droplet types. A code also or alternatively may be described as a barcode or an identifier. Exemplary codes to differentiate different types of droplets may include different droplet sizes, dyes, combinations of dyes, amounts of one or more dyes, enclosed code particles, or any combination thereof, among others.</p>
+    <p id="p-00051-en" num="0051">
+      <u>Binding partner -</u> a member of a pair of members that bind to one another. Each member may be an atom, molecule, molecular complex, compound, and/or biological particle (a cell, virus, organelle, or the like), among others. Binding partners may bind specifically to one another. Specific binding can be characterized by a dissociation constant of less than about 10<sup>-4</sup>, 10<sup>-6</sup>, 10<sup>-8</sup>, or 10<sup>-10</sup> M. Exemplary specific binding partners include biotin and avidin/streptavidin, a sense nucleic acid and a complementary antisense nucleic acid, a primer and its target, an antibody and a corresponding antigen, a receptor and its ligand, a nucleic acid and a protein that recognizes a sequence motif present in the nucleic acid, and the like.</p>
+    <p id="p-00052-en" num="0052">
+      <u>Channel -</u> an elongate passage for fluid travel. A channel generally includes at least one inlet, where fluid enters the channel, and at least one outlet, where fluid exits the channel. The functions of the inlet and the outlet may be interchangeable, that is, fluid may flow through a channel in only one direction or in opposing directions, generally at different times. A channel may include walls that define and enclose the passage between the inlet and the outlet. A channel may be formed by a tube (i.e., a hollow, at least generally cylindrical structure) and/or in or on a planar structure (e.g., a chip), among others. A channel may or may not branch. A channel may be linear or nonlinear. Exemplary nonlinear channels include a channel extending along a planar flow path or a nonplanar flow path (e.g., a helical flow path). A channel may be a microfluidic channel, which is a channel having a characteristic transverse dimension (e.g., the channel's average diameter) of less than about one millimeter.</p>
+    <heading id="h-00008-en">
+      <b>II. <u>Coalescence of a Multiple Emulsion</u></b>
+    </heading>
+    <p id="p-00053-en" num="0053">
+      <figref>Figure 1</figref> shows a process of coalescing an exemplary multiple emulsion 2710 to achieve mixing of small volumes of fluid, such as small volumes of fluid containing a sample 2712 and a reagent 2714.</p>
+    <p id="p-00054-en" num="0054">Multiple emulsion 2710 may include a plurality of compound droplets 2716 disposed in a continuous carrier phase 2718, namely, an immiscible fluid or liquid, such as an oil 2720. (Only one compound droplet 2716 of the multiple emulsion is shown here to simplify the presentation.) Each compound droplet 2716 may include at least one reagent droplet containing one or more reagents and at least one sample droplet containing a partition of a sample. For example, here, an inner droplet 2722 is a reagent droplet comprising reagent 2714 and an outer droplet 2724 is a sample droplet that encloses the inner droplet, and an immiscible, barrier droplet 2726. Immiscible droplet 2726 may be described as an intervening droplet that creates a layer of immiscible fluid 2728 (e.g., an oil 2730) that separates the inner and outer droplets and prevents them from mixing.</p>
+    <p id="p-00055-en" num="0055">Coalescence (also termed fusion) of multiple emulsion 2710 may occur and/or may be induced (such as by heat), indicated at 2732, to form a fused emulsion 2734 of fused droplets 2736. In each fused droplet 2736, the inner and outer droplets have merged within compound droplet 2716 to mix the contents of the inner and outer droplets, such as sample 2712 and reagent 2714, which may create an assay mixture 2738. Also, immiscible droplet 2726 may be enclosed by fused droplet 2736.</p>
+    <p id="p-00056-en" num="0056">Other compound droplets 2716 in the multiple emulsion may split to provide fission, indicated at 2740, instead of fusion. In particular, immiscible droplet 2726 of a compound droplet may fuse with continuous phase 2718, to eject inner droplet 2722 from the compound droplet. As a result, droplets 2722, 2724 may be encapsulated separately by the continuous phase, such that neither droplet 2722 nor 2724 encapsulates the other (i.e., each is outside the other), and such that the sample and reagent of the droplets do not mix. The relative amounts of fusion 2732 or fission 2740 may be adjusted by changing relative droplet sizes, the conditions used to induce coalescence, and/or the composition of dispersed and/or continuous phases, among others.</p>
+    <p id="p-00057-en" num="0057">Each droplet and/or phase may have any suitable fluid composition. Inner droplet 2722 and outer droplet 2724 generally have compositions that are miscible with one another, such as aqueous compositions with water as the at least predominant solvent. In contrast, continuous phase 2718 and immiscible fluid 2728 generally are immiscible with both inner and outer droplets 2722, 2724. Continuous phase 2718 and immiscible fluid 2728 may be miscible with one another and may have the same or distinct compositions. For example, continuous phase 2718 and immiscible fluid 2728 both may be composed predominantly or exclusively of the same liquid chemical compound or mixture of liquid chemical compounds, such as the same oil or mixture of oils. In exemplary embodiments, the continuous phase and/or immiscible fluid is at least predominantly a silicone oil, such as decamethylcyclopentasiloxane.</p>
+    <p id="p-00058-en" num="0058">The emulsion may contain at least one hydrophobic surfactant and/or at least one hydrophilic surfactant. For example, continuous phase 2718 and/or immiscible fluid 2728 may contain at least hydrophobic surfactant, inner droplet 2722 and/or outer droplet 2724 may contain at least one hydrophilic surfactant, or any combination thereof. In some embodiments, the continuous phase and/or the immiscible fluid may include about 0.1-10%, about 1-5%, or about 1% w/w hydrophobic surfactant (e.g., provided by DC 5225C Formulation Aid 2.0 from Dow Corning) in the continuous phase and/or the immiscible fluid. In some embodiments, aqueous phases that are used to form the inner droplets and/or outer droplets may contain about 0.001 to 5% or about 1% w/w hydrophilic surfactant, such as Tween 20 (polyethylene glycol sorbitanmonolaurate, polyoxyethylene sorbitanmonolaurate; HLB 16).</p>
+    <p id="p-00059-en" num="0059">The stability of simple and multiple emulsions against coalescence is a function of the combined properties of type and concentration of surfactant, solvent, temperature, ionic strength, other species that can compete with the surfactants at the water/oil interface, charge, etc. Thus, each of these properties, or combinations thereof, can be selected and/or varied to promote or inhibit coalescence.</p>
+    <p id="p-00060-en" num="0060">Compound droplets 2716 containing sample 2712 and reagent 2714 may be labeled with a code 2746. The code may permit the compound droplets, and fused droplets 2736 formed from the compound droplets, to be mixed with, and distinguished from, other types of compound droplets containing other samples/reagents. The code may be present in inner droplet 2722, outer droplet 2724, barrier droplet 2726, or a combination thereof. The code may be located diffusely in the droplet or may be carried by a particle 2748 (or individually or collectively by two or more particles) that occupies only a portion of the droplet. The code may be optically detectable and may have a predefined optical characteristic, such as an intrinsic optical characteristic, that permits the code to be identified. An exemplary code may be carried by a particle that is fluorescent (e.g., a fluorescent bead, a quantum dot), reflective (e.g., a microfabricated nanobarcode), or the like.</p>
+    <heading id="h-00009-en">III. <b><u>System Overview</u></b></heading>
+    <p id="p-00061-en" num="0061">
+      <figref>Figure 2</figref> shows an exemplary system 2760 for forming and coalescing multiple emulsions 2710 and for analyzing assay mixtures 2738 produced by coalescence of the multiple emulsions. The system may include a preparation assembly 2762, a fusion assembly 2764, a processing assembly 2766, and a detection assembly 2768. Fluid generally flows through the system from the preparation assembly to the detection assembly along a flow path provided by at least one channel 2769.</p>
+    <p id="p-00062-en" num="0062">Preparation assembly 2762 may form multiple emulsions from at least one sample 2712 and one or more reagents 2714. The preparation assembly may include at least one sample reservoir 2770 for receiving and holding at least one sample 2712, and one or more reagent reservoirs 2772 for receiving and holding one or more reagents 2714. The preparation assembly also may include one or more other reservoirs 2774 for receiving and holding continuous fluid 2718 and/or immiscible fluid 2728 (see <figref>Fig. 1</figref>).</p>
+    <p id="p-00063-en" num="0063">The reagents may be controllably associated with the sample(s) through formation of multiple emulsions using at least one droplet generator 2776 of assembly 2762. Droplet generator 2776 may produce a multiple emulsion 2710 from sample 2712, one or more reagents 2714, continuous phase 2718, and immiscible fluid 2728. Each may be driven to the droplet generator by a pump, to produce multiple emulsion 2710. The droplet generator may produce the multiple emulsion from a precursor emulsion formed by the system or formed separately, off-line from the system.</p>
+    <p id="p-00064-en" num="0064">Fusion assembly 2764 may induce coalescence of the multiple emulsion to a fused emulsion 2734 carrying encapsulated assay mixtures 2738. The fusion assembly may include a heater 2780 or other device (e.g., a sonic device, a device that generates an electric field, or the like) that controllably induces coalescence of the multiple emulsion. The fusion assembly may be part of processing assembly 2766 or may be distinct from the processing assembly, such as a device located generally upstream from the processing assembly along channel 2769.</p>
+    <p id="p-00065-en" num="0065">Processing assembly 2766 may subject fused emulsion 2734 to one or more conditions that promote (and/or restrict) reaction of components within assay mixtures 2738. For example, the processing assembly may regulate the temperature of the fused emulsion as the fused emulsion travels through channel 2769 to detection assembly 2768. The processing assembly thus may subject the fused emulsion to an elevated temperature using at least one heating zone 2782, which may stimulate reaction in the fused emulsion. Furthermore, the processing assembly may subject the fused emulsion to repetitive cycles of heating and cooling (i.e., thermal cycling) using alternating travel of the fused emulsion through heating zone(s) 2782 and cooling zone(s) 2784 of the processing assembly. Accordingly, in some embodiments, system 2760 may be used to perform nucleic acid amplification through which the fused emulsion is tested for amplification of a nucleic acid target in individual fused droplets.</p>
+    <p id="p-00066-en" num="0066">Detection assembly 2768 may detect signals from fused droplets during and/or after travel of the fused droplets through processing assembly 2766. The detection assembly may detect one or more signals from individual fused droplets and/or may detect signals collectively from two or more droplets. Accordingly, the fused droplets may be detected individually as each droplet flows past the detection assembly. The detection assembly may detect any suitable optical, electrical, and/or chemical characteristic of a fused droplet. For example, the detection assembly may detect at least one optical characteristic, such as fluorescence intensity, fluorescence resonance energy transfer, fluorescence quenching, fluorescence polarization, fluorescence lifetime, scattering, absorbance, reflectance, or a combination thereof, among others. In some embodiments, the detection assembly may include a light source 2786 that emits light for excitation of fused droplets, and a detector 2788 that measures emitted light from fused droplets.</p>
+    <p id="p-00067-en" num="0067">Formation of multiple emulsions and/or operation of any other aspects of system 2760 may be under the control of a controller 2790. For example, the controller may control reagent and sample selection, flow rates (i.e., pump speeds), selection and/or operation of a droplet generator (e.g., droplet size, generation rate, etc.), temperature and/or size of heating and/or cooling zones (e.g., heating/cooling profiles), operation of the detection assembly, data collection, data processing, operation of a user interface, or any combination thereof, among others.</p>
+    <p id="p-00068-en" num="0068">
+      <figref>Figure 3</figref> shows an exemplary method 2800 of analyzing one or more samples using a multiple emulsion. The method may include any combination of the steps shown, performed in any suitable order, with each step being performed one or more times. The method may be utilized to perform the same test on a given sample/reagent combination in a plurality of fused droplets. Alternatively, the method may be utilized, particularly with aid of distinguishing codes, to perform the same test on a plurality of samples, a plurality of different tests on the same sample, or a plurality of different tests on a plurality of different samples.</p>
+    <p id="p-00069-en" num="0069">A multiple emulsion may be obtained, indicated at 2802. The multiple emulsion may be formed, at least partially, by a sample analysis system, such as system 2760 described above, or may be formed at least partially or completely off-line from the sample analysis system. Obtaining a multiple emulsion may include any combination of forming a precursor emulsion (or two more precursor emulsions), indicated at 2804, mixing precursor emulsions, indicated at 2806, and forming a multiple emulsion from the mixed (or unmixed) precursor emulsion(s), indicated at 2808.</p>
+    <p id="p-00070-en" num="0070">One or more precursor emulsions may be formed. Each precursor emulsion may be a double (or greater) emulsion containing a plurality of inner droplets each encapsulated by a respective barrier droplet. The inner droplets may contain a sample and/or a reagent and, optionally, may include an identifying code that can be detected and correlated with the sample/reagent for identification. The precursor emulsions may be formed by a sample analysis system or may be formed off-line from the system, such as on a larger scale at a centralized facility for distribution to users. In the latter case, the precursor emulsions may include commonly used reagents, such as PCR reagents, that a user could combine with user-generated sample emulsions.</p>
+    <p id="p-00071-en" num="0071">Two or more precursor emulsions may be mixed to create a mixture of precursor emulsions. The mixture may include inner droplets of distinct types containing respective distinct samples and/or distinct reagents. The inner droplets of distinct types may (or may not) be distinguishable via a corresponding, predefined code included in each distinct type of inner droplet. In some embodiments, only one precursor emulsion may be utilized to form each multiple emulsion.</p>
+    <p id="p-00072-en" num="0072">A multiple emulsion may be formed from the mixed (or unmixed) precursor emulsion(s). The multiple emulsion may be a triple (or greater) emulsion containing a plurality of compound droplets, with each compound droplet containing an inner droplet encapsulated by a barrier droplet, which, in turn, is encapsulated by an outer droplet. The inner droplets, if formed from a mixed precursor emulsion, may be of at least two types that respectively include partitions of at least two distinct samples, of at least two distinct reagents, or both. Optionally, the multiple emulsion further may be mixed with one or more other multiple emulsions, particularly when distinguishing codes are incorporated into compound droplets of the multiple emulsions.</p>
+    <p id="p-00073-en" num="0073">The multiple emulsion may be fused, indicated at 2810, to form a fused emulsion. Fusion of the multiple emulsion may occur spontaneously, such that no treatment, other than a sufficient time delay (or no delay), is necessary before processing fused droplets. Alternatively, the multiple emulsion may be treated to controllably induce fusion of droplets to form assay mixtures. The treatment may include heating/cooling to change temperature, applying pressure, altering composition (e.g., via a chemical additive), applying acoustic energy (e.g., via sonication), exposure to light (e.g., to stimulate a photochemical reaction), applying an electric field, or any combination thereof. The treatment may be continuous or may vary temporally (e.g., pulsatile, shock, and/or repetitive treatment). The treatment may provide a gradual or rapid change in an emulsion parameter, to effect steady state or transient initiation of droplet fusion. In any event, the stability of the multiple emulsion, and its responsiveness to a treatment to induce droplet fusion, may be determined during its formation by selection of an appropriate surfactant type, surfactant concentration, critical micelle concentration, ionic strength, etc., for one or more phases of the multiple emulsion.</p>
+    <p id="p-00074-en" num="0074">The fused emulsion may be processed, indicated at 2812. Processing may include subjecting the fused emulsion to any condition or set of conditions under which at least one reaction of interest can occur (and/or is stopped), and for any suitable time period. Accordingly, processing may include maintaining the temperature of the fused emulsion near a predefined set point, varying the temperature of the fused emulsion between two or more predefined set points (such as thermally cycling the fused emulsion), exposing the fused emulsion to light, changing a pressure exerted on the fused emulsion, adding at least one chemical substance to the fused emulsion, applying an electric field to the fused emulsion, or any combination thereof, among others.</p>
+    <p id="p-00075-en" num="0075">Signals may be detected from the fused emulsion after and/or during processing, indicated at 2814. The signals may be detected optically, electrically, chemically, or a combination thereof, among others. The detected signals may include test signals that correspond to at least one reaction of interest performed in the fused emulsion. Alternatively, or in addition, the detected signals may include code signals that correspond to codes present in the fused emulsion. Test signals and code signals generally are distinguishable and may be detected using the same or distinct detectors. For example, the test signals and code signals each may be detected as fluorescence signals, which may be distinguishable based on excitation wavelength (or spectrum), emission wavelength (or spectrum), and/or distinct positions in a fused droplet (e.g., code signals may be detectable as more localized than test signals with respect to fused droplets), among others. As another example, the test signals and code signals may be detected as distinct optical characteristics, such as test signals detected as fluorescence and code signals detected as optical reflectance. As a further example, the test signals may be detected optically and the code signals electrically, or vice versa.</p>
+    <p id="p-00076-en" num="0076">Data corresponding to the detected signals may be processed. Data processing may assign an assay result to each assay mixture (fused droplet) analyzed, which may be an analog or digital value. In some embodiments, the digital value may be binary, corresponding to a positive or negative test for an analyte in the assay mixture. Also, or in addition, data processing may identify a sample/reagent present in each assay mixture (fused droplet) by correlating code signals with a predefined code and/or with a sample/reagent associated during emulsion formation with the predefined code. Also, one or more test signals may be correlated with the identified sample/reagent to assign a test result to the identified sample/reagent.</p>
+    <heading id="h-00010-en">
+      <b>IV. <u>Formation and Mixing of Precursor Emulsions</u></b>
+    </heading>
+    <p id="p-00077-en" num="0077">
+      <figref>Figure 4</figref> shows an exemplary device 2820 for forming a precursor emulsion 2822. Device 2820 may be equipped with a plurality of droplet generators arranged in series, such as a first droplet generator 2824 and a second droplet generator 2826.</p>
+    <p id="p-00078-en" num="0078">The droplet generators may create inner and outer droplets of precursor emulsion 2822 serially. The first droplet generator 2824 may form a single emulsion 2828 of reagent droplets 2830 (i.e., future inner droplets 2722 of a compound emulsion (see <figref>Fig. 1</figref>)), with each reagent droplet containing a reagent 2832 and, optionally, a code 2834. In other embodiments, the first droplet generator 2824 may form a single emulsion of sample droplets. Second droplet generator 2826, in turn, may form precursor emulsion 2822 (a double emulsion) from single emulsion 2828. In particular, the second droplet generator may create compound droplets 2836 in which reagent droplets 2830 and code 2834 are encapsulated by larger droplets 2838 (i.e., future barrier droplets 2726 of a multiple emulsion (see <figref>Fig. 1</figref>)). In exemplary embodiments, singe emulsion 2828 may be described as a water-in-oil (W/O) emulsion and precursor emulsion 2822 may be described as a water-in-oil-in-water (W/O/W) emulsion according to the predominant fluid in each phase.</p>
+    <p id="p-00079-en" num="0079">Each droplet generator may be supplied with fluid streams driven by pumps 2840-2844. For example, here, three pumps supply fluid to first and second droplet generators 2824, 2826. However, any suitable number of pumps may be utilized to drive fluid. Exemplary pumps that may be suitable are positive displacement pumps (e.g., syringe pumps), which can be used to drive fluids at desired flow rates (e.g., 1 nL-100 µL/min) through the fluidic flow paths. The ratio of the flow rates to each droplet generator may be adjustable to create droplets of the desired size (diameter) and frequency.</p>
+    <p id="p-00080-en" num="0080">First droplet generator 2824 may receive a feed stream 2846 and at least one encapsulating stream 2848. The streams may be received at a junction 2850 (e.g., a four-way or cross junction). The junction of a droplet generator formed at a fluidic intersection may be a flow-focusing junction that produces droplets. Junction 2850 may be formed at an intersection of a feed channel 2852 and cross channels 2854, 2856. The feed channel may carry feed stream 2846 to junction 2850, driven by first pump 2840. One or more cross channels may carry one or more encapsulating streams 2848 of oil to junction 2850 driven by second pump 2842. Feed stream 2846 may be an aqueous stream containing reagent 2832 and code 2834. For example, reagent 2832 may include at least one primer (or a pair of primers) for amplifying a nucleic acid target. The feed stream and/or encapsulating streams described here and elsewhere in the present disclosure may include a surfactant, such as high and low HLB surfactants, respectively, or vice versa. Single emulsion 2828 may flow from junction 2850 as an outflow stream carried in an outflow channel 2860.</p>
+    <p id="p-00081-en" num="0081">Outflow channel 2860 may function as a feed channel for second droplet generator 2826. Thus, the outflow stream may serve as a feed stream for second droplet generator 2826. The feed stream may be encapsulated at a junction 2864 (e.g., another four-way junction) formed at the intersection of outflow channel 2860 and cross channels 2866, 2868, which carry encapsulating streams. The encapsulating streams may be an aqueous phase (labeled here as "water"), which may include salt(s), buffer(s), and/or surfactant(s) (e.g., a hydrophilic surfactant), among others. Accordingly, reagent droplets 2830 may be encapsulated at the second droplet generator by a barrier droplet of immiscible liquid, such as oil, which in turn may be disposed in an aqueous continuous phase. Precursor emulsion 2822 may flow from junction 2864 in an outflow channel 2874 and may be stored in a reservoir 2876.</p>
+    <p id="p-00082-en" num="0082">Precursor emulsion 2822 may be stored individually or as a mixture (see below). In either case, the concentration of compound droplets may be concentrated over time by gravity using a density difference between the droplets and the continuous phase. Concentrating the droplets may be beneficial for minimizing the dilution of aqueous sample in downstream processing steps.</p>
+    <p id="p-00083-en" num="0083">As each W/O/W emulsion created by the device of <figref>Figure 4</figref> can be labeled with a unique code, individual W/O/W emulsions can be mixed to create a panel or library of the desired combination of reagents against which a sample can be screened (or vice versa).</p>
+    <p id="p-00084-en" num="0084">Device 2820 may comprise channels (e.g., any combination of channels 2852-2856, 2860, 2866, 2868, 2874) with internal diameters ranging from about 1-500 microns or about 20-250 microns, among others. The internal diameters of the channels may correspond to the diameter of droplets to be generated. For example, first outflow channel 2860 may have an internal diameter corresponding to the desired diameter of reagent droplets 2830, and second outflow channel 2874 may have an internal diameter corresponding to the desired diameter of larger droplets 2838. Thus, the internal diameter of the first outflow channel may be smaller than that of the second outflow channel. In exemplary embodiments, intended for illustration only, the diameters of feed channel 2852 and first outflow channel 2860 may be about the same, such as about fifty micrometers. In contrast, the diameter of second outflow channel 2874 may be about 100 micrometers.</p>
+    <p id="p-00085-en" num="0085">The hydrophobic/hydrophilic character of interior surfaces of device 2820 may be important to the function of the device. Generally, interior surfaces in contact with a hydrophilic fluid, such as water, are hydrophilic, and interior surfaces in contact with a hydrophobic fluid, such as oil, are hydrophobic. For example, in <figref>Figure 4</figref>, interior surfaces of channels that carry an aqueous stream are hydrophilic (e.g., the interior surfaces of channels 2852, 2866, 2868, and 2874) and are shown as a solid line. In contrast, interior channel surfaces that carry a hydrophobic stream (e.g., oil) are hydrophobic (e.g., the interior surfaces of channels 2854, 2856, and 2860) and are indicated with a dashed line at the interior surface. With this selection of hydrophilic and hydrophobic interior surfaces, a feed stream entering a junction of a droplet generator cannot wet the surfaces of the cross channels or the outflow channel of the junction. Also, the exterior surfaces of droplets cannot wet the surfaces of channels through which the droplets flow, thereby preventing destabilization of the emulsion.</p>
+    <p id="p-00086-en" num="0086">Flow paths of device 2820 may be formed by any suitable process. For example, the channels may be capillaries formed by capillary tubing. Capillaries can be connected using microfluidic cross and/or T connectors (e.g., Labsmith, Livermore, CA). Alternatively, any of the flow paths can be constructed using microfabrication processes such as photolithography, hot embossing, injection molding, or a combination thereof, among others.</p>
+    <p id="p-00087-en" num="0087">In exemplary embodiments, flow paths of device 2820 can be constructed from fused silica capillary tubes that are hydrophilic (e.g., having an Si-OH surface functionality). Surfaces of the capillary tubes can be rendered hydrophobic by applying a coating (e.g., a covalent coating using an organosilane such as those commercially available for glass treatment (e.g., Aquapel (PPG Industries))). A single capillary tube can be modified to have regions of the desired hydrophilicity/hydrophobicity. For example, an end of the capillary tube can be rendered hydrophobic by dip coating the tube in Aquapel for one minute while simultaneously passing air through the tube. This creates one hydrophobic end, and a hydrophilic flow channel and end. A capillary tube can be rendered completely hydrophobic by, for example, passing Aquapel through the capillary tube for one minute, followed by air and allowing the capillary tube to dry. Once dry, an end of the capillary tube can be cleaved to expose a hydrophilic end.</p>
+    <p id="p-00088-en" num="0088">
+      <figref>Figure 5</figref> is a schematic view of an exemplary composition 2890 formed by mixing a plurality of precursor emulsions 2822, 2892, 2894 of different types. Each precursor emulsion may be a water-in-oil-in-water (W/O/W) emulsion. Each precursor emulsion may contain a distinct sample and/or a distinct reagent and may be labeled with a corresponding, distinct, predefined code. For example, each precursor emulsion may include a different primer pair and probe for a corresponding different nucleic acid target to be amplified. Here, three emulsions, each including a distinct reagent (2832, 2896, and 2898) and a corresponding distinct code (2834, 2900, and 2902, respectively), are mixed as an illustration, but in other embodiments, any suitable number of precursor emulsions and thus any suitable number of different droplet types, different reagents, different samples, and/or different codes may be combined. Each precursor emulsion may be formed using any suitable device, such as device 2820 of <figref>Figure 4</figref>, by changing the input of reagent (2832, 2896, or 2898) (and/or sample) and code (2834, 2900, or 2902) in the feed stream flowing to the first droplet generator.</p>
+    <heading id="h-00011-en">V. <b><u>Formation and Coalescence of a Mixed Emulsion</u></b></heading>
+    <p id="p-00089-en" num="0089">
+      <figref>Figure 6</figref> shows a schematic view of an exemplary device 2910 for forming and fusing a multiple emulsion. The device may be equipped with a sample input region 2912, a droplet generator 2914, and a fusion region 2916, among others. Device 2910 may be connected to another device that generates precursor emulsions (e.g., device 2820 of <figref>Fig. 4</figref>) or may have no physical connection to such a device. Also, device 2910 may be part of a sample analysis system (e.g., providing at least a portion of preparation assembly 2762 and/or fusion assembly 2764 of system 2760 of <figref>Fig. 2</figref>) or may have no physical connection to a sample analysis system.</p>
+    <p id="p-00090-en" num="0090">Sample input region 2912 may mix a sample 2918 (and/or a reagent) with a precursor emulsion. The precursor emulsion may be one precursor emulsion (e.g., precursor emulsion 2822) or a mixture of precursor emulsions (e.g., composition 2890). Here, composition 2890 generated in <figref>Figure 5</figref> is used to illustrate operation of device 2910. Composition 2890 and an aqueous sample 2918 may be mixed at a fluidic junction 2920 supplied by fluid streams of precursor emulsion and sample driven by respective pumps 2922, 2924. Mixing is shown here as being performed by device 2910, but, alternatively, precursor emulsion(s) and sample may be mixed off-line from the device. Mixing on-line may be beneficial to achieve uniform spacing of input droplets of the precursor emulsion in the fluidic flow channel. The continuous phase of the precursor emulsion and the sample both may be aqueous, to enable mixing.</p>
+    <p id="p-00091-en" num="0091">Droplet generator 2914 may have any of the features disclosed above for the droplet generators of <figref>Figure 4</figref>. For example, droplet generator 2914 may be structured generally like first droplet generator 2824. In particular, droplet generator 2914 may include a hydrophilic feed channel 2926 (shown with a solid interior surface) carrying an aqueous continuous phase. Droplet generator 2914 also may include hydrophobic cross channels 2928, 2930 carrying an immiscible liquid, such as oil, and further may include a hydrophobic outflow channel 2932 (with each hydrophobic surface shown with a dashed line). Outflow channel 2932 may have an inner diameter that is greater than feed channel 2926 and/or greater than the diameter of precursor emulsion droplets. In particular, outflow channel 2932 may have an inner diameter that corresponds to the desired size of compound droplets to be formed. In exemplary embodiments, intended for illustration only, the diameter of feed channel 2926 may be about 100 micrometers. In contrast, the diameter of outflow channel 2932 may be about 150 micrometers. Also, the aqueous continuous phase and/or the immiscible liquid may include a surfactant as described elsewhere in the present disclosure.</p>
+    <p id="p-00092-en" num="0092">A pump 2934, in conjunction with pumps 2922, 2924, may create a confluence of the feed stream and the oil streams at a fluid junction of the droplet generator. As a result, sample and double droplets (a W/O/W multiple emulsion) flowing in the feed stream may be co-encapsulated by oil to form a W/O/W/O multiple emulsion 2936 in outflow channel 2932. Here, multiple emulsion 2936 is shown as a mixture of different types of coded compound droplets 2938 containing the same sample and different reagents and codes (also see <figref>Fig. 5</figref>).</p>
+    <p id="p-00093-en" num="0093">The frequency of lower-order droplets (e.g., single or double droplets) arriving at a droplet generator (e.g., droplet generator 2914 in <figref>Fig. 6</figref> or droplet generator 2824 of <figref>Fig. 4</figref>) may be adjusted to correspond to the frequency of higher-order droplets (e.g., double or triple droplets, respectively) leaving the droplet generator. In other words, the frequency of entry and exit may be about the same to achieve uniform higher-order droplets. These frequencies can be controlled by adjusting flow rate ratios of feed and encapsulating streams and the concentration (i.e., the spacing) of lower-order droplets in the feed stream, to ensure that the timing of lower-order droplet arrival at the droplet generator coincides with the frequency of droplet formation.</p>
+    <p id="p-00094-en" num="0094">Fusion region 2916 may include a heater 2940 that applies heat at a desired time to multiple emulsion 2936. The applied heat may induce fusion within compound droplets of the multiple emulsion to form fused droplets 2942 (also see <figref>Fig. 1</figref>). The fused droplets may result from mixing of an inner droplet with an outer droplet of individual compound droplets. For example, a W/O/W/O emulsion may be converted to an O/W/O emulsion, in which previously isolated sample and reagent are merged as a coded mixture of sample and reagent. The fused droplets then may be processed further, such as by thermal cycling to promote amplification (e.g., PCR) and signal detection from the processed droplets.</p>
+    <p id="p-00095-en" num="0095">
+      <figref>Figure 7</figref> shows another exemplary device 2960 for creating and coalescing multiple emulsions. Device 2960 may be constructed generally like device 2910 of <figref>Figure 6</figref>, with equivalent elements, such as droplet generator 2914 and fusion region 2916, labeled as in <figref>Figure 6</figref>. Pumps are omitted from <figref>Figure 7</figref> to simplify the presentation. Device 2960 may be connected to another device that generates precursor emulsions (e.g., device 2820 of <figref>Fig. 4</figref>) or may have no physical connection to such a device. Also, device 2960 may be part of a sample analysis system (e.g., providing at least a portion of preparation assembly 2762 and/or fusion assembly 2764 of system 2760 of <figref>Fig. 2</figref>) or may have no physical connection to a sample analysis system. In any event, fused droplets generated by device 2960 may be used in amplification assays.</p>
+    <p id="p-00096-en" num="0096">Device 2960 may be utilized to create and coalesce distinct multiple emulsions in a spatially and temporally separated manner. In other words, distinct multiple emulsions may be created serially such that different multiple emulsions (and fused emulsions formed therefrom) are distinguishable and identifiable based on their different times of formation and different positions along the flow path of the device (and/or along a flow path of a system in which the device is integrated). Thus, distinct emulsions may exit device 2960 separately and/or may arrive separately at a downstream detector (e.g., detection assembly 2768 of <figref>Fig. 2</figref>).</p>
+    <p id="p-00097-en" num="0097">Device 2960, like device 2910 of <figref>Figure 6</figref>, is shown further encapsulating precursor emulsions at droplet generator 2914. However, in <figref>Figure 7</figref>, precursor emulsions 2822, 2892, and 2894 are not mixed before entry into device 2960. Instead, droplets of each precursor emulsion flow to droplet generator 2914 as a group that is spaced along the flow path from other groups of precursor droplets. In other words, there may be a physical and temporal gap between each group of precursor droplets that flows past sample input region 2912. Accordingly, droplets of precursor emulsions 2822, 2892, and 2894, and higher-order multiple emulsions produced therefrom, can be tracked and identified without the use of codes (e.g., codes 2834, 2900, and 2902 shown in Figs. 4-6).</p>
+    <p id="p-00098-en" num="0098">Various combinations of reagent and sample may be associated with one another in multiple emulsions based on when each is introduced into the flow path. Precursor emulsions 2822, 2892, and 2894 may be introduced individually and selectably into the flow path using a selector 2962. Similarly, a sample (e.g., any of samples 2964, 2966, 2968) may be associated individually and selectably with each precursor emulsion by input of the sample coincident with each precursor emulsion, via sample input region 2912. The sample may be selected from a set of samples using another selector 2970. Accordingly, each type of multiple emulsion (and fused emulsion formed therefrom) can be identified temporally and/or spatially according to its position along the flow path. Each selector 2962, 2970 may, for example, be a multi-port valve or an autosampler, among others.</p>
+    <p id="p-00099-en" num="0099">
+      <figref>Figure 7</figref> shows a library of pre-encapsulated reagents (2832, 2896, 2898; e.g., a primer library) being further encapsulated individually by a continuous phase that includes a sample, which may be selectable from a library of samples. However, the relative positions of the reagents and samples may be switched. In other words, the samples may be pre-encapsulated to form a library of samples, which may be further encapsulated individually by a continuous phase that includes a reagent, which may be selectable from a library of reagents (e.g., a primer library).</p>
+    <heading id="h-00012-en">
+      <b>VI. <u>Multiple Emulsions Providing Fusion of Inner Droplets with One Another</u></b>
+    </heading>
+    <p id="p-00100-en" num="0100">
+      <figref>Figure 8</figref> shows a diagram illustrating exemplary coalescence of another multiple emulsion 2990 to achieve mixing of small volumes of a sample 2992 and a reagent 2994 within compound droplets of the emulsion. Here, two or more inner droplets 2996 fuse within a compound droplet, rather than inner and outer droplets fusing within a compound droplet (see <figref>Fig. 1</figref>). In particular, at least one sample droplet 2998 comprising at least one partition of sample 2992 and at least one reagent droplet 3000 comprising at least one reagent 2994 are fused, indicated at 3002, (e.g., fusion induced by application of heat) to form at least one fused droplet 3004 that provides a mixture of sample and reagent for performing an assay, such as a nucleic acid assay (e.g., nucleic acid amplification in fused droplets).</p>
+    <p id="p-00101-en" num="0101">Multiple emulsion 2990 may include a plurality of compound droplets disposed in a continuous carrier phase 3006, namely, an immiscible fluid or liquid, (e.g., water in this example). (Only one compound droplet 3008 of the multiple emulsion is shown here to simplify the presentation.) Each compound droplet 3008 may include an outer droplet or barrier droplet 3010 that is immiscible with carrier phase 3006. For example, here, barrier droplet comprises oil to create a layer of immiscible fluid that separates inner droplets 2996 and, optionally, restricts their ability to fuse with each other until fusion is induced. Thus, barrier droplet 3010 may encapsulate each of the inner droplets of a compound droplet. In some embodiments, emulsion 2990 may be a water-in-oil-in-water (W/O/W) emulsion.</p>
+    <p id="p-00102-en" num="0102">Compound droplet 3008 may comprise any suitable number of inner droplets. In some embodiments, the compound droplet may comprise an average of about one, two, or more inner droplets, or an average of at least about one, two, five, ten, twenty, one-hundred, or more of each type of inner droplet. The use of a larger number of inner droplets in a compound droplet may reduce statistical variation in the total volume of sample and reagent in each compound droplet and/or may reduce statistical variation in the ratio of sample droplet to reagent droplet volumes within each compound droplet, thereby producing a greater number of fused droplets and assay mixtures containing sample and reagent. The average ratio of sample droplets to reagent droplets (by number or volume) may be the same or different. If two or more reagents droplets are present in the compound droplet, the reagent droplets may have the same or different compositions. Accordingly, a compound droplet may contain two or more distinct types of reagent droplets, to permit creation of a larger number of combinations of reagents in fused droplets from a smaller number of reagent emulsions.</p>
+    <p id="p-00103-en" num="0103">A subset of the compound droplets in a multiple emulsion, due to statistical variation, may be deficient and thus unsuitable for performing tests. For example, these deficient compound droplets may contain no sample droplet, no reagent droplet, a ratio of sample droplets to reagent droplets that is outside of an acceptable range, or a combination thereof. Furthermore, in some compound droplets, fusion of sample and reagent droplets may not occur. Thus, measurements performed on compound droplets after fusion may be filtered to exclude data from compound droplets lacking a correct mixture of sample and reagent. Alternatively, background signals caused by these deficient compound droplets may be acceptable. In some embodiments, one or more labels or markers may be disposed in sample and reagent droplets to permit fused droplets containing sample and reagent to be distinguished from other inner droplets (e.g., by optical and/or electrical detection).</p>
+    <p id="p-00104-en" num="0104">
+      <figref>Figure 9</figref> shows an exemplary device 3020 for forming a precursor emulsion of reagent droplets 3000 (e.g., primer droplets containing at least one primer or a pair of primers), which can be modified with sample droplets to create multiple emulsion 2990 of <figref>Figure 8</figref>. Device 3020 may include a droplet generator 3022 that creates the reagent droplets from a reagent stream 3024 of at least one reagent. For example, reagent stream 3024 may contain an aqueous composition of one or more primers, such as a mixture of primers for amplification of a particular nucleic target. Reagent stream 3024 may meet one or more streams 3026 of an immiscible carrier fluid (e.g., oil) at a junction 3027 of the droplet generator, to generate reagent droplets 3000. The reagent droplets may be collected as a reagent emulsion 3028 in a container or vessel such as a well 3029, which may be part of any array of containers or vessels (e.g., a microplate) to provide a library of reagents. The reagent composition and/or the immiscible carrier fluid may include one or more surfactants as described elsewhere in the present disclosure.</p>
+    <p id="p-00105-en" num="0105">
+      <figref>Figure 10</figref> shows an exemplary device 3030 for forming a precursor emulsion of sample droplets 2998, which can be modified with reagent droplets to create multiple emulsion 2990 of <figref>Figure 8</figref>. Device 3030 may include a droplet generator 3032 that creates sample droplets from partitions of a sample stream 3034. The sample stream may be formed of an aqueous composition including a sample or sample aliquot. In any event, compositions forming reagent stream 3024 (see <figref>Fig. 9</figref>) and sample stream 3034 may be composed of miscible fluids. Sample stream 3034 may meet one or more streams 3036 of an immiscible carrier fluid (e.g., oil) at a junction 3037 of the droplet generator, to generate sample droplets 2998. The sample droplets may be collected as a sample emulsion 3038 in a container or vessel, such as a well 3039, which may be part of any array of containers or vessels (e.g., a microplate) to provide a library of samples. The sample stream and/or the immiscible carrier fluid may include one or more surfactants as described elsewhere in the present disclosure. The sample droplets and the reagent droplets each may be present in a water-in-oil (W/O) emulsion.</p>
+    <p id="p-00106-en" num="0106">
+      <figref>Figure 11</figref> shows a schematic view of an exemplary system 3050 for forming a reagent library (e.g., primary library 3052) of different reagent emulsions 3028 and a sample library 3054 of different sample emulsions 3038, each disposed in a respective array. System 3050 may include one or a plurality of devices 3020 and/or devices 3030 (see <figref>Figs. 9 and 10</figref>) to provide droplet generators ("DG") 3022, 3032 that receive reagents (e.g., primer pairs 1 to n) and samples (e.g., samples 1 to n) and create a separate emulsion of reagent droplets or of sample droplets from each reagent or sample. The same droplet generator or different droplet generators may be used to generate different members of each respective library and/or different members of different libraries. In any event, each reagent emulsion 3028 or sample emulsion 3038 may be stored at a known address in an array, such as an array formed by a microplate 3056, to permit retrieval of droplets of a selected emulsion on demand. Any suitable number of different samples and reagents may be placed in each array. For example, each of the reagent array and the sample array may be a respective reagent library or sample library of two or more separate members and the number of members in the reagent library and the sample library may be different. Alternatively, only one sample emulsion or reagent emulsion may be formed. Furthermore, in some embodiments, the reagent library and/or the sample library may be prepared off-line from (or on-line with) a sample analysis system (e.g., see <figref>Fig. 2</figref>).</p>
+    <p id="p-00107-en" num="0107">
+      <figref>Figure 12</figref> shows a schematic view of an exemplary device 3060 for creating and coalescing multiple emulsions. Device 3060 may permit selection of (a) any reagent droplets 3000 from any one (or more) of the different reagent emulsions (3028) of the primer library, for combination with (b) any sample droplets 2998 from any one (or more) of the different sample emulsions (3038) of the sample library. Stated differently, the use of multiple emulsions formed from arrays of precursor emulsions enables a dynamic platform that permits combination of any reagent and any sample in the arrays on demand, that is, at any time, since the system can switch quickly from one combination to another.</p>
+    <p id="p-00108-en" num="0108">A selected combination of reagent and sample droplets may be removed from their respective arrays, by operation of a selector 3062, and introduced into respective channels 3064, 3066 that meet at a junction 3068 (e.g., a microfluidic junction), to form a confluence of reagent and sample streams. Selector 3062 may be any device that transfers at least a portion of a reagent emulsion and/or of a sample emulsion and/or that regulates such transfer. The selector may, for example, be a multi-port connection between an emulsion array and channel 3064 and/or 3066 and/or an auto-sampler (e.g., an automated pipet device), among others.</p>
+    <p id="p-00109-en" num="0109">Streams of reagent droplets 3000 and sample droplets 2998 may flow from junction 3068 in a combined sample/reagent stream 3070 to a droplet generator 3072. The droplet generator may create compound droplets 3074 disposed in a continuous phase (e.g., an aqueous continuous phase). Each compound droplet 3074 may, on average, contain a plurality of inner droplets including at least one sample droplet 2998 and at least one reagent droplet 3000. The inner droplets may be encapsulated by a barrier droplet 3076 formed of a fluid that is immiscible with the continuous phase and with the inner droplets. The average number of sample droplets and reagent droplets contained in each compound droplet may be determined (and adjusted) by the size sample/reagent droplets, the ratio and density of these types of droplet in stream 3070, the size of the barrier droplet formed, and the like.</p>
+    <p id="p-00110-en" num="0110">Compound droplets 3074 may travel through a heating zone formed by a heater. Application of heat may induce fusion of the inner droplets to form fused droplets 3078 from sample and reagent droplets. The fusion may result in transformation of a plurality of inner droplets to one inner droplet within a compound droplet. Alternatively, the fusion may fail or be incomplete in some compound droplets, such that two or more inner droplets remain in a compound droplet after fusion of other compound droplets is complete.</p>
+    <p id="p-00111-en" num="0111">In any event, the fused droplets may be separated from the continuous phase by barrier droplet 3076. Proper selection of surfactants permits fusion of the inner droplets with one another much more efficiently than fusion of the inner droplets with the continuous phase.</p>
+    <p id="p-00112-en" num="0112">Each fused droplet may include an assay mixture created by mixing the contents of at least one sample droplet and at least one reagent droplet. For example, the assay mixture may be capable of amplification of a nucleic acid target, if present, in the fused droplet.</p>
+    <heading id="h-00013-en">
+      <b>VII. <u>Selected Embodiments</u></b>
+    </heading>
+    <p id="p-00113-en" num="0113">This section presents selected embodiments of the present disclosure related to methods and compositions for making and using multiple emulsions. <ol><li>1. A method of sample analysis, comprising (A) obtaining a plurality of compound droplets disposed in an immiscible carrier fluid, each compound droplet including at least one sample droplet comprising a partition of a sample, at least one reagent droplet comprising at least one reagent, and a barrier droplet that separates the sample droplet from the reagent droplet; (B) fusing the at least one sample droplet and the at least one reagent droplet within individual compound droplets to form fused droplets in each of which at least one partition of the sample is mixed with the at least one reagent to create a mixture to perform an assay; (C) detecting one or more signals from one or more of the fused droplets; and (D) determining a result of the assay based on the signals.</li><li>2. The method of paragraph 1, wherein the step of fusing includes a step of inducing fusion by heating the compound droplets.</li><li>3. The method of paragraph 1 or 2, wherein the step of inducing fusion creates an amplification mixture in fused droplets capable of amplifying a nucleic acid target, if present, in the fused droplets.</li><li>4. The method of paragraph 3, wherein the at least one reagent droplet includes a pair of primers capable of amplifying the nucleic acid target.</li><li>5. The method of any of paragraphs 1 to 4, wherein the step of detecting one or more signals including a step of detecting fluorescence signals from one or more of the fused droplets.</li><li>6. The method of any of paragraphs 1 to 5, further comprising a step of thermally cycling the fused droplets a plurality of times after the step of fusing.</li><li>7. The method of any of paragraphs 1 to 6, wherein the step of obtaining includes a step of obtaining a multiple emulsion including a hydrophilic surfactant and a hydrophobic surfactant.</li><li>8. The method of any of paragraphs 1 to 7, wherein the step of determining includes a step of correlating the signals with a presence of an analyte in the sample.</li><li>9. The method of any of paragraphs 1 to 8, wherein the plurality of compound droplets includes a first type of compound droplet mixed with a second type of compound droplet, and wherein each of the first and second types of compound droplet includes a respective distinct code that enables differentiation of the first and second types of droplets, wherein detecting signals detects test signals, further comprising (a) a step of detecting code signals from the fused droplets and (b) a step of utilizing the code signals to correlate test signals with the first type and the second type of compound droplet.</li><li>10. The method of paragraph 9, wherein the first and second types of compound droplets contain distinct reagents or distinct samples, and wherein the step of utilizing the code signals includes a step of correlating test signals with the distinct reagents or samples.</li><li>11. The method of paragraph 10, wherein the first and second types of compound droplets contain distinct primers for amplification of respective distinct nucleic acid targets, and wherein the step of utilizing the code signals includes a step of correlating test signals with a presence of the distinct nucleic acid targets in the fused droplets.</li><li>12. The method of any of paragraphs 1 to 11, wherein the at least one sample droplet and the at least one reagent droplet are both encapsulated by the barrier droplet.</li><li>13. The method of any of paragraphs 1 to 11, wherein the barrier droplet is encapsulated by the at least one sample droplet or the at least one reagent droplet.</li><li>14. A method of sample analysis, comprising (A) obtaining a plurality of compound droplets disposed in a continuous carrier phase, each compound droplet including at least one sample droplet containing a partition of a sample, at least one reagent droplet containing one or more primers, and a barrier droplet that separates the sample droplet from the reagent droplet; (B) fusing the at least one sample droplet and the at least one reagent droplet within individual compound droplets to form fused droplets, each fused droplet including at least one partition of the sample mixed with the one or more primers to create an amplification mixture capable of amplifying a nucleic acid target, if present, in the fused droplet; (C) detecting one or more signals from one or more of the fused droplets; and (D) determining a presence, if any, of the nucleic acid target in the sample based on the signals.</li><li>15. The method of paragraph 14, wherein the step of fusing includes a step of inducing fusion by heating the compound droplets.</li><li>16. The method of paragraph 14 or 15, wherein the step of detecting one or more signals including a step of detecting fluorescence signals from one or more of the fused droplets.</li><li>17. The method of any of paragraphs 14 to 16, further comprising a step of thermally cycling the fused droplets a plurality of times after the step of fusing.</li><li>18. The method of any of paragraphs 14 to 17, wherein the step of obtaining includes a step of obtaining a multiple emulsion including a hydrophilic surfactant and a hydrophobic surfactant.</li><li>19. The method of any of paragraphs 14 to 18, wherein the plurality of compound droplets includes a first type of compound droplet mixed with a second type of compound droplet, and wherein each of the first and second types of compound droplet includes a respective distinct code that enables differentiation of the first and second types of droplets, wherein detecting signals detects test signals, further comprising (a) a step of detecting code signals from the fused droplets and (b) a step of utilizing the code signals to correlate test signals with the first type and the second type of compound droplet.</li><li>20. The method of paragraph 19, wherein the first and second types of compound droplets contain distinct reagents or distinct samples, and wherein the step of utilizing the code signals includes a step of correlating test signals with the distinct reagents or samples.</li><li>21. The method of paragraph 20, wherein the first and second types of compound droplets contain distinct primers for amplification of respective distinct nucleic acid targets, and wherein the step of utilizing the code signals includes a step of correlating test signals with a presence of the distinct nucleic acid targets in the fused droplets.</li><li>22. The method of any of paragraphs 14 to 21, wherein the at least one sample droplet and the at least one reagent droplet are both encapsulated by the barrier droplet.</li><li>23. The method of any of paragraphs 14 to 21, wherein the barrier droplet is encapsulated by the at least one sample droplet or the at least one reagent droplet.</li><li>24. A composition for sample analysis, comprising a plurality of compound droplets disposed in a continuous carrier phase, each compound droplet including at least one sample droplet comprising a partition of a sample, at least one reagent droplet comprising at least one reagent, and a barrier droplet that separates the sample droplet from the reagent droplet, wherein fusing the at least one sample droplet and the at least one reagent droplet within individual compound droplets forms fused droplets, each fused droplet including at least one partition of the sample mixed with the at least one reagent to create a mixture to perform an assay.</li><li>25. The composition of paragraph 24, wherein fusion of the sample droplet and the reagent droplet within individual compound droplets to form fused droplets is inducible by application of heat.</li><li>26. The composition of paragraph 24 or 25, wherein the reagent droplet includes one or more reagents that are absent from the sample droplet.</li><li>27. The composition of any of paragraphs 24 to 26, wherein fusion creates an assay mixture in each fused droplet for amplification of a nucleic acid target, if present, in the fused droplet.</li><li>28. The composition of paragraph 27, wherein the at least one reagent droplet includes a pair of primers to amplify a nucleic acid target.</li><li>29. The composition of any of paragraphs 24 to 28, wherein the plurality of compound droplets includes a first type of compound droplet and a second type of compound droplet mixed with the first type of compound droplet, and wherein each of the first and second types of compound droplets includes a respective distinct code that enables differentiation of the first and second types of compound droplets.</li><li>30. The composition of paragraph 29, wherein the first and second types of compound droplets respectively contain distinct reagents, distinct samples, or both.</li><li>31. The composition of paragraph 30, wherein the first and second types of compound droplets respectively contain distinct primers for amplification of distinct nucleic acid targets.</li><li>32. The composition of paragraph 30, wherein the first and second types of droplets respectively contain samples from distinct sources.</li><li>33. The composition of any of paragraphs 24 to 32, wherein the at least one sample droplet and the at least one reagent droplet are both encapsulated by the barrier droplet.</li><li>34. The composition of any of paragraphs 24 to 32, wherein the barrier droplet is encapsulated by the at least one sample droplet or the at least one reagent droplet.</li><li>35. A composition for sample analysis, comprising a mixture of two or more types of compound droplets disposed in a continuous carrier phase, each type of compound droplets including a code that differentiates such type from the other types of compound droplets, each compound droplet including at least one sample droplet comprising a partition of a sample, at least one reagent droplet comprising at least one reagent, and a barrier droplet that separates the sample droplet from the reagent droplet, wherein fusing the at least one sample droplet and the at least one reagent droplet within individual compound droplets forms fused droplets in each of which at least one partition of the sample is mixed with the at least one reagent to create a mixture to perform an assay, and wherein the code of each type of compound droplet corresponds to a distinct reagent or a distinct sample contained by such type of compound droplet.</li><li>36. The composition of paragraph 35, wherein the two or more types of compound droplets are distinguishable from one another optically before fusion of the compound droplets.</li><li>37. A composition for sample analysis, comprising a plurality of compound droplets disposed in a continuous carrier phase, each compound droplet including at least one sample droplet comprising a partition of a sample, at least one reagent droplet comprising one or more primers, and a barrier droplet that separates the sample droplet from the reagent droplet, wherein fusing the at least one sample droplet and the at least one reagent droplet within individual compound droplets forms fused droplets, each fused droplet including at least one partition of the sample mixed with the one or more primers to create an amplification mixture capable of amplifying a nucleic acid target, if present, in the fused droplet.</li><li>38. The composition of paragraph 37, wherein fusing mixes a partition of the sample with a heat-stable polymerase.</li><li>39. The composition of paragraph 37 or 38, wherein the sample and reagent droplets of individual compound droplets remain separate from one another at lower temperatures and fuse with one another at higher temperatures.</li><li>40. A method of sample analysis, comprising: (A) obtaining a plurality of compound droplets each including at least one sample-containing droplet, at least one reagent-containing droplet, and a barrier droplet that separates the sample-containing droplet from the reagent-containing droplet; and (B) fusing the sample-containing droplet and the reagent-containing droplet within individual compound droplets to form fused droplets that combine sample and reagent to create assay mixtures for performing an assay.</li><li>41. The method of paragraph 40, wherein the step of fusing includes a step of inducing fusion by heating the compound droplets.</li><li>42. The method of paragraph 40 or 41, wherein the step of fusing creates an amplification mixture in fused droplets, and wherein the amplification mixture is capable of amplifying a nucleic acid target, if present, in the fused droplets.</li><li>43. The method of any of paragraphs 40 to 42, wherein the reagent-containing droplet includes at least one primer for amplifying the nucleic acid target.</li><li>44. The method of any of paragraphs 40 to 43, further comprising a step of thermally cycling the fused droplets after the step of fusing.</li><li>45. The method of any of paragraphs 40 to 44, wherein the step of obtaining includes a step of forming a multiple emulsion including a hydrophilic surfactant and a hydrophobic surfactant.</li><li>46. The method of any of paragraphs 40 to 45, wherein the sample-containing droplet and the reagent-containing droplet are both encapsulated by the barrier droplet.</li><li>47. The method of any of paragraphs 40 to 45, wherein the barrier droplet is encapsulated by the sample-containing droplet or the reagent-containing droplet.</li><li>48. The method of any of paragraphs 40 to 47, further comprising a step of collecting data from a plurality of the fused droplets and a step of determining a result of the assay based on the collected data.</li><li>49. The method of paragraph 48, wherein the step of collecting data including a step of detecting fluorescence intensity signals from a plurality of the fused droplets.</li><li>50. The method of paragraph 48 or 49, wherein the step of determining a result includes a step of determining a presence and/or an activity of an analyte in the sample.</li><li>51. The method of any of paragraphs 48 to 50, wherein the plurality of compound droplets includes a first type of compound droplets and a second type of compound droplets, and wherein each of the first and second types of compound droplets includes a respective distinct code that enables differentiation of the first and second types of droplets, wherein collecting data includes detection of test signals, further comprising (a) a step of detecting code signals from the fused droplets and (b) a step of utilizing the code signals to correlate test signals with the first type and the second type of compound droplets.</li><li>52. The method of paragraph 51, wherein the first and second types of compound droplets contain distinct reagents or distinct samples, and wherein the step of utilizing the code signals includes a step of correlating test signals with the distinct reagents or samples.</li><li>53. The method of paragraph 51 or 52, wherein the first and second types of compound droplets contain distinct primers for amplification of respective distinct nucleic acid targets, and wherein the step of utilizing the code signals includes a step of correlating test signals with a presence of the distinct nucleic acid targets in the fused droplets.</li><li>54. A composition for sample analysis, comprising: (A) a plurality of compound droplets disposed in a continuous phase, each compound droplet including at least one sample-containing droplet, at least one reagent-containing droplet, and a barrier droplet that separates the sample-containing droplet from the reagent-containing droplet, wherein fusion of the sample-containing droplet and the reagent-containing droplet within individual compound droplets to form fused droplets is inducible by heating the compound droplets, and wherein the fused droplets combine sample and reagent to create assay mixtures for performing an assay.</li><li>55. The composition of paragraph 54, wherein each compound droplet contains at least two reagent-containing droplets that each contain a different reagent.</li><li>56. The composition of paragraph 54 or 55, wherein heating the compound droplets creates an assay mixture in each fused droplet capable of amplification of a nucleic acid target, if present, in the fused droplet.</li><li>57. The composition of any of paragraphs 54 to 56, wherein the at least one reagent-containing droplet includes a pair of primers to amplify a nucleic acid target.</li><li>58. The composition of any of paragraphs 54 to 57, wherein the plurality of compound droplets includes a first type of compound droplets and a second type of compound droplets, and wherein each of the first and second types of compound droplets includes a respective distinct code that enables differentiation of the first and second types of compound droplets.</li><li>59. The composition of paragraph 58, wherein the first and second types of compound droplets respectively contain distinct reagents, distinct samples, or both.</li><li>60. The composition of paragraph 58 or 59, wherein the first and second types of compound droplets respectively contain distinct primers for amplification of distinct nucleic acid targets.</li><li>61. The composition of paragraph 58 or 59, wherein the first and second types of droplets respectively contain samples from distinct sources.</li><li>62. The composition of any of paragraphs 54 to 61, wherein the sample-containing droplet and the reagent-containing droplet are both encapsulated by the barrier droplet.</li><li>63. A method of sample analysis, comprising: (A) selecting an emulsion from a set of pre-formed emulsions each containing different reagent-containing droplets; (B) forming compound droplets that each include at least one sample-containing droplet, at least one reagent-containing droplet from the selected emulsion, and a barrier droplet that separates the sample-containing droplet from the reagent-containing droplet; and (C) fusing the sample-containing droplet and the reagent-containing droplet within individual compound droplets to form fused droplets that combine reagent from the selected emulsion with sample to create assay mixtures for performing an assay.</li><li>64. The method of paragraph 63, wherein the step of selecting an emulsion includes a step of selecting an emulsion from an array of pre-formed emulsions.</li><li>65. The method of paragraph 64, wherein the step of selecting an emulsion includes a step of selecting one or more primers from a set of different primers contained by the pre-formed emulsions.</li><li>66. The method of any of paragraphs 63 to 65, wherein the step of forming compound droplets includes a step of forming compounds droplets each having the sample-containing droplet and the reagent-containing droplet encapsulated by the barrier droplet.</li><li>67. The method of any of paragraph 63 to 66, the emulsion being a first emulsion, further comprising a step of selecting a second emulsion from a set of pre-formed emulsions each containing different sample-containing droplets, wherein the step of forming disposes at least one droplet of each of the first and second emulsions in each compound droplet.</li><li>68. The method of any of paragraphs 63 to 67, wherein the step of fusing includes a step of heating the compound droplets.</li></ol></p>
+    <p id="p-00114-en" num="0114">The disclosure set forth above may encompass multiple distinct inventions with independent utility. Although each of these inventions has been disclosed in its preferred form(s), the specific embodiments thereof as disclosed and illustrated herein are not to be considered in a limiting sense, because numerous variations are possible. The subject matter of the inventions includes all novel and nonobvious combinations and subcombinations of the various elements, features, functions, and/or properties disclosed herein. The following statements particularly point out certain combinations and subcombinations regarded as novel and nonobvious. Inventions embodied in other combinations and subcombinations of features, functions, elements, and/or properties may be claimed in applications claiming priority from this or a related application. Such statements, whether directed to a different invention or to the same invention, and whether broader, narrower, equal, or different in scope to the original statements, also are regarded as included within the subject matter of the inventions of the present disclosure.</p>
+    <p id="p-00115-en" num="0115">The following statements contain the text of the claims of this application's parent application and are reproduced in order to provide basis for this application's own claims, which will be filed later.</p>
+    <heading id="h-00014-en">STATEMENTS:</heading>
+    <p id="p-00116-en" num="0116">
+      <ol>
+        <li>1. A method of sample analysis, comprising: <ul id="ul-00003-en" list-style="none" compact="compact"><li>obtaining a plurality of compound droplets each including at least one sample-containing droplet, at least one reagent-containing droplet, and a barrier droplet that separates the sample-containing droplet from the reagent-containing droplet; and</li><li>fusing the sample-containing droplet and the reagent-containing droplet within individual compound droplets to form fused droplets that combine sample and reagent to create assay mixtures for performing an assay.</li></ul></li>
+        <li>2. The method of statement 1, wherein the step of fusing includes a step of inducing fusion by heating the compound droplets.</li>
+        <li>3. The method of statement 1, wherein the step of fusing creates an amplification mixture in fused droplets, and wherein the amplification mixture is capable of amplifying a nucleic acid target, if present, in the fused droplets.</li>
+        <li>4. The method of statement 3, wherein the reagent-containing droplet includes at least one primer for amplifying the nucleic acid target.</li>
+        <li>5. The method of statement 1, further comprising a step of thermally cycling the fused droplets after the step of fusing.</li>
+        <li>6. The method of statement 1, wherein the step of obtaining includes a step of forming a multiple emulsion including a hydrophilic surfactant and a hydrophobic surfactant.</li>
+        <li>7. The method of any one of statements 1 to 6, wherein the sample-containing droplet and the reagent-containing droplet are both encapsulated by the barrier droplet.</li>
+        <li>8. The method of any one of statements 1 to 6, wherein the barrier droplet is encapsulated by the sample-containing droplet or the reagent-containing droplet.</li>
+        <li>9. The method of any one of statements 1 to 6, further comprising a step of collecting data from a plurality of the fused droplets and a step of determining a result of the assay based on the collected data.</li>
+        <li>10. The method of statement 9, wherein the step of collecting data including a step of detecting fluorescence intensity signals from a plurality of the fused droplets.</li>
+        <li>11. The method of statement 9, wherein the step of determining a result includes a step of determining a presence and/or an activity of an analyte in the sample.</li>
+        <li>12. The method of statement 9, wherein the plurality of compound droplets includes a first type of compound droplets and a second type of compound droplets, and wherein each of the first and second types of compound droplets includes a respective distinct code that enables differentiation of the first and second types of droplets, wherein collecting data includes detection of test signals, further comprising (a) a step of detecting code signals from the fused droplets and (b) a step of utilizing the code signals to correlate test signals with the first type and the second type of compound droplets.</li>
+        <li>13. The method of statement 12, wherein the first and second types of compound droplets contain distinct reagents or distinct samples, and wherein the step of utilizing the code signals includes a step of correlating test signals with the distinct reagents or samples.</li>
+        <li>14. The method of statement 12, wherein the first and second types of compound droplets contain distinct primers for amplification of respective distinct nucleic acid targets, and wherein the step of utilizing the code signals includes a step of correlating test signals with a presence of the distinct nucleic acid targets in the fused droplets.</li>
+        <li>15. A composition for sample analysis, comprising: <ul id="ul-00004-en" list-style="none" compact="compact"><li>a plurality of compound droplets disposed in a continuous phase, each compound droplet including at least one sample-containing droplet, at least one reagent-containing droplet, and a barrier droplet that separates the sample-containing droplet from the reagent-containing droplet,</li><li>wherein fusion of the sample-containing droplet and the reagent-containing droplet within individual compound droplets to form fused droplets is inducible by heating the compound droplets, and wherein the fused droplets combine sample and reagent to create assay mixtures for performing an assay.</li></ul></li>
+        <li>16. The composition of statement 15, wherein each compound droplet contains at least two reagent-containing droplets that each contain a different reagent.</li>
+        <li>17. The composition of statement 15, wherein heating the compound droplets creates an assay mixture in each fused droplet capable of amplification of a nucleic acid target, if present, in the fused droplet.</li>
+        <li>18. The composition of statement 15, wherein the at least one reagent-containing droplet includes a pair of primers to amplify a nucleic acid target.</li>
+        <li>19. The composition of any one of statements 15 to 18, wherein the plurality of compound droplets includes a first type of compound droplets and a second type of compound droplets, and wherein each of the first and second types of compound droplets includes a respective distinct code that enables differentiation of the first and second types of compound droplets.</li>
+        <li>20. The composition of statement 19, wherein the first and second types of compound droplets respectively contain distinct reagents, distinct samples, or both.</li>
+        <li>21. The composition of statement 20, wherein the first and second types of compound droplets respectively contain distinct primers for amplification of distinct nucleic acid targets.</li>
+        <li>22. The composition of statement 20, wherein the first and second types of droplets respectively contain samples from distinct sources.</li>
+        <li>23. The composition of any one of statements 15 to 18, wherein the sample-containing droplet and the reagent-containing droplet are both encapsulated by the barrier droplet.</li>
+        <li>24. A method of sample analysis, comprising: <ul id="ul-00005-en" list-style="none" compact="compact"><li>selecting an emulsion from a set of pre-formed emulsions each containing different reagent-containing droplets;</li><li>forming compound droplets that each include at least one sample-containing droplet, at least one reagent-containing droplet from the selected emulsion, and a barrier droplet that separates the sample-containing droplet from the reagent-containing droplet; and</li><li>fusing the sample-containing droplet and the reagent-containing droplet within individual compound droplets to form fused droplets that combine reagent from the selected emulsion with sample to create assay mixtures for performing an assay.</li></ul></li>
+        <li>25. The method of statement 24, wherein the step of selecting an emulsion includes a step of selecting an emulsion from an array of pre-formed emulsions.</li>
+        <li>26. The method of statement 24, wherein the step of selecting an emulsion includes a step of selecting one or more primers from a set of different primers contained by the pre-formed emulsions.</li>
+        <li>27. The method of statement 24, wherein the step of forming compound droplets includes a step of forming compounds droplets each having the sample-containing droplet and the reagent-containing droplet encapsulated by the barrier droplet.</li>
+        <li>28. The method of any one of statements 24 to 27, the emulsion being a first emulsion, further comprising a step of selecting a second emulsion from a set of pre-formed emulsions each containing different sample-containing droplets, wherein the step of forming disposes at least one droplet of each of the first and second emulsions in each compound droplet.</li>
+        <li>29. The method of any one of statements 24 to 27, wherein the step of fusing includes a step of heating the compound droplets.</li>
+      </ol>
+    </p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A method of sample analysis, comprising:
+<claim-text>forming two or more types of reagent droplets, with each type having a code to identify the type;</claim-text><claim-text>encapsulating the two or more types of reagent droplets in sample droplets; and</claim-text><claim-text>inducing fusion of the sample droplets with the encapsulated two or more types of reagent droplets to produce fused droplets each having the code of one of the two or more types of reagent droplets.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The method of claim 1, wherein the two or more types of reagent droplets contain different primer pairs relative to one another.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The method of claim 1 or claim 2, wherein the code is provided by at least one particle in each type of reagent droplet.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The method of any one of claims 1 to 3, wherein the step of inducing fusion includes a step of heating the two or more types of reagent droplets and the sample droplets after the step of encapsulating.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The method of any one of claims 1 to 3, wherein the step of inducing fusion includes a step of applying an electric field to the two or more types of reagent droplets and the sample droplets after the step of encapsulating.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The method of any one of claims 1 to 5, further comprising a step of thermally cycling the fused droplets after the step of inducing fusion.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The method of any one of claims 1 to 6, further comprising a step of collecting data from a plurality of the fused droplets and a step of determining a result of an assay based on the collected data.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The method of claim 7, wherein the step of collecting data including a step of detecting fluorescence from a plurality of the fused droplets.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The method of claim 7 or claim 8, wherein the step of determining a result includes a step of determining a presence and/or an activity of a nucleic acid target in the sample.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The method of any one of claims 7 to 9, wherein the step of collecting data includes a step of detecting test signals, further comprising (a) a step of detecting code signals from the fused droplets and (b) a step of utilizing the code signals to correlate test signals with the two or more types of reagent droplets.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The method of claim 10, wherein the two or more types of reagent droplets contain distinct primers for amplification of respective distinct nucleic acid targets, and wherein the step of utilizing the code signals includes a step of correlating test signals with a presence of the distinct nucleic acid targets in the fused droplets.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>A method of sample analysis, comprising:
+<claim-text>obtaining an emulsion including a plurality of outer droplets disposed in a liquid carrier phase and each encapsulating at least one inner droplet, wherein the outer droplets are sample-containing droplets and the at least one inner droplet is at least one reagent-containing droplet or wherein the outer droplets are reagent-containing droplets and the at least one inner droplet is at least one sample-containing droplet; and</claim-text><claim-text>heating the emulsion to induce fusion of the outer droplets with the at least one inner droplet to form fused droplets that combine sample and reagent to create assay mixtures for performing an assay.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The method of claim 12, wherein the step of heating creates an amplification mixture in fused droplets, and wherein the amplification mixture is capable of amplifying a nucleic acid target, if present, in the fused droplets.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>The method of claim 12 or claim 13, further comprising a step of collecting data from a plurality of the fused droplets and a step of determining a result of the assay based on the collected data.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>The method of any one of claims 12 to 14, wherein the step of determining a result includes a step of determining a presence and/or an activity of an analyte in the sample.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940153A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940153A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940153A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940153A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940153A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940153A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2940153A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2940153A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0007.tif" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2940153A1_00009.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940153A1.PDF" type="pdf" size="906613" pages="34" />
+</lexisnexis-patent-document>

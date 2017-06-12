@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257537A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030130" date-changed="20151002" time-changed="033551">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314753">
+        <country>US</country>
+        <doc-number>20150257537</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14643079</doc-number>
+        <date>20150310</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>DE</country>
+        <doc-number>102014204401</doc-number>
+        <date>20140311</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A47C   3/18        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61G   5/14        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>G</subclass>
+        <main-group>5</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A47C   3/185       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>185</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47C   3/18        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61G   5/14        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>G</subclass>
+        <main-group>5</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">11</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">PIECE OF ROTARY SEATING FURNITURE</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>BESLER</last-name>
+            <first-name>Boris</first-name>
+            <address>
+              <city>Guetersloh</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HORTIG</last-name>
+            <first-name>Andreas</first-name>
+            <address>
+              <city>Halle</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>BESLER</last-name>
+            <first-name>Boris</first-name>
+            <address>
+              <city>Guetersloh</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HORTIG</last-name>
+            <first-name>Andreas</first-name>
+            <address>
+              <city>Halle</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173667758">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102014204401</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015135882</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150309</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257537</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150310</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173667757">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102014204401</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015135882</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150309</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257537</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150310</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">1. Piece of seating furniture and fitting therefor.</p>
+    <p id="p-a-00002-en" num="0000">2.1 It is known for a piece of seating furniture to have a base (<b>20</b>) and a seat unit (<b>10</b>), wherein the base and the seat unit have provided between them a pivot bearing (<b>30</b>) comprising a base-side bearing device (<b>34</b>) and a seat-unit-side bearing device (<b>32</b>), by means of which the seat unit (<b>10</b>) can be rotated about a vertical axis (<b>2</b>) in relation to the base (<b>20</b>), and the pivot bearing has a switchable blocking device (<b>40, 50</b><i>a, </i><b>50</b><i>b, </i><b>60</b>), by means of which the rotary movement capability of the bearing devices (<b>32, 34</b>) in relation to one another can be blocked.</p>
+    <p id="p-a-00003-en" num="0000">2.2 It is proposed to use, for this purpose, a blocking device (<b>40, 50</b><i>a, </i><b>50</b><i>b, </i><b>60</b>) which comprises the following components: <ul id="ula-00001-en" list-style="none"><li><ul id="ula-00002-en" list-style="none"><li>an encircling blocking surface (<b>40</b>) on a first of the two bearing devices (<b>34</b>),</li><li>at least one torsion spring (<b>50</b><i>a, </i><b>50</b><i>b</i>) which wraps around the blocking surface (<b>40</b>), is fastened on the second bearing device (<b>32</b>) and has an internal diameter which is variable in dependence on the stressing state, and</li><li>a switching device (<b>60</b>), by means of which the torsion spring (<b>50</b><i>a, </i><b>50</b><i>b</i>) can be subjected to stressing and relieved of stressing, <br /> wherein the torsion spring (<b>50</b><i>a, </i><b>50</b><i>b</i>), in the stressed or relieved-of-stressing state, butts against the blocking surface (<b>40</b>) and thus prevents relative rotary movement between the bearing devices (<b>32, 34</b>). </li></ul></li></ul></p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150625</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257537A1</docdb-publication-number>
+      <docdb-application-id>444510760</docdb-application-id>
+      <new-owner>KINTEC-SOLUTION GMBH, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:BESLER, BORIS;HORTIG, ANDREAS;REEL/FRAME:035905/0940</free-text-description>
+      <effective-date>
+        <date>20150618</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims the priority of German Application No. 10 2014 204 401.4, filed on Mar. 11, 2014, the disclosure of which is hereby incorporated by reference in its entirety into this application.</p>
+      <heading id="h-00002-en" level="1">FIELD OF APPLICATION AND PRIOR ART</heading>
+      <p id="p-00002-en" num="0002">The invention relates to a piece of seating furniture having a base and a seat unit, wherein the base and the seat unit have provided between them a pivot bearing comprising a base-side bearing device and a seat-unit-side bearing device, by means of which the seat unit can be rotated about a vertical axis in relation to the base. The pivot bearing here has a switchable blocking device, by means of which the rotary movement capability of the bearing devices in relation to one another can be blocked.</p>
+      <p id="p-00003-en" num="0003">The invention also additionally relates to a fitting for such a piece of seating furniture.</p>
+      <p id="p-00004-en" num="0004">Pieces of seating furniture of the type in question are known from the prior art. These are pieces of seating furniture of which the seat unit can be rotated, in principle, in relation to a base, it being possible for the base to be both a foot provided for positioning at a fixed location and a base portion provided with rollers. The latter scenario is generally known in particular in respect of pieces of seating furniture for the office. The rotary movement capability of the seat unit makes it possible for the seated person to rotate the seat unit, and thus assume a sitting position of changed orientation, without rotating the base.</p>
+      <p id="p-00005-en" num="0005">The pivot bearing, which is provided for this purpose between the base and the seat unit, is provided, in the case of pieces of seating furniture of the type in question, with a blocking device which couples the base and the seat unit to one another, in a given rotary position relative to one another, such that rotary movement is no longer possible or is made much more difficult.</p>
+      <p id="p-00006-en" num="0006">The aforementioned blocking capability is expedient in particular when the piece of seating furniture is one with a standing-up aid. Such a standing-up aid allows the seat unit to be raised in particular by electric motor, and this makes it easier to stand up from the piece of seating furniture. Rotary movement of the seat unit is generally not desired during the standing-up phase. The blocking action prevents the situation, during the standing-up phase, where the person ends up falling on account of the rotary movement capability of the seat unit.</p>
+      <p id="p-00007-en" num="0007">Known configurations for creating a switchable blocking device involve comparatively high outlay. Thus, it has been proposed for example to create such a blocking device by means of an additional electric motor which can displace a locking member into a position in which said locking member couples the seat unit and the base to one another in a form-fitting manner.</p>
+      <p id="p-00008-en" num="0008">This and other known solutions, however, have continually exhibited the disadvantage that they involve fairly expensive additional components and, in some cases, do not provide the desired level of reliability.</p>
+      <heading id="h-00003-en" level="1">OBJECT AND SOLUTION</heading>
+      <p id="p-00009-en" num="0009">It is therefore an object of the invention for a piece of seating furniture of the type in question and/or a fitting for such a piece of seating furniture to be developed to the extent where the switchable blocking device is cost-effective and reliable.</p>
+      <p id="p-00010-en" num="0010">This is achieved according to the invention in that the blocking device has a blocking surface, a torsion spring, which encloses said blocking surface, and a switching device. The aforementioned blocking surface is provided on a first of the two bearing devices. The aforementioned torsion spring wraps around said blocking surface and is fastened on a second bearing device and is such that it has a variable internal diameter in dependence on the stressing state. The switching device is coupled to the torsion spring such that the torsion spring can be optionally subjected to stressing or relieved of stressing. The torsion spring and the blocking surface are coordinated with one another such that the torsion spring, either in a stressed/compressed or relieved-of-stressing/drawn-together state, butts against the blocking surface and, thus, prevents rotary movement between the bearing devices.</p>
+      <p id="p-00011-en" num="0011">The configuration of the blocking device according to the invention thus provides that the blocking device has an encircling blocking surface, on which the aforementioned torsion spring can be positioned with clamping action and from which the torsion spring can be lifted off, the blocking surface being freed in the process. The blocking surface here is a preferably cylindrical surface oriented in the direction of the vertical axis. The torsion spring encloses said blocking surface one or more times. It is such that, in the tight relatively stressed or relieved-of-stressing state, it butts with clamping action against the blocking surface, and therefore cannot be moved in relation to the same, and, in the respectively other, wide more relieved-of-stressing or stressed state, it exerts only a relatively small amount of force, if any at all, on the blocking surface and thus allows the rotary movement.</p>
+      <p id="p-00012-en" num="0012">The switching device may be, in principle, an electrically operated switching device, which widens or draws together the torsion spring. However, the switching device is preferably a mechanical component, which establishes a mechanical coupling to other sub-components of the piece of seating furniture and thus establishes the freed and the blocked states of the blocking device in reaction to the movement of said other parts.</p>
+      <p id="p-00013-en" num="0013">The torsion spring used is such that its internal diameter depends on its stressing state. This is achieved in particular by a torsion spring having in particular helically arranged windings. The cross section through said windings may be circular. Depending on the specific configuration, however, a square or otherwise rectangular shape may be advantageous, since such shaping gives rise to easier rotationally secured clamping-in action and provides for surface contact between the inside of the windings and the blocking surface.</p>
+      <p id="p-00014-en" num="0014">The end of the windings is formed preferably by two torque-inducing portions, of which the relative position in the circumferential direction determines the stressing state. The ends of said windings may be directed in particular radially or obliquely outwards, as is customary in the case of leg springs. In respect of low costs for the blocking device, the use of commercially available leg springs is advantageous.</p>
+      <p id="p-00015-en" num="0015">A configuration which is conceivable in principle is one in which, in order to modify the stressing state in the torsion spring, the two torque-inducing portions of the same torsion spring are displaced away from one another, or towards one another, relative to the second bearing device. If the torsion spring, however, has no spring portion fixed to the second bearing device, then disruption-free operation is more difficult to ensure. It is therefore advantageous if one of the torque-inducing portions is fastened on the second bearing device such that it cannot be moved in the circumferential direction. This makes it possible to achieve movement of the torque-inducing portions relative to one another in that that torque-inducing portion of the torsion spring which is not fastened on the second bearing device such that it cannot be moved is displaced in the circumferential direction. Skewing of the spring is avoided by the spring being clamped in firmly on one side.</p>
+      <p id="p-00016-en" num="0016">As far as the configuration and number of the preferably metallic torsion springs are concerned, a minimum value has the one torsion spring, or the plurality of torsion springs together, wrapping around the blocking surface over an angle of at least approximately 360° (±15%). In the blocking state, the blocking surface is thus clamped firmly at least more or less all the way around by the torsion spring or the torsion springs. Particularly advantageous configurations are considered to be those in which the torsion spring wraps, or the plurality of torsion springs wrap, around the blocking surface over an angle of approximately 1080° (±15%) or 1800° (±15%). These are therefore overall angles of wrap which provide for the blocking surface to have the spring wrapped around it approximately three times or approximately five times.</p>
+      <p id="p-00017-en" num="0017">Depending on the configuration of the torsion spring and the attachment of the torsion spring, the torsion-spring stressing provided for establishing or releasing the blocking state also results in a circumferentially acting torque, which is not desired. It is therefore advantageous if use is made of an even number of torsion springs, in particular two torsion springs, which, when simultaneously subjected to stressing or simultaneously relieved of stressing, are subjected to stressing or relieved of stressing in opposite directions, as seen in relation to the circumferential direction, so that their circumferentially acting torque is compensated for in each case.</p>
+      <p id="p-00018-en" num="0018">In respect of the aforementioned angles of wrap, it is particularly advantageous if said two torsion springs wrap around the blocking surface in each case over an angle of approximately 540° (±15°) or of approximately 900° (±15°), that is to say in each case approximately one and a half times or two and a half times.</p>
+      <p id="p-00019-en" num="0019">If use is made of just one torsion spring, then there is the risk of it skewing, in particular if the torque-inducing portions of said torsion spring are offset in relation to one another in an axial direction. In such a case, it is therefore advantageous if plastic sleeves or the like are provided above and beneath the torsion spring, said plastic sleeves fixing the torsion spring axially in position and preventing the torsion spring from tilting.</p>
+      <p id="p-00020-en" num="0020">The switching device preferably has a switching carriage, which can be moved axially with guidance by a guide along the first or second bearing device. Said switching carriage is operatively coupled here to the torsion spring or the torsion springs such that the axial displacement of the switching carriage gives rise to the torsion spring being subjected to stressing or relieved of stressing and thus to the blocking device being blocked or released.</p>
+      <p id="p-00021-en" num="0021">In the simplest case, the switching carriage can be mounted on the first or second bearing device by a slot with a slider, in particular in the form of screws, arranged therein. The displacement of the switching carriage can take place in particular indirectly by displacement of other sub-components of the piece of seating furniture. In principle, however, it is also possible for the switching carriage to be driven directly by electric means.</p>
+      <p id="p-00022-en" num="0022">The interaction between the switching carriage, on the one hand, and the at least one torsion spring, on the other hand, takes place preferably by at least one switching slope being arranged directly on the switching carriage, a torque-inducing portion of the torsion spring, said portion sliding on said switching slope, being displaced in the circumferential direction by the axial displacement of said switching slope. In the case of a torsion spring of which the two torque-inducing portions can be moved in the circumferential direction in relation to the second bearing device, it is also possible for the switching carriage to have two switching slopes. A switching carriage having two switching slopes is also advantageous when use is made of more than one torsion spring, so that a respective torque-inducing portion of a plurality of torsion springs together can be deflected by the switching carriage. If the switching carriage has a plurality of switching slopes, then these are offset preferably axially in relation to one another, so that there is no need for the torque-inducing portions of the plurality of torsion springs to be positioned at the same height.</p>
+      <p id="p-00023-en" num="0023">Instead of the switching carriage acting directly on one or more torque-inducing portions, it is also possible for the switching carriage to act on an intermediate member which can be moved relative to the switching carriage and may be provided, for example, in a pivotable manner on the second bearing device. Said intermediate member, for its part, acts on one or more torque-inducing portions of the torsion spring or torsion springs, so that said spring or springs is or are deflected in the circumferential direction in reaction to the displacement of the intermediate member.</p>
+      <p id="p-00024-en" num="0024">So that the switching carriage or the intermediate member, during the force activation of the torque-inducing portion, displaces the latter in the desired direction, in particular in an essentially circumferential direction, it is advantageous if the torque-inducing portion which can be moved in relation to the second bearing device can be moved with guidance. This can be achieved for example by a slot, through which the torque-inducing portion passes. Guidance, however, is not imperative, since even the wraparound form of the spring usually ensures a sufficient level of axial positional stability for the torque-inducing portions.</p>
+      <p id="p-00025-en" num="0025">It is further advantageous to provide a restoring spring, by means of which the switching carriage is forced permanently in the direction of one of its end positions. It is particularly advantageous if said restoring spring, rather than being designed in the form of a separate spring element, is formed by the one or more torsion springs. It is thus possible, for example in the case of suitable oblique positioning of the aforementioned switching slope, while avoiding the self-locking region, to achieve the situation where said switching slope, on the one hand, serves in the manner described to transfer the axial movement of the switching carriage in a circumferential direction of one or more torque-inducing portions. At the same time, however, it is also possible for the torque-inducing portions to exert the restoring force on the switching carriage, in that the torque-inducing portions, which act with force activation in the circumferential direction, exert an axial force on the switching carriage as a result of the switching slope being redirected.</p>
+      <p id="p-00026-en" num="0026">Instead of a switching carriage which can be displaced in translatory fashion, a further configuration of the switching device provides a switching lever, which is fitted in a pivotable manner on the first or the second bearing device and which is operatively coupled to the torsion spring such that a pivoting movement of the switching lever gives rise to the torsion spring being subjected to stressing or relieved of stressing and thus to the blocking device being blocked or released, wherein preferably the switching lever is connected to a torque-inducing portion of the torsion spring, so that the latter can be displaced in the circumferential direction by a pivoting movement of the switching lever.</p>
+      <p id="p-00027-en" num="0027">If the blocking device has two torsion springs, a switching lever is provided preferably for each torsion spring. The torsion spring or springs is or are provided preferably on the seat-side bearing device and can be pivoted in each case about a horizontal pivot axis. Preferably an arm of the at least one switching lever is connected to a torque-inducing portion of a torsion spring, so that this is moved in the circumferential direction when the switching lever is pivoted. The pivoting movement of the switching lever thus results in the desired blocking or freeing action.</p>
+      <p id="p-00028-en" num="0028">As already mentioned, the operation of switching the blocking device can be realized in various ways.</p>
+      <p id="p-00029-en" num="0029">A particularly advantageous configuration provides that the piece of seating furniture is one with a standing-up-aiding function, by means of which the seat surface can be raised in order to facilitate standing from the sitting position. In the case of such a piece of seating furniture, the blocking device may be operatively coupled to the standing-up-aiding function such that it assumes its blocked state when the standing-up-aiding function is actuated. The standing-up aid may be of electromotive design, in a manner which is known per se. In principle, however, a mechanical, for example spring-operated, standing-up-aiding function is also conceivable. In the case of the blocking device being coupled to the standing-up aid, it is particularly advantageous if a fitting portion which is moved during the activation of the standing-up aid forces, or allows, displacement of the switching carriage or of the switching lever and thus gives rise to the blocked or freed state of the blocking device.</p>
+      <p id="p-00030-en" num="0030">Coupling the standing-up-aiding function to the blocking device is expedient in particular since rotatability of the seat surface precludes easy standing up. It is therefore expedient to establish the blocked state when the standing-up aid is activated.</p>
+      <p id="p-00031-en" num="0031">Another possible configuration for controlling the blocking device provides, for this purpose, an operating lever for manual actuation, which is preferably likewise such that it can move the axially displaceable switching carriage or the pivotable switching lever. It is possible for such an operating lever, in the manner generally known in respect of pieces of seating furniture for the office, to be provided beneath the seat surface and either to allow a sustained blocking and freeing action or, proceeding from a normally blocked state, to permit a temporary freeing action by displacement of the operating lever.</p>
+      <p id="p-00032-en" num="0032">The first and second bearing devices are distributed between the base and the seat surface, in principle, as desired. The blocking surface may thus be rotationally fixed either in relation to the seat surface or in relation to the base, whereas the torsion spring is at a fixed location in relation to the respectively other bearing device. An advantageous configuration, however, is one in which the blocking surface and the first bearing device are provided on the base side and the torsion spring and the second bearing device are provided on the seat-surface side. This makes it possible for seat-side actuators, such as the aforementioned operating lever, and also the standing-up-aiding function to be more readily coupled for switching action to the torsion spring.</p>
+      <p id="p-00033-en" num="0033">In addition to the piece of seating furniture as a whole, the invention also relates to a fitting for such a piece of seating furniture.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00034-en" num="0034">Further aspects and advantages of the invention can be gathered from the claims and from the following description of a preferred exemplary embodiment of the invention, which will be explained with reference to the figures, in which:</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIGS. 1A-1C</figref> show a piece of seating furniture according to the invention in a perspective view, in a view from the rear and in a view from the front,</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 2</figref> shows the pivot bearing of the piece of seating furniture according to <figref>FIG. 1</figref> together with a blocking device,</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIGS. 3</figref>
+        <i>a </i>to <b>3</b><i>c </i>show the blocking device in the freed state,</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIGS. 4</figref>
+        <i>a </i>to <b>4</b><i>c </i>show the blocking device in the blocked state,</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIGS. 5A and 5B</figref> show the piece of seating furniture from <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>c </i>with the standing-up aid activated, and</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIGS. 6A to 6B</figref> show an alternative form of blocking device.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE EXEMPLARY EMBODIMENTS</heading>
+      <p id="p-00041-en" num="0041">
+        <figref>FIGS. 1</figref>
+        <i>a </i>to <b>1</b><i>c </i>show a piece of seating furniture according to the invention in the manner of a chair. This piece of seating furniture has a seat unit <b>10</b>, in this case comprising, in addition to a seat surface <b>12</b>, which is illustrated in the non-upholstered state, also a backrest <b>14</b> and a legrest <b>16</b>. The seat unit <b>10</b> can be rotated as a whole about a vertical axis <b>2</b> in relation to a base <b>20</b>. The base <b>20</b> is provided for positioning the piece of seating furniture at a fixed location, but could also be provided, in the manner of office chairs, with rollers, in order to allow the chair to be displaced straightforwardly as a whole.</p>
+      <p id="p-00042-en" num="0042">The rotatability of the seat unit is achieved via a pivot bearing <b>30</b>, which is arranged directly above the base <b>20</b>.</p>
+      <p id="p-00043-en" num="0043">Said pivot bearing can be seen in section in <figref>FIG. 2</figref>. It comprises in particular an inner axial portion <b>32</b>, which is rotationally fixed in relation to the seat unit <b>12</b>, and a bearing sleeve <b>34</b>, which accommodates the axial portion <b>32</b> and is a fixed constituent part of the base <b>20</b>.</p>
+      <p id="p-00044-en" num="0044">The rotatability which said pivot bearing having the components <b>32</b>, <b>34</b> provides for the seat unit <b>10</b> in relation to the base <b>20</b> can be blocked, in the case of a piece of seating furniture according to the invention, such that rotation can be prevented, or at least made considerably more difficult, in certain cases.</p>
+      <p id="p-00045-en" num="0045">The main components of the blocking device provided for this purpose, with reference to <figref>FIGS. 2</figref>, <b>3</b> and <b>4</b>, are primarily a blocking surface <b>40</b>, which is formed by the outer surface of the bearing sleeve <b>34</b>, and two torsion springs <b>50</b><i>a</i>, <b>50</b><i>b</i>, each designed in the manner of leg springs. The two leg springs <b>50</b><i>a</i>, <b>50</b><i>b </i>each have one leg <b>51</b><i>a</i>, <b>51</b><i>b </i>fitted on the seat unit <b>12</b> at a fixed location as seen in relation to a circumferential direction about the axis of rotation <b>2</b>, whereas the respectively opposite legs <b>52</b><i>a</i>, <b>52</b><i>b </i>can be moved in principle in relation to the circumferential direction. A circumferentially directed movement of the legs <b>52</b><i>a</i>, <b>52</b><i>b </i>results in the torsion springs <b>50</b><i>a</i>, <b>50</b><i>b </i>being subjected to stressing or relieved of stressing.</p>
+      <p id="p-00046-en" num="0046">The torsion springs <b>50</b><i>a</i>, <b>50</b><i>b </i>enclose the blocking surface <b>40</b> by way of their in each case 1.5 windings (corresponding to approximately 540°). The torsion springs <b>50</b><i>a</i>, <b>50</b><i>b </i>here are coordinated with the diameter of the blocking surface <b>40</b> such that, in the absence of an external torque acting on the legs, the springs assume a relieved-of-stressing state, in which they are pressed onto the blocking surface <b>40</b>. This constitutes the blocked state. In the absence, therefore, of any torque which acts to spread apart the legs <b>52</b><i>a</i>, <b>52</b><i>b</i>, the torsion springs <b>50</b><i>a</i>, <b>50</b><i>b </i>block a rotary movement of the seat unit <b>10</b> in relation to the base <b>20</b>.</p>
+      <p id="p-00047-en" num="0047">In order to achieve the freeing action, the displaceable legs <b>52</b><i>a</i>, <b>52</b><i>b </i>have to be spread apart from one another. A switching carriage <b>60</b> is provided for this purpose, and said carriage can be displaced in the axial direction depicted by the arrow <b>4</b>. The switching carriage <b>60</b>, for this purpose, is provided with a slot <b>62</b>, through which project two screws <b>63</b> which have been screwed into the seat-side bearing device. The switching carriage <b>60</b> has two axially offset switching slopes <b>64</b><i>a</i>, <b>64</b><i>b</i>, which are inclined in opposite directions and against which the spring legs <b>52</b><i>a</i>, <b>52</b><i>b </i>butt. The switching slopes here have an angle of approximately 45° in relation to the vertical. Although other angles are also conceivable here, in principle, it is nevertheless advantageous if the switching slopes <b>64</b><i>a</i>, <b>64</b><i>b </i>are angled such that there is no self-locking taking place in either direction of action: it is desired for displacement of the switching carriage <b>60</b> to be able to spread apart the spring legs <b>52</b><i>a</i>, <b>52</b><i>b </i>and for the legs <b>52</b><i>a</i>, <b>52</b><i>b </i>to be able to initiate an axially acting force in the switching carriage <b>60</b>, so that the latter can be restored.</p>
+      <p id="p-00048-en" num="0048">
+        <figref>FIGS. 3</figref>
+        <i>a </i>and <b>3</b><i>b </i>show the freed state of the blocking device. This state is achieved when the switching carriage <b>60</b> is located in a lower end position, in which the legs <b>52</b><i>a</i>, <b>52</b><i>b </i>are arranged in each case in the region of the upper ends of the switching slopes <b>64</b><i>a</i>, <b>64</b><i>b</i>. The legs have thus been spread apart from one another. The windings of the springs <b>50</b><i>a</i>, <b>50</b><i>b </i>no longer butt with clamping action against the blocking surface <b>40</b>. The lower end position of the switching carriage <b>60</b> is brought about by a transverse crossmember <b>18</b> of the seat unit <b>10</b>, this acting on the switching carriage <b>60</b> from above and not allowing the switching carriage to yield upwards in the freed position of <figref>FIGS. 3</figref><i>a </i>and <b>3</b><i>b. </i></p>
+      <p id="p-00049-en" num="0049">In the absence of this downwardly directed force activation of the switching carriage <b>60</b>, the situation shown in <figref>FIGS. 4</figref><i>a </i>to <b>4</b><i>c </i>is established. The switching carriage <b>60</b> is displaced upwards in the direction of the arrow <b>4</b><i>a</i>, since the legs <b>52</b><i>a</i>, <b>52</b><i>b </i>at the end of the torsion springs <b>50</b><i>a</i>, <b>50</b><i>b </i>attempt to assume their relatively relieved-of-stressing position shown in <figref>FIGS. 4</figref><i>a </i>to <b>4</b><i>c</i>. Via the switching slopes <b>64</b><i>a</i>, <b>64</b><i>b</i>, the legs here push the switching carriage <b>60</b> upwards. In the state shown in <figref>FIGS. 4</figref><i>a </i>to <b>4</b><i>c</i>, the windings of the torsion springs <b>50</b><i>a</i>, <b>50</b><i>b </i>are therefore tighter and butt with clamping action against the blocking surface <b>40</b>. Rotary movement of the seat unit <b>10</b> in relation to the base <b>20</b>, then, is possible only with great difficulty, if at all.</p>
+      <p id="p-00050-en" num="0050">
+        <figref>FIGS. 5</figref>
+        <i>a </i>and <b>5</b><i>b </i>depict how the blocked state shown in <figref>FIGS. 4</figref><i>a </i>to <b>4</b><i>c </i>is brought about. The figures show the piece of seating furniture with the standing-up aid activated. This standing-up aid can pivot a multiplicity of components of the seat unit <b>10</b> in the manner illustrated. These components also include the aforementioned transverse crossmember <b>18</b>, which is raised out of its starting position <b>18</b>′, indicated by dashed lines in <figref>FIG. 5</figref><i>a</i>, and thus loses contact with the switching carriage <b>60</b>. Consequently, the latter yields upwards, in the manner already described, and establishes the blocked state of the blocking device. Activation of the standing-up-aiding function thus also gives rise as it were automatically, without any separate switching operation being required, to blocking of the blocking device.</p>
+      <p id="p-00051-en" num="0051">
+        <figref>FIGS. 6</figref>
+        <i>a </i>and <b>6</b><i>b </i>show an alternative form of blocking device. The latter, instead of the carriage <b>60</b> having the switching slopes <b>64</b><i>a</i>, <b>64</b><i>b</i>, has two switching levers <b>65</b><i>a</i>, <b>65</b><i>b</i>, which are fitted such that they can be pivoted about axes <b>67</b><i>a</i>, <b>67</b><i>b </i>in relation to the seat-unit-side bearing device <b>32</b>. The spring legs <b>52</b><i>a</i>, <b>52</b><i>b </i>of the torsion springs <b>50</b><i>a</i>, <b>50</b><i>b</i>, said legs acting as torque-inducing portions, are secured at the respectively lower end of said switching levers <b>65</b><i>a</i>, <b>65</b><i>b</i>. The respectively upper end of the switching levers is provided with a coupling portion <b>66</b><i>a</i>, <b>66</b><i>b</i>, it being possible for the switching levers <b>65</b><i>a</i>, <b>65</b><i>b </i>to be pivoted by the force activation of said coupling portion.</p>
+      <p id="p-00052-en" num="0052">In a manner similar to the switching carriage <b>66</b> described, the switching levers <b>65</b><i>a</i>, <b>65</b><i>b </i>are actuated via the transverse crossmember <b>18</b>. The blocking device is released by virtue of the transverse crossmember <b>18</b> being lowered. If the transverse crossmember <b>18</b> is raised, then it is possible for the torsion springs <b>50</b><i>a</i>, <b>50</b><i>b</i>, with the switching levers <b>65</b><i>a</i>, <b>65</b><i>b </i>being pivoted at the same time, to resume their relatively relieved-of-stressing state, in which they butt against the blocking surface <b>40</b> and thus shift the blocking device into the blocked state.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. Piece of seating furniture having
+<claim-text>a base (<b>20</b>) and</claim-text><claim-text>a seat unit (<b>10</b>),</claim-text><claim-text>wherein</claim-text><claim-text>the base and the seat unit have provided between them a pivot bearing (<b>30</b>) comprising a base-side bearing device (<b>34</b>) and a seat-unit-side bearing device (<b>32</b>), by means of which the seat unit (<b>10</b>) can be rotated about a vertical axis (<b>2</b>) in relation to the base (<b>20</b>), and</claim-text><claim-text>the pivot bearing has a switchable blocking device (<b>40</b>, <b>50</b><i>a</i>, <b>50</b><i>b</i>, <b>60</b>), by means of which the rotary movement capability of the bearing devices (<b>32</b>, <b>34</b>) in relation to one another can be blocked,</claim-text><claim-text>characterized in that</claim-text><claim-text>the blocking device (<b>40</b>, <b>50</b><i>a</i>, <b>50</b><i>b</i>, <b>60</b>) comprises:</claim-text><claim-text>an encircling blocking surface (<b>40</b>) on a first of the two bearing devices (<b>34</b>),</claim-text><claim-text>at least one torsion spring (<b>50</b><i>a</i>, <b>50</b><i>b</i>) which wraps around the blocking surface (<b>40</b>), is fastened on the second bearing device (<b>32</b>) and has an internal diameter which is variable in dependence on the stressing state, and</claim-text><claim-text>a switching device (<b>60</b>), by means of which the torsion spring (<b>50</b><i>a</i>, <b>50</b><i>b</i>) can be subjected to stressing and relieved of stressing,</claim-text><claim-text>wherein the torsion spring (<b>50</b><i>a</i>, <b>50</b><i>b</i>), in the stressed or relieved-of-stressing state, butts against the blocking surface (<b>40</b>) and thus prevents relative rotary movement between the bearing devices (<b>32</b>, <b>34</b>).</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. Piece of seating furniture according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>characterized in that</claim-text><claim-text>the torsion spring (50a, 50b) has two torque-inducing portions (51a, 51b, 52a, 52b), of which the circumferentially directed relative movement can subject the torsion spring (50a, 50b) to stressing and relieve the same of stressing.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. Piece of seating furniture according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>,
+<claim-text>characterized in that</claim-text><claim-text>one of the torque-inducing portions (51a, 51b) is fastened on the second bearing device (32) such that it cannot be moved in the circumferential direction.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. Piece of seating furniture according to one of the preceding claims,
+<claim-text>characterized in that</claim-text><claim-text>the torsion spring (50a, 50b) wraps, or the plurality of torsion springs (50a, 50b) together wrap, around the blocking surface (40) over an angle of at least approximately 360°, preferably over an angle of approximately 1080° or approximately 1800°, wherein in particular preferably two torsion springs (50a, 50b) are provided, each of these wrapping around the blocking surface (40) over an angle of approximately 540° or of approximately 900°.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. Piece of seating furniture according to one of the preceding claims,
+<claim-text>characterized in that</claim-text><claim-text>the switching device (60) has a switching carriage (60), which can be moved axially with guidance along the first or the second bearing device (32) and which is operatively coupled to the torsion spring such that an axial displacement of the switching carriage (60) gives rise to the torsion spring (50a, 50b) being subjected to stressing or relieved of stressing and thus to the blocking device (40, 50a, 50b, 60) being blocked or released, wherein preferably
+<claim-text>the switching carriage (60) has at least one switching slope (64a, 64b), it being possible for a torque-inducing portion (52a, 52b) of the torsion spring (50a, 50b), said portion sliding on said slope, to be displaced in the circumferential direction by the axial displacement of said slope, or</claim-text><claim-text>the switching carriage acts on an intermediate member which can be moved relative to the switching carriage and, for its part, acts on a torque-inducing portion of the torsion spring, so that this can be displaced in the circumferential direction.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. Piece of seating furniture according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>,
+<claim-text>characterized by</claim-text><claim-text>the provision of a restoring spring (50a, 50b), by means of which the switching carriage (60) is forced permanently in the direction of an end position, wherein the restoring spring (50a, 50b) is preferably identical to the torsion spring (50a, 50b).</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. Piece of seating furniture according to one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to 4,
+<claim-text>characterized in that</claim-text><claim-text>the switching device has a switching lever (65a, 65b), which is fitted in a pivotable manner in relation to the first or the second bearing device (32) and which is operatively coupled to the torsion spring such that a pivoting movement of the switching lever (65a, 65b) gives rise to the torsion spring (50a, 50b) being subjected to stressing or relieved of stressing and thus to the blocking device (40, 50a, 50b, 60) being blocked or released, wherein preferably the switching lever (65a, 65b) is connected to a torque-inducing portion (52a, 52b) of the torsion spring (50a, 50b), so that the latter can be displaced in the circumferential direction by a pivoting movement of the switching lever (65a, 65b).</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. Piece of seating furniture according to one of the preceding claims,
+<claim-text>characterized in that</claim-text><claim-text>the piece of seating furniture has a standing-up-aiding function, by means of which the seat surface (12) can be raised, wherein the blocking device (40, 50a, 50b, 60) is operatively coupled preferably to the standing-up-aiding function such that it assumes its blocked state when the standing-up-aiding function is actuated.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. Piece of seating furniture according to one of the preceding claims,
+<claim-text>characterized in that</claim-text><claim-text>the piece of seating furniture has an operating lever for manual actuation, which can be used to switch the blocking device, in particular by axial displacement of the switching carriage.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. Piece of seating furniture according to one of the preceding claims,
+<claim-text>characterized in that
+<claim-text>the base-side bearing device (34) is formed by the first bearing device (34) with the encircling blocking surface (40), and</claim-text><claim-text>the seat-side bearing device (32) is formed by the second bearing device (32) with the at least one torsion spring (50a, 50b).</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. Fitting for a piece of seating furniture, having
+<claim-text>a base portion for fitting on a base of the piece of seating furniture and</claim-text><claim-text>a seat portion, on which to fit a seat unit of the piece of seating furniture,</claim-text><claim-text>wherein</claim-text><claim-text>the base portion and the seat portion have provided between them a pivot bearing (<b>30</b>) comprising a base-side bearing device (<b>34</b>) and a seat-unit-side bearing device (<b>32</b>), by means of which the seat portion can be rotated about a vertical axis (<b>2</b>) in relation to the base portion, and</claim-text><claim-text>the pivot bearing (<b>30</b>) has a switchable blocking device (<b>40</b>, <b>50</b><i>a</i>, <b>50</b><i>b</i>, <b>60</b>), by means of which the rotary movement capability of the bearing devices (<b>32</b>, <b>34</b>) in relation to one another can be blocked,</claim-text><claim-text>characterized in that</claim-text><claim-text>the blocking device (<b>40</b>, <b>50</b><i>a</i>, <b>50</b><i>b</i>, <b>60</b>) comprises:</claim-text><claim-text>an encircling blocking surface (<b>40</b>) on a first of the two bearing devices (<b>32</b>, <b>34</b>),</claim-text><claim-text>at least one torsion spring (<b>50</b><i>a</i>, <b>50</b><i>b</i>) which wraps around the blocking surface (<b>40</b>), is fastened on the second bearing device (<b>32</b>) and has an internal diameter which is variable in dependence on the stressing state, and</claim-text><claim-text>a switching device (<b>60</b>), by means of which the torsion spring (<b>50</b><i>a</i>, <b>50</b><i>b</i>) can be subjected to stressing and relieved of stressing,</claim-text><claim-text>wherein the torsion spring (<b>50</b><i>a</i>, <b>50</b><i>b</i>), in the stressed or relieved-of-stressing state, butts against the blocking surface (<b>40</b>) and thus prevents relative rotary movement between the bearing devices (<b>32</b>, <b>34</b>). </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257537A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257537A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257537A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257537A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257537A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257537A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257537A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257537A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257537A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257537A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257537A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257537A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257537A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257537A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257537A1.PDF" type="pdf" size="487912" pages="12" />
+</lexisnexis-patent-document>

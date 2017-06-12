@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259747A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030114" date-changed="20151019" time-changed="085158">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314230">
+        <country>US</country>
+        <doc-number>20150259747</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14723965</doc-number>
+        <date>20150528</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>C12Q   1/68        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  31/454       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>454</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>C12Q   1/6883      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>6883</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  31/454       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>454</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12Q2600/106       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>106</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12Q2600/156       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>156</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">METHOD OF PREDICTING A PREDISPOSITION TO QT PROLONGATION</invention-title>
+    <related-documents date-changed="20150917">
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12593419</doc-number>
+              <date>20091228</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9074254</doc-number>
+              </document-id>
+            </parent-grant-document>
+            <parent-pct-document>
+              <document-id>
+                <country>WO</country>
+                <doc-number>PCT/US2008/058791</doc-number>
+                <date>20080328</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007239</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60908734</doc-number>
+          <date>20070329</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Vanda Pharmaceuticals Inc.</orgname>
+            <address>
+              <city>Washington</city>
+              <state>DC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lavedan</last-name>
+            <first-name>Christian</first-name>
+            <address>
+              <city>Potomac</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Volpi</last-name>
+            <first-name>Simona</first-name>
+            <address>
+              <city>Derwood</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Licamele</last-name>
+            <first-name>Louis</first-name>
+            <address>
+              <city>Potomac</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Mack</last-name>
+            <first-name>Kendra Tomino</first-name>
+            <address>
+              <city>Westminster</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Heaton</last-name>
+            <first-name>Callie Michelle</first-name>
+            <address>
+              <city>Washington</city>
+              <state>DC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US08058791</doc-number>
+        <date>20080328</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2008121899</doc-number>
+        <date>20081009</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173666993">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259747</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150528</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173666990">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259747</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150528</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention describes an association between genetic polymorphisms in the ceramide kinase-like (CERKL) gene and a predisposition to prolongation of the QT interval, and provides related methods for the prediction of such a predisposition, the administration of QT interval-prolonging compounds to individuals having such a predisposition, and determining whether a compound is capable of inducing QT prolongation.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150617</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259747A1</docdb-publication-number>
+      <docdb-application-id>444515081</docdb-application-id>
+      <new-owner>VANDA PHARMACEUTICALS, INC., DISTRICT OF COLUMBIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:LAVEDAN, CHRISTIAN;VOLPI, SIMONA;LICAMELE, LOUIS;AND OTHERS;SIGNING DATES FROM 20080721 TO 20080722;REEL/FRAME:035851/0802</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of co-pending U.S. patent application Ser. No. 12/593,419, filed 28 Dec. 2009, which is the US National Stage Application of PCT Application Serial No. PCT/US2008/058791, filed 28 Mar. 2008, which claims the benefit of U.S. Provisional Patent Application No. 60/908,734, filed 29 Mar. 2007, each of which is hereby incorporated herein.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">SEQUENCE LISTINGS</heading>
+      <p id="p-00002-en" num="0002">The sequence listings contained in the electronic file titled “VAND-0042-US-CON_sequence_listings<sub>—</sub>20150528.txt,” created 28 Mar. 2015, comprising 4.3 MB, is hereby incorporated herein.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">1. Technical Field</p>
+      <p id="p-00004-en" num="0004">The invention relates generally to a method of predicting an individual's predisposition to QT prolongation, and more particularly, to a method of predicting such predisposition based on a sequence of the individual's ceramide kinase-like (CERKL) gene.</p>
+      <p id="p-00005-en" num="0005">2. Background</p>
+      <p id="p-00006-en" num="0006">Prolongation of the electrocardiographic QT interval (the time between the start of the Q wave and the end of the T wave) is referred to as long QT syndrome (LQTS). LQTS may comprise a genetic component. In some patients with LQTS, QT prolongation can be a chronic condition. In some persons, LQTS may be induced by the administration of an active pharmaceutical ingredient that prolongs the QT interval.</p>
+      <p id="p-00007-en" num="0007">A number of compounds are believed to be capable of prolonging the QT interval. These include amiodarone, arsenic trioxide, bepridil, chloroquine, chlorpromazine, cisapride, clarithromycin, disopyramide, dofetilide, domperidone, droperidol, erythromycin, halofantrine, haloperidol, ibutilide, iloperidone, levomethadyl, mesoridazine, methadone, pentamidine, pimozide, procainamide, quinidine, sotalol, sparfloxacin, and thioridazine.</p>
+      <p id="p-00008-en" num="0008">Other compounds are suspected of being capable of prolonging the QT interval, although such prolongation has not been definitively established. These include alfuzosin, amantadine, azithromycin, chloral hydrate, clozapine, dolasetron, felbamate, flecainide, foscarnet, fosphenytoin, gatifloxacin, gemifloxacin, granisetron, indapamide, isradipine, levofloxacin, lithium, moexipril, moxifloxacin, nicardipine, octreotide, ofloxacin, ondansetron, quetiapine, ranolazine, risperidone, roxithromycin, tacrolimus, tamoxifen, telithromycin, tizanidine, vardenafil, venlafaxine, voriconazole, and ziprasidone.</p>
+      <p id="p-00009-en" num="0009">Individuals at risk of suffering LQTS are advised not to use still other compounds, due to the possibility that they may prolong the QT interval. These include albuterol, amitriptyline, amoxapine, amphetamine, dextroamphetamine, atomoxetine, chloroquine, ciprofloxacin, citalopram, clomipramine, cocaine, desipramine, dexmethylphenidate, dobutamine, dopamine, doxepin, ephedrine, epinephrine, fenfluramine, fluconazole, fluoxetine, galantamine, imipramine, isoproterenol, itraconazole, ketoconazole, levalbuterol, metaproterenol, methylphenidate, mexiletine, midodrine, norepinephrine, nortriptyline, paroxetine, phentermine, phenylephrine, phenylpropanolamine, protriptyline, pseudoephedrine, ritodrine, salmeterol, sertraline, sibutramine, solifenacin, terbutaline, tolterodine, trimethoprim-sulfa, and trimipramine.</p>
+      <p id="p-00010-en" num="0010">The CERKL gene has been mapped by Tuson et al. to 2q31.2-q32.3, between the ITGA4 gene and the NEUROD1 gene, and determined to contain 13 exons. Tuson et al., <i>Mutations of CERKL, a novel human ceramide kinase gene, causes autosomal recessive retinitis pigmentosa </i>(<i>RP</i>26), Am. J. Hum. Genet. 74: 128-138, 2004. PubMed ID: 14681825. Ceramide kinases convert the sphingolipid metabolite ceramide into ceramide-1-phosphate, both of which mediate cellular apoptosis.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00011-en" num="0011">The present invention describes an association between genetic polymorphisms in the ceramide kinase-like (CERKL) gene and a predisposition to prolongation of the QT interval, and provides related methods for the diagnosis of such predisposition and for the administration of QT interval-prolonging compounds to individuals having such a predisposition.</p>
+      <p id="p-00012-en" num="0012">A first aspect of the invention provides a method of administering to an individual a compound capable of prolonging the individual's QT interval (e.g., a compound the administration has been linked to prolonged QT, such as in clinical studies in humans), the method comprising: determining at least a portion of an individual's ceramide kinase-like (CERKL) gene sequence; and in the case that a portion of the individual's CERKL gene sequence is associated with an increased risk of QT prolongation, administering to the individual a quantity of the compound less than would be administered to an individual having a CERKL gene sequence not associated with an increased risk of QT prolongation, or electing instead to treat the individual with a different compound not known to be associated with QT prolongation.</p>
+      <p id="p-00013-en" num="0013">A second aspect of the invention provides a method of determining whether or not an individual is predisposed to prolongation of the QT interval, the method comprising: determining at least a portion of an individual's ceramide kinase-like (CERKL) gene sequence. All or a portion, including a SNP described hereinbelow, can be compared to CERKL gene sequences that are associated with QT prolongation.</p>
+      <p id="p-00014-en" num="0014">A third aspect of the invention provides a method of administering a compound capable of prolonging QT interval to an individual suffering from long QT syndrome (LQTS), the method comprising: determining at least a portion of an individual's ceramide kinase-like (CERKL) gene sequence; and administering to the individual a quantity of the compound based on the individual's CERKL gene sequence.</p>
+      <p id="p-00015-en" num="0015">A fourth aspect of the invention provides a method of administering to an individual a compound capable of prolonging the individual's QT interval, the method comprising: characterizing an expression product of an individual's ceramide kinase-like (CERKL) gene; and in the case that the characterized expression product is associated with an increased risk of QT prolongation, administering to the individual a quantity of the compound less than would be administered to an individual having a CERKL gene expression product not associated with an increased risk of QT prolongation. Expression products of the CERKL gene may include, for example, mRNA and protein including any isoform of the mRNA and protein.</p>
+      <p id="p-00016-en" num="0016">A fifth aspect of the invention provides a method of determining whether an individual is predisposed to prolongation of the QT interval, the method comprising: characterizing an expression product of an individual's ceramide kinase-like (CERKL) gene. All or a portion of the gene expression product can be compared to CERKL gene expression products that are associated with QT prolongation.</p>
+      <p id="p-00017-en" num="0017">A sixth aspect of the invention provides a method of administering a compound capable of prolonging a QT interval to an individual suffering from long QT syndrome (LQTS), the method comprising: characterizing an expression product of an individual's ceramide kinase-like (CERKL) gene; and administering to the individual a quantity of the compound based on the characterized expression product.</p>
+      <p id="p-00018-en" num="0018">A seventh aspect of the invention provides a method of determining whether a compound is capable of prolonging QT interval in an individual, the method comprising: measuring an expression product of the individual's ceramide kinase-like (CERKL) gene; administering to the individual a quantity of the compound; remeasuring the expression product of the individual's CERKL gene; and determining whether the compound is capable of prolonging the individual's QT interval based on a difference in the measurements of the expression product of the individual's CERKL gene.</p>
+      <p id="p-00019-en" num="0019">An eighth aspect of the invention provides a method of determining whether a compound is capable of prolonging a QT interval in an individual, the method comprising: measuring a QT interval of each of a plurality of test organisms, the plurality including a first test organism having a ceramide kinase-like (CERKL) genotype associated with a predisposition for prolongation of QT interval and a second organism having a CERKL genotype not associated with a predisposition for prolongation of QT interval; administering a quantity of the compound to each of the plurality of test organisms; remeasuring a QT interval of at least the first test organism; and determining that the compound is capable of prolonging a QT interval in an individual in the case that the remeasured QT interval is greater than the measured QT interval. Test organisms may include, for example, humans, animal models, and/or cell lines.</p>
+      <p id="p-00020-en" num="0020">In further aspects of the inventions, the invention comprises method for determining an individual's genotype for the CERKL gene that comprises determining the individual's genotype at at least one single nucleotide polymorphism (SNP) locus selected from the group consisting of: rs895901, rs1441162, rs993650, rs993648, rs16867450, rs16867452, and rs6433927, as well as a method for reporting a person's genotype for the CERKL gene that comprises determining and reporting the individual's genotype at at least one single nucleotide polymorphism (SNP) locus selected from the group consisting of: rs895901, rs1441162, rs993650, rs993648, rs16867450, rs16867452, and rs6433927.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00021-en" num="0021">As indicated above, the invention provides a method of predicting an individual's, e.g., a human subject's, predisposition to QT prolongation based on the sequence of the individual's ceramide kinase-like (CERKL) gene.</p>
+      <p id="p-00022-en" num="0022">A number of single nucleotide polymorphisms (SNPs) within the CERKL gene have been found to have a significant correlation to a predisposition to drug-induced QT prolongation. Table 1, below, shows such SNPs and the genotypes associated with QT prolongation following the administration of iloperidone.</p>
+      <p id="p-00023-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="441pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>CERKL SNP Genotypes and QT Prolongation Following Administration of Iloperidone</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="10" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="84pt" align="left" />
+              <colspec colname="5" colwidth="56pt" align="left" />
+              <colspec colname="6" colwidth="28pt" align="left" />
+              <colspec colname="7" colwidth="49pt" align="left" />
+              <colspec colname="8" colwidth="28pt" align="left" />
+              <colspec colname="9" colwidth="28pt" align="left" />
+              <colspec colname="10" colwidth="21pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Lowest</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>QTc</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Seq.</entry>
+                </row>
+                <row>
+                  <entry>Affymetrix</entry>
+                  <entry>rs</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>change</entry>
+                  <entry>P</entry>
+                  <entry>Allele</entry>
+                  <entry>Allele</entry>
+                  <entry>ID</entry>
+                </row>
+                <row>
+                  <entry>SNP No.</entry>
+                  <entry>numbrt[1]</entry>
+                  <entry>Position</entry>
+                  <entry>Flank</entry>
+                  <entry>Orientation</entry>
+                  <entry>Non-AA</entry>
+                  <entry>value[3]</entry>
+                  <entry>A</entry>
+                  <entry>B</entry>
+                  <entry>No.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="10" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>SNP_A-2220578</entry>
+                  <entry>rs17226490</entry>
+                  <entry>142613</entry>
+                  <entry>ccttcttccaaaaaaa[C/</entry>
+                  <entry>forward</entry>
+                  <entry>Non-AA</entry>
+                  <entry>0.230510123</entry>
+                  <entry>C</entry>
+                  <entry>G</entry>
+                  <entry> 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>G]ttggagatccctgttc</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-1911999</entry>
+                  <entry>rs16867442</entry>
+                  <entry>142502</entry>
+                  <entry>tgtgagaagttacata[A/</entry>
+                  <entry>reverse</entry>
+                  <entry>AB</entry>
+                  <entry>0.523235967</entry>
+                  <entry>A</entry>
+                  <entry>C</entry>
+                  <entry> 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>C]aatagtgatactgtag</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-1937552</entry>
+                  <entry>rs718449</entry>
+                  <entry>141189</entry>
+                  <entry>ttgaactccacacttg[C/</entry>
+                  <entry>forward</entry>
+                  <entry>AB</entry>
+                  <entry>0.222483417</entry>
+                  <entry>C</entry>
+                  <entry>T</entry>
+                  <entry> 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>T]accatcatggcactcc</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-1950600</entry>
+                  <entry>rs12623737</entry>
+                  <entry>132230</entry>
+                  <entry>tttcatctgaacattg[A/</entry>
+                  <entry>forward</entry>
+                  <entry>AB</entry>
+                  <entry>0.077895801</entry>
+                  <entry>A</entry>
+                  <entry>C</entry>
+                  <entry> 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>C]agaatgacatctacat</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-4262423</entry>
+                  <entry>rs10514624</entry>
+                  <entry>128459</entry>
+                  <entry>ctgtgagtttgaagta[C/</entry>
+                  <entry>reverse</entry>
+                  <entry>AB</entry>
+                  <entry>0.415376626</entry>
+                  <entry>C</entry>
+                  <entry>T</entry>
+                  <entry> 5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>T]ggtgggtatgcccaag</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-1966128</entry>
+                  <entry>rs10490686</entry>
+                  <entry>124294</entry>
+                  <entry>caaatacaattcagag[A/</entry>
+                  <entry>reverse</entry>
+                  <entry>AB</entry>
+                  <entry>0.007281497</entry>
+                  <entry>A</entry>
+                  <entry>C</entry>
+                  <entry> 6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>C]ccttactgtggcatgt</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-2246382</entry>
+                  <entry>rs16867447</entry>
+                  <entry>121205</entry>
+                  <entry>ctggttctactggtaa[A/</entry>
+                  <entry>forward</entry>
+                  <entry>AB</entry>
+                  <entry>0.059152747</entry>
+                  <entry>A</entry>
+                  <entry>T</entry>
+                  <entry> 7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>T]ctgtttttcaaaataa</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-1966129</entry>
+                  <entry>rs6706370</entry>
+                  <entry>118832</entry>
+                  <entry>actgttaaaccttatg[A/</entry>
+                  <entry>forward</entry>
+                  <entry>Non-AA</entry>
+                  <entry>0.136332739</entry>
+                  <entry>A</entry>
+                  <entry>T</entry>
+                  <entry> 8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>T]gagcttcagattctatat</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-2140582</entry>
+                  <entry>rs895901</entry>
+                  <entry>109658</entry>
+                  <entry>tgctctgtgttcaacat[A/</entry>
+                  <entry>forward</entry>
+                  <entry>AB</entry>
+                  <entry>0.004039676</entry>
+                  <entry>A</entry>
+                  <entry>T</entry>
+                  <entry> 9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>T]gtgcaggatgcgagatg</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-1937875</entry>
+                  <entry>rs1441162</entry>
+                  <entry> 91975</entry>
+                  <entry>ttaatcatttgcgcc[A/</entry>
+                  <entry>forward</entry>
+                  <entry>AA</entry>
+                  <entry>0.003384913</entry>
+                  <entry>A</entry>
+                  <entry>C</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>C]aggaactggacagacc</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-2122170</entry>
+                  <entry>rs993650</entry>
+                  <entry> 90904</entry>
+                  <entry>agtgatttccagtata[C/</entry>
+                  <entry>reverse</entry>
+                  <entry>AB</entry>
+                  <entry>4.83E-07</entry>
+                  <entry>C</entry>
+                  <entry>T</entry>
+                  <entry>11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>T]gctgttaagtttaaaa</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-4232718</entry>
+                  <entry>rs993648</entry>
+                  <entry> 90758</entry>
+                  <entry>ccccttataggtaacc[A/</entry>
+                  <entry>forward</entry>
+                  <entry>AB</entry>
+                  <entry>2.60E-07</entry>
+                  <entry>A</entry>
+                  <entry>G</entry>
+                  <entry>12</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>G]attgcactggtttcta</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-2216593</entry>
+                  <entry>rs16867450</entry>
+                  <entry> 89951</entry>
+                  <entry>cctctatatctcaaag[A/</entry>
+                  <entry>reverse</entry>
+                  <entry>Non-AA</entry>
+                  <entry>0.004139028</entry>
+                  <entry>A</entry>
+                  <entry>G</entry>
+                  <entry>13</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>G]aaactcaatttcaact</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-2216297</entry>
+                  <entry>rs16867452</entry>
+                  <entry> 86371</entry>
+                  <entry>cctcctctaccatcta[C/</entry>
+                  <entry>reverse</entry>
+                  <entry>BB</entry>
+                  <entry>0.005241705</entry>
+                  <entry>C</entry>
+                  <entry>T</entry>
+                  <entry>14</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>T]cggttgtttaaccttg</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-1827109</entry>
+                  <entry>rs6433927</entry>
+                  <entry> 60587</entry>
+                  <entry>tggcttcctctaattt[C/</entry>
+                  <entry>forward</entry>
+                  <entry>Non-AA</entry>
+                  <entry>0.001479588</entry>
+                  <entry>C</entry>
+                  <entry>G</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>G]tactccaaaatggtt</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-1966130</entry>
+                  <entry>rs10497581</entry>
+                  <entry> 53701</entry>
+                  <entry>tcttctcccaataggt[A/</entry>
+                  <entry>forward</entry>
+                  <entry>Non-AA</entry>
+                  <entry>0.52388901</entry>
+                  <entry>A</entry>
+                  <entry>G</entry>
+                  <entry>16</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>G]aagtacgacagagctc</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-2310431</entry>
+                  <entry>rs13398869</entry>
+                  <entry> 42469</entry>
+                  <entry>ggaactgtcttaaaag[C/</entry>
+                  <entry>reverse</entry>
+                  <entry>Non-BB</entry>
+                  <entry>0.075041974</entry>
+                  <entry>C</entry>
+                  <entry>T</entry>
+                  <entry>17</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>T]ctgaaagaagtcagat</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-1893937</entry>
+                  <entry>rs1967351</entry>
+                  <entry> 26643</entry>
+                  <entry>tgcactgtaggttaaa[C/</entry>
+                  <entry>reverse</entry>
+                  <entry>Non-BB</entry>
+                  <entry>0.258267198</entry>
+                  <entry>C</entry>
+                  <entry>T</entry>
+                  <entry>18</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>T]tggctctttgggctaa</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-4275669</entry>
+                  <entry>rs10207791</entry>
+                  <entry> 23890</entry>
+                  <entry>aatggggaagcagtca[A/</entry>
+                  <entry>reverse</entry>
+                  <entry>Non-AA</entry>
+                  <entry>0.138169504</entry>
+                  <entry>A</entry>
+                  <entry>G</entry>
+                  <entry>19</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>G]gaagaaagtgagtccc</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-2065238</entry>
+                  <entry>rs2696344</entry>
+                  <entry> 13541</entry>
+                  <entry>aattggcttctcttaa[C/</entry>
+                  <entry>forward</entry>
+                  <entry>Non-BB</entry>
+                  <entry>0.086456719</entry>
+                  <entry>C</entry>
+                  <entry>G</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>G]tatatgagatagggtt</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SNP_A-1966131</entry>
+                  <entry>rs12053195</entry>
+                  <entry>  6069</entry>
+                  <entry>actagtactgtcccag[A/</entry>
+                  <entry>forward</entry>
+                  <entry>Non-AA</entry>
+                  <entry>0.399257392</entry>
+                  <entry>A</entry>
+                  <entry>G</entry>
+                  <entry>21</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>G]aaaatttatacacctt</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry> 77898</entry>
+                  <entry>cagtgtctgttgttcct[C/</entry>
+                  <entry>forward</entry>
+                  <entry>A/B</entry>
+                  <entry>0.0047</entry>
+                  <entry>T</entry>
+                  <entry>C</entry>
+                  <entry>22</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>T]tctatgaaacacaatgg</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>rs6433923</entry>
+                  <entry> 77934</entry>
+                  <entry>taattggaaaattta[T/</entry>
+                  <entry>forward</entry>
+                  <entry>A/B</entry>
+                  <entry>0.0045</entry>
+                  <entry>T</entry>
+                  <entry>A</entry>
+                  <entry>23</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>A]ttttttttcaggtg</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry> 77949</entry>
+                  <entry>ttttttttcaggtg[A/</entry>
+                  <entry>forward</entry>
+                  <entry>A/B</entry>
+                  <entry>0.2241</entry>
+                  <entry>A</entry>
+                  <entry>C</entry>
+                  <entry>24</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>C]ttctaagtatgacttgc</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="10" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00024-en" num="0023">The following SNP genotypes were found to most accurately predict a predisposition to QT prolongation: non-AT at rs895901, non-AA at rs1441162, non-CT at rs993650, non-AG at rs993648, AA at rs16867450, non-TT at rs16867452, and CC at rs6433927. These genotypes are included amongst all genotypes associated with a predisposition to QT prolongation. Therefore, individuals possessing one or more of these genotypes may be considered predisposed to QT prolongation following the administration of a compound capable of prolonging the QT interval.</p>
+      <p id="p-00025-en" num="0024">Since the QT interval changes with changes in heart rate, the QT interval is often measured as a corrected QT (QTc) interval. Any number of formulas may be employed to calculate the QTc, including, for example, the Fridericia formula (QTcF), the Bazett formula (QTcB), and the Rautaharju formula (QTp), among others. In the studies described herein, QT was calculated using the Fridericia formula. However, the present invention includes the use of any such formula or method for calculating a QTc or an uncorrected QT.</p>
+      <p id="p-00026-en" num="0025">As noted above, a large number of compounds are known or suspected to be capable of inducing QT prolongation in some individuals, including individuals not suffering from LQTS. One such compound is iloperidone. Iloperidone is disclosed in U.S. Pat. Nos. 5,364,866, 5,658,911, and 6,140,345, each of which is incorporated herein by reference. Metabolites of iloperidone may also be capable of prolonging a QT interval. Metabolites of Iloperidone, e.g., 1-[4-[3-[4-(6-Fluoro-1,2-benzisoxazol-3-yl)-1-piperidinyl]propoxy]-3-methoxyphenyl]ethanol, are described in International Patent Application Publication No. WO03020707, which is also incorporated herein by reference.</p>
+      <p id="p-00027-en" num="0026">Other iloperidone metabolites include: 1-[4-[3-[4-(6-Fluoro-1,2-benzisoxazol-3-yl)-1-piperidinyl]propoxy]-3-hydroxyphenyl]ethanone; 1-[4-[3-[4-(6-Fluoro-1,2-benzisoxazol-3-yl)-1-piperidinyl]propoxy]-3-methoxyphenyl]-2-hydroxyethanone; 4-[3-[4-(6-Fluoro-1,2-benzisoxazol-3-yl)-1-piperidinyl]propoxy]-3-hydroxy-α-methylbenzene methanol; 4-[3-[4-(6-Fluoro-1,2-benzisoxazol-3-yl)-1-piperidinyl]propoxyl-2-hydroxy-5-methoxy-α-methylbenzenemethanol; 1-[4-[3-[4-(6-Fluoro-1,2-benzisoxazol-3-yl)-1-piperidinyl]propoxy]-2-hydroxy-5-methoxyphenyl]ethanone; and 1-[4-[3-[4-(6-Fluoro-1,2-benzisoxazol-3-yl)-1-piperidinyl]propoxy]-2,5-dihydroxyphenyl]ethanone. See U.S. Pat. No. 5,364,866 and International Patent Application Publication Nos. WO9309276 and WO9511680, which are incorporated herein by reference.</p>
+      <p id="p-00028-en" num="0027">Using the genotypes at the SNP loci above, it is possible, with a high degree of certainty, to predict an individual's predisposition to QT prolongation. Table 2 below shows the results of a study of 174 individuals, each of whom was genotyped at the rs993648 locus and their QT interval measured following the oral administration of 24 mg/day B.I.D. of iloperidone for a period of two weeks.</p>
+      <p id="p-00029-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="266pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>QT Prolongation and Presence or Absence of a Genotype for</entry>
+                </row>
+                <row>
+                  <entry>SNP_A-4232718, rs993648 Associated with a Predisposition to QT Prolongation</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="35pt" align="center" />
+              <colspec colname="9" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Change</entry>
+                  <entry>Low QT</entry>
+                  <entry>HighQT</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>negative</entry>
+                  <entry>positive</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="14pt" align="center" />
+              <colspec colname="3" colwidth="14pt" align="center" />
+              <colspec colname="4" colwidth="14pt" align="center" />
+              <colspec colname="5" colwidth="14pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <colspec colname="10" colwidth="35pt" align="center" />
+              <colspec colname="11" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Threshold</entry>
+                  <entry>−</entry>
+                  <entry>+</entry>
+                  <entry>−</entry>
+                  <entry>+</entry>
+                  <entry>Odds</entry>
+                  <entry />
+                  <entry>sensi-</entry>
+                  <entry>speci-</entry>
+                  <entry>predictive</entry>
+                  <entry>predictive</entry>
+                </row>
+                <row>
+                  <entry>(msec)</entry>
+                  <entry>test</entry>
+                  <entry>test</entry>
+                  <entry>test</entry>
+                  <entry>test</entry>
+                  <entry>Ratio</entry>
+                  <entry>p value</entry>
+                  <entry>tivity</entry>
+                  <entry>ficity</entry>
+                  <entry>value</entry>
+                  <entry>value</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="14pt" align="center" />
+              <colspec colname="3" colwidth="14pt" align="center" />
+              <colspec colname="4" colwidth="14pt" align="char" char="." />
+              <colspec colname="5" colwidth="14pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="char" char="." />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="char" char="." />
+              <colspec colname="10" colwidth="35pt" align="center" />
+              <colspec colname="11" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>QT &gt;5</entry>
+                  <entry>42</entry>
+                  <entry>22</entry>
+                  <entry>38</entry>
+                  <entry>72</entry>
+                  <entry>3.62</entry>
+                  <entry>0.0001</entry>
+                  <entry>0.65</entry>
+                  <entry>0.66</entry>
+                  <entry>0.53</entry>
+                  <entry>0.77</entry>
+                </row>
+                <row>
+                  <entry>QT &gt;15</entry>
+                  <entry>62</entry>
+                  <entry>41</entry>
+                  <entry>18</entry>
+                  <entry>53</entry>
+                  <entry>4.45</entry>
+                  <entry>&lt;0.0001</entry>
+                  <entry>0.75</entry>
+                  <entry>0.6</entry>
+                  <entry>0.78</entry>
+                  <entry>0.56</entry>
+                </row>
+                <row>
+                  <entry>QT &gt;30</entry>
+                  <entry>76</entry>
+                  <entry>71</entry>
+                  <entry>4</entry>
+                  <entry>23</entry>
+                  <entry>6.16</entry>
+                  <entry>0.0013</entry>
+                  <entry>0.85</entry>
+                  <entry>0.52</entry>
+                  <entry>0.95</entry>
+                  <entry>0.24</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00030-en" num="0028">As can be seen in Table 2, an individual's CERKL sequence at the SNP_A-4232718, rs993648 locus is highly predictive of whether the individual will experience QT prolongation following the administration of iloperidone. For example, using the lowest threshold of a change in QTc interval (between baseline and the end of the second week) greater than 5 milliseconds (normal QTc intervals are between 0.30 and 0.44 seconds for males and between 0.30 and 0.45 for females), 72 of those individuals with a SNP genotype (test is considered positive if genotype for SNP_A-4232718, rs993648 is non-AB) associated with a predisposition to QT prolongation experienced QT prolongation while only 22 such individuals did not. Similarly, nearly twice as many individuals (72) experiencing QT prolongation possessed a SNP genotype associated with a predisposition to QT prolongation as did not (38). This resulted in a sensitivity (probability that the individual will have a SNP genotype associated with a predisposition to QT prolongation, given that he/she experienced QT prolongation) of 0.65 and a specificity (probability that the individual will not have a SNP genotype associated with a predisposition to QT prolongation, given that he/she did not experience QT prolongation) of 0.66, a negative predictive value (probability that the individual will not experience QT prolongation, given that he/she does not have a SNP genotype associated with a predisposition to QT prolongation) of 0.53, and a positive predictive value (probability that the individual will experience QT prolongation, given that he/she has a SNP genotype associated with a predisposition to QT prolongation) of 0.77.</p>
+      <p id="p-00031-en" num="0029">The use of higher thresholds (i.e., QTs greater than 15 and 30 milliseconds) yielded markedly increased negative predictive values (0.78 and 0.95, respectively). The associated decrease in positive predictive values, from 0.77 for QTs greater than 5 milliseconds to 0.24 for QTs greater than 30 milliseconds) suggests that additional factors affect more severe QT prolongation.</p>
+      <p id="p-00032-en" num="0030">As the data in Table 2 show, an individual's CERKL sequence at the SNP loci above may be used to predict whether an individual is predisposed to QT prolongation due to the administration of a compound capable of prolonging the QT interval. That is, individuals having one or more SNP genotype associated with a predisposition to QT prolongation may reliably be predicted to experience a prolonged QT interval (i.e., a QT interval prolonged by at least 5 milliseconds) following the administration of a compound capable of prolonging the QT interval. Similarly, individuals not having any of the above SNP genotypes associated with a predisposition to QT prolongation may reliably be predicted to not experience severe QT prolongation (i.e., a QT interval prolonged greater than 15 milliseconds) following the administration of a compound capable of prolonging the QT interval.</p>
+      <p id="p-00033-en" num="0031">The ability to make such predictions may be used in deciding whether to treat an individual with a particular compound and/or in determining the dosage appropriate for the individual. For example, an individual predicted to experience QT prolongation may be treated with an alternative compound not known or suspected to cause QT prolongation or may be administered a lower dose of a compound capable of causing QT prolongation than would be administered to an individual not predicted to experience QT prolongation.</p>
+      <p id="p-00034-en" num="0032">The present invention also includes the administration of another compound useful in treating LQTS, in addition to one or more of the compounds above. Compounds useful in treating LQTS and/or preventing cardiac events resulting from LQTS, include, for example, beta blockers, such as propranolol, nadolol, atenolol, metoprolol.</p>
+      <p id="p-00035-en" num="0033">The present invention also includes the prediction of an individual's predisposition for QT prolongation based on one or more of the SNP loci above in combination with the individual's genotype or gene sequence at one or more additional genes or loci. For example, International Patent Application Publication No. WO2006039663, incorporated herein by reference, describes a method of treating an individual with a compound capable of inducing QT prolongation based on the individual's CYP2D6 genotype. Other genotypes and/or gene sequences may similarly be used in combination with the SNP loci above, including those associated with LQTS.</p>
+      <p id="p-00036-en" num="0034">Multiple techniques for determining the sequence of the CERKL gene or of one or more portions thereof (including, e.g., the following SNPs: rs895901, rs1441162, rs993650, rs993648, rs16867450, rs16867452, rs6433927) are well known in the art. These include amplifying and sequencing genomic or complementary DNA or mRNA as well as, e.g., hybridization techniques.</p>
+      <p id="p-00037-en" num="0035">After determining the genotype across the entire CERKL gene or a portion of it, such as the SNPs identified above, the patient's genotype can be compared to genotypes described above as being associated with prolonged QT prolongation. Thus, e.g., if a given individual's genotype at rs993648 is other than A in one gene and G in the second copy of that gene, then, with reference to Table 1, one can see that that person is predisposed to prolonged QT interval.</p>
+      <p id="p-00038-en" num="0036">In one practice of the invention, a person or other entity performing a genotyping test for an individual's CERKL gene will determine the genotype only for one or more of single nucleotide polymorphism (SNP) loci selected from the group consisting of: rs895901, rs1441162, rs993650, rs993648, rs16867450, rs16867452, and rs6433927. In a related practice of the invention, a person or other entity that performs such genotype assay will determine the person's genotype at one or more of said loci and will report the person's genotype only at such one or more of said loci.</p>
+      <p id="p-00039-en" num="0037">It should also be understood that the present invention includes the characterization of an expression product of the CERKL gene rather than, or in addition to, the determination of one or more SNP genotypes within the CERKL gene. For example, by determining a sequence of an mRNA strand transcribed from the CERKL gene, it is possible to determine the sequence of the CERKL gene itself and, as described above, determine whether the CERKL gene sequence is associated with a predisposition to QT prolongation.</p>
+      <p id="p-00040-en" num="0038">Similarly, by properly characterizing a peptide or protein, including the CERKL enzyme, translated from the mRNA strand above, it is possible to determine the sequence of the CERKL gene itself and, as described above, determine whether the CERKL gene sequence is associated with a predisposition to QT prolongation.</p>
+      <p id="p-00041-en" num="0039">Phenotypic assays that indirectly determine a person's CERKL genotype are described, e.g., with respect to CYP2D6 alleles, by Leyland-Jones, US20030170176.</p>
+      <p id="p-00042-en" num="0040">This invention encompasses kits and reagents for determining an individual's CERKL genotype, including, e.g., probes and primers. Kits of the invention include reagents and, optionally, other materials, useful in determining an individual's genotype for the CERKL gene. Such kit may include, e.g., a detection means, a collection device, containers, and instructions, and may be used in determining a patient's CERKL genotype, such as for determining an appropriate treatment strategy for a person having a disorder for which iloperidone is indicated. Such treatment strategy might comprise, e.g., choosing a different drug, i.e., one not associated with QT prolongation, adjusting the dose of iloperidone, or monitoring the patient during treatment for prolonged QT interval.</p>
+      <p id="p-00043-en" num="0041">Detection means may detect a CYP2D6 polymorphism directly or indirectly via mRNA or protein. Such detection means may also indirectly determine genotype at a relevant loci by taking advantage of linkage disequilibrium with another polymorphism. Detection means include, e.g., polynucleotides used in amplification, sequencing and SNP detection techniques, Invader® assays (Third Wave Technologies Inc.), Taqman® assays (Applied Biosystems, Inc.) gene chip assays (such as those available from Affymetrix, Inc.), pyrosequencing, fluorescence resonance energy trasnfer (FRET)-based cleavage assays, fluorescent polarization, denaturing HPLC, mass spectometry, and polynucleotides having fluorescent or radiological tags used in amplification and sequencing.</p>
+      <p id="p-00044-en" num="0042">Collection devices suitable for use in the invention include devices known in the art for collecting and/or storing a biological sample of an individual from which nucleic acids and/or polypeptides can be isolated. Such biological samples include, for example, whole blood, semen, saliva, tears, urine, fecal material, buccal smears, skin, hair, and biopsy samples. Accordingly, suitable collection devices include, for example, specimens cups, swabs, glass slides, test tubes, lancets, and Vacutainer® tubes and kits.</p>
+      <p id="p-00045-en" num="0043">An illustrative embodiment of a kit of the invention is a kit that comprises a set of oligonucleotides, wherein each member of the set selectively hybridizes to regions of selected variants of the CERKL gene that comprise one or more SNPs selected from the group consisting of: rs895901, rs1441162, rs993650, rs993648, rs16867450, rs16867452, and rs6433927. By “selectively hybridizes,” one of skill in the art would understand that the oligonucleotide will hybridize preferentially for a given SNP genotype such that the nucleotide in that SNP locus can be determined. Such oligonucleotides can be provided, e.g., in the form of an array of nucleic acid molecules attached to a support, wherein the array has oligonucleotides that will hybridize to selected allelic variants, or SNPs, of CERKL, such as, e.g., rs993648.</p>
+      <p id="p-00046-en" num="0044">Such nucleic acids of the invention can be used, for e.g., in prognostic methods, such as are described herein. Specifically, for example, the nucleic acids of the invention can be used as probes or primers to determine whether a subject has a genotype for the CERKL gene that is associated with predisposition to QT prolongation.</p>
+      <p id="p-00047-en" num="0045">Assays for determining genotype for the CERKL gene can be done in many clinical laboratories, such as those found in a typical hospital, clinic and private reference laboratories. In accordance with an aspect of this invention, kits are designed that contain some or all the reagents, primers and solutions for the genotyping assay.</p>
+      <p id="p-00048-en" num="0046">An illustrative assay for determining an individuals CERKL genotype comprises: a) obtaining a genomic DNA sample of said subject; b) using the DNA sample of step a), amplifying a fragment comprising a polymorphic site of the CYP2D6 genes; c) hybridizing the amplified fragment of step b) with allele-specific oligonucleotides probes corresponding to wild type and variant alleles to determine the CYP2D6 genotype of the subject. Such methods include methods that are well known, such as are disclosed by Milos et a., US20030170176, Huang, US20040091909, Neville, et al., US20040096874, WO03544266, and WO03038123.</p>
+      <p id="p-00049-en" num="0047">In addition, the present invention includes determining whether a compound is capable of prolonging a QT interval in an individual. This may be done, for example, by measuring a change in QT interval in a test organism (e.g., human, animal model, cell line) known to possess a CERKL genotype associated with a predisposition to QT prolongation following the administration of a quantity of compound under study. Preferably, the compound is also administered to a test organism known to possess a CERKL genotype not associated with a predisposition to QT prolongation.</p>
+      <p id="p-00050-en" num="0048">The foregoing description of various aspects of the invention has been presented for purposes of illustration and description. It is not intended to be exhaustive or to limit the invention to the precise form disclosed, and obviously, many modifications and variations are possible. Such modifications and variations that may be apparent to a person skilled in the art are intended to be included within the scope of the invention as defined by the accompanying claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of administering to an individual a compound capable of prolonging the individual's QT interval, the method comprising:
+<claim-text>characterizing an expression product of an individual's ceramide kinase-like (CERKL) gene; and</claim-text><claim-text>in the case that the characterized expression product is associated with an increased risk of QT prolongation, administering to the individual a quantity of the compound less than would be administered to an individual having an expression product not associated with an increased risk of QT prolongation.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the expression product includes at least one expression product selected from the group consisting of: mRNA, a peptide, and a protein.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en" independent="true">
+      <claim-text>
+        <b>3</b>. A method of determining whether a compound is capable of prolonging a QT interval in an individual, the method comprising:
+<claim-text>measuring an expression product of the individual's ceramide kinase-like (CERKL) gene;</claim-text><claim-text>administering to the individual a quantity of the compound;</claim-text><claim-text>remeasuring the expression product of the individual's CERKL gene; and</claim-text><claim-text>determining whether the compound is capable of prolonging the individual's QT interval based on a difference in the measurements of the expression product of the individual's CERKL gene.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the expression product includes at least one expression product selected from the group consisting of: mRNA, a peptide, and a protein.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en" independent="true">
+      <claim-text>
+        <b>5</b>. A method of determining whether a compound is capable of prolonging a QT interval in an individual, the method comprising:
+<claim-text>measuring a QT interval of each of a plurality of test organisms, the plurality including a first test organism having a ceramide kinase-like (CERKL) genotype associated with a predisposition for prolongation of QT interval and a second organism having a CERKL genotype not associated with a predisposition for prolongation of QT interval;</claim-text><claim-text>administering a quantity of the compound to each of the plurality of test organisms;</claim-text><claim-text>remeasuring a QT interval of at least the first test organism; and</claim-text><claim-text>determining that the compound is capable of prolonging a QT interval in an individual in the case that the remeasured QT interval is greater than the measured QT interval.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein each of the plurality of test organisms is selected from the group consisting of: humans, animals, and cell lines. </claim-text>
+    </claim>
+  </claims>
+  <image file="US20150259747A1.PDF" type="pdf" size="454885" pages="7" />
+</lexisnexis-patent-document>

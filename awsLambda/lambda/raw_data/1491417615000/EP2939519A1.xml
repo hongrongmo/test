@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2939519A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091222" date-changed="20160104" time-changed="145515">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121940386">
+        <country>EP</country>
+        <doc-number>2939519</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15165946</doc-number>
+        <date>20150430</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>14268377</doc-number>
+        <date>20140502</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>201414268377</doc-number>
+        <kind>A</kind>
+        <date>20140502</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201414268377</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US201414268377</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160104">
+      <classification-ipcr sequence="1">
+        <text>A01D  75/00        20060101AFI20150922BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>75</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150922</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A01B  73/00        20060101ALI20150922BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>73</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150922</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160104">
+      <classification-cpc sequence="1">
+        <text>A01D  75/004       20130101 FI20151106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>75</main-group>
+        <subgroup>004</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A01B  73/005       20130101 LI20151107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>73</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A01D  41/144       20130101 LI20151222BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>41</main-group>
+        <subgroup>144</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151222</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">HYDRAULISCHES SYSTEM FÜR EINEN KOPF EINER LANDWIRTSCHAFTLICHEN ERNTEMASCHINE</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">TRANSPORT SYSTEM FOR A HEADER OF AN AGRICULTURAL HARVESTER</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">SYSTÈME HYDRAULIQUE POUR L'EMBASE D'UNE MOISSONNEUSE AGRICOLE</invention-title>
+    <references-cited date-changed="20151110">
+      <patent-citations name="patcit" date-changed="20151110" />
+      <citation>
+        <patcit num="1" dnum="EP2322024A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>2322024</doc-number>
+            <kind>A1</kind>
+            <name>CNH BELGIUM NV [BE]</name>
+            <date>20110518</date>
+          </document-id>
+          <application-date>
+            <date>20101108</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US3590928A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3590928</doc-number>
+            <kind>A</kind>
+            <name>MIRUS FERNDINAND</name>
+            <date>19710706</date>
+          </document-id>
+          <application-date>
+            <date>19690428</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="EP1055357A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1055357</doc-number>
+            <kind>A1</kind>
+            <name>DEERE &amp; CO [US]</name>
+            <date>20001129</date>
+          </document-id>
+          <application-date>
+            <date>20000512</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US8025312B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8025312</doc-number>
+            <kind>B1</kind>
+            <name>HONAS ROBERT [US], et al</name>
+            <date>20110927</date>
+          </document-id>
+          <application-date>
+            <date>20100617</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US8151547B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8151547</doc-number>
+            <kind>B2</kind>
+            <name>BICH GARY [US], et al</name>
+            <date>20120410</date>
+          </document-id>
+          <application-date>
+            <date>20091002</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>CNH Industrial Belgium nv</orgname>
+            <registered-number>101425793</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Leon Claeysstraat 3A</address-1>
+              <city>8210 Zedelgem</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Noll, Blaine R.</name>
+            <address>
+              <address-1>4 Daisy Lane</address-1>
+              <city>Fleetwood, Pennsylvania 19522</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Cook, Joel T.</name>
+            <address>
+              <address-1>1319 Front Street</address-1>
+              <city>Lititz, Pennsylvania 17543</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Lauwers, Andrew V.</name>
+            <address>
+              <address-1>38 Summers Drive</address-1>
+              <city>Stevens, Pennsylvania 17578</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>CNH Industrial IP Department</name>
+            <registered-number>101358245</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Patent Department, Leon Claeysstraat 3A</address-1>
+              <city>8210 Zedelgem</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151105">
+      <main-family family-id="174442473">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150313084</doc-number>
+            <kind>A1</kind>
+            <date>20151105</date>
+          </document-id>
+          <application-date>
+            <date>20140502</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939519</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20150430</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174442472">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150313084</doc-number>
+            <kind>A1</kind>
+            <date>20151105</date>
+          </document-id>
+          <application-date>
+            <date>20140502</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939519</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20150430</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A transport assembly (140) for a header of an agricultural harvester is provided. The assembly comprises a header frame (113), an axle support member (166) and a two point pivot linkage assembly (178, 180). The axle support member (166) supports a wheel axle (164), the wheel axle (164) rotatably carrying a wheel (162). The two point pivot linkage assembly (178, 180) links the axle support member (166) to the header frame (113), the two point pivot linkage assembly (178, 180) having first ends (184) pivotably connected to the header frame (113) and second ends (190) opposite the first ends (184) pivotably connected to the axle support member (166), wherein the axle support member (166) pivots about the two point pivot linkage assembly (178, 180) between a transportation position and a harvesting position.. <img id="imga-00001-en" wi="136" he="91" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">BACKGROUND</heading>
+    <p id="p-00001-en" num="0001">The subject application relates generally to a header for use with agricultural harvesters. In particular, the subject application relates to a wheel transport assembly for enabling the header to be converted from a harvesting configuration wherein the header may harvest crop to a transportation configuration wherein the header may be transported on roads from one location to another.</p>
+    <p id="p-00002-en" num="0002">To increase harvesting efficiency, harvesters, such as combines, have increased in size and capacity. With this increase in capacity, the detachable header attached to the combine for picking a crop has increased in size as well. The increased size of the header has resulted in transportation difficulties in moving the header from field to field. In many instances, larger headers must be transported lengthwise down roads. As consequence, operators often use a separate trailer to transport the headers. As consequence, an operator is required to purchase and maintain a separate piece of trailer machinery, and the header must be returned to the trailer or the trailer brought to the header for transport. Other headers include wheels that can be attached for transportation and detached for operation. However, such wheels can be heavy and difficult to remove and reattach.</p>
+    <p id="p-00003-en" num="0003">Other headers include integral wheels for harvesting and transportation. In some of these headers, the transport wheels swing beneath the header frame between harvesting and transport positions. In situations where there is sufficient ground clearance to permit free swinging of the wheels under the header frame, the wheels only touch the ground during header transport. An advantage of such systems is that the wheels do not touch the ground during harvesting. Consequently, the header cutterbar can cut very close to the ground during a harvesting operation. A disadvantage of such apparatus, however, is that on certain combines and tire combinations there is insufficient ground clearance to permit free swinging of the wheel under the header frame between the transport and harvesting positions. Under such circumstances, the wheel can contact the ground during deployment which can result in part failure such as damage to the wheel, its support structure and/or the actuator that moves the wheel between the transport and harvesting positions.</p>
+    <heading id="h-00002-en">BRIEF SUMMARY</heading>
+    <p id="p-00004-en" num="0004">In accordance with a first aspect, the subject application provides a transport assembly for a header of an agricultural harvester including a header frame, an axle support member and a first swing arm having a first end pivotably connected to the header frame and a second end opposite the first end pivotably connected to the axle support member. The axle support member pivots relative to the first swing arm between a first position and a second position.</p>
+    <p id="p-00005-en" num="0005">In accordance with a second aspect, the subject application provides a wheel assembly for a combine harvester including a wheel axle support member having a proximal end and a distal end connected to a wheel. The wheel assembly further includes a first linkage and a second linkage. The first linkage has a first end for pivotably connecting to a chassis and a second end opposite the first end pivotably connected to the wheel axle support member. The second linkage has a first end for pivotably connecting to a chassis and a second end opposite the first end pivotably connected to the wheel axle support member. The wheel axle support member pivots relative to the first and second linkages between a first position and a second position.</p>
+    <p id="p-00006-en" num="0006">In accordance with a third aspect, the subject application provides a transport assembly for a header of an agricultural harvester including a header frame, an axle support member supporting a wheel axle and the wheel axle rotatably carrying a wheel. The assembly further includes a two point pivot linkage assembly linking the axle support member to the header frame. The two point pivot linkage assembly has first ends pivotably connected to the header frame and second ends opposite the first ends pivotably connected to the axle support member. The axle support member pivots about or relative to the two point pivot linkage assembly between a transportation position and a harvesting position.</p>
+    <p id="p-00007-en" num="0007">In accordance with a fourth aspect, the subject application provides a method of moving a wheel of a header of a combine harvester between a transport position and a harvesting position. The method includes the act of linking the wheel to a frame of the header with a two point pivot linkage assembly, wherein the wheel is moveable relative to the frame between the transportation position and the harvesting position. When in the transportation position the wheel defines a circle with a radius defined by a fixed distance of the wheel from the frame as a result of the two point pivot linkage assembly. The method further includes the act of moving the wheel from the transportation position to the harvesting position in a chord-like fashion partially through the circle.</p>
+    <p id="p-00008-en" num="0008">In accordance with a fifth aspect, the subject application provides a folding wheel conversion system for a header of a combine harvester wherein the transport wheel swings under the header frame through a vertical plane as it moves between transportation and harvesting positions. Existing wheel folding transport assemblies of this sort follow a true circular arc path whereas the system of the subject application follows a flatter arc as it swings beneath the header frame thereby resulting in increased ground clearance at the bottom of the arc.</p>
+    <p id="p-00009-en" num="0009">The system of the subject application provides a wheel support frame with an additional structural joint to allow the wheel mount or wheel axle support member to fold with assistance from a control rod that is mounted to a main transport frame. Two additional angle members are also provided that become pinched between a wheel frame and the main transport frame when the combine and header are in transport mode whereby the control rod does not experience loading while the combine is traveling on a road or highway.</p>
+    <p id="p-00010-en" num="0010">An extendable and retractable actuator moves the wheel from road (transportation) mode to field (harvesting) mode, and vice versa. As the wheel under the header cutterbar begins to move from transportation mode to harvesting mode, the control rod acts on the wheel mount and begins to fold it inwardly. As the wheel continues to move, the control rod continues to pull the wheel mount closer to the header frame as it passes under the header, thereby creating additional ground clearance versus existing designs. Once the wheel mount passes directly under the control rod mounting point, the control rod begins to push the wheel mount away from the header frame so that the wheel mount can clear the lower tube of the header frame. And, once fully in field (harvesting) mode, the wheel mount and wheel support frame are again perpendicular to each other and stowed under the header frame. While proceeding from field (harvesting) mode to road (transportation) mode, the system works in an opposite fashion.</p>
+    <p id="p-00011-en" num="0011">Further, as the wheel mount reaches the end of the actuator stroke going from harvesting to transportation mode, the two angle members become pinched between the transport main frame and the cutterbar wheel mount. Consequently, side loading that the wheel mount may experience during transportation mode or connection to the combine is absorbed. Likewise, loading on the control rod during transportation mode is eliminated.</p>
+    <heading id="h-00003-en">BRIEF DESCRIPTION OF THE SEVERAL VIEWS OF THE DRAWINGS</heading>
+    <p id="p-00012-en" num="0012">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>
+          <figref>FIG. 1</figref> is a front elevation view of a conventional agricultural harvester including a header;</li>
+        <li>
+          <figref>FIG. 2</figref> is a front perspective view of an agricultural harvester header frame including a wheel assembly according to an aspect of the subject application;</li>
+        <li>
+          <figref>FIG. 3</figref> is a rear perspective view of a wheel assembly according to an aspect of the subject application;</li>
+        <li>
+          <figref>FIG. 4</figref> is a side view of a header frame and wheel assembly according to an aspect of the subject application with the wheel thereof shown in a transportation mode;</li>
+        <li>
+          <figref>FIG. 5</figref> is a side view of the header frame and wheel assembly of <figref>FIG. 4</figref> with the wheel thereof shown in a position intermediate a transportation mode and a harvesting mode;</li>
+        <li>
+          <figref>FIG. 6</figref> is a side view of the header frame and wheel assembly of <figref>FIG. 4</figref> with the wheel thereof shown in a further position intermediate a transportation mode and a harvesting mode;</li>
+        <li>
+          <figref>FIG. 7</figref> is a side view of the header frame and wheel assembly of <figref>FIG. 4</figref> with the wheel thereof shown in a further position intermediate a transportation mode and a harvesting mode;</li>
+        <li>
+          <figref>FIG. 8</figref> is a side view of the header frame and wheel assembly of <figref>FIG. 4</figref> with the wheel thereof shown in a further position intermediate a transportation mode and a harvesting mode;</li>
+        <li>
+          <figref>FIG. 9</figref> is a side view of the header frame and wheel assembly of <figref>FIG. 4</figref> with the wheel thereof shown in a harvesting mode;</li>
+        <li>
+          <figref>FIG. 10</figref> is a side cross-section view of a header frame and wheel assembly according to an aspect of the subject application taken along line A-A of <figref>FIG. 2</figref> with the wheel thereof shown in a transportation mode;</li>
+        <li>
+          <figref>FIG. 11</figref> is a side cross-section view of the header frame and wheel assembly of <figref>FIG. 10</figref> with the wheel thereof shown in a position intermediate a transportation mode and a harvesting mode;</li>
+        <li>
+          <figref>FIG. 12</figref> is a side cross-section view of the header frame and wheel assembly of <figref>FIG. 10</figref> with the wheel thereof shown in a further position intermediate a transportation mode and a harvesting mode;</li>
+        <li>
+          <figref>FIG. 13</figref> is a side cross-section view of the header frame and wheel assembly of <figref>FIG. 10</figref> with the wheel thereof shown in a harvesting mode; and</li>
+        <li>
+          <figref>FIG. 14</figref> is a composite side view of a header frame, a wheel assembly according to the subject application and a conventional wheel assembly showing the paths of movement of a wheel according to the subject application and the wheel according to the conventional design between transportation and harvesting positions.</li>
+      </ul>
+    </p>
+    <heading id="h-00004-en">DETAILED DESCRIPTION</heading>
+    <p id="p-00013-en" num="0013">Reference will now be made in detail to the various aspects of the subject application illustrated in the accompanying drawings. Wherever possible, the same or like reference numbers will be used throughout the drawings to refer to the same or like features. It should be noted that the drawings are in simplified form and are not drawn to precise scale. In reference to the disclosure herein, for purposes of convenience and clarity only, directional terms such as top, bottom, left, right, above, below and diagonal, are used with respect to the accompanying drawings. Such directional terms used in conjunction with the following description of the drawings should not be construed to limit the scope of the subject application in any manner not explicitly set forth. Additionally, the term "a," as used in the specification, means "at least one." The terminology includes the words above specifically mentioned, derivatives thereof, and words of similar import.</p>
+    <p id="p-00014-en" num="0014">Referring now to the drawings, wherein aspects of the subject application are shown, <figref>FIG. 1</figref> illustrates an agricultural harvester 10 such as a combine. Harvester 10 includes a header 12 including a chassis or frame 13 which is attached to a forward end 14 of the harvester. Header 12 is configured to cut crops and to induct the cut crops into a feederhouse 16 as harvester 10 moves forward over a crop field.</p>
+    <p id="p-00015-en" num="0015">Header 12 further includes a floor 18 that is supported in desired proximity to the surface of a crop field and an elongate sickle or cutterbar 20 that extends transversely along a forward edge of the floor 18. Cutterbar 20 is configured to cut crops in preparation for induction into the feederhouse 16. Additionally, header 12 includes an elongate, transversely extending harvesting reel 22 disposed above cutterbar 20. Harvesting reel 22 is rotatable in a direction suitable for facilitating the induction of cut crops into feederhouse 16. Header 12 further includes an elongate, rotatable auger 24 which extends in close proximity to a top surface 26 of floor 18. Auger 24 is configured to cooperate with harvesting reel 22 in conveying cut crops to feederhouse 16, which is configured to convey the cut crops into harvester 10 for threshing and cleaning. While <figref>FIG. 1</figref> illustrates a header including an auger conveyor system, it will be understood that the header may alternatively be configured to include a draper conveyor system or any combination of auger, draper or other conveyor system that may be suitable for conveying cut crop material to feederhouse 16.</p>
+    <p id="p-00016-en" num="0016">Cutterbar 20 extends along a forward edge 28 of floor 18, and generally is bounded by a first side edge 30 and an opposing second side edge 32 of floor 18. Cutterbar 20 can be configured to include a first reciprocating knife assembly 34 and a second reciprocating knife assembly 36 (along with an unillustrated stationary knife). The reciprocating mechanisms of such knife assemblies are known in the art and a further detailed description of their structure, function and operation is not necessary for a complete understanding of the subject application. However, a typical reciprocating mechanism applicable to the knife assembly of the subject application is disclosed in <patcit id="pcit-00001" dnum="US8151547B"><text>U.S. Patent No. 8,151,547</text></patcit>.</p>
+    <p id="p-00017-en" num="0017">Referring to <figref>FIG. 2</figref>, there is generally shown a transport assembly 140 for a header of an agricultural harvester according to an aspect of the subject application. The transport assembly, which is depicted in a transportation mode, includes a header frame 113 having upper and lower hollow beams 142, 144 which are joined by a rear wall 146. An attachment frame 148 is affixed to the rear wall and is configured to detachably connect the frame 113 to a combine in the known manner. An opening 150 is situated generally in the center of wall 146 and is alignable with the mouth of a combine feederhouse such as feederhouse 16 (<figref>FIG. 1</figref>). A plurality of rigid profile members 152 are affixed to and extend forwardly from the lower beam 144. A cutterbar support beam 154 is affixed to the fore ends of the profile members and is configured to carry a cutterbar such as cutterbar 20 (<figref>FIG. 1</figref>). Frame 113 can also include one or more rods 156 extending diagonally from the rear wall 142 to the cutterbar support beam 154 in order to counteract flexure of the frame 113 during operation of the header.</p>
+    <p id="p-00018-en" num="0018">Still referring to <figref>FIG. 2</figref>, there is shown a wheel assembly 160 according an aspect of the subject application. The wheel assembly, which is described in greater detail below, is mounted to the header frame or chassis 113 between a pair of profile members 152 and includes a wheel 162 upon which the transport assembly 140 is supported when being transported from one location to another. As will be described hereinafter and as generally shown in <figref>FIG. 3</figref>, in addition to the header frame 113, the transport assembly 140 includes at least an axle support member 166 and a first swing arm 178 having a first end pivotably connected to the header frame and a second end opposite the first end pivotably connected to the axle support member. So constructed and arranged, the axle support member pivots relative to the first swing arm between a first position and a second position. The first position can be a header transportation position and the second position can be a header harvesting position, or vice versa.</p>
+    <p id="p-00019-en" num="0019">Referring to <figref>FIG. 3</figref>, the wheel assembly 160 is shown on an enlarged scale. As seen in <figref>FIG. 3</figref>, the wheel 162 is rotatably supported on a wheel axle 164 which, in turn, is supported by an axle support member 166. The axle support member has a first or proximal end 168 and a second end 170 distal to the first end which carries axle 164.</p>
+    <p id="p-00020-en" num="0020">The wheel assembly additionally includes a mounting plate 172 for facilitating attachment of the wheel assembly to the header frame 113 (<figref>FIG. 2</figref>). Plate 172 may be permanently attached to the header frame such as by welding or the like. In the alternative, plate 172 may be provided with a plurality of apertures 174 through which unillustrated fasteners such as bolts or the like may pass in order to releasably attach the wheel assembly to the header frame.</p>
+    <p id="p-00021-en" num="0021">Affixed to and extending forwardly of the mounting plate 172 is a pair of frame members 176 which pivotably support first and second swing arms or linkages 178, 180 in the manner described below. According to an aspect, wheel assembly further includes a cross beam 182 extending through the frame members 176. Opposite ends of the cross beam are attachable to an adjacent pair of header frame profile members 152 (<figref>FIG. 2</figref>) in order to distribute the load experienced by the wheel 162 to the profile members as well as the mounting plate 172 during transport of the header.</p>
+    <p id="p-00022-en" num="0022">Referring to <figref>FIGS. 4</figref> and <figref>5</figref>, the first swing arm or linkage 178 comprises a pair of channel members 178a, one of which is shown in <figref>FIGS. 4</figref> and <figref>5</figref>, that are pivotably connected to the header frame 113 by virtue of pivoted connections to the frame members 176. More specifically, as shown in <figref>FIG. 4</figref>, each of channel members 178a of the first swing arm or linkage 178 has a first end 184 that is affixed to a plate 186 that in turn is pivotably connected to frame member 176 at pivot 188. As seen in <figref>FIG. 5</figref>, each channel member 178a of the first swing arm or linkage 178 has a second end 190 that is pivotably connected at pivot 192 proximate to the first or proximal end 168 of the axle support member 166.</p>
+    <p id="p-00023-en" num="0023">
+      <figref>FIGS. 4</figref> and <figref>5</figref> additionally show the structural connections of the second swing arm or linkage 180. The second swing arm or linkage is pivotably connected to the header frame 113 by virtue of a pivoted connection to frame member 176. More particularly, the second swing arm or linkage has a first end 194 pivotably connected at pivot 196 to frame member 176 and a second end 198 opposite the first end pivotably connected at pivot 200 to the axle support member 166 at a point spaced from the second end of the first swing arm or linkage 178. In particular, the pivot 200 is spaced from pivot 192 and situated closer to the axle 164 than pivot 192. As seen in <figref>FIGS. 4</figref> and <figref>5</figref>, and for reasons described hereinafter, the second swing arm or linkage 180 has an overall longitudinal length greater than an overall longitudinal length of the first swing arm or linkage 178 and has its first end pivotably connected to the header frame above the first end of the first swing arm or linkage.</p>
+    <p id="p-00024-en" num="0024">Referring back to <figref>FIG. 3</figref>, the wheel assembly 160 further includes a pair of brackets 202 connected to one of the first swing arm or linkage 178 and the wheel axle support member 166 to limit pivotable movement of the wheel axle support member relative to the first swing arm or linkage. In <figref>FIGS. 4</figref> and <figref>5</figref>, it will be seen that each bracket 202 is configured substantially as an L-bracket having legs 204 and 206. Leg 204 is rigidly connected to the wheel axle support member 166 such as by bolting, welding or the like, and leg 206 is operable to pivot or swing with respect to the first swing arm or linkage 178 about pivot 192. As most clearly seen in <figref>FIGS. 3</figref> and <figref>4</figref>, during transport of the header 112 proximal ends 206a of legs 206 rest atop the channel members 178a and beneath distal ends of the frame members 176.</p>
+    <p id="p-00025-en" num="0025">So positioned, the legs 206 are pinched or clamped between the channel members 178a and the frame members 176. As a consequence, potentially harmful weight loading on the second swing arm or linkage 180, including the weight of the wheel 162, the axle 164, the wheel axle support member 166 and the first swing arm or linkage 178, is effectively eliminated during header transport.</p>
+    <p id="p-00026-en" num="0026">Collectively, therefore, FIGS. 3-5 show the wheel assembly which includes the wheel axle support member 166, the first swing arm 178 and the second swing arm 180 having the proximal end 168 and the distal end 170 connected to the wheel 162. The assembly further includes the first swing arm or linkage 178 having the first end 184 for pivotably connecting to the chassis 113 and the second end 190 opposite the first end pivotably connected to the wheel axle support member. In addition, the assembly includes the second swing arm or linkage 180 having the first end 194 for pivotably connecting to the chassis 113 and the second end 198 opposite the first end pivotably connected to the wheel axle support member, wherein the wheel axle support member pivots relative to the first and second swing arms or linkages between the first position and the second position.</p>
+    <p id="p-00027-en" num="0027">Referring to FIGS. 4-9 there is shown the interrelationship between the first and second swing arms or linkages 178, 180 and the path of movement of wheel 162 as the wheel is moved from a header transportation or road position (<figref>FIG. 4</figref>) to a field or harvesting position (<figref>FIG. 9</figref>). As the wheel moves from the position shown in <figref>FIG. 4</figref> to that shown in <figref>FIG. 9</figref>, it travels along a vertical plane through an arc of varying radius, as further described below.</p>
+    <p id="p-00028-en" num="0028">Referring initially to <figref>FIGS. 4</figref> and <figref>5</figref>, in <figref>FIG. 4</figref> the wheel 162 is depicted as it would appear when the header is being transported on a road, whereas in <figref>FIG. 5</figref> the wheel is shown as it would appear after it has begun to swing downwardly under the influence of a later-described actuator. In particular, comparison of <figref>FIGS. 4</figref> and <figref>5</figref> reveals that when viewed as shown in <figref>FIG. 5</figref> the first swing arm or linkage 178 has swung through an arc angle of approximately 45° in the clockwise direction while the wheel 162 has swung through an arc angle of about 75° in the clockwise direction. The reasons that the wheel 162 swings through an angle greater than that of the first swing arm or linkage 178 are two-fold. First, as discussed above, the wheel is carried by the wheel axle support member 166 which, in turn, is pivotably connected at pivot 192 to the first swing arm or linkage 178. Second, as the wheel 162 begins to traverse the path from the transportation position to the field position, the second swing arm or linkage 180 begins to pull on the wheel axle support member 166 thereby pulling the wheel toward the bottom of the header frame 113. That is, owing to the fixed distance the wheel axle support member 166 is connected to the first member 176 via the second swing arm, the pivot of the wheel axle support member must follow an arc path dictated by the second swing arm. This second aspect is reflected by the separation of L-bracket leg 206 from channel member 178a as depicted in <figref>FIG. 5</figref>.</p>
+    <p id="p-00029-en" num="0029">
+      <figref>FIG. 6</figref> shows a further stage in the path of motion of the wheel 162. As seen in <figref>FIG. 6</figref>, the first swing arm or linkage 178 has traversed an arc angle of approximately 75° from the transport position shown in <figref>FIG. 4</figref>. Simultaneously, the wheel 162 has swung through an arc angle of approximately 90° versus the <figref>FIG. 4</figref> transportation position. During this portion of the path of motion of wheel 162, the second swing arm or linkage 180 continues to pull upwardly on the wheel axle support member 166, thereby pulling the wheel 162 toward the bottom of the header frame 113 as compared to a constant radius arc path of the swing arms and fixed wheel axle support members of conventional wheel assemblies.</p>
+    <p id="p-00030-en" num="0030">
+      <figref>FIG. 7</figref> depicts a further stage in the path of motion of the wheel 162. As seen in <figref>FIG. 7</figref>, the first swing arm or linkage 178 has traversed an arc angle of approximately 90° from the transport position shown in <figref>FIG. 4</figref>. Simultaneously, the wheel 162 has swung through an arc angle of approximately 125° versus the <figref>FIG. 4</figref> transportation position. At this stage, the second swing arm or linkage 180 essentially ceases to pull on the wheel axle support member 166. That is, when the first swing arm or linkage 178 has traversed an arc angle of approximately 90° from the transport position shown in <figref>FIG. 4</figref>, the second swing arm or linkage 180 has pulled the wheel axle support member 166 as far inwardly as the length of the second swing arm or linkage will permit. It is at this position that the gap between the free legs 206 of the L-brackets 202 are at the greatest distance from the first swing arm or linkage 178.</p>
+    <p id="p-00031-en" num="0031">
+      <figref>FIG. 8</figref> shows a further stage in the path of motion of the wheel 162. As seen in <figref>FIG. 8</figref>, the first swing arm or linkage 178 has traversed an arc angle of approximately 125° from the transport position shown in <figref>FIG. 4</figref>. Simultaneously, the wheel 162 has swung through an arc angle of approximately 150° versus the <figref>FIG. 4</figref> transportation position. During this portion of the path of motion of wheel 162, the second swing arm or linkage 180 has begun to push on the wheel axle support member 166 thereby pushing the wheel away from the bottom of the header frame 113.</p>
+    <p id="p-00032-en" num="0032">
+      <figref>FIG. 9</figref> shows the wheel 162 as it would appear when the header is in harvesting mode. In this position, both the wheel and the first swing arm or linkage 178 have traversed arc angles of approximately 180° from their transportation positions shown in <figref>FIG. 4</figref>. As seen in <figref>FIG. 9</figref>, the second swing arm or linkage 180 has pushed the wheel axle support member 166 to its fullest extent wherein the gaps between the free legs 206 of the brackets 202 and the first swing arm or linkage 178 have closed, e.g., the free legs of the brackets have come to rest against the first swing arm or linkage.</p>
+    <p id="p-00033-en" num="0033">FIGS. 10-13 are side elevational cross-section views of the header frame and wheel assembly of the subject application taken along line A-A of <figref>FIG. 2</figref> and correspond substantially to the stages in the path of motion of the wheel 162 depicted in <figref>FIGS. 4</figref>, <figref>5</figref>, <figref>8</figref> and <figref>9</figref>, respectively.</p>
+    <p id="p-00034-en" num="0034">Referring to <figref>FIG. 10</figref>, wheel 162 is shown as it would appear when the header is being transported on a road, e.g. transportation mode. It is at this disposition of wheel 162 that a wheel assembly positioning actuator 210 is at its fully extended position. Actuator 210 can be any suitable extendable and retractable device such as a hydraulic cylinder, a pneumatic cylinder or a screw jack that derives its power from a hydraulic, pneumatic or electronic system provided on the combine or the header. As described below, the actuator 210 is operatively connected to the first swing arm or linkage 178 to move the first swing arm or linkage between an extended position wherein the wheel 162 is in a transportation position and a retracted position wherein the wheel is in a harvesting position.</p>
+    <p id="p-00035-en" num="0035">As illustrated in <figref>FIG. 10</figref>, actuator 210 is constructed as a two-way hydraulic cylinder. A cylinder portion 212 of the actuator is pivotably connected to header frame 113 at pivot 214. A piston portion 216 of the actuator 210 includes a piston 218 and a shaft or rod 220. Piston 218 is slidably received in the cylinder portion 212 and rod 220 has a first or proximal end integrally connected to and extending from the piston and a second or distal end pivotably connected at pivot 222 to a cylinder link 224. As illustrated, the cylinder link has a first end 226 pivotably connected at pivot 228 to gusset plates 230 (one of which is shown in <figref>FIG, 10</figref>) that are connected to the cross beam 182. Alternatively, the first end of the cylinder link can be pivotably mounted directly to the frame members 176. Cylinder link 224 also has a second end 232 pivotably connected at pivot 234 to first ends 236 of a pair of connecting links 238 (one of which is shown in <figref>FIG. 10</figref>). The connecting links 238 have second ends 240 that are pivotably connected at pivot 242 to plates 186.</p>
+    <p id="p-00036-en" num="0036">As described above in connection with <figref>FIG. 4</figref>, plates 186 are fixedly connected to the first ends 184 of channel members 178a of the first swing arm or linkage 178. In addition, the plates 186 are pivotably connected to frame members 176 at pivots 188. Accordingly, movement of the cylinder link 224 by operation of actuator 210 transfers motive force from the cylinder link to the pair of connecting links 238 which, in turn, transfer motive force to the plates 186. In so doing, movement of the actuator 210 causes downward and upward pivoting of the first swing arm or linkage 178 relative to the frame members 176. Simultaneously, the axle support member 166 pivots relative to the first swing arm or linkage 178 by virtue of the pivoted connections of the second swing arm or linkage 180 with the frame members 176 and the axle support member, respectively.</p>
+    <p id="p-00037-en" num="0037">Referring to <figref>FIG. 11</figref>, wheel 162 is shown as it would appear after it has begun to swing downwardly. In this position, piston 218 and rod 220 have begun to retract thereby pulling on the cylinder link 224 and causing the first swing arm or linkage 178 and plates 186 to pivot downwardly with respect to the frame members 176. <figref>FIG. 12</figref> shows the piston 218, rod 220 and cylinder link 224 further retracted and the wheel 162 in a position approaching the field or harvesting position. In <figref>FIG. 13</figref> the piston 218, rod 220 and cylinder link 224 are fully retracted and the wheel 162 is in the harvesting position.</p>
+    <p id="p-00038-en" num="0038">Turning to <figref>FIG. 14</figref> there is shown a composite image of a harvester header frame or chassis 113 hypothetically equipped with a header transport wheel assembly according to the subject application 160 and a conventional header transport wheel assembly 160'. In addition, <figref>FIG. 14</figref> shows the paths traversed by the wheels 162, 162' of the header transport wheel assembly according to the subject application and the conventional header transport wheel assembly between transportation and harvesting positions, and vice versa. As described above, the axle support member 166 according to the subject application is pivotably connected to the first and second swing arms or linkages 178, 180. In contrast, the axle support member 166' according to the conventional design is fixedly connected to a single swing arm or linkage 178'. As a result, and as seen in <figref>FIG. 14</figref>, the fixed connection between the single swing arm linkage 178' and the axle support member 166' results in the wheel 162' defining a constant radius r' with respect to its connection with the header frame or chassis 113. That is, the wheel 162' thus traverses a portion of a circle C' of constant radius r' as the wheel 162' moves from the transportation position to the harvesting position, and vice versa. Consequently, the wheel 162' swings lower than would otherwise be desirable beneath the header frame 113 when moving between the transportation and harvesting positions such that the wheel 162' contacts the ground and causes harm to the wheel assembly 160' during swinging.</p>
+    <p id="p-00039-en" num="0039">In contrast, the pivoted connection between the wheel axle support member 166 and the two point pivot linkage assembly 178, 180 of the subject application results in the wheel 162 traversing an arc C defined by a radius r that varies through out movement of the wheel from its transportation position to its harvesting position and vice versa. Beginning at the transportation position, e.g., that shown in <figref>FIG. 2</figref>, the wheel 162 would be disposed in substantially the same position as would the wheel 162' of the conventional design. In such position, the radii r' and r would be substantially equal because of the fixed distance of the wheel 162 from the frame 113 as a result of the two point pivot linkage assembly 178, 180. However, as the wheel 162 moves between the transportation and harvesting positions, the axle support member 166 pivots the wheel 162 inwardly relative to circle C' whereby the wheel moves through an arc of varying but lesser radius than radius r'. Alternatively expressed, the wheel 162 travels between its transportation and harvesting position partially in a chord-like fashion through circle C' along chord C. Constructed as such, greater ground clearance is provided by the wheel assembly 160 versus wheel assembly 160' thereby reducing the likelihood that the wheel 162 contacts the ground as it swings beneath the header frame 113.</p>
+    <p id="p-00040-en" num="0040">The subject application thus provides a transport assembly for a header of an agricultural harvester including a header frame or chassis 113, an axle support member 166 supporting a wheel axle 164, the wheel axle rotatably carrying a wheel 162. The two point pivot linkage assembly including the first and second swing arms or linkages 178, 180 links the axle support member to the header frame and the two point pivot linkage assembly has first ends pivotably connected to the header frame and second ends opposite the first ends pivotably connected to the axle support member. Constructed and arranged as such, the axle support member pivots relative to the two point pivot linkage assembly between a transportation position and a harvesting position.</p>
+    <p id="p-00041-en" num="0041">In addition to the above-described apparatus, the subject application provides a method of moving a transportation wheel of a header of a combine harvester between a transportation position and a harvesting position which reduces the likelihood of contact by the transportation wheel with the ground as the wheel swings between the transportation and harvesting positions, and vice versa. The method involves the acts of linking the wheel to a frame or chassis of the header with a two point pivot linkage assembly, wherein the wheel is moveable relative to the frame between the transportation position and the harvesting position. In the transportation position the wheel defines a circle with a radius defined by a fixed distance of the wheel from the frame as a result of the two point pivot linkage assembly. However, as a result of the two-point linkage assembly disclosed herein the radius between the wheel and the header frame varies as the wheel moves from the transportation position to the harvesting position. That is, as the wheel moves from the transportation position to the harvesting position it moves in a chord-like fashion partially through the circle defined by the harvesting position of the wheel. The result is an assembly that provides increased ground clearance at the bottom of the arc as the wheel swings beneath the header frame, thereby lessening the possibility that the wheel assembly will suffer damage as the wheel is moved between its transportation and harvesting positions.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A transport assembly (140) for a header of an agricultural harvester comprising:
+<claim-text>a header frame (113);</claim-text><claim-text>an axle support member (166) supporting a wheel axle (164), the wheel axle (164) rotatably carrying a wheel (162); and</claim-text><claim-text>a two point pivot linkage assembly (178, 180) linking the axle support member (166) to the header frame (113), the two point pivot linkage assembly (178, 180) having first ends (184) pivotably connected to the header frame (113) and second ends (190) opposite the first ends (184) pivotably connected to the axle support member (166),</claim-text><claim-text>wherein the axle support member (166) pivots about the two point pivot linkage assembly (178, 180) between a transportation position and a harvesting position.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The transport assembly (140) of claim 1, wherein in the transportation position the wheel (162) defines a circle having a radius defined by a fixed distance of the wheel (162) from the header frame (113) as a result of the two point pivot linkage assembly (178, 180).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The transport assembly (140) of claim 2, wherein the wheel (162) moves in a chord-like fashion partially through the circle as the wheel (162) is moved from the transportation position to the harvesting position.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>The transport assembly (140) of 2, wherein the wheel (162) moves through an arc of varying radius between the transportation and harvesting positions.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en" independent="true">
+      <claim-text>The transport assembly (140) of 1, further comprising a bracket connected to the two point pivot linkage assembly (178, 180) and the axle support member (166) to limit pivotable movement of the axle support member (166) relative to the two point pivot linkage assembly (178, 180).</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en" independent="true">
+      <claim-text>The transport assembly (140) of 5, wherein the bracket is an L-bracket having a leg rigidly connected to the axle support member (166).</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0007.tif" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0008.tif" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0009.tif" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0010.tif" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0011.tif" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0012.tif" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0013.tif" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0014.tif" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="EP2939519A1_00016.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2939519A1.PDF" type="pdf" size="1984453" pages="25" />
+</lexisnexis-patent-document>

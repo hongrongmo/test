@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246895A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021225" date-changed="20151214" time-changed="185355">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121138911">
+        <country>US</country>
+        <doc-number>20150246895</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14431881</doc-number>
+        <date>20120928</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C07D 301/02        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>301</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C07D 301/02        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>301</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07D 303/08        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>303</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">CONTINUOUS PROCESS FOR PRODUCING EPICHLOROHYDRIN FROM GLYCEROL</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>CONSER SPA</orgname>
+            <role>03</role>
+            <address>
+              <city>ROMA</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Simola</last-name>
+            <first-name>Flavio</first-name>
+            <address>
+              <city>Monterotondo (RM)</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Iosco</last-name>
+            <first-name>Michele</first-name>
+            <address>
+              <city>Roma (RM)</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>IT12000300</doc-number>
+        <date>20120928</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014049625</doc-number>
+        <date>20140403</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173461644">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246895</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20120928</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173461643">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246895</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20120928</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A process for the continuous production, through the glycerine route, of epichlorohydrin from dichlorohydrins, in the presence of an alkali solution, wherein the reactive column for the reaction of dichlorohydrin to epichlorohydrin is characterized by single or multiple feed injections and by multiple alkali solution injections, in order to optimize the epichlorohydrin production and to minimize the aqueous effluents in quantity and in organic contaminants.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150430</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246895A1</docdb-publication-number>
+      <docdb-application-id>444209693</docdb-application-id>
+      <new-owner>CONSER SPA, ITALY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:SIMOLA, FLAVIO;IOSCO, MICHELE;REEL/FRAME:035531/0883</free-text-description>
+      <effective-date>
+        <date>20150331</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <p id="p-00001-en" num="0001">The present invention relates to a process for the continuous production, through the glycerine route, of epichlorohydrin from dichlorohydrins, in presence of an alkali solution, wherein the reactive column for the reaction of dichlorohydrin to epichlorohydrin is characterized by single or multiple feed injections and by multiple alkali solution injections, in order to optimize the epichlorohydrin production and to minimize the aqueous effluents in quantity and in organic contaminants.</p>
+      <heading id="h-00001-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to a process for the continuous production of epichlorohydrin (ECH) from dichlorohydrins (DCH), with the 1,3 type prevailing over the 1,2 type, in presence of an alkali solution, wherein the DCH's are produced by a continuous catalyzed process using raw or purified glycerol and hydrogen chloride as feedstocks.</p>
+      <p id="p-00003-en" num="0003">Epichlorohydrin is produced by dehydrochlorination of the DCH by means of an aqueous solution of alkali.</p>
+      <p id="p-00004-en" num="0004">Despite there are different processes for the production of epichlorohydrin, such as the conventional process via allyl chloride starting from propylene and chlorine, the Showa Denko process using allyl acetate as reaction intermediate, and the process starting from glycerol and hydrogen chloride, also called GTE (glycerol to epichlorohydrin), brought to the industrial stage only recently, but having its technological principles well known since more than one century, the dehydrochlorination process in all these processes has been subject to limited improvements.</p>
+      <p id="p-00005-en" num="0005">The principles of this process is to allow a dehydrochlorination reaction, in which the dichlorohydrins (1,3 or 1,2) are converted to epichlorohydrin in presence of an alkali, with the formation of water and of the corresponding chloride salt, as explained in the reaction scheme below:</p>
+      <p id="p-00006-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="33.19mm" wi="76.20mm" alt="embedded image" img-content="chem" file="US20150246895A1_00004.PNG" img-format="png" original="US20150246895A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00007-en" num="0006">The rate of conversion is high, somewhat more rapid for the 1,3 isomer in comparison with the 1,2 isomer, and it is generally favored by increasing the temperature or the alkalinity.</p>
+      <p id="p-00008-en" num="0007">The yields of the dehydrochlorination reactions (1) and (2) above are limited by the presence of side reactions.</p>
+      <p id="p-00009-en" num="0008">The main side reaction is the hydrolysis of the ECH to monochlorohydrin (3), glycidol (4) or glycerol (5):</p>
+      <p id="p-00010-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="41.66mm" wi="75.10mm" alt="embedded image" img-content="chem" file="US20150246895A1_00005.PNG" img-format="png" original="US20150246895A1-20150903-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00011-en" num="0009">The hydrolysis of epichlorohydrin is catalyzed by alkali or acids, but it takes place, even if at a lower rate, also at neutral conditions.</p>
+      <p id="p-00012-en" num="0010">Direct condensation of epichlorohydrin, favored by alkaline conditions, can lead to the formation of poly-glycols. Some chloroethers may be formed by the reaction of a dichlorohydrin with epichlorohydrin.</p>
+      <p id="p-00013-en" num="0011">Since all the side reactions occur in the liquid phase, the best method to increase the overall yields is to strip-out the epichlorohydrin as soon as it is formed, feeding the crude dichloropropanol, after mixing with alkali, in counter-current flow of steam in a reactive distillation type column.</p>
+      <p id="p-00014-en" num="0012">Moreover, it is well known since more than 40 years by the engineers and operators skilled in the dehydrochlorination problems that a residence time not higher than 20 seconds, and even better not higher than 10 second, shall be used in the reaction trays to avoid the degradation of epichlorohydrin.</p>
+      <p id="p-00015-en" num="0013">As regard the operating conditions commonly used for this reactive distillation column, it usually works at a pressure slightly higher than atmospheric, and at temperatures between 100 and 120° C. (temperature at the column bottom).</p>
+      <p id="p-00016-en" num="0014">The heat to the column is usually provided using live steam, with or without a vapor thermocompression of the bottom product of the column, consisting in salted water, which is depressurized and partially vaporized under slight vacuum conditions.</p>
+      <p id="p-00017-en" num="0015">The heavy by-products formed in the reactive column, as glycidol, glycerol and poly-glycerol, are not stripped by the live steam and, therefore, they are lost in the aqueous bottom stream together with the salts. As a consequence, the inefficiency in the reaction impacts also in the quality of the waste water subject to a treatment, before to be disposed or recycled.</p>
+      <p id="p-00018-en" num="0016">Alkali type and activity also affect the reaction yields; the more common calcium hydroxide Ca(OH)<sub>2</sub>, as freshly prepared and homogenous water slurry, is used or, as a different option, caustic soda, as NaOH diluted solution, can also be used.</p>
+      <p id="p-00019-en" num="0017">The major difference in the operating conditions of this column between the conventional process (from chlorine and propylene) and the process of the present invention (from glycerol and hydrogen chloride), is the different concentration in DCH of the feedstock. In fact, while in the conventional technology a very diluted stream of DCH's in water (around 3-4% wt) is fed to the dehydrochlorination, in the process according to the invention , the DCH's are produced in a very high concentration (usually more than 95% wt). This feature of the new process allows to produce a much lower amount of water effluent from the bottom of the dehydrochlorination column, but, on the other side, it requires the use of caustic soda instead of milk of lime slurry, due to the severe trays fouling and the operating problems which can occur. Unfortunately the use of caustic can be the cause of further problems because, owing to its reactivity higher than milk of lime, it may produce an higher quantity of by-products due to the faster re-conversion of the produced ECH to glycidol or glycerol.</p>
+      <p id="p-00020-en" num="0018">Another important difference of the process from glycerol according to the invention is the nature of the dichlorohydrins. While in the conventional process the reaction between allyl chloride and hypochlorous acid produces mainly the 1,2 DCH compound, in the new process the catalytic reaction of glycerol with hydrogen chloride produces 1,3 DCH with a selectivity higher than 90%. It is known from the technical literature than the 1,3 dichlorohydrin is much more reactive than the 1,2 DCH, because the intermediate ion bringing to the formation of epichlorohydrin of the 1,2 compound is less stable.</p>
+      <p id="p-00021-en" num="0019">A third point of distinction of the process from glycerol according to the invention , is connected to the production of water in the hydrochlorination reaction of the glycerol with hydrogen chloride and the consequent advisability to remove at least part of the reaction water to favor the reaction kinetic and conversion. The removal of water by evaporation is necessarily joined by a partial vaporization of hydrogen chloride, which has to be neutralized or recovered as hydrochloric acid solution, and of dichlorohydrins which shall be recovered through their conversion to epichlorohydrin .</p>
+      <p id="p-00022-en" num="0020">In conclusion the higher reactivity of both the reactants of the process of the present invention, the 1,3 DCH and the sodium hydroxide, compared to the 1,2 DCH and the calcium hydroxide respectively mostly present in the conventional process, together with the much higher concentration of the dichlorohydrin stream and to the possible presence of a second vapor feed, suggest the use of a different arrangement and different operating conditions of the reactive system to produce epichlorohydrin.</p>
+      <p id="p-00023-en" num="0021">Different patents have been published related in general to the process of producing ECH, and some particularly related to possible solution of one or more of the problems listed above. Here below are reported the most significant.</p>
+      <p id="p-00024-en" num="0022">U.S. Pat. No. 2,177,419 published on Oct.24, 1939 may be considered among the first applications considering the reaction of the dichlorohydrin, produced from allyl chloride, with an excess of basic metal hydroxide, particularly with an aqueous slurry of calcium hydroxide, and the following stripping of epichlorohydrin with live steam at atmospheric pressure. The patent also remarks the importance of the low residence time in the reactor. Among other things, it quotes as follows: if the contact time of the epihalohydrin with the alkaline reaction mixture is made negligible at the temperature of separation of the former therefrom, higher separation temperatures may be used without substantial destruction of the epihalohydrin.</p>
+      <p id="p-00025-en" num="0023">British patent GB 799,567 and European patent EP 0421379 try to solve this problem using a solvent extraction (trichloropropane or glycol-ether respectively), to separate the produced epichlorohydrin from the aqueous phase.</p>
+      <p id="p-00026-en" num="0024">The Japanese patent JP 52000210 relates to a saponification column using perforated trays without liquid downcomers to minimize the residence time, and another Japanese patent JP 59196880 describes a saponification column with combined feed of milk of lime and caustic soda solution, to avoid loss of product in the column bottom.</p>
+      <p id="p-00027-en" num="0025">Patent U.S. Pat. No. 4,496,53 relates to a double step saponification process, made by a back-mix reactor and a plug-flow reactor, both in presence of an inert organic solvent, as carbon tetrachloride.</p>
+      <p id="p-00028-en" num="0026">The Japanese application JP 3145481 solves the problem of unconverted DCH loss in the top of the column, by using, before the total condenser, a partial condenser to recover, by refluxing them to the column, the DCH lost in the top with the product.</p>
+      <p id="p-00029-en" num="0027">The subject of the Japanese patent JP 63017874 is a saponification column, where DCH and milk of lime are not premixed before entering in the column, but where the milk of lime feed is fed separately at a higher position respect to the DCH feed.</p>
+      <p id="p-00030-en" num="0028">The Czech application CZ 293728 describes a saponification column designed in a way that the tray liquid load, in order to minimize the residence time, is the minimum possible to maintain hydraulic stability.</p>
+      <p id="p-00031-en" num="0029">More recent patent applications related to the saponification column in a epichlorohydrin from glycerol process are between the others: WO 2011/092270, where membranes are used in the saponification column to separate the two phases of the distillate, JP 2009/263338, where the ratio 1,3/1,2 DCH is fixed to control the properties of the organic and the aqueous phases in the saponification distillate, and JP 2009/184943, where, instead of a reactive column, a CSTR type reactor is used with a simultaneous distillation of the produced epichlorohydrin.</p>
+      <p id="p-00032-en" num="0030">Other patents from Solvay S.A. relate to the dehydrochlorination step of the process to produce epichlorohydrin from glycerol. The invention of EP 2132190 and EP 2160356 describes a process for producing epichlorohydrin, wherein the glycerol dichlorohydrin reacts with a basic compound and the product of reaction is subjected to a decantation process, where one fraction contains most of the epichlorohydrin produced and a second aqueous fraction contains most of the salt produced in the reaction. Substantially it represents a method rather different from the conventional reactive column.</p>
+      <p id="p-00033-en" num="0031">Other three patents by Dow Global Technologies US 2010/0029960, U.S. Pat. No. 7,982,061 and U.S. Pat. No. 7,985,867 relate to a process and apparatus for the dehydrochlorination of dichlorohydrins with production of epichlorohydrin. The first, more specifically, refers to the mixing of the dichlorohydrin stream with a base water solution in a plug flow mixer-reactor, the second to the operating conditions of the reflux drum to be used to minimize the hydrolysis losses, the third wherein the inventive step lies in maintaining the liquid holdup per tray below certain values of residence time, depending from the section of the column (top, feed and bottom zones). Each of the three patents refers to a particular feature able to reduce the hydrolysis reactions with by-products formation. All the examples included in these patents refer to a stream of dichlorohydrins produced by glycerol chlorohydrination.</p>
+      <p id="p-00034-en" num="0032">As shown in the above patents description, during the years have been done some efforts to solve separately the problems related to the saponification reaction, but none of the patents is related, in a complete and organic way, to the dehydrochlorination column for solving the different problems and, at the same time, this problem has not yet been considered taking into account the new features of the processes for production of epichlorohydrin from glycerol. The scope of this patent is to propose a dedicated process for the dehydrochlorination, that allows to improve the performances of the column in terms of higher yields in epichlorohydrin and better quality of the waste water produced at the column bottom.</p>
+      <heading id="h-00002-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00035-en" num="0033">The present invention relates to a process for the continuous production of epichlorohydrin (EPI) from dichlorohydrins (DCH), with the 1,3 type prevailing over the 1,2 type, in presence of caustic soda solution, wherein the DCH's are produced by a continuous catalyzed process using raw or purified glycerol and hydrogen chloride as feedstocks.</p>
+      <p id="p-00036-en" num="0034">The process from glycerine, by a comparison with the conventional process via allyl chloride, shows at the same time three different factors which separately contribute to increasing the rate of reaction of the DCH's to epichlorohydrin, but which also promote the hydrolysis reaction, bringing to the production of undesired amount of glycerol and other by-products, as follows: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>a. the much higher concentration of the DCH (in the conventional process the DCH are diluted in a huge amount of water)</li><li>b. the use of caustic soda (water solution) rather than milk of lime (water slurry). In fact the reaction rate is proportional to the OH<sup>−</sup>ions concentration; actually, if Ca(OH)<sub>2 </sub>is employed as reagent, due to its limited solubility in water, the OH<sup>−</sup> concentration does not change significantly as the reaction proceeds, because a buffered solution Ca(OH)<sub>2</sub>—CaCl<sub>2 </sub>is formed. According to the technical literature (Industrial Engineering Chemistry Process Des. Dev., Vol.18, No.3, 1979), during the reaction of DCH with calcium hydroxide, the concentration of hydroxyl ions decreases very slowly after the initial stage of reaction. On the contrary by employing caustic soda, it is practically fully decomposed and, therefore, the concentration of the hydroxyl ions at the point of mixing with the dichlorohydrin is very high.</li><li>c. contrary to the conventional process, the 1,3 dichlorohydrin, which is much more reactive than the 1,2 DCH, is the prevailing form.</li></ul></li></ul></p>
+      <p id="p-00037-en" num="0038">In conclusion the combined action of the factors described in the above point a, b and c causes, if the reaction is produced in the same apparatus and using the same operating parameters of the conventional process, an abnormal formation of undesired by-products.</p>
+      <p id="p-00038-en" num="0039">Therefore the present invention provides a desired process for the production of epichlorohydrin from dichlorohydrins deriving from the hydrochlorination of glycerol with hydrogen chloride, overcoming the problems of the known processes.</p>
+      <p id="p-00039-en" num="0040">One aspect of the invention is a process of dehydrochlorination for the continuous production of epichlorohydrin by the reaction of concentrated dichlorohydrin, where the 1,3 is prevailing, with a slight excess of caustic soda solution in a reactive column, wherein said process comprises: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>1. contacting all the concentrated dichlorohydrin stream with only a fraction of the caustic soda solution, in amount lower than the stoichiometric value, in a mixing device, preferably of the static mixer type. It was found that the best results are reached if the amount of caustic soda joining the dichloroydrin feed in the external mixer is at least 80% but not higher than 95% of the stoichiometric value to convert the dichloroydrin to epichlorohydrin and to neutralize, is any, the hydrogen chloride in the feed to sodium chloride</li><li>2. feeding the combined stream from the mixer to a reactive distillation column, including, below the feed point, few trays with low liquid residence time, preferably of the segmental type or disc and doughnut type without downcomers, followed by other few trays at higher efficiency, preferably of valve or sieve type.</li><li>3. feeding the remaining part of the caustic soda solution distributed in one to three different trays below the high efficiency trays, in order to keep about constant at the points of injection along the column the mass ratio between the caustic soda and the dichlorohydrin.</li><li>4. using, in the above section with caustic injection, trays with low liquid residence time, preferably of the segmental type or disc and doughnut type without downcomers.</li><li>5. using in the bottom section of the column, where almost all dichlorohydrin is reacted, trays at high efficiency, preferably of valve or sieve type.</li><li>6. vaporizing part of the aqueous product from the column bottom in a bottom reboiler using steam at low pressure, without direct use of live steam injected at the column bottom.</li><li>7. stripping the epichlorohydrin in the column as soon it is formed, condensing the mixture of epichlorohydrin, water and small amount of light by-products from the column overhead in a condenser using cooling water or air, separating the resulting two liquid phases and refluxing to the column top section the aqueous phase, containing epichlorohydrin with concentration equal or slightly higher of its solubility in water at the condensing temperature.</li></ul></li></ul></p>
+      <p id="p-00040-en" num="0048">The core aspect of the present invention is the distribution of the caustic soda in different points of the system, in order to maintain it as much as possible in stoichiometric defect with respect to the dichlorohydrins. Nevertheless, since a not enough amount of caustic soda could produce also an unsatisfactory conversion of the dichlorohydrin, a final part of the caustic solution, such as to bring again its amount in excess respect the DCH, is added in an intermediate section of the reactive column, where most of the epichlorohydrin, which is lighter than the dichlorohydrins, has been already stripped out by the countercurrent stream of steam.</p>
+      <p id="p-00041-en" num="0049">It has been found that the best result in terms of by-products reduction are reached if the total amount of caustic soda sent to external mixer, plus the amount sent to the multiple feed injection of the column, is at least 101% but not more than 110% of the stoicvalue to convert the dichloroydrin to epichloroydrin and to neutralize, if any, the hydrogen chloride in the feed to sodium chloride.</p>
+      <p id="p-00042-en" num="0050">The operating pressure of the column is in a range between 200 mbar absolute and 1.5 bar absolute, preferably it shall be below the atmospheric pressure, at a value between 400 mbar and 800 mbar.</p>
+      <p id="p-00043-en" num="0051">The choice to operate under a slight vacuum allows: (i) a reduced hydrolysis of the product to glycerol, (ii) an easier stripping of the epichlorohydrin produced, and (iii) an higher reboiler differential temperature, with consequent reduced capital cost and use of steam at lower pressure.</p>
+      <p id="p-00044-en" num="0052">The operating temperature of the column bottom is selected between 75 and 110° C., preferably between 85 and 99° C.</p>
+      <p id="p-00045-en" num="0053">Within the scope of this invention, also the column internals have to be selected to maximize the yield to epichlorohydrin: the top section, above the main feed, is made by packing, random or structured, with the scope of partially recover the dichlorohydrins not reacted in the trays below and of re-vaporize the epichlorohydrin contained in the aqueous reflux.</p>
+      <p id="p-00046-en" num="0054">The middle section, following the arrangement of the different injections of feed and caustic soda solution, is characterized by a succession of baffle trays, designed to allow epoxidation reaction of DCH minimizing residence time, and valve or sieve trays, designed to efficiently strip-out the produced epichlorohydrin.</p>
+      <p id="p-00047-en" num="0055">The lower section is characterized by valve trays designed with a standard liquid residence time, allowing the conversion of residual heavy chlorinated by-products to glycerol, that is more easily treated in the waste water disposal system.</p>
+      <p id="p-00048-en" num="0056">A further improvement in the column has been introduced by the use of a shell and tube heat exchanger as reboiler instead of the more commonly used live steam: this feature, as explained above, is possible thanks to the low operating pressure of the column; such indirect use of steam allows a much lower quantity of water in the bottom effluent of the column. This feature, together with the inherent advantage of the GTE process, that produces very concentrated DCH with a very low quantity of water, represents a big advantage as environmental impact: the resulting waste water amount is about ten times less than in the conventional process.</p>
+      <p id="p-00049-en" num="0057">The use of the reboiler, together with the mentioned high DCH's concentration in the feed and with the use of caustic soda solution at a sodium hydroxide concentration not lower than 10 wt % or, preferably, not lower than 15 wt % or even more preferably between 18 to 25wt %, allows the production at the bottom of the column of an aqueous stream with rather high concentration of sodium chloride, at least higher than 15 wt %, or preferably at least 20 wt % but in any case below the solubility limit of the salt, around 27.5 to 28 wt % at the temperature of the column, to avoid any undesired precipitation and accumulation of solid salts in the column trays. The production of an aqueous effluent with high concentration in sodium chloride permits, unlike the conventional process via allyl chloride, to reuse this stream, after an adequate treatment to reduce its organic content, normally according to this invention between 500 to 1000 mg/l expressed as total organic carbon (TOC), to an electrolytic process for the production of chlorine and sodium hydroxide solution.</p>
+      <p id="p-00050-en" num="0058">Another peculiarity of the dehydrochlorination column applied to the process from glycerine is the possibility of a multiple dichlorohydrin feed system. With reference, for instance, to the European patent EP 2219779 assigned to Conser S.p.A., the proposed process includes a partial vaporization of the effluent from both stages of reaction and the feeding of such vapor streams to the dehydrochlorination column (see also claims <b>2</b> and <b>3</b> and <figref>FIG. 1</figref>).</p>
+      <p id="p-00051-en" num="0059">While the main liquid stream to the dehydrochlorination is usually very rich in DCH, the vapour stream is normally a mixture of water, hydrogen chloride, DCH and traces of MCH, being the content of water substantially higher than 50% and the content of HCl higher than 10%.</p>
+      <p id="p-00052-en" num="0060">Ideally the vapor stream should be sent directly to an intermediate section of the dehydrochlorination column, in order to both recover the DCH, which can be converted to epichlorohydrin, and use its vapor water content as a way contributing to evaporate the epichlorohydrin, reducing in this way the consumption of steam in the bottom reboiler. Unfortunately, due to its high content of acid, the direct use of such stream may cause severe localized corrosion of the dehydrochlorination column at its inlet point, before the HCl is neutralized by the caustic soda.</p>
+      <p id="p-00053-en" num="0061">On the other hand the condensation and following neutralization with a base of this stream should cause the waste of its thermal energy, by losing the possible reduction of steam consumption at the reboiler.</p>
+      <p id="p-00054-en" num="0062">We have found a solution how to avoid the corrosion of the column, without losing its energy content.</p>
+      <p id="p-00055-en" num="0063">In another embodiment of the present invention, whenever this gaseous stream is present, it is subject to a first neutralization in a static mixer by means of a diluted caustic soda solution injection to produce, by an adiabatic operation, a two phases mixture, which is split in a liquid/vapor separator. The obtained liquid, rich in water, DCH and neutralization salt, and vapour feeds, rich in DCH and water, are directly fed to the dehydrochlorination column.</p>
+      <p id="p-00056-en" num="0064">These three different feed streams, the main liquid feed from the static mixer, and the vapor and liquid feed from the neutralization/partial condensation, are fed to the column at different trays, depending from their composition: the highest one is the liquid stream rich in DCH that, after a first premixing with a caustic soda solution, is injected in the column almost in the top section, to minimize the residence time of the produced ECH in the column after the reaction; the other two feed streams are positioned along the column according to their composition: higher is the DCH concentration, more the feed position will be high; on the contrary, higher is the content of salt, water and MCH, that cannot be converted to ECH, more the inlet position will be low.</p>
+      <p id="p-00057-en" num="0065">In this second aspect, the invention relates to a process of dehydrochlorination for the continuous production of epichlorohydrin in a reactive column wherein, besides a main liquid feed with high concentration of 1,3 dichlorohydrin, another secondary vapor feed is present, containing water at more than 50 wt %, hydrogen chloride, DCH and MCH, wherein the process comprises: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>1. contacting the concentrated dichlorohydrin stream with only a fraction of the caustic soda solution, in amount lower than the stoichiometric value, in a mixing device, preferably of the static mixer type. It was found that the best results are reached if the amount of caustic soda joining the dichloroydrin fees in the external mixer is at least 80% but not higher than 95% of the stoichiometric value to convert the dichloroydrin to epichlorohydrin and to neutralize, is any, the hydrogen chloride in the feed to sodium chloride</li><li>2. feeding the combined stream from the mixer to a reactive distillation column, including, below the feed point, few trays with low liquid residence time, preferably of the segmental type or disc and doughnut type without downcomers, followed by other few trays at higher efficiency, preferably of valve or sieve type.</li><li>3. contacting the vapor feed containing water, hydrogen chloride, dichlorohydrins and monochlorohydrins with a second stream of diluted caustic soda, in amount corresponding to the neutralization of its acid content, in a second mixing device, preferably of the static type. The amount of caustic soda joining the dichloroydrin feed in the external mixer is at least 110% of the stoichiometric value to neutralize to sodium chloride the hydrogen chloride contained in the vapor feed.</li><li>4. separating the vapor and liquid phases from the second static mixer and feeding them to two different trays of the reactive column.</li><li>5. feeding the remaining part of the caustic soda solution distributed in two to four different trays below the secondary feed section, in order to keep about constant at the points of injection along the column the mass ratio between the caustic soda and the dichlorohydrin.</li><li>6. using, in the above section with caustic injection, trays with low liquid residence time, preferably of the segmental type or disc and doughnut type without downcomers.</li><li>7. using in the bottom section of the column, where almost all dichlorohydrin is reacted, trays at high efficiency, preferably of valve or sieve type, minimizing the content of chlorinated organic in the bottom aqueous product.</li><li>8. vaporizing part of the aqueous product from the column bottom in a bottom reboiler using steam at low pressure, without direct use of live steam injected at the column bottom.</li><li>9. stripping the epichlorohydrin in the column as soon it is formed, condensing the mixture of epichlorohydrin, water and small amount of light by-products from the column overhead in a condenser using cooling water or air, separating the resulting two liquid phases and refluxing to the column top section the aqueous phase, containing epichlorohydrin with concentration equal or slightly higher of its solubility in water at the condensing temperature. It has been found that the best results in terms of by-product reduction are reached if the total amount of caustic soda sent to the external mixers, plus the amount sent to the multiple feed injection of the column is at least 101% but not more than 110% of the stoichiometric value, to convert the dichloroydrin to epichloroydrin and to neutralize, if any, the hydrogen chloride in the feeds to sodium chloride.</li></ul></li></ul></p>
+      <p id="p-00058-en" num="0075">The following figures explain in detail the peculiar arrangement of the column and of its ancillaries, as described in the paragraphs above.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00059-en" num="0076">
+        <figref>FIG. 1</figref> is a simplified process flow diagrams of the reactive column for the dehydrochlorination of a stream rich of dichlorohydrins produced from glycerine and hydrogen chloride, as described for one aspect of the invention in the summary of the disclosure points 1 to 7.</p>
+      <p id="p-00060-en" num="0077">
+        <figref>FIG. 2</figref> is a simplified process flow diagrams of the reactive column for the dehydrochlorination of dichlorohydrins produced from glycerine and hydrogen chloride, as described in the summary of the disclosure points 1 to 9 for a second aspect of the invention wherein, besides a main liquid feed with high concentration of 1,3 dichlorohydrin, there is another secondary vapor feed containing more than 50% of water, hydrogen chloride, DCH and MCH.</p>
+      <p id="p-00061-en" num="0078">
+        <figref>FIG. 3</figref> represents a simplified flow diagram of the reactive column for the dehydrochlorination of a stream containing dichlorohydrin, according to the conventional arrangement with all the alkali solution joining the dichlorohydrin feed.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00062-en" num="0079">A schematic diagram of the dehydrochlorination reactive column is shown in <figref>FIG. 1</figref>.</p>
+      <p id="p-00063-en" num="0080">The liquid stream <b>11</b>, rich in dichlorohydrins (more than 90% wt), represents the main feedstock to the reactive column <b>1</b>. It is first premixed with a caustic soda aqueous solution, stream <b>13</b>, in a static mixer <b>2</b>; its amount is slightly below the stoichiometric value, in order to minimize the degradation reaction of epichlorohydrin. The dehydrochlorination reaction, sometime also called saponification, is very fast and the epichlorohydrin just formed, stream <b>16</b>, as soon as it enters the column <b>1</b>, is immediately stripped in the first baffle trays and then in the valve trays under the feed section. A fraction of not reacted dichlorohydrins in the vapour phase is recovered in the top packing section, by washing with the aqueous column reflux <b>18</b>.</p>
+      <p id="p-00064-en" num="0081">The top product of the column <b>17</b> consists of the produced epichlorohydrin, water above its azeotropic composition with epichlorohydrin, and still some minor amount of not converted dichlorohydrins and of light impurities, which are sent to a condensation and phase separation system. The resulting aqueous phase <b>18</b>, containing epichlorohydrin and dichlorohydrins at their solubility in water at the condensing temperature, is refluxed back to the top of the column <b>1</b>.</p>
+      <p id="p-00065-en" num="0082">To keep constant the ratio between DCH and caustic soda, the total quantity of caustic soda solution <b>12</b> fed to the column is split in the main stream <b>13</b>, which joins the main feedstock <b>1</b>, and in two side injections along the column, streams <b>14</b> and <b>15</b>. The flowrates of stream <b>14</b> is controlled in way to avoid caustic soda excess along column trays, minimizing the by-products formation, and maximizing the epichlorohydrin production. Only by the injection of stream <b>15</b> the overall amount of caustic soda slightly exceeds the stoichiometric amount, without anyway being detrimental for the yields of reaction, since the amount of epichlorohydrin still present in the tray of injection of stream <b>15</b> is negligible.</p>
+      <p id="p-00066-en" num="0083">The bottom part of the column <b>1</b> is characterized by valve trays and by a long residence time, to allow final conversion of residual chlorinated by-products to glycerol, that is more easily treatable.</p>
+      <p id="p-00067-en" num="0084">The major quantity of water is obtained as bottom product <b>19</b> from column <b>1</b>, together with salt (mostly sodium chloride), and organic by-product (mostly glycerol). To minimize the quantity of water present in the column, an external heat exchanger <b>3</b> is used instead of live steam as vaporizing medium.</p>
+      <p id="p-00068-en" num="0085">
+        <figref>FIG. 2</figref> shows a schematic diagram of the dehydrochlorination reactive column, wherein, beside the main liquid feed with dichlorohydrins at high concentration, a second vapor stream, in which the main component is water but including also hydrogen chloride, dichlorohydrin and small amount of monochlorohydrin, is fed to the reactive column.</p>
+      <p id="p-00069-en" num="0086">The liquid stream <b>11</b>, rich in dichlorohydrins (more than 90% wt), represents the main feedstock to the reactive column <b>1</b>. It is first premixed with a caustic soda aqueous solution, stream <b>13</b>, in a static mixer <b>2</b>; its amount is slightly below the stoichiometric value, in order to minimize the degradation reaction of epichlorohydrin. The dehydrochlorination reaction is very fast and the epichlorohydrin just formed, stream <b>16</b>, as soon as it enters the column <b>1</b>, is immediately stripped in the first baffle trays and then in the valve trays under the feed section. A fraction of not reacted dichlorohydrins in the vapour phase is recovered in the top packing section, by washing with the aqueous column reflux <b>18</b>. The top product of the column <b>17</b> is composed by the produced epichlorohydrin, water above its azeotropic composition with epichlorohydrin, and still some minor amount of not converted dichlorohydrins and of light impurities, which are sent to a condensation and phase separation system. The resulting aqueous phase <b>18</b>, containing epichlorohydrin and dichlorohydrins at their solubility in water at the condensing temperature, is refluxed back to the top of the column <b>1</b>.</p>
+      <p id="p-00070-en" num="0087">The vapour stream <b>20</b>, containing mostly water, dichlorohydrins, hydrogen chloride and some traces of monochlorohydrin, represents a second possible feed to the column. It comes from the reaction section of the glycerine with hydrogen chloride and it represents the fraction of the reactors effluent which has been vaporized or after a first stage of reaction to reduce its water content or after the final stage of reaction to reduce its content in water and hydrogen chloride, before the distillation under vacuum conditions of the dichlorohydrins. The stream <b>20</b>, due to its acid content, before entering the reactive column made of materials of construction not suitable for high acidity, needs to be neutralized. The acids contained in this vapor stream are neutralized in the static mixer <b>4</b> by means of an injection of caustic soda solution <b>21</b>. The amount of the neutralizing soda <b>21</b> is controlled in order to be in stoichiometric excess respect the amount needed to neutralize the hydrogen chloride contained in the stream <b>20</b>, but below the stoichiometric value to convert the dichlorohydrins to epichlorohydrin. By operating in such way, any possible corrosion phenomena in the reactive column is avoided and, at the same time, the further conversion of epichlorohydrin to glycerine is minimized. The resultant two phases from the static mixer <b>4</b> are separated in the apparatus <b>5</b>, with the vapour phase <b>22</b> rich in epichlorohydrin, DCH and water, and the liquid phase <b>23</b>, rich in DCH, water and sodium chloride salt.</p>
+      <p id="p-00071-en" num="0088">Due to their different concentration in DCH, the injection points of these streams to the reactive column are different and lower respect to stream <b>16</b>.</p>
+      <p id="p-00072-en" num="0089">Other baffle trays are provided in this section to minimize the liquid residence time</p>
+      <p id="p-00073-en" num="0090">To balance this multiple injection of feeds along the column <b>1</b> and to keep constant the ratio between DCH and caustic soda, the total quantity of caustic soda solution <b>12</b> fed to the column is split in the main stream <b>13</b>, which joins the main feedstock <b>1</b>, and in side injections along the column, streams <b>14</b>, <b>15</b>, <b>21</b>, and <b>25</b>. The flowrates of these streams are controlled in way to avoid caustic soda excess along column trays, minimizing the by-products formation and maximizing the epichlorohydrin production. Only by the injection of the lowest stream <b>15</b>, the overall amount of caustic soda slightly exceeds the stoichiometric amount, without anyway being detrimental for the yields of reaction, since the amount of epichlorohydrin still present in the tray of injection of stream <b>15</b> is negligible.</p>
+      <p id="p-00074-en" num="0091">The bottom part of the column <b>1</b> is characterized by valve trays and by a long residence time, to allow final conversion of residual chlorinated by-products to glycerol, that is more easily treatable.</p>
+      <p id="p-00075-en" num="0092">The major quantity of water is obtained as bottom product <b>19</b> from column <b>1</b>, together with salt (mostly sodium chloride), and organic by-product (mostly glycerol). To minimize the quantity of waste water produced by the column, an external heat exchanger <b>3</b> is used as vaporizing medium, rather than live steam as traditionally used in the conventional process via allyl chloride.</p>
+      <p id="p-00076-en" num="0093">
+        <figref>FIG. 3</figref> shows a schematic diagram of the dehydrochlorination reactive column, according to a conventional process wherein a single alkali solution is used.</p>
+      <p id="p-00077-en" num="0094">The liquid stream <b>11</b>, rich in dichlorohydrins, represents the main feedstock to the reactive column <b>1</b>. It is first premixed with a caustic soda aqueous solution, stream <b>12</b>, in a static mixer <b>2</b>; its amount is above the stoichiometric value. The dehydrochlorination reaction is very fast and the epichlorohydrin just formed, stream <b>16</b>, as soon as it enter the column <b>1</b>, is immediately stripped in the trays under the feed. A fraction of not reacted dichlorohydrins in the vapour phase is recovered in the top packing section, by washing with the aqueous column reflux <b>18</b>. The top product of the column <b>17</b> is composed by the produced epichlorohydrin, water above its azeotropic composition with epichlorohydrin, and still some minor amount of not converted dichlorohydrins and of light impurities, which are sent to a condensation and phase separation system. The resulting aqueous phase <b>18</b>, containing epichlorohydrin and dichlorohydrins at their solubility in water at the condensing temperature, is refluxed back to the top of the column <b>1</b>. The major quantity of water is obtained as bottom product <b>19</b> from column <b>1</b>, together with salt (mostly sodium chloride), and organic by-product (mostly glycerol). Live steam injected at the column bottom is used as vaporizing medium.</p>
+      <heading id="h-00005-en" level="1">EXAMPLES</heading>
+      <p id="p-00078-en" num="0095">In a 50,000 MT/Y epichlorohydrin manufacturing plant from glycerin and hydrogen chloride, a stream of around 9 t/h of purified dichlorohydrins, containing 85.5 wt % of 1,3 DCH, around 5.5% of 1,2 DCH, around 8.5% of water and small amount of organic impurities, is the main feed of a dehydrochlorination reactive column, where, by the addition of a solution of caustic soda, they are transformed to epichlorohydrin, with parallel production of sodium chloride and water.</p>
+      <p id="p-00079-en" num="0096">A secondary vapor feed with flowrate of around 3.5 T/h, containing around 60 wt % of water, 18% of hydrogen chloride, 20% of dichlorohydrin and other amounts of monochlorohydrin and organic impurities, is produced by partial evaporation of the hydrochlorination reactor effluent.</p>
+      <p id="p-00080-en" num="0097">The following examples, relevant to demonstrate the advantages of the present invention, are the result of computer simulations, using a kinetic and thermodynamic model set up through experimental tests and operating data in industrial plants. The main feed joins a stream of sodium hydroxide solution at 19 wt % concentration. The condition of operation are 300 mm Hg and 72° C. at the overhead, and 500 mm Hg and 93° C. at the bottom. The reactive column contains 16 trays, 4 above the liquid feed inlet and 12 below.</p>
+      <p id="p-00081-en" num="0098">The heat source is low pressure steam fed to a bottom recirculation reboiler. The overhead vapors, a mixture of epichlorohydrin and water with minor amount of unreacted dichlorohydrins and other organic impurities, are condensed by cooling water or air and the resulting two liquid phases are separated in a decanting vessel: the organic phase, containing more than 1 wt % of soluble water is the crude epichlorohydrin, with content higher than 95%, sent to the purification section, while the aqueous phase, containing more than 6% of soluble epichlorohydrin, is refluxed back to the dehydrochlorination column.</p>
+      <heading id="h-00006-en" level="1">Comparative Examples 1 to 3</heading>
+      <p id="p-00082-en" num="0099">The following examples 1 to 3 relate to a conventional arrangement of the dehydrochlorination column. The secondary vapor feed is condensed in a dedicated heat exchanger by using of cooling water and joins the main liquid feed. All the caustic soda aqueous solution at 19% concentration, in excess to the chemical consumption for the production of epichlorohydrin and the neutralization of the entering hydrogen chloride, joins the liquid feed in a static mixer before entering the reactive column.</p>
+      <p id="p-00083-en" num="0100">The column performances have been checked for two different reboiler duties, as shown for example 1 and 2 in table 1. In both cases the excess of caustic is 5%.</p>
+      <p id="p-00084-en" num="0101">The example 3 represents the same conditions of example 1, by reducing the caustic excess from 5% to 2%.</p>
+      <p id="p-00085-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Caustic</entry>
+                  <entry>Heat</entry>
+                  <entry>Steam/ECH</entry>
+                  <entry>Column reflux</entry>
+                </row>
+                <row>
+                  <entry>Example</entry>
+                  <entry>excess %</entry>
+                  <entry>duty KW</entry>
+                  <entry>ratio Kg/Kg</entry>
+                  <entry>ratio Kg/Kg</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>5</entry>
+                  <entry>7100</entry>
+                  <entry>1.85</entry>
+                  <entry>1.4</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>5</entry>
+                  <entry>8950</entry>
+                  <entry>2.35</entry>
+                  <entry>1.8</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>2</entry>
+                  <entry>7100</entry>
+                  <entry>1.85</entry>
+                  <entry>1.4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00086-en" num="0102">The attached table 2 shows the most representative results in the three mentioned examples.</p>
+      <p id="p-00087-en" num="0103">In example 1 the Total Organic Carbon of the aqueous bottom product is 1258 mg/l.</p>
+      <p id="p-00088-en" num="0104">Example 2 shows that an increased amount of heat supplied to the reboiler and the subsequent increase of the reflux ratio are not sufficient to produce a significant reduction in term of TOC content of the bottom aqueous stream. It also means that a big portion of the hydrolysis reactions occurs in the static mixer, where the epichlorohydrin produced is still in liquid phase, rather than in the fractionation/reaction trays, where most of the epichlorohydrin is vaporized by contact with a countercurrent stream of steam.</p>
+      <p id="p-00089-en" num="0105">Example 3 shows that, by reducing the excess of caustic soda, the hydrolysis reactions may be slightly restrained. Further reduction of the excess below 2% is difficult to achieve, since it can originate a not complete conversion of the dichlorohydrins in the column, which, besides to represent a loss of product, may increase the TOC of the aqueous waste and, more in particular, its content in chlorinated organic.</p>
+      <p id="p-00090-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="77pt" align="center" />
+              <colspec colname="4" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>ECH yield</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example</entry>
+                  <entry>%</entry>
+                  <entry>Glycerol at bottom wt %</entry>
+                  <entry>Residue TOC mg/l</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>98.9</entry>
+                  <entry>0.29</entry>
+                  <entry>1258</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>98.9</entry>
+                  <entry>0.28</entry>
+                  <entry>1238</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>98.9</entry>
+                  <entry>0.25</entry>
+                  <entry>1109</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00007-en" level="1">Example 4</heading>
+      <heading id="h-00008-en" level="1">According to the Invention</heading>
+      <p id="p-00091-en" num="0106">The example 4 represents an application of the improved dehydrochlorination reactive distillation, according to one aspect of the present invention. While the primary liquid feed is mixed with only 60% of the total caustic solution flowrate, the secondary feed joins separately another approximately 20% of the total caustic solution and after a vapor-liquid separation unit, enters two different trays located below the inlet of the liquid feed. The remaining part of the caustic is distributed in four different trays below the secondary feed liquid inlet.</p>
+      <p id="p-00092-en" num="0107">Thanks to the energy contribute of the secondary feed the column operates at the same reflux ratio of example 1, but with a lower heat duty of the reboiler, as shown in the table 3</p>
+      <p id="p-00093-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Caustic</entry>
+                  <entry>Heat</entry>
+                  <entry>Steam/ECH</entry>
+                  <entry>Column reflux</entry>
+                </row>
+                <row>
+                  <entry>Example</entry>
+                  <entry>excess %</entry>
+                  <entry>duty KW</entry>
+                  <entry>ratio Kg/Kg</entry>
+                  <entry>ratio Kg/Kg</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>4</entry>
+                  <entry>5</entry>
+                  <entry>4650</entry>
+                  <entry>1.21</entry>
+                  <entry>1.4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00094-en" num="0108">The attached table 4 shows the most representative results of the example 4.</p>
+      <p id="p-00095-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="77pt" align="center" />
+              <colspec colname="4" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>ECH yield</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example</entry>
+                  <entry>%</entry>
+                  <entry>Glycerol at bottom wt %</entry>
+                  <entry>Residue TOC mg/l</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>4</entry>
+                  <entry>99.1</entry>
+                  <entry>0.14</entry>
+                  <entry>602</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00096-en" num="0109">The values in tables 3 and 4, compared with the tables 1 and 2, emphasizes the advantages obtained by the arrangement of the invention. The distribution of the caustic soda in different points of the reactive column permits a considerable decrease of the hydrolysis reaction and of the organic content of the aqueous residue, expressed as Total Organic Carbon (TOC), while the vapor feed separately from the liquid feed allows a substantial reduction of the column energy consumption, expressed as Kg of steam consumed at the reboiler per kilogram of produced epichlorohydrin.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>17</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>18</b>. A process for the continuous production of epichlorohydrin from dichlorohydrins (DCH) in presence of caustic soda, characterized in that:
+<claim-text>a. the DCH's are produced by a continuous catalyzed process using glycerol and hydrogen chloride as feedstocks, producing 1,3 DCH with a selectivity higher than 90%; and</claim-text><claim-text>b. The reactive column for the reaction of dichlorohydrin to epichlorohydrin is provided by single or multiple feed injections of dichlorohydrins and by multiple feed injections of caustic soda wherein a first part of caustic soda joining the dichlorohydrins in 5 to 20% stoichiometric defect with respect to the dichlorohydrins, while</claim-text><claim-text>c. a final part of the caustic solution such as to bring again its amount in stoichiometric excess not higher then 10% respect the DCH, is added in an intermediate section, not less then two trays below the dichlorohydrin feed, of the reactive column, operating under slight vacuum, where the epichlorohydrin produced by reaction has been almost completely stripped out by a countercurrent stream of steam.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>19</b>. A process of dehydrochlorination for the continuous production of epichlorohydrin by the reaction of dichlorohydrin at concentration higher than 95%, according to <claim-ref idref="clm-00002-en">claim 18</claim-ref>, wherein the process comprises:
+<claim-text>a. contacting all the concentrated dichlorohydrin stream with only said first part of the caustic soda solution, in a mixing device, preferably of the static mixer type;</claim-text><claim-text>b. feeding the combined stream from the mixer to a reactive distillation column, including, below the feed point, no more than three trays of the segmental type or disc and doughnut type without downcomers, intrinsically characterized by low liquid residence time, followed by no more than three trays valve or sieve type, typically having an higher efficiency;</claim-text><claim-text>c. feeding the final part of the caustic soda solution distributed in one to three different trays below the high efficiency trays, in order to keep about constant at the points of injection along the column the mass ratio between the caustic soda and the dichlorohydrin;</claim-text><claim-text>d. using, in the above section with caustic injection, trays, of the segmental type or disc and doughnut type without downcomers intrinsically characterized by low liquid residence time;</claim-text><claim-text>e. using in the bottom section of the column, where almost all dichlorohydrin is reacted, valve or sieve trays, typically having high efficiency;</claim-text><claim-text>f. vaporizing part of the aqueous product from the column bottom in a bottom reboiler using steam as heating medium, without direct use of live steam injected at the column bottom;</claim-text><claim-text>g. stripping the epichlorohydrin in the column as soon it is formed, condensing the mixture of epichlorohydrin, water and small amount of light by-products from the column overhead in a condenser using cooling water or air, separating the resulting two liquid phases and refluxing to the column top section the aqueous phase, containing epichlorohydrin with concentration equal or slightly higher of its solubility in water at the condensing temperature.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>20</b>. The process of dehydrochlorination of <claim-ref idref="clm-00003-en">claim 19</claim-ref>, wherein the operating pressure has a range between 200 mbar absolute and 1.5 bar absolute, preferably below the atmospheric pressure, at a value between 400 mbar and 800 mbar.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>21</b>. The process of dehydrochlorination of <claim-ref idref="clm-00003-en">claim 19</claim-ref>, wherein the operating temperature of the column bottom has a range between 75° C. and 110° C., more preferably between 85° C. and 99° C.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>22</b>. The process of dehydrochlorination of <claim-ref idref="clm-00003-en">claim 19</claim-ref>, wherein the caustic soda solution is at a concentration between 10 to 30 wt %, more preferably between 15 to 25 wt %.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>23</b>. The process of <claim-ref idref="clm-00006-en">claim 22</claim-ref>, wherein the aqueous product from the bottom of the reactive column has a sodium chloride concentration of at least 18 wt %, but in any case below its solubility limit in water at the temperature of the column.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>24</b>. The process of dehydrochlorination of <claim-ref idref="clm-00003-en">claim 19</claim-ref> point a, wherein the amount of caustic soda joining the dichlorohydrin feed in a mixer is at least 80%, but not higher than 95% of the stoichiometric value to convert the dichlorohydrin to epichlorohydrin and to neutralize, if any, the hydrogen chloride in the feed to sodium chloride.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>25</b>. The process of dehydrochlorination of <claim-ref idref="clm-00003-en">claim 19</claim-ref>, wherein the total amount of caustic soda sent to the mixer of point a plus the amount sent to the multiple feed injection of the column of point c is at least 101% but not more than 110% of the stoichiometric value to convert the dichlorohydrin to epichlorohydrin and to neutralize, if any, the hydrogen chloride in the feed to sodium chloride.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>26</b>. A process of dehydrochlorination for the continuous production of epichlorohydrin in a reactive column wherein, besides a main liquid feed with concentration of dichlorohydrin higher than 95%, another secondary vapor feed is present, containing water at more than 50 wt %, hydrogen chloride, DCH and MCH, wherein the process comprises:
+<claim-text>a. contacting the concentrated dichlorohydrin stream with only said first part of the caustic soda solution, in a mixing device, preferably of the static mixer type;</claim-text><claim-text>b. feeding the combined stream from the mixer to a reactive distillation column, including, below the feed point, no more than three trays, of the segmental type or disc and doughnut type without downcomers intrinsically characterized by low liquid residence time, followed by no more than three valve or sieve trays, typically having a higher efficiency;</claim-text><claim-text>c. contacting the vapor feed containing water, hydrogen chloride, dichlorohydrins and monochlorohydrins with a second stream of diluted caustic soda, in amount corresponding to the neutralization of its acid content, in a second mixing device, preferably of the static type;</claim-text><claim-text>d. separating the vapor and liquid phases from the second static mixer and feeding them to two different trays of the reactive column;</claim-text><claim-text>e. feeding the final part of the caustic soda solution distributed in two to four different trays below the secondary feed section, in order to keep about constant at the points of injection along the column the mass ratio between the caustic soda and the dichlorohydrin;</claim-text><claim-text>f. using, in the above section with caustic injections, trays of the segmental type or disc and doughnut type without downcomers intrinsically characterized by low liquid residence time;</claim-text><claim-text>g. using in the bottom section of the column, where almost all dichlorohydrin is reacted, valve or sieve, trays, typically having higher efficiency, minimizing the content of chlorinated organic in the bottom aqueous product;</claim-text><claim-text>h. vaporizing part of the aqueous product from the column bottom in a bottom reboiler using steam, without direct use of live steam injected at the column bottom;</claim-text><claim-text>i. stripping the epichlorohydrin in the column as soon it is formed, condensing the mixture of epichlorohydrin, water and small amount of light by-products from the column overhead in a condenser using cooling water or air, separating the resulting two liquid phases and refluxing to the column top section the aqueous phase, containing epichlorohydrin with concentration equal or slightly higher of its solubility in water at the condensing temperature;</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>27</b>. The process of dehydrochlorination of <claim-ref idref="clm-00010-en">claim 26</claim-ref>, wherein the operating pressure has a range between 200 mbar absolute and 1.5 bar absolute, preferably below the atmospheric pressure, at a value between 400 mbar and 800 mbar.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>28</b>. The process of dehydrochlorination of <claim-ref idref="clm-00010-en">claim 26</claim-ref>, wherein the operating temperature of the column bottom has a range between 75° C. and 110° C., more preferably between 85° C. and 99° C.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>29</b>. The process of dehydrochlorination of <claim-ref idref="clm-00010-en">claim 26</claim-ref>, wherein the caustic soda solution is at a concentration between 10 to 30 wt %, more preferably between 15 to 25 wt %.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>30</b>. The process of <claim-ref idref="clm-00013-en">claim 29</claim-ref>, wherein the aqueous product from the bottom of the reactive column has a sodium chloride concentration of at least 18wt %, but in any case below its solubility limit in water at the temperature of the column.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>31</b>. The process of dehydrochlorination of <claim-ref idref="clm-00010-en">claim 26</claim-ref> point a, wherein the amount of caustic soda joining the dichlorohydrin feed in a mixer is at least 80%, but not higher than 95% of the stoichiometric value to convert the dichlorohydrin to epichlorohydrin and to neutralize, if any, the hydrogen chloride in the feed to sodium chloride.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>32</b>. The process of dehydrochlorination of <claim-ref idref="clm-00010-en">claim 26</claim-ref> point c, wherein the amount of caustic soda joining the vapor feed in a second mixing device is at least 110%, of the stoichiometric value to neutralize to sodium chloride the hydrogen chloride contained in the vapor feed.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>33</b>. The process of <claim-ref idref="clm-00016-en">claim 32</claim-ref>, further comprising, after the mixer, a separation of the resulting vapor and liquid phases, which are fed to two different trays of the reactive dehydrochlorination column.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>34</b>. The process of dehydrochlorination of <claim-ref idref="clm-00010-en">claim 26</claim-ref>, wherein the total amount of caustic soda sent to the mixer of points “a” and “c” plus the amount sent to the multiple feed injection of the column of point “e” is at least 101% but not more than 110% of the stoichiometric value to convert the dichlorohydrin to epichlorohydrin and to neutralize, if any, the hydrogen chloride in the feeds to sodium chloride.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246895A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246895A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246895A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246895A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246895A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246895A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246895A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246895A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246895A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246895A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150246895A1.PDF" type="pdf" size="496113" pages="13" />
+</lexisnexis-patent-document>

@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246062A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021306" date-changed="20150914" time-changed="042018">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139171">
+        <country>US</country>
+        <doc-number>20150246062</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14713448</doc-number>
+        <date>20150515</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>CA</country>
+        <doc-number>2558202</doc-number>
+        <date>20060914</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61K  31/59        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>59</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A23L   1/303       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>303</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K  45/06        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61K  31/59        20130101 FI20150123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>59</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A23L   1/303       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>303</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A23V2002/00        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>V</subclass>
+        <main-group>2002</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  45/06        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">23</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">VITAMIN D COMPOSITIONS AND METHOD OF ADMINISTERATION TO A HUMAN BEING</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>11674234</doc-number>
+              <date>20070213</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9066958</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007134</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Vieth</last-name>
+            <first-name>Reinhold W.</first-name>
+            <address>
+              <city>Toronto</city>
+              <country>CA</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CA</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Vieth</last-name>
+            <first-name>Elaine</first-name>
+            <address>
+              <city>Toronto</city>
+              <country>CA</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CA</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Vieth</last-name>
+            <first-name>Reinhold W.</first-name>
+            <address>
+              <city>Toronto</city>
+              <country>CA</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Vieth</last-name>
+            <first-name>Elaine</first-name>
+            <address>
+              <city>Toronto</city>
+              <country>CA</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="102691268">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20080069925</doc-number>
+            <kind>A1</kind>
+            <date>20080320</date>
+          </document-id>
+          <application-date>
+            <date>20070213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2558202</doc-number>
+            <kind>A1</kind>
+            <date>20061123</date>
+          </document-id>
+          <application-date>
+            <date>20060914</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2578881</doc-number>
+            <kind>A1</kind>
+            <date>20070718</date>
+          </document-id>
+          <application-date>
+            <date>20070216</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2578881</doc-number>
+            <kind>C</kind>
+            <date>20081104</date>
+          </document-id>
+          <application-date>
+            <date>20070216</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246062</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150515</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9066958</doc-number>
+            <kind>B2</kind>
+            <date>20150630</date>
+          </document-id>
+          <application-date>
+            <date>20070213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>831DELNP2009</doc-number>
+            <kind>A</kind>
+            <date>20090522</date>
+          </document-id>
+          <application-date>
+            <date>20090204</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="138520074">
+        <family-member>
+          <document-id>
+            <country>NZ</country>
+            <doc-number>574644</doc-number>
+            <kind>A</kind>
+            <date>20120427</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2068885</doc-number>
+            <kind>B1</kind>
+            <date>20141112</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2007295888</doc-number>
+            <kind>B2</kind>
+            <date>20120712</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2636251</doc-number>
+            <kind>A1</kind>
+            <date>20081026</date>
+          </document-id>
+          <application-date>
+            <date>20080208</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2524776</doc-number>
+            <kind>T3</kind>
+            <date>20141212</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20080069925</doc-number>
+            <kind>A1</kind>
+            <date>20080320</date>
+          </document-id>
+          <application-date>
+            <date>20070213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101622137</doc-number>
+            <kind>B</kind>
+            <date>20110323</date>
+          </document-id>
+          <application-date>
+            <date>20080208</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>HK</country>
+            <doc-number>1139624</doc-number>
+            <kind>A1</kind>
+            <date>20111230</date>
+          </document-id>
+          <application-date>
+            <date>20100625</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>4712DELNP2009</doc-number>
+            <kind>A</kind>
+            <date>20100514</date>
+          </document-id>
+          <application-date>
+            <date>20090720</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2010520850</doc-number>
+            <kind>A</kind>
+            <date>20100617</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5624765</doc-number>
+            <kind>B2</kind>
+            <date>20141112</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020090050061</doc-number>
+            <kind>A</kind>
+            <date>20090519</date>
+          </document-id>
+          <application-date>
+            <date>20090226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>PT</country>
+            <doc-number>2068885</doc-number>
+            <kind>E</kind>
+            <date>20141209</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>7707758</doc-number>
+            <kind>B2</kind>
+            <date>20100504</date>
+          </document-id>
+          <application-date>
+            <date>20070220</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2007295888</doc-number>
+            <kind>A1</kind>
+            <date>20080320</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2558202</doc-number>
+            <kind>A1</kind>
+            <date>20061123</date>
+          </document-id>
+          <application-date>
+            <date>20060914</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2578881</doc-number>
+            <kind>A1</kind>
+            <date>20070718</date>
+          </document-id>
+          <application-date>
+            <date>20070216</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2636251</doc-number>
+            <kind>C</kind>
+            <date>20100323</date>
+          </document-id>
+          <application-date>
+            <date>20080208</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2068885</doc-number>
+            <kind>A1</kind>
+            <date>20090617</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2068885</doc-number>
+            <kind>A4</kind>
+            <date>20120229</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2112976</doc-number>
+            <kind>A4</kind>
+            <date>20100929</date>
+          </document-id>
+          <application-date>
+            <date>20080208</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101437706</doc-number>
+            <kind>B1</kind>
+            <date>20140828</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020090115723</doc-number>
+            <kind>A</kind>
+            <date>20091105</date>
+          </document-id>
+          <application-date>
+            <date>20080208</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140097412</doc-number>
+            <kind>A</kind>
+            <date>20140806</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2009001156</doc-number>
+            <kind>A</kind>
+            <date>20090513</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2009008805</doc-number>
+            <kind>A</kind>
+            <date>20091201</date>
+          </document-id>
+          <application-date>
+            <date>20080208</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>NZ</country>
+            <doc-number>599292</doc-number>
+            <kind>A</kind>
+            <date>20131220</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246062</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150515</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9066958</doc-number>
+            <kind>B2</kind>
+            <date>20150630</date>
+          </document-id>
+          <application-date>
+            <date>20070213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2008031188</doc-number>
+            <kind>A1</kind>
+            <date>20080320</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI0716108</doc-number>
+            <kind>A2</kind>
+            <date>20130115</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2578881</doc-number>
+            <kind>C</kind>
+            <date>20081104</date>
+          </document-id>
+          <application-date>
+            <date>20070216</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101622137</doc-number>
+            <kind>A</kind>
+            <date>20100106</date>
+          </document-id>
+          <application-date>
+            <date>20080208</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101969958</doc-number>
+            <kind>A</kind>
+            <date>20110209</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101969958</doc-number>
+            <kind>B</kind>
+            <date>20150408</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DK</country>
+            <doc-number>2068885</doc-number>
+            <kind>T3</kind>
+            <date>20141208</date>
+          </document-id>
+          <application-date>
+            <date>20070514</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2112976</doc-number>
+            <kind>A1</kind>
+            <date>20091104</date>
+          </document-id>
+          <application-date>
+            <date>20080208</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>831DELNP2009</doc-number>
+            <kind>A</kind>
+            <date>20090522</date>
+          </document-id>
+          <application-date>
+            <date>20090204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2010519081</doc-number>
+            <kind>A</kind>
+            <date>20100603</date>
+          </document-id>
+          <application-date>
+            <date>20080208</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20080196284</doc-number>
+            <kind>A1</kind>
+            <date>20080821</date>
+          </document-id>
+          <application-date>
+            <date>20070220</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2008101315</doc-number>
+            <kind>A1</kind>
+            <date>20080828</date>
+          </document-id>
+          <application-date>
+            <date>20080208</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Composition of vitamin D in medium-chain triglycerides and use thereof in delivering a nutritional or therapeutic amount of vitamin D to a human being, particularly, an infant. The compositions are applied to an object, such as skin or in the case of an infant to a woman's nipple or pacifier from which the infant sucks off the composition. The method provides a more suitable, safer and efficient way of providing the human being with vitamin D. The compositions further comprise a free fatty acid and/or monoglyceride, oxidant preservative and, optionally, other vitamins.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">This invention relates to compositions comprising vitamin D in a medium-chain triglyceride medium and use thereof for human beings, particularly, breast-feeding infants.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND TO THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">A balanced level of vitamin D has long been recognized as essential to health. Vitamin D appears to increase the efficiency of the intestines to absorb calcium and also mobilizes calcium from bone tissue when required. A deficiency in vitamin D leads to rickets, a debilitating bone disease while excessive intakes of vitamin D are toxic.</p>
+      <p id="p-00003-en" num="0003">The skin is the major site of cholesterol production and humans acquire vitamin D through the natural action of ultraviolet light on the skin. 7-Dehydrocholesterol, which is unstable to ultraviolet light, is normally a precursor to cholesterol. However, ultraviolet light breaks open the B-ring of the 7-dehydrocholesterol molecule to generate previtamin D3, which spontaneously isomerizes over hours and days into vitamin D3, which is also known as cholecalciferol. An unknown proportion of the vitamin D from the skin is absorbed into the circulation. Vitamin D3 is not soluble in water, and in the circulation, there is a protein that specifically binds to and carries vitamin D and its metabolites. The advantage of ultraviolet exposure is that it is natural, and has no vitamin D toxicity associated with it. The disadvantage is that the availability of ultraviolet light is unreliable, and too much of it causes sunburn or skin cancer. At northern latitudes there is often not enough ultraviolet light intensity outdoors to generate previtamin D.</p>
+      <p id="p-00004-en" num="0004">For biological activity, vitamin D must go through two metabolic steps. Vitamin D is metabolized by the liver to 25-hydroxyvitamin D [25(OH)D], which is measured in serum to reflect vitamin D nutritional status. 25-hydroxyvitamin D per se has little biological activity. The kidney metabolizes 25-hydroxyvitamin D into the active hormone, 1,25-dihydroxyvitamin D, which affects calcium transport across cell membranes. The body, according to its mineral requirements, carefully regulates production and breakdown of 1,25-dihydroxyvitamin D to regulate plasma calcium concentrations. Very few foods naturally contain vitamin D. Mellanby, J Physiol (London) volume 52:1iii (1919), instituted the idea that an artificial supplement, cod-liver oil, contained an agent that prevented rickets; the agent became known as vitamin D. Most of the vitamin D in our food is supplementary, synthetic material, which is either in the form of vitamin D3, the form naturally produced in animals, or it can be vitamin D2, which is derived from a plant steroid. The term, vitamin D, refers to either the vitamin D2 or vitamin D3 forms.</p>
+      <p id="p-00005-en" num="0005">Pediatric associations in Canada and the United States now strongly encourage starting vitamin D supplementation from birth onwards (Health Canada, Vitamin D supplementation for breastfed infants). Breast-feeding results in fewer infections and allergies during the first year of life compared to babies fed formula. Breast milk provides nearly optimal nutrition for newborns; however, it provides little vitamin D. Vitamin D has well-recognized effects on bone, but beyond that, better vitamin D nutrition during infancy is associated with less risk of other diseases that develop later in life. These disease reductions include less risk of juvenile diabetes, and schizophrenia (Hypponen, E., Laara, E., Reunanen, A., Jarvelin, M. R., and Virtanen, S. M. (2001) Lancet 358, 1500-1503) (McGrath, J., Saari, K., Hakko, H., Jokelainen, J., Jones, P., Jarvelin, M. R., Chant, D., and Isohanni, M. (2004) Schizophr. Res. 67, 237-245). However, because it is normally obtained through sun exposure instead of orally, vitamin D is the one nutrient that is most often deficient in breast milk (Centers for Disease Control, Vitamin D Expert Panel Meeting, Oct. 11-12, 2001 Atlanta, Ga. Final Report).</p>
+      <p id="p-00006-en" num="0006">In 2005, the American Academy of Pediatrics issued a new policy statement concerning breast-feeding (American Academy Of Pediatrics Policy Statement 2005; Pediatrics 115; 496-506). One major change was that all breast-fed infants should receive 200 IU (5 mcg) of oral vitamin D drops daily, beginning during the first 2 months of life. The older recommendation had been that vitamin D supplementation should start at around 2 months of life. The latest American Academy of Pediatrics recommendation follows what Health Canada has been advising, that vitamin D supplementation should be from birth, with 400 IU (10 mcg) of vitamin D per day (Pediatrics 2005; 115; 496-506). Moreover, Health Canada recommends that infants in the north be given 800 IU (20 mcg) of vitamin D per day.</p>
+      <p id="p-00007-en" num="0007">The need to provide vitamin D at an earlier age makes the problem of providing vitamin D nutrition more complicated. Smaller infants are more difficult to handle. Furthermore, breast-feeding mothers may not want to give their infants foreign liquids or compounds that are not natural for them to be taking. What makes the problem worse, is that the recommendations from pediatric societies and government bodies provide no detail or any method for exactly how to give vitamin D to the breast-feeding infant. They simply advise that parents should be giving vitamin D.</p>
+      <p id="p-00008-en" num="0008">Existing products, approved in Canada and the United States for the purpose of infant vitamin D nutrition require the use of one-half to one mL of a detergent-solublized aqueous liquid emulsion. The liquid is either given directly into the mouth, or mixed into milk or to other food consumed by the infant. Instructions for administering vitamin D drops typically involve inserting the dropper containing the liquid product directly into the baby's mouth.</p>
+      <p id="p-00009-en" num="0009">Parents of infants express great frustration about existing products and methods for providing infants with vitamin D, especially about the taste and the fact that infants often spit out at least some of the liquid. Direct administration of liquid vitamin D preparations is commonly done with an eyedropper, and with the infant lying on its back. One risk associated with direct administration of vitamin D solutions into the mouth is that infants can gag on, or inhale some of the liquid.</p>
+      <p id="p-00010-en" num="0010">Vitamin D liquid drops usually contain other vitamins as well. One milliliter of these products contains 400 IU (10 mcg) of vitamin D. The aqueous vitamin D drops have only a 50-day shelf-life once the bottle is opened. They contain ingredients foreign to infant nutrition, and there are many complaints about the taste. One major problem is that infants spit out the 1 mL liquid vitamin drops. This creates a mess and the dose delivered to the infant is unreliable. For any therapeutic protocol, inconvenience, risk, and difficulty with administration result in lower compliance rates. Poor compliance results in under-dosing, and ineffective treatment. These factors also diminish nutrient supplementation with vitamin D.</p>
+      <p id="p-00011-en" num="0011">There are vitamin D drops available in oil, at 400 IU per drop in the United States (naturalhealthsupply.com). The vitamin D for this is dissolved in olive oil and/or corn oil and/or sesame or flax-seed oil. The problem with these is that the oils are comprised of long-chain unsaturated fatty-acid triglycerides that will become rancid with repeated opening of the container, they carry a flavor, and they have a greasy feel on a pacifier. Moreover, no product like this is advised for, nor advocated, nor used in any way for nutrition of the breast-feeding infant.</p>
+      <p id="p-00012-en" num="0012">One prescription product contains vitamin D in an unspecified oil, (20,000 IU (500 mcg) per mL of oil). The method for use involves mixing two drops into to two drops in milk or mash. This is not a practical way to provide vitamin D for breast-fed infants younger than two months of age, because it presumes that nutrition is provided by some means other than the breast. Furthermore, this method is no different from what is done in North America with the 1-mL per day liquid vitamin drops that are administered to infants by mixing into milk or food by the same method.</p>
+      <p id="p-00013-en" num="0013">U.S. Pat. No. 5,532,229, issued Jul. 2, 1996 to Vieth, Reinhold W., and Canadian Patent No. 2,122,431, issued Oct. 10, 2006 to Vieth, Reinhold W., describe a method of delivering vitamin D to the blood of a mammal by topically administering to the skin of the mammal, vitamin D in a solution. In principle, this method could be used to provide vitamin D to infants, via the skin, which is a safe and natural route of entry for this nutrient. For example, a skin lotion that contains vitamin D can be absorbed over time through the skin of the infant. For example, medium-chain triglycerides are useful as a skin lotion, and at the same time they can function as a solvent to deliver vitamin D. However, the efficacy of vitamin D delivery is problematic with this approach, because vitamin D could be wiped easily off the skin before it could be absorbed into the body.</p>
+      <p id="p-00014-en" num="0014">U.S. Pat. No. 4,248,867, issued to Ikushima et al on Feb. 3, 1981 describes a method for manufacturing an oily preparation which comprises irradiating a triglyceride of saturated middle chain fatty acid(s) with light longer than 290 nm. This process alters the oil to be a solvent in which a selection of 1-alpha-hydroxy-vitamin Ds in the treated triglyceride can be dissolved and remain stable. These 1-hydroxy vitamin D's are either diol or triol compounds which are fundamentally different from vitamin D<sub>2 </sub>and vitamin D<sub>3</sub>.</p>
+      <p id="p-00015-en" num="0015">Notwithstanding the above teachings of the prior art, there remains a need for a safe, convenient and efficacious method of administering nutritional or therapeutic amounts of vitamin D to a human being, particularly, a suckling infant. There is also a utility for adults to be able to deliver a dose of vitamin D efficiently by sucking a vitamin supplement from a surface, instead of directly placing the supplement directly into the mouth.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00016-en" num="0016">In this specification and claims, the compound “vitamin D” means (5Z-7E)-(3S)-9,10-seco-5,7,10(19)-cholestatrien-3-ol also having the trivial names cholecalciferol or calciol (D3); and ergocalciferol (D2).</p>
+      <p id="p-00017-en" num="0017">It is an object of the present invention to provide an improved, suitable, safer and efficient method of providing a nutritional or therapeutic effect amount of Vitamin D to a human being, particularly, a suckling infant.</p>
+      <p id="p-00018-en" num="0018">It is a further object is to provide Vitamin D compositions for use in said method.</p>
+      <p id="p-00019-en" num="0019">A composition and method has been developed which involves the application of a vitamin D composition to a human being from the surface of an object that is a suitable and efficient method of administration of a desired amount of vitamin D to the human being.</p>
+      <p id="p-00020-en" num="0020">The human being may be an adult or an infant. The term “infant” in this specification includes babies and small children, and the term “adult” includes non-small children.</p>
+      <p id="p-00021-en" num="0021">In the case of administration of the compositions according to the invention to an infant, the method comprises the application of, preferably, one drop of a solution of vitamin D in a suitable, biologically-acceptable oil carrier in the case of an infant onto a mother's nipple or onto a pacifier, and placing it into the mouth of an infant for, preferably, at least 30 seconds, to suck the vitamin D composition off the nipple or pacifier, to thereby consume the vitamin D. In the case of an adult, one or more drops may be applied to the skin of an arm or a knuckle of the hand of the adult who then licks or sucks the composition from the skin.</p>
+      <p id="p-00022-en" num="0022">We have found that the difficulties with the aforesaid previous ways of providing vitamin D to an infant can be overcome by the process of application of vitamin D in a one-drop (about 33 microliter) volume of medium-chain triglyceride oil onto a pacifier or nipple and into the mouth of a suckling infant. This process of nipple or pacifier application eliminates the need to risk over-exposure of the infant to ultraviolet light in order to acquire in vivo vitamin D. Furthermore, the process of nipple or pacifier application eliminates the need to administer vitamin D directly into the mouth with a dropper, or in a larger volume that infants commonly spit out or gag on, or have to take with food.</p>
+      <p id="p-00023-en" num="0023">The process of the present invention can improve compliance by parents to government and medical recommendations to supplement their infants with vitamin D. Implementation of the invention to improve vitamin D supplementation may lower risk of disease for the infant, which, on a broader scale, should benefit public health.</p>
+      <p id="p-00024-en" num="0024">It is highly desirable, though not an essential consideration, that the medium-chain triglyceride is a natural constituent of breast milk since such oil use does not introduce a compound foreign to breastfeeding. Furthermore, medium-chain triglycerides are naturally present in milk fat and are hydrolyzed by lipase present in the saliva of the infant. The medium-chain free fatty acids and monoglycerides released by the action of lipase in the saliva of the infant provide the additional benefit of an antimicrobial action, and play a role in resistance to infectious diseases (M. K. M. Nair 2005 J. Dairy Sci. 88:3488-3495)(CQ Sun 2002 Chemico-Biological Interactions 140: 185-198)(A C Pedersen, A Bardow, S B Jensen, B Nauntofte 2002. Oral Diseases 8:117-129).</p>
+      <p id="p-00025-en" num="0025">Thus, in a preferred aspect, the compositions of the present invention may further comprise said free fatty acids, particularly C<sub>6</sub>-C<sub>12 </sub>carbon-chain compounds, to provide an antimicrobial effect.</p>
+      <p id="p-00026-en" num="0026">We have found that the inventive method of indirect application of vitamin D to a pacifier or nipple, or knuckle can provide vitamin D nutrition to a human with an efficiency of vitamin D delivery by sucking that is in the range acceptable for accuracy of a supplement product labeled dose, with about 4% loss as residual vitamin D remaining on the nipple or pacifier, compared to direct placement of vitamin D into the mouth.</p>
+      <p id="p-00027-en" num="0027">The vitamin D compositions of use in the invention may further comprise an antioxidant to serve as a preservative for the vitamin D, or to provide additional nutrition. Examples of such fat-soluble nutrients are vitamin E, vitamin A, vitamin K, or carotene.</p>
+      <p id="p-00028-en" num="0028">The amount of vitamin D in the composition of use in the practice of the invention may be readily selected to be that amount which provides suitable effects on the circulating concentration of 25-hydroxyvitamin D. For example, a daily single dose on a nipple or pacifier may contain from 2-300 mcg per drop (equivalent to 60 mcg/mL to 9,000 mcg/mL of oil), preferably 5 to 20 mcg per drop (150 mcg/mL to 600 mcg per mL). The stronger compositions are useful for pediatricians who could use them to provide vitamin D as a single-drop dose at each monthly neonatal visit. Thereby, the mother, herself, would not have to deal with vitamin D application.</p>
+      <p id="p-00029-en" num="0029">Accordingly, in one aspect the invention provides a composition comprising vitamin D in liquid, triglycerides of 6 to 12 carbon chain lengths medium for use in delivering a nutritional or therapeutic amount of said vitamin D to a human being from the surface of an object having said composition on said surface to be sucked from said surface by said human being.</p>
+      <p id="p-00030-en" num="0030">Preferably, the composition comprises 9 to 9,000 mcg/ml vitamin D and, more preferably, 150 to 450 mcg/ml vitamin D.</p>
+      <p id="p-00031-en" num="0031">The medium chain triglycerides of use in the practice of the invention have carbon-chain lengths of 6-12 and, preferably, the composition medium comprises at least 95% triglycerides having a carbon-chain length selected from 8-10.</p>
+      <p id="p-00032-en" num="0032">Medium-chain triglycerides are obtained from the oil extracted from the hard, dried fraction of the endosperm of <i>Cocos nucifera </i>L. or from the dried endosperm of <i>Elaeis guineensis </i>Jacq. They consist of a mixture of triglycerides of saturated fatty acids, mainly of caprylic acid (C<sub>8</sub>H<sub>16</sub>O<sub>2</sub>) and of capric acid (C<sub>10</sub>H<sub>20</sub>O<sub>2</sub>). They contain not less than 95 percent of saturated fatty acids having 8 to 10 carbon atoms. The substance is a clear solution.</p>
+      <p id="p-00033-en" num="0033">In a most important embodiment, the invention provides a composition as hereinabove defined for use in delivering a nutritional or therapeutic amount of said vitamin D directly into the mouth of an infant from the surface of an object having said composition on said surface to be sucked from said surface by said infant.</p>
+      <p id="p-00034-en" num="0034">Fatty acid composition—The fatty acid fraction of medium-chain triglycerides exhibits the following composition, as determined in the section Fatty Acid Composition. Any peak with an area less than 0.05% of the total area, was disregarded.</p>
+      <p id="p-00035-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="84pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Carbon-Chain Length</entry>
+                  <entry>Number of Double Bonds</entry>
+                  <entry>Percentage (%)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="char" char="." />
+              <colspec colname="2" colwidth="84pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>6</entry>
+                  <entry>0</entry>
+                  <entry>≦2.0</entry>
+                </row>
+                <row>
+                  <entry>8</entry>
+                  <entry>0</entry>
+                  <entry>50.0-8.0 </entry>
+                </row>
+                <row>
+                  <entry>10</entry>
+                  <entry>0</entry>
+                  <entry>20.0-50.0</entry>
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>0</entry>
+                  <entry>≦3.0</entry>
+                </row>
+                <row>
+                  <entry>14</entry>
+                  <entry>0</entry>
+                  <entry>≦1.0</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00036-en" num="0035">To be useful in the practice of the present invention, the vitamin D containing medium, needs to meet many of the aforesaid criteria. Surprisingly we have discovered that the medium-chain triglycerides satisfy these criteria.</p>
+      <p id="p-00037-en" num="0036">In preferred embodiments, the invention provides a composition as hereinabove defined further comprising a compound selected from the group consisting of a free fatty acid and a monoglyceride, preferably, a composition wherein the compound is selected from the group consisting of caprylic acid, caprylic monoglyceride and monocaprylin, at a concentration selected from 0.1 to 20 w/w % medium, preferably, 1 to 10% w/w % medium.</p>
+      <p id="p-00038-en" num="0037">In further preferred embodiments, the invention provides an oxidant preservative, and/or a nutritionally effective amount of a fat-soluble vitamin selected from the group consisting of alpha-tocophenol (vitamin E), vitamin A, vitamin K and B-carotene.</p>
+      <p id="p-00039-en" num="0038">In a further aspect, the invention provides use of a composition as hereinabove defined for the use in delivering a nutritional or therapeutic amount of vitamin D directly from the surface of an object having the composition thereon to be licked or sucked therefrom by a human being, particularly, an infant.</p>
+      <p id="p-00040-en" num="0039">In a particular aspect, the invention provides a method of using a composition as hereinabove defined comprising (i) applying said composition to a surface of an object; and (ii) inserting said object into the mouth of an infant as to allow said infant to suck said composition from said object surface.</p>
+      <p id="p-00041-en" num="0040">Most preferably, in the case of an infant, the object is a woman's nipple or a pacifier</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF PREFERRED EMBODIMENTS</heading>
+      <p id="p-00042-en" num="0041">In order that the invention may be better understood, preferred embodiments will now be described by way of example only.</p>
+      <heading id="h-00005-en" level="1">Example 1</heading>
+      <p id="p-00043-en" num="0042">The medium-chain triglycerides of use in this invention are liquids that are sufficiently viscous so that one drop does not immediately drip or roll away from the part of the nipple or pacifier that enters the mouth of an infant. The liquid does not coat or adhere to the pacifier so as to prevent efficient removal of the vitamin D from the nipple or pacifier through sucking. The liquid has minimal sensory effects i.e. it has minimal smell, taste, or texture i.e. no oily feel. The liquid is biologically natural in the context of breast-feeding, and is safe for infant consumption. The liquid per se is not subject to rancidity or oxidation over the shelf-life of the composition. Further, it is a medium in which vitamin D does not degrade and, thus, allows of a long shelf life for vitamin D.</p>
+      <p id="p-00044-en" num="0043">This experiment involved the study of a number of liquids to determine their efficiency in the practice of the invention.</p>
+      <p id="p-00045-en" num="0044">One drop of each liquid was applied onto a nipple to determine whether it would adhere well enough so that no portion of it would drip off in a timeframe of 10 seconds. The results of these experimental observations are presented in Table 1 along with further considerations regarding the parameters desired for this invention.</p>
+      <p id="p-00046-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="336pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Table 1 Experimental observation of potential liquids for suitability for nipple vitamin D</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="left" />
+              <colspec colname="4" colwidth="28pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="left" />
+              <colspec colname="6" colwidth="49pt" align="left" />
+              <colspec colname="7" colwidth="42pt" align="left" />
+              <colspec colname="8" colwidth="35pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Experiment</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>drop</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Stability of</entry>
+                  <entry>Stability of</entry>
+                  <entry>present in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>behavior</entry>
+                  <entry />
+                  <entry>mouth-</entry>
+                  <entry />
+                  <entry>vitamin D in</entry>
+                  <entry>solvent with</entry>
+                  <entry>breast</entry>
+                </row>
+                <row>
+                  <entry>Vehicle for vitamin D</entry>
+                  <entry>on nipple<sup>#</sup></entry>
+                  <entry>Taste<sup>#</sup></entry>
+                  <entry>feel<sup>#</sup></entry>
+                  <entry>taste<sup>#</sup></entry>
+                  <entry>vehicle</entry>
+                  <entry>storage<sup>#</sup></entry>
+                  <entry>milk</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry>drips off</entry>
+                  <entry>None</entry>
+                  <entry>none</entry>
+                  <entry>none</entry>
+                  <entry>Poor<sup>#</sup></entry>
+                  <entry>Stable</entry>
+                  <entry>Yes</entry>
+                </row>
+                <row>
+                  <entry>water-based emulsion (D-</entry>
+                  <entry>drips off</entry>
+                  <entry>Yes</entry>
+                  <entry>no feel</entry>
+                  <entry>strong</entry>
+                  <entry>50-days on</entry>
+                  <entry>Stable</entry>
+                  <entry>No</entry>
+                </row>
+                <row>
+                  <entry>vi-sol)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>taste</entry>
+                  <entry>opening*</entry>
+                </row>
+                <row>
+                  <entry>Ethanol</entry>
+                  <entry>drips off</entry>
+                  <entry>Yes</entry>
+                  <entry>no feel</entry>
+                  <entry>strong</entry>
+                  <entry>Solvent</entry>
+                  <entry>Evaporates</entry>
+                  <entry>No</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>taste</entry>
+                  <entry>concentration<sup>#</sup></entry>
+                </row>
+                <row>
+                  <entry>Canola oil</entry>
+                  <entry>Adheres</entry>
+                  <entry>Mild</entry>
+                  <entry>Oily</entry>
+                  <entry>mild</entry>
+                  <entry>Stable</entry>
+                  <entry>Oxidizes/</entry>
+                  <entry>No</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>rancidity</entry>
+                </row>
+                <row>
+                  <entry>Olive oil</entry>
+                  <entry>Adheres</entry>
+                  <entry>Yes</entry>
+                  <entry>Oily</entry>
+                  <entry>mild</entry>
+                  <entry>Stable</entry>
+                  <entry>Oxidizes/</entry>
+                  <entry>No</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>rancidity</entry>
+                </row>
+                <row>
+                  <entry>Sesame oil</entry>
+                  <entry>Adheres</entry>
+                  <entry>Yes</entry>
+                  <entry>Oily</entry>
+                  <entry>strong</entry>
+                  <entry>Stable</entry>
+                  <entry>Oxidizes/</entry>
+                  <entry>no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>taste</entry>
+                  <entry />
+                  <entry>rancidity</entry>
+                </row>
+                <row>
+                  <entry>Eitamin E acetate oil</entry>
+                  <entry>Adheres</entry>
+                  <entry>None</entry>
+                  <entry>Oily</entry>
+                  <entry>none</entry>
+                  <entry>Uncertain</entry>
+                  <entry>Stable</entry>
+                  <entry>no</entry>
+                </row>
+                <row>
+                  <entry>Medium-chain triglyceride</entry>
+                  <entry>Adheres</entry>
+                  <entry>None</entry>
+                  <entry>slightly</entry>
+                  <entry>none</entry>
+                  <entry>stable &gt;3 yr<sup>#</sup></entry>
+                  <entry>Stable</entry>
+                  <entry>yes</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>oily</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00001-en">
+                    <sup>#</sup>Direct experimental observation.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00002-en">*Mead-Johnson published stability statement for D-vi-sol.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00047-en" num="0045">Water based preparations and alcohol did not adhere to the nipple. The oil vehicles all adhered to the nipple well enough to make them suitable for handling during breastfeeding or for use of a pacifier. However, residual oily feel on the pacifier was interpreted as a sign of incomplete uptake of the drop with its dose from the pacifier. We found that medium-chain triglyceride oil was particularly desirable.</p>
+      <heading id="h-00006-en" level="1">Example 2</heading>
+      <p id="p-00048-en" num="0046">This experiment was to determine the efficacy of the uptake of vitamin D in the composition and method through the mouth by sucking and into the body.</p>
+      <p id="p-00049-en" num="0047">A further problem that needed to be addressed was the matter of whether vitamin D dissolved in a liquid vehicle would be removed by sucking and enter the body of the human in an efficacious manner. For this, vitamin D in a solution of medium-chain triglyceride was applied, according to the invention, to pacifiers. One drop of an approximate volume of 33 microliters was applied onto pacifiers, Gerber Nuk™ sizes 1 (small, for newborns) and 3 (for older infants). As the measure of 100% recovery, 33 microliters of vitamin D in medium-chain triglyceride (60,000 IU/33 microliters) was added to 50 mL ethanol directly, or placed onto a pacifier, which was placed in ethanol. To estimate efficiency of removal of the vitamin D, pacifiers were sucked by humans for 30 seconds, and the pacifier was then placed entirely into an 80-mL beaker containing 50 mL ethanol to extract remaining vitamin D. It is important to note that the extraction of remaining vitamin D from the pacifier into ethanol was not immediate. The pacifiers were extracted for 30 min, otherwise measurement of the remaining vitamin D would have been underestimated, with overestimation of efficiency of delivery into the mouth. High-pressure liquid chromatography with absorbance detection at 265 nm of 100 microliters of the ethanol extracts from each of seven such experiments showed that vitamin D remaining on the pacifier comprised a mean of 4%+/−2% SD of the vitamin D applied to the pacifier. Therefore, delivery of the vitamin D applied to a pacifier or to a nipple and taken up into the mouth within half a minute is sufficiently reproducible and complete so as to permit a dose printed on the label of a vitamin supplement product to be claimed as being accurate. Government regulations mandate that vitamin supplements for humans must provide between 90% and 120% of the labeled doses. The dosage loss with the method according to the invention, is accommodated inside that acceptable range, so that the dose that the label states to be present in one drop of product is an appropriate measure of the dose delivered into a human.</p>
+      <heading id="h-00007-en" level="1">Example 3</heading>
+      <p id="p-00050-en" num="0048">This experiment shows that if the invention truly functioned as intended, the serum 25-hydroxyvitamin D [25(OH)D] should increase in response to the intake of vitamin D according to this invention.</p>
+      <p id="p-00051-en" num="0049">Vitamin D<sub>3 </sub>was added to medium-chain triglyceride oil to a concentration of 0.4 g per 10 mL. One drop of this had a volume of 33 microliter, and contained 1500 mcg of vitamin D<sub>3</sub>. This is a relatively high dose which was used to elicit a rapid 25(OH)D response that could not be attributed to other factors. Three humans, who had not taken vitamin D supplements during the previous month each sucked on a pacifier for 30 sec, Gerber Nuk™-brand pacifiers, to which one drop of the vitamin D<sub>3 </sub>solution in medium-chain triglyceride oil had been applied. Blood samples had been drawn prior to the experiment, and 48 h after taking the dose of vitamin D according to the present invention. Without vitamin D, there could have been no detectable change in serum 25(OH)D concentration in the short timeframe of 48 h. We found that the serum 25(OH)D increased in each human. In the three humans, the mean increase from baseline was 12 nmol/L (the individual increases in serum 25(OH)D were 5, 10 and 20 nmol/L). The results were consistent with the uptake of the vitamin D from the pacifier into the human body. This experiment confirmed the efficacy of the method of the present invention.</p>
+      <heading id="h-00008-en" level="1">Example 4</heading>
+      <p id="p-00052-en" num="0050">Crystalline vitamin D<sub>3 </sub>(cholecalciferol, United States Pharmacopea grade) was dissolved into oil of medium chain triglyceride (United States Pharmacopea grade), to make a solution, according to the invention, containing 300 mcg vitamin D per one mL of oil. This composition was bottled in a glass container closed with a Eurodropper cap, with an opening designed to dispense 30 drops per one mL of oil. A breast-feeding mother applied one drop of the solution to the nipple just before offering her breast to her infant to suckle. To ensure complete delivery of the dose, the infant sucked for 30 seconds.</p>
+      <heading id="h-00009-en" level="1">Example 5</heading>
+      <p id="p-00053-en" num="0051">Crystalline vitamin D3 (cholecalciferol, United States Pharmacopea grade) was dissolved into oil of medium chain triglyceride (United States Pharmacopea grade), to make a solution, according to the invention, containing 300 mcg vitamin D per one mL of oil. This composition was bottled in a plastic container with a dropper opening to dispense one drop of oil. A mother applied one drop of the solution to a pacifier or the nipple of a baby bottle just before putting it into the mouth of her infant to suck. To ensure complete delivery of the dose, the infant sucked for 30 seconds.</p>
+      <heading id="h-00010-en" level="1">Example 6</heading>
+      <p id="p-00054-en" num="0052">Crystalline vitamin D3 (cholecalciferol, United States Pharmacopea grade) was dissolved into an oil of medium chain triglycerides (United States Pharmacopea grade), to make a solution containing 300 mcg vitamin D per one mL of oil. This was bottled in a glass container closed with a Eurodropper cap, with an opening designed to dispense 30 drops per one mL of oil. The human being applied one drop of the solution to a knuckle of a hand from which the vitamin D was sucked into the mouth. To ensure complete delivery of the dose, the human sucked for 30 seconds.</p>
+      <p id="p-00055-en" num="0053">Although this disclosure has described and illustrated certain preferred embodiments of the invention, it is to be understood that the invention is not restricted to those particular embodiments. Rather, the invention includes all embodiments which are functional or mechanical equivalents of the specific embodiments and features that have been described and illustrated.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A composition comprising vitamin D in liquid, triglyceride of 6 to 12 carbon chain lengths, for application to an object surface to provide a therapeutic or nutritional amount of vitamin D to a human being, who is to suck said composition directly from said object surface.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The composition as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> comprising 9 to 9000 mcg/ml vitamin D.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The composition as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> comprising 150 to 450 mcg/ml vitamin D.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The composition as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said liquid triglyceride comprises at least 95% triglycerides having a carbon-chain length selected from 8-10.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>-<b>15</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>16</b>. The composition as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising an anti-oxidant preservative.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>17</b>. The composition as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising a nutritionally effective amount of a fat-soluble vitamin selected from the group consisting of alpha-tocopherol (vitamin E), vitamin A, vitamin K and B-carotene.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>18</b>. The composition as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> additionally comprising caprylic acid, caprylic monoglyceride or monocaprylin.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>19</b>. A method of using a composition comprising vitamin D in a liquid triglyceride of 6 to 12 carbon chain lengths medium as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising applying said composition to a surface of an object and applying said object to the mouth of a human being to allow said human being to imbibe said composition.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>20</b>. The method as claimed in <claim-ref idref="clm-00011-en">claim 19</claim-ref> comprising applying said composition to a surface of an object and applying said object to the mouth of a human being to allow said human being to imbibe said composition.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>21</b>. The method as claimed in <claim-ref idref="clm-00011-en">claim 19</claim-ref> wherein said composition comprises 9 to 9000 mcg/ml vitamin D.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>22</b>. The method as claimed in <claim-ref idref="clm-00013-en">claim 21</claim-ref> wherein said composition comprises 150 to 450 mcg/ml vitamin D.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>23</b>. The method as claimed in <claim-ref idref="clm-00010-en">claim 18</claim-ref> wherein said object is the skin of said human being.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>24</b>. The method as claimed in <claim-ref idref="clm-00015-en">claim 23</claim-ref> wherein said object is a woman's nipple.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>25</b>. A method for delivering a nutritional or therapeutic amount of vitamin D to a human being comprising:
+<claim-text>(i) applying a composition comprising vitamin D in a liquid triglyceride of 6 to 12 carbon chain lengths medium to a surface of an object; and</claim-text><claim-text>(ii) inserting said object into the mouth of the human being so as to allow said human being to suck said composition from said object surface.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>26</b>. The method as claimed in <claim-ref idref="clm-00017-en">claim 25</claim-ref> wherein said composition comprises 9 to 9000 mcg/ml vitamin D.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>27</b>. The method as claimed in <claim-ref idref="clm-00017-en">claim 25</claim-ref> wherein said composition comprises 150 to 450 mcg/ml vitamin D.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>28</b>. The method as claimed in <claim-ref idref="clm-00017-en">claim 25</claim-ref> wherein said liquid triglyceride comprises at least 95% triglycerides having a carbon-chain length selected from 8 to 10.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>29</b>. The method as claimed in <claim-ref idref="clm-00017-en">claim 25</claim-ref> further comprising an anti-oxidant preservative, or a nutritionally effective amount of a fat-soluble vitamin selected from the group consisting of alpha-tocopherol (vitamin E), vitamin A, vitamin K and B-carotene.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>30</b>. A method for delivering a nutritional or therapeutic amount of vitamin D to a human being, comprising:
+<claim-text>(i) applying one drop of a composition comprising from 9 to 9000 mcg/ml vitamin D in a liquid triglyceride of 6 to 12 carbon chain lengths, and having at least 95% of said triglycerides having a carbon chain length of from 8 to 10, to the exterior surface of an object, wherein said drop adheres to the surface of said object; and</claim-text><claim-text>(ii) inserting said object into the mouth of the human being and having said human being suck or lick said composition from said object surface.</claim-text></claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>31</b>. The method as claimed in <claim-ref idref="clm-00022-en">claim 30</claim-ref> comprising 150 to 450 mcg/ml of vitamin D.</claim-text>
+    </claim>
+  </claims>
+  <image file="US20150246062A1.PDF" type="pdf" size="353157" pages="6" />
+</lexisnexis-patent-document>

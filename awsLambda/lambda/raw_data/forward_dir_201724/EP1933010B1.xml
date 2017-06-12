@@ -1,0 +1,2392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170309" file="EP1933010B1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20100623" time-inserted="074051" date-changed="20170308" time-changed="110812">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Granted patent">
+      <document-id id="93975452">
+        <country>EP</country>
+        <doc-number>1933010</doc-number>
+        <kind>B1</kind>
+        <date>20100623</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>1933010</doc-number>
+        <kind>B1</kind>
+      </document-id>
+      <document-id data-format="docdb" id="322666690">
+        <doc-number>1933010</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>EP1933010</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id id="61463046">
+        <country>EP</country>
+        <doc-number>07023188</doc-number>
+        <kind>A</kind>
+        <date>20071129</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>07023188</doc-number>
+      </document-id>
+      <document-id data-format="docdb" id="315842">
+        <doc-number>07023188</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>EP20070023188</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20100624">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2006330004</doc-number>
+        <date>20061206</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2006330004</doc-number>
+        <date>20061206</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2006330004</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20060330004</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20131017">
+      <gazette-reference>
+        <date>20131016</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20080618</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>20100623</date>
+      </printed-with-grant>
+      <publication-of-grant-date>
+        <date>20100623</date>
+      </publication-of-grant-date>
+      <intention-to-grant-date>
+        <date>20100107</date>
+      </intention-to-grant-date>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20131017">
+      <request-for-examination>
+        <date>20080319</date>
+      </request-for-examination>
+      <first-examination-report-despatched>
+        <date>20080618</date>
+      </first-examination-report-despatched>
+    </dates-rights-effective>
+    <term-of-grant>
+      <lapse-of-patent>
+        <country>AT</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>BE</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>BG</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>CH</country>
+        <date>20111130</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>CY</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>CZ</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>DK</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>EE</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>FI</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>GR</country>
+        <date>20100924</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>HU</country>
+        <date>20101224</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>IE</country>
+        <date>20101129</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>IS</country>
+        <date>20101023</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>LI</country>
+        <date>20111130</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>LT</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>LU</country>
+        <date>20101129</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>LV</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>MC</country>
+        <date>20101130</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>MT</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>NL</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>PL</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>PT</country>
+        <date>20101025</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>RO</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>SE</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>SI</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>SK</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>TR</country>
+        <date>20100623</date>
+      </lapse-of-patent>
+    </term-of-grant>
+    <classifications-ipcr date-changed="20140617">
+      <classification-ipcr sequence="1">
+        <text>F01N   3/022       20060101AFI20080220BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>3</main-group>
+        <subgroup>022</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20080220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>F01N  13/08        20100101AFI20130306RMEP        </text>
+        <ipc-version-indicator>
+          <date>20100101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>13</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130306</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B62J  99/00        20090101ALI20081227RMEP        </text>
+        <ipc-version-indicator>
+          <date>20090101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>62</class>
+        <subclass>J</subclass>
+        <main-group>99</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20081227</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>B62M   7/02        20060101ALI20091222RHJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>62</class>
+        <subclass>M</subclass>
+        <main-group>7</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20091222</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>F01N   3/24        20060101ALI20091222RHJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>3</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20091222</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>F01N   3/28        20060101ALI20080220BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>3</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20080220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>F01N   3/34        20060101ALI20091222RHJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>3</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20091222</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20140617">
+      <classification-cpc sequence="1">
+        <text>F01N   3/34        20130101 FI20140613BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>3</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140613</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B62J  17/02        20130101 LI20140613BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>62</class>
+        <subclass>J</subclass>
+        <main-group>17</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140613</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>F01N   3/10        20130101 LI20140613BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>3</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140613</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>F01N  13/009       20140601 LI20140611BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140601</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>13</main-group>
+        <subgroup>009</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140611</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>F01N2230/04        20130101 LA20140613BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2230</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140613</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>F01N2340/04        20130101 LA20140613BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2340</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140613</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>F01N2590/04        20130101 LA20140613BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2590</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140613</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>Y02T  10/20        20130101 LA20140613BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>T</subclass>
+        <main-group>10</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140613</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classifications-ecla date-changed="20140617">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>F01N  3/34</text>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>3</main-group>
+        <subgroup>34</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>B62J 17/02</text>
+        <section>B</section>
+        <class>62</class>
+        <subclass>J</subclass>
+        <main-group>17</main-group>
+        <subgroup>02</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="EC" country="EP">
+        <text>F01N  3/10</text>
+        <section>F</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>3</main-group>
+        <subgroup>10</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="1" classification-scheme="ICO" country="EP">
+        <text>R01N340:04</text>
+        <section>R</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>340</main-group>
+        <subgroup>04</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="ICO" country="EP">
+        <text>R01N 13:02</text>
+        <section>R</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>13</main-group>
+        <subgroup>02</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="ICO" country="EP">
+        <text>R01N230:04</text>
+        <section>R</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>230</main-group>
+        <subgroup>04</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="4" classification-scheme="ICO" country="EP">
+        <text>R01N590:04</text>
+        <section>R</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>590</main-group>
+        <subgroup>04</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_ger" date-changed="20100623" lang="ger" format="original">Motorrad</invention-title>
+    <invention-title id="title_eng" date-changed="20100623" lang="eng" format="original">Motorcycle</invention-title>
+    <invention-title id="title_fre" date-changed="20100623" lang="fre" format="original">Motocyclette</invention-title>
+    <references-cited date-changed="20160128">
+      <patent-citations name="patcit" date-changed="20160128" />
+      <citation>
+        <patcit num="1" dnum="EP-A- 1 749 988">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1749988</doc-number>
+            <kind>A1</kind>
+            <date>20070207</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>EP-A- 1 749 988</doc-number>
+          </document-id>
+          <application-date>
+            <date>20060804</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="FR-A- 2 827 908">
+          <document-id>
+            <country>FR</country>
+            <doc-number>2827908</doc-number>
+            <kind>A1</kind>
+            <date>20030131</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>FR-A- 2 827 908</doc-number>
+          </document-id>
+          <application-date>
+            <date>20010726</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="JP-A- 57 041 416">
+          <document-id>
+            <country>JP</country>
+            <doc-number>57041416</doc-number>
+            <kind>A</kind>
+            <date>19820308</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>JP-A- 57 041 416</doc-number>
+          </document-id>
+          <application-date>
+            <date>19800822</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="JP-A- 2006 226 262">
+          <document-id>
+            <country>JP</country>
+            <doc-number>2006226262</doc-number>
+            <kind>A</kind>
+            <date>20060831</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>JP-A- 2006 226 262</doc-number>
+          </document-id>
+          <application-date>
+            <date>20050221</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US-A- 5 396 767">
+          <document-id>
+            <country>US</country>
+            <doc-number>5396767</doc-number>
+            <kind>A</kind>
+            <date>19950314</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>US-A- 5 396 767</doc-number>
+          </document-id>
+          <application-date>
+            <date>19930208</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US-A1- 2002 065 007">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020065007</doc-number>
+            <kind>A1</kind>
+            <date>20020530</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>US-A1- 2002 065 007</doc-number>
+          </document-id>
+          <application-date>
+            <date>20011128</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20100623">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Yamaha Hatsudoki Kabushiki Kaisha</orgname>
+            <address>
+              <address-1>2500 Shingai</address-1>
+              <city>Iwata-shi, Shizuoka-ken 438-8501</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Kajiwara, Kenichi</name>
+            <address>
+              <address-1>c/o Yamaha Hatsudoki Kabushiki Kaisha 2500 Shingai,</address-1>
+              <city>Iwata-shi, Shizuoka-ken 438-8501</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Nishizawa, Kazuya</name>
+            <address>
+              <address-1>c/o Yamaha Hatsudoki Kabushiki Kaisha 2500 Shingai,</address-1>
+              <city>Iwata-shi, Shizuoka-ken 438-8501</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Gouke, Takayuki</name>
+            <address>
+              <address-1>c/o Yamaha Hatsudoki Kabushiki Kaisha 2500 Shingai,</address-1>
+              <city>Iwata-shi, Shizuoka-ken 438-8501</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>Igarashi, Takeshi</name>
+            <address>
+              <address-1>c/o Yamaha Hatsudoki Kabushiki Kaisha 2500 Shingai,</address-1>
+              <city>Iwata-shi, Shizuoka-ken 438-8501</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Grünecker, Kinkeldey, Stockmair &amp; Schwanhäusser Anwaltssozietät</name>
+            <address>
+              <address-1>Leopoldstrasse 4</address-1>
+              <city>80802 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20130403">
+      <designation-epc>
+        <contracting-states>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>TR</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20130514">
+      <main-family family-id="111917765">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1933010</doc-number>
+            <kind>B1</kind>
+            <date>20100623</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20080135317</doc-number>
+            <kind>A1</kind>
+            <date>20080612</date>
+          </document-id>
+          <application-date>
+            <date>20071205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101239642</doc-number>
+            <kind>B</kind>
+            <date>20110608</date>
+          </document-id>
+          <application-date>
+            <date>20071204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1933010</doc-number>
+            <kind>A1</kind>
+            <date>20080618</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2346357</doc-number>
+            <kind>T3</kind>
+            <date>20101014</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2008144613</doc-number>
+            <kind>A</kind>
+            <date>20080626</date>
+          </document-id>
+          <application-date>
+            <date>20061206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>472048</doc-number>
+            <kind>T</kind>
+            <date>20100715</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI0704401</doc-number>
+            <kind>A</kind>
+            <date>20080722</date>
+          </document-id>
+          <application-date>
+            <date>20071203</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101239642</doc-number>
+            <kind>A</kind>
+            <date>20080813</date>
+          </document-id>
+          <application-date>
+            <date>20071204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>602007007283</doc-number>
+            <kind>D1</kind>
+            <date>20100805</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1557KOL2007</doc-number>
+            <kind>A</kind>
+            <date>20080711</date>
+          </document-id>
+          <application-date>
+            <date>20071119</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>4871107</doc-number>
+            <kind>B2</kind>
+            <date>20120208</date>
+          </document-id>
+          <application-date>
+            <date>20061206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8439142</doc-number>
+            <kind>B2</kind>
+            <date>20130514</date>
+          </document-id>
+          <application-date>
+            <date>20071205</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="152745410">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1933010</doc-number>
+            <kind>B1</kind>
+            <date>20100623</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20080135317</doc-number>
+            <kind>A1</kind>
+            <date>20080612</date>
+          </document-id>
+          <application-date>
+            <date>20071205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101240732</doc-number>
+            <kind>A</kind>
+            <date>20080813</date>
+          </document-id>
+          <application-date>
+            <date>20071217</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1933010</doc-number>
+            <kind>A1</kind>
+            <date>20080618</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2008144613</doc-number>
+            <kind>A</kind>
+            <date>20080626</date>
+          </document-id>
+          <application-date>
+            <date>20061206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2008150990</doc-number>
+            <kind>A</kind>
+            <date>20080703</date>
+          </document-id>
+          <application-date>
+            <date>20061215</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>472048</doc-number>
+            <kind>T</kind>
+            <date>20100715</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101239642</doc-number>
+            <kind>B</kind>
+            <date>20110608</date>
+          </document-id>
+          <application-date>
+            <date>20071204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>602007007283</doc-number>
+            <kind>D1</kind>
+            <date>20100805</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2346357</doc-number>
+            <kind>T3</kind>
+            <date>20101014</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1557KOL2007</doc-number>
+            <kind>A</kind>
+            <date>20080711</date>
+          </document-id>
+          <application-date>
+            <date>20071119</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1634KOL2007</doc-number>
+            <kind>A</kind>
+            <date>20080718</date>
+          </document-id>
+          <application-date>
+            <date>20071204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>253502</doc-number>
+            <kind>A1</kind>
+            <date>20120727</date>
+          </document-id>
+          <application-date>
+            <date>20071204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>4871107</doc-number>
+            <kind>B2</kind>
+            <date>20120208</date>
+          </document-id>
+          <application-date>
+            <date>20061206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>486201</doc-number>
+            <kind>T</kind>
+            <date>20101115</date>
+          </document-id>
+          <application-date>
+            <date>20071206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI0704401</doc-number>
+            <kind>A</kind>
+            <date>20080722</date>
+          </document-id>
+          <application-date>
+            <date>20071203</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI0704993</doc-number>
+            <kind>A</kind>
+            <date>20080812</date>
+          </document-id>
+          <application-date>
+            <date>20071213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101239642</doc-number>
+            <kind>A</kind>
+            <date>20080813</date>
+          </document-id>
+          <application-date>
+            <date>20071204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101240732</doc-number>
+            <kind>B</kind>
+            <date>20110608</date>
+          </document-id>
+          <application-date>
+            <date>20071217</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>602007010075</doc-number>
+            <kind>D1</kind>
+            <date>20101209</date>
+          </document-id>
+          <application-date>
+            <date>20071206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1933011</doc-number>
+            <kind>A1</kind>
+            <date>20080618</date>
+          </document-id>
+          <application-date>
+            <date>20071206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1933011</doc-number>
+            <kind>B1</kind>
+            <date>20101027</date>
+          </document-id>
+          <application-date>
+            <date>20071206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2353258</doc-number>
+            <kind>T3</kind>
+            <date>20110228</date>
+          </document-id>
+          <application-date>
+            <date>20071206</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8439142</doc-number>
+            <kind>B2</kind>
+            <date>20130514</date>
+          </document-id>
+          <application-date>
+            <date>20071205</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20100624" lang="eng" format="equivalent" country="EP" doc-number="1933010" kind="A1">
+    <p>The present invention relates to a straddle type vehicle (1) comprising an engine (20) disposed between front and rear wheels (60,70), and first and second catalytic converters (40,50) disposed in an exhaust conduit (30) of the engine (20), wherein a secondary air inducting conduit is provided for supplying secondary air to the exhaust conduit (30) at a position between the first and second catalytic converters (40,50), and wherein a part of the secondary air inducting conduit (80C-80E) is exposed at least either forward or sideward in the vehicle in the rear of the front wheel (60) to form a secondary air cooling conduit.</p>
+  </abstract>
+  <legal-data date-changed="20170308">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20080618</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <effective-date>
+        <date>20080319</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20080618</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20080618</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <countries-concerned>
+        <country>AL</country>
+        <country>BA</country>
+        <country>HR</country>
+        <country>MK</country>
+        <country>RS</country>
+      </countries-concerned>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20080827</date>
+      </publication-date>
+      <event-code-1>17Q</event-code-1>
+      <effect>+</effect>
+      <legal-description>FIRST EXAMINATION REPORT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <effective-date>
+        <date>20080728</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20090225</date>
+      </publication-date>
+      <event-code-1>AKX</event-code-1>
+      <effect>+</effect>
+      <legal-description>PAYMENT OF DESIGNATION FEES</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20100623</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <corresponding-kind>B1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20100630</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <designated-state-event-code>EP</designated-state-event-code>
+      <designated-state-description>ENTRY IN THE NATIONAL PHASE</designated-state-description>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20100721</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>IE</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG4D</designated-state-event-code>
+      <designated-state-description>EUROPEAN PATENTS GRANTED DESIGNATING IRELAND</designated-state-description>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20100805</date>
+      </publication-date>
+      <event-code-1>REF</event-code-1>
+      <legal-description>CORRESPONDS TO:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>EP</country>
+      </designated-state-authority>
+      <corresponding-publication-number>602007007283</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <corresponding-publication-date>
+        <date>20100805</date>
+      </corresponding-publication-date>
+      <corresponding-kind>P</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="10">
+      <publication-date>
+        <date>20101014</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>ES</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG2A</designated-state-event-code>
+      <designated-state-description>DEFINITIVE PROTECTION</designated-state-description>
+      <corresponding-publication-number>2346357</corresponding-publication-number>
+      <corresponding-authority>
+        <country>ES</country>
+      </corresponding-authority>
+      <corresponding-kind>T3</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="11">
+      <publication-date>
+        <date>20101027</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>NL</country>
+      </designated-state-authority>
+      <designated-state-event-code>VDEP</designated-state-event-code>
+      <designated-state-description>INVALID IN THE NETHERLANDS AS NO TRANSLATION HAS BEEN FILED</designated-state-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="12">
+      <publication-date>
+        <date>20101029</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>LT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="13">
+      <publication-date>
+        <date>20101029</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>SE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="14">
+      <publication-date>
+        <date>20101125</date>
+      </publication-date>
+      <event-code-1>LTIE</event-code-1>
+      <effect>-</effect>
+      <legal-description>LT: INVALIDATION OF EUROPEAN PATENT OR PATENT EXTENSION</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="15">
+      <publication-date>
+        <date>20101130</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>LV</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="16">
+      <publication-date>
+        <date>20101130</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>FI</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="17">
+      <publication-date>
+        <date>20101130</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>AT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="18">
+      <publication-date>
+        <date>20101130</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>SI</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="19">
+      <publication-date>
+        <date>20101231</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>PL</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="20">
+      <publication-date>
+        <date>20110131</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>GR</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100924</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="21">
+      <publication-date>
+        <date>20110131</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>EE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="22">
+      <publication-date>
+        <date>20110131</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>NL</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="23">
+      <publication-date>
+        <date>20110228</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>PT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20101025</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="24">
+      <publication-date>
+        <date>20110228</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>CZ</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="25">
+      <publication-date>
+        <date>20110228</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>RO</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="26">
+      <publication-date>
+        <date>20110228</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>CY</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="27">
+      <publication-date>
+        <date>20110228</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>SK</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="28">
+      <publication-date>
+        <date>20110228</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>BE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="29">
+      <publication-date>
+        <date>20110228</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>IS</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20101023</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="30">
+      <publication-date>
+        <date>20110429</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>DK</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="31">
+      <publication-date>
+        <date>20110601</date>
+      </publication-date>
+      <event-code-1>26N</event-code-1>
+      <effect>+</effect>
+      <legal-description>NO OPPOSITION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <effective-date>
+        <date>20110324</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="32">
+      <publication-date>
+        <date>20110630</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>MC</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20101130</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="33">
+      <publication-date>
+        <date>20110714</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <designated-state-event-code>R097</designated-state-event-code>
+      <designated-state-description>NO OPPOSITION FILED AGAINST GRANTED PATENT, OR EPO OPPOSITION PROCEEDINGS CONCLUDED WITHOUT DECISION</designated-state-description>
+      <corresponding-publication-number>602007007283</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <effective-date>
+        <date>20110323</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="34">
+      <publication-date>
+        <date>20111031</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>IE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20101129</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="35">
+      <publication-date>
+        <date>20111230</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>MT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="36">
+      <publication-date>
+        <date>20111230</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>IT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20101129</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="37">
+      <publication-date>
+        <date>20120629</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <designated-state-event-code>PL</designated-state-event-code>
+      <designated-state-description>PATENT CEASED</designated-state-description>
+    </legal-event>
+    <legal-event sequence="38">
+      <publication-date>
+        <date>20120731</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>LI</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20111130</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="39">
+      <publication-date>
+        <date>20120731</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20111130</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="40">
+      <publication-date>
+        <date>20120928</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>HU</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20101224</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="41">
+      <publication-date>
+        <date>20120928</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>BG</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="42">
+      <publication-date>
+        <date>20120928</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>LU</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20101129</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="43">
+      <publication-date>
+        <date>20121031</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>TR</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100623</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="44">
+      <publication-date>
+        <date>20130930</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>BG</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20100923</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="45">
+      <publication-date>
+        <date>20151119</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>PLFP</designated-state-event-code>
+      <designated-state-description>FEE PAYMENT</designated-state-description>
+      <fee-payment-year>9</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="46">
+      <publication-date>
+        <date>20161118</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>PLFP</designated-state-event-code>
+      <designated-state-description>FEE PAYMENT</designated-state-description>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="47">
+      <publication-date>
+        <date>20170131</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161121</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="48">
+      <publication-date>
+        <date>20170131</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161122</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="49">
+      <publication-date>
+        <date>20170131</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161118</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="50">
+      <publication-date>
+        <date>20170228</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>ES</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161110</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="51">
+      <publication-date>
+        <date>20170228</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     1933010A1</docdb-publication-number>
+      <docdb-application-id>315842</docdb-application-id>
+      <designated-state-authority>
+        <country>IT</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161123</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20100623">
+    <p id="p-00001-en" num="0001">The present invention relates to a straddle type vehicle, for example, a motorcycle.</p>
+    <p id="p-00002-en" num="0002">Prior art document <patcit id="pcit-00001" dnum="ep1749988a1"><text>EP 1 749 988 A1</text></patcit> according to Article 54(3) EPC discloses a straddle type vehicle comprising an engine disposed between front and rear wheels, and first and second catalytic converters disposed in an exhaust conduit of the engine, wherein a secondary air inducting conduit is provided for supplying secondary air to the exhaust conduit at a position between the first and second catalytic converters, and wherein a part of the secondary air inducting conduit is exposed at least either forward or sideward in the vehicle in the rear of the front wheel to form a secondary air cooling conduit.</p>
+    <p id="p-00003-en" num="0003">Prior art document <patcit id="pcit-00002" dnum="us5396767a"><text>US 5396767</text></patcit> discloses an engine exhaust gas cleaning system including a converter section that is disposed at the rear end of the exhaust pipe and which has an outer shell that is surrounded by a further outer shell having a rearwardly disposed atmospheric air inlet and a forwardly disposed atmospheric air outlet that communicates with the inlet of the converter through a venturi section. This heats the air admitted to the converter and also insures that any exhaust sound or exhaust leakage will be disposed rearwardly.</p>
+    <p id="p-00004-en" num="0004">Usually, exhaust gas from the engine is emitted to the air. It is required to purify exhaust gas as much as possible before an emission of the exhaust gas. Therefore, conventionally, a catalytic converter (catalyzer) is provided in a midway of an exhaust conduit, through which exhaust gas from the engine is emitted, and the purification is made by the catalyzer (for example, see Patent Document 1).</p>
+    <p id="p-00005-en" num="0005">In the conventional art, to effectively purify exhaust gas by the catalyzer, a secondary air inducting conduit is mounted in an upstream of the catalyzer, and outside air (secondary air) is inducted from the secondary air inducting conduit through the exhaust conduit to the catalyzer. Thereby, it enhances combustion efficiency of exhaust gas when secondary air passes through the catalyzer.<br /> Patent Document 1: <patcit id="pcit-00003" dnum="jp2001130474a"><text>JP-A-2001-130474</text></patcit></p>
+    <p id="p-00006-en" num="0006">However, in the conventional art, the vehicle has a construction such that the secondary air inducting conduit extending downward from an air cleaner toward the exhaust conduit is covered from the front and the side by a vehicle cover and the like. Thus, the vehicle cover hinders heat at a high temperature from being emitted outside, and the heat at a high temperature is apt to directly transmit to the secondary air inducting conduit.</p>
+    <p id="p-00007-en" num="0007">As a result, there is a problem that oxygen in secondary air flowing through the secondary air inducting conduit expands due to heat at a high temperature from the engine, an oxygen concentration lowers, and thus it is difficult to enhance combustion efficiency of exhaust gas by secondary air in the catalyzer.</p>
+    <p id="p-00008-en" num="0008">It is the object of the present invention to provided a straddle type vehicle, in which oxygen in air flowing through a secondary air inducting conduit can be effectively cooled down, and combustion efficiency of exhaust gas by secondary air in a catalyzer can be enhanced.</p>
+    <p id="p-00009-en" num="0009">This objective is solved in an inventive manner by a straddle type vehicle having the features of independent claim 1. Preferred embodiments are laid down in the dependent claims.</p>
+    <p id="p-00010-en" num="0010">Accordingly, it is provided a straddle type vehicle comprising an engine disposed between front and rear wheels, and first and second catalytic connectors disposed in an exhaust conduit of the engine, wherein a secondary air inducting conduit is provided for supplying secondary air to the exhaust conduit at a position between the first and second catalytic converters, and wherein a part of the secondary air inducting conduit is exposed at least either forward or sideward in the vehicle in the rear of the front wheel to form a secondary air cooling conduit.</p>
+    <p id="p-00011-en" num="0011">Preferably, the first and second catalytic converters are a front catalytic converter and a rear catalytic converter spaced apart in the fore to aft direction in a midway part of an exhaust conduit of the engine, and wherein a downstream end of the secondary air inducting conduit is connected to the exhaust conduit in a position between the front catalytic converter and the rear catalytic converter.</p>
+    <p id="p-00012-en" num="0012">Still further, preferably at least one conduit section of a secondary air inducting conduit is exposed to the space in the rear of a front wheel and in front of an engine to become the secondary air cooling conduit section for cooling down secondary air, to cool down secondary air flowing thought the secondary air inducting conduit, and to increase the oxygen concentration of secondary air.</p>
+    <p id="p-00013-en" num="0013">Yet further still, preferably at least one conduit section is exposed to an inside of a space formed on a front part of the vehicle body and in the rear of the front wheel, and constructs the secondary air cooling conduit.</p>
+    <p id="p-00014-en" num="0014">Preferably, at least one conduit section is disposed to be exposed to a space on a side of the vehicle body in the rear of the front wheel.</p>
+    <p id="p-00015-en" num="0015">Still further, preferably the secondary air cooling conduit section is at least partially formed with a metal pipe.</p>
+    <p id="p-00016-en" num="0016">Further, it is beneficial if a connection part of the secondary air inducting conduit, which is connected to the exhaust conduit, is disposed below the engine, and the secondary air inducting conduit is formed to extend from the connection part in the horizontal direction below the engine.</p>
+    <p id="p-00017-en" num="0017">It is further beneficial if a part of the secondary air inducting conduit is formed to extend from either one of the right side and the left side to the other side traversing a center of the vehicle.</p>
+    <p id="p-00018-en" num="0018">It is still further beneficial if a frame is formed with right and left frames, at least a part of the secondary air inducting conduit is disposed to overlap the right and left frames in a side view.</p>
+    <p id="p-00019-en" num="0019">In the following, the present invention is explained in greater detail with respect to several embodiments thereof in conjunction with the accompanying drawings, wherein: <dl id="dl-00001-en"><dt>FIG. 1</dt><dd>is a side view for showing a motorcycle according to a first embodiment of the present teaching which illustrates the combination of the features of independent claim 1,</dd><dt>FIG. 2</dt><dd>is an enlarged view for showing frames, an exhaust conduit, and a secondary air inducting conduit, and so forth in FIG. 1,</dd><dt>FIG. 3</dt><dd>is a bottom plan view for showing the frames, the exhaust conduit, and the secondary air inducting conduit in FIG. 2,</dd><dt>FIG. 4</dt><dd>is a plan view of the secondary air inducting conduit viewing in a direction of an arrow VI-VI in FIG. 2,</dd><dt>FIG. 5</dt><dd>is a front view for showing the frames, the exhaust conduit, a front catalyzer, the secondary air inducting conduit, and so forth in FIG. 2,</dd><dt>FIG. 6</dt><dd>is a side view for showing a motorcycle according to a second embodiment of the present teaching but does not illustrate the combination of the features of independent claim 1,</dd><dt>FIG. 7</dt><dd>is a front view for showing the motorcycle in FIG. 6,</dd><dt>FIG. 8</dt><dd>is a perspective view for showing the exhaust conduit and so forth in FIG. 6 as a single part, and</dd><dt>FIG. 9</dt><dd>is a side view for showing a motorcycle according to a third embodiment of the present teaching but does not illustrate the combination of the features of independent claim 1.</dd></dl></p>
+    <heading id="h-00001-en">Description of Reference Numerals and Symbols:</heading>
+    <p id="p-00020-en" num="0020">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>1, 100, 200: motorcycle (straddle type vehicle)</li>
+        <li>10, 110: frame</li>
+        <li>12: left frame</li>
+        <li>13: right frame</li>
+        <li>19: air cleaner</li>
+        <li>20, 130: engine</li>
+        <li>21, 131: crankcase</li>
+        <li>22, 132: cylinder</li>
+        <li>30, 150: exhaust conduit</li>
+        <li>80, 160, 263: secondary air inducting conduit</li>
+        <li>80A: first conduit section</li>
+        <li>80B: second conduit section</li>
+        <li>80C: third conduit section (secondary air cooling conduit section)</li>
+        <li>80D: fourth conduit section (secondary air cooling conduit section)</li>
+        <li>80E: fifth conduit section (secondary air cooling conduit section)</li>
+        <li>80F: sixth conduit section</li>
+        <li>80G: seventh conduit section</li>
+        <li>80G1: connection part</li>
+        <li>160A: first conduit section (secondary air cooling conduit section)</li>
+        <li>160B: second conduit section (secondary air cooling conduit section)</li>
+        <li>160C: third conduit section</li>
+      </ul>
+    </p>
+    <p id="p-00021-en" num="0021">The straddle type vehicle according to a first embodiment of the present teaching which illustrates the combination of the features of independent claim 1 will be described with reference to FIGS. 1 through 5 with a case of application to a motorcycle as an example. A motorcycle 1 according to the embodiment of the present teaching includes a frame 10, an engine 20, an exhaust conduit 30, a front catalyzer 40, a rear catalyzer 50, and a secondary air inducting conduit 80.</p>
+    <p id="p-00022-en" num="0022">The frame 10 includes a head pipe 11, a left frame 12 formed with a generally parallelogram-shaped frame body, and a right frame 13 similarly formed with a generally parallelogram-shaped frame body (see FIGs. 2 and 3).</p>
+    <p id="p-00023-en" num="0023">As shown in FIG. 2, the left frame 12 is connected to an upper end of the head pipe 11 at its front end. The left frame 12 includes a first frame part 12A extending rearward obliquely downward therefrom, a second frame part 12B extending rearward obliquely downward from a rear end of the first frame part 12A curving in a dog leg shape and curvedly extending forward obliquely downward at its lower end, a third frame part 12C curvedly extending forward from the lower end of the second frame part 12B in a generally horizontal direction, and a fourth frame part 12D curvedly extending forward obliquely upward from a front end of the third frame part 12C and connected to a lower end of the head pipe 11 at its upper end.</p>
+    <p id="p-00024-en" num="0024">The left frame 12 includes a seat rail 12E connected to a boundary part between the first frame part 12A and the second frame part 12B at its front end and extending rearward in a generally horizontal direction therefrom, and a backstay 12F connected to a middle part of the second frame part 12B in the direction of the length at its front end and extending rearward obliquely upward therefrom. The seat rail 12E is connected to a midway part (not shown) of the backstay 12F at its rear end.</p>
+    <p id="p-00025-en" num="0025">Also, as shown in FIGs. 3 and 5, similarly to the left frame 12, the right frame 13 includes a first frame part 13A, a second frame part 13B, a third frame part 13C, a fourth frame part 13D, a seat rail 13E, and a backstay 13F.</p>
+    <p id="p-00026-en" num="0026">As shown in FIG. 1, a rotating shaft (not shown) provided on handlebars 14 is rotatably fitted into the head pipe 11. The rotating shaft of the handlebars 14 is fixed to a middle part of an upper bracket 15 in the direction of the length and a middle part of an under bracket 16 in the direction of the length. Also, parts around upper ends of left and right front forks 17 (only one shown) are inserted and fixed to both left and right ends of those brackets 15 and 16. A front wheel 60 is rotatably coupled to lower ends of the front forks 17.</p>
+    <p id="p-00027-en" num="0027">Front ends of a swing arm 18 are swingably coupled to and supported by the second frame part 12B of the left frame 12 and the second frame part 13B of the right frame 13. A rear wheel 70 is rotatably coupled to rear ends of the swing arm 18.</p>
+    <p id="p-00028-en" num="0028">Further, an air cleaner 19 is disposed in a position in the rear of the engine 20 between the seat rail 12 E and the backstay 12F of the frame 10. The air cleaner 19 removes debris such as dust contained in air supplied to the engine 20 and the secondary air inducting conduit 80.</p>
+    <p id="p-00029-en" num="0029">The engine 20 is disposed inside each of the left frame 12 and the right frame 13 formed with generally rectangular frame bodies (see FIG. 2), and is suspended by those frames 12 and 13. As shown in FIGs. 1 and 2, the engine 20 includes a crankcase 21 and a cylinder 22 provided on an upper part of the crankcase 21.</p>
+    <p id="p-00030-en" num="0030">As shown in FIGs. 2, 3 and 5, the exhaust conduit 30 includes a first pipe 31 extending forward from the cylinder 22 of the engine 20 curving in an arc shape, a second pipe 32 extending rearward obliquely downward from the first pipe 31, a third pipe 33 extending rearward from the second pipe 32 in a generally horizontal direction and connected to the front catalyzer 40, a fourth pipe 34 extending rearward from the front catalyzer 40 in a generally horizontal direction, a fifth pipe 35 curvedly extending rearward obliquely upward from the fourth pipe 34, and a muffler 36 connected to the fifth pipe 35.</p>
+    <p id="p-00031-en" num="0031">The exhaust conduit 30 discharges exhaust gas from the engine 20 outside via the front catalyzer 40, the rear catalyzer 50 and the muffler 36.</p>
+    <p id="p-00032-en" num="0032">The front catalyzer 40 is disposed in a position below the crankcase 21 between the third pipe 33 and the fourth pipe 34 of the exhaust conduit 30. The front catalyzer 40 is formed into a flat shape in which a width in the transverse direction is larger than a height in the vertical direction. Therefore, the front catalyzer 40 does not protrude more downward than the third pipe 33 and the fourth pipe 34 of the exhaust conduit 30 extending in the horizontal direction below the crankcase 21, and thereby a minimum height of the vehicle body from the ground is assured.</p>
+    <p id="p-00033-en" num="0033">The rear catalyzer 50 is disposed in the muffler 36 of the exhaust conduit 30 positioned downstream of the front catalyzer 40. The front catalyzer 40 and the rear catalyzer 50 facilitate combustion of deleterious elements (HC, NO<sub>x</sub> and so forth) included in exhaust gas discharged from the engine 20, and thereby purify the exhaust gas.</p>
+    <p id="p-00034-en" num="0034">The secondary air inducting conduit 80 inducts outside air passed through the air cleaner 19 into the rear catalyzer 50 via the fourth pipe 34 of the exhaust conduit 30, and enhances combustion efficiency of exhaust gas in the rear catalyzer 50. The secondary air inducting conduit 80 is formed with a metal pipe, rubber hose, or the like as shown in FIGs. 2 through 5.</p>
+    <p id="p-00035-en" num="0035">As shown in FIG. 2, the secondary air inducting conduit 80 is connected to a front end of the air cleaner 19 at its upstream end. The secondary air inducting conduit 80 includes a first conduit section 80A extending forward obliquely rightward therefrom, a second conduit section 80B extending from the first conduit section 80A gradually curving in an arc shape in a part above and the right of the cylinder 22, a third conduit section 80C extending from the second conduit section 80B, which is on one side (right side) in the right to left direction, to the other side in the right to left direction (left side) and traversing the center line L of the vehicle (see FIG. 4) in front of the cylinder 22, and a fourth conduit section 80D drooping from the third conduit section 80C.</p>
+    <p id="p-00036-en" num="0036">Also, the secondary air inducting conduit 80 includes a fifth conduit section 80E extending rearward obliquely downward from the fourth conduit section 80D curving in a dog leg shape, a sixth conduit section 80F extending rearward from the fifth conduit section 80E in a generally horizontal direction curving in a L shape and partly overlapping the third frame 12C of the left frame 12 in a side view, and a seventh conduit section 80G (see FIG. 3) extending rightward from the sixth conduit section 80F in the horizontal direction curving in an arc shape, of which a downstream end 80G1 that is a connection part is connected to the fourth pipe 34 of the exhaust conduit 30 positioned between the front catalyzer 40 and the rear catalyzer 50. In addition, the connection part 80G1 of the seventh conduit section 80G is disposed below the crankcase 21.</p>
+    <p id="p-00037-en" num="0037">As shown in FIG. 2, the third through the fifth conduit sections 80C through 80E of the secondary air inducting conduit 80 are disposed to expose toward an inside of a space S formed on a front part of the vehicle body between the front wheel 60 and the engine 20. Those third through fifth conduit sections 80C through 80E are not covered by a vehicle cover or the like, and can be visually recognized from places in the front and on the side of the vehicle, which are places outside the vehicle.</p>
+    <p id="p-00038-en" num="0038">The first conduit section 80A, the second conduit section 80B, the third conduit section 80C, the fourth conduit section 80D, a lower part 80E1 of the fifth conduit section 80E, a rear part 80F1 of the sixth conduit section 80F, and the seventh conduit section 80G of the secondary air inducting conduit 80 are formed with metal pipes. Thereby, secondary air flowing in those conduit sections can be effectively cooled down. In addition, an upper part 80E2 of the fifth conduit section 80E and a front part 80F2 of the sixth conduit section 80F are formed with rubber hoses.</p>
+    <p id="p-00039-en" num="0039">Therefore, secondary air flowing in the secondary air inducting conduit 80 is cooled down from its outside by cold air of the space S while passing through the third through fifth conduit sections 80C through 80E. Accordingly, those third through fifth conduit sections 80C through 80E have a function as a secondary air cooling conduit section for cooling down secondary air.</p>
+    <p id="p-00040-en" num="0040">According to this embodiment with the above construction, the third through the fifth conduit sections 80C through 80E of the secondary air inducting conduit 80 are exposed to the space S more rearward than the front wheel and more forward than the engine 20. Therefore, secondary air is cooled down by the third through the fifth conduit sections 80C through 80E of the secondary air inducting conduit 80, and thereby an oxygen concentration of secondary air can be increased.</p>
+    <p id="p-00041-en" num="0041">Accordingly, combustion efficiency of exhaust gas by secondary air can be sufficiently enhanced when secondary air inducted from the secondary air inducting conduit 80 into the exhaust conduit 30 passes through the rear catalyzer 50, and purification of exhaust gas by the rear catalyzer 50 can be effectively made.</p>
+    <p id="p-00042-en" num="0042">Next, FIGs. 6 through 8 show a second embodiment of the present teaching but does not illustrate the combination of the features of independent claim 1.</p>
+    <p id="p-00043-en" num="0043">In FIG. 6, a frame 110 of a motorcycle 100 has a main frame 111. The main frame 111 is provided to extend obliquely downward from a front part of the vehicle in a front half part of the vehicle. A head pipe 127 is provided at its front end. The head pipe 127 pivotally supports a front fork 105. Handlebars 109 are provided at an upper end of the front fork 105. A front wheel 123 is pivotally supported at a lower end of the front fork 105.</p>
+    <p id="p-00044-en" num="0044">Also, the frame 110 has a seat rail 112. The seat rail 112 is connected to a midway part of the main frame 111, and extends rearward obliquely upward therefrom. A seat 113 is disposed above the seat rail 112. Further, the frame 110 has a backstay 114. The backstay 114 is connected to a rear end of the main frame 111, and extends rearward obliquely upward therefrom. A rear end of the backstay 114 is connected to the seat rail 112.</p>
+    <p id="p-00045-en" num="0045">A rear arm bracket 117 is mounted on a rear end of the main frame 111. An engine 130 is disposed below a rear part of the main frame 111. The engine 130 is positioned in a vicinity of the center in the fore to aft direction of the motorcycle 100. The engine 130 is suspended by midway parts 111B and 111C of the main frame 111, supported by the rear arm bracket 117, and fixed to the frame 110.</p>
+    <p id="p-00046-en" num="0046">One end of a rear arm 119 is mounted on the rear arm bracket 117 via a pivot shaft 104. The other end of the rear arm 119 pivotally supports a rear wheel 121. The rear arm 119 and the rear wheel 121 are swingable relative to the frame 110 with the pivot shaft 104 provided on the rear arm bracket 117 being a fulcrum. A rear suspension 118 is provided between the rear arm 119 and the seat rail 112.</p>
+    <p id="p-00047-en" num="0047">The frame 110 is covered by a vehicle cover 106 and a leg shield 108. The leg shield 108 is mounted on a front part of the vehicle cover 106. The leg shield 108 opens forward, and is a rectangular shape in a front view (see FIG. 7). Also, the leg shield 108 is formed to gradually taper forward. In addition, FIG. 7 shows ridge lines 108B and 108C of the leg shield 108.</p>
+    <p id="p-00048-en" num="0048">The engine 130 is a single cylinder four-cycle engine, and includes a crankcase 131 for housing a crankshaft and a transmission inside and a cylinder 132 provided on an upper part of the crankcase 131 and having a cylinder body inside.</p>
+    <p id="p-00049-en" num="0049">An intake port for inducting air and fuel into the engine 130 is formed in the cylinder 132. A manifold is connected to the intake port. A throttle body 135, in which an injector is provided, is connected to a part upstream of the manifold. A combustion chamber for combusting fuel supplied from the intake port with air is formed inside the cylinder 132.</p>
+    <p id="p-00050-en" num="0050">Exhaust gas generated by combustion of fuel is discharged outside the engine 130 from an exhaust port formed in a front part of the cylinder 132.</p>
+    <p id="p-00051-en" num="0051">An exhaust conduit 150 is connected to the exhaust port formed in the cylinder 132. The exhaust conduit 150 extends forward obliquely downward from the exhaust port, then curves, and further extends rearward obliquely downward. Thereafter, the exhaust conduit 150 further curves and extends rearward below the crankcase 131. A part of the exhaust conduit 150 more rearward than the crankcase 131 is housed in a silencer 140 disposed on a side of the rear wheel 121.</p>
+    <p id="p-00052-en" num="0052">As shown in FIG. 8, a front catalyzer housing part 151 and a rear catalyzer housing part 152 disposed more downstream than the front catalyzer housing part 151 are provided in the exhaust conduit 150. The front catalyzer housing part 151 has a front catalyzer 151A mainly having reducing effect inside. The rear catalyzer housing part 152 has a rear catalyzer 152A mainly having oxidizing effect inside.</p>
+    <p id="p-00053-en" num="0053">A secondary air inducting conduit 160 for supplying secondary air for exhaust gas is connected to the exhaust conduit 150. A downstream part (a part close to the exhaust conduit 150) of the secondary air inducting conduit 160 is disposed more forward than the crankcase 131 and above a lower surface of the crankcase 131. Its downstream end is connected to a part of the exhaust conduit 150 disposed more forward than the crankcase 131.</p>
+    <p id="p-00054-en" num="0054">As shown in FIGs. 6 and 7, the secondary air inducting conduit 160 includes a first conduit section 160A extending inward in the vehicle width direction from its connection part with the front catalyzer housing part 151 and then curvedly extending upward of the vehicle, a second conduit section 160B curving upward from the first conduit section 160A in a crank shape and connected to a reed valve assembly 161 disposed on a side of the engine 130 at its upstream end, and a third conduit section 160C extending rearward from the reed valve assembly 161 and connected to an air cleaner (not shown).</p>
+    <p id="p-00055-en" num="0055">Here, the first conduit section 160A and the second conduit section 160B of the secondary air inducting conduit 160 are exposed to an inside of a space S1 formed on a front part of the vehicle body and in the rear of the front wheel 23, and construct the secondary air cooling conduit. As shown in FIG. 7, the first conduit section 160A and the second conduit section 160B are disposed in positions that can be visually recognized from the front of the vehicle through an opening end 108D in front of the leg shield 108.</p>
+    <p id="p-00056-en" num="0056">Further, an opening is formed on a side surface of the third conduit section 160C for connecting the reed valve assembly 161 and the air cleaner together. A box-shaped resonator 165 mounted on a lower part of the throttle body 135 is connected to the opening. A part of secondary air flowing into the exhaust conduit 150 flows from the third conduit section 160C into the resonator 165. Thereby, interference in gasses caused due to pulsation of secondary air is prevented, and air noise is reduced.</p>
+    <p id="p-00057-en" num="0057">According to this embodiment with such a construction, the first conduit section 160A and the second conduit section 160B of the secondary air inducting conduit 160 are exposed to an inside of the space S1 formed on a front part of the vehicle body and in the rear of the front wheel 23. Thus, the secondary air inducting conduit 160 can be effectively cooled down, and the effect generally the same as the first embodiment can be realized.</p>
+    <p id="p-00058-en" num="0058">Next, FIG. 9 shows a third embodiment of the present teaching but does not illustrate the combination of the features of independent claim 1. In the figure, the same reference numerals and symbols are given to the parts same as FIGs.6 through 8, and detailed descriptions will not be made hereinafter.</p>
+    <p id="p-00059-en" num="0059">In FIG. 9, an upstream end of a secondary air inducting conduit 263 is connected to a part of an exhaust conduit 50 between a front catalyzer housing part 51 and a rear catalyzer housing part 52. A downstream end of the secondary air inducting conduit 263 is connected to an air cleaner (not shown).</p>
+    <p id="p-00060-en" num="0060">Here, the secondary air inducting conduit 263 is disposed to be exposed to a space on a side of the vehicle body in the rear of a front wheel 123. The secondary air inducting conduit 263 is disposed in a position that can be visually recognized from a side of the vehicle.</p>
+    <p id="p-00061-en" num="0061">According to this embodiment with such a construction, the secondary air inducting conduit 263 is disposed to be exposed to the space on a side of the vehicle in the rear of the front wheel 123. Therefore, the secondary air inducting conduit 263 can be effectively cooled down, and the effect generally the same as the first embodiment can be realized.</p>
+    <p id="p-00062-en" num="0062">In the first through the third embodiments, descriptions are made about a construction such that the engine is fixed to the frame as an example. However, the present teaching is not limited to this construction, but also can be applied to straddle type vehicles, for example, unit swing type vehicles, in which an entire engine unit swings together with a rear wheel, such as many scooters.</p>
+    <p id="p-00063-en" num="0063">Also, in the first through the third embodiments, descriptions are made about a motorcycle as a straddle type vehicle as an example. However, the present teaching is not limited to motorcycles, but also can be applied to other straddle type vehicles, for example, three-wheeled motor vehicles, buggies, and so forth.</p>
+    <p id="p-00064-en" num="0064">The description above discloses (amongst others), an embodiment of a straddle type vehicle including: an engine disposed between a front wheel and a rear wheel, a front catalytic converter and a rear catalytic converter spaced apart in the fore to aft direction in a midway part of an exhaust conduit of the engine, and a secondary air inducting conduit, of which a downstream end is connected to the exhaust conduit in a position between the front catalytic converter and the rear catalytic converter, in which a part of the secondary air inducting conduit is a secondary air cooling conduit section exposed at least either forward or sideward of the vehicle in the rear of the front wheel.</p>
+    <p id="p-00065-en" num="0065">According to this embodiment, the secondary air cooling conduit section, which is a part of the secondary air inducting conduit, is exposed at least either forward or sideward of the vehicle in the rear of the front wheel. Thus, the secondary air cooling conduit section can be effectively cooled down, and an oxygen concentration of secondary air flowing through the secondary air cooling conduit section can be increased. Thereby, combustion efficiency of exhaust gas by secondary air can be sufficiently enhanced when secondary air inducted from the secondary air inducting conduit to the exhaust conduit flows through the rear catalyzer.</p>
+    <p id="p-00066-en" num="0066">Also, preferably the secondary air cooling conduit section can be provided in a position more forward than the engine. With such a construction, a contact of a rearward hot air flow from the engine due to traveling with the secondary air cooling conduit section can be prevented. Thereby, without being affected by heat of the engine, the secondary air cooling conduit section can be more efficiently cooled down.</p>
+    <p id="p-00067-en" num="0067">Also, preferably at least a part of an air cleaner can be disposed more rearward than the engine, and an upstream end of the secondary air inducting conduit can be connected to the air cleaner.</p>
+    <p id="p-00068-en" num="0068">Further, preferably the secondary air cooling conduit section can be formed with a metal pipe. With such a construction, the secondary air cooling conduit section can be formed with a metal pipe, which has high thermal conductivity. Thereby, secondary air flowing through the secondary air cooling conduit section can be more effectively cooled down.</p>
+    <p id="p-00069-en" num="0069">Further, preferably a connection part of the secondary air inducting conduit, which is connected to the exhaust conduit, can be disposed below the engine, and the secondary air inducting conduit can be formed to extend from the connection part in the horizontal direction below the engine. With such a construction, the secondary air inducting conduit can be lengthened to extend upstream from the connection part to the exhaust conduit in the horizontal direction, and thereby a sufficient length can be obtained for the inducting pipe for cooling down secondary air flowing in the secondary air inducting conduit. Accordingly, secondary air can be more efficiently cooled down.</p>
+    <p id="p-00070-en" num="0070">Further, preferably the secondary air inducting conduit can be formed to extend from either one of the right side and the left side to the other side traversing a center of the vehicle. With such a construction, the secondary air inducting conduit can be formed to extend from either one of the right side and the left side to the other side traversing a center of the vehicle, and thus an entire length of the secondary air inducting conduit can be enlarged. Thereby, secondary air flowing in the secondary air inducting conduit can be sufficiently cooled down.</p>
+    <p id="p-00071-en" num="0071">Also, preferably since the frame is formed with right and left frames, at least a part of the secondary air inducting conduit can be disposed to overlap the right and left frames in a side view. With such a construction, the secondary air inducting conduit can be protected from shocks from outside and so forth by the right and left frames.</p>
+    <p id="p-00072-en" num="0072">The straddle type vehicle according to the present teaching has a construction such that the secondary air cooling conduit section of the secondary air inducting conduit is exposed at least either forward or sideward of the vehicle in the rear of the front wheel. Thus, an oxygen concentration of secondary air flowing through the secondary air cooling conduit section can be increased. Therefore, combustion efficiency of exhaust gas by secondary air can be sufficiently enhanced when secondary air inducted from the secondary air inducting conduit to the exhaust conduit flows through the rear catalyzer, and further assures purification of exhaust gas by the rear catalyzer.</p>
+    <p id="p-00073-en" num="0073">The description further discloses, according to a preferred first aspect, an engine disposed between a front wheel and a rear wheel; a front catalytic converter and a rear catalytic converter spaced apart in the fore to aft direction in a midway part of an exhaust conduit of the engine; and a secondary air inducting conduit, of which a downstream end is connected to the exhaust conduit in a position between the front catalytic converter and the rear catalytic converter, wherein a part of the secondary air inducting conduit is a secondary air cooling conduit section exposed at least either forward or sideward in the vehicle in the rear of the front wheel.</p>
+    <p id="p-00074-en" num="0074">Further, according to a preferred second aspect, the secondary air cooling conduit section is provided in a position more forward than the engine.</p>
+    <p id="p-00075-en" num="0075">Further, according to a preferred third aspect, at least a part of an air cleaner is disposed more rearward than the engine, and an upstream end of the secondary air inducting conduit is connected to the air cleaner.</p>
+    <p id="p-00076-en" num="0076">Further, according to a preferred fourth aspect, the secondary air cooling conduit section is formed with a metal pipe.</p>
+    <p id="p-00077-en" num="0077">Further, according to a preferred fifth aspect, a connection part of the secondary air inducting conduit, which is connected to the exhaust conduit, is disposed below the engine, and the secondary air inducting conduit is formed to extend from the connection part in the horizontal direction below the engine.</p>
+    <p id="p-00078-en" num="0078">Further, according to a preferred sixth aspect, the secondary air inducting conduit is formed to extend from either one of the right side and the left side to the other side traversing a center of the vehicle.</p>
+    <p id="p-00079-en" num="0079">Further, according to a preferred seventh aspect, a frame is formed with right and left frames, at least a part of the secondary air inducting conduit is disposed to overlap the right and left frames in a side view.</p>
+    <p id="p-00080-en" num="0080">The description still further discloses, in order to realize effective cooling of oxygen in air flowing through a secondary air inducting conduit, and enhance combustion efficiency of exhaust gas by secondary air in a catalyzer, according to a particularly preferred embodiment, that third through fifth conduit sections 80C through 80E of a secondary air inducting conduit 80 are exposed to a space S in the rear of a front wheel 60 and in front of an engine 20, and thus the third through the fifth conduit sections 80C through 80E become a secondary air cooling conduit section for cooling down secondary air. Thereby, secondary air flowing through the secondary air inducting conduit is cooled down by the third through the fifth conduit sections 80C through 80E, and an oxygen concentration of secondary air is increased.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20100623">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>Straddle type vehicle comprising an engine (20) disposed between front and rear wheels, and first and second catalytic converters (40,50) disposed in an exhaust conduit (30) of the engine (20), a secondary air inducting conduit (80) is provided for supplying secondary air to the exhaust conduit (30) at a position between the first and second catalytic converters (40,50),</claim-text>
+      <claim-text>
+wherein a part of the secondary air inducting conduit (80) is provided in a position more forward than the engine (20) and in the rear of the front wheel, and least a part of an air cleaner (19) is disposed more rearward than the engine (20), and an upstream end (80A) of the secondary air inducting conduit (80) is connected to the air cleaner (19).</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>Straddle type vehicle according to claim 1, wherein the first and second catalytic converters are a front catalytic converter (40) and a rear catalytic converter (50) spaced apart in the fore to aft direction in a midway part (34) of an exhaust conduit (30) of the engine (20), and a downstream end (80G) of the secondary air inducting conduit (80) is connected to the exhaust conduit (30) in a position between the front catalytic converter (40) and the rear catalytic converter (50).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>Straddle type vehicle according to claim 1 or 2, wherein the secondary air cooling conduit section is at least partially formed with a metal pipe.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>Straddle type vehicle according to one of the claims 1 to 3, wherein a connection part (80G1) of the secondary air inducting conduit (80), which is connected to the exhaust conduit (30), is disposed below the engine (20), and the secondary air inducting conduit (80) is formed to extend from the connection part (80G1) in the horizontal direction below the engine (20).</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>Straddle type vehicle according to claim 4, wherein a part (80C) of the secondary air inducting conduit (80) is formed to extend from either one of the right side and the left side to the other side traversing a center of the vehicle.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>Straddle type vehicle according to one of the claims 1 to 5, wherein a frame is formed with right and left frames (12,13), at least a part (80E) of the secondary air inducting conduit (80) is disposed to overlap the right and left frames in a side view.</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_fre" lang="fre" format="original" date-changed="20100623">
+    <claim num="1" id="clm-00001-fr" independent="true">
+      <claim-text>Véhicule de type à monter à califourchon comprenant un moteur (20) disposé entre des roues avant et arrière, et des premier et second convertisseurs catalytiques (40, 50) disposés dans un conduit d'échappement (30) du moteur (20), un conduit d'induction d'air secondaire (80) est prévu pour délivrer de l'air secondaire au conduit d'échappement (30) à une position entre les premier et second convertisseurs catalytiques (40, 50),</claim-text>
+      <claim-text>
+dans lequel une partie du conduit d'induction d'air secondaire (80) est disposée dans une position plus à l'avant que le moteur (20) et à l'arrière de la roue avant, et au moins une partie d'un filtre à air (19) est disposée plus à l'arrière que le moteur (20), et une extrémité amont (80A) du conduit d'induction d'air secondaire (80) est reliée au filtre à air (19).</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-fr">
+      <claim-text>Véhicule de type à monter à califourchon selon la revendication 1, dans lequel les premier et second convertisseurs catalytiques sont un convertisseur catalytique avant (40) et un convertisseur catalytique arrière (50) espacés dans la direction d'avant en arrière dans une partie à mi-chemin (34) d'un conduit d'échappement (30) du moteur (20), et une extrémité aval (80G) du conduit d'induction d'air secondaire (80) est reliée au conduit d'échappement (30) dans une position entre le convertisseur catalytique avant (40) et le convertisseur catalytique arrière (50).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-fr">
+      <claim-text>Véhicule de type à monter à califourchon selon la revendication 1 ou 2, dans lequel la section de conduit de refroidissement d'air secondaire est au moins partiellement formée avec un tuyau de métal.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-fr">
+      <claim-text>Véhicule de type à monter à califourchon selon l'une des revendications 1 à 3, dans lequel une partie de raccordement (80G1) du conduit d'induction d'air secondaire (80), qui est raccordée au conduit d'échappement (30), est disposée sous le moteur (20), et le conduit d'induction d'air secondaire (80) est formé pour s'étendre de la partie de connexion (80G1) dans la direction horizontale sous le moteur (20).</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-fr">
+      <claim-text>Véhicule de type à monter à califourchon selon la revendication 4, dans lequel une partie (80C) du conduit d'induction d'air secondaire (80) est formée pour s'étendre de l'un ou l'autre du côté droit et du côté gauche vers l'autre côté traversant un centre du véhicule.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-fr">
+      <claim-text>Véhicule de type à monter à califourchon selon l'une des revendications 1 à 5, dans lequel un cadre est formé avec des cadres droit et gauche (12, 13), au moins une partie (80E) du conduit d'induction d'air secondaire (80) est disposée pour chevaucher les cadres droit et gauche dans une vue latérale.</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_ger" lang="ger" format="original" date-changed="20100623">
+    <claim num="1" id="clm-00001-de" independent="true">
+      <claim-text>Fahrzeug vom Spreizsitz- Typ, aufweisend eine Brennkraftmaschine (20), angeordnet zwischen vorderen und hinteren Rädern, und einem ersten und einem zweiten katalytischen Wandler (40, 50), angeordnet in einer Abgasleitung (30) der Brennkraftmaschine (20), wobei eine Sekundärluft- Einleitungsleitung (80) zum Zuführen von Sekundärluft in die Abgasleitung (30) an einer Position zwischen dem ersten und dem zweiten katalytischen Wandler (40, 50) vorgesehen ist,</claim-text>
+      <claim-text>
+wobei ein Teil der Sekundärluft- Einleitungsleitung (80) in einer Position weiter vorn als die Brennkraftmaschine (20) und hinter dem Vorderrad vorgesehen ist und zumindest ein Teil des Luftfilters (19) weiter hinten als die Brennkraftmaschine (20) angeordnet ist und ein stromaufwärtiges Ende (80A) der Sekundärluft- Einleitungsleitung (80) mit dem Luftfilter (19) verbunden ist.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-de">
+      <claim-text>Fahrzeug vom Spreizsitz- Typ nach Anspruch 1, wobei der erste und zweite katalytischen Wandler (40, 50) ein vorderer katalytischer Wandler (40) und ein hinterer katalytischer Wandler (50) ist, beabstandet in der Vorwärts-Rückwärts-Richtung in einem mittleren Teil (34) einer Abgasleitung (30) der Brennkraftmaschine (20), und ein stromabwärtiges Ende (80G) der Sekundärluft- Einleitungsleitung (80) mit der Abgasleitung (30) in einer Position zwischen dem vorderen katalytischen Wandler (40) und dem hinteren katalytischen Wandler (50) verbunden ist.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-de">
+      <claim-text>Fahrzeug vom Spreizsitz- Typ nach Anspruch 1 oder 2, wobei der Sekundärluft- Einleitungsabschnitt zumindest teilweise mit einem Metallrohr gebildet ist.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-de">
+      <claim-text>Fahrzeug vom Spreizsitz- Typ nach zumindest einem der Ansprüche 1 bis 3, wobei ein Verbindungsteil (80G1) der Sekundärluft- Einleitungsleitung (80), das mit der Abgasleitung (30) verbunden ist, unter der Brennkraftmaschine (20) angeordnet ist und die Sekundärluft- Einleitungsleitung (80) ausgebildet ist, sich von dem Verbindungsteil (80G1) in der horizontalen Richtung unter der Brennkraftmaschine (20) zu erstrecken.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-de">
+      <claim-text>Fahrzeug vom Spreizsitz- Typ nach Anspruch 4, wobei ein Teil (80C) der Sekundärluft- Einleitungsleitung (80) ausgebildet ist, sich von einer Seite der rechten Seite oder der linken Seite zu der anderen Seite, eine Mitte des Fahrzeuges überquerend, zu erstrecken.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-de">
+      <claim-text>Fahrzeug vom Spreizsitz- Typ nach zumindest einem der Ansprüche 1 bis 5, wobei ein Rahmen mit einem rechten und einem linken Rahmen (12, 13) gebildet ist, wobei zumindest ein Teil (80E) der Sekundärluft- Einleitungsleitung (80) vorgesehen ist, dem rechten und linken Rahmen in einer Seitensicht zu überlappen.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP1933010B1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP1933010B1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP1933010B1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP1933010B1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP1933010B1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP1933010B1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP1933010B1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP1933010B1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP1933010B1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+  </drawings>
+  <image file="EP1933010B1.PDF" type="pdf" size="830458" pages="19" />
+</lexisnexis-patent-document>

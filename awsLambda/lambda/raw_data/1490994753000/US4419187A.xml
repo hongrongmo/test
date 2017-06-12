@@ -1,0 +1,1809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170321" file="US4419187A.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170321" time-changed="131443">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Patent">
+      <document-id id="39222775">
+        <country>US</country>
+        <doc-number>4419187</doc-number>
+        <kind>A</kind>
+        <date>19831206</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>4419187</doc-number>
+        <kind>A</kind>
+      </document-id>
+      <document-id data-format="docdb">
+        <doc-number>4419187</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US4419187</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="9616547">
+        <country>US</country>
+        <doc-number>06354711</doc-number>
+        <date>19820304</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>06354711</doc-number>
+        <date>19820304</date>
+      </document-id>
+      <document-id data-format="docdb" id="49984604">
+        <doc-number>35471182</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US19820354711</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20090314">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>06012047</doc-number>
+        <date>19790214</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>170,897</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>12,047</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US19820354711</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>US19790012047</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090314">
+      <unexamined-printed-without-grant>
+        <date>19831206</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>19831206</date>
+      </printed-with-grant>
+    </dates-of-public-availability>
+    <classification-ipc date-changed="20130828">
+      <main-classification>
+        <text>  B 01D   3/02   A</text>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>02</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20130828">
+      <classification-ipcr sequence="1">
+        <text>B01D   3/14        20060101A I20070602RMUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>14</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20070602</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B01D  61/36        20060101A I20070602RMUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>61</main-group>
+        <subgroup>36</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20070602</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B32B  27/08        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>27</main-group>
+        <subgroup>08</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20130828">
+      <classification-cpc sequence="1">
+        <text>B01D  61/364       20130101 FI20130821BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>61</main-group>
+        <subgroup>364</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130821</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01D  69/12        20130101 LI20130821BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>69</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130821</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B32B  27/08        20130101 LI20130821BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>27</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130821</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>Y10S 159/27        20130101 LA20130518BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>S</subclass>
+        <main-group>159</main-group>
+        <subgroup>27</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130518</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>Y10S 203/18        20130101 LA20130518BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>S</subclass>
+        <main-group>203</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130518</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20130828">
+      <country>US</country>
+      <main-classification>
+        <text>202/200</text>
+        <class>202</class>
+        <subclass>200</subclass>
+      </main-classification>
+      <further-classification sequence="1">
+        <text>159/DIG.027</text>
+        <class>159</class>
+        <subclass>DIG.027</subclass>
+      </further-classification>
+      <further-classification sequence="2">
+        <text>203/11</text>
+        <class>203</class>
+        <subclass>11</subclass>
+      </further-classification>
+      <further-classification sequence="3">
+        <text>203/DIG.017</text>
+        <class>203</class>
+        <subclass>DIG.017</subclass>
+      </further-classification>
+    </classification-national>
+    <classifications-ecla date-changed="20130828">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>B01D 61/36D</text>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>61</main-group>
+        <subgroup>36</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">D  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>B01D 69/12</text>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>69</main-group>
+        <subgroup>12</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="EC" country="EP">
+        <text>B32B 27/08</text>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>27</main-group>
+        <subgroup>08</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <field-of-search date-changed="20070520">
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>55/16</text>
+          <class>55</class>
+          <subclass>16</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>55/158</text>
+          <class>55</class>
+          <subclass>158</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>159/47R</text>
+          <class>159</class>
+          <subclass>47R</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>159/49</text>
+          <class>159</class>
+          <subclass>49</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>159/DIG.8</text>
+          <class>159</class>
+          <subclass>DIG.8</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>159/DIG.27</text>
+          <class>159</class>
+          <subclass>DIG.27</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>203/10</text>
+          <class>203</class>
+          <subclass>10</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>203/11</text>
+          <class>203</class>
+          <subclass>11</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>203/DIG.17</text>
+          <class>203</class>
+          <subclass>DIG.17</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>210/490</text>
+          <class>210</class>
+          <subclass>490</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>210/640</text>
+          <class>210</class>
+          <subclass>640</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>210/500.2</text>
+          <class>210</class>
+          <subclass>500.2</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>264/22</text>
+          <class>264</class>
+          <subclass>22</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>202/200</text>
+          <class>202</class>
+          <subclass>200</subclass>
+        </main-classification>
+      </classification-national>
+    </field-of-search>
+    <number-of-claims calculated="yes">5</number-of-claims>
+    <invention-title id="title_eng" date-changed="20070520" lang="eng" format="original">Apparatus and method for thermal membrane distillation</invention-title>
+    <references-cited date-changed="20151006">
+      <patent-citations name="patcit" date-changed="20130601" />
+      <forward-citations name="fwdcit" date-changed="20151006" />
+      <citation srep-phase="0">
+        <patcit num="1" dnum="US2984623A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2984623</doc-number>
+            <kind>A</kind>
+            <date>19610516</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>2984623</doc-number>
+            <kind>A</kind>
+            <date>19610516</date>
+          </document-id>
+          <application-date>
+            <date>19561022</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="2" dnum="US3648845A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3648845</doc-number>
+            <kind>A</kind>
+            <date>19720314</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>3648845</doc-number>
+            <kind>A</kind>
+            <date>19720314</date>
+          </document-id>
+          <application-date>
+            <date>19690902</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="3" dnum="US3847652A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3847652</doc-number>
+            <kind>A</kind>
+            <date>19741112</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>3847652</doc-number>
+            <kind>A</kind>
+            <date>19741112</date>
+          </document-id>
+          <application-date>
+            <date>19721208</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="4" dnum="US4203848A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4203848</doc-number>
+            <kind>A</kind>
+            <date>19800520</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>4203848</doc-number>
+            <kind>A</kind>
+            <date>19800520</date>
+          </document-id>
+          <application-date>
+            <date>19770525</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>EP</country>
+            <doc-number>399568</doc-number>
+            <kind>B1</kind>
+            <date>19941228</date>
+          </document-id>
+          <application-date>
+            <date>19860108</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>US</country>
+            <doc-number>4710205</doc-number>
+            <kind>A</kind>
+            <date>19871201</date>
+          </document-id>
+          <application-date>
+            <date>19870316</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="3">
+          <document-id>
+            <country>EP</country>
+            <doc-number>399568</doc-number>
+            <kind>A3</kind>
+            <date>19920415</date>
+          </document-id>
+          <application-date>
+            <date>19860108</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="4">
+          <document-id>
+            <country>US</country>
+            <doc-number>7631768</doc-number>
+            <kind>B2</kind>
+            <date>20091215</date>
+          </document-id>
+          <application-date>
+            <date>20051104</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="5">
+          <document-id>
+            <country>US</country>
+            <doc-number>7488421</doc-number>
+            <kind>B2</kind>
+            <date>20090210</date>
+          </document-id>
+          <application-date>
+            <date>20051110</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="6">
+          <document-id>
+            <country>US</country>
+            <doc-number>7381331</doc-number>
+            <kind>B2</kind>
+            <date>20080603</date>
+          </document-id>
+          <application-date>
+            <date>20050930</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="7">
+          <document-id>
+            <country>US</country>
+            <doc-number>7291696</doc-number>
+            <kind>B2</kind>
+            <date>20071106</date>
+          </document-id>
+          <application-date>
+            <date>20051104</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="8">
+          <document-id>
+            <country>US</country>
+            <doc-number>6854603</doc-number>
+            <kind>B2</kind>
+            <date>20050215</date>
+          </document-id>
+          <application-date>
+            <date>20030701</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="9">
+          <document-id>
+            <country>US</country>
+            <doc-number>6676993</doc-number>
+            <kind>B2</kind>
+            <date>20040113</date>
+          </document-id>
+          <application-date>
+            <date>20010131</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="10">
+          <document-id>
+            <country>US</country>
+            <doc-number>6410084</doc-number>
+            <kind>B1</kind>
+            <date>20020625</date>
+          </document-id>
+          <application-date>
+            <date>19991210</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="11">
+          <document-id>
+            <country>US</country>
+            <doc-number>6228477</doc-number>
+            <kind>B1</kind>
+            <date>20010508</date>
+          </document-id>
+          <application-date>
+            <date>19990212</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="12">
+          <document-id>
+            <country>US</country>
+            <doc-number>4749414</doc-number>
+            <kind>A</kind>
+            <date>19880607</date>
+          </document-id>
+          <application-date>
+            <date>19861216</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="13">
+          <document-id>
+            <country>US</country>
+            <doc-number>5938928</doc-number>
+            <kind>A</kind>
+            <date>19990817</date>
+          </document-id>
+          <application-date>
+            <date>19970918</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="14">
+          <document-id>
+            <country>JP</country>
+            <doc-number>4445967</doc-number>
+            <kind>B2</kind>
+            <date>20100407</date>
+          </document-id>
+          <application-date>
+            <date>20040424</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="15">
+          <document-id>
+            <country>EP</country>
+            <doc-number>399568</doc-number>
+            <kind>A2</kind>
+            <date>19901128</date>
+          </document-id>
+          <application-date>
+            <date>19860108</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="16">
+          <document-id>
+            <country>US</country>
+            <doc-number>4776959</doc-number>
+            <kind>A</kind>
+            <date>19881011</date>
+          </document-id>
+          <application-date>
+            <date>19870413</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="17">
+          <document-id>
+            <country>US</country>
+            <doc-number>5268150</doc-number>
+            <kind>A</kind>
+            <date>19931207</date>
+          </document-id>
+          <application-date>
+            <date>19911218</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="18">
+          <document-id>
+            <country>US</country>
+            <doc-number>4875980</doc-number>
+            <kind>A</kind>
+            <date>19891024</date>
+          </document-id>
+          <application-date>
+            <date>19870826</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="19">
+          <document-id>
+            <country>US</country>
+            <doc-number>5217581</doc-number>
+            <kind>A</kind>
+            <date>19930608</date>
+          </document-id>
+          <application-date>
+            <date>19920805</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="20">
+          <document-id>
+            <country>US</country>
+            <doc-number>5595662</doc-number>
+            <kind>A</kind>
+            <date>19970121</date>
+          </document-id>
+          <application-date>
+            <date>19950821</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="21">
+          <document-id>
+            <country>JP</country>
+            <doc-number>5221020</doc-number>
+            <kind>B2</kind>
+            <date>20130626</date>
+          </document-id>
+          <application-date>
+            <date>20060929</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="22">
+          <document-id>
+            <country>US</country>
+            <doc-number>8801933</doc-number>
+            <kind>B2</kind>
+            <date>20140812</date>
+          </document-id>
+          <application-date>
+            <date>20110915</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="23">
+          <document-id>
+            <country>US</country>
+            <doc-number>6112908</doc-number>
+            <kind>A</kind>
+            <date>20000905</date>
+          </document-id>
+          <application-date>
+            <date>19980211</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="24">
+          <document-id>
+            <country>DE</country>
+            <doc-number>3422481</doc-number>
+            <kind>A1</kind>
+            <date>19851219</date>
+          </document-id>
+          <application-date>
+            <date>19840616</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="25">
+          <document-id>
+            <country>US</country>
+            <doc-number>9039900</doc-number>
+            <kind>B2</kind>
+            <date>20150526</date>
+          </document-id>
+          <application-date>
+            <date>20110413</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="26">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040002554</doc-number>
+            <kind>A1</kind>
+            <date>20040101</date>
+          </document-id>
+          <application-date>
+            <date>20030701</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="27">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040256310</doc-number>
+            <kind>A1</kind>
+            <date>20041223</date>
+          </document-id>
+          <application-date>
+            <date>20040617</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="28">
+          <document-id>
+            <country>US</country>
+            <doc-number>9103232</doc-number>
+            <kind>B1</kind>
+            <date>20150811</date>
+          </document-id>
+          <application-date>
+            <date>20130227</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="29">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060108286</doc-number>
+            <kind>A1</kind>
+            <date>20060525</date>
+          </document-id>
+          <application-date>
+            <date>20051110</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="30">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070075013</doc-number>
+            <kind>A1</kind>
+            <date>20070405</date>
+          </document-id>
+          <application-date>
+            <date>20050930</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="31">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070102348</doc-number>
+            <kind>A1</kind>
+            <date>20070510</date>
+          </document-id>
+          <application-date>
+            <date>20061221</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="32">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070102349</doc-number>
+            <kind>A1</kind>
+            <date>20070510</date>
+          </document-id>
+          <application-date>
+            <date>20051104</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="33">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070106052</doc-number>
+            <kind>A1</kind>
+            <date>20070510</date>
+          </document-id>
+          <application-date>
+            <date>20051104</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150811">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>06170897</doc-number>
+              <date>19800721</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>06354711</doc-number>
+              <date>19820304</date>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>06012047</doc-number>
+              <date>19790214</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>4265713</doc-number>
+                <date>19810505</date>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>06170897</doc-number>
+              <date>19800721</date>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+    </related-documents>
+    <parties date-changed="20130601">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>INT POWER TECH</orgname>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdb">
+          <addressbook lang="eng">
+            <orgname>INT POWER TECH</orgname>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdba">
+          <addressbook lang="eng">
+            <orgname>INTERNATIONAL POWER TECHNOLOGY, INC.</orgname>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>CHENG DAH Y</name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>WIERSMA STEVE J</name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdb">
+          <addressbook lang="eng">
+            <name>CHENG DAH Y</name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdba">
+          <addressbook lang="eng">
+            <name>CHENG; DAH Y.</name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdba">
+          <addressbook lang="eng">
+            <name>WIERSMA; STEVE J.</name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdb">
+          <addressbook lang="eng">
+            <name>WIERSMA STEVE J</name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Limbach, Limbach &amp; Sutton</name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <primary-examiner>
+        <name>Sever; Frank</name>
+      </primary-examiner>
+    </examiners>
+    <patent-family date-changed="20110818">
+      <main-family family-id="5869601">
+        <family-member>
+          <document-id>
+            <country>SG</country>
+            <doc-number>485</doc-number>
+            <kind>G</kind>
+            <date>19850614</date>
+          </document-id>
+          <application-date>
+            <date>19850104</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2042417</doc-number>
+            <kind>B</kind>
+            <date>19830126</date>
+          </document-id>
+          <application-date>
+            <date>19800123</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>386401</doc-number>
+            <kind>B</kind>
+            <date>19880825</date>
+          </document-id>
+          <application-date>
+            <date>19800214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>5503980</doc-number>
+            <kind>A</kind>
+            <date>19800821</date>
+          </document-id>
+          <application-date>
+            <date>19800130</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2448924</doc-number>
+            <kind>A1</kind>
+            <date>19800912</date>
+          </document-id>
+          <application-date>
+            <date>19800213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4419187</doc-number>
+            <kind>A</kind>
+            <date>19831206</date>
+          </document-id>
+          <application-date>
+            <date>19820304</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>3005192</doc-number>
+            <kind>A1</kind>
+            <date>19800828</date>
+          </document-id>
+          <application-date>
+            <date>19800212</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>8103655</doc-number>
+            <kind>A1</kind>
+            <date>19810616</date>
+          </document-id>
+          <application-date>
+            <date>19800213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2042417</doc-number>
+            <kind>A</kind>
+            <date>19800924</date>
+          </document-id>
+          <application-date>
+            <date>19800123</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>HK</country>
+            <doc-number>28685</doc-number>
+            <kind>A</kind>
+            <date>19850412</date>
+          </document-id>
+          <application-date>
+            <date>19850404</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>59087</doc-number>
+            <kind>D0</kind>
+            <date>19800530</date>
+          </document-id>
+          <application-date>
+            <date>19800107</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MY</country>
+            <doc-number>4786</doc-number>
+            <kind>A</kind>
+            <date>19861231</date>
+          </document-id>
+          <application-date>
+            <date>19861230</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4265713</doc-number>
+            <kind>A</kind>
+            <date>19810505</date>
+          </document-id>
+          <application-date>
+            <date>19790214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4316772</doc-number>
+            <kind>A</kind>
+            <date>19820223</date>
+          </document-id>
+          <application-date>
+            <date>19800204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>82080</doc-number>
+            <kind>A</kind>
+            <date>19880115</date>
+          </document-id>
+          <application-date>
+            <date>19800214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>518258</doc-number>
+            <kind>B2</kind>
+            <date>19810924</date>
+          </document-id>
+          <application-date>
+            <date>19800130</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>3005192</doc-number>
+            <kind>C2</kind>
+            <date>19821223</date>
+          </document-id>
+          <application-date>
+            <date>19800212</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DK</country>
+            <doc-number>63580</doc-number>
+            <kind>A</kind>
+            <date>19800815</date>
+          </document-id>
+          <application-date>
+            <date>19800214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>488516</doc-number>
+            <kind>D0</kind>
+            <date>19810316</date>
+          </document-id>
+          <application-date>
+            <date>19800213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IT</country>
+            <doc-number>1129977</doc-number>
+            <kind>B</kind>
+            <date>19860611</date>
+          </document-id>
+          <application-date>
+            <date>19800128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IT</country>
+            <doc-number>8019509</doc-number>
+            <kind>D0</kind>
+            <date>19800128</date>
+          </document-id>
+          <application-date>
+            <date>19800128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>55116401</doc-number>
+            <kind>A</kind>
+            <date>19800908</date>
+          </document-id>
+          <application-date>
+            <date>19800214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MY</country>
+            <doc-number>8600047</doc-number>
+            <kind>A</kind>
+            <date>19861231</date>
+          </document-id>
+          <application-date>
+            <date>19861230</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>SG</country>
+            <doc-number>854</doc-number>
+            <kind>A</kind>
+          </document-id>
+          <application-date>
+            <date>19850104</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4473473</doc-number>
+            <kind>A</kind>
+            <date>19840925</date>
+          </document-id>
+          <application-date>
+            <date>19810202</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4476024</doc-number>
+            <kind>A</kind>
+            <date>19841009</date>
+          </document-id>
+          <application-date>
+            <date>19820809</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="5494275">
+        <family-member>
+          <document-id>
+            <country>SG</country>
+            <doc-number>485</doc-number>
+            <kind>G</kind>
+            <date>19850614</date>
+          </document-id>
+          <application-date>
+            <date>19850104</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2042417</doc-number>
+            <kind>B</kind>
+            <date>19830126</date>
+          </document-id>
+          <application-date>
+            <date>19800123</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>5503980</doc-number>
+            <kind>A</kind>
+            <date>19800821</date>
+          </document-id>
+          <application-date>
+            <date>19800130</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2448924</doc-number>
+            <kind>A1</kind>
+            <date>19800912</date>
+          </document-id>
+          <application-date>
+            <date>19800213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4419187</doc-number>
+            <kind>A</kind>
+            <date>19831206</date>
+          </document-id>
+          <application-date>
+            <date>19820304</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4419242</doc-number>
+            <kind>A</kind>
+            <date>19831206</date>
+          </document-id>
+          <application-date>
+            <date>19820218</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>386401</doc-number>
+            <kind>B</kind>
+            <date>19880825</date>
+          </document-id>
+          <application-date>
+            <date>19800214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>3005192</doc-number>
+            <kind>A1</kind>
+            <date>19800828</date>
+          </document-id>
+          <application-date>
+            <date>19800212</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>8103655</doc-number>
+            <kind>A1</kind>
+            <date>19810616</date>
+          </document-id>
+          <application-date>
+            <date>19800213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2042417</doc-number>
+            <kind>A</kind>
+            <date>19800924</date>
+          </document-id>
+          <application-date>
+            <date>19800123</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>HK</country>
+            <doc-number>28685</doc-number>
+            <kind>A</kind>
+            <date>19850412</date>
+          </document-id>
+          <application-date>
+            <date>19850404</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>59087</doc-number>
+            <kind>D0</kind>
+            <date>19800530</date>
+          </document-id>
+          <application-date>
+            <date>19800107</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MY</country>
+            <doc-number>4786</doc-number>
+            <kind>A</kind>
+            <date>19861231</date>
+          </document-id>
+          <application-date>
+            <date>19861230</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4316772</doc-number>
+            <kind>A</kind>
+            <date>19820223</date>
+          </document-id>
+          <application-date>
+            <date>19800204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>82080</doc-number>
+            <kind>A</kind>
+            <date>19880115</date>
+          </document-id>
+          <application-date>
+            <date>19800214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>518258</doc-number>
+            <kind>B2</kind>
+            <date>19810924</date>
+          </document-id>
+          <application-date>
+            <date>19800130</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>3005192</doc-number>
+            <kind>C2</kind>
+            <date>19821223</date>
+          </document-id>
+          <application-date>
+            <date>19800212</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DK</country>
+            <doc-number>63580</doc-number>
+            <kind>A</kind>
+            <date>19800815</date>
+          </document-id>
+          <application-date>
+            <date>19800214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>488516</doc-number>
+            <kind>D0</kind>
+            <date>19810316</date>
+          </document-id>
+          <application-date>
+            <date>19800213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IT</country>
+            <doc-number>1129977</doc-number>
+            <kind>B</kind>
+            <date>19860611</date>
+          </document-id>
+          <application-date>
+            <date>19800128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IT</country>
+            <doc-number>8019509</doc-number>
+            <kind>D0</kind>
+            <date>19800128</date>
+          </document-id>
+          <application-date>
+            <date>19800128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>55116401</doc-number>
+            <kind>A</kind>
+            <date>19800908</date>
+          </document-id>
+          <application-date>
+            <date>19800214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MY</country>
+            <doc-number>8600047</doc-number>
+            <kind>A</kind>
+            <date>19861231</date>
+          </document-id>
+          <application-date>
+            <date>19861230</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>SG</country>
+            <doc-number>854</doc-number>
+            <kind>A</kind>
+          </document-id>
+          <application-date>
+            <date>19850104</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4265713</doc-number>
+            <kind>A</kind>
+            <date>19810505</date>
+          </document-id>
+          <application-date>
+            <date>19790214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4473473</doc-number>
+            <kind>A</kind>
+            <date>19840925</date>
+          </document-id>
+          <application-date>
+            <date>19810202</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>4476024</doc-number>
+            <kind>A</kind>
+            <date>19841009</date>
+          </document-id>
+          <application-date>
+            <date>19820809</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20130601" lang="eng" format="original">
+    <p>Apparatus and method for improved thermal membrane distillation utilizes a composite membrane comprised of a microporous lyophobic layer having deposited thereon an essentially nonporous lyophilic coating.</p>
+  </abstract>
+  <legal-data date-changed="20170304">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>19870509</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     4419187A </docdb-publication-number>
+      <docdb-application-id>49984604</docdb-application-id>
+      <fee-payment-year>4</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>19910709</date>
+      </publication-date>
+      <event-code-1>REMI</event-code-1>
+      <legal-description>MAINTENANCE FEE REMINDER MAILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     4419187A </docdb-publication-number>
+      <docdb-application-id>49984604</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>19911208</date>
+      </publication-date>
+      <event-code-1>LAPS</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSE FOR FAILURE TO PAY MAINTENANCE FEES</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     4419187A </docdb-publication-number>
+      <docdb-application-id>49984604</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>19920211</date>
+      </publication-date>
+      <event-code-1>FP</event-code-1>
+      <effect>-</effect>
+      <legal-description>EXPIRED DUE TO FAILURE TO PAY MAINTENANCE FEE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     4419187A </docdb-publication-number>
+      <docdb-application-id>49984604</docdb-application-id>
+      <effective-date>
+        <date>19911208</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20070520">
+    <related-apps>
+      <p>This application is a continuation of U.S. patent application Ser. No. 170,897, filed July 21, 1980 and now abandoned which was a continuation-in-part of Ser. No. 12,047, filed Feb. 14, 1979 issued May 5, 1981 as U.S. Pat. No. 4,265,713.</p>
+    </related-apps>
+    <summary>
+      <p>The parent application describes a method and apparatus for thermal membrane distillation which overcomes the traditional problems of water-logging which hinder the continuous operation of a distillation system.</p>
+      <p>This invention embodies an improved membrane comprised of a microporous lyophobic layer having deposited thereon an essentially nonporous lyophilic coating.</p>
+      <p>Conventional distillation requires heating the distilland to the boiling point of one or more of the constituents of the distilland and then recovering and condensing the resulting vapor to a liquid, the distillate.</p>
+      <p>Distillation has also been accomplished at much lower temperatures through the use of a membrane across which a vapor pressure gradient is maintained. Previously, porous lyophobic membranes were used for thermal distillation and desalination.</p>
+      <p>The terms "lyophobic" and "lyophilic" are employed here to describe the wettability of a liquid on a solid surface. Lyophobic describes a non-wetting behavior of a liquid such that the contact angle between a liquid and a solid is greater than 90.degree. so that the liquid tends to ball up and easily run off the surface. Lyophilic describes a wetting behavior of a liquid such that the contact angle between a liquid and a solid is less than 90.degree. and the liquid easily spreads over the solid.</p>
+      <p>The contact angle or wettability depends on the relative molecular attraction between both the solid and liquid and the liquid molecules themselves. If the attraction of the liquid for the solid is more than that for itself, the contact angle is less than 90.degree.; wetting is said to occur and the liquid is said to be lyophilic with respect to the solid. A liquid is lyophobic with respect to a solid when the attraction of the liquid for the solid is less than that for itself thereby creating a contact angle greater than 90.degree..</p>
+      <p>When the liquid is water, the terms hydrophobic and hydrophilic are generally substituted for the more inclusive designations.</p>
+      <p>It is the primary object of this invention to provide an improved membrane and method for thermal distillation which prevents water-logging within the pores of the membrane.</p>
+      <p>Another object of this invention is to improve the rate of thermal distillation by providing a thinner membrane.</p>
+      <p>Another object of this invention is to prevent back-streaming of the distillate into the distilled and the concomitant loss of distilled product.</p>
+      <p>Another object of this invention is to provide a unitary composite membrane which is not subject to mechanical problems resulting in separation of the membrane layers.</p>
+      <p>The accomplishment of these objectives is explained more fully below.</p>
+      <p>This invention consists of a composite membrane, apparatus and method for thermal distillation comprising a microporous lyophobic layer having deposited thereon an essentially nonporous lyophilic coating.</p>
+    </summary>
+    <description-of-drawings>
+      <heading>BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p>FIG. 1 is an enlarged sectional view of a conventional, single-layer, lyophobic porous membrane distillation device;</p>
+      <p>FIG. 2 is an enlarged sectional view of a membrane in accordance with the present invention which consists of a lyophobic layer having symmetrically shaped micropores and having deposited thereon an essentially nonporous lyophilic coating.</p>
+      <p>FIG. 3 is an enlarged sectional view of a membrane in accordance with the present invention which consists of a lyophobic layer having asymmetrically shaped micropores and having deposited thereon an essentially nonporous lyophilic coating.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading>DETAILED DESCRIPTION OF THE DRAWINGS</heading>
+      <p>FIG. 1 is a sectional enlargement of a single lyophobic membrane 10 separating a distilland 12, such as salt water, and a distillate 14, which is fresh water. A pore 16 extends across the lyophobic membrane 10. Due to the properties of the non-wetting lyophobic material at low pressures, liquid is prevented from entering into the pores of the lyophobic membrane 10. Initially, neither the salt water 12 nor fresh water 14 penetrates within the gaseous region 15 of pore 16. Two convex shaped liquid-vapor surfaces 18 and 20 are defined at each end of pore 16.</p>
+      <p>A disequilibrium state exists between the two interfaces 18 and 20 if the distilland 12 has a higher equilibrium vapor pressure than the distillate 14. The distilland 12 is heated to a temperature slightly in excess of the distillate 14. Pure water evaporates into the capillary pore 16 at the hotter distilland side of the membrane and the vapor is condensed at the vapor-liquid interface 20 on the cooler distillate side 14 in an effort to establish local vapor pressure equilibrium. The result is the creation of a net flux of water vapor across the pore 16 of the lyophobic membrane 10.</p>
+      <p>In distillation apparatus using the single hydrophobic membrane 10 of FIG. 1, typically after several days, the vapor barrier across the pores is destroyed due to water-logging, and hence the distillation process through the membrane 10 ceases. The distilland liquid-vapor interface 18 migrates in a direction toward the distillate side 14, as indicated by 18' and 18", until eventually it intersects the liquid-vapor interface 20 on the distillate side of the membrane 10. This destroys the gaseous barrier needed for the distillation process to occur.</p>
+      <p>It is believed that the reason that water-logging occurs in desalination is due to the effect of the dissolved salt in the distilland 12. The saline solution changes the lyophobic property of the membrane 10 where the liquid-vapor interface 18 contacts the side wall 22 of the pore 16. As a result, the salt water, rather than being prevented from filling the pore 16, is able to migrate within the pore 16, eventually completely filling it with liquid. A possible explanation for the alteration of the normally lyophobic property of membrane 10 follows.</p>
+      <p>During distillation, for a given pressure, evaporation takes place at approximately a constant temperature. Addition of heat increases the kinetic energy of some liquid molecules enough to overcome the evaporation energy barrier or the latent heat of evaporation. The latent heat of evaporation is a result of molecular attraction of the molecules which are tightly packed in the liquid phase. At the interface between the vapor and the liquid, there is an energy barrier created by an unbalanced attracting surface force for vapor molecules onto the interface surface. The very short mean free path (average molecular distance) on the liquid side compared with the vapor side creates the unbalanced forces at the interface. This is the phenomenon which creates surface tension.</p>
+      <p>In saline solutions surface tension is a function of salt concentration. Salt concentration increases at the edge of the liquid-vapor interface 18 adjacent to pore wall 22 due to local surface tension alterations caused by the effects of the lyophobic material on the salt water. This condition modifies the surface tension there, which in turn modifies the liquid-vapor interface curvature and increases the rate of evaporation of water and causes salt precipitation to occur along the edge 22 of the liquid-vapor interface, rendering the lyophobic wall of the membrane lyophilic. The original boundary is therefore not maintained, and the liquid-vapor interface 18 migrates to position 18'. Eventually, migration causes the salt water interface to collide with the fresh water interface, and water-logging occurs.</p>
+      <p>The length of time it takes for water-logging to occur depends upon a number of variables; typically, however, it only takes a few days for water-logging to occur and for the distillation process top stop completely.</p>
+      <p>FIG. 2 is an enlarged sectional view of a membrane 24 in accordance with the present invention which consists of a lyophobic layer 26 having symmetrically shaped micropores 29 and having deposited thereon an essentially nonporous lyophilic coating 28. The lyophilic coating 28 is adjacent to distilland 12 and the lyophobic layer 26 is adjacent the distillate 14. In the embodiment described, the distilland 12 is salt water and the distillate 14 is fresh water.</p>
+      <p>As with the single lyophobic distillation membrane 10 of FIG. 1, evaporation and condensation take place across each micropore 29. The distilland 12 is heated to a temperature in excess of the distillate 14, creating a vapor pressure gradient across the composite membrane 24. A net evaporation takes place at the liquid-vapor interface 32 and a net condensation occurs at the fresh water-vapor interface 34. However, unlike the case of the single lyophobic distillation membrane, water-logging does not occur within the composite membrane 24 especially if the evaporation rate is greater than the liquid migration rate through the lyophilic layer.</p>
+      <p>The vapor transport rate across the pore 29 is dependent on the vapor pressure gradient across the pore cavity, i.e., on the vapor pressure difference at the evaporating liquid-vapor interface 32 and the condensing vapor-liquid interface 34. The vapor pressure is a function of the temperature, salt concentration, and surface curvature. Therefore, all three properties must be considered in creating the desired vapor pressure gradient across the composite membrane 24.</p>
+      <p>The system can be operated at temperatures as low as 60.degree. F. (15.6.degree. C.) to as high as 300.degree. F. (148.9.degree. C.) if the system is pressurized. Preferably, it is operated between 100.degree. F. (37.8.degree. C.) and 240.degree. F. (115.6.degree. C.). Most preferably, it is operated between 120.degree. F. (48.9.degree. C.) and 212.degree. F. (100.degree. C.) for a system not requiring pressurization.</p>
+      <p>The proper selection of pore sizes for the lyophobic layer 26 is important in maximizing the distillate production rate and insuring uninterrupted flow through the composite membrane for a given temperature and temperature difference. The pore sizes should be chosen to withstand at least the hydraulic pressure exerted by the liquids on either side of the membrane.</p>
+      <p>"Bubble pressure" is defined as the pressure required to overcome the capillary surface tension. Since the vapor pressure within the pore may be much lower than atmospheric pressure, the bubble pressure must exceed the absolute hydraulic pressure across the membrane.</p>
+      <p>The bubble pressure is directly related to pore diameter. Since the porous lyophobic material has a distribution of pore diameters, the maximum absolute pressure on either side of the lyophobic membrane must not exceed the bubble pressure for the largest pores. Because capillary forces are greater for smaller pores, bubble pressure increases as pore size decreases.</p>
+      <p>Ideally, the maximum pore diameter is less than 0.4 microns (.mu.m). Optimum pore sizes for systems designed for purposes other than water desalination may differ.</p>
+      <p>Fluoro-substituted vinyl polymers which are suitably lyophobic are ideal materials for the microporous lyophobic layer of the composite membrane. Polytetrafluoro-ethylene (PTFE) is the most lyophobic polymeric membrane material known. Polyvinylidene fluoride (PVF.sub.2), although somewhat less lyophobic, also performs well.</p>
+      <p>The nonporous lyophilic layer 28 can be made from a variety of materials. "Nonporous" is defined as the inability to pass pressurized nitrogen gas through the membrane as described in the ASTM F 316-70 standard test method. Selected liquids, such as water, can pass through the layer by chemical interaction with the lyophilic material. The layer is permselective to some chemicals, such as salts dissolved in water, and it provides a mechanical barrier to passage of particles, bacteria, and viruses. In desalination the nonporous lyophilic layer 28 is permselective to water but selects out salt thereby preventing salt build-up at the lyophobic layer which results in intrusion of salt water into the pores of the lyophobic layer 26. Thus water-logging is prevented and continuous evaporation/condensation occurs within the pores 29.</p>
+      <p>The material selected for the lyophilic layer and its method of deposit or coating is selected with several factors taken into consideration. It must adhere well to the lyophobic substrate. It should be resistant to both mechanical abrasion and chemical damage from the distilland. It should be coatable as a thin continuous layer on the surface of the porous substrate. It should allow certain liquids to pass through to the lyophobic layer of the membrane.</p>
+      <p>Many organic coatings are acceptable for a lyophilic layer. Examples are: plasma polymerized allylamine; dehydrated polyvinyl alcohol; and polyacrylic acid. The latter coating is deposited on the surface of the hydrophobic layer which has been modified by electrical discharge to accept a graft of the acrylic acid monomer to form the polyacrylic acid layer.</p>
+      <p>The prevention of water-logging by the lyophobic membrane having an essentially nonporous lyophilic coating may be explained by the combination or interaction of several phenomena. It is desirable to have the lyophilic coated layer permselective in nature, highly favoring the diffusion of water molecules, or more precisely their H.sup.+ and OH.sup.- ions, through the essentially nonporous layer. The permselectively of the layer allows for a much lower concentration of salt at the liquid-vapor interface 32 than in the bulk distilland 12.</p>
+      <p>It is believed that the lyophilic layer adjacent the lyophobic layer alters the liquid-vapor interface 32 in such a way that liquid which reaches the interface does not intrude within the pores 28. The lyophilic layer 28 interacts with the lyophobic layer 26 to change the surface curvature of the liquid-vapor interface to enhance the evaporation rate. Therefore, both lyophilic and lyophilic layers are needed to overcome the water-logging problem.</p>
+      <p>The thickness of the lyophilic coating must be sufficient to close the pores of the lyophobic membrane. The minimum thickness is on the order of twice the pore diameter at the surface. Since the smaller asymmetric pore openings of the lyophobic membrane of FIG. 3 are smaller than those of the symmetric membrane of FIG. 2, the membrane of FIG. 3 does not require as great a degree of thickness of the lyophilic coating.</p>
+      <p>FIG. 3 is an enlarged sectional view of an idealized asymmetrically shaped porous lyophobic membrane having deposited thereon an essentially nonporous lyophilic coating. The only difference between the membranes of FIG. 2 and FIG. 3 is in the shape of pore 29 of FIG. 2 and that of pore 35 of FIG. 3. Pore 35 is a representative asymmetric shape; the exact configuration of each pore is undeterminable.</p>
+      <p>The following are examples of membranes prepared in accordance with this invention.</p>
+      <p>EXAMPLE 1</p>
+      <p>A thin-skin microporous lyophobic layer was prepared from polyvinylidene flouride (PVF.sub.2). It was characterized by asymmetrically shaped pores of which the maximum diameter is 0.3 .mu.m. The entire layer had a thickness of 5 mils.</p>
+      <p>Although many organic monomers are suitable for the lyophilic coating, allylamine is especially suitable for coating by plasma polymerization. Allylamine is permselective, rejecting sodium chloride. It also exhibits good water flux when plasma polymerized.</p>
+      <p>The lyophobic PVF.sub.2 was coated with allylamine in the following manner. The PVF.sub.2 was placed in a vacuum bell jar with the small pored thin skin surface to be coated facing the plasma field. The bell jar was evacuated to a base pressure of about 10.sup.-2 torr. Then the desired flow of allylamine monomer was introduced. Membranes have been prepared by this method at a monomer pressure of 0.25 torr and an allylamine flow rate of 16.5 S.T.P. cm.sup.3 /min into the 4 liter bell jar. The discharge power was 40 watts.</p>
+      <p>When the pressure stabilized within the jar, the electric discharge was initiated by turning on the system's RF generator. The resulting plasma produced from the monomer formed a thin polymer coating on the exposed side of the substrate disk. The desired minimum coating thickness is determined by the thickness necessary to close the lyophobic pores. Generally, this thickness is about twice the diameter of the pores themselves. Therefore, the coating was allowed to become about 0.6 .mu.m thick.</p>
+      <p>For a description of the preparation of membranes prepared by plasma polymerization of allylamine, see Bell, et al., "A Study of the Performance of Chemical Characteristics of Composite Reverse Osmosis Membranes prepared by Plasma Polymerization of Allylamine," 19 Journal of Applied Polymer Sciences 1911 (1975).</p>
+      <p>Test results showed that compared to the single hydrophobic membrane which had a rapid distillate production rate drop off and complete stoppage in four days, the membranes of this example were effective for 180 days without showing signs of stopping. At that time the experiment was discontinued.</p>
+      <p>EXAMPLE 2</p>
+      <p>A thin-skin asymmetrically microporous lyophobic layer was prepared from polytetrafluoroethylene (PTFE) in which the mean pore diameter was 0.23 .mu.m. The layer was coated with allylamine as in Example 1 to form a continuous thin composite lyophilic/lyophobic membrane.</p>
+      <p>EXAMPLE 3</p>
+      <p>The lyophobic layer of this membrane was prepared from PVF.sub.2 as in Example 1. The essentially nonporous lyophilic coating consisted of a polyacrylic acid formed by a surface grafting technique. Many other monomers would also be suitable for surface grafting the lyophilic coating onto the lyophobic layer to form a composite membrane.</p>
+      <p>The PVF.sub.2 membrane was exposed to an argon electric discharge at 0.25 torr. This activated the surface to produce sites with high chemical reactivity. Acrylic acid monomer was uniformly applied to the prepared surface, thereby polymerizing spontaneously to produce a graft polymer chemically bonded to the substrate surface. For description of the surface grafting technique see Fales, et al., "Surface Grafting of Textile Materials," 27 Research/Development 53 (1976).</p>
+      <p>EXAMPLE 4</p>
+      <p>This membrane consisted of a lyophobic PVF.sub.2 layer, as described in Example 1, and a dehydrated polyvinyl alcohol lyophilic coating.</p>
+      <p>An emulsion was prepared by adding 2.0 weight percent sulfuric acid to a 5.0 weight percent polyvinyl alcohol aqueous solution at 75.degree. C. The PVF.sub.2 surface was coated with this emulsion, and oven annealed at 125.degree. C. for approximately ten minutes. On drying the coating became non-water-soluble and nonporous.</p>
+      <p>These examples demonstrated clear superiority over prior art membranes for thermal distillation. The primary improvement stems from the improved rate of distillation.</p>
+      <p>The distillation rate is a function of the salt concentration at the evaporation surface. The lower the salt concentration at the evaporation surface, the higher the distillation rate. To reduce the salt concentration at the evaporation surface the materials selected for the lyophilic layer are permselective, favoring the distilland and hindering salt passage, thereby screening out some of the salt before it reaches the liquid-vapor evaporation interface. Due to the thinness (approximately 0.1 mil) of the lyophilic layer, this salt readily diffuses back into the bulk distilland. Thus, the lyophilic layer provides additional protection from salt intrusion in the lyophobic membrane pores and reduces the chance for water-logging.</p>
+      <p>This initial screening of the salt is an improvement over a composite membrane having a cellulose acetate lyophilic layer which requires a thick support structure. In such a membrane no salt separation occurs until the distilland reaches the liquid-vapor interface and evaporation commences. Since diffusion of the salt back through the thick support structure is not as facile, more salt accumulates at the liquid-vapor interface.</p>
+      <p>The permselectivity of the lyophilic coating suggests that pure water is transported through the continuous nonporous layer by a mechanism of a concentration gradient and ionic ambipolar diffusion.</p>
+      <p>Another advantage of the lyophilic coating on the membrane of this invention is the prevention of back-streaming of distillate into distilland in the event of a defect in the pore structure of the lyophobic layer. Occasionally, there will be a large diameter pore which will water-log. In the conventional single hydrophobic membrane of FIG. 1, having a pressure direction from distillate to distilland, distillate will flow through the liquid filled pore to the distilland. It has been estimated that the volume of water back-streaming through less than 5% of the pores at a pressure head of one foot of water would equal or surpass the distillation production rate. Therefore, prevention of such losses greatly enhances the commercial value of thermal membrane distillation as described herein.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20070520">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>1. An improved thermal membrane distillation apparatus for distilling aqueous solutions comprising: a. a means for providing a body of distilland; b. a composite membrane having (1) a microporous lyophobic layer; (a) selected from the group consisting of polytetrafluoroethylene and polyvinylidene fluoride, (b) wherein the average pore diameter is less than 0.4 millimicrons; and (2) wherein the improvement comprises means for preventing liquid intrusion into the pores of the lyophobic layer including a deposited layer of an essentially nonporous lyophilic coating on the lyophobic layer; (a) the lyophilic coating being selected from the group consisting of polyallylamine, polyacrylic acid and dehydrated polyvinyl alcohol, (b) wherein the lyophilic coating is positioned adjacent to the distilland; and c. a means sized for preventing said liquid intrusion by providing a sufficient temperature gradient across said microporous lyophobic layer so that the liquid distilland evaporates on the distilland of the pores of the lyophobic layer and condenses on the liquid distillate side of the pores of the lyophobic layer. </claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>2. Thermal membrane distillation apparatus as in claim 1 in which the lyophilic coating is deposited on the lyophobic layer by surface grafting. </claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>3. Thermal membrane distillation apparatus as in claim 1 in which the lyophilic coating is polyacrylic acid. </claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>4. Thermal membrane distillation apparatus as in claim 1 in which the lyophilic coating is deposited by roll coating. </claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>5. Thermal membrane distillation apparatus as in claim 1 in which the lyophilic coating is dehydrated polyvinyl alcohol. </claim-text>
+    </claim>
+  </claims>
+  <drawings format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US4419187A_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="4419187A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US4419187A_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="4419187A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US4419187A_00003.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="4419187A.TC.SD.P0001.D0001.png" />
+    </figure>
+  </drawings>
+  <image file="US4419187A.PDF" type="pdf" size="170470" pages="6" />
+</lexisnexis-patent-document>

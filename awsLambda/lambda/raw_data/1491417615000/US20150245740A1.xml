@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245740A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021553" date-changed="20151006" time-changed="063114">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140796">
+        <country>US</country>
+        <doc-number>20150245740</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14195720</doc-number>
+        <date>20140303</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>A47J  37/07        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>07</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>A47J  37/0704      20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>0704</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47J  37/0786      20130101 LI20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>0786</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A47J  37/079       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>079</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A47J2037/0795      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>2037</main-group>
+        <subgroup>0795</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">25</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">COOKING APPARATUS</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Gaucho Garcia LLC</orgname>
+            <role>02</role>
+            <address>
+              <city>Morgan Hill</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Garcia</last-name>
+            <first-name>Gabriel</first-name>
+            <address>
+              <city>Morgan Hill</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173464056">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245740</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20140303</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173464055">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245740</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20140303</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided herein is an apparatus including a grill unit for cooking food including a grill firebox and a grill positioned substantially over the grill firebox; and a fuel-preparing unit for preparing fuel including a chute configured to aggregate and transfer prepared fuel to the grill firebox, wherein the fuel-preparing unit is removably attached outboard of the grill unit.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">Apparatuses typically used for outdoor cooking, which are often referred to as barbecue grills or simply barbecues or grills, enable convenient cooking of food in nearly any outdoor location. These types of apparatuses for cooking thereon are popular the world over for a number of reasons and have gathered a number of devotees.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00002-en" num="0002">Provided herein is an apparatus including a grill unit for cooking food including a grill firebox and a grill positioned substantially over the grill firebox; and a fuel-preparing unit for preparing fuel including a chute configured to aggregate and transfer prepared fuel to the grill firebox, wherein the fuel-preparing unit is removably attached outboard of the grill unit.</p>
+      <p id="p-00003-en" num="0003">These and other features of the claimed invention may be better understood with reference to the following drawings, description, and appended claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00004-en" num="0004">
+        <figref>FIG. 1</figref> shows a first view of an apparatus in accordance with some embodiments.</p>
+      <p id="p-00005-en" num="0005">
+        <figref>FIGS. 2A-2C</figref> show two views of the apparatus including a grill unit portion in accordance with some embodiments.</p>
+      <p id="p-00006-en" num="0006">
+        <figref>FIGS. 3A-3C</figref> show the apparatus including a fuel-preparing unit in accordance with some embodiments.</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIGS. 4A-4E</figref> show apparatuses in accordance with some embodiments having a fuel transfer mechanism between the grill unit and the fuel-preparing unit.</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIGS. 5A-5B</figref> show apparatuses in accordance with some embodiments having a fuel transfer mechanism between the grill unit and the fuel-preparing unit.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DESCRIPTION</heading>
+      <p id="p-00009-en" num="0009">Before some particular embodiments are illustrated and/or described in greater detail, it should be understood by persons having ordinary skill in the art that the particular embodiments provided herein do not limit the scope of the claimed invention, as features of such particular embodiments may vary. It should likewise be understood that a particular embodiment provided herein has one or more features that may be readily separated from the particular embodiment and optionally combined with or substituted for one or more features of any of a number of other embodiments illustrated and/or described herein.</p>
+      <p id="p-00010-en" num="0010">It should also be understood by persons having ordinary skill in the art that the terminology used herein is for the purpose of describing some particular embodiments, and the terminology does not limit the scope of the claimed invention. Unless indicated otherwise, ordinal numbers (e.g., first, second, third, etc.) are used to distinguish or identify different features or steps in a group of features or steps and do not supply a serial or numerical limitation. For example, “first,” “second,” and “third” features or steps need not necessarily appear in that order, and the particular embodiments need not necessarily be limited to the three features or steps. It should also be understood that, unless indicated otherwise, any labels such as “left,” “right,” “front,” “back,” “top,” “bottom,” “forward,” “reverse,” “clockwise,” “counter clockwise,” “up,” “down,” or other similar terms such as “upper,” “lower,” “aft,” “fore,” “vertical,” “horizontal,” “proximal,” “distal,” or the like are used for convenience and are not intended to imply, for example, any particular fixed location, orientation, or direction. Instead, such labels are used to reflect, for example, relative location, orientation, or directions. It should also be understood that the singular forms of “a,” “an,” and “the” include plural references unless the context clearly dictates otherwise.</p>
+      <p id="p-00011-en" num="0011">Unless defined otherwise, all technical and scientific terms used herein have the same meaning as commonly understood by persons of ordinary skill in the art.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIGS. 1</figref>, <b>2</b>A, <b>2</b>B, <b>3</b>A, and <b>3</b>B show different views of an apparatus for cooking according to some embodiments. It should be understood that the apparatus of <figref>FIGS. 1</figref>, <b>2</b>A, <b>2</b>B, <b>3</b>A, and <b>3</b>B are not intended to limit the scope of the claimed invention provided herein.</p>
+      <p id="p-00013-en" num="0013">As illustrated in <figref>FIG. 1</figref>, an apparatus <b>100</b> for cooking (e.g., grilling, smoking, etc.) may include a grill unit <b>110</b> and a fuel-preparing unit <b>160</b>. The grill unit <b>110</b> and/or the fuel-preparing unit <b>160</b> may be configured for removably attaching the fuel-preparing unit <b>160</b> outboard of the grill unit <b>110</b>. Removably attaching the fuel-preparing unit <b>160</b> outboard of the grill unit <b>110</b> includes, but is not limited to, attaching the fuel-preparing unit <b>160</b> to the grill unit <b>110</b> using interlocking tabs and/or fasteners (e.g., screws, nuts and bolts, rivets, etc.). Such a design allows for an increase in grill unit <b>110</b> size due to not including the fuel-preparing unit <b>160</b> in the grill unit <b>110</b> or inboard of the grill unit <b>110</b>.</p>
+      <p id="p-00014-en" num="0014">The grill unit <b>110</b> may include, but is not limited to, a grill unit housing <b>120</b>, a grill <b>130</b>, and a windlass <b>140</b>. The grill <b>130</b> may be removably attached to the windlass <b>140</b> for raising or lowering the grill <b>130</b> in order to control the amount of heat for cooking food. Removably attaching the grill <b>130</b> to the windlass <b>140</b> includes, but is not limited to, hooking the grill <b>130</b> to the windlass <b>140</b> using one or more cables or chains <b>141</b> from the windlass terminating with hooks. The grill unit <b>110</b> may further include a grill unit support structure <b>150</b> configured to support the grill unit <b>110</b>. As illustrated in <figref>FIGS. 2A and 2B</figref>, the grill unit support structure <b>150</b> may include a set of legs. Any pair or pairs of legs in the set of legs may be cross-braced to reinforce the grill unit support structure <b>150</b>. Although the grill unit <b>110</b> is illustrated to have a particular grill unit support structure <b>150</b>, the particular grill unit support structure <b>150</b> illustrated in <figref>FIGS. 1</figref>, <b>2</b>A, <b>2</b>B, <b>3</b>A, and <b>3</b>B are not intended to be limiting. For example, the apparatus <b>100</b> may be configured to be freestanding, portable, or mobile, and the grill unit <b>110</b> may include a grill unit support structure <b>150</b> including wheels, runners, or the like. For another example, the apparatus <b>100</b> may be configured to be immobile or permanent, and the grill unit <b>110</b> may include a grill unit support structure <b>150</b> including a masonry unit or the like.</p>
+      <p id="p-00015-en" num="0015">The grill unit <b>110</b> may include a front, wherein the front of the grill unit <b>110</b> is closest to an operator while the operator customarily cooks on the grill unit <b>110</b>. The grill unit <b>110</b> may also include a back, wherein the back of the grill unit <b>110</b> is opposite the front of the grill unit <b>110</b> and/or farthest from the operator while the operator customarily cooks on the grill unit <b>110</b>. The grill unit <b>110</b> may also include a first side, wherein the first side of the grill unit <b>110</b> nominally is the side of the grill unit <b>110</b> to which the fuel-preparing unit <b>160</b> is attached. The grill unit <b>110</b> may also include a second side, wherein the second side of the grill unit <b>110</b> nominally is the side of the grill unit <b>110</b> opposite the first side of the grill unit <b>110</b> and/or to which the fuel-preparing unit <b>160</b> is not attached.</p>
+      <p id="p-00016-en" num="0016">The fuel-preparing unit <b>160</b> may include, but is not limited to, a fuel-preparing unit housing <b>170</b> and a grate <b>180</b>. The grate <b>180</b> may freely stand within the fuel-preparing unit housing <b>170</b>. However, it is appreciated that the grate <b>180</b> may be supported by the fuel-preparing unit housing <b>170</b> or a component therein. The fuel-preparing unit <b>160</b> may be configured to prepare fuel including embers derived from a fuel source selected from wood, lump charcoal, charcoal briquettes, extruded charcoal, and combinations thereof.</p>
+      <p id="p-00017-en" num="0017">Referring now to <figref>FIGS. 2A and 2B</figref> the apparatus including the grill unit in accordance with some embodiments are shown. The grill unit <b>110</b> may include a vertical space <b>112</b> partitioned into a grill space <b>112</b><i>a </i>and a grill firebox space <b>112</b><i>b</i>. The grill firebox space <b>112</b><i>b </i>corresponds to a grill firebox <b>114</b> reserved for cooking fuel such as prepared fuel (e.g., embers) and the grill space <b>112</b><i>a </i>is reserved for a grill (e.g., the grill <b>130</b>).</p>
+      <p id="p-00018-en" num="0018">The grill unit housing <b>120</b>, as shown in <figref>FIGS. 2A and 2B</figref>, may include, but is not limited to, at least a bottom <b>121</b> that may coincide with a bottom of the grill firebox <b>114</b>. The grill unit housing <b>120</b> may also include a front wall <b>122</b> to cover a substantial portion of the grill firebox space <b>112</b><i>b </i>or the entire grill firebox space at the front of the grill unit <b>110</b>, leaving the grill space <b>112</b><i>a </i>open to the operator. According to one embodiment, the front wall <b>122</b> may include a cut-out portion for allowing easy access to the grill firebox <b>114</b> and/or contents thereof while safely containing the contents of the grill firebox <b>114</b>. The grill unit housing <b>120</b> may also include a back wall <b>124</b>, wherein the back wall <b>124</b> that may substantially cover the entire grill firebox space <b>112</b><i>b</i>. The back wall <b>124</b> may also cover a substantial portion of the grill space <b>112</b><i>a </i>or the entire grill space <b>112</b><i>a </i>at the back of the grill unit <b>110</b>.</p>
+      <p id="p-00019-en" num="0019">The grill unit housing <b>120</b> may also include a first sidewall <b>126</b>, wherein the first sidewall <b>126</b> may cover a substantial portion of the grill firebox space <b>112</b><i>b </i>or the entire grill firebox space <b>112</b><i>b</i>. For example, <figref>FIG. 4A</figref> illustrates the first sidewall <b>126</b> covering a substantial portion of the grill firebox space <b>112</b><i>b</i>, wherein the first sidewall <b>126</b> includes an opening <b>127</b> allowing transfer of the prepared fuel directly to the grill firebox <b>114</b>. The first sidewall <b>126</b> may also cover a substantial portion of the grill space <b>112</b><i>a </i>or the entire grill space <b>112</b><i>a </i>at the first side of the grill unit <b>110</b>. The grill unit housing <b>120</b> may also include a second sidewall <b>128</b> that may cover a substantial portion of the grill firebox space <b>112</b><i>b </i>or the entire grill firebox space <b>112</b><i>b</i>. The second sidewall <b>128</b> may also cover a substantial portion of the grill space <b>112</b><i>a </i>or the entire grill space <b>112</b><i>a </i>at the second side of the grill unit <b>110</b>. Leaving the grill space <b>112</b><i>a </i>open at the front of the grill unit <b>110</b> and closing the grill space <b>112</b><i>a </i>off elsewhere allows easy access to the grill space <b>112</b><i>a </i>while a) reducing or eliminating environmental factors such as wind, which may otherwise lead to convective heat loss from the grill space <b>112</b><i>a</i>; b) radiating heat back into the grill space <b>112</b><i>a</i>, which may establish a spatial and/or temporal thermal equilibrium in the grill space <b>112</b><i>a</i>; and/or c) protecting non-operators or passersby. It is appreciated that the grill unit housing <b>120</b> may also include a door (not shown) that may be closed to close off the opening at the front of the grill unit <b>110</b>, as desired during cooking, or it may be left open, as desired.</p>
+      <p id="p-00020-en" num="0020">In some embodiments, the grill unit housing <b>120</b>, including one or more of the bottom <b>121</b>, the front wall <b>122</b>, the back wall <b>124</b>, the first sidewall <b>126</b>, and the second sidewall <b>128</b>, may be adjustable such that the size of the grill unit housing <b>120</b> may be adjusted to one or more predetermined sizes. For example, in some embodiments, the back wall <b>124</b>, the first sidewall <b>126</b>, and the second sidewall <b>128</b> may each include two or more interleaved panels with interlocking tabs and slots at predetermined positions for adjusting the height of the back wall <b>124</b>, the first sidewall <b>126</b>, and the second sidewall <b>128</b> to the one or more predetermined sizes. For example, in some embodiments, the bottom <b>121</b>, the front wall <b>122</b>, the back wall <b>124</b>, the first sidewall <b>126</b>, and the second sidewall <b>128</b>, may each include two or more interleaved panels with interlocking tabs and slots at predetermined positions for adjusting the bottom <b>121</b>, the front wall <b>122</b>, the back wall <b>124</b>, the first sidewall <b>126</b>, and the second sidewall <b>128</b> in a longitudinal and/or latitudinal dimension to the one or more predetermined sizes. Grills (e.g., the grill <b>130</b>) of predetermined sizes may be used in accordance with the foregoing predetermined sizes of the grill unit housing <b>120</b>.</p>
+      <p id="p-00021-en" num="0021">The grill <b>130</b>, as shown in <figref>FIGS. 2A and 2B</figref>, may include, but is not limited to, a grill surface <b>132</b>, a grill understructure <b>134</b>, and a drip pan <b>136</b>, as shown in <figref>FIGS. 2A and 2B</figref>. The grill understructure <b>134</b> is described in greater detail with respect to <figref>FIG. 2C</figref>. The grill surface <b>132</b> may be fixedly attached (e.g., welded) to the grill understructure <b>134</b>, and wherein the drip pan <b>136</b> may be removably attached (e.g., set on hooks, pins, screws, bolts, etc.) to the grill understructure <b>134</b>. The grill <b>130</b> may be configured with a slight slope from the back of the grill unit <b>110</b> down to the front of the grill unit <b>110</b> to convey drippings from grilling food to the drip pan <b>136</b>.</p>
+      <p id="p-00022-en" num="0022">The grill surface <b>132</b> may include, but is not limited to, a number of “V”-shaped latitudinal or elongate members <b>133</b> (e.g., a first elongate member <b>133</b><i>a</i>, a second elongate member <b>133</b><i>b</i>, . . . , an n<sup>th </sup>elongate member <b>133</b><i>n</i>, wherein n indicates the n<sup>th </sup>elongate member). Elongated members <b>133</b> may be configured to a) retain heat (e.g., iron, such as wrought iron or cast iron; steel, such as stainless steel; etc.); b) resist rust (e.g., rust-preventing coating on iron; stainless steel; etc.); and/or convey drippings from grilling food to the drip pan <b>136</b>. Each of the number of “V”-shaped elongate members <b>133</b> may be equally spaced (e.g., equal to ⅛″ or more) in a longitudinal direction (e.g., from the first sidewall <b>126</b> to the second sidewall <b>128</b>), and each of the number of “V”-shaped elongate members <b>133</b> may be fixedly attached (e.g., welded) or removably attached (for cleaning) to the grill understructure <b>134</b> at a number of positions. For example, each of the number of “V”-shaped elongate members <b>133</b> may include a first end attached to a position along a first longitudinal member <b>135</b><i>a </i>of the grill understructure <b>134</b> and a second end attached to a position along the second longitudinal member <b>135</b><i>c </i>(shown in <figref>FIG. 2C</figref>) of the grill understructure <b>134</b>. Such a design for the “V”-shaped elongate members <b>133</b> allows a maximum heat flux from the grill firebox <b>114</b> through the grill <b>130</b> and/or grill surface <b>132</b> while simultaneously catching drippings in the drip pan <b>136</b> from grilling food to avoid flare-ups.</p>
+      <p id="p-00023-en" num="0023">As illustrated in <figref>FIG. 2C</figref>, the grill understructure <b>134</b> may include, but is not limited to, a frame including a first longitudinal member <b>135</b><i>a </i>(see also <figref>FIGS. 2A and 2B</figref>) at the front of the grill unit <b>110</b> and a second longitudinal member <b>135</b><i>c </i>at the back of the grill unit <b>110</b>. Each of the first longitudinal member <b>135</b><i>a </i>and the second longitudinal member <b>135</b><i>c </i>may extend from a position proximate to the first side of the grill unit <b>110</b> to a position proximate to the second side of the grill unit <b>110</b>. The frame may further include a first latitudinal member <b>135</b><i>b </i>at the first side of the grill unit <b>110</b> and a second latitudinal member <b>135</b><i>d </i>(see also <figref>FIG. 2B</figref>) at the second side of the grill unit <b>110</b>. Each of the first latitudinal member <b>135</b><i>b </i>and the second latitudinal member <b>135</b><i>d </i>may extend from a position proximate to the front of the grill unit <b>110</b> to a position proximate to the back of the grill unit <b>110</b>.</p>
+      <p id="p-00024-en" num="0024">To form the frame, a first end of the first longitudinal member <b>135</b><i>a </i>may be fixedly attached to a first end of the first latitudinal member <b>135</b><i>b</i>, a second end of the first latitudinal member <b>135</b><i>b </i>may be fixedly attached to a first end of the second longitudinal member <b>135</b><i>c</i>, a second end of the second longitudinal member <b>135</b><i>c </i>may be fixedly attached to a second end of the second latitudinal member <b>135</b><i>d</i>, and a first end of the second latitudinal member <b>135</b><i>d </i>may be fixedly attached to a second end of the first longitudinal member <b>135</b><i>a</i>. As provided herein, the first end of each of the number of “V”-shaped elongate members <b>133</b> may be attached to a position along the first longitudinal member <b>135</b><i>a </i>of the grill understructure <b>134</b> and the second end of each of the number of “V”-shaped elongate members <b>133</b> may be attached to a position along the second longitudinal member <b>135</b><i>c </i>of the grill understructure <b>134</b>. Such a design for the frame allows a maximum heat flux from the grill firebox <b>114</b> through the frame to the grill surface <b>132</b>.</p>
+      <p id="p-00025-en" num="0025">The drip pan <b>136</b> may be removably attached (e.g., set on hooks, pins, screws, bolts, etc.) to the grill understructure <b>134</b> at the front of the grill unit <b>110</b> proximate to or under the first end of the number of “V”-shaped elongate members <b>133</b>. Such a design allows easy access to the drippings from grilling food, which drippings may be used to baste the grilling food. And such a design also allows the drip pan <b>136</b> to be easily removed for cleaning.</p>
+      <p id="p-00026-en" num="0026">The windlass <b>140</b>, as shown in <figref>FIGS. 2A and 2B</figref>, may include, but is not limited to, a first vertical support <b>143</b><i>a </i>component and second vertical support <b>143</b><i>b </i>component, a horizontal support structure such as axle <b>145</b> component, a ratchet mechanism such as a ratchet wheel <b>146</b><i>a </i>component and a spring-loaded pawl <b>146</b><i>b </i>component, and a crank mechanism having a crank <b>148</b><i>a </i>component and a handle <b>148</b><i>b </i>component. The vertical support components <b>143</b><i>a </i>and <b>143</b><i>b </i>are configured to support the horizontal support structure and the ratchet mechanism. The crank mechanism is configured to turn the axle <b>145</b> component and wind one or more cables or chains <b>141</b> on the axle <b>145</b> or wind the one or more cables of chains <b>141</b> off the axle <b>145</b>.</p>
+      <p id="p-00027-en" num="0027">It is appreciated that more than two vertical supports may be used. For example, an n<sup>th </sup>number of vertical supports may be used where n indicates the n<sup>th </sup>vertical support. In one embodiment, the first vertical support <b>143</b><i>a </i>is positioned at a latitudinal midpoint of the first side of the grill unit <b>110</b> and the second vertical support <b>143</b><i>b </i>may be positioned at the latitudinal midpoint of the second side of the grill unit <b>110</b>. According to one embodiment, the first vertical support <b>143</b><i>a </i>and the second vertical support <b>143</b><i>b </i>extend from a position proximate to a bottom of the grill firebox space <b>112</b><i>b </i>(e.g., the bottom <b>121</b> of the grill firebox <b>114</b>) to a position above the sidewalls (e.g., the first sidewall <b>126</b> and the second sidewall <b>128</b>) of the grill unit housing <b>120</b>. The vertical support structure may be attached to the grill unit housing <b>120</b>, for example, as illustrated in <figref>FIG. 2B</figref> by vertical support <b>143</b><i>b </i>attached to the bottom <b>121</b> of the grill firebox <b>114</b>. It is appreciated that even though the vertical support structures re illustrated to be positioned inside the grill unit housing <b>120</b> for illustrative purposes only and are not intended to limit the scope of the embodiments. For example, the vertical supports may be positioned outside the grill unit housing <b>120</b> or a combination of inside and outside the grill unit housing by sandwiching the grill unit housing <b>120</b> between one or more vertical supports. Such a design provides the grill unit housing <b>120</b> and the vertical support structure with synergistic sturdiness.</p>
+      <p id="p-00028-en" num="0028">The horizontal support structure such as the axle <b>145</b> may include a first end rotatably supported by the first vertical support <b>143</b><i>a </i>at the first side of the grill unit <b>110</b> and a second end rotatably supported by the second vertical support <b>143</b><i>b </i>at the second side of the grill unit <b>110</b>. One or more cables or chains <b>141</b> may be attached to the first end of the axle <b>145</b> and the latitudinal midpoint of the grill <b>130</b>, according to one embodiment, at the first side of the grill unit <b>110</b>. The same cables or chains <b>141</b> or a different cables or chains (not shown) may be attached to the second end of the axle <b>145</b> and the latitudinal midpoint of the grill <b>130</b>, according to one embodiment, at the second side of the grill unit <b>110</b>. The length of the one or more cables or chains <b>141</b> may define the grill space <b>112</b><i>a </i>or the usable grill space <b>112</b><i>a </i>by raising or lowering the grill <b>130</b>. For example, raising the grill using the cables <b>141</b> decreases the space associated with the grill space <b>112</b><i>a </i>while it increases the space associated with the grill firebox space <b>112</b><i>b </i>and vice versa.</p>
+      <p id="p-00029-en" num="0029">The teeth of the gear wheel or ratchet wheel <b>146</b><i>a </i>are configured to engage spring-loaded pawl <b>146</b><i>b</i>. The ratchet wheel <b>146</b><i>a </i>may be fixedly attached to the axle <b>145</b> such that the ratchet wheel <b>146</b><i>a </i>rotates with the axle <b>145</b>. The pawl <b>146</b><i>b </i>may be attached to the vertical support structures <b>143</b><i>a </i>and <b>143</b><i>b</i>, the grill unit housing <b>120</b>, or a combination thereof in a position proximate to the ratchet wheel to engage the teeth of the ratchet wheel <b>146</b><i>a</i>. The pawl <b>146</b><i>b </i>may be configured to slide up and over the teeth of the ratchet wheel <b>146</b><i>a </i>while rotating the ratchet wheel <b>146</b><i>a </i>in a first direction corresponding to raising the grill <b>130</b>. The pawl <b>146</b><i>b </i>may be further configured to lock between two of the teeth of the ratchet wheel <b>146</b><i>a </i>while rotating the ratchet wheel <b>146</b><i>a </i>in a second direction corresponding to lowering the grill <b>130</b>, thereby locking the ratchet mechanism and the grill <b>130</b> at a particular height.</p>
+      <p id="p-00030-en" num="0030">The crank <b>148</b><i>a </i>may be fixedly attached at a right angle to the axle <b>145</b>, and the handle <b>148</b><i>b </i>may be fixedly attached at a right angle to the crank <b>148</b><i>a</i>, parallel to the axle <b>145</b>. The crank mechanism may be configured to rotate the axle <b>145</b> in the first direction corresponding to raising the grill <b>130</b>, winding the one or more cables or chains <b>141</b> on the axle <b>145</b>. The crank mechanism may be further configured to rotate the axle <b>145</b> in the second direction corresponding to lowering the grill <b>130</b>, winding the one or more cables or chains <b>141</b> off the axle <b>145</b>. However, to rotate the axle <b>145</b> in the second direction corresponding to lowering the grill <b>130</b>, the spring of the spring-loaded pawl <b>146</b><i>b </i>may need to be compressed to disengage the pawl <b>146</b><i>b </i>from the teeth of the ratchet wheel <b>146</b><i>a. </i></p>
+      <p id="p-00031-en" num="0031">In some embodiments, the ratchet mechanism and the crank mechanism of the windlass <b>140</b> may be replaced with control pulleys and one or more lift control cables or chains. The one or more lift control cables or chains may include a loop of the same one or more cables or chains <b>141</b> for winding on or off the axle <b>145</b>.</p>
+      <p id="p-00032-en" num="0032">In some embodiments, the windlass <b>140</b> may be replaced with a vertical support structure for the grill <b>130</b>, wherein the vertical support structure includes a number of vertical supports (e.g., a first vertical support, a second vertical support, . . . , an n<sup>th </sup>vertical support, wherein n indicates the n<sup>th </sup>vertical support). For example, the vertical support structure may include, but is not limited to, a first vertical support at the first side and at the back of the grill unit <b>110</b> and a second vertical support at the second side and at the back of the grill unit <b>110</b>. The number of vertical supports may have a sawtooth structure and the grill <b>130</b> may correspondingly have a cleat structure that interlocks with the sawtooth structure of the vertical supports, thereby providing a supporting mechanism for the grill <b>130</b>. Alternatively, the number of vertical supports may have a tabbed structure and the grill <b>130</b> may interlock with the tabbed structure of the vertical supports, thereby providing a supporting mechanism for the grill <b>130</b>. The grill <b>130</b> may be removably attached to the vertical support structure allowing the grill <b>130</b> to be removed for cleaning. Alternatively, the grill <b>130</b> may be attached to the vertical support structure with a spring-loaded mechanism allowing the grill <b>130</b> to be moved within the vertical support structure, for example, by lifting the grill <b>130</b> at the front of the grill unit <b>110</b> and sliding the grill up or down the vertical support structure at the back of the grill unit <b>110</b>.</p>
+      <p id="p-00033-en" num="0033">Referring now to <figref>FIGS. 3A and 3B</figref>, an apparatus including a fuel-preparing unit <b>160</b> in accordance with some embodiments are shown. As illustrated in <figref>FIGS. 3A and 3B</figref>, the fuel-preparing unit <b>160</b> may include a fuel-preparing unit support structure <b>190</b> configured to support the fuel-preparing unit <b>160</b>. As illustrated in <figref>FIG. 3B</figref>, the fuel-preparing unit support structure <b>190</b> may include a set of legs. Any pair or pairs of legs may be cross-braced to reinforce the fuel-preparing unit support structure <b>190</b>. Although the fuel-preparing unit <b>160</b> is illustrated to have a particular fuel-preparing unit support structure <b>190</b>, the particular fuel-preparing unit support structure <b>190</b> illustrated in <figref>FIGS. 1</figref>, <b>2</b>A, <b>2</b>B, <b>3</b>A, and <b>3</b>B are not intended to be limiting. For example, the apparatus <b>100</b> may be configured to be portable or mobile, and the fuel-preparing unit <b>160</b> may include a fuel-preparing unit support structure <b>190</b> including wheels, runners, or the like. For another example, the apparatus <b>100</b> may be configured to be immobile or permanent, and the fuel-preparing unit <b>160</b> may include a fuel-preparing unit support structure <b>190</b> including a masonry unit or the like.</p>
+      <p id="p-00034-en" num="0034">The fuel-preparing unit <b>160</b> may include a front that is closest to an operator while the operator customarily prepares fuel in the fuel-preparing unit <b>160</b>. The fuel-preparing unit <b>160</b> may also include a back, wherein the back of the fuel-preparing unit <b>160</b> is opposite the front of the fuel-preparing unit <b>160</b> and/or farthest from the operator while the operator customarily prepares fuel in the fuel-preparing unit <b>160</b>. The fuel-preparing unit <b>160</b> may also include a first side that is nominally the side of the fuel-preparing unit <b>160</b> to which the grill unit <b>110</b> is attached. The fuel-preparing unit <b>160</b> may also include a second side that is nominally the side of the fuel-preparing unit <b>160</b> opposite the first side of the fuel-preparing unit <b>160</b> and/or to which the grill unit <b>110</b> is not attached.</p>
+      <p id="p-00035-en" num="0035">The fuel-preparing unit <b>160</b> may include a vertical space <b>162</b> partitioned into a fuel-preparing space <b>162</b><i>a </i>and a fuel-preparing unit firebox space <b>162</b><i>b </i>corresponding to a fuel-preparing unit firebox <b>164</b>. The fuel-preparing space <b>162</b><i>a </i>may be reserved for a grate (e.g., the grate <b>180</b>) and the fuel-preparing unit firebox space <b>162</b><i>b </i>may be reserved for prepared fuel (e.g., embers) and/or transfer of the prepared fuel.</p>
+      <p id="p-00036-en" num="0036">The fuel-preparing unit housing <b>170</b> may include, but is not limited to, at least a bottom <b>171</b> that may coincide with a bottom of the fuel-preparing unit firebox <b>164</b>. The fuel-preparing unit housing <b>170</b> may also include a front wall <b>172</b> (shown in <figref>FIGS. 4A-4E</figref>) that may cover a substantial portion of the fuel-preparing unit firebox space <b>162</b><i>b </i>or the entire fuel-preparing unit firebox space <b>162</b><i>b </i>at the front of the fuel-preparing unit <b>160</b> leaving the fuel-preparing space <b>162</b><i>a </i>open to the operator. For example, <figref>FIG. 4A</figref> illustrates the front wall <b>172</b> covering a substantial portion of the fuel-preparing unit firebox space <b>162</b><i>b </i>while allowing access to the fuel-preparing unit firebox <b>164</b> and/or contents thereof while safely containing the contents of the fuel-preparing unit firebox <b>164</b>.</p>
+      <p id="p-00037-en" num="0037">Referring back to <figref>FIGS. 3A and 3B</figref>, the fuel-preparing unit housing <b>170</b> may also include a back wall <b>174</b> that may cover the entire fuel-preparing unit firebox space <b>162</b><i>b</i>. The back wall <b>174</b> may also cover a substantial portion or the entire space of the fuel-preparing space <b>162</b><i>a </i>at the back of the fuel-preparing unit <b>160</b>. The fuel-preparing unit housing <b>170</b> may also include a first sidewall <b>176</b> that may cover a substantial portion of the fuel-preparing unit firebox space <b>162</b><i>b </i>or the entire fuel-preparing unit firebox space <b>162</b><i>b</i>. For example, <figref>FIG. 4A</figref> illustrates the first sidewall <b>176</b> covering a substantial portion of the fuel-preparing unit firebox space <b>162</b><i>b </i>while opening <b>177</b> allows transfer of the prepared fuel directly to the grill firebox <b>114</b>. The first sidewall <b>176</b> may also cover a substantial portion or the entire space of the fuel-preparing space <b>162</b><i>a </i>at the first side of the fuel-preparing unit <b>160</b>. The fuel-preparing unit housing <b>170</b> may also include a second sidewall <b>178</b> that may cover a substantial portion or the entire space of the fuel-preparing unit firebox space <b>162</b><i>b</i>. The second sidewall <b>178</b> may also cover a substantial portion of the fuel-preparing space <b>162</b><i>a </i>or the entire fuel-preparing space <b>162</b><i>a </i>at the second side of the fuel-preparing unit <b>160</b>. Leaving the fuel-preparing space <b>162</b><i>a </i>open at the front of the fuel-preparing unit <b>160</b> and closing the fuel-preparing space <b>162</b><i>a </i>off elsewhere allows easy access to the fuel-preparing space <b>162</b><i>a </i>while a) reducing or eliminating environmental factors such as wind, which may otherwise lead to convective heat loss from the fuel-preparing space <b>162</b><i>a</i>; b) radiating heat back into the fuel-preparing space <b>162</b><i>a</i>, which may establish a spatial and/or temporal thermal equilibrium in the fuel-preparing space <b>162</b><i>a</i>; and/or c) protecting non-operators or passersby.</p>
+      <p id="p-00038-en" num="0038">In some embodiments, the fuel-preparing unit housing <b>170</b>, including one or more of the bottom <b>171</b>, the front wall <b>172</b> (if present), the back wall <b>174</b>, the first sidewall <b>176</b>, and the second sidewall <b>128</b>, may be adjustable such that the size of the fuel-preparing unit housing <b>170</b> may be adjusted to one or more predetermined sizes. For example, in some embodiments, the back wall <b>174</b>, the first sidewall <b>176</b>, and the second sidewall <b>178</b> may each include two or more interleaved panels with interlocking tabs and slots at predetermined positions for adjusting the height of the back wall <b>174</b>, the first sidewall <b>176</b>, and the second sidewall <b>178</b> to the one or more predetermined sizes. For example, in some embodiments, the bottom <b>171</b>, the front wall <b>172</b>, the back wall <b>174</b>, the first sidewall <b>176</b>, and the second sidewall <b>178</b>, may each include two or more interleaved panels with interlocking tabs and slots at predetermined positions for adjusting the bottom <b>171</b>, the front wall <b>172</b>, the back wall <b>174</b>, the first sidewall <b>176</b>, and the second sidewall <b>178</b> in a longitudinal and/or latitudinal dimension to the one or more predetermined sizes. Grates (e.g., the grate <b>180</b>) of predetermined sizes may be used in accordance with the foregoing predetermined sizes of the fuel-preparing unit housing <b>170</b>.</p>
+      <p id="p-00039-en" num="0039">The grate <b>180</b> may include, but is not limited to, a grate surface <b>182</b> and a grate understructure <b>184</b>, wherein the grate surface <b>182</b> may be fixedly attached (e.g., welded) to the grate understructure <b>184</b>. The grate surface <b>182</b> may include, but is not limited to, a number of “U”-shaped members <b>183</b> configured to a) retain heat (e.g., iron, such as wrought iron or cast iron; steel, such as stainless steel; etc.); b) resist rust (e.g., rust-preventing coating on iron; stainless steel; etc.); and/or physically separate prepared fuel from fuel being prepared. Each of the number of “U”-shaped members <b>183</b> may be equally spaced apart (e.g., equal to 4″ or more) in a longitudinal direction (e.g., from the front of the fuel-preparing unit <b>160</b> to the back of the fuel-preparing unit <b>160</b>). It is appreciated that each of the number of “U”-shaped members <b>183</b> may be fixedly attached (e.g., welded) to the grate understructure <b>184</b> at a number of positions. For example, each of the number of “U”-shaped members <b>183</b> may include a bottom attached to a position along longitudinal members <b>185</b> of the grate understructure <b>184</b>. Such a design for the “U”-shaped members <b>183</b> allows maximum air circulation in and around the grate surface <b>182</b>, thereby providing maximum oxygen for the fuel being prepared.</p>
+      <p id="p-00040-en" num="0040">According to one embodiment, each of the longitudinal members <b>185</b> extends from a position proximate to the front of the fuel-preparing unit <b>160</b> to a position proximate to the back of the fuel-preparing unit <b>160</b>. The grate understructure <b>184</b> may also include, but is not limited to, a number of latitudinal members (not shown) where each of the latitudinal members <b>186</b> extends from a position proximate to the first side of the fuel-preparing unit <b>160</b> to a position proximate to the second side of the fuel-preparing unit <b>160</b>. As provided herein, each of the number of “U”-shaped members <b>183</b> may include a bottom attached to a position along the longitudinal members <b>185</b> of the grate understructure <b>184</b>. Such a design for the longitudinal members <b>185</b> allows maximum air circulation in and around the grate understructure <b>184</b>, thereby providing maximum oxygen for the fuel being prepared.</p>
+      <p id="p-00041-en" num="0041">The grate <b>180</b> may be supported by a grate support structure, e.g., set of legs <b>189</b> fixedly attached to the grate understructure <b>184</b> or otherwise a part thereof. The set of legs <b>189</b> may include four legs where any pair or pairs of legs <b>189</b> may be cross-braced to reinforce the grate support structure. The grate <b>180</b> is positioned atop the grate support structure and may optionally be integrated within. The grate <b>180</b> may freely stand within the fuel-preparing unit housing <b>170</b>, or the grate <b>180</b> may be secured to the fuel-preparing unit housing <b>170</b>. The grate support structure may be further configured to accommodate a shovel <b>165</b> or a conveyor <b>167</b> (see <figref>FIGS. 5A and 5B</figref>) in the fuel-preparing unit firebox space <b>162</b><i>b </i>under the grate support structure for transferring the prepared fuel from the fuel-preparing unit <b>160</b> to the grill unit <b>110</b>.</p>
+      <p id="p-00042-en" num="0042">The grate <b>180</b> may alternatively be supported by a grate support structure (not shown) where the grate <b>180</b> is suspended from the fuel-preparing unit housing <b>170</b> or a component therein. The grate <b>180</b> may freely suspend from the fuel-preparing unit housing <b>170</b>, or the grate <b>180</b> may be secured to the fuel-preparing unit housing <b>170</b>. The grate support structure may be further configured to accommodate a shovel <b>165</b> or a conveyor <b>167</b> (see <figref>FIGS. 5A and 5B</figref>) in the fuel-preparing unit firebox space <b>162</b><i>b </i>under the grate support structure <b>188</b> for transferring the prepared fuel.</p>
+      <p id="p-00043-en" num="0043">In some embodiments, the grate support structure may include a set of bricks (e.g., firebricks) at the bottom <b>171</b> of the fuel-preparing unit firebox <b>164</b> configured to support the grate <b>180</b>. The set of bricks may be further configured to form an insulated well under the grate <b>180</b> for temporary storage of the prepared fuel prior to transferring the prepared fuel to the grill firebox <b>114</b>. Indeed, bricks such as firebricks may be utilized to insulate any portion of the fuel-preparing unit firebox <b>164</b> or grill firebox <b>114</b>.</p>
+      <p id="p-00044-en" num="0044">It is appreciated that in some embodiments, the grate support structure may include a physical partition <b>173</b> secured to the fuel-preparing unit housing <b>170</b> that physically partitions the vertical space <b>162</b> into the fuel-preparing space <b>162</b><i>a </i>and the fuel-preparing unit firebox space <b>162</b><i>b </i>corresponding to the fuel-preparing unit firebox <b>164</b>. The physical partition <b>173</b> secured to the fuel-preparing unit housing <b>170</b> physically partitions the vertical space <b>162</b> into the fuel-preparing space <b>162</b><i>a </i>and the fuel-preparing unit firebox space <b>162</b><i>b</i>. The physical partition <b>173</b> may include a chute for prepared fuel including a downward slope from the fuel-preparing unit housing <b>170</b> to a central opening <b>175</b> (shown in <figref>FIG. 3C</figref>) in the physical partition <b>173</b>, through which central opening <b>175</b> the prepared fuel may drop from the grate <b>180</b> to a center of the fuel-preparing unit firebox <b>164</b>, optionally onto a shovel <b>165</b> or a conveyor <b>167</b> (see <figref>FIGS. 5A and 5B</figref>) in the fuel-preparing unit firebox space <b>162</b><i>b. </i></p>
+      <p id="p-00045-en" num="0045">Referring now to <figref>FIG. 3C</figref>, the physical partition <b>173</b> including the chute with the downward slope from the fuel-preparing unit housing <b>170</b> to the central opening <b>175</b> is shown. The prepared fuel is transiently located on the physical partition <b>173</b> prior to dropping through the central opening <b>175</b> to the center of the fuel-preparing unit firebox <b>164</b>, optionally onto the shovel <b>165</b> or the conveyor <b>167</b> (see <figref>FIGS. 5A and 5B</figref>) in the fuel-preparing unit firebox space <b>162</b><i>b</i>. Such a design allows prepared fuel to be aggregated in a center of the fuel-preparing unit firebox <b>164</b>, in a center of a shovel <b>165</b> placed in the fuel-preparing unit firebox <b>164</b>. The prepared fuel may subsequently be transferred from the fuel preparing unit firebox <b>164</b> to the grill firebox <b>114</b> using the shovel <b>165</b>, or in a conveyor-loading center of a conveyor <b>167</b> (see <figref>FIGS. 5A and 5B</figref>).</p>
+      <p id="p-00046-en" num="0046">Referring now to <figref>FIGS. 3A-3C</figref>, each end or terminus of the number of “U”-shaped members <b>183</b> of the grate surface <b>182</b> may terminate in a curved or bent structure (e.g., hook) configured to overhang the first side <b>176</b> or the second side <b>178</b> of the fuel-preparing unit housing <b>170</b>, according to some embodiments. It is appreciated that in some embodiments, each end or terminus of the number of “U”-shaped members <b>183</b> of the grate surface <b>182</b> may terminate in a curved or bent structure (e.g., hook) configured to hang on longitudinal projections or ledges. The longitudinal projections or ledges may be stamped into the first and second sides of the fuel-preparing unit housing <b>170</b> or attached to the first and second sides of the fuel-preparing unit housing <b>170</b>.</p>
+      <p id="p-00047-en" num="0047">Referring now to <figref>FIGS. 4A-4E</figref>, apparatuses in accordance with some embodiments having a fuel transfer mechanism between the grill unit <b>110</b> and the fuel-preparing unit <b>160</b> are shown. The fuel-preparing unit firebox <b>164</b> may include a physical partition <b>173</b> secured to the fuel-preparing unit housing <b>170</b> that physically partitions or bisects the fuel-preparing unit firebox space <b>162</b><i>b</i>. The physical partition <b>173</b> may include a chute for prepared fuel including a downward slope from the second sidewall <b>178</b> of fuel-preparing unit housing <b>170</b> to an opening <b>127</b>/<b>177</b> in the first sidewall <b>176</b> of the fuel-preparing unit housing <b>170</b> and the first sidewall <b>126</b> of the grill unit housing <b>120</b>, through which opening <b>127</b>/<b>177</b> the prepared fuel may drop from the grate <b>180</b> to a side of the grill firebox <b>114</b>.</p>
+      <p id="p-00048-en" num="0048">The physical partition <b>173</b> including the chute with the downward slope from the second sidewall <b>178</b> of fuel-preparing unit housing <b>170</b> to an opening <b>127</b>/<b>177</b> in the first sidewall <b>176</b> of the fuel-preparing unit housing <b>170</b> and the first sidewall <b>126</b> of the grill unit housing <b>120</b>. The prepared fuel is transiently located on the physical partition <b>173</b> prior to dropping through the central opening <b>127</b>/<b>177</b> to a side of the grill firebox <b>114</b>. Such a design allows the prepared fuel to be directly delivered to the grill firebox <b>114</b> and/or aggregated in a side of the grill firebox <b>114</b> such that the prepared fuel need not be transferred by hand (e.g., by shovel) between the fuel-preparing unit firebox <b>164</b> and the grill firebox <b>114</b>, only moved within the grill firebox <b>114</b> as desired for different heat zones.</p>
+      <p id="p-00049-en" num="0049">Referring now to <figref>FIG. 4B</figref>, the physical partition <b>173</b> includes the chute with the downward slope from the second sidewall <b>178</b> of fuel-preparing unit housing <b>170</b> to an opening <b>127</b>/<b>177</b> in the first sidewall <b>126</b> of the grill unit housing <b>120</b> and/or the first sidewall <b>176</b> of the fuel-preparing unit housing <b>170</b>. The prepared fuel is located on the physical partition <b>173</b> behind a door <b>179</b> (with optional handle attached thereto) over the central opening <b>127</b>/<b>177</b>. The door <b>179</b> may be opened by sliding the door <b>179</b> up from the bottom <b>121</b>/<b>171</b> of the grill firebox <b>114</b> and/or fuel-preparing unit firebox <b>164</b> (as shown). In one embodiment, the door <b>179</b> may be opened by sliding it toward an operator customarily cooking on the grill unit <b>110</b> and/or away from the back of the grill unit <b>110</b> and/or fuel-preparing unit <b>160</b>. According to one embodiment, the door <b>179</b> may be detachable and removable by completely sliding the door <b>179</b> away from the back of the grill unit <b>110</b> and/or fuel-preparing unit <b>160</b>. Opening the door <b>179</b> releases the prepared fuel from the fuel-preparing unit firebox <b>164</b>, dropping the prepared fuel through the opening <b>127</b>/<b>177</b> and into the grill firebox <b>114</b>.</p>
+      <p id="p-00050-en" num="0050">In embodiments including a detachable door <b>179</b>, the door <b>179</b> may be used as a shovel or the like to redistribute the prepared fuel in the grill firebox <b>114</b>. Such a design allows the prepared fuel to be directly delivered to the grill firebox <b>114</b> and/or aggregated in a side of the grill firebox <b>114</b> such that the prepared fuel need not be transferred by hand (e.g., by shovel) between the fuel-preparing unit firebox <b>164</b> and the grill firebox <b>114</b>, only moved within the grill firebox <b>114</b> as desired for different heat zones. For example, according to one exemplary embodiment illustrated in <figref>FIG. 4C</figref>, the door <b>179</b> may slide horizontally across the grill firebox <b>114</b> over railings attached to the grill unit housing in order to redistribute the prepared fuel in the grill firebox <b>114</b>. The door <b>179</b> may be attached to the railings by a hinge that allows the door <b>179</b> to swing toward and/or away from the first sidewall <b>126</b> of the grill housing <b>120</b> as shown in <figref>FIG. 4C</figref>. The hinge further allows the door <b>179</b> to slide horizontally back across the grill firebox <b>114</b> to its original position without disturbing the prepared fuel. However, if desired, the hinge may further allow the door <b>179</b> itself to be used to further redistribute the prepared fuel.</p>
+      <p id="p-00051-en" num="0051">Referring now to <figref>FIGS. 4D and 4E</figref>, the physical partition <b>173</b> including the chute with the downward slope from the second sidewall <b>178</b> of fuel-preparing unit housing <b>170</b> to an opening <b>127</b>/<b>177</b> in the first sidewall <b>126</b> of the grill unit housing <b>120</b> and/or the first sidewall <b>176</b> of the fuel-preparing unit housing <b>170</b> is shown. The prepared fuel is located on the physical partition <b>173</b> behind a door <b>179</b> (with optional handle attached thereto) over the central opening <b>127</b>/<b>177</b>. As illustrated, a bottom of the door <b>179</b> may be attached to a top of the bottom <b>121</b> of the grill unit housing <b>120</b> by a pair of posts. It is appreciated that while in this illustrative embodiment a pair of posts is used the embodiments are not limited thereto and any number of posts may be used. In this illustrative embodiment, a first post may be located at the front of the grill unit <b>110</b> and/or fuel-preparing unit <b>160</b> and the other post may be located at the back of the grill unit <b>110</b> and/or fuel-preparing unit <b>160</b>. As further illustrated, the door <b>179</b> may be opened by sliding the bottom <b>121</b> of the grill unit housing <b>120</b> into a predetermined angled position(s) pushing the posts and therefore the door <b>179</b> upward, thereby creating an opening for the prepared fuel to be transferred from the fuel-preparing unit <b>160</b> to the grill firebox <b>114</b>.</p>
+      <p id="p-00052-en" num="0052">In one embodiment, sliding the bottom <b>121</b> of the grill unit housing <b>120</b> completes the chute with a downward slope from the second sidewall <b>178</b> of fuel-preparing unit housing <b>170</b> through the opening <b>127</b>/<b>177</b> to the second sidewall <b>128</b> of the grill unit housing <b>120</b>. As such, opening the door <b>179</b> releases the prepared fuel from the fuel-preparing unit firebox <b>164</b>, dropping the prepared fuel through the opening <b>127</b>/<b>177</b> and into the grill firebox <b>114</b>. Such a design allows the prepared fuel to be directly delivered to the grill firebox <b>114</b> and/or aggregated in a side of the grill firebox <b>114</b> such that the prepared fuel need not be transferred by hand (e.g., by shovel) between the fuel-preparing unit firebox <b>164</b> and the grill firebox <b>114</b>, only moved within the grill firebox <b>114</b> as desired for different heat zones.</p>
+      <p id="p-00053-en" num="0053">Referring now to <figref>FIGS. 5A and 5B</figref>, an apparatus including a conveyor for transferring fuel according to one embodiment is shown. The fuel-preparing unit firebox <b>164</b> may include a conveyor <b>167</b> for transferring prepared fuel between the fuel-preparing unit firebox <b>164</b> and the grill firebox <b>114</b> through an opening <b>127</b>/<b>177</b> in the first sidewall <b>126</b> of the grill unit housing <b>120</b> and/or the first sidewall <b>176</b> of the fuel-preparing unit housing <b>170</b>. The opening <b>127</b>/<b>177</b> may be optionally covered with a door <b>179</b>, as described herein. The conveyor <b>167</b> may be a belt-type conveyor, which belt-type conveyor may be manually cranked by a crank mechanism (not shown) to transfer the prepared fuel between the fuel-preparing unit firebox <b>164</b> and the grill firebox <b>114</b> through the opening <b>127</b>/<b>177</b>. The conveyor <b>167</b> may be an auger-type conveyor (shown in <figref>FIG. 5B</figref>), which may be manually cranked by a crank mechanism to transfer the prepared fuel between the fuel-preparing unit firebox <b>164</b> and the grill firebox <b>114</b> through the opening <b>127</b>/<b>177</b>. Such a design allows the prepared fuel to be directly delivered to the grill firebox <b>114</b> and/or aggregated in a side of the grill firebox <b>114</b> such that the prepared fuel need not be transferred by hand (e.g., by shovel) between the fuel-preparing unit firebox <b>164</b> and the grill firebox <b>114</b>, only moved within the grill firebox <b>114</b> as desired for different heat zones.</p>
+      <p id="p-00054-en" num="0054">Various embodiments are described with respect to a chute with downward slope. However, it is appreciated that the downward structure of the chute is exemplary and not intended to limit the scope of the embodiments. For example, the chute may by horizontal.</p>
+      <p id="p-00055-en" num="0055">As such, provided herein is an apparatus comprising, a grill unit for grilling food, wherein the grill unit comprises a grill firebox and a height-adjustable grill positioned over the grill firebox; and an ember-preparing unit for preparing embers, wherein the ember-preparing unit comprises a chute configured to aggregate embers for the grill firebox, and wherein the ember-preparing unit is removably attached outboard of the grill unit. In some embodiments, the ember-preparing unit further comprises an ember-preparing unit firebox configured to collect the embers, and the chute is configured to aggregate the embers in a center of the ember-preparing unit firebox. In some embodiments, the ember-preparing unit firebox is configured to accommodate a shovel, and the chute is further configured to aggregate the embers in a center of the shovel. In some embodiments, the grill firebox comprises an opening, and the chute is configured to aggregate and transfer the embers from the ember-preparing unit to the grill firebox through the opening. In some embodiments, the apparatus further comprises a windlass configured to raise or lower the grill over the grill firebox to change a height associated with the grill and the grill firebox. In some embodiments, the windlass comprises an axle; a first cable attached to a first end of the axle and a first end of the height adjustable grill; and a second cable attached to a second end of the axle and a second end of the height adjustable grill, wherein the axle is configured to wind the first cable and the second cable on and off the axle. In some embodiments, the windlass comprises a ratchet mechanism configured to lock the height adjustable grill a height over the grill firebox.</p>
+      <p id="p-00056-en" num="0056">Also provided herein is an apparatus comprising a grill unit for grilling food comprising a grill firebox and a grill positioned above the grill firebox; an ember-preparing unit for preparing embers comprising a chute configured to aggregate and transfer embers to the grill firebox, wherein the ember-preparing unit is removably attached outboard of the grill unit; and a windlass configured to raise or lower the grill over the grill firebox to change a height associated with the grill and the grill firebox. In some embodiments, the ember-preparing unit further comprises an ember-preparing unit firebox configured to collect the embers, wherein the chute is configured to aggregate the embers in a center of the ember-preparing unit firebox. In some embodiments, the ember-preparing unit firebox is configured to accommodate a shovel, and the chute is further configured to aggregate the embers in a center of the shovel. In some embodiments, the grill firebox comprises an opening, and the chute is configured to aggregate and transfer the embers from the ember-preparing unit to the grill firebox through the opening. In some embodiments, the grill comprises a plurality of “V”-shaped elongate members configured to convey drippings from grilling food to a drip pan. In some embodiments, the apparatus is portable.</p>
+      <p id="p-00057-en" num="0057">Also provided herein is an apparatus comprising a grill unit for cooking food comprising a grill firebox and a grill positioned substantially over the grill firebox; and a fuel-preparing unit for preparing fuel comprising a chute configured to aggregate and transfer prepared fuel to the grill firebox, wherein the fuel-preparing unit is removably attached outboard of the grill unit. In some embodiments, the fuel-preparing unit further comprises a fuel-preparing unit firebox configured to collect the prepared fuel, wherein the chute is configured to aggregate the prepared fuel in a center of the fuel-preparing unit firebox. In some embodiments, the fuel-preparing unit firebox is configured to accommodate a shovel, and the chute is further configured to aggregate the prepared fuel in a center of the shovel. In some embodiments, the grill firebox comprises an opening, and the chute is configured to aggregate and transfer the prepared fuel from the fuel-preparing unit to the grill firebox through the opening. In some embodiments, the prepared fuel comprises embers derived from a fuel source selected from a group consisting of wood, lump charcoal, charcoal briquettes, and extruded charcoal. In some embodiments, the grill comprises a plurality of “V”-shaped elongate members configured to convey drippings from grilling food to a drip pan. In some embodiments, the plurality of “V”-shaped elongate members comprise stainless steel or iron.</p>
+      <p id="p-00058-en" num="0058">Also provided herein is an apparatus comprising a fuel-preparing unit for preparing fuel comprising a chute configured to aggregate and transfer prepared fuel to a grill unit for grilling food removably attached outboard of the fuel-preparing unit. In some embodiments, the fuel-preparing unit further comprises a fuel-preparing unit firebox configured to collect the prepared fuel, and the chute is configured to aggregate the prepared fuel in a center of the fuel-preparing unit firebox. In some embodiments, the fuel-preparing unit firebox is configured to accommodate a shovel, and the chute is further configured to aggregate the prepared fuel in a center of the shovel. In some embodiments, the grill unit comprises a grill firebox comprising an opening, and the chute is configured to aggregate and transfer the prepared fuel from the fuel-preparing unit to the grill firebox through the opening. In some embodiments, the prepared fuel comprises embers derived from a fuel source selected from a group consisting of wood, lump charcoal, charcoal briquettes, and extruded charcoal.</p>
+      <p id="p-00059-en" num="0059">While some particular embodiments have been illustrated and/or described herein, and while the particular embodiments have been illustrated and/or described in some detail, it is not the intention of the applicant(s) for the particular embodiments to limit the scope of the claimed invention. Additional adaptations and/or modifications may readily appear to persons having ordinary skill in the art, and, in broader aspects, these adaptations and/or modifications may be encompassed by the embodiments as well. Accordingly, departures may be made from the particular embodiments illustrated and/or described herein without departing from the scope of the claimed invention.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An apparatus comprising:
+<claim-text>a grill unit for grilling food, wherein the grill unit comprises a grill firebox and a height-adjustable grill positioned over the grill firebox; and</claim-text><claim-text>an ember-preparing unit for preparing embers, wherein the ember-preparing unit comprises a chute configured to aggregate embers for the grill firebox, and wherein the ember-preparing unit is removably attached outboard of the grill unit.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ember-preparing unit further comprises an ember-preparing unit firebox configured to collect the embers, and wherein the chute is configured to aggregate the embers in a center of the ember-preparing unit firebox.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The apparatus of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the ember-preparing unit firebox is configured to accommodate a shovel, and wherein the chute is further configured to aggregate the embers in a center of the shovel.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the grill firebox comprises an opening, and wherein the chute is configured to aggregate and transfer the embers from the ember-preparing unit to the grill firebox through the opening.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising a windlass configured to raise or lower the grill over the grill firebox to change a height associated with the grill and the grill firebox.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The apparatus of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the windlass comprises:
+<claim-text>an axle;</claim-text><claim-text>a first cable attached to a first end of the axle and a first end of the height adjustable grill; and</claim-text><claim-text>a second cable attached to a second end of the axle and a second end of the height adjustable grill,
+<claim-text>wherein the axle is configured to wind the first cable and the second cable on and off the axle.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The apparatus of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the windlass comprises a ratchet mechanism configured to lock the height adjustable grill a height over the grill firebox.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>
+        <b>8</b>. An apparatus comprising:
+<claim-text>a grill unit for grilling food comprising a grill firebox and a grill positioned above the grill firebox;</claim-text><claim-text>an ember-preparing unit for preparing embers comprising a chute configured to aggregate and transfer embers to the grill firebox, wherein the ember-preparing unit is removably attached outboard of the grill unit; and</claim-text><claim-text>a windlass configured to raise or lower the grill over the grill firebox to change a height associated with the grill and the grill firebox.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The apparatus of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the ember-preparing unit further comprises an ember-preparing unit firebox configured to collect the embers, and wherein the chute is configured to aggregate the embers in a center of the ember-preparing unit firebox.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The apparatus of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the ember-preparing unit firebox is configured to accommodate a shovel, and wherein the chute is further configured to aggregate the embers in a center of the shovel.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The apparatus of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the grill firebox comprises an opening, and wherein the chute is configured to aggregate and transfer the embers from the ember-preparing unit to the grill firebox through the opening.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The apparatus of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the grill comprises a plurality of “V”-shaped elongate members configured to convey drippings from grilling food to a drip pan.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The apparatus of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the apparatus is portable.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>
+        <b>14</b>. An apparatus comprising:
+<claim-text>a grill unit for cooking food comprising a grill firebox and a grill positioned substantially over the grill firebox; and</claim-text><claim-text>a fuel-preparing unit for preparing fuel comprising a chute configured to aggregate and transfer prepared fuel to the grill firebox, wherein the fuel-preparing unit is removably attached outboard of the grill unit.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The apparatus of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the fuel-preparing unit further comprises a fuel-preparing unit firebox configured to collect the prepared fuel, and wherein the chute is configured to aggregate the prepared fuel in a center of the fuel-preparing unit firebox.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The apparatus of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the fuel-preparing unit firebox is configured to accommodate a shovel, and wherein the chute is further configured to aggregate the prepared fuel in a center of the shovel.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The apparatus of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the grill firebox comprises an opening, and wherein the chute is configured to aggregate and transfer the prepared fuel from the fuel-preparing unit to the grill firebox through the opening.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The apparatus of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the prepared fuel comprises embers derived from a fuel source selected from a group consisting of wood, lump charcoal, charcoal briquettes, and extruded charcoal.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The apparatus of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the grill comprises a plurality of “V”-shaped elongate members configured to convey drippings from grilling food to a drip pan.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The apparatus of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the plurality of “V”-shaped elongate members comprise stainless steel or iron.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en" independent="true">
+      <claim-text>
+        <b>21</b>. An apparatus comprising:
+<claim-text>a fuel-preparing unit for preparing fuel comprising a chute configured to aggregate and transfer prepared fuel to a grill unit for grilling food removably attached outboard of the fuel-preparing unit.</claim-text></claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The apparatus of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein the fuel-preparing unit further comprises a fuel-preparing unit firebox configured to collect the prepared fuel, and wherein the chute is configured to aggregate the prepared fuel in a center of the fuel-preparing unit firebox.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The apparatus of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, wherein the fuel-preparing unit firebox is configured to accommodate a shovel, and wherein the chute is further configured to aggregate the prepared fuel in a center of the shovel.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The apparatus of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein the grill unit comprises a grill firebox comprising an opening, and wherein the chute is configured to aggregate and transfer the prepared fuel from the fuel-preparing unit to the grill firebox through the opening.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The apparatus of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein the prepared fuel comprises embers derived from a fuel source selected from a group consisting of wood, lump charcoal, charcoal briquettes, and extruded charcoal. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150245740A1_00016.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150245740A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150245740A1.PDF" type="pdf" size="949494" pages="23" />
+</lexisnexis-patent-document>

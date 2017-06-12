@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246219A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021327" date-changed="20160113" time-changed="170123">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139336">
+        <country>US</country>
+        <doc-number>20150246219</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14685661</doc-number>
+        <date>20150414</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>A61N   1/05        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>05</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61M  25/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>25</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61N   5/06        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>A61N   1/0534      20130101 FI20130425BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>0534</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130425</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   1/07        20130101 LI20130425BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>07</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130425</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61M  25/0009      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>25</main-group>
+        <subgroup>0009</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61M  25/0023      20130101 LI20130425BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>25</main-group>
+        <subgroup>0023</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130425</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61N   1/0553      20130101 LI20141210BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>0553</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141210</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61N   5/0601      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>0601</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61N2005/0632      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>2005</main-group>
+        <subgroup>0632</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>H05K   1/028       20130101 LA20141210BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>028</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141210</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>H05K   1/118       20130101 LA20141210BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>118</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141210</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>H05K   3/10        20130101 LI20130425BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130425</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>H05K2201/051       20130101 LA20141210BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>2201</main-group>
+        <subgroup>051</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141210</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>Y10T  29/4913      20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>4913</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>Y10T  29/49147     20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>49147</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>Y10T  29/49155     20130101 LA20150123BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>49155</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">23</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">NEURAL INTERFACE SYSTEM WITH EDGE ARRAY</invention-title>
+    <related-documents date-changed="20150903">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13416775</doc-number>
+              <date>20120309</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9008747</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006856</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61451083</doc-number>
+          <date>20110309</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>NeuroNexus Technologies, Inc.</orgname>
+            <address>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Seymour</last-name>
+            <first-name>John P.</first-name>
+            <address>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hetke</last-name>
+            <first-name>Jamille Farraye</first-name>
+            <address>
+              <city>Brooklyn</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Vetter</last-name>
+            <first-name>Rio J.</first-name>
+            <address>
+              <city>Van Buren Twp</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kipke</last-name>
+            <first-name>Daryl R.</first-name>
+            <address>
+              <city>Dexter</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Pellinen</last-name>
+            <first-name>David S.</first-name>
+            <address>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kong</last-name>
+            <first-name>Kc</first-name>
+            <address>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173462228">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246219</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150414</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173462227">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246219</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150414</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The neural interface system of one embodiment includes a cylindrical shaft, a lateral extension longitudinally coupled to at least a portion of the shaft and having a thickness less than a diameter of the shaft, and an electrode array arranged on the lateral extension and radially offset from the shaft, including electrode sites that electrically interface with their surroundings. The method of one embodiment for making the neural interface system includes forming a planar polymer substrate with at least one metallization layer, patterning on at least one metallization layer an electrode array on a first end of the substrate, patterning conductive traces on at least one metallization layer, rolling a portion of the substrate toward the first end of the substrate, and securing the rolled substrate into a shaft having the first end of the substrate laterally extending from the shaft and the electrode array radially offset from the shaft.</p>
+  </abstract>
+  <legal-data date-changed="20151225">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150414</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246219A1</docdb-publication-number>
+      <docdb-application-id>444208361</docdb-application-id>
+      <new-owner>NEURONEXUS TECHNOLOGIES, INC., MICHIGAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:SEYMOUR, JOHN P.;HETKE, JAMILLE FARRAYE;VETTER, RIO J.;AND OTHERS;SIGNING DATES FROM 20150403 TO 20150407;REEL/FRAME:035401/0024</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151001</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246219A1</docdb-publication-number>
+      <docdb-application-id>444208361</docdb-application-id>
+      <new-owner>GREATBATCH LTD., NEW YORK</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:NEURONEXUS TECHNOLOGIES, INC.;REEL/FRAME:036701/0156</free-text-description>
+      <effective-date>
+        <date>20151001</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151027</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246219A1</docdb-publication-number>
+      <docdb-application-id>444208361</docdb-application-id>
+      <new-owner>MANUFACTURERS AND TRADERS TRUST COMPANY, NEW YORK</new-owner>
+      <free-text-description>SECURITY INTEREST;ASSIGNORS:GREATBATCH, INC.;GREATBATCH LTD.;ELECTROCHEM SOLUTIONS, INC.;AND OTHERS;REEL/FRAME:036980/0482</free-text-description>
+      <effective-date>
+        <date>20151027</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a divisional of U.S. application Ser. No. 13/416,775, filed on Mar. 9, 2012, now U.S. Pat. No. 9,008,747, which claims the benefit of U.S. Provisional Patent Application Ser. No. 61/451,083, entitled “Neural interface system with edge array” and filed 9 Mar. 2011, the entirety of which is incorporated herein by this reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">This invention relates generally to the neural interface field, and more specifically to a new and useful neural interface system with an edge array in the neural interface field.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Neural interface systems are typically implantable devices that are placed into biological tissue (e.g., brain or other neural tissue) and have the ability through electrode sites, to record electrical signals from and/or electrically stimulate the tissue. Such neural interface systems may be used, for example, in treatment of neurological and psychiatric disorders. For instance, deep brain stimulation devices may provide controllable electrical stimulation of selected regions of neural tissue through strategic positioning and activation of electrode sites.</p>
+      <p id="p-00004-en" num="0004">A neural interface system including a high-density array of electrode sites would he useful in many applications for exceptional control, but utilizing current conventional technology, including more electrode sites typically means a significant increase in thickness and overall size of the implantable device. Generally speaking, the larger the implantable device is, the more damage to tissue (e.g., cortical blood vessels and local tissue in and around the region of interest) the devices inflicts during implantation into the tissue. Furthermore, larger devices typically experience increased incidence of tissue encapsulation, as a result of foreign body response, thereby leading to decreased electrode sensitivity.</p>
+      <p id="p-00005-en" num="0005">Thus, there is a need in the neural interface field to create a new and useful neural interface system that ameliorates or eliminates the issues created by larger devices. High-channel count neural interfaces especially tend to be larger given the cost of decreasing the feature size during fabrication. This invention provides such a neural interface system, which is described in detail below in its preferred embodiments with reference to the appended drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00006-en" num="0006">
+        <figref>FIG. 1</figref> is a schematic of the system of a preferred embodiment;</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 2</figref> is a schematic of a cross-sectional view of the shaft of the system of a preferred embodiment;</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 3</figref> is a schematic of the shaft of the system of a preferred embodiment;</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIGS. 4A-4B</figref> are schematics of variations of the lateral extension of the system of a preferred embodiment;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIGS. 5A-5C</figref> are schematics of variations of electrical subsystems of the system of a preferred embodiment;</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIGS. 6 and 7</figref> are flowcharts depicting the method of a preferred embodiment and variations thereof;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 8A</figref> is a schematic view depicting the step of forming a planar polymer substrate (S<b>210</b>) having an electrode array and conductive traces patterned on a metallization layer for a neural interface system <b>200</b>;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 8B</figref> is an enlarged view of the indicated area in <figref>FIG. 8A</figref>;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 9</figref> is a schematic view illustrating coupling an insert to the substrate (<b>5242</b>) shown in <figref>FIGS. 8A and 8B</figref> and then rolling the substrate around the insert (S<b>244</b>);</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 10A</figref> is a schematic view illustrating securing the rolled substrate shown in <figref>FIG. 9</figref> into a shaft (S<b>250</b>);</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 10B</figref> is an enlarged view of the indicated area in <figref>FIG. 10A</figref>; and</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIGS. 11A</figref>, <b>11</b>B, <b>11</b>C(i)-(iii), <b>11</b>D and <b>11</b>E are schematics comparing tissue damage imparted by an exemplary neural interface system of a preferred embodiment to tissue damage imparted by conventional planar and microwire neural devices.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+      <p id="p-00018-en" num="0018">The following description of preferred embodiments of the invention is not intended to limit the invention to these preferred embodiments, but rather to enable any person skilled in the art to make and use this invention.</p>
+      <heading id="h-00006-en" level="2">Neural Interface System</heading>
+      <p id="p-00019-en" num="0019">As shown in <figref>FIGS. 1 and 2</figref>, in a preferred embodiment, the neural interface system <b>100</b> of a preferred embodiment includes: a substantially cylindrical shaft <b>110</b>; a lateral extension <b>140</b> longitudinally coupled to at least a portion of the shaft <b>110</b> along a longitudinal direction of the shaft <b>110</b> and having a thickness less than a diameter of the shaft <b>110</b>; and an electrode array <b>150</b>, at least partially arranged on the lateral extension <b>140</b> and radially offset from the shaft <b>110</b>, comprising a plurality of electrode sites <b>152</b> that electrically interface with their surroundings. The neural interface system <b>100</b> of the preferred embodiment preferably provides ultra-high density, high-resolution microelectrodes on a shaft <b>110</b> implantable in tissue for electrically communicating with and interfacing with tissue, such as for recording and/or stimulation of targeted tissue. The neural interface system <b>100</b> is preferably used to interact with brain tissue or other neural tissue for research and/or clinical purposes, but additionally or alternatively can be used to interact with any suitable tissue for any suitable application. The electrode array <b>150</b> is preferably radially offset from and is smaller than the shaft <b>110</b>, such that the degree of any tissue damage incurred by implantation of the shaft <b>110</b> will preferably have reduced effect on the electrode recording and/or stimulation quality and longevity. The neural interface system <b>100</b> preferably reduces local tissue damage, such as to cortical blood vessels and damage in the dendritic arbor of local neurons, such as during implantation. The neural interface system <b>100</b> preferably further reduces the occurrence of tissue encapsulation (arid associated biofouling and impedance effects) around the device, which would otherwise degrade the capabilities of the neural interface system <b>100</b>. Furthermore, in one preferred embodiment, the components of the neural interface system are modular, which may help to reduce costs.</p>
+      <p id="p-00020-en" num="0020">The shaft <b>110</b> of the preferred neural interface system <b>100</b> preferably functions to provide structural support for the neural interface system. As shown in <figref>FIG. 2</figref>, the shaft <b>110</b> of the preferred system <b>100</b> can be configured as a rolled substrate <b>120</b>. The substrate <b>120</b> is preferably a substantially planar substrate <b>120</b> that is rolled into a cylindrical shaft <b>110</b>. Alternatively, the shaft <b>110</b> can be any suitable shape formed by processes other than rolling; for example, the shaft <b>110</b> can be folded into a particular shape, or the shaft <b>110</b> can include a single tube or plurality of nested tubes. The shaft <b>110</b> preferably has substantially circular cross-section taken along a radial direction, but can alternatively have an elliptical or any suitable cross-sectional shape.</p>
+      <p id="p-00021-en" num="0021">In the preferred system <b>100</b>, the substrate <b>120</b> includes a polymer or other suitable material that is flexible enough to be rolled or similarly manipulated. The substrate <b>120</b> preferably includes one or more metallization layers and/or one or more insulation layers interspersed between the metallization layers. As shown in <figref>FIG. 1</figref>, one or more metallization layers are preferably patterned into conductive traces <b>126</b> within the substrate <b>120</b>. The metallization layers are preferably further patterned into the electrode sites <b>152</b> of the electrode array <b>150</b>, as further described below. In a preferred embodiment, the substrate <b>120</b> includes at least one metallization layer, but the substrate can alternatively include any suitable number of metallization layers. The metallization layers preferably include platinum and/or iridium, but can additionally or alternatively include any suitable conductive or semi-conductive material. The insulation layers preferably include silicon carbide, but may additionally or alternatively include any suitable electrically insulating material such as silicon dioxide, silicon nitride, parylene, polyimide, LCP, and/or silicone. At least some of the layers of the substrate <b>120</b>, such as the metallization layers, may be planarized by chemical-mechanical planarization or another smoothing process. Any additional suitable photolithographic processes can be performed on the substrate as desired.</p>
+      <p id="p-00022-en" num="0022">As shown in <figref>FIG. 1</figref>, the substrate <b>120</b> can further include a bond pad region <b>128</b> that electrically communicates with the conductive traces <b>126</b> and/or electrode array <b>150</b>, and with other circuitry and electronic devices (e.g., controller and/or signal processing devices). The bond pad region <b>128</b> is preferably on a proximal portion of the substrate <b>120</b> (with respect to the system when the system is implanted in tissue). For example, in a preferred embodiment, in an application in which the neural interface system is implanted in brain tissue, the bond pad region <b>128</b> is on or near a proximal end of the shaft <b>110</b>, near or outside the surface of the brain. However, the bond pad region <b>128</b> can alternatively be located in any suitable portion of the substrate, or may be arranged in any suitable position relative to the shaft <b>110</b>.</p>
+      <p id="p-00023-en" num="0023">In a variation of the preferred system <b>100</b> shown in <figref>FIG. 3</figref>, the shaft <b>110</b> defines a lumen <b>130</b> within its interior space. The lumen <b>130</b> preferably passes longitudinally within the shaft <b>110</b>. In some variations of the preferred system <b>100</b>, the lumen <b>130</b> is centered within the shaft <b>110</b>, and in some variations, the lumen <b>130</b> is offset within the shaft <b>110</b>. The lumen <b>130</b> can function to deliver and/or receive substances or items in different manners in one or more different variations. In another variation of the preferred system, the lumen <b>130</b> is configured to receive and transport a fluid <b>132</b>, such as for fluidic delivery of drugs or other therapeutic molecules to tissue surrounding the implanted shaft <b>110</b>.</p>
+      <p id="p-00024-en" num="0024">In another variation of the preferred system <b>100</b> shown in <figref>FIG. 3</figref>, the system <b>100</b> includes a stylet <b>134</b> that is insertable in the lumen <b>130</b> and preferably functions to at least provide structural support for the shaft <b>110</b> during implantation. The stylet <b>134</b> preferably includes a sharpened, pointed distal end to aid insertion into tissue and/or adjustment within tissue. In another variation of the preferred system <b>100</b>, the stylet <b>134</b> includes a microwire that is insertable in the lumen <b>130</b> and preferably functions as a single channel microelectrode. In another variation of the preferred system <b>100</b>, the stylet <b>134</b> functions as a mandrel, around which the substrate <b>120</b> is wrapped to form the shaft <b>110</b>, as further described below.</p>
+      <p id="p-00025-en" num="0025">In another variation of the preferred system <b>100</b> shown in <figref>FIG. 3</figref>, the system <b>100</b> further includes an optical light source <b>136</b> that is insertable in the lumen <b>130</b> and preferably functions to facilitate optogenetic stimulation. In particular the optical light source <b>136</b> facilitates optogenetic stimulation using optogenetic tools with light-sensitive ion channels in tissue to perturb neural circuits with cell-type specificity. The optical light source <b>136</b> is preferably an optical fiber, but may alternatively be any suitable light source. In this variation, the optical light source may operate within the neural interface system <b>100</b> similar to that described in U.S. Patent Publication No. 2011/0112591 entitled “Waveguide neural interface device”, the entirety of which is incorporated herein by this reference.</p>
+      <p id="p-00026-en" num="0026">Other variations of the preferred system <b>100</b> can include any other suitable substance, material, insert, and/or machine insertable within the lumen <b>130</b>. Preferably, the substance or insert disposed within the lumen <b>130</b> includes a bioresorbable material that is absorbed into the surrounding tissue after a period of time. Furthermore, in some embodiments, the substance or insert disposed within the lumen <b>130</b> is permanently coupled to the shaft <b>110</b>. However, in some embodiments the substance or insert disposed within the lumen <b>130</b> is temporarily coupled to the shaft <b>110</b>. For example, in one embodiment, the stylet <b>134</b> is decoupled from the shaft <b>110</b> after the substrate <b>120</b> is wrapped into a shaft <b>110</b>, or retracted and/or removed from the shaft <b>110</b> after the neural interface system <b>100</b> is implanted in tissue. In some embodiments, the system <b>100</b> includes multiple substances or inserts disposed within the lumen <b>130</b>.</p>
+      <p id="p-00027-en" num="0027">In another variation of the preferred system <b>100</b> shown in <figref>FIGS. 5B and 5C</figref>, at least the first electrical subsystem <b>160</b> is disposed within the lumen <b>130</b> of the shaft <b>110</b>. At least a portion of the conductive traces <b>126</b> preferably extend radially inward toward the lumen <b>130</b> and are coupled to the first electrical subsystem <b>160</b> within the lumen <b>130</b>. In another variation of the preferred system <b>100</b>, the conductive traces <b>126</b> pass approximately circumferentially around the shaft <b>110</b> within the substrate <b>120</b>, spiraling and approaching radially inward. The first electrical subsystem <b>160</b> (and/or any other electrical components) within the lumen <b>130</b> is preferably coupled to the second electrical subsystem <b>180</b> or other suitable components positioned external to the shaft) through the lumen <b>130</b>, such as on or within the substrate <b>120</b>, through a hardwired connection <b>170</b> (<figref>FIG. 5B</figref>), or through a wireless connection (<figref>FIG. 5C</figref>). In an alternative embodiment, both the first and second electrical subsystems <b>160</b>, <b>180</b> can be disposed within the lumen.</p>
+      <p id="p-00028-en" num="0028">As shown in <figref>FIGS. 4A and 4B</figref>, the system <b>100</b> can also include a lateral extension <b>140</b>. The lateral extension <b>140</b> preferably functions to radially or laterally offset the electrode array <b>150</b> from the shaft <b>110</b>. The lateral extension <b>140</b> is preferably longitudinally coupled to at least a portion of the shaft <b>110</b>, such as along the entire length of the shaft <b>110</b>, a distal portion of the shaft <b>110</b> (<figref>FIG. 4A</figref>), or any suitable portion of the shaft <b>110</b>. As shown in <figref>FIG. 4A</figref>, the lateral extension <b>140</b> is preferably coupled in a continuous manner with the shaft <b>110</b>. Alternatively, as shown in <figref>FIG. 4B</figref>, the lateral extension <b>140</b> can be coupled to the shaft by a series of one or more ribs bridging the lateral extension and shaft, which thereby form a perforated framework <b>142</b> between the shaft and lateral extension with openings <b>144</b>.</p>
+      <p id="p-00029-en" num="0029">As shown in the FIGURES, the lateral extension <b>140</b> is preferably a trailing end of the rolled substrate <b>120</b> of the shaft <b>110</b>. In other words, the lateral extension <b>140</b> is preferably an unrolled portion of the substrate <b>120</b> left outside of the rolled portion of the substrate <b>120</b>. For example, as shown in <figref>FIGS. 1A and 1B</figref>, the lateral extension <b>140</b> can project substantially tangentially from the shaft <b>110</b> in a roll direction of the rolled substrate of the shaft <b>110</b>. In another alternative embodiment, the lateral extension <b>140</b> can be originally separate from the shaft <b>110</b>, and coupled to the shaft <b>110</b> to laterally extend tangentially from the shaft <b>110</b>, or extend in any suitable direction.</p>
+      <p id="p-00030-en" num="0030">The lateral extension <b>140</b> preferably has a thickness that is less than the diameter of the shaft <b>110</b>. Preferably, the lateral extension <b>140</b> has a subcellular thickness, such as approximately five μm thick, which preferably reduces damage to local tissue during implantation. Furthermore, reactive tissue cells are less likely to adhere to the lateral extension <b>140</b> of subcellular thickness as part of a typical foreign body response of the tissue, such that the lateral extension <b>140</b> and the electrode array <b>150</b> preferably experience a reduced amount of tissue encapsulation, which typically interferes with system operation.</p>
+      <p id="p-00031-en" num="0031">As shown in the FIGURES, the preferred system <b>100</b> can also include an electrode array <b>150</b>. The electrode array <b>150</b> preferably functions to electrically interface with surrounding tissue. In a preferred embodiment, the electrode array <b>150</b> is a high-density array with approximately one hundred, and more preferably at least several hundred, microelectrode sites <b>152</b>. Alternatively, the electrode array <b>150</b> can include any suitable number of electrode sites. As shown in <figref>FIGS. 1A and 1B</figref>, the electrode array <b>150</b> is preferably at least partially arranged on the lateral extension <b>140</b>, more preferably along a longitudinal edge of the lateral extension <b>140</b>, and is radially offset from the shaft <b>110</b>. The electrode array <b>150</b> preferably includes recording electrode sites and/or stimulation electrode sites that are formed in any suitable photolithographic process on the lateral extension <b>140</b>. Preferably, the electrode sites <b>152</b> are formed by patterning and selectively exposing portions of the lateral extension <b>140</b> to reveal underlying metallization layers, and/or by building and patterning additional metallization layers on the lateral extension <b>140</b>. However, the specific structure and formation, of the electrode sites <b>152</b> may depend on the particular application of the neural interface system.</p>
+      <p id="p-00032-en" num="0032">As shown in <figref>FIGS. 5A-5C</figref>, the preferred neural interface system <b>100</b> includes a first electrical subsystem <b>160</b> that functions to communicate signals to and/or from the electrode array <b>150</b> and a second electrical subsystem <b>180</b> that processes signals from the electrode array <b>150</b>. The first electrical subsystem <b>160</b> preferably includes an amplifier that amplifies signals received from the electrode array <b>150</b> and transmits amplified signals to the second electrical subsystem <b>180</b>. The first electrical subsystem <b>160</b> preferably further includes a multiplexer that multiplexes neural signals to and/or from the electrode array <b>150</b>, thereby enabling the neural interface system <b>100</b> to include fewer conductive traces than would otherwise be required. The second electrical subsystem <b>180</b> is preferably in communication with the first electrical subsystem <b>160</b>, and preferably includes a signal processor, controller, and/or any suitable electronics.</p>
+      <p id="p-00033-en" num="0033">As shown in <figref>FIG. 5A</figref>, in one preferred embodiment, the first electrical subsystem <b>160</b> and/or second electrical subsystem <b>180</b> are coupled to a proximal region of the substrate <b>120</b> of the shaft <b>110</b>. As shown, the conductive traces <b>126</b> preferably pass along the shaft generally in a longitudinal direction toward the bond pad region <b>128</b> or other proximal region of the substrate <b>120</b>. Electrical signals are preferably communicated between the conductive traces <b>126</b> and the first electrical subsystem <b>160</b> and/or second electrical subsystem <b>180</b> through the bond pad region <b>128</b> and a hardwire connector <b>170</b> (e.g., a ribbon cable). However, the signals can additionally or alternatively be communicated with a wireless transmitter.</p>
+      <p id="p-00034-en" num="0034">In another variation of the preferred system <b>100</b> shown in <figref>FIGS. 5B and 5C</figref>, at least the first electrical subsystem <b>160</b> is disposed within the lumen <b>130</b> of the shaft no. At least a portion of the conductive traces <b>126</b> preferably extend radially inward toward the lumen <b>130</b> and are coupled to the first electrical subsystem <b>160</b> within the lumen <b>130</b>. In another variation of the preferred system <b>100</b>, the conductive traces <b>126</b> pass approximately circumferentially around the shaft no within the substrate <b>120</b>, spiraling and approaching radially inward. The first electrical subsystem <b>160</b> (and/or any other electrical components) within the lumen <b>130</b> is preferably coupled to the second electrical subsystem <b>180</b> or other suitable components positioned external to the shaft) through the lumen <b>130</b>, such as on or within the substrate <b>120</b>, through a hardwired connection <b>170</b> (<figref>FIG. 5B</figref>), or through a wireless connection (<figref>FIG. 5C</figref>). In an alternative embodiment, both the first and second electrical subsystems <b>160</b>, <b>180</b> can be disposed within the lumen.</p>
+      <p id="p-00035-en" num="0035">Although omitted for clarity, the preferred embodiments of the system <b>100</b> include every combination of the variations of the shaft <b>110</b>, lateral extension <b>140</b>, electrode array <b>150</b>, electrical subsystems <b>160</b>, <b>180</b>, and other components described herein. The preferred embodiments of the system <b>100</b> also include every combination of the stylet <b>134</b> or other inserts into the lumen <b>130</b> of the shaft <b>110</b>, including none, one, or a plurality of such inserts into the lumen <b>130</b> of the shaft <b>110</b> as described above.</p>
+      <heading id="h-00007-en" level="2">Method of Making a Neural Interface System</heading>
+      <p id="p-00036-en" num="0036">As shown in <figref>FIG. 6</figref>, a preferred method of making a neural interface system <b>200</b> includes: forming a planar polymer substrate in block S<b>210</b>; patterning a plurality of conductive traces in block S<b>220</b>, patterning an electrode array on a first end of the substrate in block S<b>230</b>, rolling a portion of the substrate towards the first end of the substrate in block S<b>240</b>, and in block S<b>250</b>, securing the rolled substrate into a shaft. The shaft preferably has the first end of the substrate laterally extending from the shaft and the electrode array radially offset from the shaft.</p>
+      <p id="p-00037-en" num="0037">As shown in <figref>FIG. 6</figref>, block S<b>210</b> recites forming a planar polymer substrate. Forming a planar polymer substrate preferably functions to prepare a structure from which the shaft, lateral extension, conductive traces, and/or electrode array is formed. In a preferred embodiment, block S<b>210</b> includes depositing a plurality of metallization layers and depositing a plurality of insulation layers interspersed between the metallization layers. However, any suitable number of metallization layers and/or insulation layers can be deposited. Any suitable deposition technique or process (e.g., chemical vapor deposition) can be used. The metallization layers can be any suitable conductive material, such as platinum or iridium or gold, including appropriate metal adhesion layers. In a preferred embodiment, the insulation layers are silicon carbide, but may alternatively be any suitable insulating material. In some embodiments, the metallization layers and insulation layers are of near equal thickness, but in other embodiments at least some of the metallization layers and/or insulation layers may be of different thicknesses. As shown in <figref>FIG. 7</figref>, one variation of the preferred method can include depositing at least one metallization layer in block S<b>211</b>, planarizing at least one metallization layer in block S<b>212</b>, depositing at least one insulation layer in block S<b>213</b>, and/or planarizing at least one insulation layer in block S<b>214</b>. Planarizing preferably involves chemical-mechanical planarization, but the preferred method may additionally or alternatively include any suitable smoothing process. As shown in <figref>FIG. 6</figref>, block S<b>220</b> recites patterning an electrode array on a first end of the substrate, and block S<b>230</b> recites patterning a plurality of conductive traces.</p>
+      <p id="p-00038-en" num="0038">As shown in <figref>FIGS. 8A and 8B</figref>, the electrode array and conductive traces are preferably patterned on one or more metallization layers of the substrate. Blocks S<b>220</b> and S<b>230</b> preferably function to form a plurality of electrode sites configured to interface with tissue, and a plurality of conductive traces configured to carry signals to and from the electrode sites. Blocks S<b>220</b> and S<b>230</b> can include any suitable photolithographic processes (e.g., masking, patterning, etching). Another variation of the preferred the method further includes forming a bond pad region on the substrate that is configured to communicate with electrical subsystems and the conductive traces and/or electrode array.</p>
+      <p id="p-00039-en" num="0039">As shown in <figref>FIG. 6</figref>, the method preferably includes block S<b>232</b>, which recites depositing an insulation layer onto the conductive traces and electrode array. Similar to block S<b>210</b>, the insulation layer can include silicon carbide, but may alternatively include suitable insulating material, and can be deposited in any suitable manner. Furthermore, any suitable number of insulation layers can be deposited.</p>
+      <p id="p-00040-en" num="0040">As shown in <figref>FIG. 6</figref>, block S<b>240</b> recites rolling a portion of the substrate toward the first end of the substrate. Block S<b>240</b> preferably functions to form a shaft of the neural interface device. As shown in <figref>FIG. 9</figref>, in a preferred embodiment, the method includes block S<b>242</b>, which recites coupling an insert to a second end of the substrate. The preferred method can further include block S<b>244</b>, which recites rolling the portion of the substrate around the insert from the second end toward the first end. The insert is preferably an elongated insert, and more preferably includes a stylet such as a microwire, an optical fiber, or any suitable insert configured to serve as a mandrel around which the shaft is formed. The insert is preferably coupled to the unrolled substrate by any suitable fastening mechanism, such as tacking with a biocompatible epoxy or another adhesive. In a preferred embodiment, the method includes coupling the insert to a rotational actuator and rolling the portion of the substrate around the insert with the rotational actuator. The rotational actuator is preferably a stepper motor, but may be a servomotor, crank, or any suitable actuator. The actuator is preferably programmed to roll a predetermined portion of the substrate (e.g., to include up to a predetermined length of the substrate in the rolled shaft), thereby leaving a portion of the substrate outside of the rolled shaft. In this embodiment, a first end of the insert is preferably coupled (e.g., with a shaft coupler) to the rotational actuator and a second end of the insert opposite the first end may be mounted to a fixture to help stabilize the insert as the substrate is rolled. After the substrate is rolled, the insert is preferably decoupled from the actuator such that the shaft of the neural interface device is independent and separate from the actuator.</p>
+      <p id="p-00041-en" num="0041">As shown in FIGS. <b>6</b> and <b>10</b>A-<b>10</b>B, block S<b>250</b> recites securing the rolled substrate into a shaft. The shaft preferably has a lateral extension with the electrode array radially offset from the shaft. In a first variation, securing the rolled substrate includes applying a biocompatible epoxy or other adhesive between at least two rolled layers of the shaft. In a second variation, securing the rolled substrate includes applying a biocompatible epoxy or other adhesive on a proximal and/or distal end face of the shaft.</p>
+      <p id="p-00042-en" num="0042">The preferred method can further include forming a sharpened distal end on the shaft in block S<b>260</b>. Block S<b>260</b> functions to configure the shaft for insertion into tissue and/or adjustment within tissue. In a preferred variation, as shown in <figref>FIG. 8B</figref>, block S<b>260</b> includes forming the substrate with at least one slanted edge. In this variation, the slanted edge is formed into sharpened edge or point when the substrate is rolled. In an alternative variation, block S<b>260</b> includes machining a sharpened edge or point onto the substrate after the shaft is rolled. The preferred method can further include reinforcing the distal end of the shaft to better bear load, such as with a hardening treatment (e.g., chemical, treatment) of the substrate material, forming the substrate to have a thicker and/or stronger material at a distal end, and/or coupling a reinforcing material to the distal end of the substrate and/or shaft.</p>
+      <p id="p-00043-en" num="0043">Although omitted for clarity, the preferred embodiments of the method includes every combination and permutation of the processes described herein. It should be understood that any of the foregoing processes and/or blocks can be performed by any suitable device, in any suitable order, in a serial or parallel manner.</p>
+      <heading id="h-00008-en" level="2">Example Implementation of the Preferred System and Method</heading>
+      <p id="p-00044-en" num="0044">The following example implementation of the preferred system and method is for illustrative purposes only, and should not be construed as definitive or limiting of the scope of the claimed invention. In one example, the shaft includes a polymer substrate having three metallization layers that are approximately 0.7 μm, 1.0 μm, and 1.3 μm thick. The metallization layers are interspersed with silicon carbide insulation layers. A trailing end of the substrate is patterned with photolithographic processes to form a high-density electrode array including approximately 670 microelectrode sites. When the substrate is unrolled, at least a portion of the planar substrate has a width of approximately 450 μm and a thickness of approximately 5 μm. A microwire having a diameter of approximately 80 μm is tacked onto an end of the planar substrate opposite the trailing end, and the planar substrate is rolled or wrapped around the microwire, toward the trailing end, to form a shaft approximately 10 mm long and having a lateral extension projecting tangentially from the shaft. The high-density electrode array is arranged along the edge of the lateral extension such that the electrode array is radially offset from the rolled shaft.</p>
+      <p id="p-00045-en" num="0045">The neural interface system is preferably strategically implanted to minimize damage to a target region of interest in the tissue, especially compared to conventional planar and microwire neural devices. As shown in <figref>FIGS. 11A and 11B</figref>, a planar neural device can sever portions of a neuron during implantation, and/or can be forced to record and/or stimulate tissue further from a desired target region in order to avoid excessive damage to the target region. As shown in the schematics of FIGS. <b>11</b>C(i)-(iii), an exemplary planar neural device with a width of approximately 100 μm (FIG. <b>11</b>C(i)) and an exemplary microwire neural device with a diameter of approximately 30 μm (FIG. <b>11</b>C(ii)) are estimated to result in a larger area of damage (A<sub>d</sub>) to a desired target region due to their larger footprint area or “effective width” in the target region, compared to the neural interface system with an edge array with an effective width of 5 μm (FIG. <b>11</b>C(iii)). The shaft of the neural interface system is preferably positioned relatively distant from the target region, while the edge electrode array on the lateral extension (which is preferably thinner than the shaft and consequently causes less damage to the surrounding tissue than the shaft) is preferably positioned in the target region of tissue with less damage to the target region. In other words, in this simulated comparison, the neural interface system with an edge array preferably has a substantially smaller effective width, and results in a substantially smaller area of damage (A<sub>d</sub>) than the exemplary planar array neural device (<figref>FIGS. 11D and 11E</figref>) or the exemplary microwire neural device (<figref>FIG. 11E</figref>).</p>
+      <p id="p-00046-en" num="0046">As a person skilled in the art will recognize from the previous detailed description and from the figures and claims, modifications and changes can be made to the preferred embodiments of the invention without departing from the scope of this invention defined in the following claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of making a neural interface system, comprising:
+<claim-text>a) forming a planar polymer substrate with at least one metallization layer;</claim-text><claim-text>b) patterning, on at least one metallization layer, an electrode array on a first end of the substrate;</claim-text><claim-text>c) patterning a plurality of conductive traces on at least one metallization layer;</claim-text><claim-text>d) rolling a portion of the substrate toward the first end of the substrate; and</claim-text><claim-text>e) securing the rolled substrate into a shaft having the first end of the substrate laterally extending from the shaft and the electrode array radially offset from the shaft.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein forming the planar polymer substrate includes planarizing the at least one metallization layer.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein rolling a portion of the substrate into the shaft comprises coupling an insert to a second end of the substrate and rolling the portion of the substrate around the insert from the second end to the first end.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein rolling a portion of the substrate into the shaft further comprises coupling the insert to a rotational actuator and rolling the portion of the substrate around the insert with the rotational actuator.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en" independent="true">
+      <claim-text>
+        <b>5</b>. A method for providing a neural interface system, comprising the steps of:
+<claim-text>a) providing a substrate by:
+<claim-text>i) forming a substantially cylindrical shaft as a rolled portion of the substrate; and</claim-text><claim-text>ii) providing a lateral extension portion of the substrate, the lateral extension extending longitudinally from at least a portion of the shaft and having a thickness less than a diameter of the shaft; and</claim-text></claim-text><claim-text>b) supporting at least a portion of an electrode array on the lateral extension, the portion of the electrode array supported on the lateral extension being radially offset from the shaft,</claim-text><claim-text>c) wherein the electrode array comprises a plurality of electrode sites that are configured to electrically interface with their surroundings.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing the lateral extension as a trailing end of the rolled substrate.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing the lateral extension being tangent to the shaft.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing the rolled substrate defining a lumen.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, including configuring the lumen to receive and transport a fluid.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, including disposing an optical light source within the lumen.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing the substrate having conductive traces coupled to the electrode array.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, including providing the conductive traces extending from the electrode array to a bond pad region of the substrate.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, including providing an amplifier at least partially disposed within the lumen.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, including providing a multiplexer at least partially disposed within the lumen.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing the substrate having conductive traces electrically coupling from the electrode array to a first electrical subsystem, and configuring the first electrical subsystem to wirelessly communicate with a second electrical subsystem.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing the lateral extension having a slanted distal edge extending to a sharpened distal end of the shaft.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing the electrode array arranged at least partially along a longitudinal edge of the lateral extension.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing the electrode array comprising at least one of a recording electrode site and a stimulation electrode site.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing the substrate as a polymer substrate.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing the substrate as a polymer substrate having three metallization layers interspersed with silicon carbide insulation layers.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, including providing the metallization layers being from about 0.7 μm to 1.3 μm thick.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, including providing at least one rib bridging from the lateral extension to the shaft.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, including providing the lateral extension being coupled to the shaft by at least two bridging ribs, thereby forming a perforated framework between the shaft and lateral extension with at least one opening bounded by the ribs. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246219A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150246219A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246219A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246219A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246219A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246219A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246219A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246219A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246219A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246219A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246219A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246219A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246219A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246219A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246219A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246219A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246219A1_00009.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150246219A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246219A1.PDF" type="pdf" size="678065" pages="13" />
+</lexisnexis-patent-document>

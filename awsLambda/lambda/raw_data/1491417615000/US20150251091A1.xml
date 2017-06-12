@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150251091A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021952" date-changed="20151215" time-changed="165849">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121230585">
+        <country>US</country>
+        <doc-number>20150251091</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14430986</doc-number>
+        <date>20130919</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012214713</doc-number>
+        <date>20120927</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>A63F  13/35        20140101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>35</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A63F  13/537       20140101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>537</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>A63F  13/35        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>35</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A63F  13/10        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A63F  13/537       20140902 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140902</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>537</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A63F2300/204       20130101 LA20140522BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>2300</main-group>
+        <subgroup>204</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140522</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A63F2300/8064      20130101 LA20140522BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>2300</main-group>
+        <subgroup>8064</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140522</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">22</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">SERVER, METHOD OF CONTROLLING A SERVER, AND PROGRAM</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>GREE, INC.</orgname>
+            <role>03</role>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Matsui</last-name>
+            <first-name>Takaya</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13005534</doc-number>
+        <date>20130919</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014050036</doc-number>
+        <date>20140403</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150924">
+      <main-family family-id="165034949">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015165911</doc-number>
+            <kind>A</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150507</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014050036</doc-number>
+            <kind>A1</kind>
+            <date>20140403</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251091</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165034947">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015165911</doc-number>
+            <kind>A</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150507</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014050036</doc-number>
+            <kind>A1</kind>
+            <date>20140403</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251091</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided are a server, a method of controlling a server, and a program that can increase the variations on methods for acquiring an item or the like and enhance interest in a game. Included are receiving, from a user, an item change request for changing first item data; displaying, to the user, a selection screen to display a plurality of options after receiving the item change request; and providing the user with second item data when a selected option on the selection screen is a correct answer.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150330</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015251091A1</docdb-publication-number>
+      <docdb-application-id>444308284</docdb-application-id>
+      <new-owner>GREE, INC., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:MATSUI, TAKAYA;REEL/FRAME:035283/0226</free-text-description>
+      <effective-date>
+        <date>20150306</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application claims priority to and the benefit of Japanese Patent Application No. 2012-214713 filed Sep. 27, 2012, the entire contents of which are incorporated herein by reference.</p>
+      <heading id="h-00002-en" level="1">FIELD</heading>
+      <p id="p-00002-en" num="0002">Embodiments of the present disclosure relates to a server that provides a game, to a method of controlling a server, and to a program.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Conventionally, in a battle game server, each user's deck is formed by a plurality of battle cards or the like stored for each user, and the battle game server allows a plurality of users to compete with each other based on the total value of the attack strength and defense strength of the deck (for example, see JP 2008-220984 A (PTL 1)). In such a battle game server, the user acquires a battle card by methods such as purchasing the battle card.</p>
+      <p id="p-00004-en" num="0004">In a conventional battle game server, however, the methods for acquiring battle cards and the like are limited, causing the user to lose interest in the game. In particular, since it is difficult to acquire a battle card or the like with a high rarity value, the user ends up with the impression that such an item cannot be acquired at all and suffers a drastic loss of interest in the game.</p>
+      <p id="p-00005-en" num="0005">Exemplary embodiments of present disclosure have been conceived in light of the above circumstances and therefore provides a server, a method of controlling a server, and a program that can increase the variations on methods for acquiring a battle card or the like and enhance interest in the game.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">A server according to exemplary embodiments of the present disclosure includes: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>a communication unit receiving, from a user, an item change request for changing first item data;</li><li>a display for displaying, to the user, a selection screen to display a plurality of options when the reception means receives the item change request; and</li><li>a control unit and the communication unit on the server for providing the user with second item data when a selected option on the selection screen is a correct answer.</li></ul></li></ul></p>
+      <p id="p-00007-en" num="0010">In the server, a rarity value of the second item data may be higher than a rarity value of the first item data.</p>
+      <p id="p-00008-en" num="0011">When the selected option is not the correct answer, the server may provide the user with the first item data without changing the first item data.</p>
+      <p id="p-00009-en" num="0012">The server may further receive an item change request for changing the second item data from the user and change item data a plurality of times.</p>
+      <p id="p-00010-en" num="0013">The server may count the number of times the selected option is the correct answer, and when the number of times is at least a predetermined value, may change the item data to item data with a higher rarity value than when the number of times is less than the predetermined value.</p>
+      <p id="p-00011-en" num="0014">When the selected option is an incorrect answer, the server may provide the user with the item data after changing the item data to the first item data.</p>
+      <p id="p-00012-en" num="0015">When the selected option is an incorrect answer, the server may provide the user with the item data after changing the item data to any previously changed item data.</p>
+      <p id="p-00013-en" num="0016">A method, according to exemplary embodiments of the present disclosure, of controlling a server includes the steps of: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>receiving, from a user on an operation unit of a communication terminal, a request for changing first item data at a communication unit of the game server;</li><li>displaying, to the user on a display unit of the communication terminal, a selection screen of data generated by a control unit of the game server that displays a plurality of options from an item data table of a memory unit of the game server, when the request is received; and</li><li>providing the user with second item data when a selected option on the selection screen is a correct answer as determined by the control unit of the game server based on information stored in an option table in the memory unit.</li></ul></li></ul></p>
+      <p id="p-00014-en" num="0020">In the method, a rarity value of the second item data may be higher than a rarity value of the first item data.</p>
+      <p id="p-00015-en" num="0021">In the method, when the selected option is not the correct answer, the server may provide the user with the first item data without changing the first item data.</p>
+      <p id="p-00016-en" num="0022">In the method, the server may further receive an item change request for changing the second item data from the user and change item data a plurality of times.</p>
+      <p id="p-00017-en" num="0023">In the method, the server may count the number of times the selected option is the correct answer, and when the number of times is at least a predetermined value, may change the item data to item data with a higher rarity value than when the number of times is less than the predetermined value.</p>
+      <p id="p-00018-en" num="0024">In the method, when the selected option is an incorrect answer, the server may provide the user with the item data after changing the item data to the first item data.</p>
+      <p id="p-00019-en" num="0025">In the method, when the selected option is an incorrect answer, the server may provide the user with the item data after changing the item data to any previously changed item data.</p>
+      <p id="p-00020-en" num="0026">A program or a computer-readable non-transitory recording medium according to exemplary embodiments of the present disclosure causes a computer functioning as a server to execute the steps of: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>receiving, from a user on a communication terminal, a request for changing first item data at a communication unit on a game server;</li><li>displaying, to the user on a display unit of the communication terminal, a selection screen to display a plurality of options determined by a control unit on the game server from data in an item data tables in a memory unit of the game server when the request is received; and</li><li>providing the user with second item data from an item information table in the memory unit of the game server when a selected option on the selection screen of the communication terminal is a correct answer as determined by the control unit based on values stored in an option table of the memory unit.</li></ul></li></ul></p>
+      <p id="p-00021-en" num="0030">In the program, a rarity value of the second item data may be higher than a rarity value of the first item data.</p>
+      <p id="p-00022-en" num="0031">In the program, when the selected option is not the correct answer, the server may provide the user with the first item data without changing the first item data.</p>
+      <p id="p-00023-en" num="0032">In the program, the server may further receive an item change request for changing the second item data from the user and change item data a plurality of times.</p>
+      <p id="p-00024-en" num="0033">In the program, the server may count the number of times the selected option is the correct answer, and when the number of times is at least a predetermined value, may change the item data to item data with a higher rarity value than when the number of times is less than the predetermined value.</p>
+      <p id="p-00025-en" num="0034">In the program, when the selected option is an incorrect answer, the server may provide the user with the item data after changing the item data to the first item data.</p>
+      <p id="p-00026-en" num="0035">In the program, when the selected option is an incorrect answer, the server may provide the user with the item data after changing the item data to any previously changed item data.</p>
+      <p id="p-00027-en" num="0036">A program and a computer-readable non-transitory recording medium according to exemplary embodiments of the present disclosure causes a computer functioning as a communication terminal of a user to execute the steps of: <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>receiving, from the user, an item change request for changing first item data;</li><li>displaying, to the user, a selection screen to display a plurality of options when the item change request is received in the receiving step; and</li><li>providing the user with second item data when a selected option on the selection screen is a correct answer.</li></ul></li></ul></p>
+      <p id="p-00028-en" num="0040">The server, method of controlling a server, and program according to the present disclosure increase the variations on methods for acquiring a battle card or the like and enhance interest in the game.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00029-en" num="0041">Exemplary embodiments of the present disclosure will be further described below with reference to the accompanying drawings, wherein:</p>
+      <p id="p-00030-en" num="0042">
+        <figref>FIG. 1</figref> is a block diagram of a communication system according to Embodiment 1;</p>
+      <p id="p-00031-en" num="0043">
+        <figref>FIG. 2</figref> is an example of an item information table in Embodiment 1;</p>
+      <p id="p-00032-en" num="0044">
+        <figref>FIG. 3</figref> is an example of item data in Embodiment 1;</p>
+      <p id="p-00033-en" num="0045">
+        <figref>FIG. 4</figref> is an example of an option table in Embodiment 1;</p>
+      <p id="p-00034-en" num="0046">
+        <figref>FIG. 5</figref> is an example of a selection screen in Embodiment 1;</p>
+      <p id="p-00035-en" num="0047">
+        <figref>FIG. 6</figref> is a flowchart illustrating operations of the communication system according to Embodiment 1;</p>
+      <p id="p-00036-en" num="0048">
+        <figref>FIG. 7</figref> is a block diagram of a communication system according to Embodiment 2;</p>
+      <p id="p-00037-en" num="0049">
+        <figref>FIG. 8</figref> is an example of a ranking table in Embodiment 2;</p>
+      <p id="p-00038-en" num="0050">
+        <figref>FIG. 9</figref> is a flowchart illustrating operations of the communication system according to Embodiment 2;</p>
+      <p id="p-00039-en" num="0051">
+        <figref>FIG. 10</figref> is a block diagram of a communication system according to Embodiment 3;</p>
+      <p id="p-00040-en" num="0052">
+        <figref>FIG. 11</figref> is a flowchart illustrating operations of the communication system according to Embodiment 3; and</p>
+      <p id="p-00041-en" num="0053">
+        <figref>FIG. 12</figref> is another example of a selection screen.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00042-en" num="0054">The following describes embodiments of the present disclosure.</p>
+      <heading id="h-00007-en" level="1">Embodiment 1</heading>
+      <p id="p-00043-en" num="0055">
+        <figref>FIG. 1</figref> is a block diagram of a communication system according to Embodiment 1 of the present disclosure. The communication system according to Embodiment 1 of the present disclosure includes a server <b>1</b> (game server <b>1</b>) and a communication terminal <b>2</b>.</p>
+      <p id="p-00044-en" num="0056">The game server <b>1</b> includes a communication unit <b>10</b>, a memory unit <b>11</b>, and a control unit <b>12</b>.</p>
+      <p id="p-00045-en" num="0057">The communication unit <b>10</b> communicates with a communication terminal <b>2</b> over either or both of a wireless and wired connection.</p>
+      <p id="p-00046-en" num="0058">The memory unit <b>11</b> stores information on items provided to the communication terminal <b>2</b> and on the item type. An “item” refers to any of a variety of objects used within a game, such as battle cards constituting a user's deck, a character, a weapon, armor, an ornament, a plant, food, and the like. The item type is a numerical value representing the rarity value of the item, a numerical value representing the category of the item, or the like. Below, the item type is described as being a numerical value representing the rarity value of the item, yet the item type is not limited in this way.</p>
+      <p id="p-00047-en" num="0059">Specifically, the memory unit <b>11</b> stores this information by dividing the information among tables and sets of data. An item information table <b>111</b> and an item data table <b>112</b> are stored in the memory unit <b>11</b>. As illustrated in <figref>FIG. 2</figref>, for example the item information table <b>111</b> includes item identification information “UNI<b>1</b>”, an item name “item A”, and an item type “<b>3</b>”. The item identification information is an identifier for uniquely identifying an item in the present system. The item type for example indicates the level of the rarity value of an item. As the value of the item type is larger, the rarity value of the item is higher.</p>
+      <p id="p-00048-en" num="0060">The item data table <b>112</b> stores data related to items provided to the user (item data). <figref>FIG. 3</figref> illustrates an example of the item data table <b>112</b>. As illustrated in <figref>FIG. 3</figref>, the item data for example includes item identification information “UNI<b>1</b>”, an item image “item A image”, and the like. The image data may be in any image format, such as JPEG, GIF, PNG, or the like.</p>
+      <p id="p-00049-en" num="0061">The memory unit <b>11</b> stores information pertaining to options, described below, as an option table <b>113</b>.</p>
+      <p id="p-00050-en" num="0062">The control unit <b>12</b> performs a variety of control pertaining to the game server <b>1</b>. For example, upon receiving an item acquisition request from the communication terminal <b>2</b>, the control unit <b>12</b> refers to the item information table <b>111</b> in the memory unit <b>11</b> to extract and determine the item data to transmit to the communication terminal <b>2</b>. The control unit <b>12</b> then transmits the item data to the communication terminal <b>2</b>. Specifically, the control unit <b>12</b> refers to the item data table <b>112</b> and transmits the item data (item image and the like) to the communication terminal <b>2</b> via the communication unit <b>10</b>.</p>
+      <p id="p-00051-en" num="0063">For example, the control unit <b>12</b> refers to the item information table <b>111</b>, randomly extracts item identification information (for example, “UNI<b>1</b>”), and determines that the extracted item is the item to provide to the communication terminal <b>2</b>. The control unit <b>12</b> then refers to the item data table <b>112</b> and transmits the item data for the item to be provided (first item data) to the communication terminal <b>2</b> via the communication unit <b>10</b>.</p>
+      <p id="p-00052-en" num="0064">Furthermore, upon receiving an item change request from the communication terminal <b>2</b>, the control unit <b>12</b> generates selection screen data with a plurality of options that include a correct answer and transmits the selection screen data to the communication terminal <b>2</b> via the communication unit <b>10</b>. The control unit <b>12</b> determines the information pertaining to the option that is the correct answer in advance and stores the option table <b>113</b> in the memory unit <b>11</b>. <figref>FIG. 4</figref> illustrates an example of the option table. As illustrated in <figref>FIG. 4</figref>, the option table <b>113</b> includes option identification information and correct/incorrect information corresponding to the options. The option identification information is an identifier for uniquely identifying an option in the present system. The content of the option is information indicating one of two values, “correct answer” or “incorrect answer”. <figref>FIG. 4</figref> illustrates an example with two options, yet the number of options may be three or more. <figref>FIG. 4</figref> also illustrates an example in which there is only one correct answer, yet the number of correct answers may also be any number that is two or more and is less than the total number of options. Based on the option table <b>113</b>, the control unit <b>12</b> generates the selection screen data to transmit to the communication terminal <b>2</b>.</p>
+      <p id="p-00053-en" num="0065">
+        <figref>FIG. 5</figref> illustrates an example of a selection screen, displayed by the communication terminal <b>2</b>, for which data is generated by the control unit <b>12</b>. The selection screen displayed in <figref>FIG. 5</figref> is generated based on the option table <b>113</b> and includes two options and one correct answer. For example, the option corresponding to the option identification information “S<b>001</b>” is indicated by option image <b>131</b>, and the option corresponding to the option identification information “S<b>002</b>” is indicated by option image <b>132</b>. Option image <b>131</b> and option image <b>132</b> are preferably an image of a vase. Hereinafter, the option image is described as being a vase image. The option image <b>131</b> (vase image <b>131</b>) and the option image <b>132</b> (vase image <b>132</b>) are displayed with the same image, and a user looking at the images cannot tell which one is the correct answer. On the selection screen displayed on the communication terminal <b>2</b>, a visual effect is preferably applied so that the item before the change is stored inside the vase image, and also so that the vase images are shuffled.</p>
+      <p id="p-00054-en" num="0066">The control unit <b>12</b> receives the option identification information corresponding to the option selected by user input from the communication terminal <b>2</b> via the communication unit <b>10</b>. Specifically, the control unit <b>12</b> receives the option identification information (“S<b>001</b>” or “S<b>002</b>”) pertaining to the vase image corresponding to the option from the communication terminal <b>2</b>. The control unit <b>12</b> then refers to the option table <b>113</b> to judge whether the received option identification information is the correct answer.</p>
+      <p id="p-00055-en" num="0067">When judging that the received option identification information is the correct answer, i.e. when the option selected by the user is the correct answer, the control unit <b>12</b> changes the item data transmitted to the communication terminal <b>2</b> from the first item data to other item data (second item data). Specifically, the control unit <b>12</b> refers to the item information table <b>111</b>, randomly extracts item identification information (for example, “UNI<b>4</b>”), and determines that the extracted item data is the second item data to transmit to the communication terminal <b>2</b>. Based on the value of the item type of the first item data, preferably the control unit <b>12</b> randomly extracts item data with a higher value from the item information table <b>111</b> and determines the extracted item data to be the second item data. In other words, the control unit <b>12</b> determines the second item data so that the second item data after the change has a rarity value higher than that of the first item data before the change. For example, if the item before the change is item A, the control unit <b>12</b> randomly extracts an item for which the value of the item type is greater than three from the item information table <b>111</b> and determines the item to be the second item data. A visual effect is preferably applied so that the other item after the change comes out from the vase image on the selection screen displayed by the communication terminal <b>2</b>.</p>
+      <p id="p-00056-en" num="0068">On the other hand, when the received option identification information is an incorrect answer, i.e. when the option selected by the user is not the correct answer, then without changing the item data, the control unit <b>12</b> transmits the original item data, i.e. the first item data, to the communication terminal <b>2</b>. For example, if the first item data before the change is item A, then without changing the item data, the control unit <b>12</b> provides the communication terminal <b>2</b> with item A.</p>
+      <p id="p-00057-en" num="0069">The communication terminal <b>2</b> includes a communication unit <b>20</b>, a display unit <b>21</b>, an operation unit <b>22</b>, and a control unit <b>23</b>.</p>
+      <p id="p-00058-en" num="0070">The communication unit <b>20</b> communicates with the game server <b>1</b> over either or both of a wireless and wired connection. Specifically, based on user operation of the operation unit <b>22</b>, the communication unit <b>20</b> transmits an item acquisition request to the game server <b>1</b>. Based on user operation of the operation unit <b>22</b>, the communication unit <b>20</b> also transmits an item change request to the game server <b>1</b>. The communication unit <b>20</b> also receives item data from the game server <b>1</b> in response to the item acquisition request. Furthermore, the communication unit <b>20</b> receives selection screen data from the game server <b>1</b> in response to the item change request.</p>
+      <p id="p-00059-en" num="0071">The display unit <b>21</b> is configured using a liquid crystal display, an organic EL display, or the like and outputs display pertaining to the game provided by the game server <b>1</b>. For example, the display unit <b>21</b> displays the item image pertaining to an item provided by the game server <b>1</b>. The display unit <b>21</b> also displays a link or the like for transmitting an item change request. The link includes a message such as “try to change an item” or “Choose the vase of growth and stick a card in! If you pick out the real vase, your card will grow!”. The display unit <b>21</b> also displays a selection screen in response to the item change request.</p>
+      <p id="p-00060-en" num="0072">The operation unit <b>22</b> is configured using buttons, a touch panel, or the like, and receives different types of input signals from the user during the game. For example, the operation unit <b>22</b> receives user input on the selection screen. The operation unit <b>22</b> transmits the selection signal received from the user to the control unit <b>23</b>.</p>
+      <p id="p-00061-en" num="0073">The control unit <b>23</b> performs a variety of control pertaining to the communication terminal <b>2</b>. For example, based on user operation of the operation unit <b>22</b>, the control unit <b>23</b> transmits an item acquisition request to the game server <b>1</b> via the communication unit <b>20</b>. Based on user operation of the operation unit <b>22</b>, the control unit <b>23</b> also transmits an item change request to the game server <b>1</b> via the communication unit <b>20</b>. Furthermore, the control unit <b>23</b> receives a user selection signal on the selection screen and transmits the option identification information that was selected by the user to the game server <b>1</b> via the communication unit <b>20</b>.</p>
+      <p id="p-00062-en" num="0074">Next, operations of the communication system according to Embodiment 1 of the present disclosure are described using the flowchart in <figref>FIG. 6</figref>.</p>
+      <p id="p-00063-en" num="0075">First, based on user operation of the operation unit <b>22</b>, the control unit <b>23</b> of the communication terminal <b>2</b> transmits an item acquisition request to the game server <b>1</b> via the communication unit <b>20</b> (step S<b>1</b>).</p>
+      <p id="p-00064-en" num="0076">Next, the control unit <b>12</b> of the game server <b>1</b> refers to the item information table <b>111</b> in the memory unit <b>11</b> to extract and determine the item to transmit to the communication terminal <b>2</b> (step S<b>2</b>). The control unit <b>12</b> then transmits the item data pertaining to the item (first item data) to the communication terminal <b>2</b> (step S<b>3</b>). Specifically, the control unit <b>12</b> refers to the item data table <b>112</b> and transmits the item data pertaining to the item to provide to the communication terminal <b>2</b> via the communication unit <b>10</b>.</p>
+      <p id="p-00065-en" num="0077">Next, based on user operation of the operation unit <b>22</b>, the control unit <b>23</b> of the communication terminal <b>2</b> transmits an item change request to the game server <b>1</b> via the communication unit <b>20</b> (step S<b>4</b>). In step S<b>4</b>, when the communication terminal <b>2</b> does not transmit an item change request, processing terminates without the item being changed.</p>
+      <p id="p-00066-en" num="0078">Subsequently, upon receiving the item change request, the control unit <b>12</b> of the game server <b>1</b> determines the information pertaining to the option that is the correct answer and stores the information pertaining to the option that is the correct answer in the option table <b>113</b> in the memory unit <b>11</b> (step S<b>5</b>). The control unit <b>12</b> then generates selection screen data with a plurality of options that include a correct answer and transmits the selection screen data to the communication terminal <b>2</b> via the communication unit <b>10</b> (step S<b>6</b>).</p>
+      <p id="p-00067-en" num="0079">Subsequently, the control unit <b>23</b> of the communication terminal <b>2</b> receives a user selection signal on the selection screen and transmits the option identification information that was selected by the user to the game server <b>1</b> via the communication unit <b>20</b> (step S<b>7</b>).</p>
+      <p id="p-00068-en" num="0080">Next, the control unit <b>12</b> of the game server <b>1</b> refers to the received option identification information and option table <b>113</b> to judge whether or not the option selected by the user is the correct answer (step S<b>8</b>).</p>
+      <p id="p-00069-en" num="0081">When judging that the content of the option in the option identification information is the correct answer, i.e. when judging that the option selected by the user is the correct answer, the control unit <b>12</b> changes the item data transmitted to the communication terminal <b>2</b> to different item data (second item data) (step S<b>9</b>). Specifically, the control unit <b>12</b> refers to the item information table <b>111</b>, randomly extracts item identification information (for example, “UNI<b>4</b>”), and determines that the item corresponding to the extracted item identification information (item D) is the other item, after the change, to provide to the communication terminal <b>2</b>. Based on the value of the item type of the item before the change, preferably the control unit <b>12</b> randomly extracts an item with a higher value from the item information table <b>111</b> and determines the extracted item to be the second item data.</p>
+      <p id="p-00070-en" num="0082">The control unit <b>12</b> then transmits the item data to the communication terminal <b>2</b> (step S<b>10</b>). Specifically, the control unit <b>12</b> refers to the item data table <b>112</b> and transmits the item data pertaining to the item to provide to the communication terminal <b>2</b> via the communication unit <b>10</b>. Processing then terminates.</p>
+      <p id="p-00071-en" num="0083">On the other hand, when the control unit <b>12</b> judges in step S<b>8</b> that the content of the option in the option identification information is not the correct answer, i.e. when the control unit <b>12</b> judges that the option selected by the user is an incorrect answer, processing skips step S<b>9</b> and proceeds to step S<b>10</b>. In this case, without the item data to be transmitted to the communication terminal <b>2</b> being changed, the original item data is transmitted to the communication terminal <b>2</b> in step S<b>10</b>, and processing terminates.</p>
+      <p id="p-00072-en" num="0084">In this way, according to exemplary embodiments of the present disclosure, the communication terminal <b>2</b> transmits an item change request for an item that has been provided, the game server <b>1</b> transmits selection screen data with a plurality of options that include a correct answer in response to the item change request, and the item is changed in accordance with the option, thereby increasing the variations on methods for acquiring an item. Furthermore, based on the value of the item type of the item before the change, the control unit <b>12</b> preferably determines an item of higher value to be the other item, thereby increasing the predictability of acquisition of an item with a high rarity value or the like and heightening interest in the game.</p>
+      <p id="p-00073-en" num="0085">In the present embodiment, the option image is a vase image, yet the option image is not limited to this example. The option image may be the image of a lottery ticket used to select the correct answer. Alternatively, the option image may be a planter, the ground, or the like in which a plant seed is planted, and when the correct answer is selected, a visual effect may be applied so that the option image changes to the image of a flower. The option image may also be an image of a face down card, and a visual effect may be applied so that magic dust is sprinkled on the selected card, with the card turning into the item after the change when the correct answer is selected. The user's interest in the game can be heightened by applying the above-described effects.</p>
+      <heading id="h-00008-en" level="1">Embodiment 2</heading>
+      <p id="p-00074-en" num="0086">The following describes Embodiment 2 of the present disclosure. <figref>FIG. 7</figref> is a block diagram of a communication system according to Embodiment 2 of the present disclosure. The same reference signs are provided for the same components as in Embodiment 1, and a description thereof is omitted. Overall, the communication system in Embodiment 2 differs from the structure of Embodiment 1 in that, after the game server <b>1</b> transmits the second item data after the change, the communication terminal <b>2</b> further transmits an item change request to change the second item data, and the item is changed multiple times in accordance with the number of times the correct answer is selected.</p>
+      <p id="p-00075-en" num="0087">In addition to the structure of the memory unit <b>11</b> according to Embodiment 1, the memory unit <b>11</b> of the game server <b>1</b> according to Embodiment 2 stores information <b>114</b> on the number of correct answer selections and a ranking table <b>115</b>. The information <b>114</b> on the number of correct answer selections stores the number of times the correct answer is selected during the item change requests from the communication terminal <b>2</b> (number of correct answer selections). The ranking table <b>115</b> is a table indicating the relationship between the number of correct answer selections and the item type of the other item after the change.</p>
+      <p id="p-00076-en" num="0088">
+        <figref>FIG. 8</figref> illustrates an example of the ranking table <b>115</b>. For example, when the number of correct answer selections is from 1 to 3, the item type is 3. On the other hand, when the number of correct answer selections is from 4 to 5, the item type is set higher to 4. The control unit <b>12</b> refers to the information <b>114</b> on the number of correct answer selections and the ranking table <b>115</b> in the memory unit <b>11</b> and changes the item data transmitted to the communication terminal <b>2</b> to other item data. Since the control unit <b>12</b> changes the item with reference to the ranking table <b>115</b> illustrated in <figref>FIG. 8</figref>, when the number of correct answer selections is at least a predetermined value, the control unit <b>12</b> sets the other item after the change to be an item with a higher rarity value than when the number of correct answer selections is less than the predetermined value.</p>
+      <p id="p-00077-en" num="0089">Next, operations of the communication system according to Embodiment 2 of the present disclosure are described using the flowchart in <figref>FIG. 9</figref>. The same reference signs are provided for the same operations as in Embodiment 1, and a description thereof is omitted. In an initial state, the information <b>114</b> on the number of correct answer selections is reset to zero.</p>
+      <p id="p-00078-en" num="0090">After steps S<b>1</b> to S<b>7</b>, when judging in step S<b>8</b> that the content of the option in the option identification information is the correct answer, i.e. when judging that the option selected by the user is the correct answer, the control unit <b>12</b> in the game server <b>1</b> of Embodiment 2 increments the number of correct answer selections by one (step S<b>21</b>). The control unit <b>12</b> then changes the item data to transmit to the communication terminal <b>2</b> to other item data (step S<b>22</b>). At this time, the control unit <b>12</b> refers to the item information table <b>111</b>, the information <b>114</b> on the number of correct answer selections, and the ranking table <b>115</b> in the memory unit <b>11</b> to change the item provided to the communication terminal <b>2</b> to another item.</p>
+      <p id="p-00079-en" num="0091">Subsequently, processing returns to step S<b>3</b>, and the control unit <b>12</b> transmits the other item data after the change. In other words, as long as the answer is correct in step S<b>8</b>, the communication terminal <b>2</b> can repeatedly transmit an item change request to the game server <b>1</b> to change the item repeatedly. In step S<b>4</b>, when the communication terminal <b>2</b> does not transmit an item change request, processing terminates without the item being changed.</p>
+      <p id="p-00080-en" num="0092">On the other hand, when judging in step S<b>8</b> that the content of the option in the option identification information is not the correct answer, i.e. when judging that the option selected by the user is an incorrect answer, the control unit <b>12</b> restores the item data to be transmitted to the initial item data before the item change (i.e. to the first item data) and transmits the restored first item data (step S<b>23</b>). Processing then terminates.</p>
+      <p id="p-00081-en" num="0093">According to the communication system in Embodiment 2, after the game server <b>1</b> has transmitted the second item data after the change, the communication terminal <b>2</b> further transmits an item change request to change the second item data, and the item data is changed multiple times, thus allowing for an increase in the variations on methods for acquiring battle cards and the like. Furthermore, by using the ranking table <b>115</b>, the item changes to a higher rarity value as the number of correct answer selections increases, thereby increasing the predictability of acquisition of a card or other item with a high rarity value or the like and heightening interest in the game.</p>
+      <p id="p-00082-en" num="0094">In step S<b>23</b> above, the control unit <b>12</b> restores the item to be provided to the initial item before the item change, yet processing is not limited to this example. The control unit <b>12</b> may instead change the item data to be transmitted to any other previously changed item data. In other words, when the correct answer has been selected multiple times in the past, resulting in multiple item changes, then the item may be changed to any of the items after previous changes. When the user of the communication terminal <b>2</b> has a predetermined item, the control unit <b>12</b> preferably changes the item to the immediately previous changed item.</p>
+      <heading id="h-00009-en" level="1">Embodiment 3</heading>
+      <p id="p-00083-en" num="0095">The following describes Embodiment 3 of the present disclosure. <figref>FIG. 10</figref> is a block diagram illustrating the structure of a communication system according to Embodiment 2 of the present disclosure. The same reference signs are provided for the same components as in Embodiment 1, and a description thereof is omitted. Overall, the communication system in Embodiment 3 differs from the structure of Embodiment 1 in that, upon receiving an item change request, the game server <b>1</b> transmits selection screen data with a plurality of options that include a correct answer to the communication terminal <b>2</b> a predetermined number of times and then changes the item data based on the number of correct answer selections that are made.</p>
+      <p id="p-00084-en" num="0096">In addition to the structure of the memory unit <b>11</b> according to Embodiment 1, the memory unit <b>11</b> of the game server <b>1</b> according to Embodiment 3 further stores information <b>114</b> on the number of correct answer selections and information <b>116</b> on the number of attempts. The information <b>114</b> on the number of correct answer selections has the same structure as in Embodiment 2. Therefore, the same reference sign is used, and a description is omitted. The information <b>116</b> on the number of attempts is information on the number of times the game server <b>1</b> has received an item change request from the communication terminal <b>2</b>.</p>
+      <p id="p-00085-en" num="0097">Based on the information <b>116</b> on the number of attempts, the control unit <b>12</b> according to Embodiment 3 judges whether the number of attempts has reached a predetermined number. When the number of attempts has reached a predetermined number, the control unit <b>12</b> refers to the item information table <b>111</b> and the information <b>114</b> on the number of correct answer selections in the memory unit <b>11</b> and changes the item data to be transmitted to the communication terminal <b>2</b> to the second item data.</p>
+      <p id="p-00086-en" num="0098">Next, operations of the communication system according to Embodiment 3 of the present disclosure are described using the flowchart in <figref>FIG. 11</figref>. The same reference signs are provided for the same operations as in Embodiments 1 and 2, and a description thereof is omitted. In an initial state, the information <b>114</b> on the number of correct answer selections and the information <b>116</b> on the number of attempts are both reset to zero.</p>
+      <p id="p-00087-en" num="0099">After steps S<b>1</b> to S<b>4</b>, upon receiving an item change request, the control unit <b>12</b> in the game server <b>1</b> of Embodiment 3 increments the information <b>116</b> on the number of attempts in the memory unit <b>11</b> by one (step S<b>31</b>). The subsequent steps S<b>5</b> to S<b>8</b> are the same as the operations in Embodiment 1.</p>
+      <p id="p-00088-en" num="0100">When the control unit <b>12</b> judges in step S<b>8</b> that the content of the option in the option identification information is the correct answer, i.e. when the control unit <b>12</b> judges that the option selected by the user is the correct answer, the control unit <b>12</b> increments the information on the number of correct answer selections by one (step S<b>32</b>). When the control unit <b>12</b> judges in step S<b>8</b> that the content of the option in the option identification information is not the correct answer, i.e. when the control unit <b>12</b> judges that the option selected by the user is an incorrect answer, processing skips step S<b>32</b> and proceeds to step S<b>33</b>.</p>
+      <p id="p-00089-en" num="0101">The control unit <b>12</b> then judges whether the information <b>116</b> on the number of attempts has reached a predetermined number (step S<b>33</b>). When the number of attempts is judged to have reached a predetermined number, processing proceeds to step S<b>34</b>. When the number of attempts is judged to be less than a predetermined number, processing returns to step S<b>31</b>.</p>
+      <p id="p-00090-en" num="0102">When the number of correct answer selections is judged to be a predetermined number in step S<b>33</b>, the control unit <b>12</b> refers to the information <b>114</b> on the number of correct answer selections to judge whether the number of correct answer selections is at least a predetermined number (step S<b>34</b>). When judging that the number of correct answer selections is at least a predetermined number, the control unit <b>12</b> then changes the item data to be transmitted to the communication terminal <b>2</b> to the second item data (step S<b>35</b>) and transmits the second item data to the communication terminal <b>2</b> (step S<b>36</b>). Processing then terminates. Conversely, when the number of correct answer selections is judged to be less than a predetermined number, processing skips step S<b>35</b> and proceeds to step S<b>36</b>. In other words, in this case, without changing the item data to be transmitted to the communication terminal <b>2</b>, the control unit <b>12</b> transmits the first item data. Processing then terminates.</p>
+      <p id="p-00091-en" num="0103">According to the communication system in Embodiment 3, upon receiving an item change request, the game server <b>1</b> transmits selection screen data with a plurality of options that include a correct answer to the communication terminal <b>2</b> multiple times and changes the item based on the number of correct answer selections, thus allowing for an increase in the variations on methods for acquiring battle cards and the like.</p>
+      <p id="p-00092-en" num="0104">In step S<b>38</b>, when the number of correct answer selections is at least a predetermined number, the control unit <b>12</b> changes the item data to be transmitted to the communication terminal <b>2</b> to the second item data, yet alternatively, as the number of correct answer selections is higher, the control unit <b>12</b> may change the item data to second item data with a higher rarity value. This approach increases the predictability of acquisition of a card or other item with a high rarity value or the like and heightens interest in the game.</p>
+      <p id="p-00093-en" num="0105">In Embodiments 1 to 3, the game server <b>1</b> may have a mode that, in response to instruction information from the communication terminal <b>2</b>, allows for the correct answer to be distinguishable among the options on the selection screen. This instruction information is only allowed to be transmitted to the game server <b>1</b> when the user of the communication terminal <b>2</b> has a predetermined item. <figref>FIG. 12</figref> illustrates an example of a selection screen in this mode. As illustrated in <figref>FIG. 12</figref>, in this mode, the user can distinguish which option image is the correct answer. The predetermined item is preferably only useable a predetermined number of times.</p>
+      <p id="p-00094-en" num="0106">A computer is preferably used to function as the communication terminal <b>2</b>. A program containing the processing for achieving the functions of the communication terminal <b>2</b> is stored in the memory unit of the computer, and the functions are achieved by the central processing unit (CPU) of the computer reading and executing the program.</p>
+      <p id="p-00095-en" num="0107">In Embodiments 1 to 3, the game server <b>1</b> stores the item information table <b>111</b>, item data table <b>112</b>, and option table <b>113</b>, yet the present disclosure is not limited to this configuration. For example, both the game server <b>1</b> and the communication terminal <b>2</b> may store each of the item information table <b>111</b>, item data table <b>112</b>, and option table <b>113</b>. Furthermore, considering the performance of the game server <b>1</b> and the communication terminal <b>2</b>, as well as the load for game processing, either one of the game server <b>1</b> and the communication terminal <b>2</b> may store all three of the item information table <b>111</b>, item data table <b>112</b>, and option table <b>113</b>.</p>
+      <p id="p-00096-en" num="0108">In Embodiments 1 to 3, the game server <b>1</b> and the communication terminal <b>2</b> communicate and execute processing, yet alternatively, the communication terminal <b>2</b>, for example, may execute processing independently. For example, the communication terminal <b>2</b> may be configured to include the same functions as the memory unit <b>11</b> and control unit <b>12</b> of the game server <b>1</b>.</p>
+      <p id="p-00097-en" num="0109">Although exemplary embodiments of the present disclosure has been described based on drawings and examples, it is to be noted that various changes and modifications will be apparent to those skilled in the art based on the present disclosure. Therefore, such changes and modifications are to be understood as included within the scope of the present disclosure. For example, the functions and the like included in the various means and steps may be reordered in any logically consistent way. Furthermore, means or steps may be combined into one or divided.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>22</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>23</b>. A game server comprising:
+<claim-text>a control unit;</claim-text><claim-text>a communication unit;</claim-text><claim-text>a memory unit;</claim-text><claim-text>reception means for receiving in the communication unit, from a user, a request for changing first item data in the memory unit by an operation unit of a communication terminal;</claim-text><claim-text>display means for displaying, to the user on the communication terminal, a selection screen to display a plurality of options determined by the control unit when the reception means receives the request; and</claim-text><claim-text>provision means for providing the user with second item data on the communication terminal when a selected option on the selection screen is a correct answer as determined by the control unit based on values in an option table of the memory unit.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>24</b>. The game server according to <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein a rarity value of the second item data is higher than a rarity value of the first item data in an item information table in the memory unit.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>25</b>. The game server according to <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein when the selected option is not the correct answer based on values in the option table, the game server provides the user with the first item data without changing the first item data.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>26</b>. The game server according to <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein the game server further receives a request for changing the second item data from the user and the control unit changes item data a plurality of times based on a ranking table in the memory unit and correct answer selection information in the memory unit.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>27</b>. The game server according to <claim-ref idref="clm-00005-en">claim 26</claim-ref>, wherein the control unit on the game server counts and stores the number of times the selected option is the correct answer based on values on the option table in the memory unit, and when the number of times is at least a predetermined value, the control unit changes the item data to item data with a higher rarity value in the ranking table in the memory unit than when the number of times is less than the predetermined value.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>28</b>. The game server according to <claim-ref idref="clm-00005-en">claim 26</claim-ref>, wherein when the selected option is an incorrect answer based on values in the option table in the memory unit, the game server provides the user with the item data after changing the item data to the first item data.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>29</b>. The game server according to <claim-ref idref="clm-00005-en">claim 26</claim-ref>, wherein when the selected option is an incorrect answer based on values in the option table in the memory unit, the game server provides the user with the item data after changing the item data to any previously changed item data based on information on a number of attempts in the memory unit.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>30</b>. A method of controlling a game server, comprising:
+<claim-text>receiving, from a user on an operation unit of a communication terminal, a request for changing first item data at a communication unit of the game server;</claim-text><claim-text>displaying, to the user on a display unit of the communication terminal, a selection screen of data generated by a control unit of the game server that displays a plurality of options from an item data table of a memory unit of the game server, when the request is received; and</claim-text><claim-text>providing the user with second item data when a selected option on the selection screen is a correct answer as determined by the control unit of the game server based on information stored in an option table in the memory unit.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>31</b>. The method according to <claim-ref idref="clm-00009-en">claim 30</claim-ref>, wherein a rarity value of the second item data stored in an item information table is higher than a rarity value of the first item data stored in the item information table.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>32</b>. The method according to <claim-ref idref="clm-00009-en">claim 30</claim-ref>, wherein when the selected option is not the correct answer as determined by the control unit, the game server provides the user with the first item data without changing the first item data.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>33</b>. The method according to <claim-ref idref="clm-00009-en">claim 30</claim-ref>, wherein the game server further receives a request for changing the second item data from the user through the communication unit and the control unit changes item data a plurality of times based on values in a ranking table and correct answer selection information in the memory unit.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>34</b>. The method according to <claim-ref idref="clm-00012-en">claim 33</claim-ref>, wherein the control unit on the game server counts and stores the number of times the selected option is the correct answer based on values in the option field in the memory unit, and when the number of times is at least a predetermined value, changes the item data to item data with a higher rarity value in the ranking table than when the number of times is less than the predetermined value.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>35</b>. The method according to <claim-ref idref="clm-00012-en">claim 33</claim-ref>, wherein when the selected option is an incorrect answer based on values in the option table in the memory unit, the game server provides the user with the item data after changing the item data to the first item data.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>36</b>. The method according to <claim-ref idref="clm-00012-en">claim 33</claim-ref>, wherein when the selected option by the user on the communication terminal is an incorrect answer based on values in the option table, the game server provides the user with the item data after changing the item data to any previously changed item data based on correct answer selection information in the memory unit.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>37</b>. A computer-readable non-transitory recording medium having recorded thereon instructions to be executed by a computer, the instructions causing the computer to execute the steps of:
+<claim-text>receiving, from a user on a communication terminal, a request for changing first item data at a communication unit on a game server;</claim-text><claim-text>displaying, to the user on a display unit of the communication terminal, a selection screen to display a plurality of options determined by a control unit on the game server from data in an item data tables in a memory unit of the game server when the request is received; and</claim-text><claim-text>providing the user with second item data from an item information table in the memory unit of the game server when a selected option on the selection screen of the communication terminal is a correct answer as determined by the control unit based on values stored in an option table of the memory unit.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>38</b>. The computer-readable non-transitory recording medium according to <claim-ref idref="clm-00016-en">claim 37</claim-ref>, wherein a rarity value of the second item data in the item information table is higher than a rarity value of the first item data in the item information table.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>39</b>. The computer-readable non-transitory recording medium according to <claim-ref idref="clm-00016-en">claim 37</claim-ref>, the instructions further causing the computer to execute the step of, when the selected option is not determined by the control unit to be the correct answer in the option field, providing the user with the first item data from the item data table and item information table in the memory unit without changing the first item data.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>40</b>. The computer-readable non-transitory recording medium according to <claim-ref idref="clm-00016-en">claim 37</claim-ref>, the instructions further causing the computer to execute the step of receiving a request at the communication unit of the game server for changing the second item data from the user and the control unit changing item data a plurality of times based on values stored in a ranking table and correct answer selection information in the memory unit.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>41</b>. The computer-readable non-transitory recording medium according to <claim-ref idref="clm-00019-en">claim 40</claim-ref>, the instructions further causing the computer to execute the step of counting the number of times the selected option is the correct answer based on correct answer selection information in the memory unit, and when the number of times is at least a predetermined value, changing the item data provided to the user on the communication terminal to item data with a higher rarity value in the ranking table than when the number of times is less than the predetermined value.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>42</b>. The computer-readable non-transitory recording medium according to <claim-ref idref="clm-00019-en">claim 40</claim-ref>, the instructions further causing the computer to execute the step of, when the selected option is an incorrect answer based on correct answer selection information in the memory unit, providing the user with the item data on the communication terminal after changing the item data to one of the first item data or to any previously changed item data based on information on a number of attempts in the memory unit.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>43</b>. A computer-readable non-transitory recording medium having recorded thereon instructions to be executed by a computer, the instructions causing the computer to execute the steps of:
+<claim-text>receiving, from the user on a communication terminal, a request for changing first item data;</claim-text><claim-text>displaying, to the user on a display unit of the communication terminal, a selection screen to display a plurality of options determined by a control unit on the communication terminal from data in an item data tables in a memory unit of the communication terminal when the request is received; and</claim-text><claim-text>providing the user with second item data from an item information table in the memory unit of the communication terminal when a selected option on the selection screen of the communication terminal is a correct answer as determined by the control unit based on values stored in an option table of the memory unit.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150251091A1_00014.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150251091A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150251091A1.PDF" type="pdf" size="884221" pages="21" />
+</lexisnexis-patent-document>

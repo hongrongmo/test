@@ -1,0 +1,2387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2942390A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151111" time-inserted="082314" date-changed="20151223" time-changed="194507">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="122015606">
+        <country>EP</country>
+        <doc-number>2942390</doc-number>
+        <kind>A1</kind>
+        <date>20151111</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>14305673</doc-number>
+        <date>20140507</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>EP</country>
+        <doc-number>14305673</doc-number>
+        <kind>A</kind>
+        <date>20140507</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>EP20140305673</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151112">
+      <gazette-reference>
+        <date>20151111</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151111</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151111</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151211">
+      <classification-ipcr sequence="1">
+        <text>C12N   1/12        20060101AFI20141022BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141022</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C12N   9/12        20060101ALI20141022BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141022</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C12P   7/64        20060101ALI20141022BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>7</main-group>
+        <subgroup>64</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141022</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C12P  19/04        20060101ALI20141022BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>19</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141022</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151211">
+      <classification-cpc sequence="1">
+        <text>C12N   1/12        20130101 FI20141014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12N   9/12        20130101 LI20141014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12P   7/6463      20130101 LI20141014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>7</main-group>
+        <subgroup>6463</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12P  19/04        20130101 LI20141014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>19</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>Y02P  20/52        20151101 LA20151203BHEP        </text>
+        <cpc-version-indicator>
+          <date>20151101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>P</subclass>
+        <main-group>20</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151203</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151111" lang="ger" format="original">Grüne Mikroalgen mit Mangel an funktionellem DYRKP-1 Gen zur Verwendung zur erhöhten Produktion von Rohmaterial</invention-title>
+    <invention-title id="title_eng" date-changed="20151111" lang="eng" format="original">Green microalgae lacking a functional DYRKP-1 gene, for use for increased production of feedstock</invention-title>
+    <invention-title id="title_fre" date-changed="20151111" lang="fre" format="original">Microalgues vertes dépourvues d'un gène DYRKP-1 fonctionnel, destinées à être utilisées pour augmenter la production de matières de charge</invention-title>
+    <references-cited date-changed="20151117">
+      <non-patent-citations name="nplcit" date-changed="20151117" />
+      <citation>
+        <nplcit num="1">
+          <text>VINCENT CHOCHOIS ET AL:  "Relationships between PSII-independent hydrogen bioproduction and starch metabolism as evidenced from isolation of starch catabolism mutants in the green alga Chlamydomonas reinhardtii", INTERNATIONAL JOURNAL OF HYDROGEN ENERGY, vol. 35, no. 19, 28 April 2010 (2010-04-28), pages 10731-10740, XP55146337, ISSN: 0360-3199, DOI: 10.1016/j.ijhydene.2010.03.052</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-77957278521&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>I</category>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>C. GOODSON ET AL:  "Structural Correlates of Cytoplasmic and Chloroplast Lipid Body Synthesis in Chlamydomonas reinhardtii and Stimulation of Lipid Body Production with Acetate Boost", EUKARYOTIC CELL, vol. 10, no. 12, 28 October 2011 (2011-10-28), pages 1592-1606, XP055146355, ISSN: 1535-9778, DOI: 10.1128/EC.05242-11</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-82555193810&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>LARKUM ANTHONY W D ET AL:  "Selection, breeding and engineering of microalgae for bioenergy and biofuel production", TRENDS IN BIOTECHNOLOGY, vol. 30, no. 4, April 2012 (2012-04), pages 198-205, XP028908982, ISSN: 0167-7799, DOI: 10.1016/J.TIBTECH.2011.11.003</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-84858706979&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="4">
+          <text>WAYNE A. WILSON ET AL:  "Regulation of glycogen metabolism in yeast and bacteria", FEMS MICROBIOLOGY REVIEWS, 1 April 2010 (2010-04-01), XP055146579, ISSN: 0168-6445, DOI: 10.1111/j.1574-6976.2010.00220.x</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-77957968694&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="5">
+          <text>JINGFEN HAN ET AL:  "Deep Evolutionary Conservation of an Intramolecular Protein Kinase Activation Mechanism", PLOS ONE, vol. 7, no. 1, 3 January 2012 (2012-01-03) , page e29702, XP055146480, DOI: 10.1371/journal.pone.0029702</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-84855326537&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="6">
+          <text>P. A. KARPOV ET AL:  "IDENTIFICATION OF PLANT HOMOLOGUES OF DUAL SPECIFICITY YAK1-RELATED KINASE 1A", P R O C E E D I N G S OF THE INTERNATIONAL MOSCOW CONFERENCE ON COMPUTATIONAL MOLECULAR BIOLOGY, 1 January 2011 (2011-01-01), pages 148-149, XP55146726,</text>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="7">
+          <text>ASAMIZU E ET AL:  "Generation of expressed sequence tags from low-CO2 and high-CO2 adapted cells of chlamydomonas reinhardtii", DNA RESEARCH, UNIVERSAL ACADEMY PRESS, JP, vol. 7, no. 5, 1 January 2000 (2000-01-01) , pages 305-307, XP002971460, ISSN: 1340-2838, DOI: 10.1093/DNARES/7.5.305</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0034739558&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="8">
+          <text>BALL, S. G.; DIRICK, L.; DECQ, A.; MARTIAT, J. C.; MATAGNE, R. F.: 'Physiology of starch storage in the monocellular alga Chlamydomonas reinhardtii.' PLANT SCI. vol. 66, 1990, pages 1 - 9</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0001914508&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="9">
+          <text>BECKER, W.; JOOST, H. G.: 'Structural and functional characteristics of Dyrk, a novel subfamily of protein kinases with dual specificity' PROG. NUCL. ACID. RES. MOL. BIOL. vol. 62, 1999, pages 1 - 17</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0032603540&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="10">
+          <text>BERTHOLD, P.; SCHMITT, R.; MAGES, W.: 'An engineered Streptomyces hygroscopicus aph 7'' gene mediates dominant resistance against hygromycin B in Chlamydomonas reinhardtii' PROTIST vol. 153, 2002, pages 401 - 412</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0036967786&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="11">
+          <text>CHOCHOIS, V.; CONSTANS, L.; DAUVILLÉE, D.; BEYLY, A.; SOLIVÉRÈS, M.; BALL, S.; PELTIER, G.; COURNAC, L.: 'Relationships between PSII-independent hydrogen bioproduction and starch metabolism as evidenced from isolation of starch catabolism mutants in the green alga Chlamydomonas reinhardtii' INT. J. HYDROGEN ENERG. vol. 35, 2010, pages 10731 - 10740</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-77957278521&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="12">
+          <text>DAUVILLEE, D.; STAMPACCHIA, O.; GIRARD-BASCOU, J.; ROCHAIX, J. D.: 'Tab2 is a novel conserved RNA binding protein required for translation of the chloroplast psaB mRNA' EMBO J. vol. 22, 2003, pages 6378 - 6388</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0348134869&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="13">
+          <text>DAVIES, J. P.; YILDIZ, F. H.; GROSSMAN, A.: 'Sad, a putative regulator that is critical for survival of Chlamydomonas reinhardtii during sulfur deprivation' EMBO J. vol. 15, 1996, pages 2150 - 2159</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0029944852&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="14">
+          <text>DELRUE, F.; LI-BEISSON, Y.; SETIER, P. A.; SAHUT, C.; ROUBAUD, A.; FROMENT, A. K.; PELTIER, G.: 'Comparison of various microalgae liquid biofuel production pathways based on energetic, economic and environmental criteria' BIORESOURCE TECHNOL. vol. 136, 2013, pages 205 - 212</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-84876313922&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="15">
+          <text>GOODSON, C.; ROTH, R.; WANG, Z. T.; GOODENOUGH, U.: 'Structural correlates of cytoplasmic and chloroplast lipid body synthesis in Chlamydomonas reinhardtii and stimulation of lipid body production with acetate boost' EUKARYOT. CELL vol. 10, 2011, pages 1592 - 1606</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-82555193810&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="16">
+          <text>GOUY, M.; GUINDON, S.; GASCUEL, O.: 'SeaView version 4: A multiplatform graphical user interface for sequence alignment and phylogenetic tree building' MOL. BIOL. EVOL. vol. 27, 2010, pages 221 - 224</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-74549125386&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="17">
+          <text>GROSSMAN, A.: 'Acclimation of Chlamydomonas reinhardtii to its nutrient environment' PROTIST vol. 151, 2000, pages 201 - 224</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0033784328&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="18">
+          <text>HAN, J. F.; MIRANDA-SAAVEDRA, D.; LUEBBERING, N.; SINGH, A.; SIBBET, G.; FERGUSON, M. A. J.; CLEGHON, V.: 'Deep evolutionary conservation of an intramolecular protein kinase activation mechanism' PLOS ONE 2012, page 7</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="19">
+          <text>HARRIS, E. H.: 'The Chlamydomonas sourcebook', 2009, ACADEMIC PRESS</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="20">
+          <text>HU, Q.; SOMMERFELD, M.; JARVIS, E.; GHIRARDI, M.; POSEWITZ, M.; SEIBERT, M.; DARZINS, A.: 'Microalgal triacylglycerols as feedstocks for biofuel production: perspectives and advances.' PLANT J. vol. 54, 2008, pages 621 - 639</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-43549102657&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="21">
+          <text>KATOH, K.; MISAWA, K.; KUMA, K.; MIYATA, T.: 'MAFFT: a novel method for rapid multiple sequence alignment based on fast Fourier transform' NUCLEIC ACIDS RES. vol. 30, 2002, pages 3059 - 3066</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0037100671&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="22">
+          <text>KINDLE, K. L.: 'High-frequency nuclear transformation of Chlamydomonas reinhardtii' PROC. NATL. ACAD. SCI. USA. vol. 87, 1990, pages 1228 - 1232</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0025117612&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="23">
+          <text>LARKUM, A. W. D; ROSS, I. L.; KRUSE, O.; HANKAMER, B: 'Selection, breeding and engineering of microalgae for bioenergy and biofuel production' TIBIOTECH. vol. 30, 2012, pages 198 - 205</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-84858706979&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="24">
+          <text>LI-BEISSON, Y.; SHORROSH, B.; BEISSON, F.; ANDERSSON, M. X.; ARONDEL, V.; BATES, P. D.; BAUD, S.; BIRD, D.; DEBONO, A.; DURRETT, T: 'Acyl-lipid metabolism. Arabidopsis Book', vol. 8, 11 June 2010 page E0133</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="25">
+          <text>LIU, C. M.; WILLMUND, F.; WHITELEGGE, J. P.; HAWAT, S.; KNAPP, B.; LODHA, M.; SCHRODA, M.: 'J-domain protein CDJ2 and HSP70B are a plastidic chaperone pair that interacts with vesicle-inducing protein in plastids 1' MOL. BIOL. CELL vol. 16, 2005, pages 1165 - 1177</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-14844293494&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="26">
+          <text>MALCHER, M.; SCHLADEBECK, S.; MOSCH, H. U.: 'The Yak protein kinase lies at the center of a regulatory cascade affecting adhesive growth and stress resistance in Saccharomyces cerevisiae' GENETICS vol. 187, 2011, pages 717 - 730</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-79953222615&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="27">
+          <text>MERCHANT, S. S.; KROPAT, J.; LIU, B. S.; SHAW, J; WARAKANONT, J.: 'TAG, You're it! Chlamydomonas as a reference organism for understanding algal triacylglycerol accumulation' CURR. OP. BIOTECHNOL. vol. 23, 2012, pages 352 - 363</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-84861984680&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="28">
+          <text>MORIYA, H.; SHIMIZU-YOSHIDA, Y.; OMORI, A; IWASHITA, S.; KATOH, M.; SAKAI, A.: 'Yaklp, a DYRK family kinase, translocates to the nucleus and phosphorylates yeast Pop2p in response to a glucose signal' GENES &amp; DEV. vol. 15, 2001, pages 1217 - 1228</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0035873250&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="29">
+          <text>PELTIER, G.; SCHMIDT, G. W.: 'Chlororespiration - an adaptation to nitrogen deficiency in Chlamydomonas reinhardtii' PROC. NATL. ACAD. SCI. USA. vol. 88, 1991, pages 4791 - 4795</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0025819203&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="30">
+          <text>RAL, J. P.; COLLEONI, C.; WATTEBLED, F.; DAUVILLEE, D.; NEMPONT, C.; DESCHAMPS, P.; LI, Z. Y.; MORELL, M. K.; CHIBBAR, R.; PURTON,: 'Circadian clock regulation of starch metabolism establishes GBSSI as a major contributor to amylopectin synthesis in Chlamydomonas reinhardtii' PLANT PHYSIOL. vol. 142, 2006, pages 305 - 317</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-33748768978&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="31">
+          <text>ROHDE, J. R.; BASTIDAS, R.; PURIA, R.; CARDENAS, M. E.: 'Nutritional control via Tor signaling in Saccharomyces cerevisiae' CURR. OPIN. MICROBIOL. vol. 11, 2008, pages 153 - 160</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-42149083876&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="32">
+          <text>RUMEAU, D.; BECUWE-LINKA, N.; BEYLY, A.; LOUWAGIE, M.; GARIN, J.; PELTIER, G.: 'New subunits NDH-M, -N, and -0, encoded by nuclear genes, are essential for plastid Ndh complex functioning in higher plants' PLANT CELL vol. 17, 2005, pages 219 - 232</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-18844447930&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="33">
+          <text>SCHRODA, M.; VALLON, O.; WOLLMAN, F. A.; BECK, C. F.: 'A chloroplast-targeted heat shock protein 70 (HSP70) contributes to the photoprotection and repair of photosystem II during and after photoinhibition' PLANT CELL vol. 11, 1999, pages 1165 - 1178</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0033149821&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="34">
+          <text>SCHULZ-RAFFELT, M.; LODHA, M.; SCHRODA, M.: 'Heat shock factor 1 is a key regulator of the stress response in Chlamydomonas' PLANT J. vol. 52, 2007, pages 286 - 295</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-35148813020&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="35">
+          <text>SIAUT, M.; CUINE, S.; CAGNON, C.; FESSLER, B.; NGUYEN, M.; CARRIER, P.; BEYLY, A.; BEISSON, F.; TRIANTAPHYLIDES, C.; LI-BEISSON, Y: 'Oil accumulation in the model green alga Chlamydomonas reinhardtii: characterization, variability between common laboratory strains and relationship with starch reserves' BMC BIOTECHNOL. 2011, page 11</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="36">
+          <text>SULPICE, R.; PYL, E. T.; ISHIHARA, H; TRENKAMP, S.; STEINFATH, M.; WITUCKA-WALL, H.; GIBON, Y.; USADEL, B.; POREE, F.; PIQUES, M.: 'Starch as a major integrator in the regulation of plant growth' PROC. NATL. ACAD. SCI. USA. vol. 106, pages 10348 - 10353</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-67649872569&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="37">
+          <text>TAMURA, K.; PETERSON, D.; PETERSON, N.; STECHER, G; NEI, M.; KUMAR, S.: 'MEGA5: Molecular evolutionary genetics analysis using maximum likelihood, evolutionary distance, and maximum parsimony methods' MOL. BIOL. EVOL. vol. 28, 2011, pages 2731 - 2739</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="38">
+          <text>TOLLETER, D.; GHYSELS, B.; ALRIC, J.; PETROUTSOS, D.; TOLSTYGINA, I.; KRAWIETZ, D.; HAPPE, T.; AUROY, P.; ADRIANO, J. M.; BEYLY, A: 'Control of hydrogen photoproduction by the proton gradient generated by cyclic electron flow in Chlamydomonas reinhardtii' PLANT CELL vol. 23, 2011, pages 2619 - 2630</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-80051938286&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="39">
+          <text>WIJFFELS, R. H.; BARBOSA, M. J.: 'An outlook on microalgal biofuels' SCIENCE vol. 329, 2010, pages 796 - 799</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="40">
+          <text>WILSON, W. A; ROACH, P. J.; MONTERO, M.; BAROJA-FERNANDEZ, E.; MUNOZ, F. J.; EYDALLIN, G.; VIALE, A. M.; POZUETA-ROMERO, J.: 'Regulation of glycogen metabolism in yeast and bacteria' FEMS MICROBIOL. REV. vol. 34, 2010, pages 952 - 985</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-77957968694&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="41">
+          <text>WYKOFF, D. D.; DAVIES, J. P.; MELIS, A.; GROSSMAN, A. R.: 'The regulation of photosynthetic electron transport during nutrient deprivation in Chlamydomonas reinhardtii.' PLANT PHYSIOL. vol. 117, 1998, pages 129 - 139</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0032068061&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151111">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>COMMISSARIAT A L'ENERGIE ATOMIQUE ET AUX ENERGIES ALTERNATIVES</orgname>
+            <registered-number>101219301</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Bâtiment "Le Ponant D" 25, rue Leblanc</address-1>
+              <city>75015 Paris</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Schulz-Raffelt, Miriam</name>
+            <address>
+              <address-1>3090 Route du Colonel Maurice Bellec</address-1>
+              <city>13540 Puyricard</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Chochois, Vincent</name>
+            <address>
+              <address-1>4a Gundulu place Giralang</address-1>
+              <city>Canberra, ACT 2617</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Yonghua, Li-Beisson</name>
+            <address>
+              <address-1>18 avenue Saint Michel du Pigonnet</address-1>
+              <city>13100 Aix-en-Provence</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>Peltier, Gilles</name>
+            <address>
+              <address-1>16 Chemin de la Chapelle</address-1>
+              <city>04860 Pierrevert</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Marcadé, Véronique et al</name>
+            <registered-number>100058695</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Cabinet Orès 36, rue de St Pétersbourg</address-1>
+              <city>75008 Paris</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151111">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151112">
+      <main-family family-id="174534333">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015170280</doc-number>
+            <kind>A1</kind>
+            <date>20151112</date>
+          </document-id>
+          <application-date>
+            <date>20150507</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2942390</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20140507</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174534332">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015170280</doc-number>
+            <kind>A1</kind>
+            <date>20151112</date>
+          </document-id>
+          <application-date>
+            <date>20150507</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2942390</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20140507</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151111" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a method for producing biomass feedstock, by cultivating green microalgae cells in which the expression and/or the activity of the DYRKP-1 protein is altered, inducing reserve accumulation and/or increase in biomass production by said microalgae.</p>
+  </abstract>
+  <legal-data date-changed="20151223">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2942390A1</docdb-publication-number>
+      <docdb-application-id>418207320</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2942390A1</docdb-publication-number>
+      <docdb-application-id>418207320</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151111">
+    <p id="p-00001-en" num="0001">The present invention relates to the field of green microalgae and their use in biotechnology. More particularly, the present invention describes the use of <i>Chlamydomonas</i> lacking a functional DYRKP-1 protein, for producing large amounts of neutral lipids (triacylglycerides: TAGs, or oils) and/or large amounts of starch, under stress conditions.</p>
+    <p id="p-00002-en" num="0002">Because of their high biomass productivity and their ability to accumulate high intracellular amounts of starch (convertible into bioethanol), or oil (convertible into biodiesel), microalgae represent a promising feedstock for the production of next-generation biofuels (Hu et al., 2008; Wijffels and Barbosa, 2010). However, their productivity needs to be increased in order to reach sustainable biofuel production (Delrue et al., 2013).</p>
+    <p id="p-00003-en" num="0003">Microalgae and, more generally, photosynthetic organisms have developed sophisticated strategies to optimize growth and survival under constantly fluctuating conditions of light, temperature and nutrient availability. In microalgae, deprivation of essential macronutrients strongly affects growth and induces drastic changes in the cellular metabolism. A general response to nitrogen or sulfur deprivation consists in a decrease in protein synthesis, an arrest in cell division, a massive accumulation of energy-rich storage compounds such as starch and triacylglycerols (Ball et al., 1990; Merchant et al., 2012), and a down-regulation of photosynthesis (Grossman, 2000; Peltier and Schmidt, 1991). This requirement of nutrient deprivation to trigger accumulation of reserve compounds is one of the major biological limitations of microalgae for biotechnology purposes because it impairs biomass productivity (Hu et al., 2008). Despite considerable interest for microalgae as a new feedstock (Larkum et al., 2012), little is known about signaling and regulatory genes and pathways controlling processes of photosynthetic energy conversion and storage in relation to nutrient and energy status.</p>
+    <p id="p-00004-en" num="0004">Deciphering regulatory mechanisms controlling growth, photosynthesis and reserve accumulation in response to the nutrient and energy status is hence a key issue towards optimizing microalgal productivity for biotechnological applications.</p>
+    <p id="p-00005-en" num="0005">With the aim to unravel regulatory mechanisms involved in the dynamics of reserve in response to nutrient availability, the inventors have now characterized one mutant of <i>Chlamydomonas reinhardtii,</i> screened on a defect in starch degradation and called <i>std1</i> (for <u>st</u>arch <u>d</u>egradation). The <i>std1</i> mutant harbors an insertion in a gene of the DYRK family, initially annotated as <i>DYRK2 (Chlamydomonas</i> genome version 4. 0), and renamed here <i>DYRKP-1.</i> The <i>Chlamydomonas std1</i> mutant, the first <i>dyrk</i> mutant of the green lineage reported so far, accumulates much more starch and oil than its wild-type progenitor in response to nutrient deprivation in photoautotrophic conditions, and more oil than its wild-type progenitor in response to nutrient deprivation also in mixotrophic conditions. The present invention hence provides methods to cultivate microalgae cells so as to optimize their growth for optimum production of starch and/or lipids from the microalgae. The methods of the present invention induce and enhance accumulation of starch and/or oil, depending on the culture conditions, within the microalgae cells. The methods disclosed are suitable for large- scale production of starch- and/or oil-rich microalgae.</p>
+    <p id="p-00006-en" num="0006">A first aspect of the present invention is hence a method for producing biomass feedstock, comprising the steps of: <ol><li>(i) cultivating green microalgae cells in which the expression and/or the activity of the DYRKP-1 protein is altered; and</li><li>(ii) inducing reserve accumulation and/or increase in biomass production by said microalgae.</li></ol></p>
+    <p id="p-00007-en" num="0007">As defined herein, the "DYRKP-1 protein" is a DYRK protein expressed by microalgae, which possess a DH-box having the following sequence: H (R/K)TGFEEXK(D/E/N)(F/L) (SEQ ID No: 3). The amino acid sequence and coding sequence (cDNA sequence including the 5'- and 3'-UTRs) of the DYRKP-1 protein of <i>Chlamydomonas reinhardtii</i> are disclosed herein (SEQ ID No: 1 and 2, respectively). From these sequences, the skilled artisan can perfectly identify the sequence of DYRKP-1 in any green microalga.</p>
+    <p id="p-00008-en" num="0008">In the present text, "altered" means that the expression and/or the activity of the DYRKP-1 protein is changed, so that the activity of the protein is decreased. For example, the <i>DYRKP-1</i> gene can be silenced, knocked down, mutated and/or interrupted, so that the microalgae lack a functional DYRKP-1 protein. Activity of the DYRK-P protein could also be inhibited by chemical compounds acting as specific inhibitors.</p>
+    <p id="p-00009-en" num="0009">As disclosed in the experimental part below, the method according to the invention can be performed with <i>Chlamydomonas,</i> especially with <i>Chlamydomonas reinhardtii.</i></p>
+    <p id="p-00010-en" num="0010">In step (i), the cells are cultured according to any usual protocol known by the skilled artisan. For example, they can be grown photoautotrophically in a MOPS-buffered minimal medium (MM) supplied with 2% CO<sub>2</sub> to a density of 2-5 x 10<sup>6</sup> cells/ml.</p>
+    <p id="p-00011-en" num="0011">In a particular embodiment of this aspect, said inducing reserve accumulation comprises incubating the microalgae cells in a deficient medium, <i>i</i>.<i>e</i>., a medium which does not comprise, in sufficient quantities, all the nutrients required for optimal growth of green microalgae. Examples of such a deficient medium include a medium deficient in at least one element selected from the group consisting of nitrogen, sulfur and phosphorus, in a form which can be metabolized by the microalgae. Of course, the phrase "deficient in" is not to be read in an absolute sense <i>(i.e.,</i> with a concentration equal to zero), but means that the concentration of said nutrient in the medium is far below (at least 10-fold below) the concentration of said nutrient in a classical medium used for microalgae culture.</p>
+    <p id="p-00012-en" num="0012">Between step (i) and step (ii), the cells can be harvested and transferred into the deficient medium. Alternatively, typically in a continuous culture device, the deficit in the medium is created by the cells metabolism, in absence of exogenous addition of at least one nutrient. For example, as illustrated in the experimental part and in <figref>Fig. 9A</figref>, addition of minimal N-free medium in a photobioreactor operated as a turbidostat (to maintain the cellular biomass at a constant level) resulted in a decrease in the ammonia content of the culture medium, which was fully exhausted in less than 2 days.</p>
+    <p id="p-00013-en" num="0013">In a particular embodiment, the step of inducing reserve accumulation comprises illuminating the microalgae cells with a light enabling photosynthesis to occur.</p>
+    <p id="p-00014-en" num="0014">For example, this illumination can be performed at an intensity of at least 25 µmol photons m<sup>-2</sup> s<sup>-1</sup>, or at least 100 µmol photons m<sup>-2</sup> s<sup>-1</sup>, for example comprised between 25 and 2000 µmol photons m<sup>-2</sup> s<sup>-1</sup>, during 8 to 24 hours per day. The skilled artisan perfectly knows that the effects of the light intensity depend in fact on the intensity which is really received by the microalgae, and hence depend on several parameters such as cell density and the shape of the photobioreactor, <i>etc.,</i> and is able to adapt the illumination intensity to the specific encountered conditions.</p>
+    <p id="p-00015-en" num="0015">Remarkably, the inventors have shown that nutrient deprivation does not lead to a rapid stop of photosynthesis by microalgae lacking DYRKP-1 activity, as is usually the case for wild-type microalgae. This is particularly advantageous, since the cells can not only be oil- and/or starch- enriched, but in addition, the global biomass increases during several days of deficient conditions, leading to remarkable overall increased lipid and starch productivity.</p>
+    <p id="p-00016-en" num="0016">Hence, in an advantageous embodiment of the present invention, the step of incubating the microalgae cells in a deficient medium lasts at least 24 hours, for example from 2 to 8 days, preferably from 3 to 6 days. Of course, the cell growth in a deficient medium strongly depends on experimental conditions, particularly of the cell density, and hence the skilled artisan will adapt the duration of the incubation with a deficient medium so that, under the specific conditions used, the reserve accumulation and/or biomass increase is optimal.</p>
+    <p id="p-00017-en" num="0017">According to a particular embodiment of the invention, step (ii) comprises incubating the microalgae cells in a medium comprising organic carbon such as, for example, acetate. According to a non-limitative example of such mixotrophic conditions, illustrated in the examples below, the cells are incubated in step (ii) during 2 to 6 days in a nitrogen-deficient medium comprising acetate, under constant illumination of at least 50 µmol photons m<sup>-2</sup> s<sup>-1</sup>. The inventors have shown that in mixotrophic conditions, microalgae lacking DYRKP-1 activity respond to nutrient depletion by increased lipid accumulation compared to wild-type cells. Hence, this particular embodiment of the method is advantageously used for producing oil, for example for biodiesel production.</p>
+    <p id="p-00018-en" num="0018">According to another embodiment, the inducing step (ii) comprises incubating the microalgae cells in a deficient medium as defined previously and in photoautotrophic conditions, i.e., in conditions such that they convert radiant energy into biologically useful energy and synthesize metabolic compounds using only carbon dioxide, bicarbonate or carbonates as source of carbon. Typically, the microalgae cells are incubated under illumination in a medium essentially devoid of organic carbon which they can metabolize. In what precedes, "essentially devoid of organic carbon" means that no organic carbon which can be metabolized by the microalgae has been added into the medium. According to a preferred version of this embodiment, the cells are incubated in step (ii) during at least 15 hours, preferably at least 1, 2 or 3 days, and up to 6 or more days in a nutrient-deficient medium, for example in a nitrogen-deficient medium essentially devoid of organic carbon which can be metabolized by the microalgae. The inventors have shown that in photoautotrophic conditions, microalgae lacking DYRKP-1 activity accumulate much more starch and oil than their wild-type progenitor in response to nutrient deprivation. Hence, this particular embodiment of the method is advantageously used for producing starch, for example for bioethanol production, as well as for producing oil, for example for biodiesel production. This embodiment is particularly interesting, because in photoautotrophic conditions, cells can supply their need for carbon completely through photosynthesis, which is a major advantage compared to cells requiring an additionally supplied carbon source for growth (such as yeast or <i>E coli).</i></p>
+    <p id="p-00019-en" num="0019">It is to be noted that microalgae naturally produce polyunsaturated fats (omega-3 and omega-6), as well as complex molecules such as carotenoids, and that these high-value products can also be produced according to the methods described herein. The invention hence also relates to methods for producing fatty acids, polyunsaturated fats, carotenoids and other compounds for cosmetic and/or pharmaceutical industries, as well as food supplements, comprising a step of starch and/or triacylglycerols accumulation in microalgae by performing a method as described above</p>
+    <p id="p-00020-en" num="0020">The methods of the invention may comprise one or more extraction steps after the triggering of starch and/or triacylglycerols accumulation step in microalgae. The extraction step may be implemented using solvents or another extraction method well known form the skilled artisan.</p>
+    <p id="p-00021-en" num="0021">The present invention will be understood more clearly from the further description which follows, which refers to examples illustrating the response of microalgae lacking DYRKP-1 activity to nutrient deprivation, as well as to the appended figures.</p>
+    <heading id="h-00001-en">
+      <b>FIGURE LEGENDS</b>
+    </heading>
+    <p id="p-00022-en" num="0022">
+      <figref>
+        <b>Figure 1</b>
+      </figref>
+      <b>: Isolation and molecular characterization of the <i>Chlamydomonas std1</i> mutant affected in the <i>DYRKP-1</i> gene.</b>
+      <ol>
+        <li>
+          <b>(A)</b> Starch degradation phenotype of the <i>std1</i> mutant. Algal colonies were spotted on paper filters onto N or S depleted TAP-agar for 5 days, leading to starch accumulation, and then placed in the dark on minimal medium (MM) for two days to induce starch breakdown. Starch accumulation was visualized by exposure to iodine vapor.</li>
+        <li>
+          <b>(B)</b> The <i>Chlamydomonas DYRKP-1</i> gene model is composed of 14 exons (black boxes) and 13 introns (black lines). Sequence information about the exon-intron borders and the 5' start was obtained from three overlapping RT-PCRs. Insertion of the paromomycin resistance cassette <i>(Aph</i>VIII gene, white box) in the third <i>DYRKP-1</i> exon was determined by genome walking PCR.</li>
+        <li>
+          <b>(C)</b>
+          <i>DYRKP-1</i> gene expression analyzed by RT-PCR in wild-type, <i>std1</i> and two complemented strains (<i>std1</i>::STD1 1 and 2) grown in TAP. Actin was used as a control gene.</li>
+        <li>
+          <b>(D)</b> DYRKP-1 protein expression analyzed by immuno-detection in soluble protein lysates from photoautotrophically grown cells separated on an 8% SDS-polyacrylamide gel.</li>
+        <li>
+          <b>(E)</b>
+          <i>DYRKP-1</i> transcript accumulation in response to N deprivation. Wild-type, <i>std1</i> mutant and complemented strains <i>std1::STD1</i> 1 and 2 were starved for nitrogen for three days in photoautotrophic conditions. RNA was hybridized with probes coding for a <i>DYRKP-1</i> fragment; the <i>CBLP2</i> gene that served as a loading control.</li>
+      </ol>
+      <figref>
+        <b>Figure 2</b>
+      </figref>
+      <b>: Southern blot analysis and mutant complementation.</b>
+      <ol>
+        <li>
+          <b>(A)</b> Southern blot analysis of wild-type strain 137AH and <i>std1</i> mutant strain. <i>NotI-, Xma</i>I or <i>Stu</i>I/<i>Sac</i>I-restricted genomic DNA was loaded on an agarose gel, Southern blotted and hybridized with a probe against the <i>AphVIII</i> gene (paromomycin resistance cassette). Loaded amount of DNA per lane is indicated in µg.</li>
+        <li>
+          <b>(B)</b> Construction of the plasmid for <i>std1</i> complementation with hygromycin resistance marker. Genomic wild-type DNA coding for <i>STD1</i> was amplified by PCR and cloned into pSL-Hyg vector that emerged from pSL18.</li>
+        <li>
+          <b>(C)</b> Starch levels of wild-type strain (137AH, in black), <i>std1</i> mutant strain (white) and two complemented strains <i>(std1</i>::STD1 1 and 2, in grey) in different deprivation conditions. Cultures were grown in TAP medium (Con. = Control), subjected for two days to nitrogen (TAP-N) or sulfur (TAP-S) starvation, which induced starch accumulation (Acc.). Subsequently, the starved cultures were centrifuged, resuspended in minimal medium (MM) and kept for 8 or 24h hours in the dark. In MM (comprising N but no C) in the dark starch will be catabolized (Degr.). Starch values are the means of at least 3 biological replicates ± SD.</li>
+      </ol>
+      <figref>
+        <b>Figure 3</b>
+      </figref>
+      <b>: Phylogenetic tree of the DYRK protein family including the green lineage.</b>
+      <ol>
+        <li>
+          <b>(A)</b> Phylogenetic tree of the DYRK protein family. Homologous amino acids sequences from algae, fungi and plants retrieved from JGI, Phytozome or NCBI databases were compared by performing a phylogenetic analysis. Sequences were aligned with the MAFFT version 6 program. The tree was obtained with the Neighbor-Joining method. The following abbreviations were used: Asp: <i>Aspergillus fumigatus,</i> At: <i>Arabidopsis thaliana,</i> d: <i>Drosophila melanogaster,</i> Dd: <i>Dictyostelium discoideum,</i> ChlNC: <i>Chlorella sp. NC64A,</i> Cre: <i><b>Chlamydomonas</b> reinhardtii,</i> Micpu: <i>Micromonas pusilla (CCMP1545</i>/<i>sp. RCC299),</i> Os: <i>Oryza sativa,</i> Ost: <i>Ostreococcus</i> (<i>lucimarinus</i>/<i>tauri</i>), Phypa: <i>Physcomitrella patens,</i> Vca: <i>Volvox carteri,</i> Viv: <i>Vitis vinifera (Zea mays</i> sequences were combined with rice homologs and <i>Populus trichocarpa</i> with wine). DYRK sequences accession numbers and multi-alignment used to build the phylogenetic tree are shown in Table 1.</li>
+        <li>
+          <b>(B)</b> Consensus sequence of the DYRK homology (DH)-box of six DYRK subgroups according to <figref>Figure 3A</figref>; in the DYRKP subgroup three minor subgroups were distinguished giving the following seven classes: DYRK1 (7 sequences), DYRK2 (22 sequences), YAK1 (21 sequences), DYRKP-A (12 higher plant sequences including moss), DYRKP-B (11 higher plant sequences), DYRKP-algae (7 sequences), and the published DH consensus sequence from (Becker and Joost, 1999), in which nine sequences from different DYRK groups were compared.</li>
+      </ol>
+      <tables id="tables-00001-en" num="0001">
+        <table frame="none">
+          <title>Table 1: <b>Accession numbers for the sequences used for the phylogenetic tree in Figure 2.</b></title>
+          <tgroup cols="8" colsep="0">
+            <colspec colnum="1" colname="col1" colwidth="25mm" />
+            <colspec colnum="2" colname="col2" colwidth="24mm" />
+            <colspec colnum="3" colname="col3" colwidth="37mm" />
+            <colspec colnum="4" colname="col4" colwidth="42mm" />
+            <colspec colnum="5" colname="col5" colwidth="13mm" />
+            <colspec colnum="6" colname="col6" colwidth="9mm" />
+            <colspec colnum="7" colname="col7" colwidth="9mm" />
+            <colspec colnum="8" colname="col8" colwidth="9mm" />
+            <thead>
+              <row>
+                <entry valign="top">
+                  <b>Name</b>
+                </entry>
+                <entry valign="top">
+                  <b>Group</b>
+                </entry>
+                <entry valign="top">
+                  <b>Species</b>
+                </entry>
+                <entry valign="top">
+                  <b>Accession Number NCBI</b>
+                </entry>
+                <entry namest="col5" nameend="col8" align="left" valign="top">
+                  <b>predicted aa</b>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row rowsep="0">
+                <entry>DYRK1A</entry>
+                <entry>DYRK1</entry>
+                <entry>
+                  <i>Homo sapiens</i>
+                </entry>
+                <entry>NP_001387; GI:18765758</entry>
+                <entry align="right">763</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DYRK1B</entry>
+                <entry>DYRK1</entry>
+                <entry>
+                  <i>Homo sapiens</i>
+                </entry>
+                <entry>NP_004705; GI:4758222</entry>
+                <entry align="right">629</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DYRK2</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Homo sapiens</i>
+                </entry>
+                <entry>NP_006473; GI:153281169</entry>
+                <entry align="right">601</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DYRK3</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Homo sapiens</i>
+                </entry>
+                <entry>NP_003573; GI:51702240</entry>
+                <entry align="right">588</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>DYRK4</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Homo sapiens</i>
+                </entry>
+                <entry>NP_003836; GI:28827774</entry>
+                <entry align="right">520</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DYRK1A</entry>
+                <entry>DYRK1</entry>
+                <entry>
+                  <i>Mus musculus</i>
+                </entry>
+                <entry>NP_031916; GI:24418935</entry>
+                <entry align="right">763</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DYRK1 B</entry>
+                <entry>DYRK1</entry>
+                <entry>
+                  <i>Mus musculus</i>
+                </entry>
+                <entry>NP_001033046; GI:83816922</entry>
+                <entry align="right">629</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DYRK2</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Mus musculus</i>
+                </entry>
+                <entry>NP_001014412; GI:67846105</entry>
+                <entry align="right">599</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DYRK3</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Mus musculus</i>
+                </entry>
+                <entry>NP_663483; GI:21704000</entry>
+                <entry align="right">586</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>DYRK4</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Mus musculus</i>
+                </entry>
+                <entry>NP_001028487; GI:161333817</entry>
+                <entry align="right">616</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>Minibrain (dDyrk1)</entry>
+                <entry>DYRK1</entry>
+                <entry>
+                  <i>Drosophila melanogaster</i>
+                </entry>
+                <entry>NP_728104; GI:24642876</entry>
+                <entry align="right">908</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>dDyrk2 (Smi35A)</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Drosophila melanogaster</i>
+                </entry>
+                <entry>NP_523564; GI:17737415</entry>
+                <entry align="right">722</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>dDyrk3</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Drosophila melanogaster</i>
+                </entry>
+                <entry>NP_001033810; GI:85724756</entry>
+                <entry align="right">828</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DYRK1 B (Dyrk1 b)</entry>
+                <entry>DYRK1</entry>
+                <entry>
+                  <i>Danio rerio</i>
+                </entry>
+                <entry>NP_001161737; GI:319996595</entry>
+                <entry align="right">681</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DYRK2</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Danio rerio</i>
+                </entry>
+                <entry>NP_001038298.1 GI:113677529</entry>
+                <entry align="right">587</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DYRK4</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Danio rerio</i>
+                </entry>
+                <entry>XP_693389; GI:189537435</entry>
+                <entry align="right">634</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>DYRK3</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Xenopus laevis</i>
+                </entry>
+                <entry>NP_001088793; GI:148224808</entry>
+                <entry align="right">567</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>YakA</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Dictyostelium discoideum</i>
+                </entry>
+                <entry>XP_638920; GI:66810395</entry>
+                <entry align="right">1458</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>DdDyrk1</entry>
+                <entry>DYRK1</entry>
+                <entry>
+                  <i>Dictyostelium discoideum</i>
+                </entry>
+                <entry>XP_642598; GI:66817490</entry>
+                <entry align="right">836</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>DdDyrk2</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Dictyostelium discoideum</i>
+                </entry>
+                <entry>XP_628965; GI:66800079</entry>
+                <entry align="right">915</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>Yak1p</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Saccharomyces cerevisiae</i>
+                </entry>
+                <entry>NP_012394; GI:6322320</entry>
+                <entry align="right">807</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>Pom1</entry>
+                <entry>Pom/DYRK2</entry>
+                <entry>
+                  <i>Neurospora crassa</i>
+                </entry>
+                <entry>XP_960871; GI:85099941</entry>
+                <entry align="right">1300</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>Pom1</entry>
+                <entry>Pom/DYRK2</entry>
+                <entry>
+                  <i>Pyrenophora tritici-repentis</i>
+                </entry>
+                <entry>XP_001940188; GI:189207709</entry>
+                <entry align="right">545</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>Ppk15p</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Schizosaccharomyces pombe</i>
+                </entry>
+                <entry>NP_593830; GI:19114742</entry>
+                <entry align="right">534</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>Pom1 (Pom1p)</entry>
+                <entry>Pom/DYRK2</entry>
+                <entry>
+                  <i>Schizosaccharomyces pombe</i>
+                </entry>
+                <entry>NP_592974; GI:19113886</entry>
+                <entry align="right">1087</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>Ppk5p</entry>
+                <entry>Pom/DYRK2</entry>
+                <entry>
+                  <i>Schizosaccharomyces pombe</i>
+                </entry>
+                <entry>NP_593081; GI:63054495</entry>
+                <entry align="right">836</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+              <row rowsep="0">
+                <entry>AspYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Aspergillus fumigatus</i>
+                </entry>
+                <entry>XP_746572; GI:70982087</entry>
+                <entry align="right">894</entry>
+                <entry />
+                <entry />
+                <entry />
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </tables>
+      <tables id="tables-00002-en" num="0002">
+        <table frame="none">
+          <tgroup cols="8" colsep="0" rowsep="0">
+            <colspec colnum="1" colname="col1" colwidth="29mm" />
+            <colspec colnum="2" colname="col2" colwidth="16mm" />
+            <colspec colnum="3" colname="col3" colwidth="28mm" />
+            <colspec colnum="4" colname="col4" colwidth="35mm" />
+            <colspec colnum="5" colname="col5" colwidth="29mm" />
+            <colspec colnum="6" colname="col6" colwidth="18mm" />
+            <colspec colnum="7" colname="col7" colwidth="47mm" />
+            <colspec colnum="8" colname="col8" colwidth="41mm" />
+            <thead>
+              <row>
+                <entry valign="top">
+                  <b>Name</b>
+                </entry>
+                <entry valign="top">
+                  <b>Groupe</b>
+                </entry>
+                <entry valign="top">
+                  <b>Species</b>
+                </entry>
+                <entry valign="top">
+                  <b>Gene Model</b>
+                </entry>
+                <entry valign="top">
+                  <b>Accession Number NCBI</b>
+                </entry>
+                <entry align="right" valign="top">
+                  <b>predicted aa</b>
+                </entry>
+                <entry namest="col7" nameend="col8" align="left" valign="top">
+                  <b>genome website</b>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>AtYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Arabidopsis thaliana</i>
+                </entry>
+                <entry>AT5G35980</entry>
+                <entry>NP_198447; GI:42568145</entry>
+                <entry align="right">956</entry>
+                <entry namest="col7" nameend="col8" align="left">http://www.arabidopsis.org</entry>
+              </row>
+              <row>
+                <entry>AtDYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Arabidopsis thaliana</i>
+                </entry>
+                <entry>AT1G73450</entry>
+                <entry>NP_177487; GI:42563202</entry>
+                <entry align="right">1152</entry>
+                <entry namest="col7" nameend="col8" align="left" />
+              </row>
+              <row>
+                <entry>AtDYRKP-2</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Arabidopsis thaliana</i>
+                </entry>
+                <entry>AT1G73460</entry>
+                <entry>NP_177488; GI:42563204</entry>
+                <entry align="right">1169</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>AtDYRKP-3</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Arabidopsis thaliana</i>
+                </entry>
+                <entry>AT2G40120</entry>
+                <entry>NP_181541; GI:15225633</entry>
+                <entry align="right">570</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>AtDYRKP-4</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Arabidopsis thaliana</i>
+                </entry>
+                <entry>AT3G17750</entry>
+                <entry>NP_188402; GI:15229515</entry>
+                <entry align="right">1138</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>OsYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Oryza sativa ssp japonica</i>
+                </entry>
+                <entry>Os02g0702500</entry>
+                <entry>NP_001047851; GI:115448143</entry>
+                <entry align="right">813</entry>
+                <entry namest="col7" nameend="col8" align="left">http://rice.plantbiology.msu.edu</entry>
+              </row>
+              <row>
+                <entry>OsYak2</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Oryza sativa ssp japonica</i>
+                </entry>
+                <entry>Os04g0602800</entry>
+                <entry>NP_001053776; GI:115460352</entry>
+                <entry align="right">924</entry>
+                <entry namest="col7" nameend="col8" align="left">http://www.phytozome.org</entry>
+              </row>
+              <row>
+                <entry>OsDYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Oryza sativa ssp japonica</i>
+                </entry>
+                <entry>Os01g0832900</entry>
+                <entry>NP_001044708; GI:115440857</entry>
+                <entry align="right">729</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>OsDYRKP-2</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Oryza sativa ssp japonica</i>
+                </entry>
+                <entry>Os03g0719500</entry>
+                <entry>NP_001051095; GI:115454989</entry>
+                <entry align="right">1115</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>OsDYRKP-3</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Oryza sativa ssp japonica</i>
+                </entry>
+                <entry>Os05g0466900</entry>
+                <entry>NP_001055789; GI:297604629</entry>
+                <entry align="right">708</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>VivYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Vitis vinifera</i>
+                </entry>
+                <entry>GSVIVG01024260001</entry>
+                <entry>XP_002267912.1; GI:225454595</entry>
+                <entry align="right">909</entry>
+                <entry>http://www.phytozome.org</entry>
+                <entry />
+              </row>
+              <row>
+                <entry>VivDYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Vitis vinifera</i>
+                </entry>
+                <entry>GSVIVG01012107001</entry>
+                <entry>XP_002276420.1; GI:225423662</entry>
+                <entry align="right">1855</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>VivDYRKP-2</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Vitis vinifera</i>
+                </entry>
+                <entry>GSVIVG01032814001</entry>
+                <entry>XP_002272072.1; GI:225448445</entry>
+                <entry align="right">728</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>ZmYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Zea mays</i>
+                </entry>
+                <entry>GRMZM2G156638</entry>
+                <entry>NP_001159228.1; GI:259490627</entry>
+                <entry align="right">706</entry>
+                <entry>(incomplete)</entry>
+                <entry />
+              </row>
+              <row>
+                <entry>ZmYak2</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Zea mays</i>
+                </entry>
+                <entry>GRMZM2G311051</entry>
+                <entry>ACL53420.1; GI:219886091</entry>
+                <entry align="right">556</entry>
+                <entry>(incomplete)</entry>
+                <entry />
+              </row>
+              <row>
+                <entry>ZmDYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Zea mays</i>
+                </entry>
+                <entry>GRMZM2G015073</entry>
+                <entry>not found</entry>
+                <entry align="right">1103</entry>
+                <entry>http://www.maizesequence.org</entry>
+                <entry />
+              </row>
+              <row>
+                <entry>ZmDYRKP-2</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Zea mays</i>
+                </entry>
+                <entry>GRMZM2G181002</entry>
+                <entry>not found</entry>
+                <entry align="right">1098</entry>
+                <entry>http://www.phytozome.org</entry>
+                <entry />
+              </row>
+              <row>
+                <entry>ZmDYRKP-3</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Zea mays</i>
+                </entry>
+                <entry>GRMZM2G068192</entry>
+                <entry>NP_001145942.1; GI:226530085</entry>
+                <entry align="right">391</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>ZmDYRKP-4</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Zea mays</i>
+                </entry>
+                <entry>GRMZM2G088409</entry>
+                <entry>NP_001182917.1; GI:308081613</entry>
+                <entry align="right">684</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>ZmDYRKP-5</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Zea mays</i>
+                </entry>
+                <entry>GRMZM2G357873</entry>
+                <entry>NP_001130373.1; GI:212275250</entry>
+                <entry align="right">724</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>ZmDYRKP-6</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Zea mays</i>
+                </entry>
+                <entry>GRMZM2G448633</entry>
+                <entry>NP_001148168.1; GI:226506060</entry>
+                <entry align="right">725</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PhypaYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Physcomitrella patens</i>
+                </entry>
+                <entry>Pp1s3_592V6.1</entry>
+                <entry>no completed gene models</entry>
+                <entry align="right">959</entry>
+                <entry>http://www.cosmoss.org</entry>
+                <entry />
+              </row>
+              <row>
+                <entry>PhypaYak2</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Physcomitrella patens</i>
+                </entry>
+                <entry>Pp1s16_333V6.1</entry>
+                <entry>at NCBI</entry>
+                <entry align="right">1064</entry>
+                <entry>http://www.phytozome.org</entry>
+                <entry />
+              </row>
+              <row>
+                <entry>PhypaYak3</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Physcomitrella patens</i>
+                </entry>
+                <entry>Pp1s132_192V6.1</entry>
+                <entry />
+                <entry align="right">1108</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PhypaYak4</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Physcomitrella patens</i>
+                </entry>
+                <entry>Pp1s192_46V6.1</entry>
+                <entry />
+                <entry align="right">1089</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PhypaYak5</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Physcomitrella patens</i>
+                </entry>
+                <entry>Pp1s401_7V6.1</entry>
+                <entry />
+                <entry align="right">1136</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PhypaDYRK2</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Physcomitrella patens</i>
+                </entry>
+                <entry>Pp1s252_88V6.1</entry>
+                <entry />
+                <entry align="right">1129</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PhypaDYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Physcomitrella patens</i>
+                </entry>
+                <entry>Pp1s47_312V6.1</entry>
+                <entry />
+                <entry align="right">726</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PhypaDYRKP-2</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Physcomitrella patens</i>
+                </entry>
+                <entry>Pp1s312_23V6.1</entry>
+                <entry />
+                <entry align="right">525</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PhypaDYRKP-3</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Physcomitrella patens</i>
+                </entry>
+                <entry>Pp1s381_39V6.1</entry>
+                <entry />
+                <entry align="right">1446</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PoptrYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Populus trichocarpa</i>
+                </entry>
+                <entry>POPTR_0013s07280</entry>
+                <entry>EEE95157.1; GI:222857610</entry>
+                <entry align="right">966</entry>
+                <entry namest="col7" nameend="col8" align="left">http://www.phytozome.org</entry>
+              </row>
+              <row>
+                <entry>PoptrYak2</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Populus trichocarpa</i>
+                </entry>
+                <entry>POPTR_0019s06030</entry>
+                <entry>EEF00267.1; GI:222862760</entry>
+                <entry align="right">893</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PoptrDYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Populus trichocarpa</i>
+                </entry>
+                <entry>POPTR_0008s06890</entry>
+                <entry>EEE89528.1; GI:222851981</entry>
+                <entry align="right">725</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PoptrDYRKP-2</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Populus trichocarpa</i>
+                </entry>
+                <entry>POPTR_0010s19570</entry>
+                <entry>EEF01327.1; GI:222864196</entry>
+                <entry align="right">591</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PoptrDYRKP-3</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Populus trichocarpa</i>
+                </entry>
+                <entry>POPTR_0012s03670</entry>
+                <entry>EEE96543.1; GI:222858996</entry>
+                <entry align="right">1158</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>PoptrDYRKP-4</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Populus trichocarpa</i>
+                </entry>
+                <entry>POPTR_0015s05140</entry>
+                <entry>EEF07789.1; GI:222870658</entry>
+                <entry align="right">1151</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>CreYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Chlamydomonas reinhardtii</i>
+                </entry>
+                <entry>Cre08.g381950</entry>
+                <entry>XP_001694330; GI:159472382</entry>
+                <entry align="right">2202</entry>
+                <entry />
+                <entry>http://www.phytozome.org</entry>
+              </row>
+              <row>
+                <entry>CreDYRK2</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Chlamydomonas reinhardtii</i>
+                </entry>
+                <entry>Cre02.g146500</entry>
+                <entry>XP_001695011; GI:159473779</entry>
+                <entry align="right">1239</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>CreDYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Chlamydomonas reinhardtii</i>
+                </entry>
+                <entry>Cre07.g337300</entry>
+                <entry>XP_001700085; GI:159484074</entry>
+                <entry align="right">1278</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>VcaYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Volvox carteri</i>
+                </entry>
+                <entry>Volca1|30949</entry>
+                <entry>XP_002953068; GI:302843051</entry>
+                <entry align="right">398</entry>
+                <entry>(incomplete)</entry>
+                <entry>http://www.phytozome.org</entry>
+              </row>
+              <row>
+                <entry>VcaDYRK2</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Volvox carteri</i>
+                </entry>
+                <entry>Volca1|61790</entry>
+                <entry>XP_002951959; GI:302840826</entry>
+                <entry align="right">512</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>VcaDYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Volvox carteri</i>
+                </entry>
+                <entry>Volca1|77582</entry>
+                <entry>XP_002957430; GI:302851815</entry>
+                <entry align="right">370</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>OstluYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Ostreococcus lucimarinus CCE9901</i>
+                </entry>
+                <entry>Ost9901_3|37908</entry>
+                <entry>XP_001420045; GI:145351353</entry>
+                <entry align="right">425</entry>
+                <entry />
+                <entry>http://genome.jgi.doe.gov</entry>
+              </row>
+              <row>
+                <entry>OstluDYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Ostreococcus lucimarinus CCE9901</i>
+                </entry>
+                <entry>Ost9901_3|36819</entry>
+                <entry>XP_001417467; GI:145345962</entry>
+                <entry align="right">395</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>Ostlu38674</entry>
+                <entry>DYRK2?</entry>
+                <entry>
+                  <i>Ostreococcus lucimarinus CCE9901</i>
+                </entry>
+                <entry>Ost9901_3|38674</entry>
+                <entry>XP_001418004; GI:145347077</entry>
+                <entry align="right">397</entry>
+                <entry>(incomplete)</entry>
+                <entry />
+              </row>
+              <row>
+                <entry>Ostlu42173</entry>
+                <entry>DYRK1?</entry>
+                <entry>
+                  <i>Ostreococcus lucimarinus CCE9901</i>
+                </entry>
+                <entry>Ost9901_3|42173</entry>
+                <entry>XP_001422264; GI: 145356070</entry>
+                <entry align="right">154</entry>
+                <entry>(incomplete)</entry>
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>OsttaYak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Ostreococcus tauri</i>
+                </entry>
+                <entry>Ostta4|19878</entry>
+                <entry>XP_003081795; GI:308808970</entry>
+                <entry align="right">772</entry>
+                <entry />
+                <entry>http://genome.jgi.doe.gov</entry>
+              </row>
+              <row>
+                <entry>OsttaDYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Ostreococcus tauri</i>
+                </entry>
+                <entry>Ostta4|16877</entry>
+                <entry>XP_003078697; GI:308802768</entry>
+                <entry align="right">652</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>Ostta17596</entry>
+                <entry>DYRK2?</entry>
+                <entry>
+                  <i>Ostreococcus tauri</i>
+                </entry>
+                <entry>Ostta4|17596</entry>
+                <entry>XP_003079347; GI:308804069</entry>
+                <entry align="right">837</entry>
+                <entry>(incomplete)</entry>
+                <entry />
+              </row>
+              <row>
+                <entry>Ostta22490</entry>
+                <entry>DYRK1?</entry>
+                <entry>
+                  <i>Ostreococcus tauri</i>
+                </entry>
+                <entry>Ostta4|22490</entry>
+                <entry>XP_003084217; GI:308813822</entry>
+                <entry align="right">472</entry>
+                <entry>(incomplete)</entry>
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>ChINC-DYRK2</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Chlorella sp. NC64A</i>
+                </entry>
+                <entry>ChINC64A_1|16563</entry>
+                <entry>EFN52309; GI:307104053</entry>
+                <entry align="right">364</entry>
+                <entry>(incomplete)</entry>
+                <entry>http://genome.jgi.doe.gov</entry>
+              </row>
+              <row>
+                <entry>ChINC-DYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Chlorella sp. NC64A</i>
+                </entry>
+                <entry>ChINC64A_1|36965</entry>
+                <entry>EFN52148; GI:307103891</entry>
+                <entry align="right">285</entry>
+                <entry>(incomplete)</entry>
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>MicpuC-Yak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Micromonas pusilla CCMP1545</i>
+                </entry>
+                <entry>MicpuC3|39551</entry>
+                <entry>XP_003057930; GI:303277273</entry>
+                <entry align="right">605</entry>
+                <entry />
+                <entry>http://genome.jgi.doe.gov</entry>
+              </row>
+              <row>
+                <entry>MicpuC-DYRK2</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Micromonas pusilla CCMP1545</i>
+                </entry>
+                <entry>MicpuC3|152430</entry>
+                <entry>XP_003057384; GI:303276180</entry>
+                <entry align="right">513</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>MicpuC-DYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Micromonas pusilla CCMP1545</i>
+                </entry>
+                <entry>MicpuC3|16074</entry>
+                <entry>XP_003058010; GI:303277433</entry>
+                <entry align="right">341</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>MicpuC8718</entry>
+                <entry>DYRK1?</entry>
+                <entry>
+                  <i>Micromonas pusilla CCMP1545</i>
+                </entry>
+                <entry>MicpuC3|8718</entry>
+                <entry>XP_003057290; GI:303275992</entry>
+                <entry align="right">143</entry>
+                <entry>(incomplete)</entry>
+                <entry />
+              </row>
+              <row>
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry />
+                <entry align="right" />
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>MicpuN-Yak1</entry>
+                <entry>Yak</entry>
+                <entry>
+                  <i>Micromonas sp. RCC299</i>
+                </entry>
+                <entry>MicpuN3|83368</entry>
+                <entry>XP_002503782; GI:255080404</entry>
+                <entry align="right">421</entry>
+                <entry />
+                <entry>http://genome.jgi.doe.gov</entry>
+              </row>
+              <row>
+                <entry>MicpuN-DYRK2</entry>
+                <entry>DYRK2</entry>
+                <entry>
+                  <i>Micromonas sp. RCC299</i>
+                </entry>
+                <entry>MicpuN3|58615</entry>
+                <entry>XP_002502528; GI:255077896</entry>
+                <entry align="right">642</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>MicpuN-DYRKP-1</entry>
+                <entry>DYRKP</entry>
+                <entry>
+                  <i>Micromonas sp. RCC299</i>
+                </entry>
+                <entry>MicpuN3|58100</entry>
+                <entry>XP_002501491; GI:25507563</entry>
+                <entry align="right">1019</entry>
+                <entry />
+                <entry />
+              </row>
+              <row>
+                <entry>MicpuN85819</entry>
+                <entry>DYRK1?</entry>
+                <entry>
+                  <i>Micromonas sp. RCC299</i>
+                </entry>
+                <entry>MicpuN3|85819</entry>
+                <entry>XP_002508509; GI:255083869</entry>
+                <entry align="right">238</entry>
+                <entry>(incomplete)</entry>
+                <entry />
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </tables> Sequences in grey were not utilized for the alignment. Definitively incomplete gene models are indicated. When predicted number of amino acids differed at two compared genome databases, usually the longer version was chosen. Some genes have different splice variants, e.g. "ZmDYRKP3" that harbours three transcripts at this locus. In case of <i>Danio rerio</i> and <i>Xenopus laevis,</i> not all existing <i>DYRK</i> genes were provided for the alignment.<figref><b>Figure 4</b></figref><b>: Carbon storage and photosynthetic activity in the <i>std1</i> mutant in response to nitrogen deprivation.</b> Cells were grown in TAP or minimal medium with 2% CO<sub>2</sub> in air under a constant illumination of 100 µmol photons m<sup>-2</sup> s<sup>-1</sup>. At day 0, cells were centrifuged, washed and resuspended in TAP-N (left panels A-C) or MM-N (right panels A-C). Measurements were performed in wild-type (WT), <i>std1</i> mutant and in two complemented strains <i>std1::STD1</i> 1 and <i>std1</i>::STD1 2 (A-C). <ol><li><b>(A)</b> Intracellular starch accumulation. Shown are means of 4 experiments (3 for day 6) ± SD for TAP-N and means of 6 experiments (3 for day 10) ± SD for MM-N.</li><li><b>(B)</b> Intracellular accumulation of neutral lipids (TAGs). Upon extraction of total cellular lipids, TAGs were separated by thin layer chromatography and quantified. One representative experiment out of three biological replicatesis shown for each condition (TAP-N or MM-N). TAG values are mean of three technical replicates ± SD.</li><li><b>(C)</b> Photosynthetic electron transport rate (ETR) was determined from chlorophyll fluorescence measurements during the first three days of N deprivation. Plotted values are the means of 4 (TAP-N) or 6 (MM-N) measurements ± SD under actinic illumination of ∼100 µmol photons m<sup>-2</sup> s<sup>-1</sup>.</li><li><b>(D)</b> Immunodetection of proteins of interest. Whole cell protein extracts were analyzed by immuno-detection after 1, 2 or 6 days of nitrogen starvation in photoautotrophic conditions (MM-N). Proteins were separated on a 10% SDS-polyacrylamide gel and stained by Coomassie blue for loading control (<figref>Figure 7C</figref>) or immunoblotted to detect the indicated proteins.</li></ol><b>Figure 5</b><b>: Intracellular starch accumulation and photosynthetic activity in photoautotropically grown cultures submitted to N-deprivation or S-deprivation.</b> At day 0, phototoautropically grown cultures (MM, 2% CO<sub>2</sub> in air) of wild-type (WT), mutant <i>(std1)</i> and two complemented (<i>std1</i>::STD1 1 and 2) strains were centrifuged, washed and resuspended in MM-N or MM-S in the presence of 2% CO<sub>2</sub> in air. At different time points, cell pellets, total cellular volume and dry weight biomass were analyzed. <ul id="ul-00001-en" list-style="none" compact="compact"><li><b>(A)</b> Starch dynamics in autotrophic N deprivation and <b>(B)</b> autotrophic S deprivation at low light intensities of 30-40 µmol photons m<sup>-2</sup> s<sup>-1</sup>. Starch values are the means of 5 biological replicates ± SD and means of 3 experiments for the <i>std1</i> progeny strains 1A and 2A resulting from a backcross of <i>std1 (mt-nit1 nit2)</i> with the wild-type CC125 <i>(mt</i>+<i>nit1 nit2),</i> both are of the type "137c" strain. Four experiments were performed in MM-N/CO<sub>2</sub> at low light intensities of 30-40 µmol photons m<sup>-2</sup> s<sup>-1</sup>.</li><li><b>(C)</b> Photosynthetic efficiencies of wild-type, <i>std1</i> mutant and complemented cells during three days of N deprivation at ∼35 µE m<sup>-2</sup> s<sup>-1</sup> in autotrophic conditions or <b>(D)</b> S deprivation at 100 µE m<sup>-2</sup> s<sup>-1</sup>. Plotted values are the means of 5 measurements ± SD at an illumination of ∼100 µE m<sup>-2</sup> s<sup>-1</sup>.</li></ul><figref><b>Figure 6</b></figref><b>: Biomass productivity of the <i>std1</i> mutant during N deprivationin photo-autotrophic conditions.</b> Experimental setup was the same as in figure 5 but using only a MM-N medium. <ol><li><b>(A)</b> Cell were harvested from 1mL culture, centrifuged and pellets pictured.</li><li><b>(B)</b> Total cellular volume was determined per mL. Shown are means ± SD (n=7).</li><li><b>(C)</b> Biomass was determined as dry weight from five 5 mL cultures harvested by filtration, rinsed, and dried overnight. Analysis of intracellular starch allowed to determine the starch fraction of total biomass (hatched area). Shown are means ± SD (n=3).</li></ol><b>Figure 7</b><b>: <i>std1</i> mutant cells form aggregates (palmelloids) enclosed by the mother cell wall.</b><ol><li><b>(A)</b> Bright field and differential interference contrast images of wild-type, <i>std1</i> mutant and complemented (<i>std1</i>::STD1 1 and 2) strains grown in minimal medium and 2% CO<sub>2</sub> and then subjected to N deprivation for 0, 2 or 6 days. Arrows indicate mother cell walls. Scale bars = 10 µm.</li><li><b>(B)</b> Distribution of cell or aggregate diameter, respectively, and comparison of the cell volume per ml of WT, <i>std1</i> mutant and rescued strains <i>std1</i>::STD1 1 and 2 in 0, 2 or 6 days MM-N/CO<sub>2</sub> condition. Same representative experiment as in (A).</li><li><b>(C)</b> Commassie blue loading control of the immuno-detection experiment shown on <figref>Figure 4D</figref>.</li></ol><figref><b>Figure 8</b></figref><b>: Evolution of chlorophyll contents, total cellular volume, and cell number during nitrogen deprivation.</b> Cells were grown in TAP or minimal medium with 2% CO<sub>2</sub> in air under a constant illumination of 100 µmol photons m<sup>-2</sup> s<sup>-1</sup>. At day 0, cells were centrifuged, washed and resuspended in TAP-N (left panels) or MM-N (right panels). Measurements were performed in wild-type (WT), <i>std1</i> mutant and in two complemented strains <i>std1::STD1</i> 1 and <i>std1</i>::STD1 2. <ol><li><b>(A)</b> Chlorophyll concentration. Shown are means ± SD of 5 experiments for TAP-N and 7 experiments for MM-N (3 for 10d).</li><li><b>(B)</b> Total cellular volume in µm<sup>3</sup>. mL<sup>-1</sup>, and <b>(C)</b> cell or particle concentration per mL were recorded by Multisizer™ 3 Coulter Counter® (Beckman). Shown are means ± SD (n=6 for TAP-N experiments and n=7 for MM-N experiments).</li></ol><figref><b>Figure 9</b></figref><b>: Growth performances of <i>std1</i> and wild-type <i>Chlamydomonas</i> cells cultivated photo-autotrophically in 1L photobioreactors operated as turbidostats during transition from exponential growth to N-deprivation conditions.</b> Cell density was measured using an absorption probe and maintained at a constant level by injection of fresh medium. Due to the aggregation phenotype of <i>std1,</i> OD<sub>880nm</sub> was regulated at different values for WT (OD<sub>880nm</sub>= 0. 4) and <i>std1</i> (OD<sub>880nm</sub>= 0. 3) to reach similar biomass concentrations (0.15 g dry weight. L<sup>-1</sup>) in both cultures. After 48h of stabilization in the presence of MM under constant illumination (500 µmol photons m<sup>-2</sup> s<sup>-1</sup>) in the presence of 2% CO<sub>2</sub> enriched air, the dilution medium was replaced by MM-N (t0). Measurements of ammonium concentration in the culture medium showed complete exhaustion after 45h. (A) Cumulated amounts of fresh medium added to maintain the culture at a constant biomass concentration. Shown are data from three biological replicates for WT and <i>std1</i> cultures; (B) Biomass productivity measurements (g dry weight. d<sup>-1</sup> L<sup>-1</sup>) were determined from at t0, t48 and t72 from dilation rates and biomass measurements. Shown are means ± SD (n=3).<figref><b>Figure 10</b></figref><b>: Formation of oxidized MGDG in the mutant stdl.</b><ol><li><b>(A)</b> Over-accumulation of oxidized MGDG species in the <i>std1</i> mutant detected on the TLC plate</li><li><b>(B)</b> Structural elucidation of one oxidized MGDG 34 (16:2 02; 18:1) species accumulating in <i>std1.</i></li></ol> Note: C2 and C7 represent two independent complemented lines of the <i>std1</i> mutant.<figref><b>Figure 11</b></figref><b>: A complete analyses of lipidome in WT, <i>std1</i> mutant and the two complemented lines in response to nitrogen starvation.</b><figref><b>Figure 12</b></figref><b>: Over-accumulation of oxidized MGDG in the mutant and its species distribution.</b><ol><li><b>(A)</b> Total accumulation of oxidized MGDG in response to days of nitrogen starvation in WT, stdl mutant, and two complemented lines.</li><li><b>(B)</b> Molecular species distribution of oxidized MGDG.</li></ol><figref><b>Figure 13</b></figref><b>: Over-accumulation of a putative lipoxygenase</b> 1 <b>(CreLOX1) in the <i>Chlamydomonas</i> mutant <i>std1.</i></b> An image of SDS-PAGE gel stained by Coomassie blue demonstrating the appearance of a stronger band with a mass of ∼110 kDa. Wild-type, the <i>std1</i> mutant and two independent complemented lines (C2, C7) were grown to exponential phase at standard autotrophic condition in minimum medium supplied with 2% CO<sub>2</sub> at 100 µmol photons m<sup>-2</sup> s<sup>-1</sup>. After cell lysis, soluble and insoluble proteins were fractionated by ultracentrifugation with a sucrose cushion. Proteins from the pellet fraction containing membranes were resolubilized by addition of Triton X-100, ultracentrifuged and separated on a 10% NuPAGE® Bis-Tris gel. After being stained with Coomassie Brilliant Blue, a strong band was detected in the <i>std1</i> mutant at ∼110 kDa and the corresponding gel regions of all samples were excised and subjected to mass spectrometric analysis.<figref><b>Figure 14</b></figref><b>: Inhibition of TAG and starch accumulation in the mutant by LOX inhibitors.</b><ol><li><b>(A).</b> Starch accumulation</li><li><b>(B).</b> TAG accumulation</li></ol></p>
+    <heading id="h-00002-en">
+      <b>EXAMPLES</b>
+    </heading>
+    <heading id="h-00003-en">
+      <b>
+        <u>EXAMPLE 1: DUAL SPECIFICITY TYROSINE-PHOSPHORYLATION-REGULATED KINASE DYRKP-1 NEGATIVELY CONTROLS STARCH AND OIL ACCUMULATION DURING NUTRIENT DEPRIVATION IN <i>CHLAMYDOMONAS</i></u>
+        <i>
+          <u>REINHARDTII</u>
+        </i>
+      </b>
+    </heading>
+    <heading id="h-00004-en">
+      <b>METHODS</b>
+    </heading>
+    <heading id="h-00005-en">
+      <b>Strains and cultivation conditions</b>
+    </heading>
+    <p id="p-00023-en" num="0023">As described in (Chochois et al., 2010), the strain CC125 <i>(mt-nit1 nit2</i>) was chosen as genetic background for mutant generation and used as wild-type strain in this study. The mutant strain <i>std1</i> was generated by transformation with <i>Kpn</i>I-linearized plasmid pSL-X harboring the paromomycin resistance cassette <i>Aph</i>VIII. In case of <i>std1,</i> only a ∼1900 bp-fragment of the ∼4800 bp-pSL-X was inserted into the genome. Cells were grown mixotrophically in Tris-acetate-phosphate (TAP) medium (Harris, 2009) in an incubator shaker at 25°C, under continuous light at ∼100 µE m<sup>-2</sup> sec<sup>-1</sup>. For deprivation experiments, precultures were grown mixotrophically in TAP medium or photoautotrophically in a MOPS-buffered minimal medium (Harris, 2009) and 2% CO<sub>2</sub> in the air to a density of 2-5 x 10<sup>6</sup> cells mL<sup>-1</sup>. After taking samples at t = 0, the culture was centrifuged at 25°C and 1789 g for 4 min, the cell pellet was washed once and resuspended in N- or S-deprived medium. It should be noted that an ideally identical initial cell density of the cultures is critical to get comparable data for all studied strains. Because of palmelloid formation of <i>std1</i> total cellular volume per mL or chlorophyll content was compared to adjust the cultures before starvation.</p>
+    <heading id="h-00006-en">
+      <b>Genetic characterization and complementation of the mutant strain <i>std1</i></b>
+    </heading>
+    <p id="p-00024-en" num="0024">To check the integration frequency of the inserted DNA, Southern blot analysis was performed with wild-type and <i>std1</i> mutant cells. Genomic DNA was prepared as described previously (Tolleter et al., 2011), and 4, 6 or 8 µg genomic DNA restricted with <i>Not</i>I were separated in an 0. 8% agarose gel, blotted on a nylon membrane and hybridized with a digoxygenin-labelled probe complementary to part of the <i>Aph</i>VIII gene of the inserted resistance cassette. A PCR DIG Probe Synthesis Kit (Roche) was utilized for probe labelling using primers 5'-CGAAGCATGGACGATGCGTT-3' (SEQ ID NO: 4) and 5'-CGAGACTGCGATCGAACGGACA-3' (SEQ ID NO: 5). The hybridization with the resulting 400 bp-PCR fragment was performed overnight at 50°C using DIG Easy Hyb buffer (Roche). Anti-Digoxigenin-AP and CSPD as substrate (Roche) were applied to detect signals using G:BOXChemin XL (Syngene). In order to determine the site of integration of the paromomycin resistance cassette, genome walking was performed according to the GenomeWalker Kit from Clontech. Genomic DNA of the strain <i>std1</i> was digested with <i>Fsp</i>I and processed appropriate to the manufactor's instruction. The sequences 5'-CTGGTGCTGCGCGAGCTGGCCCACGAGGAG-3' (SEQ ID NO: 6) (GPS1) and 5'-TGGTTCGGGCCGGAGTGTTCCGCGGCGTT-3' (SEQ ID NO: 7) (GPS2) served as gene-specific primers allowing the determination of the genomic sequence downstream of the inserted <i>Aph</i> VIII cassette. The Advantage GC genomic LA polymerase (Clontech) was used for amplification reactions. For complementation of the strain <i>std1,</i> a PCR reaction was carried out on genomic wild-type DNA using primers 5'-GTCTAGAATGTCGCTCCGCCTGAACCGATG-3' (SEQ ID NO: 8) (XbaG4forHyg) and 5'-GTCTAGACTACATGCTGTCGAGCGAGG-3' (SEQ ID NO: 9) (XbaG4RevHyg) and the DyNAzyme™ EXT DNA Polymerase (FinnzymesOy). The amplified 6913 bp coding for the <i>DYRKP-1</i> gene were restricted by <i>Xba</i>I and cloned into <i>Xba</i>I-digested vector pSL-Hyg, originating from pSL18, (Dauvillee et al., 2003) under control of the <i>PSAD</i> promoter and carrying a resistance cassette for hygromycin (Berthold et al., 2002). <i>std1 cells</i> were transformed with <i>Kpn</i>I-linearized pSL-Hyg-STD1 by agitation with glass beads (Kindle, 1990), selected on 20 mM hygromycin and then screened applying the same protocol as for isolating the mutant strain (Chochois et al., 2010). Transformants were exposed for several days to S or N deprivation, transferred to minimal medium and subjected to darkness followed by iodine staining to test for remaining starch levels.</p>
+    <heading id="h-00007-en">
+      <b>Phylogenetic analysis</b>
+    </heading>
+    <p id="p-00025-en" num="0025">Amino acid sequences were aligned using MAFFT version 6 software (Katoh et al., 2002). Next, the resulting alignment was manually refined using SeaView version 4 (Gouy et al., 2010) and regions where homology was doubtful were removed from further analysis. A total of 313 amino acid positions were kept for the phylogenetic analysis of DYRK proteins. Phylogentic analyses were conducted using Neighbour-Joining (NJ), Maximum Likelihood (ML) and Parsimony (Pars) approaches in the Phylogenetic Inference Package Phylip version 3. 69 (Folenstein et al., 2005). The PROTML program was used for ML analysis and the sequence input order was randomized (20 jumbles). The SEQBOOT and CONSENSE programs were used for bootstrap value calculations on 100 replications and consensus tree reconstructions, respectively. To examine the confidence of nodes, NJ and Pars analysis were done using NEIGHBOR and PROTPARS programs. Distance matrices used for the NJ analysis were created with the PROTDIST program. The phylogenetic trees were drawn with MEGA5 (Tamura et al., 2011).</p>
+    <heading id="h-00008-en">
+      <b>RNA analyses and RT-PCR</b>
+    </heading>
+    <p id="p-00026-en" num="0026">Total RNA was isolated as described in (Liu et al., 2005). For RT-PCR reactions 1 µg of DNaseI-treated total RNA was employed for application of the OneStep RT-PCR Kit (Qiagen). To obtain sequence information of the complete transcribed <i>DYRKP-1</i>/<i>STD1</i> gene, three overlapping RT-PCRs were performed using primer pairs 5'-CATAGTGCTCAGCAGGGGACAAGGC-3' (SEQ ID NO: 10) (Std1UTR1) and 5'-AGCGTGCCAGAGGTTTCGCCGTC-3' (SEQ ID NO: 11) (Std1P3rev), 5'-CCGCGGACGGCGAAACCTCTGGCAC-3' (SEQ ID NO: 12) (StdlFW2) and 5'-GATCTCGTCCAGCGACTGGTCAAAGTAG-3' (SEQ ID NO: 13) (G4rev14), and 5'-GCGGATCCGACGAGCAGGGCAACGTGCTG-3' (SEQ ID NO: 14) (ACG4_FW3) and 5'-CGGCAAGCTTCTACATGCTGTCGAGCGAGG-3' (SEQ ID NO: 15) (ACG4_Rev1), the latter primer pair was initially created to express the corresponding region as antigen. For comparison of transcript levels in wild-type, mutant and complemented strains, the primer pairs StdlFW2 and G4revl4 were used to amplify part of the <i>DYRKP-1</i> transcript. Specific primers were designed for an actin (Locus name Cre13. g603700, Protein ID 515031), serving as constitutively expressed control gene (5'-AATCGTGCGCGACATCAAGGAGAA-3' (SEQ ID NO: 16) and 5'-TTGGCGATCCACATTTGCTGGAAGGT-3' (SEQ ID NO:17)).</p>
+    <heading id="h-00009-en">
+      <b>Northern blot analyses</b>
+    </heading>
+    <p id="p-00027-en" num="0027">For RNA extraction, 15 mL of cell cultures at relative time points were collected on ice, centrifuged for 1 min at 1789g and the 500 µL-cell suspension was transferred to 1. 5 mL- tube on ice and mixed with 500 µL of RNA lysis buffer. RNA extraction, separation on formaldehyde agarose gels and Northern blot were performed as described in (Liu et al., 2005). Membranes were hybridized with DNA probes containing a fragment of the <i>STD1</i> gene or <i>CBLP2</i> gene as a loading control. A 1. pAC-STD1 plasmid was obtained by a ligation of the <i>Bam</i>HI-<i>Hind</i>III-restricted vector pQE-30 (Qiagen) and a <i>Bam</i>HI-<i>Hind</i>II-restricted RT-PCR product coding for the 3'-part of DYRKP-1. RT-PCR was carried out using the primers 5'-GCGGATCCGACGAGCAGGGCAACGTGCTG-3' (SEQ ID NO: 14) (ACG4_FW3) and 5'-CGGCAAGCTTCTACATGCTGTCGAGCGAGG-3' (SEQ ID NO: 15) (ACG4_Rev1), giving rise to a 1116 pb product. 1-kb <i>BamH</i>I<i>-Hind</i>III fragment from this pAC-STD1 plasmid, and the 1-kb cDNA of <i>CBLP2,</i> were used for hybridization. Radioactive signals were detected using BAS-IP MS2040 phosphorimager plates (Raytest; http://www. raytest. de), scanned with a Molecular Imager FX phosphorimager (Bio-Rad; http://www.biorad.com/), and imaged using the Quantity One-4. 5. 1 program (Bio-Rad).</p>
+    <heading id="h-00010-en">
+      <b>Genomic DNA analysis</b>
+    </heading>
+    <p id="p-00028-en" num="0028">To determine genomic DNA concentration during nitrogen deprivation time course experiments, cells equivalent to 1. 2 mm<sup>3</sup> total cellular volume on average were harvested by centrifugation and stored at -80°C. Genomic DNA of two replicate samples for each time point was prepared by phenol-chloroform extraction as described previously (Tolleter et al., 2011). DNA concentrations were measured using a NanoDrop 2000 Spectrophotometer (Thermo Scientific).</p>
+    <heading id="h-00011-en">
+      <b>Protein preparation, quantification and immunoblot analysis</b>
+    </heading>
+    <p id="p-00029-en" num="0029">For the detection of DYRKP-1, soluble cell lysates were prepared as follows: 100 mL of C. <i>reinhardtii</i> cell cultures in the exponential phase (eq. to 5x10<sup>6</sup> cells/mL or 0. 8 mm<sup>3</sup>/mL) were harvested by centrifugation for 2 min at 1789g and resuspended in <b>1</b> mL lysis buffer (20 mM HEPES-KOH pH 7. 2, 10 mMKCl, 1 mMMgCl<sub>2</sub>, 154 mMNaCl, 0. 1xprotease inhibitor cocktail; Sigma P9599). Cells were sonicated on ice for 90 sec with a setting of 1 sec pulse/I sec pause. Lysates were loaded onto sucrose cushion (20mM HEPES-KOH pH 7. 2, 0. 6 M sucrose) and centrifuged in a MLA-55 rotor (Beckman Coulter) for 30min at 151 300 g and 4°C. Soluble proteins were mixed with one volume of 2x sample buffer (Schulz-Raffelt et al., 2007) or 2x LDS sample buffer (Invitrogen) and heated for 5 min at 95°C or 10 min at 70°C prior to loading on an 8% SDS-polyacrylamide gel. Western blotting was carried out for 1:45h to detect the expression of DYRKP-1 by ECL (SuperSignal West Pico Chemiluminescent Substrate, Thermo Scientific), using a purified peptide antibody (www. proteogenix-antibody. com). Protein samples taken during nitrogen starvation kinetics were treated as follows: cell pellets equivalent to 1. 2 mm<sup>3</sup> total cellular volume on average were stored at -80°C until use. Total proteins of two replicate samples at each time point were extracted in 70 µL buffer containing 50 mM Tris pH 8, 10 mM EDTA and 2% SDS for 30 min at RT, followed by a 2-min cold centrifugation. To quantify protein concentrations, 2 µL of protein extracts were analyzed by colorimetric measurements with bicinchonic acid (Pierce BCA Protein Assay kit, Thermo Scientific). For immunoblot analysis, 10-12 µg of total protein extracts were separated on 10% SDS-polyacrylamide gels, transferred to BioTrace™ NT nitrocellulose membrane (Pall Life Sciences, http://www. pall. com) and analyzed by immunodecoration with antibodies against AtpB, RbcL, CytF, PsbD (D2) (Agrisera) and HSP70B (Schroda et al., 1999). The DYRKP antibody was obtained by immunization of two rabbits with two synthesized peptides (DGMDDPGYSRKEVPNP-cys and PAVNHEDVELFRN-cys) conjugated to KLH (keyhole limpet hemocyanin) as carrier protein (www.proteogenix-antibody.com).</p>
+    <heading id="h-00012-en">
+      <b>Starch and chlorophyll measurements</b>
+    </heading>
+    <p id="p-00030-en" num="0030">The starch and chlorophyll contents were measured according to (Chochois et al., 2010). One mL of culture was harvested, centrifuged at ∼20, 000 g for 10 min, resuspended in 1 mL of methyl alcohol for chlorophyll extraction and stored at -80°C. The pellets were dried, and 400 µL of water were added. To solubilize starch, the samples were autoclaved setting "dry cycle". Subsequently, starch was degraded to glucose by adding 200 µL amyloglucosidase solution (1 U/mL, Roche) and incubation at 55°C for 1-2 h. Using an automated sugar analyzer (Ysi model 2700 select, Yellow springs, OH, USA), glucose concentration were determined. Chlorophyll was extracted by methanol, and chlorophyll a and b were determined by measuring the absorbance at 653, 666 and 750 nm using UV-VIS spectrophotometer (SAFAS UVmc2 with the software SP2000).</p>
+    <heading id="h-00013-en">
+      <b>Oil content quantification</b>
+    </heading>
+    <p id="p-00031-en" num="0031">
+      <i>C. reinhardtii</i> cells (eq. to 2 mm<sup>3</sup> total cellular volume) were harvested by centrifuge at 1000 g for 2 min (at 4°C). The cells were either frozen right away under -80°C, or quenched in hot isopropanol for immediate lipid extractions. Total cellular lipids were extracted using a mixture of hexane and isopropanol (Li-Beisson et al., 2010). Organic solvent phase containing total cellular lipids were collected and dried under a stream of nitrogen gas, then resuspended into 200 µL chloroform:methanol (2:1, v/v). Triacylglycerols (TAG) were first separated from other lipid classes on thin layer chromatograph, charred with 2% CuSO<sub>4</sub> dissolved in 8% H<sub>3</sub>PO<sub>4</sub> in water, then TAG content was calculated based on a densitometry method after being compared to a standard curve generated with a C17:0 TAG standard (Siaut et al., 2011).</p>
+    <heading id="h-00014-en">
+      <b>Chlorophyll fluorescence</b>
+    </heading>
+    <p id="p-00032-en" num="0032">Chlorophyll fluorescence was measured using a Dual Pam-100 (Heinz Walz). Samples were placed into a cuvette under constant stirring at room temperature and dark-adapted for 5-10 min before measurement. Light Curves were recorded with ten illumination steps ranging from 15 to 715 µmol m<sup>-2</sup> s<sup>-1</sup> PAR, each light intensity was kept for 30 s following a saturating flash to measure Fm'. ETR was calculated as described previously (Rumeau et al., 2005).</p>
+    <heading id="h-00015-en">
+      <b>Biomass determination</b>
+    </heading>
+    <p id="p-00033-en" num="0033">To determine biomass accumulation of a culture, at each time point three 5 mL-samples were dropped on glass fiber filter on disposable aluminum dishes (VWR, Ref. 611-0739 and -0741) and dried overnight in an oven at 80°C. Three 10 mL-samples of the medium were treated equally. The paper filters were weighed before and after adding cells and the mean value for the medium was subtracted.</p>
+    <heading id="h-00016-en">
+      <b>Microscopy</b>
+    </heading>
+    <p id="p-00034-en" num="0034">For light microscopy, a Leica DMRXA microscope was used (Leica Microsystems, Germany). Cells were fixed with 0. 25% glutaraldehyde in the medium, if necessary. To compare cell concentrations easily, a Neubauer chamber was used. Images were captured with the Spot Insight 4 software (Diagnostic Instruments Inc., Sterling Heights, USA; www. spotimaging. com).</p>
+    <heading id="h-00017-en">
+      <b>RESULTS</b>
+    </heading>
+    <heading id="h-00018-en">
+      <b>Identification and genetic characterization of the starch degradation mutant <i>std1</i></b>
+    </heading>
+    <p id="p-00035-en" num="0035">From the screening of a DNA insertional library created by transformation of the <i>C</i>. <i>reinhardtii</i> wild-type strain CC125 with a paromomycin <i>(Aph</i>VIII) resistance cassette, several mutants affected in starch degradation were previously isolated (Chochois et al., 2010). One of these mutants, called <i>std1</i> for <i>starch</i> degradation 1, showed a slower rate of starch degradationin the dark compared to its wild-type progenitor (<figref>Figure 1A</figref>). Southern blot analysis indicated a single integration of the paromomycin cassette into the mutant genome (<figref>Figure 2A</figref>). Sequencing of DNA flanking regions showed insertion of the <i>Aph</i>VIII cassette within the third exon of a gene, annotated as Dual-Specificity Tyrosine-Phosphorylated Protein Kinase <i>DYRK2 (Chlamydomonas</i> genome version 4.0), and renamed here <i>DYRKP-1</i> (<figref>Figure 1B</figref>). The <i>Chlamydomonas DYRKP-1</i> gene model was confirmed by sequencing three overlapping cDNA fragments produced by RT-PCRs (<figref>Figure 1B</figref>). The <i>Chlamydomonas DYRKP-1</i> consists of 14 exons and 13 introns, the coding region containing 3834 nucleotides. With regard to the gene model Cre07. g337300 (Phytozomev 9. 0), the start codon is located 51 nucleotides upstream. The <i>std1</i> mutant was complemented using a construct holding the wild-type <i>DYRKP-1</i> genomic sequence driven by the <i>psaD</i> promoter (<figref>Figure 2B</figref>). Two independent complemented strains <i>std1::</i> STD1 1 and <i>std1::</i>STD1 2 were isolated, showing <i>STD1</i> gene expression levels and Std1 protein amounts slightly lower to the wild-type progenitor (<figref>Figure 1C, D</figref>). Similar patterns of starch accumulation and degradation kinetics were observed in response to N or S deprivation in both complemented lines and in the wild-type progenitor (<figref>Figure 2C</figref>). Northern blot analysis revealed that the <i>DYRKP-1</i> transcript is strongly induced after 1 day of N depletion, the transcript levels remaining at a high level after 3-days of deprivation (Figure IE). Note that although <i>DYRKP-1</i> gene expression was driven by the constitutive <i>PSAD</i> promoter in the complemented line, accumulation of the <i>DYRKP-1</i> transcript increased in the same manner as in wild-type cells in response to N deprivation, suggesting that regulation of <i>DYRKP-1</i> gene expression is regulated at a post-transcriptional level.</p>
+    <heading id="h-00019-en">
+      <b>
+        <i>Chlamydomonas</i> DYRKP-1/STD1 is a member of a novel plant specific group of the DYRK protein family</b>
+    </heading>
+    <p id="p-00036-en" num="0036">A phylogenetic analysis of the DYRK gene family allowed to distinguish four distinct branches: the previously described DYRK1, DYRK2 and Yak sub-families, and a novel DYRK group, named here DYRKP (for Plant DYRK) that solely comprises members of the green lineage (plants, mosses and algae), including the <i>Chlamydomonas</i> DYRKP-1/STD1 (<figref>Figure 3A</figref>). While algal genomes harbor only one member of the DYRKP group, mosses and higher plants hold two to six plant-like homologues. Interestingly, plant and algal genomes contain Yak homologues, but no DYRK1 homologue (Han et al., 2012), DYRK2 homologues being only identified in algae and mosses, but not in higher plants. DYRK kinases exhibit conserved sequence features, particularly the DYRK homology (DH)-box that precedes the conserved catalytic domain (<figref>Figure 3B</figref>). The consensus sequence for DYRK1 and DYRK2 sub-groups is NxGYDD (D/E) (N/R)xDY, slightly different for the Yak group (<figref>Figure 3B</figref>). The DH-box of the novel identified DYRKP group shows an altered motif: (N/H)(R/K)TGFEExK(D/E/N)(F/L).</p>
+    <heading id="h-00020-en">
+      <b>
+        <i>std1</i> shows a strong increase in reserve accumulation and more robust photosynthetic activity under nutrient deprivation in conditions of photoautotrophy</b>
+    </heading>
+    <p id="p-00037-en" num="0037">The effect of nitrogen depletion was then studied in different growth conditions (mixotrophic vs. photoautotrophic) known to differentially affect the intracellular energy status and accumulation of reserve compounds such as starch (Ral et al., 2006) or TAGs (Goodson et al., 2011). In mixotrophic conditions (in the presence of both acetate and light), no difference in starch accumulation was observed between the WT and the <i>std1</i> mutant in response to N deprivation (<figref>Figure 4A</figref>), but an increase in the oil content was observed in the mutant after 1 to 3 days of starvation (<figref>Figure 4B</figref>). In fully photoautotrophic conditions, a much higher and persistent starch accumulation was observed in <i>std1</i> in comparison to the WT and to both complemented lines (<figref>Figure 4B</figref>), the oil content increasing in the mutant after 3 days of starvation (<figref>Figure 4B</figref>). When N deprivation was conducted in photoautotrophic conditions at a lower fluence rate (35 µmol photons m<sup>-2</sup> s<sup>-1</sup>), WT and complemented mutant lines accumulated only low starch levels, whereas the <i>std1</i> mutant accumulated high starch amounts (Figure 5A-D). Higher starch accumulation was also observed in <i>std1</i> in response to sulfur deprivation (Figure 5E-H). The same results were obtained in response to sulphur deprivation (data not shown). Photosynthetic electron transport rate (ETR), determined from chlorophyll fluorescence measurements, showed a parallel decline in <i>std1</i> and control strains when N deprivation was realized in mixotrophic conditions (<figref>Figures 4C</figref>, left panel). In contrast, when N deprivation was conducted under photoautotrophic conditions, the drop in ETR was less pronounced in <i>std1</i> as compared to control strains (<figref>Figure 4C</figref>, right panel). Taken together, these data show that, depending on the intracellular energy status, <i>std1</i> accumulates more reserve compounds and maintains higher photosynthetic activity than control strains in response to nutrient deprivation. Immunodetection of major photosynthetic components showed a similar decrease of PSII, PSI, cytochrome <i>b<sub>6</sub>f,</i> ATPase, and Rubisco subunits in <i>std1</i> compared to the wild-type progenitor (<figref>Figure 4D</figref>). Interestingly, the mitochondrial alternative oxidase (AOX) was much more abundant in the mutant than in the WT (<figref>Figure 4D</figref>), indicating a redox imbalance in the mutant.</p>
+    <heading id="h-00021-en">
+      <b>Increased biomass production in <i>std1</i> mutant during autotrophic nitrogen deprivation</b>
+    </heading>
+    <p id="p-00038-en" num="0038">A strong increase in biomass production was observed in <i>std1</i> from the size of cell pellets harvested after 3 and 10 days of culture in a N-deprived medium (<figref>Figure 6A</figref>). Noticeably, while wild-type and complemented lines were counted as single cell particles of about 6-7 µm diameter, the <i>std1</i> mutant consisted of aggregates of 2, 4 and 8 cells enclosed by the mother cell wall, and measured as particles of 10-20 µm diameter (Figure 7). This phenotypical characteristic, previously described in several C. <i>reinhardtii</i> mutants, is called palmelloids (Harris, 2009). Despite cell aggregation, the total cellular volume was similar in wild-type and mutant cultures under N-replete conditions (<figref>Figure 6B</figref>). In response to nitrogen deprivation, the total cellular volume showed only slight variations in wild-type and complemented cultures, but strongly increased in <i>std1</i> (<figref>Figure 6B</figref>). When nitrogen deprivation was conducted in mixotrophic condition (TAP-N), the <i>std1</i> mutant showed a similar behavior as wild-type cells (<figref>Figure 8</figref>). Biomass, measured as dry weight, showed a 1. 7-fold increase in wild-type and complemented strains after 6 days of N depletion, and a more than 3-fold increase in <i>std1</i> (<figref>Figure 6C</figref>). In order to confirm the spectacular increase in biomass and starch production observed in <i>std1,</i> additional experiments were carried out in more controlled conditions using 1L photobioreactors operated as turbidostats (<figref>Figure 9</figref>). In these experiments, the cellular biomass was maintained at a constant level (monitored by OD<sub>880nm</sub>) by addition of fresh culture medium, thus allowing dilution rate and biomass productivity measurements. At to, dilution by minimal N-replete medium was replaced by minimal N-free medium, resulting in a decrease in the ammonia content of the culture medium, which was fully exhausted after 45h (<figref>Figure 9A</figref>). At that time, the biomass productivity of the WT started to gradually decrease and completely stopped after 72h. In sharp contrast, biomass productivity of <i>std1</i> increased (from 45h to 65h) and then started to gradually decrease, the biomass productivity at 72 h being still higher than the initial productivity of the WT. These experiments demonstrate that <i>std1</i> produces more starch and biomass than the control strain when submitted to N-deprivation under photoautotrophic conditions.</p>
+    <heading id="h-00022-en">
+      <b>DISCUSSION</b>
+    </heading>
+    <p id="p-00039-en" num="0039">We report here on the characterization of the <i>std1</i> mutant affected in a DYRK kinase homologue belonging to a novel subgroup (called <i>DYRKP),</i> specific to the green lineage. The <i>std1</i> mutant, the first DYRK mutant of the green lineage reported so far, accumulates high intracellular starch and oil amounts and shows a persistent photosynthetic activity in response to nutrient starvation.</p>
+    <heading id="h-00023-en">
+      <b>Control of biomass and reserve accumulation by DYRK kinases</b>
+    </heading>
+    <p id="p-00040-en" num="0040">As shown in the experiments performed in different trophic conditions (mixotrophic vs. photoautotrophic), the cellular energy status, in addition to the nutrient status, plays a central role in the control of starch and oil accumulation in the mutant. In mixotrophic conditions (illuminated cells growing in an acetate-containing medium), conditions in which the energy status is high, high starch levels accumulate in the WT in response to N-deprivation, but no starch increase is observed in <i>std1.</i> Note that in these conditions an increase in the oil content was observed in the mutant. In photoautrophic conditions however, starch accumulation in the WT depends on the intensity of illumination (low at low light intensity and higher at higher light). Strikingly, the dependence of starch accumulation upon the energy status is lost in <i>std1,</i> mutant cells accumulating similar starch amounts, while at different rates, in the different trophic conditions (<figref>Figure 4A</figref> and <figref>Figure 5A</figref>, E). In yeast, the DYRK homologue Yak1 has been reported to control glycogen storage, deletion of the <i>YAK1</i> gene inducing an increase in the intracellular glycogen content (Wilson et al., 2010). Yak1 would control the arrest of the cell cycle in response to glucose deprivation by phosphorylatingthe transcription factors Msn2 and Hsf1 (Moriya et al., 2001). More recently, Yak1 was proposed to lie at the centre of a regulatory cascade controlling growth and stress response by targeting different transcription factors (Malcher et al., 2011). As for the yeast Yak1 mutant, the increased reserve and biomass production of <i>std1</i> in response to nutrient deprivation indicates that a signal required to stop growth and reserve accumulation is not correctly perceived or transferred. In yeast, Yak1 is among others transcription factors such as Sfp1 and Msn2/4, at the intersection between PKA and TOR pathways (Rohde et al., 2008). To which extent <b><i>Chlamydomonas</i></b> and higher plants DYRKP are involved in TOR and cAMP-PKA signalling cascades will need further investigation to be elucidated.</p>
+    <heading id="h-00024-en">
+      <b>Loss of feedback regulation of photosynthesis in <i>std1</i></b>
+    </heading>
+    <p id="p-00041-en" num="0041">In microalgae, the decline in photosynthetic activity is part of the general cellular response to nutrient deprivation which helps to maintain a balance between the generation of reducing power by photosynthesis and the ability to use it for metabolic purposes (Grossman, 2000). The <i>sac1</i> mutant (defect in Sacclimation response) was reported to die upon two days of S deprivation in the light due to an inability to down-regulate photosynthesis, resulting in an over-production of reactive oxygen species (ROS) damaging PSII centers (Davies et al., 1996; Wykoff et al., 1998). In contrast, the <i>std1</i> mutant shows a decrease inphotosynthetic complexes similar to that observed in control strains (<figref>Figure 4D</figref>), but its photosynthetic activity, while decreasing, remains higher than in the control strain in photoautotropic conditions (<figref>Figures 4C</figref> and <figref>Figure 5B</figref>, F). In parallel, the <i>std1</i> mutant accumulates more reserve compounds than control strains. The inventors therefore propose that the pronounced starch accumulation occurring in <i>std1</i> functions as a sink for reducing power generated by photosynthesis, therefore decreasing the feedback inhibition of photosynthesis. Metabolite profiling studies have shown the existence in higher plants of a negative correlation between starch biomass production (Sulpice et al., 2009). Such a negative correlation is abolished in the <i>std1</i> mutant in conditions of nutrient limitation where parallel starch and biomass productions are observed, at least in conditions of nutrient shortage.</p>
+    <heading id="h-00025-en">
+      <b>Biotechnological implications</b>
+    </heading>
+    <p id="p-00042-en" num="0042">The discovery of a negative regulator controlling growth and reserve accumulation in conditions of nutrient deprivation has important biotechnological implications for microalgae. Indeed, these unicellular microorganisms are increasingly considered as a promising biomass feedstock for the production of next generation biofuels. One of the major advantages of microalgae, when compared to higher plants, is their ability to accumulate high starch or lipid amounts, these compounds being convertible into bioethanol or biodiesel, respectively. However, techno-economic analyses have shown that productivity of reserve compounds need to be increased in order to reach economic feasibility.</p>
+    <heading id="h-00026-en">
+      <b>
+        <u>EXAMPLE</u>
+        <u>2: ADDITIONAL INFORMATION ON CHARACTERIZATION OF THE <i>STD1</i> MUTANT</u>
+      </b>
+    </heading>
+    <p id="p-00043-en" num="0043">Example 1 describes a massive accumulation of oil and starch after prolonged nitrogen starvation in the mutant <i>std1.</i> To dissect the molecular mechanism(s) between the mutated gene DYRK and the observed phenotype in carbon reserve formation, comparative transcriptomic, quantitative proteomic as well as lipidomic analyses of the mutant <i>std1</i> were carried out and compared to its wild-type background strain 137AH.</p>
+    <heading id="h-00027-en">
+      <b>RESULTS</b>
+    </heading>
+    <heading id="h-00028-en">
+      <b>The mutant <i>std1</i> over-accumulated oxidized MGDG</b>
+    </heading>
+    <p id="p-00044-en" num="0044">In example 1, the inventors observed the over-accumulation of triacylglycerols (TAGs, oils) in the mutant <i>std1</i> after prolonged nitrogen starvation (<figref>Figure 4B</figref>). To gain a full picture of overall lipidomic changes in the mutant, they quantified lipid classes based on thin layer chromatograph (TLC), and compared changes in lipid molecular species using the state-of-the-art LC-MS/MS. First, each lipid class was quantified based on TLC. As shown in <figref>Figure 10A</figref>, besides the classical polar lipids <i>(i.e.,</i> MGDG, DGDG, DGTS, PG, PE) present in all strains, a new band was detected just below the MGDG only in the mutant <i>std1</i> on the TLC plate (pointed by an arrow). The lipids present in the band were recovered <i>via</i> eluting with a mixture of chloroform and methanol (2:1) and subjected to identification by LC-MS/MS. Mass spectrometry analyses revealed the presence of a mixture of oxidized MGDG 34 with a combination of C16 and C18 fatty acids with different level of unsaturations. The mass spectrometry identification for one of the molecular species oxidized MGDG34:x is shown in <figref>Figure 10B</figref>.</p>
+    <p id="p-00045-en" num="0045">The relative quantity of these oxidized MGDG in the mutant cells was then further examined as compared to WT, also in a time dependent manner in response to nitrogen starvation. Mid-log phase grown cells were harvested once a day for 5 days, and total cellular lipids were extracted by the method of hexane and hot isopropanol. The total lipid extract was then subjected to lipidomic analyses by the state-of-the-art qTOF UPLC-MS/MS. Samples were subjected to both positive and negative analyses, for polar membrane lipid and for neutral lipid detection, respectively. As shown in <figref>Figure 11</figref>, except DGTS, no significant differences were observed for all other cellular lipids between WT, the mutant <i>std1</i> and two complemented strains (named here C2, and C7 respectively). Significant TAG accumulation after prolonged nitrogen starvation was observed, which confirms the previous TLC based analyses. For yet non-understood reasons, DGTS level remains constant in the mutant <i>std1,</i> yet increased dramatically in the WT in response to nitrogen starvation.</p>
+    <p id="p-00046-en" num="0046">A basal level of oxidized MGDGs is present in cells of <i>Chlamydonomas reinhardtii,</i> which remained unaltered in response to nitrogen starvation in WT (<figref>Figure 12A</figref>). Under nutrient sufficient conditions, the <i>std1</i> mutant already accumulated over twice more oxidized MGDG than the wild-type cells, which significantly increased even further (up to 18 fold higher) in a time dependent manner in response to nitrogen starvation. The major oxidized MGDG species include the C 16 and C 18 species and the detailed structure for these oxylins are under investigation in the laboratory at the moment (<figref>Figure 12B</figref>).</p>
+    <p id="p-00047-en" num="0047">Collectively, the higher accumulation/synthesis of hydroperoxide MGDG points to potential dys-regulation of the gene(s) encoding proteins catalyzing or regulating lipid oxidation reactions. Lipid oxidation is a common metabolic reaction in all biological systems. This reaction is mainly catalyzed by proteins called lipoxygenases (LOX: EC:1.13.11.12). Lipoxygenases are a family of non-heme iron containing dioxygenases. LOXs catalyze the insertion of molecular oxygen into stereospecific position of a polyunsaturated fatty acid chain. LOXs are ubiquitously found in plants, mammals, coral, moss, fungi and also a number of bacteria and microalgae.</p>
+    <heading id="h-00029-en">
+      <b>CreLOX1 is upregulated at both transcriptomic as well as at the proteomic level in the <i>std1</i> mutant</b>
+    </heading>
+    <p id="p-00048-en" num="0048">To gain better understanding of the potential regulatory networks involving STD1 protein, a comparative transcriptomic study based on the Illumina RNA-seq sequencing technology (Genoscope) was performed. Preliminary analyses of the transcriptomic dataset revealed an over 6 log fold (LogFC) increase of the CreLOX1 transcript as compared to WT cells under photoautotrophic conditions (Table 2). Quantitative proteomic analyses based on <sup>15</sup>N/<sup>14</sup>N labelling showed striking increase in the CreLOX1 protein (upto 30 logFC) in the mutant than in the WT (Table 2). This large increase in CreLOX1 protein amount in the mutant cells is further supported by the observation of an increased signal (∼110 kDa) on the SDS-PAGE. This band was recovered and identified as indeed containing mainly the CreLOX1 protein (<figref>Figure 13</figref> and Table 3).</p>
+    <p id="p-00049-en" num="0049">Products derived from these fatty acid oxidation reactions are collectively called oxylipins, which are lipophilic signaling molecules in many biological processes. Based on protein homology searches with the known Arabidopsis lipoxygenases as baits, only one putative homolog (CreLOX1) is encoded in the genome of <i>Chlamydomonas reinhardtii</i> (version 5). The locus encoding the putative CreLOX1 is Cre12.g512300 (phytozome version 5). The CreLOX1 protein has a theoretical molecular weight of 118 kDa, and contains two lipoxygenase domains similar to all its higher plant homologs. CreLOX1 is predicted to harbor a 65 amino acid long chloroplast transit peptide (cTP) at its N- terminus using the online ChloroP software. This is in agreement with the notion that the closet Arabidopsis homolog is the plastid localized AtLOX5. <tables id="tables-00003-en" num="0003"><img id="img-00001-en" wi="163" he="61" img-content="table" file="EP2942390A1_00017.PNG" img-format="png" original="imgb0001.tif" /></tables></p>
+    <p id="p-00050-en" num="0050">Two large-scale studies were performed, a transcriptomic and a proteomic approach, that reveal an upregulation of lipoxygenase 1 in <i>std1</i> mutant cells. The transcriptome dataset was obtained by RNA Sequencing using Illumina technology (Genoscope). Wild-type and <i>std1</i> mutant cells were grown at standard autotrophic condition in minimum medium and 2% CO<sub>2</sub> in the air at 100µE m<sup>-2</sup> s<sup>-1</sup> in triplicate precultures that were combined before harvesting. For quantitative proteomic analysis wild-type and mutant cells were grown at autotrophic conditions in 4 replicates for each strain, 2 replicates in minimum medium containing <sup>14</sup>N and 2 replicates containing <sup>15</sup>N ammonium salts leading to an overall metabolic labeling. Cells were centrifuged, washed, resuspended in MM-N medium and harvested after 24h of nitrogen deprivation. Before protein extraction, cells from <sup>l4</sup>N-labeled wild-type were combined with cells from <sup>15</sup>N-labeled <i>std1</i> and vice versa giving 4 biological replicates. Log2 fold change (logFC) for protein results is the mean of 4 replicates and given relative to wild-type. "Adj. <i>p</i>-value" is the <i>p</i>-value adjusted for Multiple Comparisons. <tables id="tables-00004-en" num="0004"><img id="img-00002-en" wi="163" he="112" img-content="table" file="EP2942390A1_00018.PNG" img-format="png" original="imgb0002.tif" /></tables> The first 5 identified proteins are listed according to their rank (rk) for each strain. The score and coverage of the proteins and the number of identified peptides, which also correspond to specific peptides, are displayed. The values "emPAI" indicating the "exponentially modified Protein Abundance Index" and the number of total (specific) spectra observed ("spectral counts"; relevant and duplicated) may serve to give an estimation of the relative abundance of a protein in one sample.</p>
+    <heading id="h-00030-en">
+      <b>LOX inhibitors prohibited carbon reserve (lipid and starch) formation</b>
+    </heading>
+    <p id="p-00051-en" num="0051">Based on current results, the inventors hypothesized that the kinase STD1 act as a negative regulator of LOX1 protein. Indeed, products of lipoxygenase, oxylipins, are precursors to a large array of signaling molecules playing roles in many developmental as well as stress response signaling networks. To test this hypothesis, catechol (Sigma Cat#452637) was used. Catechol is a known lipoxygenase inhibitors, which inhibits the activity of lipoxygenase by quenching the cellular reactive oxygen species. Two different catechol concentrations (5 mM and 10 mM) were initially tested. With the presence of 5 mM catechol, both TAG and starch accumulation were inhibited in the <i>std1</i> mutant after 6-day under nitrogen starvation (<figref>Figure 14</figref>). Catechol also inhibited TAG accumulation in response to nitrogen starvation in WT strains, however no effect on starch accumulation was observed. Other conditions are tested.</p>
+    <p id="p-00052-en" num="0052">From the above, it appears that inactivation of STD1 in <i>std1</i> mutant provokes a LOX1 up-regulation, thus leading to the formation of a family of oxylipins that are involved in starch and TAG accumulations, inhibition of LOX activity by catechol preventing starch and TAG accumulation.</p>
+    <heading id="h-00031-en">
+      <b>REFERENCES</b>
+    </heading>
+    <p id="p-00053-en" num="0053">
+      <ul id="ul-00002-en" list-style="none" compact="compact">
+        <li>
+          <nplcit id="ncit-00001" npl-type="s"><text>Ball, S. G., Dirick, L., Decq, A., Martiat, J. C., Matagne, R. F., 1990. Physiology of starch storage in the monocellular alga Chlamydomonas reinhardtii. Plant Sci. 66, 1-9</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00002" npl-type="s"><text>Becker, W., Joost, H. G., 1999. Structural and functional characteristics of Dyrk, a novel subfamily of protein kinases with dual specificity. Prog. Nucl. Acid. Res. Mol. Biol. 62, 1-17</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00003" npl-type="s"><text>Berthold, P., Schmitt, R., Mages, W., 2002. An engineered Streptomyces hygroscopicus aph 7" gene mediates dominant resistance against hygromycin B in Chlamydomonas reinhardtii. Protist. 153, 401-412</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00004" npl-type="s"><text>Chochois, V., Constans, L., Dauvillée, D., Beyly, A., Solivérès, M., Ball, S., Peltier, G., Cournac, L., 2010. Relationships between PSII-independent hydrogen bioproduction and starch metabolism as evidenced from isolation of starch catabolism mutants in the green alga Chlamydomonas reinhardtii. Int. J. Hydrogen Energ. 35, 10731-10740</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00005" npl-type="s"><text>Dauvillee, D., Stampacchia, O., Girard-Bascou, J., Rochaix, J. D., 2003. Tab2 is a novel conserved RNA binding protein required for translation of the chloroplast psaB mRNA. EMBO J. 22, 6378-6388</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00006" npl-type="s"><text>Davies, J. P., Yildiz, F. H., Grossman, A., 1996. Sac1, a putative regulator that is critical for survival of Chlamydomonas reinhardtii during sulfur deprivation. EMBO J. 15, 2150-2159</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00007" npl-type="s"><text>Delrue, F., Li-Beisson, Y., Setier, P. A., Sahut, C., Roubaud, A., Froment, A. K., Peltier, G., 2013. Comparison of various microalgae liquid biofuel production pathways based on energetic, economic and environmental criteria. Bioresource Technol. 136,205-212</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00008" npl-type="s"><text>Goodson, C., Roth, R., Wang, Z. T., Goodenough, U., 2011. Structural correlates of cytoplasmic and chloroplast lipid body synthesis in Chlamydomonas reinhardtii and stimulation of lipid body production with acetate boost. Eukaryot. Cell. 10, 1592-1606</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00009" npl-type="s"><text>Gouy, M., Guindon, S., Gascuel, O., 2010. SeaView version 4: A multiplatform graphical user interface for sequence alignment and phylogenetic tree building. Mol. Biol. Evol. 27, 221-224</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00010" npl-type="s"><text>Grossman, A., 2000. Acclimation of Chlamydomonas reinhardtii to its nutrient environment. Protist. 151, 201-224</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00011" npl-type="s"><text>Han, J. F., Miranda-Saavedra, D., Luebbering, N., Singh, A., Sibbet, G., Ferguson, M. A. J., Cleghon, V., 2012. Deep evolutionary conservation of an intramolecular protein kinase activation mechanism. Plos One. 7</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00012" npl-type="b"><text>Harris, E. H., 2009. The Chlamydomonas sourcebook. Second edition. Academic Press</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00013" npl-type="s"><text>Hu, Q., Sommerfeld, M., Jarvis, E., Ghirardi, M., Posewitz, M., Seibert, M., Darzins, A., 2008. Microalgal triacylglycerols as feedstocks for biofuel production: perspectives and advances. Plant J. 54, 621-639</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00014" npl-type="s"><text>Katoh, K., Misawa, K., Kuma, K., Miyata, T., 2002. MAFFT: a novel method for rapid multiple sequence alignment based on fast Fourier transform. Nucleic Acids Res. 30, 3059-3066</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00015" npl-type="s"><text>Kindle, K. L., 1990. High-frequency nuclear transformation of Chlamydomonas reinhardtii. Proc. Natl. Acad. Sci. USA. 87, 1228-1232</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00016" npl-type="s"><text>Larkum, A. W. D., Ross, I. L., Kruse, O., Hankamer, B., 2012. Selection, breeding and engineering of microalgae for bioenergy and biofuel production. TiBiotech. 30, 198-205</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00017" npl-type="s"><text>Li-Beisson, Y., Shorrosh, B., Beisson, F., Andersson, M. X., Arondel, V., Bates, P. D., Baud, S., Bird, D., Debono, A., Durrett, T. P., Franke, R. B., Graham, I. A., Katayama, K., Kelly, A. A., Larson, T., Markham, J. E., Miquel, M., Molina, I., Nishida, I., Rowland, O., Samuels, L., Schmid, K. M., Wada, H., Welti, R., Xu, C., Zallot, R., Ohlrogge, J., 2010. Acyl-lipid metabolism. Arabidopsis Book. 8:e0133. doi: 10. 1199/tab. 0133. Epub 2010 Jun 11</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00018" npl-type="s"><text>Liu, C. M., Willmund, F., Whitelegge, J. P., Hawat, S., Knapp, B., Lodha, M., Schroda, M., 2005. J-domain protein CDJ2 and HSP70B are a plastidic chaperone pair that interacts with vesicle-inducing protein in plastids 1. Mol. Biol. Cell. 16,1165-1177</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00019" npl-type="s"><text>Malcher, M., Schladebeck, S., Mosch, H. U., 2011. The Yak1 protein kinase lies at the center of a regulatory cascade affecting adhesive growth and stress resistance in Saccharomyces cerevisiae. Genetics. 187, 717-730</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00020" npl-type="s"><text>Merchant, S. S., Kropat, J., Liu, B. S., Shaw, J., Warakanont, J., 2012. TAG, You're it! Chlamydomonas as a reference organism for understanding algal triacylglycerol accumulation. Curr. Op. Biotechnol. 23, 352-363</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00021" npl-type="s"><text>Moriya, H., Shimizu-Yoshida, Y., Omori, A., Iwashita, S., Katoh, M., Sakai, A., 2001. Yaklp, a DYRK family kinase, translocates to the nucleus and phosphorylates yeast Pop2p in response to a glucose signal. Genes &amp; Dev. 15, 1217-1228</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00022" npl-type="s"><text>Peltier, G., Schmidt, G. W., 1991. Chlororespiration - an adaptation to nitrogen deficiency in Chlamydomonas reinhardtii. Proc. Natl. Acad. Sci. USA. 88, 4791-4795</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00023" npl-type="s"><text>Ral, J. P., Colleoni, C., Wattebled, F., Dauvillee, D., Nempont, C., Deschamps, P., Li, Z. Y., Morell, M. K., Chibbar, R., Purton, S., d'Hulst, C., Ball, S. G., 2006. Circadian clock regulation of starch metabolism establishes GBSSI as a major contributor to amylopectin synthesis in Chlamydomonas reinhardtii. Plant Physiol. 142, 305-317</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00024" npl-type="s"><text>Rohde, J. R., Bastidas, R., Puria, R., Cardenas, M. E., 2008. Nutritional control via Tor signaling in Saccharomyces cerevisiae. Curr. Opin. Microbiol. 11, 153-160</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00025" npl-type="s"><text>Rumeau, D., Becuwe-Linka, N., Beyly, A., Louwagie, M., Garin, J., Peltier, G., 2005. New subunits NDH-M, -N, and -O, encoded by nuclear genes, are essential for plastid Ndh complex functioning in higher plants. Plant Cell. 17, 219-232</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00026" npl-type="s"><text>Schroda, M., Vallon, O., Wollman, F. A., Beck, C. F., 1999. A chloroplast-targeted heat shock protein 70 (HSP70) contributes to the photoprotection and repair of photosystem II during and after photoinhibition. Plant Cell. 11, 1165-1178</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00027" npl-type="s"><text>Schulz-Raffelt, M., Lodha, M., Schroda, M., 2007. Heat shock factor 1 is a key regulator of the stress response in Chlamydomonas. Plant J. 52, 286-295</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00028" npl-type="s"><text>Siaut, M., Cuine, S., Cagnon, C., Fessler, B., Nguyen, M., Carrier, P., Beyly, A., Beisson, F., Triantaphylides, C., Li-Beisson, Y. H., Peltier, G., 2011. Oil accumulation in the model green alga Chlamydomonas reinhardtii: characterization, variability between common laboratory strains and relationship with starch reserves. BMC Biotechnol. 11</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00029" npl-type="s"><text>Sulpice, R., Pyl, E. T., Ishihara, H., Trenkamp, S., Steinfath, M., Witucka-Wall, H., Gibon, Y., Usadel, B., Poree, F., Piques, M. C., Von Korff, M., Steinhauser, M. C., Keurentjes, J. J. B., Guenther, M., Hoehne, M., Selbig, J., Fernie, A. R., Altmann, T., Stitt, M., 2009. Starch as a major integrator in the regulation of plant growth. Proc. Natl. Acad. Sci. USA. 106, 10348-10353</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00030" npl-type="s"><text>Tamura, K., Peterson, D., Peterson, N., Stecher, G., Nei, M., Kumar, S., 2011. MEGA5: Molecular evolutionary genetics analysis using maximum likelihood, evolutionary distance, and maximum parsimony methods. Mol. Biol. Evol. 28, 2731-2739</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00031" npl-type="s"><text>Tolleter, D., Ghysels, B., Alric, J., Petroutsos, D., Tolstygina, I., Krawietz, D., Happe, T., Auroy, P., Adriano, J. M., Beyly, A., Cuine, S., Plet, J., Reiter, I. M., Genty, B., Cournac, L., Hippler, M., Peltier, G., 2011. Control of hydrogen photoproduction by the proton gradient generated by cyclic electron flow in Chlamydomonas reinhardtii. Plant Cell. 23, 2619-2630</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00032" npl-type="s"><text>Wijffels, R. H., Barbosa, M. J., 2010. An outlook on microalgal biofuels. Science. 329, 796-799</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00033" npl-type="s"><text>Wilson, W. A., Roach, P. J., Montero, M., Baroja-Fernandez, E., Munoz, F. J., Eydallin, G., Viale, A. M., Pozueta-Romero, J., 2010. Regulation of glycogen metabolism in yeast and bacteria. FEMS Microbiol. Rev. 34, 952-985</text></nplcit>.</li>
+        <li>
+          <nplcit id="ncit-00034" npl-type="s"><text>Wykoff, D. D., Davies, J. P., Melis, A., Grossman, A. R., 1998. The regulation of photosynthetic electron transport during nutrient deprivation in Chlamydomonas reinhardtii. Plant Physiol. 117, 129-139</text></nplcit>.</li>
+      </ul>
+      <img id="img-00003-en" wi="146" he="233" img-content="dna" file="EP2942390A1_00019.PNG" img-format="png" original="imgb0003.tif" />
+      <img id="img-00004-en" wi="133" he="233" img-content="dna" file="EP2942390A1_00020.PNG" img-format="png" original="imgb0004.tif" />
+      <img id="img-00005-en" wi="134" he="233" img-content="dna" file="EP2942390A1_00021.PNG" img-format="png" original="imgb0005.tif" />
+      <img id="img-00006-en" wi="134" he="233" img-content="dna" file="EP2942390A1_00022.PNG" img-format="png" original="imgb0006.tif" />
+      <img id="img-00007-en" wi="137" he="233" img-content="dna" file="EP2942390A1_00023.PNG" img-format="png" original="imgb0007.tif" />
+      <img id="img-00008-en" wi="157" he="233" img-content="dna" file="EP2942390A1_00024.PNG" img-format="png" original="imgb0008.tif" />
+      <img id="img-00009-en" wi="151" he="233" img-content="dna" file="EP2942390A1_00025.PNG" img-format="png" original="imgb0009.tif" />
+      <img id="img-00010-en" wi="157" he="233" img-content="dna" file="EP2942390A1_00026.PNG" img-format="png" original="imgb0010.tif" />
+      <img id="img-00011-en" wi="155" he="233" img-content="dna" file="EP2942390A1_00027.PNG" img-format="png" original="imgb0011.tif" />
+      <img id="img-00012-en" wi="151" he="233" img-content="dna" file="EP2942390A1_00028.PNG" img-format="png" original="imgb0012.tif" />
+      <img id="img-00013-en" wi="155" he="233" img-content="dna" file="EP2942390A1_00029.PNG" img-format="png" original="imgb0013.tif" />
+      <img id="img-00014-en" wi="160" he="196" img-content="dna" file="EP2942390A1_00030.PNG" img-format="png" original="imgb0014.tif" />
+    </p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151111">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A method for producing biomass feedstock, comprising the steps of:
+<claim-text>(i) cultivating green microalgae cells in which the expression and/or the activity of the <i>DYRKP-1</i> protein is altered; and</claim-text><claim-text>(ii) inducing reserve accumulation and/or increase in biomass production by said microalgae.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The method according to claim 1, wherein said microalgae lack a functional DYRKP-1 gene.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The method according to claim 1 or claim 2, wherein said microalgae are Chlamydomonas.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The method according to any of claims 1 to 3, wherein said microalgae are Chlamydomonas reinhardtii.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The method according to any of claims 1 to 4, wherein step (ii) comprises incubating the microalgae cells in a medium deficient in at least one element selected from the group consisting of nitrogen, sulfur and phosphorus (deficient medium).</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The method according to any of claims 1 to 5, wherein step (ii) comprises illuminating the microalgae cells.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The method according to claim 6, wherein said illumination is performed at an intensity comprised between 25 and 2000 µmol photons m<sup>-2</sup> s<sup>-1</sup>, during 8 to 24 hours per day.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The method according to any of claims 5 to 7, wherein the step of incubating the microalgae cells in the deficient medium lasts at least 24 hours.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The method according to claim 8, wherein the step of incubating the microalgae cells in the deficient medium lasts from 2 to 8 days, preferably from 3 to 6 days.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The method according to any of claims 1 to 9, wherein step (ii) comprises incubating the microalgae cells in a medium comprising organic carbon.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The method according to claim 10, wherein in step (ii), the cells are incubated during 2 to 6 days in a deficient medium comprising acetate.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The method according to any of claims 1 to 9, wherein step (ii) comprises incubating the microalgae cells in photoautotrophic conditions.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The method of claim 12, wherein in step (ii), the cells are incubated during at least 15 hours in photoautotrophic conditions in a deficient medium.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>Use of the method according to any of claims 10 to 13, for producing oil.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>Use of the method according to claim 12 or claim 13, for producing starch and/or biomass.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0007.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0008.tif" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0009.tif" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0010.tif" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0011.tif" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0012.tif" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0013.tif" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0014.tif" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0015.tif" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0016.tif" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00017.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00018.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00019.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00020.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00021.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0005.tif" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00022.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0006.tif" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00023.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0007.tif" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00024.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0008.tif" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00025.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0009.tif" inline="yes" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00026.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0010.tif" inline="yes" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00027.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0011.tif" inline="yes" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00028.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0012.tif" inline="yes" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00029.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0013.tif" inline="yes" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="EP2942390A1_00030.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0014.tif" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="EP2942390A1.PDF" type="pdf" size="2200079" pages="56" />
+</lexisnexis-patent-document>

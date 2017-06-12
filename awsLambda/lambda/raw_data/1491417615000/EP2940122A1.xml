@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940122A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091249" date-changed="20160126" time-changed="192206">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121940669">
+        <country>EP</country>
+        <doc-number>2940122</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15162520</doc-number>
+        <date>20150406</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>TR</country>
+        <doc-number>201404763</doc-number>
+        <date>20140428</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>TR</country>
+        <doc-number>201404763</doc-number>
+        <kind>A</kind>
+        <date>20140428</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201404763</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>TR20140004763</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160126">
+      <classification-ipcr sequence="1">
+        <text>C12N   1/14        20060101AFI20150730BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150730</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C12N   1/20        20060101ALI20150730BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150730</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C12R   1/01        20060101ALN20150730BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>R</subclass>
+        <main-group>1</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20150730</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C12R   1/44        20060101ALN20150730BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>R</subclass>
+        <main-group>1</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20150730</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C12R   1/645       20060101ALN20150730BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>R</subclass>
+        <main-group>1</main-group>
+        <subgroup>645</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20150730</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C22B   3/18        20060101ALI20150730BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150730</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160126">
+      <classification-cpc sequence="1">
+        <text>C12R   1/44        20130101 FI20150727BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>R</subclass>
+        <main-group>1</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150727</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12R   1/01        20130101 LI20150727BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>R</subclass>
+        <main-group>1</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150727</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12R   1/645       20130101 LI20150727BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>R</subclass>
+        <main-group>1</main-group>
+        <subgroup>645</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150727</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C22B   3/18        20130101 LI20151105BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151105</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>Y02P  10/234       20151101 LA20160120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20151101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>P</subclass>
+        <main-group>10</main-group>
+        <subgroup>234</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">8</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">CACO3 AUFLÖSENDE BAKTERIENSTÄMME UND PILZ</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">CACO3 DISSOLVING BACTERIAL STRAINS AND FUNGUS</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">SOUCHES BACTÉRIENNES ET CHAMPIGNON DISSOLVANT LE CACO3</invention-title>
+    <references-cited date-changed="20151110">
+      <patent-citations name="patcit" date-changed="20151110" />
+      <non-patent-citations name="nplcit" date-changed="20151110" />
+      <citation>
+        <patcit num="1" dnum="CN102976640A" dnum-type="publication number">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102976640</doc-number>
+            <kind>A</kind>
+            <name>ACRE COKING &amp; REFRACTORY ENG</name>
+            <date>20130320</date>
+          </document-id>
+          <application-date>
+            <date>20121218</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="CN103241751A" dnum-type="publication number">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103241751</doc-number>
+            <kind>A</kind>
+            <name>UNIV SHAANXI NORMAL</name>
+            <date>20130814</date>
+          </document-id>
+          <application-date>
+            <date>20130427</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="CN102126734A" dnum-type="publication number">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102126734</doc-number>
+            <kind>A</kind>
+            <name>LIAONING XINFAZHAN REFRACTORY MATERIAL GROUP CO LTD</name>
+            <date>20110720</date>
+          </document-id>
+          <application-date>
+            <date>20110125</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>GULLUCE M. ET AL.: "Conventional and Molecular Identification of bacteria with magnesite enrichment potential from local quarries in Erzurum", GEOMICROBIOLOGY JOURNAL, vol. 31, 4 March 2014 (2014-03-04), pages 445 - 451, XP055204812, Retrieved from the Internet &lt;URL:http://www.tandfonline.com/loi/ugmb20&gt; [retrieved on 20150728], DOI: 10.1080/01490451.2013.791357</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-84895727553&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>X</category>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>ORHAN FURKAN ET AL: "Identification and application of CaCO3 dissolving bacteria in magnesite quarries", CURRENT OPINION IN BIOTECHNOLOGY, vol. 24, no. Suppl. 1, July 2013 (2013-07-01), &amp; EUROPEAN BIOTECHNOLOGY CONGRESS; BRATISLAVA, SLOVAKIA; MAY 16 -18, 2013, pages S31, XP002742743</text>
+        </nplcit>
+        <category>X</category>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>YANMIS DERYA ET AL: "The enrichment potential of magnesite by using some Actinomycetes isolated from caves", CURRENT OPINION IN BIOTECHNOLOGY, vol. 22, no. Suppl. 1, September 2011 (2011-09-01), &amp; EUROPEAN BIOTECHNOLOGY CONGRESS; ISTANBUL, TURKEY; SEPTEMBER 28 -OCTOBER 01, 2011, pages S62, XP002742744</text>
+        </nplcit>
+        <category>X</category>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="4">
+          <text>GANGAVARAPU SUBRAHMANYAM ET AL: "Carbonate-Dissolving Bacteria from "Milolite", a Bioclastic Limestone, from Gopnath, Gujarat, Western India", MICROBES AND ENVIRONMENTS, vol. 27, no. 3, 1 January 2012 (2012-01-01), pages 334 - 337, XP055204815, ISSN: 1342-6311, DOI: 10.1264/jsme2.ME11347</text>
+        </nplcit>
+        <category>X</category>
+        <category>A</category>
+      </citation>
+      <citation>
+        <nplcit num="5">
+          <text>APPANNA, V.; LEMIRE, J.; HNATIUK, R., BIOMINING: A GREN TECHNOLOGY TO MINE VALUABLE METALS, 2011</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="6">
+          <text>"Metal Extraction by Bacterial Oxidation of Minerals", 1993, ELLIS HORWOOD LIMITED</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="7">
+          <text>BENTH, I.; ERDOGAN, N.; BIRICI, B.; TOPAL, U.; §AHBAZ, O.: "Manyezit ara ürünün kalsinasyon-manyetik ayirma yontemleriyle zenginle tirilmesi", J. ENDÜSTRIYEL HAMMADDELER SEMPOZYUMU, IZMIR, TÜRKIYE, 2004</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="8">
+          <text>BRIERLEY, C. L.: "How will biomining be applied in future?", TRANS. NONFERROUS. MET. SOC. OF CHINA, 2008, pages 1302 - 1310, XP025851007, DOI: doi:10.1016/S1003-6326(09)60002-9</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="9">
+          <text>CHEN, G.; TAO, D.: "Effect of solution chemistry on flotability of magnesite and dolomite", INT. J. MINER. PROCESS., vol. 74, 2004, pages 343 - 357, XP004604848, DOI: doi:10.1016/j.minpro.2004.04.004</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-6344278189&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="10">
+          <text>DANADURAI, K.S.K.; CHELLAM, S.; LEE, C.; FRASER, M.P.: "Trace elemental analysis of airborne particulate matter using dynamic reaction cell inductively coupled plasma - masss pectrometry: Application to monitoring episodic industrial emission events", ANALYTICACHIMICAACTA, vol. 686, 2011, pages 40 - 49</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-78651357240&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="11">
+          <text>ERDOGAN N; YILDIZ R: "Manyezit ve Bazit Refrakter Malzeme Teknolojisi", 1995, KUMA , KUTAHYA, pages: 150S</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="12">
+          <text>GENCE, N.: "Enrichment of magnesiteore", ENG. &amp;ARCH.FAC. OSMANGAZIUNIVERSITY, vol. XIV, no. 2, 2001</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="13">
+          <text>GÜRCAN, H.; SESVER, A.; OZDEMIR, N.; OZDEMIR, B., CRYPTOCRYSTALLINE AND MACROCRYSTALLINE MAGNESITE ORES: COMPARING MICROSTRUCTURES AND THERMAL BEHAVIOUR, 2012</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="14">
+          <text>HOQUE, E.; PHILIP, O.J: "Biotechnological recovery of heavy metals from secondary sources—An overview", MATERIALSSCIENCEANDENGINEERING C, 2011, pages 57 - 66</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="15">
+          <text>KOCAEFE M.: "Manyezit envanteri", MTA YAYINLARI, ANKARA, 1982</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="16">
+          <text>ÖZDEMIR, M.; ÇAKIR, D.; KIPÇAK, ?.: "Magnesium recovery from magnesite tailings by acid leaching and production of magnesium chloride hexahydrate from leaching solution by evaporation", INT. J. MINER.PROCESS, vol. 93, 2009, pages 209 - 212, XP026603211, DOI: doi:10.1016/j.minpro.2009.08.001</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-70149104217&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="17">
+          <text>RAWLINGS, D. E.; JOHNSON, D. B.: "The microbiology of biomining: development and optimization of mineral-oxidizing microbial consortia", MICROBIOLOGY, vol. 153, 2007, pages 315 - 324</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-33847195791&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="18">
+          <text>RULKENS WH; GROTENHUIS, JTC; TICHY R: "HeavyMetals", 1995, SPRINGER, article "Methods of cleaning contaminated soils and sediments", pages: 151 - 191</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="19">
+          <text>SEVER E: "?skenderun Demir Çelik Fabrikasi Atiklarina Biyoliç Uygulamasi. Yükseklisans Tezi", ÇUKUROVA ÜNIVERSITESI, FEN BILIMLERI ENSTITÜSÜ, 2006</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="20">
+          <text>SHARAFI, S.M.; RASOOLI, I.; BEHESHTI-MAAL, K.: "Isolation, characterization and optimization of indigenous acetic acid bacteria and evaluation of their preservation methods", IRANIAN JOURNAL OF MICROBIOLOGY, vol. 2, 2010, pages 41 - 48</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-77954920922&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="21">
+          <text>SIDDIQUI, M. H.; KUMAR, A.,; KESARI, K. K.,; ARIF, J. M.: "Biomining - A UsefulApproachToward Metal Extraction", AMERICAN-EURASIANJOURNAL OF AGRONOMY, vol. 2, no. 2, 2009, pages 84 - 88</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="22">
+          <text>WATLING, H R.: "The bioleaching of sulphide minerals with emphasis on copper sulphides-A review", HYDROMETALLURGY, vol. 84, 2006, pages 81 - 108, XP027884171</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-33748120714&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Yeditepe Universitesi</orgname>
+            <registered-number>101198962</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Inonu Mahallesi Kayisdagi Caddesi 26 Agustos Yerlesimi Kadikoy</address-1>
+              <city>34755 Istanbul</city>
+              <country>TR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Sahin, Fikrettin</name>
+            <address>
+              <address-1>Yeditepe Universitesi Yeditepe Universitesi Genetik Ve Biyomuhendislik Bolumu Kayisdagi Atasehir</address-1>
+              <city>34755 Istanbul</city>
+              <country>TR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Yilmazer, Gonca Altin</name>
+            <address>
+              <address-1>Yeditepe Universitesi Yeditepe Universitesi Genetik Ve Biyomuhendislik Bolumu Kayisdagi Atasehir</address-1>
+              <city>34755 Istanbul</city>
+              <country>TR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Yazici, Müge</name>
+            <address>
+              <address-1>Yeditepe Universitesi Yeditepe Universitesi Genetik Ve Biyomuhendislik Bolumu Kayisdagi Atasehir</address-1>
+              <city>34755 Istanbul</city>
+              <country>TR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>Eroglu, Seckin</name>
+            <address>
+              <address-1>Yeditepe Universitesi Selcuk 2 Blok Giris 3, No 28 Mavisehir</address-1>
+              <city>35590 Izmir</city>
+              <country>TR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Dericioglu Kurt, Ekin</name>
+            <registered-number>100994565</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Ankara Patent Bureau Limited Bestekar Sokak No: 10 Kavaklidere</address-1>
+              <city>06680 Ankara</city>
+              <country>TR</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151104">
+      <main-family family-id="174442687">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940122</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20150406</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174442686">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940122</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20150406</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to new bacteria strains and fungus isolates which can dissolve the CaCO<sub>3</sub> mineral in the magnesite ore via biological mechanisms. By means of the present invention; magnesite is enriched, a more economic and environment friendly dissolving process is obtained, enrichment of low quality minerals is enabled, chemicals are not used during dissolving process, and harmful wastes are not released to the environment. <img id="imga-00001-en" wi="139" he="97" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">
+      <b>Field of the Invention</b>
+    </heading>
+    <p id="p-00001-en" num="0001">The present invention relates to bacteria strains and fungus isolates which can dissolve the CaCO<sub>3</sub> mineral in the magnesite ore via biological mechanisms.</p>
+    <heading id="h-00002-en">
+      <b>Background of the Invention</b>
+    </heading>
+    <p id="p-00002-en" num="0002">Magnesite is a mineral, which theoretically comprises 47.8% MgO and 52.2% CO<sub>2</sub> and a trace amount of Fe<sub>2</sub>O<sub>3</sub>. and whose specific gravity varies in the range of 2.9-3.1 g/cm<sup>3</sup> depending on its content. Magnesite, which is the main source of magnesium element and various compounds thereof can be used in many fields from production of refractory brick to pharmaceutical products (Özdemir et al., 2009). Due to the fact that magnesium is a reactive element, magnesite ore is not present in any source at a purity that allows it to be used directly (Bentl1 et al., 2004). Magnesite ores contain various amounts of Ca, Si, Fe, Mg and Al elements as impurities (Gürcan et al., 2012). The impurities around the magnesite should be removed in order for it to become commercially usable. As the purity of the mineral increases, its value increases as well. Therefore the mineral is subjected to various physical and chemical processes such as magnetic separation, hand sorting, heavy medium separation and flotation (Gence, 2001). Magnesite processing technology starts with extracting ore from the mineral deposit. The mineral is subjected to various enrichment processes after being extracted from the deposit. Enrichment process is separation of the ore from the gang minerals. Characteristic gang minerals of crystalline magnesite are dolomite, biotite, garnet, talc, quartz; and of gel magnesite are serpentine and opal. Generally triage (hand sorting), heavy medium enrichment, magnetic separation, electrostatic separation, flotation enrichment, calcination and optical enrichment methods are used for enrichment of magnesite (Kocaefe 1982; Erdogan and Yildiz 1995). The method of heavy medium enrichment is based on the density difference between the magnesite material and gang minerals. Ferrosilicon (6,8 gr/cm<sup>3</sup>), which is a very dense material, is used for this process. With this method, substances that are denser than ferrosilicon precipitate while the lighter substances float. Hand sorting is an observational method, which is based on man power. Magnesite is separated from the other minerals according to color differences.</p>
+    <p id="p-00003-en" num="0003">Magnetic enrichment method is a type of separation based on magnetic properties of the minerals. Magnetic enrichment is used for separating ferromagnetic and paramagnetic gang materials from magnesite since magnesite is a non-metal and non-magnetic mineral. Flotation is an enrichment method for separating magnesite from calcium carbonate and silica wherein oleic acid and a small amount of carbon dioxide are used as media. The most important disadvantage of this method is cost. Due to the high cost of this method, magnetic enrichment and hand sorting methods are preferred more (Ozdemir et al., 2009). Calcination is the process of obtaining a more dense and solid magnesite by heating to high temperatures and removing carbondioxide. When magnesite is heated to 650-1100°C in a controlled manner, calcined magnesite is obtained. This magnesite is reactive. When magnesite is heated up to 1400-1800°C, sintered magnesite is obtained. This magnesite is slightly reactive (Chen and Tao, 2004). Due to economic reasons, the most common ones of these enrichment methods are hand sorting, magnetic separation and calcination (Gence, 2001; Demir and Dönmez, 2009). Although these physical and chemicals methods are widely used for treatment of sediments contaminated with metals, they have disadvantages such as the high cost and high amount of waste resulting due to the facts that low quality ores cannot be enriched, the amount of recovered product is low, refractory materials is used in many processes and high amounts of energy are required (Rulkens 1995; Sever 2006). In addition, studies are conducted by the researchers in many countries on biological applications in mining for the last 40 years (Hoque and Philip, 2011). This process, which is defined as biomining, has provided an alternative to the physical and chemical methods (Rawlings and Johnson, 2007; Brierley, 2008; Appana et al., 2011). Biomining, which is an economic method even in environment friendly and low quality mines as opposed to the conventional methods, is still being used in copper, gold, silver, cobalt, nickel, molybdenum, zinc and lead mines with <i>Acidithiobacillusferrooxidans, Acidithiobacillusthiooxidans, Acidithiobacilluscaldus, Leptospirillumferrooxidans</i> ve <i>Leptospirillumferriphilum</i> microorganisms (Baret and Hughes, 1993; Watling, 2006; Siddiqui et al., 2009;Hoque and Philip, 2011).</p>
+    <p id="p-00004-en" num="0004">The Chinese patent document no. <patcit id="pcit-00001" dnum="CN102976640"><text>CN102976640</text></patcit>, an application in the state of the art, discloses about obtaining high-quality magnesite and calcination carried out at super high-temperature in order to obtain it.</p>
+    <p id="p-00005-en" num="0005">The Chinese Patent document no <patcit id="pcit-00002" dnum="CN103241751"><text>CN103241751</text></patcit>, an application known in the state of the art, discloses about obtaining a high-purity magnesium oxide. The said document also discloses about discharge of a high amount of carbon dioxide and removal thereof from the environment.</p>
+    <p id="p-00006-en" num="0006">The Chinese patent document no. <patcit id="pcit-00003" dnum="CN102126734"><text>CN102126734</text></patcit>, an application in the state of the art, discloses that washing and neutralization processes are carried out for obtaining magnesite.</p>
+    <heading id="h-00003-en">
+      <b>Summary of the Invention</b>
+    </heading>
+    <p id="p-00007-en" num="0007">The objective of the present invention is to provide new bacteria strains and fungus isolates which enable to enrich magnesite.</p>
+    <p id="p-00008-en" num="0008">Another objective of the present invention is to provide new bacteria strains and fungus isolates which provide more economic and environment friendly dissolving process than the known methods.</p>
+    <p id="p-00009-en" num="0009">A further objective of the present invention is to provide new bacteria strains and fungus isolates which enable to enrich low quality mines.</p>
+    <p id="p-00010-en" num="0010">Another objective of the present invention is to provide new bacteria strains and fungus isolates wherein chemicals are not used during dissolving process, and which do not discharge environmentally hazardous wastes.</p>
+    <p id="p-00011-en" num="0011">Another objective of the present invention is to provide new bacteria strains and fungus isolates which do not consume high energy during decalcification.</p>
+    <p id="p-00012-en" num="0012">A further objective of the present invention is to provide new bacteria strains and fungus isolates which eliminates the cost for transporting the mine as it can be applied in a mineral deposit.</p>
+    <p id="p-00013-en" num="0013">Another objective of the present invention is to provide new bacteria strains and fungus isolates which decrease labor and reduce worker cost since it eliminates a great deal of process steps in comparison to the known methods in decalcification.</p>
+    <heading id="h-00004-en">
+      <b>Detailed Description of the Invention</b>
+    </heading>
+    <p id="p-00014-en" num="0014">"Bacteria strains and fungus isolates dissolving CaCO3 biologically" developed to fulfill the objective of the present invention is illustrated in the accompanying figures wherein, <ul id="ul-00001-en" list-style="none" compact="compact"><li><figref><b>Figure 1</b></figref> is the graphical representation of magnesite demineralization of <i>Enterecoccus</i> spp. strain and the free Mg and Ca content.</li><li><figref><b>Figure 2</b></figref> is the graphical representation of magnesite demineralization of <i>Lactococcus</i> spp. strain and the free Mg and Ca content.</li><li><figref><b>Figure 3</b></figref> is the graphical representation of magnesite demineralization of <i>Staphylococcus</i> spp. strain and the free Mg and Ca content.</li><li><figref><b>Figure 4</b></figref> is the graphical representation of magnesite demineralization of <i>Neurospora</i> spp. strain and the free Mg and Ca content.</li></ul></p>
+    <p id="p-00015-en" num="0015">Four bacteria strains are used for decalcifying the magnesite of the present invention. Two of the strains of the present invention were deposited in United States Department of Agriculture Research, Education and Economics Agricultural Research Service on January 28, 2009. Accordingly, deposit numbers of the strains named <i>Lactococcus garviae</i> A1, <i>Enterococcus faecalis</i> EF1-06, <i>Staphylococcus</i> spp. and <i>Neurospora</i> spp. were recorded as NRRL B-50196, NRRL B-50198 respectively. The other two of the strains of the present invention were deposited in Leibniz Institute DSMZ German Collection of Microorganisms and Cell Cultures ((LeibnizInstitut DSMZ-Deutschesammlung von Mikroorganismen und Zellkulturen GmbHon) on October 17, 2013). Accordingly, deposit numbers of <i>Staphylococcus warneri</i> GSK1 strain and <i>Neurospora tetrasperma</i> GNT1 isolate were recorded as DSM 27873 and DSM 27874 respectively.</p>
+    <p id="p-00016-en" num="0016">In order to obtain high purity magnesium from magnesite, CaCO<sub>3</sub> (calcium carbonate) in the medium should be removed.</p>
+    <p id="p-00017-en" num="0017">
+      <i>Enterococcus</i> spp.and <i>Lactococcus</i> spp. strains were isolated from the rock. <i>Staphylococcus warneri</i> and <i>Neurospora tetrasperma</i> were isolated from a magnesite mine. While the isolates <i>Enterococcus spp. Lactococcus</i> spp., <i>Staphylococcus warneir</i> are gram-positive bacteria, <i>Neurospora tetrasperma</i> is a fungus. The microorganisms of the present invention are mesophilic as they are isolated from natural environment.</p>
+    <heading id="h-00005-en">
+      <b>Experimental studies</b>
+    </heading>
+    <p id="p-00018-en" num="0018">Granulated magnesite (MgCO<sub>3</sub>) mineral was used in the experimental studies. By carrying out experimental studies in a medium containing calcium carbonate, a medium with magnesite was prepared. In preparation of the medium; 5g yeast extract, 5g glucose, 6g magnesite (MgCO<sub>3</sub>) and 500 ml water were used. The medium was sterilized using an autoclave. <i>Enterococcus</i> spp. <i>Lactococcus</i> spp. <i>Staplylococcus warneri</i> strains and <i>Neurospora tetrasperma</i> isolate were inoculated to the magnesite-containing medium and was incubated at 30°C and 150 rpm (Sharafi et al. 2010). Samples were taken during the study at certain intervals in order to make measurements. The elemental analyses were performed with ICP-MS device. The samples, which were taken in a sterile cabin, were filtered through a 0.2 µm filter. The filtered samples were diluted to 100µl/10ml (filtrate/ 2% HNO<sub>3</sub>) and Mg and Ca amount were measured by the ICP-MS device.</p>
+    <p id="p-00019-en" num="0019">While these microorganisms are used alone in purification of magnesium, they can also be used in different combinations with each other.</p>
+    <heading id="h-00006-en">
+      <b>Experiment results</b>
+    </heading>
+    <p id="p-00020-en" num="0020">
+      <i>Enterococcus</i> spp., <i>Lactococcus</i> spp., <i>Staphylococcus warneir</i> strains and <i>Neurospora tetrasperma</i> isolate were incubated in the magnesite-containing medium; and elemental analyses were conducted by means of ICP-MS for measuring free Mg and Ca amount (Danadurai et al., 2011). The results for the magnesite demineralization at the end of the measurement are shown in <figref>Figure 1, 2</figref>, <figref>3, 4</figref>.</p>
+    <p id="p-00021-en" num="0021">Free magnesium that is liberated as a result demineralization is shown in <figref>Figure 1</figref>. The free calcium content increasing at the same time shows that <i>Enterecoccus</i> spp. strain dissolves CaCO<sub>3</sub>. While the columns that we name as the total show the initial Mg and Ca contents, the other columns show the free Mg and Ca content which are liberated by being dissolved by microorganisms in time. The same results were observed when the other microorganisms of the present invention were used (<figref>Figure 2</figref>, <figref>3, 4</figref>).</p>
+    <p id="p-00022-en" num="0022">The microorganisms of the present invention, can be in the form of a liquid or solid solution, powder, granule.</p>
+    <p id="p-00023-en" num="0023">Bacteria microorganisms are applied for mine demineralization, elimination of the clogging in irrigation systems, and decalcifying alkaline soils making them fertile.</p>
+    <heading id="h-00007-en">
+      <b>References</b>
+    </heading>
+    <p id="p-00024-en" num="0024">
+      <ul id="ul-00002-en" list-style="none">
+        <li>
+          <nplcit id="ncit-00001" npl-type="s"><text>Appanna, V. , Lemire, J.,Hnatiuk, R., 2011. "Biomining: A Gren Technology to Mine Valuable Metals". Available on site</text></nplcit>
+        </li>
+        <li>
+          <nplcit id="ncit-00002" npl-type="b"><text>Barrett, J.,Hughes, M.N., Karavaiko, G.I.,Spencer, P.A., (Eds.), "Metal Extraction by Bacterial Oxidation of Minerals" Ellis Horwood Limited, 1993</text></nplcit>.</li>
+        <li>Bentl1, I., Erdogan, N., Birici, B., Topal, U., and <img id="img-00001-en" wi="5" he="8" img-content="character" inline="yes" file="EP2940122A1_00004.PNG" img-format="png" original="imgb0001.tif" /> ahbaz, O., 2004. "Manyezit ara ürünün kalsinasyon-manyetik ayirma yöntemleriyle zenginle<img id="img-00002-en" wi="4" he="6" img-content="character" inline="yes" file="EP2940122A1_00005.PNG" img-format="png" original="imgb0002.tif" /> tirilmesi" J. <i>Endüstriyel Hammaddeler Sempozyumu</i>, <i>İzmir, Türkiye</i></li>
+        <li>
+          <nplcit id="ncit-00003" npl-type="s"><text>Brierley, C. L., 2008. "How will biomining be applied in future?". Trans. Nonferrous.Met. Soc. Of China, 1302-1310</text></nplcit>
+        </li>
+        <li>
+          <nplcit id="ncit-00004" npl-type="s"><text>Chen, G.,and Tao, D., 2004. "Effect of solution chemistry on flotability of magnesite and dolomite". Int. J. Miner. Process. 74:343- 357</text></nplcit>
+        </li>
+        <li>
+          <nplcit id="ncit-00005" npl-type="s"><text>Danadurai, K.S.K.,Chellam, S., Lee, C., and Fraser, M.P., 2011."Trace elemental analysis of airborne particulate matter using dynamic reaction cell inductively coupled plasma - masss pectrometry: Application to monitoring episodic industrial emission events". AnalyticaChimicaActa686: 40-49</text></nplcit>
+        </li>
+        <li>Erdogan N, Yildiz R, 1995. <i>Manyezit ve Bazit Refrakter Malzeme Teknolojisi</i>, Kuma<img id="img-00003-en" wi="4" he="6" img-content="character" inline="yes" file="EP2940122A1_00006.PNG" img-format="png" original="imgb0003.tif" /> , Kütahya, 150s.</li>
+        <li>
+          <nplcit id="ncit-00006" npl-type="s"><text>Gence, N., 2001. "Enrichment of magnesiteore". Entg.&amp;Arch.Fac.OsmangaziUniversity, Vol.XIV(2</text></nplcit>
+          <i>)</i>
+        </li>
+        <li>
+          <nplcit id="ncit-00007" npl-type="s"><text>Gürcan, H., Sesver, A., Ozdemir, N., Ozdemir, B., 2012."Cryptocrystalline and Macrocrystalline Magnesite Ores: Comparing Microstructures and Thermal Behaviour".http://www.arber.com.tr/imps2012.org/proceedingsebook/Abstract/ab sfilAbstractSubmissionFullContent386.pdf</text></nplcit>
+        </li>
+        <li>
+          <nplcit id="ncit-00008" npl-type="s"><text>Hoque, E.,and Philip, O.J., 2011. "Biotechnological recovery of heavy metals from secondary sources-An overview". MaterialsScienceandEngineering C, 57-66</text></nplcit>
+        </li>
+        <li>Kocaefe M. 1982. Manyezit envanteri, MTA Yay<img id="img-00004-en" wi="3" he="5" img-content="character" inline="yes" file="EP2940122A1_00007.PNG" img-format="png" original="imgb0004.tif" /> nlar<img id="img-00005-en" wi="3" he="5" img-content="character" inline="yes" file="EP2940122A1_00008.PNG" img-format="png" original="imgb0005.tif" /> , Ankara.</li>
+        <li>Özdemir, M., Çak<img id="img-00006-en" wi="3" he="5" img-content="character" inline="yes" file="EP2940122A1_00009.PNG" img-format="png" original="imgb0006.tif" /> r, D., K<img id="img-00007-en" wi="3" he="5" img-content="character" inline="yes" file="EP2940122A1_00010.PNG" img-format="png" original="imgb0007.tif" /> pçak, İ., 2009."Magnesium recovery from magnesite tailings by acid leaching and production of magnesium chloride hexahydrate from leaching solution by evaporation". <i>Int. J. Miner</i>.<i>Process</i>. 93:209-212</li>
+        <li>
+          <nplcit id="ncit-00009" npl-type="s"><text>Rawlings, D. E., and Johnson, D. B., 2007."The microbiology of biomining: development and optimization of mineral-oxidizing microbial consortia". Microbiology, 153: 315-324</text></nplcit>
+        </li>
+        <li>
+          <nplcit id="ncit-00010" npl-type="b"><text>Rulkens WH, Grotenhuis, JTC, Tichy R, 1995. Methods of cleaning contaminated soils and sediments. In: Salomons W. Förstner U, Mader P. (Eds.) HeavyMetals. Springer, Berlin, pp, 151-191</text></nplcit>.</li>
+        <li>Sever E, 2006. İskenderun Demir Çelik Fabrikas<img id="img-00008-en" wi="3" he="5" img-content="character" inline="yes" file="EP2940122A1_00011.PNG" img-format="png" original="imgb0008.tif" /> Biyoliç Uygulamas<img id="img-00009-en" wi="3" he="5" img-content="character" inline="yes" file="EP2940122A1_00012.PNG" img-format="png" original="imgb0009.tif" /> . Yükseklisans Tezi, Çukurova Üniversitesi, Fen Bilimleri Enstitüsü, Adana, Türkiye.</li>
+        <li>
+          <nplcit id="ncit-00011" npl-type="s"><text>Sharafi, S.M.,Rasooli, İ., Beheshti-Maal, K., 2010. "Isolation, characterization and optimization of indigenous acetic acid bacteria and evaluation of their preservation methods". Iranian Journal of Microbiology, 2: 41-48</text></nplcit>
+        </li>
+        <li>
+          <nplcit id="ncit-00012" npl-type="s"><text>Siddiqui, M. H., Kumar, A., Kesari, K. K., and Arif, J. M., 2009."Biomining - A UsefulApproachToward Metal Extraction". American-EurasianJournal of Agronomy 2, 2:84-88</text></nplcit>
+        </li>
+        <li>
+          <nplcit id="ncit-00013" npl-type="s"><text>Watling, H R., 2006."The bioleaching of sulphide minerals with emphasis on copper sulphides-A review". Hydrometallurgy,84:81-108</text></nplcit>
+        </li>
+      </ul>
+    </p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <i>Enterococcus</i> spp., <i>Lactococcus</i> spp., <i>Staphylococcus</i> spp. bacteria strains and <i>Neurospora spp.</i> fungus isolate which dissolve calcium carbonate and magnesite.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>CaCO<sub>3</sub> dissolving A1 bacteria strain according to Claim 1, which is deposited with the number NRRL B-50196.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>CaCO<sub>3</sub> dissolving EF-06 bacteria strain according to Claim 1, which is deposited with the number NRRL B-50198.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>CaCO<sub>3</sub> dissolving GSK1 bacteria strain according to Claim 1, which is deposited with the number DSM 27873.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>CaCO<sub>3</sub> dissolving GNT1 fungus isolate according to Claim 1, which is deposited with the number DSM 27874.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>CaCO<sub>3</sub> dissolving bacteria strains and fungus isolates according to any one of Claims 1 to 5, which can be applied together in combination.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>CaCO<sub>3</sub> dissolving bacteria strains and fungus isolates according to any one of Claims 1 to 6, which can be applied in fields of mine demineralization, elimination of clogging in irrigation systems, and decalcifying alkaline soils thereby making them fertile.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>CaCO<sub>3</sub> dissolving bacteria strains and fungus isolates which can be in the form of a solution, powder, granule.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00004.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00005.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00006.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00007.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00008.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0005.tif" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00009.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0006.tif" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00010.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0007.tif" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00011.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0008.tif" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00012.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0009.tif" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="EP2940122A1_00013.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940122A1.PDF" type="pdf" size="594992" pages="10" />
+</lexisnexis-patent-document>

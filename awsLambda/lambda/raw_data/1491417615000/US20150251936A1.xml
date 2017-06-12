@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150251936A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021939" date-changed="20160127" time-changed="023627">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121230430">
+        <country>US</country>
+        <doc-number>20150251936</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14640689</doc-number>
+        <date>20150306</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160127">
+      <classification-ipcr sequence="1">
+        <text>C02F   3/00        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C02F   3/30        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>3</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160127">
+      <classification-cpc sequence="1">
+        <text>C02F   3/006       20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>3</main-group>
+        <subgroup>006</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C02F   3/302       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>3</main-group>
+        <subgroup>302</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C02F2103/007       20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2103</main-group>
+        <subgroup>007</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C02F2203/004       20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2203</main-group>
+        <subgroup>004</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C02F2301/10        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2301</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C02F2305/06        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2305</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>Y02W  10/15        20150501 LA20160119BHEP        </text>
+        <cpc-version-indicator>
+          <date>20150501</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>W</subclass>
+        <main-group>10</main-group>
+        <subgroup>15</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160119</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">27</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">Lagoon Biological Treatment Method &amp; System</invention-title>
+    <related-documents date-changed="20150910">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61950008</doc-number>
+          <date>20140308</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Triplepoint Environmental LLC</orgname>
+            <role>02</role>
+            <address>
+              <city>Oak Park</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hill</last-name>
+            <first-name>Patrick D.</first-name>
+            <address>
+              <city>Forest Park</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Galbreath-O'Leary</last-name>
+            <first-name>Braden J.</first-name>
+            <address>
+              <city>Oak Park</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wever</last-name>
+            <first-name>Michael C.</first-name>
+            <address>
+              <city>Dothan</city>
+              <state>AL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173567650">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251936</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150306</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173567649">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251936</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150306</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The disclosed lagoon biological treatment system helps existing wastewater treatment facilities meet stricter discharge permits mandated by the EPA utilizing a facility's existing wastewater treatment infrastructure. Influent is pumped into and processed in an aerated or non-aerated lagoon system, thus initially treating the wastewater to remove BOD5 (Biochemical Oxygen Demand) and TSS (Total Suspended Solids) down to approximately 20-30 mg/L. Then the wastewater is transferred to and processed in a nitrification reactor that is designed to maintain a minimum water temperature needed to further treat the wastewater to stricter EPA standards. Wastewater may also be further processed in a denitrifying reactor if necessary to meet local requirement. Finally, effluent water is sent to a settling lagoon for final clarification prior to discharge.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150306</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015251936A1</docdb-publication-number>
+      <docdb-application-id>444309943</docdb-application-id>
+      <new-owner>TRIPLEPOINT ENVIRONMENTAL LLC, ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HILL, PATRICK D.;GALBREATH-O'LEARY, BRADEN J.;WEVER, MICHAEL C.;REEL/FRAME:035104/0856</free-text-description>
+      <effective-date>
+        <date>20150306</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application is based on and claims the priority benefit of U.S. provisional application No. 61/950,008 filed Mar. 8, 2014, the contents of which are incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">It is estimated that approximately one-third of all wastewater treatment facilities in the United States utilize a wastewater lagoon in some capacity during their treatment process. This means that there are more than 6,000 systems employing the use of wastewater lagoons in this country alone. That includes all fifty states, which translates to practically every American watershed, impacting the lives of millions of people nationwide. Lagoons, which can also be found in Canada and other parts of the world, became popular in the 1980's due to their simple design and low maintenance.</p>
+      <p id="p-00003-en" num="0003">There are two different types of lagoon treatment processes, one known as a facultative or anaerobic lagoon and one aerated or aerobic lagoon. Facultative lagoon systems are typically comprised of several shallow ponds, 4-6 feet deep, with a typical overall retention time of 180 days. With the absence of oxygen, anaerobic bacteria break down the waste over a longer period of time. The clean effluent water can then be discharged either on a continuous basis or a periodic, controlled, basis. In controlled discharge systems, the water is stored in a separate storage lagoon and only discharged when water temperatures are likely to be warmer, typically spring (April and May) and fall (October and November) depending on the location of the facility and state regulations.</p>
+      <p id="p-00004-en" num="0004">Aerated lagoons are typically deeper, 8-20 feet deep, and rely on either mechanical or diffused aeration for the supply of oxygen and mixing necessary to aerobically break down waste contaminants in the water. With typically 1-4 aeration cells, operated in series or parallel, aerobic lagoons generally have a retention time of anywhere between 20-40 days.</p>
+      <p id="p-00005-en" num="0005">Properly designed lagoon systems can remove the common constituents found in a wastewater discharge permit, including Biochemical Oxygen Demand (BOD5) and Total Suspended Solids (TSS). However, water quality standards imposed by EPA in March 2006 have mandated State environmental regulators to begin imposing strict standards for ammonia (NH3-N), nitrite+nitrate, and total nitrogen (TN) discharge levels on all lagoon systems. This poses a problem for owners of lagoon systems as they were never designed with the intent of meeting stringent ammonia discharge limits.</p>
+      <p id="p-00006-en" num="0006">For most lagoon owners, the existing options for meeting their new discharge permit are either to replace or radically change their entire facility. Many believe that replacing the wastewater lagoon with an advanced treatment system, such as a conventional activated sludge process, is the only way of achieving the lower discharge requirements. However, because advanced biological treatment processes are much more mechanical in their nature and require many more components that are both expensive to purchase and costly to install, this typically results in millions of dollars required for upfront capital costs even for the smallest of facilities. Moreover, with an increase in the amount of mechanical equipment, a facilities operation and maintenance budget often will double or triple in size. The average small community that operates lagoons today does not have large user base to spread these costs out over and, as a result, the cost of building and operating a mechanical treatment system is unfeasible. Indeed, for many of the small communities that still operate lagoon systems, this is undesirable today for many of the same reasons that such a mechanical treatment process was not originally selected: they do not have the financial wherewithal to either purchase or maintain and operate such a facility.</p>
+      <p id="p-00007-en" num="0007">Accordingly, there is a need for a biological treatment process that is more cost effective from both a capital and operation cost perspective for existing lagoons to meet their new discharge requirements.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">The disclosed system and method is a process and associated apparatus that suitably utilizes either existing or new treatment lagoon infrastructure along with the addition of a temperature-regulated nitrification reactor, and possibly a denitrification reactor where regulations require it. First, the influent wastewater is transferred into and processed in either an existing or new 1-cell or 2-cell aerated or non-aerated lagoon system, thus treating the wastewater in order to remove the majority of the BOD5 and TSS, for example down to approximately 20-45 mg/L. Then effluent from the primary lagoon(s) is transferred into and processed in a temperature-regulated nitrification process that is designed to provide the conditions for ammonia removal through nitrification and, subsequently and if necessary to meet local requirements, into a denitrification process for total nitrogen removal. Finally, the effluent water is either discharged or sent to an existing or new settling lagoon, or to another clarification device such as a circular clarifier, for final clarification prior to ultimate discharge.</p>
+      <p id="p-00009-en" num="0009">Suitably, this Lagoon Biological Treatment method &amp; system (“LBT”) utilizes to the fullest extent possible any and all existing infrastructure while adding the minimal amount of equipment necessary to achieve new discharge permits. Because the nitrification reactor is compact, it is likely to fit into existing lagoon sites without the acquisition of new land. Moreover, due to the temperature regulation and insulation of the reactor, both the footprint and operating costs are kept to a minimum while achieving effluent discharge levels of &lt;1 mg/L for ammonia and Total Nitrogen levels of 5-10 mg/L. As a result, the lagoon biological process allows lagoon facilities to upgrade their treatment capabilities with significantly reduced capital costs while not significantly increasing operating costs.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00010-en" num="0010">The advantages and novel features of the invention will become apparent from the following description of the invention, below, in conjunction with the drawings in which:</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 1</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in one embodiment of an LBT Process according to the invention;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 2</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in a second embodiment of an LBT Process according to the invention;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 3</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in a third embodiment of an LBT Process according to the invention;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 4</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in a fourth embodiment of an LBT Process according to the invention;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 5</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in a fifth embodiment of an LBT Process according to the invention;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 6</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in a sixth embodiment of an LBT Process according to the invention;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 7</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in a seventh embodiment of an LBT Process according to the invention;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 8</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in an eighth embodiment of an LBT Process according to the invention;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 9</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in a ninth embodiment of an LBT Process according to the invention.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 10</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in a tenth embodiment of an LBT Process according to the invention.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 11</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in an eleventh embodiment of an LBT Process according to the invention.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 12</figref> is a schematic, process flow diagram illustrating how wastewater flows through and is processed in a twelfth embodiment of an LBT Process according to the invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">EXEMPLARY EMBODIMENTS OF THE INVENTION</heading>
+      <p id="p-00023-en" num="0023">The present invention provides a method and system for new or existing wastewater lagoon systems, either aerated or non-aerated, to cost effectively meet more stringent effluent discharge requirements, including improving treatment of Ammonia, Nitrite+Nitrate, Total Nitrogen, BOD, and TSS. With the Lagoon Biological Treatment (LBT) method, a new or existing lagoon system will be able to accept raw wastewater from either a municipal or industrial source and through both aerobic and anoxic processes, achieve approximate effluent of 10-20 mg/L BOD/TSS, &lt;1 mg/L Ammonia and 5-10 mg/L Nitrate or Total Nitrogen without the need to build a fully mechanical treatment system, such as an activated sludge plant.</p>
+      <p id="p-00024-en" num="0024">A first embodiment of an LBT system according to the invention is illustrated in <figref>FIG. 1</figref>. As illustrated therein, with the LBT method, first wastewater is transferred into the wastewater lagoon facility where the initial objective is to reduce BOD and TSS to lower levels in order to promote ammonia removal through nitrification. This happens initially in the lagoon portion <b>1</b>. Research in the field of activated sludge wastewater treatment demonstrated that the BOD must be sufficiently reduced to eliminate bacterial competition; generally a BOD level of 20-45 mg/L is ideal. The majority of lagoon systems, if operated according to this method, have the facilities in place to achieve BOD/TSS removal down to 20-45 mg/L at design flow and loadings. Therefore, the LBT process can utilize this pre-existing capability to avoid the need to upgrade this component if such an upgrade is not otherwise necessary (e.g., for equipment-related reasons).</p>
+      <p id="p-00025-en" num="0025">There are two benefits to this approach. First, in this initial stage, the lagoon does not have to be aerated; regardless of whether there is partial-mix, complete-mix, or no aeration, the LBT method can achieve the stricter discharge standards. The only objective is that the new or existing infrastructure is capable of reducing the majority of the BOD/TSS to levels approximately of 20-45 mg/L, when operated appropriately. As a result, in instances of an existing non-aerated lagoon or a partial mix aerated lagoon, both equipment and energy costs are saved by not needing to install new aeration equipment. Second, because the LBT method can incorporate this existing infrastructure, as opposed to the activated sludge alternative that replaces it, costs are saved on both equipment and infrastructure. Moreover, operation and maintenance costs remain the same for that portion of the system, giving a measure of predictability for future budgeting.</p>
+      <p id="p-00026-en" num="0026">After the wastewater is initially processed in the lagoon portion <b>1</b>, it is transferred to the part of the system where ammonia can be removed via nitrification in a nitrification reactor <b>3</b>, which provides an environment for nitrifying bacteria of various art-known species to nitrify and remove ammonia. While some (or even all) of the necessary nitrification can be achieved in the lagoon portion <b>1</b> during the summer months, in winter the majority of the ammonia removal occurs in this part of the process, i.e., in the nitrification reactor <b>3</b>.</p>
+      <p id="p-00027-en" num="0027">As illustrated in the embodiment depicted in <figref>FIG. 1</figref>, the nitrification reactor <b>3</b> can include two temperature-regulated wastewater tanks operated in series with submerged aeration and attached growth media. As indicated by research in the separate field of activated-sludge wastewater treatment, wastewater temperature plays a notable role in nitrification. In particular, as water temperatures decrease, nitrifying bacteria become dormant and nitrification efficiency drops significantly, halting completely at 0 degrees centigrade (deg C.). Although predictable nitrification can occur at temperatures as low as 4 deg C., for lagoons located in colder climates, typical surface discharge water from the primary treatment section can be &lt;1 deg C. in winter.</p>
+      <p id="p-00028-en" num="0028">Therefore, part of the LBT process according to this disclosure is regulation of the temperature of the water in order to promote nitrification. In this regard, a suitable water temperature inside the nitrification reactor is on the order of 4 deg C. or more. While numerous methods can be used to ensure that the water temperature inside the nitrification reactor <b>3</b> is at the minimum required level, three approaches are outlined here and below. Water temperature regulation entails ensuring both that the water temperature is at least at the minimum level and that it is maintained at that level during the nitrification process. In the embodiment illustrated in <figref>FIG. 1</figref>, the source of heat <b>2</b> used to regulate water temperature in the nitrification reactor <b>3</b> is located external to the nitrification reactor <b>3</b>, e.g., it can be a boiler-based heat-exchanger. In this case, water is drawn from the nitrification reactor <b>3</b>, circulated through the heat-exchanger, and returned to the nitrification reactor <b>3</b> as indicated by the double-headed arrow in <figref>FIG. 1</figref>. Wastewater may also be heated as it is transferred from the lagoon portion of the system <b>1</b> to the nitrification reactor <b>3</b>, e.g., by being passed through the same heat-exchanger or through a separate, in-line heat-exchanger.</p>
+      <p id="p-00029-en" num="0029">As noted above, a second aspect of temperature regulation is maintaining the water temperature to ensure the water does not become colder while in the nitrification reactor <b>3</b>. This can be achieved by utilizing any number of measures that are considered current best practices to prevent cooling and heat loss from the water. For example, the various wastewater tanks can be buried in the ground, thereby utilizing the ground as insulation. Moreover, insulated covers <b>6</b>, to prevent heat loss due to evaporation and contact with the ambient air, can be provided to cover the various tanks. The specific methods of maintaining water temperature may, of course, depend on the particular needs and conditions of each specific installation.</p>
+      <p id="p-00030-en" num="0030">Furthermore, each tank within the nitrification reactor <b>3</b> is aerated and filled with small pieces of porous media <b>4</b> (for increased surface area) that provide a habitat for nitrifying bacteria to attach and grow, thereby exponentially increasing the rate of biological activity. Air (i.e., oxygen) is supplied to the nitrification reactor <b>3</b> by a motor-operated blower (not shown) or equivalent device and is diffused into the wastewater via aerators <b>5</b>. The diffused aeration provides oxygen necessary for the nitrifying bacteria to thrive, and it mixes the water to ensure that there are no stagnant areas in the tank. Through the combination of oxygen from the air diffusers, appropriate water temperature as a result of regulation, and attached growth media that promote enhanced bacterial activity and retention time, the nitrification reactor is able to rapidly nitrify ammonia regardless of ambient temperatures.</p>
+      <p id="p-00031-en" num="0031">(One of the benefits of such a nitrification system <b>3</b> is very low maintenance and relatively long product life. This is primarily due to the fact that the attached growth media pieces are self-cleaning; as they tumble in the water column, they are constantly hitting against each other, thereby knocking off excess biomass. As a result, maintenance costs are minimized, as no substantial replacement is necessary for approximately 15-20 years.)</p>
+      <p id="p-00032-en" num="0032">The water temperature-regulation feature of the invention has several important benefits. First, because the water temperature is manipulated and maintained, biological treatment is enhanced, thereby making it possible to achieve the nitrification and hence higher effluent quality required to meet local standards and regulations despite ambient temperatures. Second, retention of heat allows the reactor to be smaller, thereby minimizing its footprint and reducing materials/labor to install while making it more likely that lagoon owners can construct such systems on existing sites without purchasing new land, thereby lowering upfront costs. (For example, a typical nitrification reactor may take up 250-500 square feet of land, whereas the alternative of changing the process to a controlled discharge system would require the construction of 8-10 acre storage lagoons that likely would require additional land to be purchased.) Finally, a higher water temperature ensures that the bacteria are more efficient in their treatment; this means that the reactor size and horsepower is significantly less than may otherwise be necessary. As a result, lower blower horsepower and usage is necessary, which leads to lower overall operating cost of the reactor.</p>
+      <p id="p-00033-en" num="0033">After nitrification in the nitrification reactor <b>3</b>, the water can be clarified prior to effluent discharge. Because the reactor influent water comes from a lagoon portion <b>1</b> that can see turnover in spring/fall, which can increase the suspended solids in the influent, the TSS of effluent coming out of the nitrification reactor <b>3</b> can be &gt;40 mg/L, which is higher than most lagoon effluent discharge permits will allow. Therefore, the LBT method preferably utilizes a final clarification stage <b>10</b> prior to discharge. Thus, the treated wastewater is transferred from the nitrification reactor <b>3</b> into a non-aerated quiescent cell, where any remaining solids in the water will fall by gravity to the bottom of the cell so as to reduce TSS levels. (Most lagoon systems already have a settling cell in place to receive treated water prior to discharge, so there would be no need to build a new one; also, this stage does not require any mechanical equipment, which makes it inexpensive to operate and maintain.)</p>
+      <p id="p-00034-en" num="0034">In another embodiment illustrated in <figref>FIG. 2</figref>, where the same reference numerals are used to depict the same elements as in <figref>FIG. 1</figref>, the source of heat <b>2</b> used to regulate water temperature in the nitrification reactor <b>3</b> could be located within the nitrification reactor <b>3</b>. For example, the source of heat <b>2</b> could be a number of electrical resistance-based immersion heaters distributed around and/or throughout the interior of the nitrification reactor vessels.</p>
+      <p id="p-00035-en" num="0035">In still a third embodiment illustrated in <figref>FIG. 3</figref>, where the same reference numerals are used to depict the same elements as in <figref>FIG. 1</figref>, another method of ensuring the water temperature is at the minimum level entails blending a portion of warmer influent water with the potentially colder water that results from the lagoon processing stage. In this case, the warmer influent water functions as the source of heat <b>2</b>. Common municipal influent wastewater is approximately 13.5 deg C. coming into a wastewater plant. Thus, by blending this warmer water with the colder primary effluent water leaving the lagoon portion <b>1</b> and entering the nitrification reactor <b>3</b> at, for example, a 3 to 1 ratio, the overall temperature of the water entering the reactor <b>3</b> can be increased to 5 deg C. for nitrification. The benefit of this approach is that it requires no further mechanical means for increasing the water temperature and thus avoids higher capital, operation, and maintenance costs.</p>
+      <p id="p-00036-en" num="0036">While systems as illustrated in the three embodiments described above provide excellent nitrification and reduction of ammonia levels, many jurisdictions now require, or soon will require, that total nitrogen (i.e., nitrite and nitrate) be reduced or eliminated before wastewater is discharged. In that case, a facility according to the invention may further include an anoxic denitrification reactor <b>7</b>, which utilizes anaerobic bacteria, as illustrated in <figref>FIGS. 4-9</figref>. Thus, in such a facility, wastewater is transferred from the nitrification reactor <b>3</b> to the denitrification reactor <b>7</b> for further, denitrifying treatment before it is allowed to settle in the clarification stage <b>10</b>. The denitrification reactor <b>7</b> includes attached growth media and a mechanical mixer <b>9</b>, e.g., a pump or impeller, which ensures proper mixing for the bacteria to access the nutrients in the wastewater on which they feed. Furthermore, the anaerobic bacteria in the denitrification reactor <b>7</b> require a carbon source <b>8</b> to function, and this may be provided by dosing carbon from a “synthetic” source of carbon as illustrated in each of <figref>FIGS. 4-6</figref>. (The means by which water temperature is regulated in the nitrification reactor <b>3</b> in each of <figref>FIGS. 4-6</figref> is the same as the means by which water temperature is regulated in the nitrification reactor <b>3</b> in each of <figref>FIGS. 1-3</figref>, respectively.) Alternatively, the anaerobic bacteria in the denitrification reactor <b>7</b> may be supplied with carbon by pumping a portion of carbon-rich influent into the denitrification reactor <b>7</b>, as illustrated in each of <figref>FIGS. 7-9</figref>, in which case the influent itself functions as the carbon source <b>8</b>. (The means by which water temperature is regulated in the nitrification reactor <b>3</b> in each of <figref>FIGS. 7-9</figref> is the same as the means by which water temperature is regulated in the nitrification reactor <b>3</b> in each of <figref>FIGS. 1-3</figref>, respectively.) Through the combination of mixing, carbon, and anoxic conditions, nitrate resulting from nitrification in the reactor <b>3</b> is converted into nitrogen gas in the reactor <b>7</b> and simply escapes from the water in gaseous form.</p>
+      <p id="p-00037-en" num="0037">The foregoing disclosure is only intended to be exemplary of the methods and products of the present invention. Departures from and modifications to the disclosed embodiments may occur to those having skill in the art.</p>
+      <p id="p-00038-en" num="0038">For example, water temperature within the nitrification reactor could alternatively be regulated by extracting water to be transferred to the nitrification reactor <b>3</b> from the bottom of the lagoon portion <b>1</b>, where it is likely to be warmer, as shown in <figref>FIGS. 10</figref> (no denitrification reactor present), <b>11</b> (denitrification reactor <b>7</b> present, with “synthetic” source of carbon <b>8</b>); and <b>12</b> (denitrification reactor <b>7</b> present, with influent wastewater functioning as source of carbon <b>8</b>). Due to the colder ambient temperatures at the surface of the water in the lagoon portion <b>1</b>, thermal stratification can occur in both non-aerated and partial-mix aerated lagoons such that water at the bottom of the lagoon portion <b>1</b> is warmer than at the top. In certain cases, primarily depending on the depth of a lagoon, the water at the bottom can be within the minimum range. As a result, all that would be needed to ensure the temperature is at the minimum level would for water to be extracted from the lagoon portion <b>1</b> at the right location.</p>
+      <p id="p-00039-en" num="0039">Still further, waste heat coming from the motor of the blower (not illustrated) used to aerate the nitrification reactor <b>3</b> could be harnessed to regulate the temperature of the water in the reactor <b>3</b>.</p>
+      <p id="p-00040-en" num="0040">The scope of the invention is set forth in the following claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>We claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for treating wastewater, comprising:
+<claim-text>introducing influent wastewater into a lagoon and allowing the wastewater to sit for a period of time so as to reduce biochemical oxygen demand (BOD5) and total suspended solids (TSS) levels within the wastewater;</claim-text><claim-text>after the wastewater has sat for said period of time, transferring partially processed wastewater having reduced levels of BOD5 and TSS from the lagoon to a nitrification reactor;</claim-text><claim-text>regulating temperature of wastewater within the nitrification reactor to keep the temperature thereof at or above a minimum value;</claim-text><claim-text>allowing ammonia levels within the wastewater held within the nitrification reactor to be reduced through aerobic, bacterial-based nitrification; and</claim-text><claim-text>discharging product fluid from the nitrification reactor, the product fluid comprising wastewater that has been processed to reduce BOD5 and TSS as well as ammonia levels to at or below predetermined maximum levels.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein temperature of the wastewater within the nitrification reactor is regulated by a heating device that is located external to the nitrification reactor.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein temperature of the wastewater within the nitrification reactor is regulated by a heating device that is located internal to the nitrification reactor.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein temperature of the wastewater within the nitrification reactor is regulated by mixing a portion of influent wastewater with wastewater being transferred from the lagoon to the nitrification reactor.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein temperature of the wastewater within the nitrification reactor is regulated by drawing wastewater to be transferred to the nitrification reactor from a bottom region of the lagoon.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, where temperature of the wastewater within the nitrification reactor is regulated by covering the nitrification reactor with an insulated cover.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising transferring the product fluid from the nitrification reactor to a denitrification reactor and allowing nitrate to be removed from the product fluid in the denitrification reactor via anaerobic, bacterial-based denitrification.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, further comprising dosing carbon to the denitrification reactor to support the anaerobic bacteria therein.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein carbon is dosed from a synthetic source.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein carbon is dosed by mixing a portion of influent wastewater with wastewater contained within the denitrification reactor.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising transferring the product fluid from the nitrification reactor to a settling or clarifying stage.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, further comprising transferring product fluid from the denitrification reactor to a settling or clarifying stage.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the wastewater is aerated while it is sitting in the lagoon.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the wastewater sits quiescently in the lagoon without aeration.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. A wastewater treatment facility, comprising:
+<claim-text>a lagoon;</claim-text><claim-text>a nitrification reactor configured to receive partially processed wastewater from the lagoon; and</claim-text><claim-text>structural apparatus configured and disposed to regulate the temperature of wastewater within the nitrification reactor.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The wastewater treatment facility of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the structural apparatus comprises a heating device that is located external to the nitrification reactor.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The wastewater treatment facility of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the structural apparatus comprises a heating device that is located internal to the nitrification reactor.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The wastewater treatment facility of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the structural apparatus comprises a conduit configured and disposed to mix a portion of influent wastewater with wastewater being transferred from the lagoon to the nitrification reactor.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The wastewater treatment facility of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the structural apparatus comprises a conduit configured and disposed to draw wastewater to be transferred to the nitrification reactor from a bottom region of the lagoon.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The wastewater treatment facility of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the structural apparatus comprises an insulated cover disposed over the nitrification reactor.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The wastewater treatment facility of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the nitrification reactor is embedded within the ground.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The wastewater treatment facility of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, further comprising a denitrification reactor.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The wastewater treatment facility of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, further comprising a source of carbon to support bacteria within the denitrification reactor.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The wastewater treatment facility of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, wherein the source of carbon is a synthetic source of carbon.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The wastewater treatment facility of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, wherein the source of carbon is influent wastewater to be treated.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The wastewater treatment facility of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, further comprising a settling or clarifying stage located downstream of the nitrification reactor.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The wastewater treatment facility of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, further comprising a settling or clarifying stage located downstream of the denitrification reactor. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150251936A1_00014.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150251936A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150251936A1.PDF" type="pdf" size="543180" pages="18" />
+</lexisnexis-patent-document>

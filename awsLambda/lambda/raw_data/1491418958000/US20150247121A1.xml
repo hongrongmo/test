@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247121A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021457" date-changed="20151128" time-changed="231135">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140216">
+        <country>US</country>
+        <doc-number>20150247121</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14627888</doc-number>
+        <date>20150220</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C12N   5/071       20100101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20100101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>071</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C12N   5/0631      20130101 FI20150225BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>0631</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150225</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12N2500/90        20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2500</main-group>
+        <subgroup>90</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12N2500/99        20130101 LA20150225BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2500</main-group>
+        <subgroup>99</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150225</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12N2501/30        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C12N2501/31        20130101 LA20150225BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>31</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150225</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C12N2501/80        20130101 LA20150225BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>80</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150225</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">INCREASING CELL CULTURE POPULATION DOUBLINGS FOR LONG-TERM GROWTH OF FINITE LIFE SPAN HUMAN CELL CULTURES</invention-title>
+    <references-cited date-changed="20150915">
+      <patent-citations name="patcit" date-changed="20150915" />
+      <non-patent-citations name="nplcit" date-changed="20150915" />
+      <citation>
+        <patcit num="1" dnum="US6692961B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6692961</doc-number>
+            <kind>B1</kind>
+            <name>JUDD DAVID A [US], et al</name>
+            <date>20040217</date>
+          </document-id>
+          <application-date>
+            <date>20001026</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US4808532A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4808532</doc-number>
+            <kind>A</kind>
+            <name>STAMPFER MARTHA R [US]</name>
+            <date>19890228</date>
+          </document-id>
+          <application-date>
+            <date>19850701</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Sapino et al. Endocrinology, 1993. Vol.133, No.2, pages 838-842</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12242474</doc-number>
+              <date>20080930</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8962325</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006278</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>WO</country>
+              <doc-number>/US2007/065718</doc-number>
+              <date>20070330</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>PCT/US2007/065718</doc-number>
+                <date>20070330</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12242474</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60788261</doc-number>
+          <date>20060331</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>The Regents of the University of California</orgname>
+            <address>
+              <city>Oakland</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Stampfer</last-name>
+            <first-name>Martha R.</first-name>
+            <address>
+              <city>Oakland</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Garbe</last-name>
+            <first-name>James C.</first-name>
+            <address>
+              <city>San Francisco</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US07065718</doc-number>
+        <date>20070330</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2007115223</doc-number>
+        <date>20071011</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463304">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247121</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150220</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463303">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247121</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150220</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Cell culture media formulations for culturing human epithelial cells are herein described. Also described are methods of increasing population doublings in a cell culture of finite life span human epithelial cells and prolonging the life span of human cell cultures. Using the cell culture media disclosed alone and in combination with addition to the cell culture of a compound associated with anti-stress activity achieves extended growth of pre-stasis cells and increased population doublings and life span in human epithelial cell cultures.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150512</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247121A1</docdb-publication-number>
+      <docdb-application-id>444210143</docdb-application-id>
+      <new-owner>ENERGY, UNITED STATES DEPARTMENT OF, DISTRICT OF C</new-owner>
+      <free-text-description>CONFIRMATORY LICENSE;ASSIGNOR:REGENTS OF THE UNIVERSITY OF CALIFORNIA, THE;REEL/FRAME:035772/0190</free-text-description>
+      <effective-date>
+        <date>20150414</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150714</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247121A1</docdb-publication-number>
+      <docdb-application-id>444210143</docdb-application-id>
+      <new-owner>THE REGENTS OF THE UNIVERSITY OF CALIFORNIA, CALIF</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:STAMPFER, MARTHA R.;GARBE, JAMES C.;REEL/FRAME:036082/0598</free-text-description>
+      <effective-date>
+        <date>20150610</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation application of U.S. patent application Ser. No. 12/242,474, filed on Sep. 30, 2008, now U.S. Pat. No. 8,962,325, which claims priority from PCT Patent Application No. PCT/US2007/065718, filed on Mar. 30, 2007, which claims priority from U.S. Provisional Patent Application No. 60/788,261, filed on Mar. 31, 2006, all of which are hereby incorporated by reference in their entirety for all purposes.</p>
+    </related-apps>
+    <govt-interest>
+      <heading id="h-00002-en" level="1">STATEMENT OF GOVERNMENTAL SUPPORT</heading>
+      <p id="p-00002-en" num="0002">This invention was made during work supported by NIH grant CA-24844, NIH grant U54 CA112970-01 and the U.S. Department of Energy under Contract No. DE-AC02-05CH11231. The government has certain rights in this invention.</p>
+    </govt-interest>
+    <summary>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">1. Field of the Invention</p>
+      <p id="p-00004-en" num="0004">The present invention relates to cell lines, cell cultures, compositions and cell culture media. More specifically, the present invention relates to methods to develop new cell lines and to increase cell culture population doublings of finite life span human cells. The present invention also relates to using the described cell cultures and methods for assessment of factors influencing aging and/or carcinogenesis.</p>
+      <p id="p-00005-en" num="0005">2. Related Art</p>
+      <p id="p-00006-en" num="0006">Human mammary epithelial cells (HMEC), the cell type from which breast cancers originate, normally express a finite reproductive potential in culture. This cellular senescence can be enforced by the repression of telomerase, the enzymatic activity that allows cells to maintain the integrity of the chromosome ends, as well as by a stress-induced mechanism (stasis), and by exposure to overexpressed oncogenes (OIS: oncogene-induced senescence). Telomerase expression is found in cancer cells; the resultant immortality allows cancers to accumulate the errors necessary for malignancy. Thus, telomerase repression is thought to be a tumor suppressor mechanism. Low telomerase expression may be present in some finite HMEC, and this telomerase activity may perform functions other than maintaining chromosomal ends.</p>
+      <p id="p-00007-en" num="0007">For a normal, finite life span human breast cell to become malignant, multiple aberrations in pathways governing growth control and invasive potential need to accumulate. The errors seen in human breast cancers commonly involve defects in the retinoblastoma (RB) pathway, and almost always include reactivation of telomerase activity. The immortal potential conferred by telomerase is thought to be crucial for error accumulation, and is due to the ability of telomerase to maintain stable telomere lengths via de novo addition of telomeric repeat sequences. Expression of telomerase activity, by itself, is not thought to confer malignancy-associated properties (Morales, C. P. et al. Absence of cancer-associated changes in human fibroblasts immortalized with telomerase. Nature Gen., 21: 115-118, 1999; Jiang, W. R. et al. Telomerase expression in human somatic cells does not induce changes associated with a transformed phenotype. Nature Gen., 21: 111-114, 1999; Wei, S. et al. Expression of catalytically active telomerase does not prevent premature senescence caused by overexpression of oncogenic Ha-Ras in normal human fibroblasts. Cancer Res., 59: 1539-1543, 1999.), however, a variety of recent studies suggest that telomerase may perform non-telomere length maintenance functions that affect cell behavior (Stampfer, M. et al. Expression of the telomerase catalytic subunit, hTERT, induces resistance to transforming growth factor β growth inhibition in p16<sup>INK4</sup>(−) human mammary epithelial cells. Proc. Natl. Acad. Sci., USA., 98: 4498-4503, 2001; Gonzalez-Suárez, E. et al. Increased epidermal tumors and increased wound healing in transgenic mice overexpressing the catalytic subunit of telomerase, mTERT, in basal keratonocytes. EMBO J., 20: 2619-2630, 2001; Oh, H. et al. Telomerase reverse transcriptase promotes cardiac muscle cell proliferation, hypertrophy, and survival. Proc Natl Acad Sci USA, 98: 10308-11033, 2001; Lu, C. L. et al. Telomerase protects developing neurons against DNA damage-induced cell death. Dev. Brain Res., 131: 167-171, 2001; Blasco, M. A. Telomerase beyond telomeres. Nat Rev Cancer, 2: 627-632, 2002; Smith, L. L. et al. Telomerase modulates expression of growth-controlling genes and enhances cell proliferation. Nat Cell Biol, 5: 474-479, 2003; Masutomi, K. et al. Telomerase maintains telomere structure in normal human cells. Cell, 114: 241-253, 2003.).</p>
+      <p id="p-00008-en" num="0008">Experimental examination of certain hypotheses have previously been very difficult to perform in normal finite life span human mammary epithelial cells, or other normal finite life span human epithelial cells, due to the rapid onset of stasis once normal human epithelial cells are placed in culture. A consequence of the limited pre-stasis growth has been that studies requiring large numbers of cells, or large standardized cell batches, were difficult to perform. Most large-scale studies using cultured finite life span HMEC have employed cell cultures originally developed and termed post-selection HMEC, i.e., cells that had spontaneously silenced p16 expression, thus overcoming stasis (Brenner, A. J. et al. Increased p16INK4a expression with onset of senescence of human mammary epithelial cells and extended growth capacity with inactivation. Oncogene, 17: 199-205, 1998; Hammond, S. L. et al. Serum-free growth of human mammary epithelial cells: Rapid clonal growth in defined medium and extended serial passage with pituitary extract. Proc. Natl. Acad. Sci. USA, 81: 5435-5439, 1984.).</p>
+      <heading id="h-00004-en" level="1">BRIEF SUMMARY OF THE INVENTION</heading>
+      <p id="p-00009-en" num="0009">The present invention provides methods and media for prolonging the proliferative life span of finite human cell cultures and increasing population doublings (PD). The present invention is built upon the premise that a distinct mechanism of senescence is due to stresses made upon the cells—and not telomere length as previously postulated. Thus, methods, processes and approaches that mitigate the experience of stress in these finite life span cultures could increase PD potential.</p>
+      <p id="p-00010-en" num="0010">In one embodiment, the invention provides a method for increasing population doublings in a cell culture of human epithelial cells with finite life span, comprising the steps of providing a cell culture of pre-stasis human epithelial cells and providing a cell culture medium comprising a ratio of medium with serum and serum-free medium to the cell culture, wherein each of the media are optimized for a specific type of human epithelial cell, whereby population doublings and finite life span of the cell culture are increased as compared to a control.</p>
+      <p id="p-00011-en" num="0011">The present invention further provides a cell culture medium for culturing pre-stasis human mammary epithelial cells comprising a ratio of a medium with serum and a serum-free medium, whereby the cell cultures exhibit a prolonged lifespan and increased population doublings. In one embodiment, the medium with serum may or may not contain conditioned media.</p>
+      <p id="p-00012-en" num="0012">In another embodiment, the present method can be used to prolong the life span of other types of cell cultures from human epithelial cells from various normal tissues including prostate, ovarian, endometrial, skin, bronchial, lung, thyroid, intestinal, esophogeal epithelial cells, melanocytes or human cell cultures derived from endothelial muscle or connective (fibroblasts) tissues. In a preferred embodiment, the human epithelial cells are human mammary epithelial cells (HMEC).</p>
+      <p id="p-00013-en" num="0013">In a preferred embodiment, each of the media is optimized for extended growth of a specific type of human epithelial cell. The cell culture media can be optimized and vary in concentration of compounds including but not limited to, EGF, hydrocortisone, bovine pituitary extract, estradiol, triiodothyronine, insulin or insulin-like growth factor, bovine serum albumin, or serum.</p>
+      <p id="p-00014-en" num="0014">In some embodiments, the medium with serum is MM medium. In some embodiments, the medium with serum is MM4 medium. In another embodiment, the serum-free medium is MCDB170.</p>
+      <p id="p-00015-en" num="0015">In some embodiments, the ratio of medium with serum and serum-free medium is between 30% to 60% medium with serum and 40% to 70% serum-free medium. In one embodiment, the ratio is 50% medium with serum and 50% serum-free medium. In another embodiment, the ratio is 30% medium with serum and 70% serum-free medium. In another embodiment, the ratio is 60% medium with serum and 40% serum-free medium.</p>
+      <p id="p-00016-en" num="0016">In one embodiment, the method further comprises the step of providing an effective amount of an anti-stress associated compound to the cell culture, whereby the population doublings and finite life span of the cell culture are further increased. In another embodiment, the anti-stress associated compound is added to the primary passage of the cell culture. In another embodiment, the anti-stress associated compound is added at or after the second passage of the cell culture. In yet another embodiment, the means for reducing cell stress is to provide an environment for the cells that maintains pH, increases gas exchange and polarity, or to provide a three-dimensional environment for cell growth.</p>
+      <p id="p-00017-en" num="0017">In a preferred embodiment, the anti-stress associated compound is oxytocin, wherein an effective amount of oxytocin is a concentration between 0.05 nM and 5.0 nM, even more preferably about 0.1 nM. Thus, the present invention also provides a method for prolonging the life span of human cell cultures and increasing population doublings, comprising the steps of providing a cell culture that is pre-stasis and providing an effective amount of oxytocin to said cell culture, whereby the population doublings and finite life span of the cell culture are increased as compared to a control. In one embodiment, a second anti-stress associated compound can be added in addition to an effective amount of oxytocin.</p>
+      <p id="p-00018-en" num="0018">The anti-stress associated compound can include but is not limited to, oxytocin, bovine serum albumin (BSA), angiotensin II, serotonin (5-HT), melanin concentrating hormone, histamine, bombesin and gastrin-releasing peptide (GRP), glucagons-like peptide-1 (GLP-1), cholecystokinin (CCK), dopamine, and corticotrophin releasing factor. In another preferred embodiment, the anti-stress associated compound is bovine serum albumin (BSA).</p>
+      <p id="p-00019-en" num="0019">The method can further comprise the step of adjusting O<sub>2 </sub>levels of the cell culture between 3% and 20%, whereby the O<sub>2 </sub>levels optimize population doublings and prolong finite life span.</p>
+      <p id="p-00020-en" num="0020">In another aspect, the present invention provides the ability to grow these normal pre-stasis cells for increased PD for studies to test and quantify the pro or anti aging or cancer-promoting capacity of many kinds of factors. It is an object of the present invention to provide a culture model to study how certain factors affect overall PD potential as well as the capacity to overcome the stasis senescence barrier and/or the OIS barrier.</p>
+      <p id="p-00021-en" num="0021">Another object of the present invention is to provide media for easier derivation of immortally transformed lines from pre-stasis HMEC than post-selection HMEC. Thus, the invention also provides methods for easier generation of transformed HMEC cell lines.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 1</figref> is a model of HMEC Senescence Barriers (and cancer-associated errors) showing a comprehensive picture of HMEC senescence and immortalization that offers some new perspectives on underlying mechanisms, including the role of telomerase expression and stress, and is consistent with what is known about carcinogenesis pathways in vivo.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 2</figref> is a schematic representation of growth of pre-stasis and post-selection HMEC under differing culture conditions. Total PD achieved by pre-stasis HMEC varies greatly depending upon culture conditions employed.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 3</figref> is a (A) Graph showing growth of pre-stasis HMEC from specimen 184, batch ⋄, from passage 2 in M85 medium with and without the presence of 0.1 nM oxytocin. Growth in MM is shown for comparison. Primary cultures were started from organoids and grown in M85 without oxytocin. The number of PD in primary culture prior to passage 2 can not be accurately determined; it can be estimated at 5-15 PD. Cell populations grown without oxytocin grew only slightly slower to start but reached stasis sooner. (B &amp; C) Pictures of live cultures, taken on the same day (48 d post-seeding), indicate the heterogeneity of the higher passage cultures—showing a mixture of small good growing cells with larger cells more advanced towards stasis. Cells grown without oxytocin show fewer proliferative cells and more cells at advanced stasis (large, flat, vacuolated senescent morphology).</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 4</figref> shows photographs of pre-stasis HMEC from specimen 184, batch ⋄, grown in M85+oxytocin and assayed at different passage levels for proliferation (DNA synthesis determined by a 24 hr exposure to BrdU and shown as labeling index [LI]) and growth arrest at stasis (measured by expression of the p16 protein as determined by immunohistochemical staining). Note the gradually increasing expression of p16 with passage and the gradual reduction in the growing population. Note also the reciprocity between positive labeling of the small cell population with BrdU and the positive staining of the larger cell population for p16 expression.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 5</figref> is a set of photographs showing a comparison of LI and p16 expression in pre-stasis HMEC from specimen 184, batch ⋄, grown in M85±oxytocin and assayed at the same day post-plating in culture. Note that the culture with oxytocin, although at 2 passages beyond the culture without oxytocin, shows more proliferative cells and fewer cells with the stasis-associated senescent morphology (large, flat, vacuolated, p16+).</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 6</figref> is a set of (A, B, &amp; C) photographs showing growth of pre-stasis 184 HMEC, batch ⋄, in M85+oxytocin showing the presence of cells that express keratin 19, which has been associated with both a luminal and a stem cell phenotype. Prior culture conditions for growth of pre-stasis HMEC produced cells that showed a phenotype similar to basal HMEC in vivo (e.g., no expression of keratin 19 past primary culture). HMEC grown in M85 can express keratin 19 in proliferating cell populations at higher passages.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 7</figref> is a graph showing growth of pre-stasis HMEC from 3 different individuals in M85±oxytocin.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 8</figref> is a graph showing the effect of different oxygen concentration and presence of conditioned media (CM) on growth of pre-stasis HMEC from specimen 184, batch F.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 9</figref> is a graph showing the effect of switching pre-stasis 184⋄ HMEC, grown in M85 in primary culture, to different media at passage 2.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 10</figref> shows photographs of the morphology of 184⋄ HMEC grown in M85+oxytocin vs. M85A+oxytocin since passage 2. (A) Cells grown in M85+oxytocin. (B) Cells grown in M85A+oxytocin (in the presence of BSA) consistently showed a different morphology, with more cells with a morphology that was elongated “curly” with overgrowth of cells (arrows). These data indicate that small changes in media composition may preferentially support proliferation of different pre-stasis cell types.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 11</figref> shows (A &amp; B) Photographs showing the requirement of pre-stasis HMEC 184, batch ⋄, on EGF receptor (EGFR) stimulation for growth. Unlike the stringent dependence upon EGFR signal transduction for proliferation seen in finite post-stasis post-selection HMEC and non-malignant immortal HMEC lines, some pre-stasis HMEC can maintain growth (labeled nuclei) in medium minus EGF plus an antibody against the EGFR (MAb225). These data indicate the heterogeneity of this pre-stasis population with respect to dependence upon EGFR signaling for proliferation.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 12</figref> is a (A) graph showing the effect on growth and p16 expression of switching pre-stasis 184 HMEC, batch F, from M85 to MM. (B) Graph showing extended pre-stasis growth of 184 HMEC, batch F, in M85 with oxytocin added at passage 4. (C) Photographs of the corresponding cell cultures of (A) and (B) at each of the noted passages. All photomicrographs were taken at 40× magnification.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 13</figref> is a set of graphs showing the effect of switching pre-stasis HMEC grown in M85+oxytocin at passage 5 to different media. (A) 48RT and (B) 240LB were switched to the indicated media at passage 5, subcultured to passage 6, and then assayed when midconfluent for LI and p16 expression.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 14</figref> is a heat map showing unsupervised cluster analysis of gene expression patterns in growing pre-stasis and post-selection HMEC and HMEC at stasis or agonescence. (A) Unsupervised clustering of growing and senescent (stasis or agonescence) HMEC from specimens 184 and 48R showing a partial probe set. (B) Unsupervised clustering of senescent (stasis or agonescence) HMEC from specimens 184 and 48R showing a partial probe set; 529 probe sets were used for the clustering.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 15</figref> is a heat map showing supervised clustering of selected gene expression in growing and senescent (stasis or agonescence) pre-stasis and post-selection HMEC.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 16</figref> showing telomere length and hTERT expression in pre-stasis 184 HMEC (A) shows a gel of the mean TRF length of pre-stasis 184⋄ HMEC grown in M85±oxytocin (X). These data show a very slow reduction in mean TRF length as the 184⋄ cultures are subcultured from passage 3 to passage 11, suggesting ongoing telomere maintenance with cell passage. (B) shows a graph of hTERT expression by RT-PCR of pre-stasis 184 HMEC batch F (primary culture was in MM) grown in M85 from passage 2. Pre-stasis 184F at passages 5 and 10 show significant hTERT expression compared to negative controls (WI-38 fibroblasts, post-selection 184v) as well as to the immortal line 184A1 with known TRAP activity.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 17</figref> shows transduction of pre-stasis 184 HMEC, batch F, with c-myc and/or p16shRNA: (A) A graph showing cumulative PD; 184F HMEC were started in MM in primary culture and switched to M85 at passage 2. (B) A photograph of a gel for an assay of telomerase activity at passage 8 showing the upregulation of activity in transduced cells.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 18</figref> is a graph showing growth of 184 HMEC, batch F, on different substrates: plastic (♦), laminin on plastic (▪), or laminin on LUMOX dishes (▴). Cells were grown in MM in primary culture and switched to M85 at passage 2. At passage 4 they were switched to M87 and grown on plastic, laminin on plastic, or laminin on LUMOX dishes (which allow the cells to grow on a gas-permeable substrate).</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 19</figref> is a graph showing growth of pre-stasis 48RT HMEC on different substrates: plastic (♦) or laminin on plastic (▪). Cells were grown from primary culture in M85+oxytocin and switched at passage 6 to growth on laminin on plastic or plastic alone.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENT</heading>
+      <heading id="h-00007-en" level="1">1. Introduction</heading>
+      <p id="p-00041-en" num="0041">The present invention provides methods for increasing population doublings (PD) and finite life spans of pre-stasis human epithelial cells. The invention also provides cell culture media for growing the same. The invention is based upon the discovery of a new model for human mammary epithelial cell senescence and immortalization.</p>
+      <heading id="h-00008-en" level="1">2. A New Model for HMEC Senescence and Immortalization</heading>
+      <p id="p-00042-en" num="0042">The goal of the research of the inventors has been to develop an HMEC system to understand the normal processes governing HMEC growth, differentiation, and aging, and how these normal processes are altered during immortal and malignant transformation. The inventors' approach has focused on overall system development, and generation of a large-scale picture of the many steps involved in breast carcinogenesis. The logic has been that understanding a process as complex as cancer progression will be greatly aided by a comprehensive picture that allows all the pieces of this puzzle to be viewed in dynamic relationship.</p>
+      <p id="p-00043-en" num="0043">The present invention describes that studies using the extensive HMEC culture system have led to the postulation that cultured HMEC encounter two mechanistically distinct barriers to unlimited proliferation. These senescence barriers, described below, suppress immortalization and thus prevent tumor progression. Acquiring the errors that allow these barriers to be overcome appears critical for breast cancer progression.</p>
+      <p id="p-00044-en" num="0044">Understanding of the factors influencing normal human breast biology is constrained by the limitations of currently available, experimentally tractable normal HMEC culture systems. One significant constraint is the small number of population doublings (PD) achieved by epithelial cells that are derived from normal tissues prior to undergoing a stress-associated senescence arrest (stasis). Pre-stasis HMEC refers to cells in culture prior to undergoing stasis. As a consequence of the limited pre-stasis PD, studies requiring a large number of cells, or large standardized cell batches, were difficult to perform. Pre-stasis HMEC are most reflective of the cell types seen in normal human breast tissues; therefore efforts were directed to improve conditions for growth of pre-stasis HMEC once the distinct nature of the stasis and telomere dysfunction senescence barriers became apparent.</p>
+      <p id="p-00045-en" num="0045">The generic terms “senescence” and “replicative senescence” have been widely used but lack precisely defined molecular correlates. The lack of molecularly defined nomenclature for the senescence barriers in culture has impeded understanding, particularly of the potential role of stasis in vitro and in vivo. In turn, this situation has obscured the importance of determining what induces stasis in vitro, how to obtain culture conditions that will delay the onset of stasis, the molecular mechanisms responsible for stasis, and how stasis and overcoming it affect carcinogenesis.</p>
+      <p id="p-00046-en" num="0046">Once the distinct nature of the stasis and telomere dysfunction senescence barriers became apparent, the critical importance of being able to grow pre-stasis HMEC for greater population doublings was recognized. By optimizing pre-stasis HMEC culture and characterizing resultant populations, described herein are changes in culture conditions, such as exposure to the anti-stress peptide oxytocin, that greatly increase pre-stasis cell culture proliferation. An increase in cell culture proliferation further provides substrates for research, study, and for assays to examine factors that may influence carcinogenesis and/or aging.</p>
+      <p id="p-00047-en" num="0047">Long-term studies have generated a new paradigm of HMEC senescence and immortalization. Referring now to <figref>FIG. 1</figref>, this comprehensive model offers new perspectives on potential underlying mechanisms, including the role of telomerase expression and stress, and is consistent with what is known about carcinogenesis pathways in vivo (Chin, K. et al., In situ analysis of genome instability in breast cancer. Nature Genetics, 36: 984-988, 2004.; Stampfer, M. R. and Yaswen, P. Human epithelial cell immortalization as a step in carcinogenesis. Cancer Lett, 194: 199-208, 2003.). It is possible that many factors that influence breast pre-neoplasia may act on pre-stasis cells, and the potential roles of these factors have been obscured by the lack of good culture systems for pre-stasis HMEC.</p>
+      <p id="p-00048-en" num="0048">Herein are described culture conditions that permit sufficient pre-stasis PD to allow generation of large standardized cell batches and examination of normal human epithelial cells prior to the onset of stasis.</p>
+      <heading id="h-00009-en" level="1">3. Media and Method for Increasing Population Doublings</heading>
+      <p id="p-00049-en" num="0049">In one embodiment, the invention provides a method for increasing population doublings in a cell culture of human epithelial cells with finite life span, comprising the steps of providing a cell culture of pre-stasis human epithelial cells and providing a cell culture medium comprising a ratio of a medium with serum and a serum-free medium to the cell culture, wherein each of the media are optimized for a specific type of human epithelial cell, whereby population doublings and finite life span of the cell culture are increased as compared to a control.</p>
+      <p id="p-00050-en" num="0050">By control, it is intended to mean a cell culture that has been provided with a medium previously used to grow pre-stasis human epithelial cells, such as a medium with serum (e.g., MM), a serum-free medium (e.g., MCDB170), or a commercially available medium (e.g., EpiLite media available from Cascade Biologics). Examples of MM and MCDB170 controls are shown schematically in <figref>FIG. 2</figref>. In the present examples using human mammary epithelial cells, it was shown that HMEC undergo a variable number of PD prior to encountering stasis, depending upon culture conditions. HMEC placed in a medium containing ˜1% serum and conditioned media (i.e. MM: 70% fresh and 30% conditioned) have active growth for ˜15-30 PD; cells grown in a serum-free medium (i.e. MCDB170) show active proliferation for ˜10-20 PD.</p>
+      <p id="p-00051-en" num="0051">In a further embodiment, the invention provides a medium for culturing pre-stasis human mammary epithelial cells comprising a ratio of a medium with serum and a serum-free medium, whereby the cell cultures exhibit a prolonged life span and increased population doublings.</p>
+      <p id="p-00052-en" num="0052">The increased PD and finite life span allows large standardized batches of cells to be grown and stored frozen to permit reproducible testing of potential pro or anti aging or cancer-promoting factors using the same starting cell population. In one embodiment, the present invention provides the ability to grow these normal pre-stasis cells for increased PD for studies to test and quantify the pro or anti aging or cancer-promoting capacity of many kinds of factors. The present invention provides a culture model to study how certain factors affect overall PD potential as well as the capacity to overcome the stasis senescence barrier and/or the OIS barrier.</p>
+      <heading id="h-00010-en" level="2">A. Types of Human Epithelial Cells</heading>
+      <p id="p-00053-en" num="0053">The presently described method can be used to prolong the life span of various types of cell cultures from human epithelial cells from various normal tissues including but not limited to, mammary, prostate, ovarian, endometrial, skin, bronchial, lung, thyroid, intestinal, esophogeal epithelial cells, melanocytes or human cell cultures derived from endothelial muscle or connective (fibroblasts) tissues.</p>
+      <p id="p-00054-en" num="0054">In a preferred embodiment, the cell culture is comprised of pre-stasis human mammary epithelial cells. These cells can be made readily available for breast cancer researchers similar to the post-stasis post-selection HMEC cultures developed earlier and currently in widespread use and commercially available.</p>
+      <p id="p-00055-en" num="0055">In one embodiment, the present invention provides media for easier derivation of immortally transformed lines from pre-stasis HMEC rather than post-selection HMEC. Thus, the invention also provides methods for easier generation of transformed HMEC cell lines.</p>
+      <heading id="h-00011-en" level="2">B. Cell Culture Medium</heading>
+      <p id="p-00056-en" num="0056">The cell culture medium comprises a ratio of a medium with serum and a serum-free medium. In the preferred embodiment, the ratio is 50% medium with serum and 50% serum-free medium. In another embodiment, the cell culture medium may be optimized by varying ratios of media with serum and serum-free media between 30-60% medium with serum and 40-70% serum-free medium, respectively. For example, in some embodiments, the ratio is 30% medium with serum and 70% serum-free medium. In other embodiments, the ratio is 60% medium with serum and 40% serum-free medium.</p>
+      <p id="p-00057-en" num="0057">In one embodiment, the medium with serum may contain conditioned media. In one embodiment, the medium with serum that contains conditioned medium is MM medium. The MM medium has been characterized in Stampfer, M, Hallowes, R, Hackett, A J, Growth of normal human mammary epithelial cells in culture, <i>In Vitro </i>16:415-425, 1980 and Stampfer, M R, Cholera toxin stimulation of human mammary epithelial cells in culture, <i>In Vitro </i>18:531-537, 1982, and is available from the inventors. The cells and media are also described by M. Stampfer, H. Smith, A. Hackett, in U.S. Pat. No. 4,423,145, Enhanced Growth Medium and Method for Culturing Human Mammary Epithelial Cells, issued Dec. 27, 1983, hereby incorporated by reference.</p>
+      <p id="p-00058-en" num="0058">MM medium is comprised of 30% conditioned media and 70% fresh medium. The conditioned media has already been used to grow other human epithelial cells and is added to fresh media because cells secrete growth and other factors into conditioned medium that promoted better cell growth (Stampfer et al., <i>In Vitro </i>16:415-425, 1980). The conditioned media is comprised of about 50% DMEM media and 50% Ham's F12 media (Invitrogen). Added to this mixture is 5% fetal bovine serum, and insulin. Two cell lines (767BL and 578BST) are fed with this medium for about 2 days, the conditioned medium is collected and filtered to make the MM medium. The fresh medium is comprised of 50% DMEM medium and 50% Ham's F12 medium (Invitrogen), and then added to the conditioned media for a final mixture of about 30% conditioned media and 70% fresh medium. Epidermal growth factor (EGF), hydrocortisone, estrogen, triiodothyronine, fresh fetal bovine serum 0.5%, and more insulin are added.</p>
+      <p id="p-00059-en" num="0059">In a preferred embodiment, each of the media is optimized for extended growth of a specific type of human epithelial cell to be cultured. The cell culture media can be optimized and vary in concentration of compounds including but not limited to, EGF, hydrocortisone, bovine pituitary extract, estradiol, triiodothyronine, insulin or insulin-like growth factor, bovine serum albumin, or serum.</p>
+      <p id="p-00060-en" num="0060">In some embodiments, the medium with serum is not conditioned. For example, MM4 medium is MM medium lacking the conditioned media. MM4 medium is 100% fresh medium.</p>
+      <p id="p-00061-en" num="0061">In a preferred embodiment, the serum-free medium is MCDB170. The MCDB170 medium is commercially available and has been characterized in Hammond, S L, Ham, R G, and Stampfer, M R, Serum-free growth of human mammary epithelial cells: rapid clonal growth in defined medium and extended serial passage with pituitary extract, <i>Proc Natl Acad Sci </i>(USA) 81:5435-5439, 1984. Methods describing the use of these media in the isolation and growth of human cell cultures are also described in Stampfer, M R, Isolation and growth of human mammary epithelial cells. <i>J Tissue Cult. Meth</i>. 9:107-116, 1985, hereby incorporated by reference.</p>
+      <p id="p-00062-en" num="0062">In another embodiment, the serum-free media is the commercially available MEGM media (Clonetics Division of Lonza). This medium, however, may need to be supplemented with factors found in MCDB170. If bicarbonate free MEGM is used in lieu of MCDB170, with HEPES free DMEM/F12, 5% CO<sub>2 </sub>should be used. In another embodiment, if bicarbonate free MEGM is used with +bicarbonate+HEPES DMEM/F12, then the CO<sub>2 </sub>concentration should be lowered to about 1%.</p>
+      <p id="p-00063-en" num="0000">i. M85 Media</p>
+      <p id="p-00064-en" num="0063">In one embodiment, the cell culture medium is M85 media. The Examples described herein show that M85, comprised of both MM and MCDB170, enabled pre-stasis HMEC to grow for up to ˜45 PD. As shown in <figref>FIG. 2</figref>, this is a drastic increase compared to MM or MCDB170 used alone. The M85 medium was seen to provide increased PD for pre-stasis HMEC from 3 individuals, 184, 48, and 240 as compared to MM, MCDB170, or the commercial EpiLife alone. In another embodiment, the M85 medium may vary in the concentration of other components such as hydrocortisone or BPE. In other embodiments, cAMP stimulators may be added to the primary culture or in the first few passages of culture. For example, in a preferred embodiment, cholera toxin may be added to the MM not in primary culture, but during passage 2. In another embodiment, the MCDB170 medium may or may not include isoproterenol for use as a cAMP stimulator. Generally, MCDB170 used for HMEC culture has serum free supplements which may be cell type specific. The M85 media should be properly buffered for 5% CO<sub>2</sub>.</p>
+      <p id="p-00065-en" num="0000">ii. M87 Media</p>
+      <p id="p-00066-en" num="0064">In another embodiment, the cell culture medium is M87. M87 medium is comprised of MM4 medium and MCDB170 medium. In a preferred embodiment, M87 medium is comprised of about equal parts MM4 and MCDB170 media (50:50). In another embodiment, upon further optimization, the M87 medium may be comprised of varying ratios of MM4 and MCDB170 media. For example, in some embodiments, the M87 medium may be comprised of 60% MM4 and 40% MCDB170, or 30% MM4 and 70% MCDB170. In another embodiment, the M87 medium may vary in the concentration of other components such as hydrocortisone or BPE. The M87 medium should also be properly buffered for 5% CO<sub>2</sub>.</p>
+      <p id="p-00067-en" num="0065">Referring now to <figref>FIGS. 8</figref>, <b>9</b>, and <b>13</b>, M87 also enables increased growth of pre-stasis HMEC when used with an anti-stress compound which is described supra. The lack of need for conditioned medium makes M87 medium more readily available for others to use and increases commercialization. While M87 did not support as rapid growth, and may not allow as many total PD as M85, growth was comparable to M85 until passage 8.</p>
+      <p id="p-00068-en" num="0000">c. Cell Culture Optimization</p>
+      <p id="p-00069-en" num="0066">A variety of approaches to further increase PD can be employed, as long as one understands the basis is reduction of a cellular stress response. Known growth promoting cell culture additions and components may be added to increase population doublings and should also be tested for effectiveness or optimal concentration. The concentrations of specific media components (e.g., EGF, hydrocortisone, bovine pituitary extract, estradiol, triiodothyronine, insulin or insulin-like growth factor, serum, oxytocin, bovine serum albumin, as well as the conditioned media) can be systematically altered and selected media components (e.g., the different conditioned medium that are part of the MM formulation) are removed and assayed for resulting growth.</p>
+      <p id="p-00070-en" num="0067">In one embodiment, the method further comprises the step of providing an effective amount of an anti-stress associated compound to the cell culture, whereby the PD and finite life span of the cell culture are further increased. In another embodiment, different O<sub>2 </sub>concentrations are systematically applied to optimize the PD. In another embodiment, the cells are grown on extracellular matrix material. In another embodiment, the means for reducing cell stress is to provide an environment for the cells that maintains pH, increases gas exchange and polarity, or provide a three-dimensional environment for cell growth.</p>
+      <p id="p-00071-en" num="0068">Thus, the present invention also provides a method for prolonging the life span of human cell cultures and increasing population doublings, comprising the steps of providing a cell culture that is pre-stasis and providing an effective amount of an anti-stress compound, such as oxytocin, to the cell culture, whereby the population doublings and finite life span of the cell culture are increased as compared to a control.</p>
+      <p id="p-00072-en" num="0000">i. Anti-Stress Associated Compound</p>
+      <p id="p-00073-en" num="0069">By effective amount, it is intended to mean a concentration of anti-stress associated compound potent enough to cause a change in the PD of the cell culture as compared a cell culture not provided with the anti-stress associated compound.</p>
+      <p id="p-00074-en" num="0070">It is contemplated that compounds associated with anti-stress activity may be beneficial to increase or sustain prolonged pre-stasis cell growth. Known anti-stress compositions and compounds such as, oxytocin, lipid rich bovine serum albumin (BSA), angiotensin II, serotonin (5-HT), melanin concentrating hormone, histamine, bombesin and gastrin-releasing peptide (GRP), glucagon-like peptide-1 (GLP-1), cholecystokinin (CCK), dopamine, and corticotropin releasing factor (CRF), may be used to increase population doublings and should be tested for effectiveness or optimal concentration.</p>
+      <p id="p-00075-en" num="0071">In some embodiments, the anti-stress associated compound is added to the primary passage of the cell culture. In other embodiments, the anti-stress associated compound is added at or after the second passage of the cell culture.</p>
+      <p id="p-00076-en" num="0072">In a preferred embodiment, oxytocin is added to the cell culture medium to increase PD and finite life span. The nine amino acid peptide hormone, oxytocin, is known to be involved in stimulating lactation in mammalian mothers and when infused can stimulate the uterine wall to contract to begin labor. Oxytocin also plays a role in nurturing behaviors and attachment of the mother to her offspring, and has anti-stress-like effects such as reduction of blood pressure and cortisol levels. See Light K C et al, <i>Horm Behav</i>. 2005 May; 47(5):540-8, and <i>Biol Psychol</i>. 2005 April; 69(1):5-21. Epub 2004 Dec. 29.</p>
+      <p id="p-00077-en" num="0073">Oxytocin was shown to extend population doublings in pre-stasis HMEC cell culture growth in an M85 base medium from about 45 PD up to about 60 PD, an increase of 33%. The addition of oxytocin was based on theoretical considerations of its anti-stress activity, and has been tested at 2 concentrations: the lower amount, 0.1 nM, provided better growth conditions than 1.0 nM, the level assayed in most breast cancer cell lines The lower concentration of 0.1 nM was also tested in 3 individual cell lines and shown to improve growth. See <figref>FIG. 7</figref>, where the increased PD shown by HMEC from specimen 184, batch ⋄, is also seen in HMEC obtained from the 2 other donors tested, 48R, batch T, and 240L, batch B. Specimen 240L was grown only in M85 with oxytocin from primary organoids. Specimen 48R was grown in M85±oxytocin from primary organoids. For comparison, growth of specimen 184 in MM is shown. 184 HMEC batch ⋄ and 48RT+oxytocin were grown in 20% O<sub>2</sub>. The other cultures were grown in 3% O<sub>2</sub>.</p>
+      <p id="p-00078-en" num="0074">In a preferred embodiment, oxytocin is applied to cell cultures at final concentrations of about 0.05 nM to about 5.0 nM.</p>
+      <p id="p-00079-en" num="0075">In one embodiment, oxytocin is added to the M85 medium. The potential of the M85+oxytocin medium to support long-term growth of pre-stasis HMEC will open up many new and important avenues of investigation of normal and aberrant HMEC biology. We envision even greater use of the more normal pre-stasis HMEC once it is routinely possible to culture the cells for &gt;30 PD and thus allow for generation of large standardized cell batches, as is the current situation for the post-selection HMEC. It is expected that oxytocin may prolong pre-stasis growth of human epithelial cell types that are currently difficult to culture before stasis, and thus this addition to cell cultures during pre-stasis growth could be of widespread value. As an example, these cells can be used for standardized assay, to determine the influence of various factors on aging and/or carcinogenesis. They can also be used to understand basic mechanisms in aging, development, and/or cancer.</p>
+      <p id="p-00080-en" num="0076">In another embodiment, oxytocin is added to the M87 medium. The M87 medium allows for easier access and availability of the media as compared to the M85 medium because M87 does not contain conditioned medium. This simplifies making the medium while still increasing the number of PD.</p>
+      <p id="p-00081-en" num="0077">In some embodiments, bovine serum albumin (BSA) is added to the cell culture medium to increase PD and finite life span. BSA is used because of its stability, its lack of effect in many biochemical reactions, and its low cost since it is readily available in large quantities as it is purified from bovine blood, a byproduct of the beef industry. In a preferred embodiment, BSA is added to M87 medium to increase PD.</p>
+      <p id="p-00082-en" num="0078">Referring now to <figref>FIG. 9</figref>, pre-stasis 184⋄ HMEC was grown in M85 in primary culture and transferred to different media at passage 2. All cultures were switched into media containing oxytocin; one condition was M85; one condition was M85 with lipid rich BSA; one condition was M87 (no conditioned media) with lipid rich BSA. Note that the cells in M87A+oxytocin grew as well as cells in M85 until passage 8, indicating that the conditioned media can be eliminated, while maintaining good growth for many PD, although not as many PD as in the presence of the conditioned media. The cultures used in this experiment had undergone more PD in primary culture than those used for <figref>FIGS. 3-5</figref>.</p>
+      <p id="p-00083-en" num="0079">It is contemplated that one or more of the other anti-stress compositions and compounds may be used instead of oxytocin, or may be used in conjunction with oxytocin. If used concurrently with oxytocin, the addition of the other anti-stress composition may be prior to or subsequent to the addition of oxytocin, in the same formulation or added simultaneously. For example, in one embodiment, BSA is added to M85, referred to as M85A. In another embodiment, oxytocin can be added to M85A. In some embodiments, BSA is added to M87, which is referred to as M87A. In another embodiment, oxytocin can be added to M87A.</p>
+      <p id="p-00084-en" num="0000">ii. O<sub>2 </sub>Concentration</p>
+      <p id="p-00085-en" num="0080">In another embodiment, different O<sub>2 </sub>concentrations are systematically applied to optimize the PD. In one embodiment, growth of these cultures in atmospheric level or low oxygen levels between 3% and 20% O<sub>2 </sub>levels is used to effect small differences in overall population doubling potential. Although no significant improvement was shown in the M85 and M87 at 3% vs. 20% O<sub>2 </sub>(See <figref>FIG. 8</figref>), it is contemplated that overall population doubling may be affected by different formulations of the present media and/or if different types of cells are used.</p>
+      <p id="p-00086-en" num="0081">In one embodiment, the growth of these cultures are carried out in a lower oxygen environment. One example of methods for growing HMEC in MM in low O<sub>2 </sub>environment is described in Yaswen, P and Stampfer, M R, Molecular changes accompanying senescence and immortalization of cultured human mammary epithelial cells, <i>Int. J. Biochem. Cell Biol</i>. 34:1382-1394 2002, which is hereby incorporated by reference. Another recent methods reference describing the culture of mammary cells is Stampfer, M R, Taylor-Papadimitriou, J, and Yaswen, P., Culture of human mammary epithelial cells, in Culture of Epithelial Cells, 2<sup>nd </sup>Edition, Ed. Freshney, I., Wiley-Liss, 2002, which is also hereby incorporated by reference. Referring to <figref>FIG. 8</figref>, these cultures were started as organoids in MM and switched to M85+oxytocin in 3% O<sub>2 </sub>at passage 2. At passage 4 they were switched to growth in 20% vs. 3% O<sub>2</sub>, in either M85 or M87 medium. Growth in the absence of conditioned medium was similar for 2 passages and then cells grown without conditioned medium showed decreased proliferation.</p>
+      <p id="p-00087-en" num="0000">iii. Matrix Material</p>
+      <p id="p-00088-en" num="0082">In another embodiment, the cells are grown on extracellular matrix material, such as MATRIGEL, laminin or other extracellular components, including peptides that effect signal transduction of cellular receptors for extracellullar matrix ligands. In another embodiment, the cells are grown on culture dishes that allow better air flow, such as LUMOX dishes (Greiner Bio-One GmbH, Monroe, N.C.).</p>
+      <p id="p-00089-en" num="0083">Referring to <figref>FIG. 18</figref>, 184 HMEC, batch f, were grown in MM in primary culture and switched to M85 at passage 2. At passage 4 they were switched to M87 and grown on plastic (♦), laminin on plastic (▪), or laminin on LUMOX dishes (▴) (which allow the cells to grow on a gas-permeable substrate). Note that as the cells approach stasis, more proliferation occurred in cells grown on laminin on LUMOX.</p>
+      <p id="p-00090-en" num="0084">Referring to <figref>FIG. 19</figref>, pre-stasis 48RT HMEC were grown from primary culture in M85+oxytocin and switched at passage 6 to growth on laminin on plastic or plastic alone. Note that as the cells approach stasis, more proliferation occurred in cells on laminin.</p>
+      <p id="p-00091-en" num="0085">Thus, in one embodiment, cells grown in M85±oxytocin or M85A±oxytocin medium, and M87±oxytocin or M87A±oxytocin medium are also grown on laminin or LUMOX dishes, to prolong pre-stasis growth.</p>
+      <heading id="h-00012-en" level="1">4. Examples</heading>
+      <heading id="h-00013-en" level="1">Example 1</heading>
+      <heading id="h-00014-en" level="1">Increased Population Doublings in M85 Medium+Oxytocin</heading>
+      <p id="p-00092-en" num="0086">As shown in <figref>FIGS. 2</figref>, <b>3</b>, <b>7</b>-<b>9</b>, and <b>12</b>, HMEC undergo a variable number of PD prior to encountering stasis, depending upon culture conditions. HMEC placed in a medium containing ˜1% serum and conditioned media (MM) have active growth for ˜15-30 PD; cells grown in a serum-free medium (MCDB170) show active proliferation for ˜10-20 PD; HMEC grown in MM in a low oxygen environment (3% vs. 20%) grow for an additional ˜4 PD. Recent studies have shown that a medium combining elements of MM and MCDB170 (M85) enabled pre-stasis HMEC to grow for up to ˜45 PD, and addition of oxytocin to M85 at primary culture or passage 2 enabled around 60 PD total. p16 expression increases significantly ˜4-6 PD prior to proliferative arrest and is expressed in almost all cells at stasis. Age dependent increased p16 expression is also observed in human breast and other tissues in vivo, suggesting that the conditions which induce it may have physiologic relevance (Nielsen, G. P. et al., Immunohistochemical survey of p16<sup>INK4A </sup>expression in normal human adult and infant tissues. Lab. Invest., 79: 1137-1143, 1999; Ressler, S. et al., p16INK4A is a robust in vivo biomarker of cellular aging in human skin. Aging Cell, 5: 379-389, 2006.; Kim, W. Y. and Sharpless, N. E. The regulation of INK4/ARF in cancer and aging. Cell, 127: 265-275, 2006.).</p>
+      <p id="p-00093-en" num="0087">Referring now to <figref>FIGS. 12 and 13</figref>, transfer of HMEC growing in M85 that were a few passages from stasis to the more stressful MM medium resulted in rapid induction of p16 protein and growth arrest. Transfer of HMEC growing in M85+oxytocin that were &gt;5 passages away from stasis produced only a moderate growth reduction over 2 passages. The potential of the using M85+oxytocin to support long-term growth of pre-stasis HMEC opens up many new and important avenues of investigation of normal and aberrant HMEC biology. Specifically, it will now be possible to generate large standardized batches of pre-stasis HMEC that can be used for research and/or commercial applications, for example, to test the effects of factors that could influence aging or carcinogenesis.</p>
+      <p id="p-00094-en" num="0088">Referring now to <figref>FIGS. 3-5</figref>, which show pre-stasis growth of 184 HMEC in different media and immunohistochemical staining for p16 protein. 184 HMEC were started in M85 and subcultured at passage 2 into M85 with cholera toxin with or without oxytocin, in 20% O<sub>2</sub>. Note the greatly increased PD potential in the presence of oxytocin. Note also the lower level of p16 expression and different cell morphology in HMEC cultured in M85 with oxytocin compared to a population grown without oxytocin, both at 48 days post-seeding. Note the large cells staining for p16 with the small cells still negative for p16 but positive for LI (indicative of DNA synthesis).</p>
+      <p id="p-00095-en" num="0089">Referring now to <figref>FIG. 12</figref>, which shows pre-stasis growth of 184 HMEC in different media and immunohistochemical staining for p16 protein. 184 HMEC starting at 3p (experiment 1) or 2p (experiment 2) were grown in M85 in 3% O<sub>2</sub>. In experiment 2, some cells were switched back to MM in 3% O<sub>2 </sub>at subculture from passage 5 to passage 6. Note the lower level of p16 expression and different cell morphology in HMEC cultured in M85 at 8p vs. at stasis arrest at 11p, and the rapid increase in p16 expression when cells were transferred to MM. Post-selection 184 HMEC are shown as a negative control for p16. Note the large cells staining for p16 at 12p, as shown in <figref>FIGS. 12(B</figref> and C), with some small cells still negative. Note also the uniform expression of SA-β-gal in cells at 14p.</p>
+      <p id="p-00096-en" num="0090">Referring now to <figref>FIG. 13</figref>, which shows growth and immunohistochemical staining for p16 protein of pre-stasis 48RT and 240LB HMEC were switched to the indicated media at passage 5, subcultured to passage 6, and then assayed when midconfluent for LI and p16 expression. Note that the reduction in growth (LI) and increase in level of p16 expression is much less than seen in <figref>FIG. 12</figref>, when the switched cells were closer to stasis. The absence of conditioned media, as seen in previous figures for growth curves, did not have a significant effect on LI or p16 expression over this time frame (2 passages).</p>
+      <p id="p-00097-en" num="0091">In our HMEC system, it was originally observed that stasis could be spontaneously overcome in some cells grown in MCDB170, a process termed selection (Hammond, S. L., Ham, R. G., and Stampfer, M. R. Serum-free growth of human mammary epithelial cells: Rapid clonal growth in defined medium and extended serial passage with pituitary extract. Proc. Natl. Acad. Sci. USA, 81: 5435-5439, 1984). Emergent post-selection HMEC no longer express p16, associated with methylation of the p16 promoter region (Brenner, A. J., Stampfer, M. R., and Aldaz, C. M. Increased p16INK4a expression with onset of senescence of human mammary epithelial cells and extended growth capacity with inactivation. Oncogene, 17: 199-205, 1998). No spontaneous selection process in MM, M85, or M87 has yet been observed.</p>
+      <heading id="h-00015-en" level="1">Example 2</heading>
+      <heading id="h-00016-en" level="1">Examining Pre-Stasis and Post-Stasis with M85+Oxytocin for the Effects of Potential Oncogenic Agents on Transformation</heading>
+      <p id="p-00098-en" num="0092">Prior work in many laboratories has indicated that normal human epithelial cells are very refractory to in vitro transformation to immortality and/or malignancy. Most transformation studies using HMEC have employed cultures that were already post-stasis. The resultant cell lines, when examined by gene expression analysis, have shown a profile that resembles only a minority of human breast cancer phenotypes, the basal-like type (Perou et al Nature 406: 747-752, 2000). A recent paper (Ayyakannu et al PNAS 103:3799-3804, 2006) employed pre-stasis HMEC (using the methods of Stampfer and Bartley, PNAS 1985) to readily obtain transformed HMEC after overexpression of the potentially oncogenic agent Wnt-1. The resulting lines had a gene expression profile resembling a different, distinct, minority human breast cancer phenotype, medullary carcinomas.</p>
+      <p id="p-00099-en" num="0093">Preliminary studies have examined the effects of the c-myc oncogene on telomerase expression and growth potential in different pre-stasis and post-stasis HMEC populations (<figref>FIG. 17</figref>), although systematic comparison of cells grown in the same medium has not yet been done. Pre-stasis 184 HMEC grown in M85 from passage 2 were retrovirally infected at 4p with a p16 small interfering RNA (p16sh) or empty vector (MSCV) and selected with puromycin. At 5p the 184-MSCV and 184-p16sh cells were infected with c-myc or empty vector (LXSN) followed by G418 selection. Cumulative PD levels were calculated (<figref>FIG. 17A</figref>) and telomerase activity assayed at 8p (<figref>FIG. 17B</figref>). The control 184-MSCV-LXSN cells ceased growth by 10p; 184-p16sh-LXSN cells grew well to 12p, after which their growth rate slowed. In contrast, the 184-myc-MSCV cultures initially showed a mixture of larger flat and smaller highly mitotic cells, but by15p the smaller cells predominated and the population has maintained rapid growth. The 184-p16sh-myc cells grew well and the population has maintained indefinite growth. These immortal populations have not yet been examined to determine whether they are derived from a few cells or represent widespread immortal transformation of the pre-stasis population. In contrast, in ten separate experiments, only one presumably clonal immortal outgrowth in c-myc transduced post selection HMEC was seen.</p>
+      <p id="p-00100-en" num="0094">At 8p the vector control showed little or no detectable telomerase activity and the 184-p16sh-LXSN low activity. Significantly increased telomerase activity was seen in 184-myc-MSCV and the largest increase observed in the 184-p16sh-myc cells. In previous studies, we and others have seen low level telomerase activity in some MM-grown proliferating pre-stasis HMEC (Garbe, J. et al., Viral oncogenes accelerate conversion to immortality of cultured human mammary epithelial cells. Oncogene, 18: 2169-2180, 1999.; Belair, C. D. et al., Telomerase activity: a biomarker of cell proliferation, not malignant transformation. Proc. Natl. Acad. Sci. USA, 94: 13677-13682, 1998.) under conditions where no activity was seen in post-selection HMEC. We also previously saw that c-myc transduction increased telomerase in MM-grown pre-stasis 48L HMEC but not in post-selection 184 HMEC (Garbe, J. et al., Oncogene, 18: 2169-2180).</p>
+      <p id="p-00101-en" num="0095">
+        <figref>FIG. 16</figref> shows that pre-stasis 184 HMEC display some expression of hTERT, the catalytic subunit of telomerase, while showing very minimal loss of telomere length when subcultured from passage 3 to passage 11. These data indicate that pre-stasis HMEC, unlike the post-stasis post-selection HMEC, may express telomerase activity.</p>
+      <p id="p-00102-en" num="0096">Altogether, these data support our hypothesis that pre-stasis HMEC may have less stringent repression of telomerase than cells that have encountered stasis, and that pre-stasis HMEC may be more vulnerable to transformation. Since it has been very difficult to generate transformed HMEC starting from normal tissues, use of un-stressed pre-stasis cells as targets for oncogenic transformation may allow for a greater ease of transformation. The presence of much more heterogeneity in the M85-grown pre-stasis HMEC (note keratin 19 positive cells in the pre-stasis population, <figref>FIG. 6</figref>, and EGFR independent cells in <figref>FIG. 11</figref>) may also result in a greater range of transformed cell types, including transformed cells with gene expression profiles that resemble the majority of human breast cancers. Such lines may be useful for understanding the mechanisms of breast cancer pathogenesis, as well as to study agents that might inhibit or reverse pathogenesis.</p>
+      <heading id="h-00017-en" level="1">Example 3</heading>
+      <heading id="h-00018-en" level="1">Examining Mechanism of Oxytocin-Induced Growth for Pre-Stasis HMEC</heading>
+      <p id="p-00103-en" num="0097">Our initial studies will determine whether oxytocin is affecting telomerase activity (hTERT expression and TRAP activity), telomere length (mean TRF length) and expression of p16 and its regulators (e.g., ets transcription factors (see Yaswen, P. and Stampfer, M. R. Molecular changes accompanying senescence and immortalization of cultured human mammary epithelial cells. Int. J. Biochem. Cell Biol., 2002.)) in the best available medium. If oxytocin influences telomerase expression, additional studies will assay the effects of stresses on this function. Further studies, in collaboration with others, would look for downstream effects in the PI3K pathway, including on molecules associated with the cellular cytoskeleton (e.g., Rho GTPases) and cellular metabolism (e.g., mTOR pathway). Additional studies will compare gene expression profiles, and protein synthesis, in pre-stasis HMEC with and without exposure to oxytocin. Analysis of differences in gene expression profiles of pre-stasis HMEC from specimen 184 and 48R in media with and without oxytocin (<figref>FIG. 14</figref>) may suggest avenues to explore in determining the effect of oxytocin.</p>
+      <p id="p-00104-en" num="0098">Established techniques can be used to measure mean TRF length and hTERT expression and activity. Suitable techniques are described in, for example, Stampfer, M. et al., Expression of the telomerase catalytic subunit, hTERT, induces resistance to transforming growth factor β growth inhibition in p16<sup>INK4 </sup>(−) human mammary epithelial cells. Proc. Natl. Acad. Sci, USA., 98: 4498-4503, 2001., Garbe, J. et al., Viral oncogenes accelerate conversion to immortality of cultured human mammary epithelial cells. Oncogene, 18: 2169-2180, 1999., Stampfer, M. R. et al., Loss of p53 function accelerates acquisition of telomerase activity in indefinite lifespan human mammary epithelial cell lines. Oncogene, 22: 5238-5251, 2003., which are hereby incorporated by reference, can be used to measure mean TRF length and hTERT expression and activity.</p>
+      <heading id="h-00019-en" level="1">Example 4</heading>
+      <heading id="h-00020-en" level="1">Characterization of Cell Populations</heading>
+      <p id="p-00105-en" num="0099">Short-term growth assays are done by measuring 24 hr labeling index (LI) at midconfluence and p16 expression and cell numbers at confluence in different media (as shown in <figref>FIG. 13</figref>). Long-term assays are done by placing cells in different media at early passages and determining total PD prior to stasis (as shown in <figref>FIGS. 8</figref>, <b>9</b>). Other assays will transfer growing populations a few passages before stasis to media lacking specific components and assay LI and p16 (as shown in <figref>FIG. 12</figref>).</p>
+      <p id="p-00106-en" num="0100">Cultures can be monitored for capacity to express p16, LI and DNA content when they cease proliferation, to ensure that the conditions do not result in the emergence of post-selection cells. In addition to the present description and the Examples, future studies should address determining culture conditions that can provide more in vivo like conditions of 3D architecture and polarity. It is recommended that established lab techniques are used to measure cell numbers, cumulative PD, LI, p16 expression and DNA content.</p>
+      <p id="p-00107-en" num="0101">In the absence of stasis, cultured HMEC should proliferate with minimal p16 expression until they encounter the telomere-based barrier, agonescence (˜70 total PD in HMEC from specimen 184, ˜100 from specimen 48). Although this number of PD is not now achieved in cultured pre-stasis human epithelial cells, some cultured human fibroblasts such as the BJ strain can show &gt;80 PD. It is proposed to start by culturing primary organoids from specimens 184, 48, and 240 in M85, and freezing down batches of second passage cells for future use.</p>
+      <p id="p-00108-en" num="0102">The use of pre-stasis HMEC will greatly benefit by information on cellular phenotypes and gene expression. As shown in <figref>FIG. 6</figref>, pre-stasis HMEC grown in M85 can express keratin 19, a marker of specific HMEC types that has previously been difficult to demonstrate in ongoing proliferative populations in culture. Keratin 19 is expressed by the majority of human breast cancers, but is not expressed in in vitro transformed cell lines derived from post-stasis HMEC. In particular, we want to assay for properties that can identify basal vs. luminal, or differentiated characteristics, e.g., keratins, mucins, α-actin, vimentin, estrogen receptors, EPHA2, integrin receptors, SCA1. Some assays will be performed using immunohistochemistry or immunofluorescence procedures established in the Stampfer laboratory and by collaborators (Stampfer, M. et al., Expression of the telomerase catalytic subunit, hTERT, induces resistance to transforming growth factor β growth inhibition in p16<sup>INK4</sup>(−) human mammary epithelial cells. Proc. Natl. Acad. Sci, USA, 98: 4498-4503, 2001.; Romanov, S. et al. Normal human mammary epithelial cells spontaneously escape senescence and acquire genomic changes. Nature, 409: 633-637, 2001.). Experiments for examination of gene expression by microarrays using Affymetrix Hu133A Gene Chip arrays, containing probes for ˜18,400 transcripts including 14,500 well annotated genes were performed.</p>
+      <p id="p-00109-en" num="0103">Referring now to <figref>FIG. 14</figref>, gene expression data of the indicated HMEC at different passage levels were organized using unsupervised hierarchical clustering restricted to probe sets that varied by more than Log 2 2.0. The gene trees are not shown. HMEC cultures examined are: pre-stasis 184⋄ grown±oxytocin and 48RT−oxytocin, from passage 2 until stasis; post-stasis post-selection 184 batch v and 48R batch S when actively growing (184v 9p, 48RT 11p) and at agonescence (184v 14p, 48RT 22p). <figref>FIG. 14(A)</figref> shows unsupervised clustering of growing and senescent (stasis or agonescence) HMEC from specimens 184 and 48R showing a partial probe set. The analysis baseline was calculated from the average of all samples; 891 probe sets were used for the clustering. Of note is the clear distinctions in pre-stasis cells between growing cultures and those at stasis; some differences between growing pre-stasis and post-selection HMEC; some differences between cells at stasis vs. agonescence; some differences between growing post-selection and agonescence; some differences between individuals. <figref>FIG. 14(B)</figref> shows unsupervised clustering of senescent (stasis or agonescence) HMEC from specimens 184 and 48R showing a partial probe set; 529 probe sets were used for the clustering. These unsupervised clusterings support our model of the distinct senescence barriers, showing that gene expression at stasis is distinct from that seen at agonescence. The data also show differences in expression between growing populations and those at the senescence barriers, and differences between individual specimens 184⋄ and 48RT.</p>
+      <p id="p-00110-en" num="0104">
+        <figref>FIG. 15</figref> is a heat map showing supervised clustering of selected gene expression in growing and senescent (stasis or agonescence) pre-stasis and post-selection HMEC. Expression level of genes associated with keratins, extracellular matrix, and basal or luminal phenotypes were selected, and some of them identified in the figure. Gene expression data was organized according to specimen and passage level, separating pre-stasis from post-selection populations. Arrows at the left indicate increasing passage number. Some of the selected genes are listed on the bottom. Note the continued expression of K19 in 48RT, but not 184⋄, through stasis. Other differences can be noted between individuals 184 and 48R.</p>
+      <p id="p-00111-en" num="0105">Further, an examination of telomere associated properties, i.e. mean TRF (telomere restriction fragment) length, hTERT expression and telomerase activity (<figref>FIG. 16</figref>), is being conducted. Additional assays will be performed using immunohistochemistry or immunofluorescence procedures using standard techniques as known in the art.</p>
+      <p id="p-00112-en" num="0106">These studies should allow us to define culture conditions permissive for extensive growth of well-characterized pre-stasis HMEC, the cells likely most reflective of normal HMEC in vivo, compared to the commonly used post-selection HMEC. Such an achievement may have large repercussions on future investigation of normal and aberrant human breast biology. Possibly, the role of some factors that may significantly affect pre-stasis HMEC biology has been obscured because of their limited growth in vitro. We are seeing a dramatic effect of oxytocin (a factor whose synthesis in vivo is influenced by estrogens and which may act through the PI3K pathway in cells), and future studies will examine the mechanism of its action. Other possible factors whose effects on pre-stasis HMEC could be evaluated include hormones such as estrogens and progestins, environmental carcinogens, and oncogenes associated with human breast cancer.</p>
+      <p id="p-00113-en" num="0107">HMEC which have experienced less stress in culture as seen by increased PD potential may have less stringent repression of telomerase and may be more vulnerable to c-myc-induced telomerase reactivation and immortalization (<figref>FIG. 17</figref>). These cultures may also be vulnerable to transformation via other agents that increase telomerase activity.</p>
+      <heading id="h-00021-en" level="1">Example 5</heading>
+      <heading id="h-00022-en" level="1">Telomerase</heading>
+      <p id="p-00114-en" num="0108">One embodiment is an assay for hTERT expression by RT-PCR, telomerase activity by TRAP, and mean TRF (telomere) length as described (Stampfer, M. R. et al., Loss of p53 function accelerates acquisition of telomerase activity in indefinite lifespan human mammary epithelial cell lines. Oncogene, 22: 5238-5251, 2003.) in pre-stasis HMEC populations to determine possible correlation among culture conditions, differing PD potential and onset of stasis with telomerase activity and the rate of telomere erosion with ongoing proliferation.</p>
+      <heading id="h-00023-en" level="1">Example 6</heading>
+      <heading id="h-00024-en" level="1">Aging and Carcinogenesis Assays</heading>
+      <p id="p-00115-en" num="0109">Further similar studies may enable development of assays to determine possible effects of factors that could influence aging and/or carcinogenesis. For example, the addition of the anti-stress factor oxytocin causes a significant increase in total PD. The effects of additional factors in increasing or decreasing total PD can be measured using standardized pre-stasis cell batches. Other assays such as seen in <figref>FIGS. 9</figref>, <b>12</b>, and <b>13</b> that measure growth and p16 expression following removal of specific factors can also be employed. Overcoming stasis is considered an important step in the carcinogenesis pathway.</p>
+      <p id="p-00116-en" num="0110">Referring now to <figref>FIG. 12(A)</figref>, cells were started as primary organoids in MM and switched at passage 3 (experiment 1) or at passage 2 (experiment 2) to M85 in 3% 02. In experiment 2, some cells were switched back to MM in 3% 02 at subculture from passage 5 to passage 6. Note the lower level of p16 expression and different cell morphology in HMEC cultured in M85 at 8p vs. at stasis arrest at 11p, and the rapid cessation of growth and increase in p16 expression when cells were transferred to MM at passage 6. Post-selection 184 HMEC are shown as a negative control for p16. These data suggest that pre-stasis HMEC grown in M85-based media that are close to stasis may be quickly propelled into stasis by switching to MM.</p>
+      <p id="p-00117-en" num="0111">Referring now to <figref>FIG. 13</figref>, pre-stasis HMEC grown in M85+oxytocin, 48RT and 240LB, were switched to the indicated media at passage 5, subcultured to passage 6, and then assayed when midconfluent for LI and p16 expression. Note the reciprocity of LI and p16 (together ˜100%). In this situation, starting with pre-stasis HMEC that were still many passages away from stasis, switching to media that support fewer pre-stasis PD (i.e., MM or MCDB170) caused only moderate decreases in proliferative potential over the time frame examined.</p>
+      <p id="p-00118-en" num="0112">Almost all human carcinomas contain an error that would allow stasis to be overcome (e.g., loss of Rb function, loss of p16 expression, and changes in other factors that influence Rb activity). Although a spontaneous selection process (overcoming of stasis) has not been observed in HMEC grown in MM or M85, exposure to a chemical carcinogen was able to enable pre-stasis HMEC grown in MM to overcome stasis, associated with loss of p16 expression (Stampfer, M. R. and Bartley, J. C., Induction of transformation and continuous cell lines from normal human mammary epithelial cells after exposure to benzo(a)pyrene. <i>Proc Natl Acad Sci </i>(USA) 82:2394-2398, 1985, Brenner &amp; Aldaz, Chromosome 9p allelic loss and p16/CDKN2 in breast cancer and evidence of p16 inactivation in immortal breast epithelial cells, <i>Cancer Research </i>55: 2892-2895, 1995). Additionally, growth in the high-stress serum free medium MCDB170 enabled rare cells to silence p16 expression and overcome stasis (Hammand et al, 1984), as did inactivation of the tumor suppressor p53 (Garbe et al, in preparation [data not shown]). An assay, using large standardized pre-stasis cell batches, to measure whether a factor can induce pre-stasis HMEC to overcome stasis, may indicate potential carcinogenic agents. The absence of a spontaneous process to overcome stasis in M85 facilitates such an assay. Further, standardized pre-stasis populations could be used to assay potential carcinogenic agents ability to overcome OIS in response to overexpressed oncogenes such as Raf-1 or Ras, since we have shown that untreated pre-stasis and post-selection HMEC show rapid loss of proliferative potential when challenged with overexpressed Raf-1 (Olsen C. L. et al., Raf-1-induced growth arrest in human mammary epithelial cells is p16-independent and is overcome in immortal cells during conversion, Oncogene 21:6328-6339, 2002).</p>
+      <heading id="h-00025-en" level="1">Example 7</heading>
+      <heading id="h-00026-en" level="1">Generation of Assays on the Effects of Pro-/Anti-Carcinogenic Agents</heading>
+      <p id="p-00119-en" num="0113">The long-term growth potential of pre-stasis HMEC in M85+oxytocin allows the generation of large standardized cell batches which can be reproducible starting points for assays on the effects of pro- or anti-carcinogenic agents. These populations can be challenged with potential carcinogenic agents and assayed for their ability to subsequently overcome stasis or OIS. The absence of spontaneous selection to overcome stasis in the M85 media facilitates such assays. Conversely, the presence of rare colonies that can escape stasis after exposure to potentially oncogenic agents (e.g., BaP, overexpressed c-myc, inactivation of p53, high stress medium) suggests that potential oncogenic agents may induce pre-stasis HMEC to overcome stasis. Quantitative assays may be designed wherein HMEC exposed to agents in M85+oxytocin are then switched to a media that induces rapid stasis (as in <figref>FIG. 12</figref>) and then observed for the appearance and number of colonies induced to escape stasis. Alternatively, pre-stasis HMEC may be transduced with oncogenes whose expression is dependent upon an inducer (e.g., Raf:ER as described in Olsen et al., 2002), exposed to potential oncogenic agents, and the oncogene induced. Untreated cells would be expected to rapidly lose proliferative potential (Olsen et al., 2002). Treated cultures can be observed for the appearance and number of colonies induced to escape OIS.</p>
+      <heading id="h-00027-en" level="1">Example 8</heading>
+      <heading id="h-00028-en" level="1">Generation of New Cell Lines</heading>
+      <p id="p-00120-en" num="0114">Transduction of unstressed pre-stasis cells grown in M85 gave rise to immortal cell lines with significantly increased frequency of immortal transformation compared to the extreme difficulty in obtaining immortal transformation of post-stasis post-selection HMEC using pathologically related agents. As shown in <figref>FIG. 17</figref>, transduction of unstressed pre-stasis HMEC grown in M85 gave rise to immortal cell lines in all conditions except the control. Cultures were transduced with p16shRNA or vector control at passage 4, and c-myc or vector control at passage 5. Note that transduction of these unstressed pre-stasis HMEC grown in M85 gave rise to immortal cell lines in all conditions except the control. This frequency of immortal transformation contrasts with the extreme difficulty in obtaining immortal transformation of post-stasis post-selection HMEC, and suggests that genetic manipulations using unstressed pre-stasis HMEC may be a preferable route for immortal transformation of human epithelial cells. It well may be that the more heterogeneous population of cells grown in M85 may be more susceptible to oncogenic transformation and may produce a greater range of phenotypes in the transformed cells. Thus in one embodiment, a method is provided for generation of a greater number and greater range of lines, with greater number of phenotypes.</p>
+      <p id="p-00121-en" num="0115">Such new lines may better reflect the variety of phenotypes seen in breast cancer derived cells, and thereby provide experimentally tractable systems to determine the pathway by which different oncogenic insults may transform normal HMEC, as well as to assess the potential of therapeutic or other agents to prevent this transformation.</p>
+      <p id="p-00122-en" num="0116">While the present media formulations, compositions, methods and processes have been described with reference to specific details of certain exemplary embodiments thereof, it is not intended that such details be regarded as limitations upon the scope of the invention. The present examples, methods, procedures, specific compounds and media are meant to exemplify and illustrate the invention and should in no way be seen as limiting the scope of the invention. Any patents, references and publications, mentioned above and below in this specification are indicative of levels of those skilled in the art to which the invention pertains and are hereby incorporated by reference to the same extent as if each was specifically and individually incorporated by reference.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of increasing population doublings in a cell culture of human epithelial cells with finite life span, comprising the steps of:
+<claim-text>providing a cell culture of pre-stasis human epithelial cells, and</claim-text><claim-text>providing a cell culture medium comprising a ratio of a medium with serum and a serum-free medium to said cell culture, wherein each of the media are optimized for a specific type of human epithelial cell,</claim-text><claim-text>whereby population doublings and finite life span of said cell culture are increased as compared to a control.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the medium with serum contains conditioned media.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the medium with serum does not contain conditioned media.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the serum-free media is MCDB170.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cell culture medium varies in concentration of EGF, hydrocortisone, bovine pituitary extract, estradiol, triiodothyronine, insulin or insulin-like growth factor, BSA, or serum.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the human epithelial cells are human mammary epithelial cells.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the ratio of medium with serum and serum-free medium is between 30-60% medium with serum and 40-70% serum-free medium.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the ratio of medium with serum and serum-free medium is 50% medium with serum and 50% serum-free medium.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the ratio of medium with serum and serum-free medium is 30% medium with serum and 70% serum-free medium.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the ratio of medium with serum and serum-free medium is 60% medium with serum and 40% serum-free medium.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising the step of:
+<claim-text>providing an effective amount of an anti-stress associated compound to the cell culture,</claim-text><claim-text>whereby the population doublings and finite life span of the cell culture are further increased.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the anti-stress associated compound is selected from the group consisting of oxytocin, bovine serum albumin (BSA), angiotensin II, serotonin (5-HT), melanin concentrating hormone, histamine, bombesin and gastrin-releasing peptide (GRP), glucagons-like peptide-1 (GLP-1), cholecystokinin (CCK), dopamine, and corticotrophin releasing factor.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the anti-stress associated compound is oxytocin.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the effective amount of oxytocin is a concentration between 0.05 nM and 5.0 nM.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the effective amount of oxytocin is a concentration of 0.1 nM.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, further comprising the step of providing a second anti-stress associated compound.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the second anti-stress associated compound is selected from the group consisting of bovine serum albumin (BSA), angiotensin II, serotonin (5-HT), melanin concentrating hormone, histamine, bombesin and gastrin-releasing peptide (GRP), glucagons-like peptide-1 (GLP-1), cholecystokinin (CCK), dopamine, and corticotrophin releasing factor is provided to the cell culture.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the anti-stress associated compound is bovine serum albumin (BSA).</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the anti-stress associated compound is added to the primary passage of the cell culture.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the anti-stress associated compound is added at or after the second passage of the cell culture. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00014.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00015.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00016.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00017.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00018.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150247121A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247121A1-20150903-D00019.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247121A1.PDF" type="pdf" size="2459236" pages="31" />
+</lexisnexis-patent-document>

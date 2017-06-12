@@ -1,0 +1,1919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259322A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030037" date-changed="20151215" time-changed="165920">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121313720">
+        <country>US</country>
+        <doc-number>20150259322</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14424753</doc-number>
+        <date>20130829</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012189499</doc-number>
+        <date>20120830</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151215">
+      <classification-ipcr sequence="1">
+        <text>C07D 401/04        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>401</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C07C 233/69        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>233</main-group>
+        <subgroup>69</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C07C 235/46        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>235</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C07C 317/32        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>317</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C07C 323/42        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>323</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C07D 213/56        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>213</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>C07D 231/12        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>231</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151215">
+      <classification-cpc sequence="1">
+        <text>C07D 401/04        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>401</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  31/166       20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>166</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  31/415       20130101 LI20150708BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>415</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150708</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  31/44        20130101 LI20150708BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150708</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C07C 233/69        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>233</main-group>
+        <subgroup>69</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C07C 235/46        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>235</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C07C 235/60        20130101 LI20140925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>235</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C07C 317/32        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>317</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C07C 323/42        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>323</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C07C 323/62        20130101 LI20140925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>323</main-group>
+        <subgroup>62</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C07D 213/56        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>213</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C07D 213/61        20130101 LI20140923BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>213</main-group>
+        <subgroup>61</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140923</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C07D 213/643       20130101 LI20140923BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>213</main-group>
+        <subgroup>643</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140923</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C07D 213/74        20130101 LI20151208BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>213</main-group>
+        <subgroup>74</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151208</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C07D 231/12        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>231</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>C07D 231/16        20130101 LI20140923BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>231</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140923</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>C07D 231/18        20130101 LI20140923BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>231</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140923</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>C07D 231/20        20130101 LI20140923BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>231</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140923</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">8</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">ENDOPARASITE CONTROL AGENT AND METHOD FOR USING THE SAME</invention-title>
+    <references-cited date-changed="20151110">
+      <forward-citations name="fwdcit" date-changed="20151110" />
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>20150266853</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>The University of Tokyo</orgname>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Nihon Nohyaku Co., Ltd.</orgname>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kita</last-name>
+            <first-name>Kiyoshi</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Suwa</last-name>
+            <first-name>Akiyuki</first-name>
+            <address>
+              <city>Osaka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Oda</last-name>
+            <first-name>Masatsugu</first-name>
+            <address>
+              <city>Osaka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Tanaka</last-name>
+            <first-name>Koji</first-name>
+            <address>
+              <city>Osaka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13073077</doc-number>
+        <date>20130829</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014034751</doc-number>
+        <date>20140306</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151022">
+      <main-family family-id="164586816">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2891489</doc-number>
+            <kind>A1</kind>
+            <date>20150708</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104582696</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>404MUMNP2015</doc-number>
+            <kind>A</kind>
+            <date>20150904</date>
+          </document-id>
+          <application-date>
+            <date>20150225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259322</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>UY</country>
+            <doc-number>34997</doc-number>
+            <kind>A</kind>
+            <date>20140331</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014034751</doc-number>
+            <kind>A1</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013310075</doc-number>
+            <kind>A1</kind>
+            <date>20150402</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015002519</doc-number>
+            <kind>A</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164586815">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2891489</doc-number>
+            <kind>A1</kind>
+            <date>20150708</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104582696</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>404MUMNP2015</doc-number>
+            <kind>A</kind>
+            <date>20150904</date>
+          </document-id>
+          <application-date>
+            <date>20150225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259322</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>UY</country>
+            <doc-number>34997</doc-number>
+            <kind>A</kind>
+            <date>20140331</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014034751</doc-number>
+            <kind>A1</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013310075</doc-number>
+            <kind>A1</kind>
+            <date>20150402</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015002519</doc-number>
+            <kind>A</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An object of the present invention is to provide a novel endoparasite control agent as a parasiticide, an antiprotozoal or the like. Provided is an endoparasite control agent comprising a carboxamide derivative represented by the general formula (I):</p>
+    <p id="p-a-00002-en" num="0000">
+      <chemistry id="chema-00001-en" num="00001">
+        <img id="imga-00001-en" he="20.91mm" wi="59.35mm" alt="embedded image" img-content="chem" file="US20150259322A1_00001.PNG" img-format="png" original="US20150259322A1-20150917-C00001.TIF" />
+      </chemistry>
+    </p>
+    <p id="p-a-00003-en" num="0000">or a salt thereof as an active ingredient.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150522</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259322A1</docdb-publication-number>
+      <docdb-application-id>444514251</docdb-application-id>
+      <new-owner>NIHON NOHYAKU CO., LTD., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:SUWA, AKIYUKI;ODA, MASATSUGU;TANAKA, KOJI;REEL/FRAME:035698/0740</free-text-description>
+      <effective-date>
+        <date>20150415</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150522</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259322A1</docdb-publication-number>
+      <docdb-application-id>444514251</docdb-application-id>
+      <new-owner>THE UNIVERSITY OF TOKYO, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:KITA, KIYOSHI;REEL/FRAME:035698/0565</free-text-description>
+      <effective-date>
+        <date>20150422</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates an endoparasite control agent comprising a carboxamide derivative or a salt thereof as an active ingredient, and a method for controlling endoparasites, comprising orally or parenterally administering the endoparasite control agent.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Generally, parasitosis is caused by infestation of host animals with parasites such as unicellular protists (protozoa), multicellular helminths and arthropods. It is reported that the incidence of parasitosis in advanced countries has been remarkably decreased by improvement of environmental hygiene, but on a global scale, particularly in developing countries, parasitosis still widely prevails and causes tremendous damage.</p>
+      <p id="p-00003-en" num="0003">In recent years, even in advanced countries, there has been an increasing trend in the incidence of parasitosis. This is partly because of introduction of infection sources via long- or short-term overseas travelers, and partly because of parasitic infection due to ingestion of food imports, frozen foods, raw meat, fish meat, etc. or via domestic animals and pets. Another problem is that immunodeficiency caused by mass administration of immunosuppressants, anticancer drugs, etc. or by AIDS etc. allows usually non-pathogenic or low-pathogenic parasites to express their pathogenicity and to cause opportunistic infection in hosts.</p>
+      <p id="p-00004-en" num="0004">Further, parasitosis in domestic animals, such as pigs, horses, cattle, sheep, dogs, cats and domestic fowls, is a universal and serious economic problem. That is, parasitic infection of domestic animals causes anemia, malnutrition, debility, weight loss, and serious damage of intestinal tract walls, tissues and organs, and may result in decline in feed efficiency and productivity, leading to a great economic loss. Therefore, novel endoparasite control agents as a parasiticide, an antiprotozoal or the like have always been desired.</p>
+      <p id="p-00005-en" num="0005">Certain kinds of carboxamide derivatives have been known to have microbicidal activity (see Patent Literature 1 to 13). Further, it is known that certain kinds of carboxamide derivative are effective against nematodes that may damage agricultural products (see Patent Literature 4 or 5). However, Patent Literature 1 to 13 has neither description nor suggestion that the disclosed compounds are effective against endoparasites in animals such as mammals and birds.</p>
+      <p id="p-00006-en" num="0006">Furthermore, it has been reported that compounds that inhibit succinate-ubiquinone reductase (mitochondrial complex II), which is one of the respiratory enzymes of endoparasites, can serve as an endoparasite control agent (see Non Patent Literature 1), but it has been unknown whether carboxamide derivatives have inhibitory effect on succinate-ubiquinone reductase (mitochondrial complex II). Further, Patent Literature 1 to 13 has neither description nor suggestion on any inhibitory activity of the disclosed carboxamide derivatives on succinate-ubiquinone reductase (mitochondrial complex II).</p>
+      <heading id="h-00003-en" level="1">CITATION LIST</heading>
+      <heading id="h-00004-en" level="1">Patent Literature</heading>
+      <p id="p-00007-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>Patent Literature 1: JP-A 01-151546</li>
+          <li>Patent Literature 2: WO 2007/060162</li>
+          <li>Patent Literature 3: JP-A 53-9739</li>
+          <li>Patent Literature 4: WO 2007/108483</li>
+          <li>Patent Literature 5: WO 2008/126922</li>
+          <li>Patent Literature 6: WO 2008/062878</li>
+          <li>Patent Literature 7: WO 2008/101975</li>
+          <li>Patent Literature 8: WO 2008/101976</li>
+          <li>Patent Literature 9: WO 2008/003745</li>
+          <li>Patent Literature 10: WO 2008/003746</li>
+          <li>Patent Literature 11: WO 2009/012998</li>
+          <li>Patent Literature 12: WO 2009/127718</li>
+          <li>Patent Literature 13: WO 2010/106071</li>
+        </ul>
+      </p>
+      <heading id="h-00005-en" level="1">Non Patent Literature</heading>
+      <p id="p-00008-en" num="0000">
+        <ul id="ul-00002-en" list-style="none">
+          <li>Kiyoshi Kita, “Kansen (Infection)”, Winter 2010, Vol. 40-4, 310-319</li>
+        </ul>
+      </p>
+      <heading id="h-00006-en" level="1">SUMMARY OF INVENTION</heading>
+      <heading id="h-00007-en" level="1">Technical Problem</heading>
+      <p id="p-00009-en" num="0021">In view of the above-described circumstances, an object of the present invention is to provide a novel endoparasite control agent as a parasiticide, an antiprotozoal or the like.</p>
+      <heading id="h-00008-en" level="1">Solution to Problem</heading>
+      <p id="p-00010-en" num="0022">The present inventors conducted extensive research to solve the above-described problems. As a result, the present inventors found that a carboxamide derivative represented by the general formula (I), and a salt thereof have a high control effect against endoparasites. The present inventors further conducted a great deal of examination and then completed the present invention. That is, the present invention relates to the following.</p>
+      <p id="p-00011-en" num="0000">[1] An endoparasite control agent comprising a carboxamide derivative represented by the general formula (I):</p>
+      <p id="p-00012-en" num="0000">
+        <chemistry id="chem-00001-en" num="00002">
+          <img id="img-00001-en" he="20.91mm" wi="59.01mm" alt="embedded image" img-content="chem" file="US20150259322A1_00002.PNG" img-format="png" original="US20150259322A1-20150917-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00013-en" num="0000">{wherein each X may be the same or different, and represents a halogen atom; a cyano group; a nitro group; an amino group; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; or a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group,</p>
+      <p id="p-00014-en" num="0023">m represents an integer of 0 to 5,</p>
+      <p id="p-00015-en" num="0024">A represents a (C<sub>1</sub>-C<sub>8</sub>) alkylene group; or a substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group and a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group, with the proviso that the (C<sub>1</sub>-C<sub>8</sub>) alkylene group and the substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group may be modified by incorporation, into the carbon chain, of at least one group selected from —O—, —S—, —SO—, —SO<sub>2</sub>— and —N(R)— (wherein R represents a hydrogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkylcarbonyl group or a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group), and with the proviso that when the alkylene group or the substituted alkylene group having one or more substituents is a (C<sub>3</sub>-C<sub>6</sub>) or (C<sub>3</sub>-C<sub>8</sub>) alkylene group, or a (C<sub>2</sub>-C<sub>6</sub>) or (C<sub>2</sub>-C<sub>8</sub>) alkylene group modified by incorporation, into the carbon chain, of at least one group selected from —O—, —S—, —SO—, —SO<sub>2</sub>— and —N(R)— (wherein R is as defined above), A may form a cyclic structure,</p>
+      <p id="p-00016-en" num="0025">E represents a hydrogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkylcarbonyl group; or a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group, and</p>
+      <p id="p-00017-en" num="0026">B represents any of the moieties represented by the following B1 to B8:</p>
+      <p id="p-00018-en" num="0000">
+        <chemistry id="chem-00002-en" num="00003">
+          <img id="img-00002-en" he="161.80mm" wi="50.55mm" alt="embedded image" img-content="chem" file="US20150259322A1_00003.PNG" img-format="png" original="US20150259322A1-20150917-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00019-en" num="0000">(wherein each Y may be the same or different, and represents a halogen atom; a cyano group; a nitro group; a hydroxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>2</sub>-C<sub>6</sub>) alkenyl group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkenyl group; a (C<sub>2</sub>-C<sub>6</sub>) alkynyl group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkynyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a (C<sub>2</sub>-C<sub>6</sub>) alkenyloxy group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkenyloxy group; a (C<sub>2</sub>-C<sub>6</sub>) alkynyloxy group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkynyloxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxyimino (C<sub>1</sub>-C<sub>3</sub>) alkyl group; a (C<sub>3</sub>-C<sub>30</sub>) trialkylsilyl group; a mono (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonylamino group; a mono halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonylamino group; a phenyl group; a substituted phenyl group having one or more substituents selected from group Z substituents on the ring; a phenoxy group; a substituted phenoxy group having one or more substituents selected from group Z substituents on the ring; a heterocyclic group; a substituted heterocyclic group having one or more substituents selected from group Z substituents on the ring; a heterocycloxy group; or a substituted heterocycloxy group having one or more substituents selected from group Z substituents on the ring, the group Z substituents are a halogen atom; a cyano group; a nitro group; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>2</sub>-C<sub>6</sub>) alkenyl group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkenyl group; a (C<sub>2</sub>-C<sub>6</sub>) alkynyl group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkynyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a (C<sub>2</sub>-C<sub>6</sub>) alkenyloxy group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkenyloxy group; a (C<sub>2</sub>-C<sub>6</sub>) alkynyloxy group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkynyloxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group; and a (C<sub>1</sub>-C<sub>6</sub>) alkoxyimino (C<sub>1</sub>-C<sub>3</sub>) alkyl group,</p>
+      <p id="p-00020-en" num="0027">Y<sup>1 </sup>represents a (C<sub>1</sub>-C<sub>6</sub>) alkyl group,</p>
+      <p id="p-00021-en" num="0028">n represents an integer of 0 to 5, with the proviso that when n is an integer of 2 to 5, two adjacent Y groups may join together to form a (C<sub>3</sub>-C<sub>5</sub>) alkylene group; a (C<sub>3</sub>-C<sub>5</sub>) alkenylene group; a (C<sub>2</sub>-C<sub>4</sub>) alkyleneoxy group; a (C<sub>1</sub>-C<sub>3</sub>) alkylene dioxy group; or a halo (C<sub>1</sub>-C<sub>3</sub>) alkylene dioxy group, and the numbers on each ring represent positions where the ring can be substituted by Y and the free bond extending from each ring is a bond between A and B)}, or a salt thereof as an active ingredient.</p>
+      <p id="p-00022-en" num="0000">[2] The endoparasite control agent according to the above [1], wherein A is a (C<sub>1</sub>-C<sub>8</sub>) alkylene group; or a substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group having a substituent(s) which may be the same or different from each other and is/are selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group and a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group. <br /> [3] The endoparasite control agent according to the above [1] or [2], wherein B is B1, B2 or B5. <br /> [4] The endoparasite control agent according to the above [1], wherein each X may be the same or different, and is a halogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; or a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, </p>
+      <p id="p-00023-en" num="0029">m is 1 or 2,</p>
+      <p id="p-00024-en" num="0030">A is a (C<sub>1</sub>-C<sub>8</sub>) alkylene group; or a (C<sub>1</sub>-C<sub>8</sub>) alkylene group substituted by a (C<sub>1</sub>-C<sub>6</sub>) alkyl group,</p>
+      <p id="p-00025-en" num="0031">E is a hydrogen atom,</p>
+      <p id="p-00026-en" num="0032">B is B1, B2 or B5,</p>
+      <p id="p-00027-en" num="0033">each Y may be the same or different, and is a halogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a phenyl group; a substituted phenyl group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a phenoxy group; a substituted phenoxy group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a pyridyl group; a substituted pyridyl group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a pyridyloxy group; or a substituted pyridyloxy group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring, and</p>
+      <p id="p-00028-en" num="0034">n is an integer of 1 to 3.</p>
+      <p id="p-00029-en" num="0000">[5] The endoparasite control agent according to the above [1], wherein each X may be the same or different, and is a halogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; or a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group,</p>
+      <p id="p-00030-en" num="0035">m is 1 or 2,</p>
+      <p id="p-00031-en" num="0036">A is a (C<sub>1</sub>-C<sub>8</sub>) alkylene group; or a (C<sub>1</sub>-C<sub>8</sub>) alkylene group substituted by a (C<sub>1</sub>-C<sub>6</sub>) alkyl group,</p>
+      <p id="p-00032-en" num="0037">E is a hydrogen atom,</p>
+      <p id="p-00033-en" num="0038">B is B1,</p>
+      <p id="p-00034-en" num="0039">each Y may be the same or different, and is a halogen atom;</p>
+      <p id="p-00035-en" num="0040">a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a phenyl group; a substituted phenyl group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a phenoxy group; a substituted phenoxy group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a pyridyl group; a substituted pyridyl group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a pyridyloxy group; or a substituted pyridyloxy group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring, and</p>
+      <p id="p-00036-en" num="0041">n is an integer of 1 to 3.</p>
+      <p id="p-00037-en" num="0000">[6] A method for controlling endoparasites, comprising orally or parenterally administering an effective amount of the endoparasite control agent according to any one of the above [1] to [5] to a non-human mammal or a bird. <br /> [7] A method for controlling endoparasites, comprising orally or parenterally administering an effective amount of the endoparasite control agent according to any one of the above [1] to [5] to a non-human mammal. <br /> [8] The method according to the above [7], wherein the non-human mammal is a domestic animal. </p>
+      <heading id="h-00009-en" level="1">Advantageous Effects of Invention</heading>
+      <p id="p-00038-en" num="0042">The present invention provides a compound useful as an endoparasite control agent which excels in performance as compared with the conventional art.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00010-en" level="1">DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00039-en" num="0043">The definitions in the carboxamide derivative represented by the general formula (I) are described below.</p>
+      <p id="p-00040-en" num="0044">The “(C<sub>1</sub>-C<sub>8</sub>) alkylene group” refers to a straight alkylene group of 1 to 8 carbon atoms, for example, a methylene group, an ethylene group, a trimethylene group, a tetramethylene group, a pentamethylene group, a hexamethylene group, a heptamethylene group, an octamethylene group or the like. The “(C<sub>3</sub>-C<sub>5</sub>) alkylene group” refers to a straight alkylene group of 3 to 5 carbon atoms, for example, a trimethylene group, a tetramethylene group, a pentamethylene group or the like. In the “substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group having a substituent (s) selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group and a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group,” each substituent may be the same or different, and may be bound to any carbon atom in the alkylene group. The statement “the (C<sub>1</sub>-C<sub>8</sub>) alkylene group and the substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group may be modified by incorporation, into the carbon chain, of at least one group selected from —O—, —S—, —SO—, —SO<sub>2</sub>— and —N(R)— (wherein R represents a hydrogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkylcarbonyl group or a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group)” means that it is possible to form a moiety which is the same as the above-mentioned non-substituted or substituted straight (C<sub>1</sub>-C<sub>8</sub>) alkylene group except for having an above-listed group attached to a terminal carbon atom or inserted between carbon atoms in the alkylene group. The specific examples include an ethyleneoxy group, an ethylenethio group, an ethylene sulfinyl group, an ethylene sulfonyl group, an ethylene amino group, a propyleneoxy group, a propylenethio group, a propylene sulfinyl group, a propylene sulfonyl group, a propylene amino group, —CH<sub>2</sub>—CH<sub>2</sub>—O—CH<sub>2</sub>—, —CH<sub>2</sub>—CH<sub>2</sub>—S—CH<sub>2</sub>— and —CH<sub>2</sub>—CH<sub>2</sub>—NH—CH<sub>2</sub>—.</p>
+      <p id="p-00041-en" num="0045">The “halogen atom” refers to a fluorine atom, a chlorine atom, a bromine atom or an iodine atom.</p>
+      <p id="p-00042-en" num="0046">The “(C<sub>1</sub>-C<sub>6</sub>) alkyl group” refers to a straight or branched alkyl group of 1 to 6 carbon atoms, for example, a methyl group, an ethyl group, a n-propyl group, an isopropyl group, a n-butyl group, an isobutyl group, a sec-butyl group, a tert-butyl group, a n-pentyl group, a neopentyl group, a n-hexyl group or the like. The “halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group” refers to a straight or branched alkyl group of 1 to 6 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, a trifluoromethyl group, a difluoromethyl group, a perfluoroethyl group, a hexafluoroisopropyl group, a perfluoroisopropyl group, a chloromethyl group, a bromomethyl group, a 1-bromoethyl group, a 2,3-dibromopropyl group or the like. The “(C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group” refers to a cycloalkyl group of 3 to 6 carbon atoms, for example, a cyclopropyl group, a cyclobutyl group, a cyclopentyl group, a cyclohexyl group or the like.</p>
+      <p id="p-00043-en" num="0047">The “(C<sub>2</sub>-C<sub>6</sub>) alkenyl group” refers to a straight or branched alkenyl group of 2 to 6 carbon atoms, for example, a vinyl group, a propenyl group, a butenyl group or the like. The “halo (C<sub>2</sub>-C<sub>6</sub>) alkenyl group” refers to a straight or branched alkenyl group of 2 to 6 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, a fluorovinyl group, a difluorovinyl group, a perfluorovinyl group, a 3,3-dichloro-2-propenyl group, a 4,4-difluoro-3-butenyl group or the like.</p>
+      <p id="p-00044-en" num="0048">The “(C<sub>2</sub>-C<sub>6</sub>) alkynyl group” refers to a straight or branched alkynyl group of 2 to 6 carbon atoms, for example, an ethynyl group, a propynyl group, a butynyl group or the like. The “halo (C<sub>2</sub>-C<sub>6</sub>) alkynyl group” refers to a straight or branched alkynyl group of 2 to 6 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, a fluoroethynyl group, a perfluoropropynyl group, a 4,4,4-trifluoro-2-butynyl group or the like.</p>
+      <p id="p-00045-en" num="0049">The “(C<sub>1</sub>-C<sub>6</sub>) alkoxy group” refers to a straight or branched alkoxy group of 1 to 6 carbon atoms, for example, a methoxy group, an ethoxy group, a n-propoxy group, an isopropoxy group, a n-butoxy group, a sec-butoxy group, a tert-butoxy group, a n-pentyloxy group, an isopentyloxy group, a neopentyloxy group, a n-hexyloxy group or the like. The “halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group” refers to a straight or branched alkoxy group of 1 to 6 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, a trifluoromethoxy group, a difluoromethoxy group, a perfluoroethoxy group, a perfluoroisopropoxy group, a chloromethoxy group, a bromomethoxy group, a 1-bromoethoxy group, a 2,3-dibromopropoxy group or the like.</p>
+      <p id="p-00046-en" num="0050">The “(C<sub>1</sub>-C<sub>6</sub>) alkoxy (C<sub>1</sub>-C<sub>6</sub>) alkoxy group” refers to a straight or branched alkoxy group of 1 to 6 carbon atoms having a straight or branched alkoxy group of 1 to 6 carbon atoms as a substituent at a substitutable position, for example, a methoxymethoxy group, an ethoxymethoxy group, a 1-methoxyethoxy group, a 2-methoxyethoxy group, a 1-ethoxyethoxy group, a 2-ethoxyethoxy group or the like.</p>
+      <p id="p-00047-en" num="0051">The “(C<sub>1</sub>-C<sub>6</sub>) alkoxy (C<sub>1</sub>-C<sub>6</sub>) alkyl group” refers to a straight or branched alkyl group of 1 to 6 carbon atoms having a straight or branched alkoxy group of 1 to 6 carbon atoms as a substituent at a substitutable position, for example, a methoxymethyl group, an ethoxymethyl group, a 1-methoxyethyl group, a 2-methoxyethyl group, a 1-ethoxyethyl group, a 2-ethoxyethyl group or the like.</p>
+      <p id="p-00048-en" num="0052">The “(C<sub>2</sub>-C<sub>6</sub>) alkenyloxy group” refers to a straight or branched alkenyloxy group of 2 to 6 carbon atoms, for example, a propenyloxy group, a butenyloxy group, a pentenyloxy group or the like. The “halo (C<sub>2</sub>-C<sub>6</sub>) alkenyloxy group” refers to a straight or branched alkenyloxy group of 2 to 6 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, a fluorovinyloxy group, a difluorovinyloxy group, a perfluorovinyloxy group, a 3,3-dichloro-2-propenyloxy group, a 4,4-difluoro-3-butenyloxy group or the like.</p>
+      <p id="p-00049-en" num="0053">The “(C<sub>2</sub>-C<sub>6</sub>) alkynyloxy group” refers to a straight or branched alkynyloxy group of 2 to 6 carbon atoms, for example, a propynyloxy group, a butynyloxy group, a pentynyloxy group or the like. The “halo (C<sub>2</sub>-C<sub>6</sub>) alkynyloxy group” refers to a straight or branched alkynyloxy group of 2 to 6 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, a fluoroethynyloxy group, a perfluoropropynyloxy group, a 4,4,4-trifluoro-2-butynyloxy group or the like.</p>
+      <p id="p-00050-en" num="0054">The “(C<sub>1</sub>-C<sub>6</sub>) alkylthio group” refers to a straight or branched alkylthio group of 1 to 6 carbon atoms, for example, a methylthio group, an ethylthio group, a n-propylthio group, an isopropylthio group, a n-butylthio group, a sec-butylthio group, a tert-butylthio group, a n-pentylthio group, an isopentylthio group, a n-hexylthio group or the like. The “halo (C<sub>1</sub>-C<sub>6</sub>) alkylthio group” refers to a straight or branched alkylthio group of 1 to 6 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, a trifluoromethylthio group, a difluoromethylthio group, a perfluoroethylthio group, a perfluoroisopropylthio group, a chloromethylthio group, a bromomethylthio group, a 1-bromoethylthio group, a 2,3-dibromopropylthio group or the like.</p>
+      <p id="p-00051-en" num="0055">The “(C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group” refers to a straight or branched alkylsulfinyl group of 1 to 6 carbon atoms, for example, a methylsulfinyl group, an ethylsulfinyl group, a n-propylsulfinyl group, an isopropylsulfinyl group, a n-butylsulfinyl group, a sec-butylsulfinyl group, a tert-butylsulfinyl group, a n-pentylsulfinyl group, an isopentylsulfinyl group, a n-hexylsulfinyl group or the like. The “halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group” refers to a straight or branched alkylsulfinyl group of 1 to 6 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, a trifluoromethylsulfinyl group, a difluoromethylsulfinyl group, a perfluoroethylsulfinyl group, a perfluoroisopropylsulfinyl group, a chloromethylsulfinyl group, a bromomethylsulfinyl group, a 1-bromoethylsulfinyl group, a 2,3-dibromopropylsulfinyl group or the like.</p>
+      <p id="p-00052-en" num="0056">The “(C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group” refers to a straight or branched alkylsulfonyl group of 1 to 6 carbon atoms, for example, a methylsulfonyl group, an ethylsulfonyl group, a n-propylsulfonyl group, an isopropylsulfonyl group, a n-butylsulfonyl group, a sec-butylsulfonyl group, a tert-butylsulfonyl group, a n-pentylsulfonyl group, an isopentylsulfonyl group, a n-hexylsulfonyl group or the like. The “halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group” refers to a straight or branched alkylsulfonyl group of 1 to 6 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, a trifluoromethylsulfonyl group, a difluoromethylsulfonyl group, a perfluoroethylsulfonyl group, a perfluoroisopropylsulfonyl group, a chloromethylsulfonyl group, a bromomethylsulfonyl group, a 1-bromoethylsulfonyl group, a 2,3-dibromopropylsulfonyl group or the like.</p>
+      <p id="p-00053-en" num="0057">The “(C<sub>1</sub>-C<sub>6</sub>) alkylcarbonyl group” refers to a straight or branched alkyl group of 1 to 6 carbon atoms bound to a carbonyl group, for example, a methylcarbonyl group, an ethylcarbonyl group, a n-propylcarbonyl group, an isopropylcarbonyl group, a n-butylcarbonyl group, a tert-butylcarbonyl group or the like.</p>
+      <p id="p-00054-en" num="0058">The “(C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group” refers to a straight or branched alkoxy group of 1 to 6 carbon atoms bound to a carbonyl group, for example, a methoxycarbonyl group, an ethoxycarbonyl group, a n-propoxycarbonyl group, an isopropoxycarbonyl group, a n-butoxycarbonyl group, a tert-butoxycarbonyl group or the like.</p>
+      <p id="p-00055-en" num="0059">The “(C<sub>1</sub>-C<sub>6</sub>) alkoxyimino (C<sub>1</sub>-C<sub>3</sub>) alkyl group” refers to a straight or branched alkoxy group of 1 to 6 carbon atoms bound to an imino (C<sub>1</sub>-C<sub>3</sub>) alkyl group, for example, a methoxyimino methyl group, an ethoxyimino methyl group, a n-propoxyimino methyl group, an isopropoxyimino ethyl group or the like.</p>
+      <p id="p-00056-en" num="0060">The “(C<sub>3</sub>-C<sub>30</sub>) trialkylsilyl group” refers to a straight or branched alkylsilyl group of 3 to 30 carbon atoms in total, for example, a trimethylsilyl group, a triethylsilyl group or the like.</p>
+      <p id="p-00057-en" num="0061">The “mono(C<sub>1</sub>-C<sub>6</sub>) alkylsulfonylamino group” refers to a straight or branched monoalkylsulfonylamino group of 1 to 6 carbon atoms, for example, a methylsulfonylamino group, an ethylsulfonylamino group, an isopropylsulfonylamino group or the like. The “mono halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonylamino group” refers to a straight or branched monoalkylsulfonylamino group of 1 to 6 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, a trifluoromethylsulfonylamino group or the like.</p>
+      <p id="p-00058-en" num="0062">Examples of the cyclic structure that A can form include cyclopropane, cyclobutane, cyclopentane and cyclohexane.</p>
+      <p id="p-00059-en" num="0063">The “(C<sub>3</sub>-C<sub>5</sub>) alkenylene group” refers to a straight or branched alkenylene group of 3 to 5 carbon atoms having one or two double bonds therein, for example, a propenylene group, a 1-butenylene group, a 2-butenylene group, a pentenylene group or the like.</p>
+      <p id="p-00060-en" num="0064">Examples of the “(C<sub>2</sub>-C<sub>4</sub>) alkyleneoxy group” include —CH<sub>2</sub>—CH<sub>2</sub>—O—, —CH<sub>2</sub>—C(CH<sub>3</sub>)<sub>2</sub>—O—, —CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>—O— and —CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>—O—.</p>
+      <p id="p-00061-en" num="0065">The “(C<sub>1</sub>-C<sub>3</sub>) alkylene dioxy group” refers to an alkylene dioxy group of 1 to 3 carbon atoms, for example, —O—CH<sub>2</sub>—O—, —O—CH<sub>2</sub>—CH<sub>2</sub>—O—, —O—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>—O— or the like. The “halo (C<sub>1</sub>-C<sub>3</sub>) alkylene dioxy group” refers to an alkylene dioxy group of 1 to 3 carbon atoms substituted by one or more halogen atoms which may be the same or different from each other, for example, —O—CF<sub>2</sub>—O—, —O—CF<sub>2</sub>—CF<sub>2</sub>—O—, —O—CCl<sub>2</sub>—O— or the like.</p>
+      <p id="p-00062-en" num="0066">The “heterocyclic group” refers to a 5- or 6-membered monocyclic aromatic or 3- or 6-membered monocyclic non-aromatic heterocyclic group containing, as ring atoms, a carbon atom(s) and 1 to 4 heteroatoms selected from an oxygen atom, a sulfur atom and a nitrogen atom; and also refers to a condensed heterocyclic group formed by condensation of such a monocyclic aromatic or non-aromatic heterocycle with a benzene ring or by condensation of such monocyclic aromatic or non-aromatic heterocycles (the heterocycles may be different from each other).</p>
+      <p id="p-00063-en" num="0067">Examples of the “aromatic heterocyclic group” include monocyclic aromatic heterocyclic groups, such as furyl, thienyl, pyridyl, pyrimidinyl, pyridazinyl, pyrazinyl, pyrrolyl, imidazolyl, pyrazolyl, thiazolyl, isothiazolyl, oxazolyl, isoxazolyl, oxadiazolyl, thiadiazolyl, triazolyl, tetrazolyl and triazinyl; and aromatic condensed heterocyclic groups, such as quinolyl, isoquinolyl, quinazolyl, quinoxalyl, benzofuranyl, benzothienyl, benzoxazolyl, benzisoxazolyl, benzothiazolyl, benzimidazolyl, benzotriazolyl, indolyl, indazolyl, pyrrolopyrazinyl, imidazopyridinyl, imidazopyrazinyl, pyrazolopyridinyl, pyrazolothienyl and pyrazolotriazinyl.</p>
+      <p id="p-00064-en" num="0068">Examples of the “non-aromatic heterocyclic group” include monocyclic non-aromatic heterocyclic groups, such as oxiranyl, thiiranyl, aziridinyl, oxetanyl, thietanyl, azetidinyl, pyrrolidinyl, piperidinyl, morpholinyl, thiomorpholinyl, piperazinyl, hexamethyleneiminyl, oxazolidinyl, thiazolidinyl, imidazolidinyl, oxazolinyl, thiazolinyl, imidazolinyl, dioxolyl, dioxolanyl, dihydrooxadiazolyl, 2-oxo-1,3-oxazolidin-5-yl, pyranyl, tetrahydropyranyl, thiopyranyl, tetrahydrothiopyranyl, 1-oxide tetrahydrothiopyranyl, 1,1-dioxide tetrahydrothiopyranyl, tetrahydrofuryl, dioxanyl, pyrazolidinyl, pyrazolinyl, tetrahydropyrimidinyl, dihydrotriazolyl and tetrahydrotriazolyl; and non-aromatic condensed heterocyclic groups, such as dihydroindolyl, dihydroisoindolyl, dihydrobenzofuranyl, dihydrobenzodioxinyl, dihydrobenzodioxepinyl, tetrahydrobenzofuranyl, chromenyl, dihydroquinolinyl, tetrahydroquinolinyl, dihydroisoquinolinyl, tetrahydroisoquinolinyl and dihydrophthalazinyl.</p>
+      <p id="p-00065-en" num="0069">Examples of a salt of the carboxamide derivative represented by the general formula (I) include inorganic acid salts, such as hydrochlorides, sulfates, nitrates and phosphates; organic acid salts, such as acetates, fumarates, maleates, oxalates, methanesulfonates, benzenesulfonates and p-toluenesulfonates; and salts with an inorganic or organic base such as a sodium ion, a potassium ion, a calcium ion and a trimethylammonium ion.</p>
+      <p id="p-00066-en" num="0070">In the carboxamide derivative represented by the general formula (I), X is preferably a halogen atom; a cyano group; a nitro group; an amino group; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; or a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group, and particularly preferably a halogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; or a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group. m is particularly preferably 1 or 2.</p>
+      <p id="p-00067-en" num="0071">A is preferably a (C<sub>1</sub>-C<sub>8</sub>) alkylene group; or a substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group having a substituent (s) which may be the same or different from each other and is/are selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group and a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group. It is also preferred that the (C<sub>1</sub>-C<sub>8</sub>) alkylene group and the substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group are modified by incorporation, into the carbon chain, of at least one group selected from —O—, —S—, —SO—, —SO<sub>2</sub>— and —N(R)— (wherein R represents a hydrogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkylcarbonyl group or a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group). A is further preferably a (C<sub>1</sub>-C<sub>8</sub>) alkylene group; or a substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group having a (C<sub>1</sub>-C<sub>6</sub>) alkyl group as a substituent, and particularly preferably an ethylene group; or an ethylene group substituted by a (C<sub>1</sub>-C<sub>6</sub>) alkyl group. In the case where A can form a cyclic structure, preferable examples of the cyclic structure include cyclopropane, cyclobutane, cyclopentane and cyclohexane, and cyclopropane is particularly preferred. The “case where A can form a cyclic structure” encompasses a case where the alkylene group or the substituted alkylene group having one or more substituents is a (C<sub>3</sub>-C<sub>6</sub>) or (C<sub>3</sub>-C<sub>8</sub>) alkylene group, or a (C<sub>2</sub>-C<sub>6</sub>) or (C<sub>2</sub>-C<sub>8</sub>) alkylene group modified by incorporation, into the carbon chain, of at least one group selected from —O—, —S—, —SO—, —SO<sub>2</sub>— and —N(R)— (wherein R is as defined above).</p>
+      <p id="p-00068-en" num="0072">E is preferably a hydrogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkylcarbonyl group; or a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group, and particularly preferably a hydrogen atom.</p>
+      <p id="p-00069-en" num="0073">B is preferably any moiety selected from B1 to B8, and particularly preferably B1, B2 or B5.</p>
+      <p id="p-00070-en" num="0074">Y is preferably a halogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a phenyl group; a substituted phenyl group having, on the ring, a substituent (s) which may be the same or different from each other and is/are selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a phenoxy group; a substituted phenoxy group having, on the ring, a substituent (s) which may be the same or different from each other and is/are selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a pyridyl group; a substituted pyridyl group having, on the ring, a substituent (s) which may be the same or different from each other and is/are selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a pyridyloxy group; or a substituted pyridyloxy group having, on the ring, a substituent (s) which may be the same or different from each other and is/are selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group. Y is particularly preferably a halogen atom; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; or a substituted phenyl group having, on the ring, a substituent (s) which may be the same or different from each other and is/are selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group.</p>
+      <p id="p-00071-en" num="0075">Y<sup>1 </sup>is preferably a (C<sub>1</sub>-C<sub>6</sub>) alkyl group. n is preferably an integer of 1 to 3.</p>
+      <p id="p-00072-en" num="0076">The carboxamide derivative represented by the general formula (I) can have one or more chiral centers or double bonds in the structural formula, and can exist as two or more kinds of optical isomers, diastereomers and geometric isomers. All mixtures of these isomers at any ratio are also included in the present invention.</p>
+      <p id="p-00073-en" num="0077">The compound represented by the general formula (I) can be produced by Production Methods illustrated below. Alternatively, the production of the compound can be achieved by the production method described in JP-A 01-151546, WO 2007/060162, JP-A 53-9739, WO 2007/108483, WO 2008/101975, WO 2008/062878, WO 2008/101976, WO 2008/003745, WO 2008/003746, WO 2009/012998, WO 2009/127718 or WO 2010/106071, the method described in Shin-Jikken Kagaku Kouza 14 (Maruzen, Dec. 20, 1977), a modified method of the foregoing, or the like.</p>
+      <heading id="h-00011-en" level="1">Production Method 1</heading>
+      <p id="p-00074-en" num="0078">
+        <chemistry id="chem-00003-en" num="00004">
+          <img id="img-00003-en" he="47.33mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150259322A1_00004.PNG" img-format="png" original="US20150259322A1-20150917-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00075-en" num="0000">(In the formula, X, A, E, B and m are as defined above, and hal represents a halogen atom.)</p>
+      <p id="p-00076-en" num="0079">The carboxamide derivative represented by the general formula (I) can be produced by allowing an acid halide represented by the general formula (II) to react with an amine represented by the general formula (III) in the presence of a base in an inert solvent.</p>
+      <p id="p-00077-en" num="0080">The reaction temperature in this reaction is usually from −20 to 120° C., and the reaction time is usually from 0.2 to 24 hours. The amine represented by the general formula (III) is usually used in a 0.8- to 5-fold molar amount relative to the acid halide represented by the general formula (II).</p>
+      <p id="p-00078-en" num="0081">Examples of the base that can be used in the reaction include inorganic bases such as sodium hydroxide, potassium hydroxide, sodium carbonate, potassium carbonate, sodium hydrogencarbonate and potassium hydrogencarbonate; acetates such as sodium acetate and potassium acetate; alkali metal alkoxides such as potassium t-butoxide, sodium methoxide and sodium ethoxide; tertiary amines such as triethylamine, diisopropylethylamine and 1,8-diazabicyclo[5.4.0]undec-7-ene; and nitrogen-containing aromatic compounds such as pyridine and dimethyl aminopyridine. The base is usually used in a 0.5- to 10-fold molar amount relative to the acid halide represented by the general formula (II).</p>
+      <p id="p-00079-en" num="0082">The reaction may be performed with or without a solvent. As the solvent, any solvent can be used unless it markedly inhibits the reaction, and the examples include alcohols such as methanol, ethanol, propanol, butanol and 2-propanol; straight-chain or cyclic ethers such as diethyl ether, tetrahydrofuran and dioxane; aromatic hydrocarbons such as benzene, toluene and xylene; halogenated hydrocarbons such as methylene chloride, chloroform and carbon tetrachloride; halogenated aromatic hydrocarbons such as chlorobenzene and dichlorobenzene; nitriles such as acetonitrile; esters such as ethyl acetate and butyl acetate; and polar solvents such as N, N-dimethylformamide, N, N-dimethylacetamide, dimethyl sulfoxide, 1,3-dimethyl-2-imidazolidinone, water and acetic acid. These inert solvents may be used alone or as a mixture of two or more kinds.</p>
+      <p id="p-00080-en" num="0083">After the reaction is completed, the compound of interest is isolated from the post-reaction mixture according to a usual method. As needed, the compound of interest can be purified by recrystallization, column chromatography, etc.</p>
+      <p id="p-00081-en" num="0084">The acid halide represented by the general formula (II) used for the reaction can be produced by the method described in known literature (for example, WO 05/115994, WO 01/42223, WO 03/066609, WO 03/066610, WO 03/099803, WO 03/099804, WO 03/080628 or the like) or a modified method thereof. The amine represented by the general formula (III) can be produced by the method described in WO 2007/108483 etc., or a modified method thereof.</p>
+      <heading id="h-00012-en" level="1">Production Method 2</heading>
+      <p id="p-00082-en" num="0085">
+        <chemistry id="chem-00004-en" num="00005">
+          <img id="img-00004-en" he="47.33mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150259322A1_00005.PNG" img-format="png" original="US20150259322A1-20150917-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00083-en" num="0000">(In the formula, X, A, E, B and m are as defined above.)</p>
+      <p id="p-00084-en" num="0086">The carboxamide derivative represented by the general formula (I) can be produced by allowing a benzoic acid derivative represented by the general formula (II′) to react with an amine represented by the general formula (III) in the presence of a condensing agent and a base in an inert solvent.</p>
+      <p id="p-00085-en" num="0087">Examples of the condensing agent used in this reaction include diethyl phosphorocyanidate (DEPC), carbonyldiimidazole (CDI), 1,3-dicyclohexylcarbodiimide (DCC), 1-ethyl-3-(3-dimethylaminopropyl)carbodiimide hydrochloride, chlorocarbonic esters and 2-chloro-1-methylpyridinium iodide. The condensing agent is usually used in a 0.5- to 3-fold molar amount relative to the benzoic acid derivative represented by the general formula (II′).</p>
+      <p id="p-00086-en" num="0088">The reaction temperature, the reaction time, the base, the solvent, the isolation method and the like are in accordance with those of Production Method 1.</p>
+      <p id="p-00087-en" num="0089">Representative examples of the carboxamide derivative of the general formula (I) which have been produced by Production Method 1, 2 or the like are shown in Table 1, but the present invention is not limited thereto. In Table 1, “Ph” represents a phenyl group and “Py” represents a pyridyl group. “B1” to “B8” are as defined above, and “A1” to “A7” represent the moieties shown below. The physical property refers to a melting point (° C.) or a refractive index nD.</p>
+      <p id="p-00088-en" num="0000">
+        <chemistry id="chem-00005-en" num="00006">
+          <img id="img-00005-en" he="161.29mm" wi="58.93mm" alt="embedded image" img-content="chem" file="US20150259322A1_00006.PNG" img-format="png" original="US20150259322A1-20150917-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00089-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="21pt" align="left" />
+              <colspec colname="4" colwidth="14pt" align="left" />
+              <colspec colname="5" colwidth="14pt" align="left" />
+              <colspec colname="6" colwidth="98pt" align="left" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="7" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Physical</entry>
+                </row>
+                <row>
+                  <entry>No.</entry>
+                  <entry>(X)<sub>m</sub></entry>
+                  <entry>E</entry>
+                  <entry>A</entry>
+                  <entry>B</entry>
+                  <entry>(Y)<sub>n</sub>, Y<sup>1</sup></entry>
+                  <entry>property</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="char" char="." />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="21pt" align="left" />
+              <colspec colname="4" colwidth="14pt" align="left" />
+              <colspec colname="5" colwidth="14pt" align="left" />
+              <colspec colname="6" colwidth="98pt" align="left" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>88-89</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-CF<sub>3</sub>-5-Cl</entry>
+                  <entry>66-67</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3,5-Cl<sub>2</sub>-4-Br</entry>
+                  <entry>115</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-CF<sub>3</sub>-4,5-Cl<sub>2</sub></entry>
+                  <entry>114-119</entry>
+                </row>
+                <row>
+                  <entry>5</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-CF<sub>3</sub>-5-Br</entry>
+                  <entry>95-97</entry>
+                </row>
+                <row>
+                  <entry>6</entry>
+                  <entry>2-CH<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-Cl-4-Br-5-CF<sub>3</sub></entry>
+                  <entry>135-136</entry>
+                </row>
+                <row>
+                  <entry>7</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-Cl-4-Br-5-CF<sub>3</sub></entry>
+                  <entry>128-129</entry>
+                </row>
+                <row>
+                  <entry>8</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-(4-Cl—Ph)-4-Br</entry>
+                  <entry>paste</entry>
+                </row>
+                <row>
+                  <entry>9</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-(4-F—Ph)-4-Br</entry>
+                  <entry>nD = 1.5470</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(26.0° C.)</entry>
+                </row>
+                <row>
+                  <entry>10</entry>
+                  <entry>2-CH<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>117-120</entry>
+                </row>
+                <row>
+                  <entry>11</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-CF<sub>3</sub>-4,5-Br<sub>2</sub></entry>
+                  <entry>121-124</entry>
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-CF<sub>3</sub>-4,5-Cl<sub>2</sub></entry>
+                  <entry>114-119</entry>
+                </row>
+                <row>
+                  <entry>13</entry>
+                  <entry>2-CH<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-CF<sub>3</sub>-4,5-Cl<sub>2</sub></entry>
+                  <entry>121-122</entry>
+                </row>
+                <row>
+                  <entry>14</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3,4,5-Br<sub>3</sub></entry>
+                  <entry>137-138</entry>
+                </row>
+                <row>
+                  <entry>15</entry>
+                  <entry>2-CH<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3,4,5-Cl<sub>3</sub></entry>
+                  <entry>129</entry>
+                </row>
+                <row>
+                  <entry>16</entry>
+                  <entry>2-Cl</entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>92-94</entry>
+                </row>
+                <row>
+                  <entry>17</entry>
+                  <entry>2-Br</entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>91-92</entry>
+                </row>
+                <row>
+                  <entry>18</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-SCH<sub>3</sub>-5-CF<sub>3</sub></entry>
+                  <entry>109-110</entry>
+                </row>
+                <row>
+                  <entry>19</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-(4-Cl—Ph)-4-Cl</entry>
+                  <entry>paste</entry>
+                </row>
+                <row>
+                  <entry>20</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-(2,4-Cl<sub>2</sub>—Ph)-4-Br</entry>
+                  <entry>paste</entry>
+                </row>
+                <row>
+                  <entry>21</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3-(Py-4-yl)-4,5-Br<sub>2</sub></entry>
+                  <entry>167</entry>
+                </row>
+                <row>
+                  <entry>22</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B6</entry>
+                  <entry>3-CF<sub>2</sub>CF<sub>2</sub>CF<sub>3</sub></entry>
+                  <entry>128-129</entry>
+                </row>
+                <row>
+                  <entry>23</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A6</entry>
+                  <entry>B2</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>118-119</entry>
+                </row>
+                <row>
+                  <entry>24</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A7</entry>
+                  <entry>B2</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>114-116</entry>
+                </row>
+                <row>
+                  <entry>25</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A6</entry>
+                  <entry>B6</entry>
+                  <entry>1-CH<sub>3</sub>-3-CF<sub>3</sub></entry>
+                  <entry>81.8-82.5</entry>
+                </row>
+                <row>
+                  <entry>26</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B1</entry>
+                  <entry>2-Cl-4-O(3-Cl-5-CF<sub>3</sub>—Py-2-yl)</entry>
+                  <entry>135.7-137.2</entry>
+                </row>
+                <row>
+                  <entry>27</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B1</entry>
+                  <entry>2-Cl-4-SOCH<sub>3</sub></entry>
+                  <entry>128.9-129.6</entry>
+                </row>
+                <row>
+                  <entry>28</entry>
+                  <entry>2-SCH<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B1</entry>
+                  <entry>2,4-Cl<sub>2</sub></entry>
+                  <entry>106-108</entry>
+                </row>
+                <row>
+                  <entry>29</entry>
+                  <entry>2-SOCH<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B1</entry>
+                  <entry>2,4-Cl<sub>2</sub></entry>
+                  <entry>109-110</entry>
+                </row>
+                <row>
+                  <entry>30</entry>
+                  <entry>2-SO<sub>2</sub>CH<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B1</entry>
+                  <entry>2,4-Cl<sub>2</sub></entry>
+                  <entry>138-142</entry>
+                </row>
+                <row>
+                  <entry>31</entry>
+                  <entry>2-SCHF<sub>2</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B1</entry>
+                  <entry>2,4-Cl<sub>2</sub></entry>
+                  <entry>103</entry>
+                </row>
+                <row>
+                  <entry>32</entry>
+                  <entry>2-OCF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B1</entry>
+                  <entry>2,4-Cl<sub>2</sub></entry>
+                  <entry>88-90</entry>
+                </row>
+                <row>
+                  <entry>33</entry>
+                  <entry>2-OH-3-NO<sub>2</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B1</entry>
+                  <entry>2,4-Cl<sub>2</sub></entry>
+                  <entry>169-170</entry>
+                </row>
+                <row>
+                  <entry>34</entry>
+                  <entry>2-Cl</entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B2</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>95-96</entry>
+                </row>
+                <row>
+                  <entry>35</entry>
+                  <entry>2-Br</entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B2</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>104-106</entry>
+                </row>
+                <row>
+                  <entry>36</entry>
+                  <entry>2-I</entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B2</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>128-129</entry>
+                </row>
+                <row>
+                  <entry>37</entry>
+                  <entry>2-CH<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B2</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>107-109</entry>
+                </row>
+                <row>
+                  <entry>38</entry>
+                  <entry>4-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B2</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>151-152</entry>
+                </row>
+                <row>
+                  <entry>39</entry>
+                  <entry>2,6-F<sub>2</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B2</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>98-99</entry>
+                </row>
+                <row>
+                  <entry>40</entry>
+                  <entry>2,6-Cl<sub>2</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B2</entry>
+                  <entry>3-Cl-5-CF<sub>3</sub></entry>
+                  <entry>110-111</entry>
+                </row>
+                <row>
+                  <entry>41</entry>
+                  <entry>2-CF<sub>3</sub></entry>
+                  <entry>H</entry>
+                  <entry>A1</entry>
+                  <entry>B1</entry>
+                  <entry>3-OCF<sub>2</sub>O-4</entry>
+                  <entry>paste</entry>
+                </row>
+                <row>
+                  <entry>42</entry>
+                  <entry>2-I</entry>
+                  <entry>H</entry>
+                  <entry>A3</entry>
+                  <entry>B5</entry>
+                  <entry>3,4-Cl<sub>2</sub>-5-CF<sub>3</sub></entry>
+                  <entry>paste</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00090-en" num="0090">The endoparasite control agent of the present invention has excellent anti-endoparasite effect, and exerts appropriate control effect against endoparasites. The animal for which the endoparasite control agent of the present invention can be used is a human, an animal of non-human mammalian or avian species, and a fish. Exemplary members of the non-human mammalian species include domestic animals, such as pigs, horses, cattle, sheep, goats, rabbits, camels, water buffalos, deer, mink and chinchillas; pet animals, such as dogs, cats and monkeys; and experimental animals, such as rats, mice, golden hamsters and guinea pigs. Exemplary members of the avian species include domestic fowls, such as chickens, ducks, aigamo ducks (crossbreeds of wild and domestic ducks), quails, domestic ducks, geese and turkeys. Exemplary members of the fish include marine farmed fish such as yellowtail, greater amberjack, red seabream, Japanese sea bass, olive flounder, Japanese pufferfish, striped jack, yellowtail amberjack, spotted knife jaw, cobia and Pacific bluefin tuna; and freshwater farmed fish such as sweetfish, seema, char, carp, crucian carp and rainbow trout.</p>
+      <p id="p-00091-en" num="0091">Human endoparasites against which the endoparasite control agent of the present invention is effective are roughly classified into protozoa and helminths. Examples of the protozoa include, but are not limited thereto, Rhizopoda, such as <i>Entamoeba histolytica</i>; Mastigophora, such as <i>Leishmania, Trypanosoma </i>and <i>Trichomonas</i>; Sporozoea, such as <i>Plasmodium </i>and <i>Toxoplasma</i>; and Ciliophora, such as <i>Balantidium coli</i>. Examples of the helminths include, but are not limited thereto, Nematoda, such as <i>Ascaris lumbricoides, Anisakis, Toxocara canis, Trichostrongylus </i>spp., <i>Enterobius vermicularis</i>, hookworms (for example, <i>Ancylostoma duodenale, Necator americanus, Ancylostoma braziliense</i>, etc.), <i>Angiostrongylus </i>spp., <i>Gnathostoma </i>spp., filarial worms (filaria, <i>Wuchereria bancrofti, Brugia malayi</i>, etc.), <i>Onchocerca volvulus, Dracunculus medinensis, Trichinella spiralis </i>and <i>Strongyloides stercoralis</i>; Acanthocephala, such as <i>Macracanthorhynchus hirudinaceus</i>; Gordiacea, such as Gordioidea; Hirudinea, such as <i>Hirudo nipponia</i>; Trematoda, such as <i>Schistosoma japonicum, Schistosoma mansoni, Schistosoma haematobium, Clonorchis sinensis, Heterophyes heterophyes, Fasciola </i>spp. and <i>Paragonimus </i>spp.; and Cestoda, such as <i>Diphyllobothrium latum, Sparganum mansoni, Sparganum proliferum, Diplogonoporus grandis</i>, Taeniidae (for example, <i>Taeniarhynchus saginatus, Taenia solium, Echinococcus</i>, etc.), <i>Hymenolepis </i>spp., <i>Dipylidium caninum, Mesocestoides lineatus, Bertiella </i>spp. and <i>Nybelinia surmenicola. </i></p>
+      <p id="p-00092-en" num="0092">Non-human mammalian or avian endoparasites against which the endoparasite control agent of the present invention is effective are roughly classified into protozoa and helminths. Examples of the protozoa include, but are not limited thereto, Apicomplexa, such as Coccidia (for example, <i>Eimeria, Isospora, Toxoplasma, Neospora, Sarcocystis, Besnoitia, Hammondia, Cryptosporidium, Caryospora</i>, etc.), Haemosporina (for example, <i>Leucocytozoon, Plasmodium</i>, etc.), Piroplasma (for example, <i>Theileria, Anaplasma, Eperythrozoon, Haemobartonella, Ehrlichia</i>, etc.), and others (for example, <i>Hepatozoon, Haemogregarina</i>, etc.); <i>Microspora</i>, such as <i>Encephalitozoon </i>and <i>Nosema</i>; Mastigophora, such as <i>Trypanosomatina </i>(for example, <i>Trypanosoma, Leishmania</i>, etc.), Trichomonadida (for example, <i>Chilomastix, Trichomonas, Monocercomonas, Histomonas</i>, etc.), and Diplomonadida (for example, <i>Hexamita, Giardia</i>, etc.); Sarcodina, such as <i>Amoebida </i>(for example, <i>Entamoeba histolytica </i>(<i>Entamoeba</i>) etc.); and Ciliophora, such as <i>Balantidium coli </i>(<i>Balantidium</i>), <i>Buxtonella </i>and <i>Entodinium. </i></p>
+      <p id="p-00093-en" num="0093">Examples of the helminths include, but are not limited thereto, Nematoda, such as Ascaridida (for example, <i>Ascaris suum </i>(<i>Ascaris</i>), <i>Toxocara canis </i>and <i>Toxocara cati </i>(<i>Toxocara</i>), <i>Toxascaris leonina </i>(<i>Toxascaris</i>), <i>Parascaris equorum </i>(<i>Parascaris</i>), <i>Ascaridia galli </i>(<i>Ascaridia</i>), <i>Heterakis gallinarum </i>(<i>Heterakis</i>), <i>Anisakis</i>, etc.), Oxyurida (for example, <i>Oxyuris equi </i>(<i>Oxyuris</i>), <i>Passalurus ambiguus </i>(<i>Passalurus</i>), etc.), Strongylida (for example, <i>Strongylus vulgaris </i>(<i>Strongylus</i>), <i>Haemonchus contortus </i>(<i>Haemonchus</i>), <i>Ostertagia ostertagi </i>(<i>Ostertagia</i>), <i>Trichostrongylus colubriformis </i>(<i>Trichostrongylus</i>), <i>Cooperia punctata </i>(<i>Cooperia</i>), <i>Nematodirus filicollis </i>(<i>Nematodirus</i>), <i>Hyostrongylus rubidus </i>(<i>Hyostrongylus</i>), <i>Oesophagostomum radiatum </i>(<i>Oesophagostomum</i>), <i>Chabertia ovina </i>(<i>Chabertia</i>), <i>Ancylostoma caninum </i>(<i>Ancylostoma</i>), <i>Uncinaria stenocephala </i>(<i>Uncinaria</i>), <i>Necator americanus </i>(Necator), <i>Bunostomum phlebotomum </i>(<i>Bunostomum</i>), <i>Dictyocaulus viviparus </i>(<i>Dictyocaulus</i>), <i>Metastrongylus elongatus </i>(<i>Metastrongylus</i>), <i>Filaroides hirthi </i>(<i>Filaroides</i>), <i>Aelurostrongylus abstrusus </i>(<i>Aelurostrongylus</i>), <i>Angiostrongylus cantonensis </i>(<i>Angiostrongylus</i>), <i>Syngamus trachea </i>(<i>Syngamus</i>), <i>Stephanurus dentatus </i>(<i>Stephanurus</i>), etc.), Rhabditida (for example, <i>Strongyloides stercoralis </i>(<i>Strongyloides</i>), <i>Micronema</i>, etc.), Spirurida (for example, <i>Thelazia </i>rhodesi (<i>Thelazia</i>), <i>Oxyspirura mansoni </i>(<i>Oxyspirura</i>), <i>Spirocerca lupi </i>(<i>Spirocerca</i>), <i>Gongylonema pulchrum </i>(<i>Gongylonema</i>), <i>Draschia megastoma </i>(<i>Draschia</i>), <i>Habronema microstoma </i>(<i>Habronema</i>), <i>Ascarops strongylina </i>(<i>Ascarops</i>), <i>Physaloptera praeputialis </i>(<i>Physaloptera</i>), <i>Gnathostoma spinigerum </i>(<i>Gnathostoma</i>), etc.), Filariida (for example, <i>Dirofilaria immitis </i>(<i>Dirofilaria</i>), <i>Setaria equina </i>(<i>Setaria</i>), <i>Dipetalonema, Parafilaria multipapillosa </i>(<i>Parafilaria</i>), <i>Onchocerca cervicalis </i>(<i>Onchocerca</i>), etc.), and Enoplida (for example, <i>Parafilaria Bovicola </i>(<i>Parafilaria</i>), <i>Stephanofilaria okinawaensis </i>(<i>Stephanofilaria</i>), <i>Trichuris vulpis </i>(<i>Trichuris</i>), <i>Capillaria Bovis </i>(<i>Capillaria</i>), <i>Trichosomoides crassicauda </i>(<i>Trichosomoides</i>), <i>Trichinella spiralis </i>(<i>Trichinella</i>), <i>Dioctophyma renale </i>(<i>Dioctophyma</i>), etc.); Trematoda, such as <i>Fasciolata </i>(for example, <i>Fasciola hepatica </i>(<i>Fasciola</i>), <i>Fasciolopsis buski </i>(<i>Fasciolopsis</i>), etc.), Paramphistomatidae (for example, <i>Homalogaster paloniae </i>(<i>Homalogaster</i>), etc.), Dicrocoelata (for example, <i>Eurytrema pancreaticum </i>(<i>Eurytrema</i>), <i>Dicrocoelium dendriticum </i>(<i>Dicrocoelium</i>), etc.), Diplostomata (for example, <i>Pharyngostomum cordatum </i>(<i>Pharyngostomum</i>), <i>Alaria</i>, etc.), Echinostomata (for example, <i>Echinostoma hortense </i>(<i>Echinostoma</i>), <i>Echinochasmus</i>, etc.), Troglotrematoidea (for example, lung flukes (<i>Paragonimus</i>), <i>Nanophyetus salmincola </i>(<i>Nanophyetus</i>), etc.), Opisthorchiida (for example, <i>Clonorchis sinensis </i>(<i>Clonorchis</i>) etc.), Heterophyida (for example, <i>Heterophyes heterophyes </i>(<i>Heterophyes</i>), <i>Metagonimus yokogawai </i>(<i>Metagonimus</i>), etc.), Plagiorchiida (for example, <i>Prosthogonimus ovatus </i>(<i>Prosthogonimus</i>) etc.), and Schistosomatidae (for example, <i>Schistosoma japonicum </i>(<i>Schistosoma</i>) etc.); Cestoda, such as Pseudophyllidea (for example, <i>Diphyllobothrium nihonkaiense </i>(<i>Diphyllobothrium</i>), <i>Spirometra erinacei </i>(<i>Spirometra</i>), etc.), and Cyclophyllidea (for example, <i>Anoplocephala perfoliata </i>(<i>Anoplocephala</i>), <i>Paranoplocephala mamillana </i>(<i>Paranoplocephala</i>), <i>Moniezia benedeni </i>(<i>Moniezia</i>), <i>Dipylidium caninum </i>(<i>Dipylidium</i>), <i>Mesocestoides lineatus </i>(<i>Mesocestoides</i>), <i>Taenia pisiformis </i>and <i>Taenia hydatigena </i>(<i>Taenia</i>), <i>Hydatigera taeniaeformis </i>(<i>Hydatigera</i>), <i>Multiceps multiceps </i>(<i>Multiceps</i>), <i>Echinococcus granulosus </i>(<i>Echinococcus</i>), <i>Echinococcus multilocularis </i>(<i>Echinococcus</i>), <i>Taenia solium </i>(<i>Taenia</i>), <i>Taeniarhynchus saginatus </i>(<i>Taeniarhynchus</i>), <i>Hymenolepis diminuta </i>(<i>Hymenolepis</i>), <i>Vampirolepis nana </i>(<i>Vampirolepis</i>), <i>Raillietina tetragona </i>(<i>Raillietina</i>), <i>Amoebotaenia sphenoides </i>(<i>Amoebotaenia</i>), etc.); Acanthocephala, such as <i>Macracanthorhynchus hirudinaceus </i>(<i>Macracanthorhynchus</i>) and <i>Moniliformis moniliformis </i>(<i>Moniliformis</i>); Linguatulida, such as <i>Linguatula serrata </i>(<i>Linguatula</i>); and other various parasites.</p>
+      <p id="p-00094-en" num="0094">In different designations, examples of the helminths include, but are not limited to, Nematoda, such as Enoplida (for example, <i>Trichuris </i>spp., <i>Capillaria </i>spp., <i>Trichomosoides </i>spp., <i>Trichinella </i>spp., etc.), Rhabditida (for example, <i>Micronema </i>spp., <i>Strongyloides </i>spp., etc.), Strongylida (for example, <i>Strongylus </i>spp., <i>Triodontophorus </i>spp., <i>Oesophagodontus </i>spp., <i>Trichonema </i>spp., <i>Gyalocephalus </i>spp., <i>Cylindropharynx </i>spp., <i>Poteriostomum </i>spp., <i>Cyclococercus </i>spp., <i>Cylicostephanus </i>spp., <i>Oesophagostomum </i>spp., <i>Chabertia </i>spp., <i>Stephanurus </i>spp., <i>Ancylostoma </i>spp., <i>Uncinaria </i>spp., <i>Bunostomum </i>spp., <i>Globocephalus </i>spp., <i>Syngamus </i>spp., <i>Cyathostoma </i>spp., <i>Metastrongylus </i>spp., <i>Dictyocaulus </i>spp., <i>Muellerius </i>spp., <i>Protostrongylus </i>spp., <i>Neostrongylus </i>spp., <i>Cystocaulus </i>spp., <i>Pneumostrongylus </i>spp., <i>Spicocaulus </i>spp., <i>Elaphostrongylus </i>spp., <i>Parelaphostrongylus </i>spp., <i>Crenosoma </i>spp., <i>Paracrenosoma </i>spp., <i>Angiostrongylus </i>spp., <i>Aelurostrongylus </i>spp., <i>Filaroides </i>spp., <i>Parafilaroides </i>spp., <i>Trichostrongylus </i>spp., <i>Haemonchus </i>spp., <i>Ostertagia </i>spp., <i>Marshallagia </i>spp., <i>Cooperia </i>spp., <i>Nematodirus </i>spp., <i>Hyostrongylus </i>spp., <i>Obeliscoides </i>spp., <i>Amidostomum </i>spp., <i>Ollulanus </i>spp., etc.),</p>
+      <p id="p-00095-en" num="0095">Oxyurida (for example, <i>Oxyuris </i>spp., <i>Enterobius </i>spp., <i>Passalurus </i>spp., <i>Syphacia </i>spp., <i>Aspiculuris </i>spp., <i>Heterakis </i>spp., etc.), <i>Ascaridia </i>(for example, <i>Ascaris </i>spp., <i>Toxascaris </i>spp., <i>Toxocara </i>spp., <i>Parascaris </i>spp., <i>Anisakis </i>spp., <i>Ascaridia </i>spp., etc.), Spirurida (for example, <i>Gnathostoma </i>spp., <i>Physaloptera </i>spp., <i>Thelazia </i>spp., <i>Gongylonema </i>spp., <i>Habronema </i>spp., <i>Parabronema </i>spp., <i>Draschia </i>spp., <i>Dracunculus </i>spp., etc.), and Filariida (for example, <i>Stephanofilaria </i>spp., <i>Parafilaria </i>spp., <i>Setaria </i>spp., <i>Loa </i>spp., <i>Dirofilaria </i>spp., <i>Litomosoides </i>spp., <i>Brugia </i>spp., <i>Wuchereria </i>spp., <i>Onchocerca </i>spp., etc.);</p>
+      <p id="p-00096-en" num="0096">Acanthocephala (for example, <i>Filicollis </i>spp., <i>Moniliformis </i>spp., <i>Macracanthorhynchus </i>spp., <i>Prosthenorchis </i>spp., etc.); Trematoda including subclasses, such as Monogenea (for example, <i>Gyrodactylus </i>spp., <i>Dactylogyrus </i>spp., <i>Polystoma </i>spp., etc.) and Digenea (for example, <i>Diplostomum </i>spp., <i>Posthodiplostomum </i>spp., <i>Schistosoma </i>spp., <i>Trichobilharzia </i>spp., <i>Ornithbilharzia </i>spp., <i>Austrobilharzia </i>spp., <i>Gigantobilharzia </i>spp., <i>Leucochloridium </i>spp., <i>Brachylaima </i>spp., <i>Echinostoma </i>spp., <i>Echinoparyphium </i>spp., <i>Echinochasmus </i>spp., <i>Hypoderaeum </i>spp., <i>Fasciola </i>spp., <i>Fascioloides </i>spp., <i>Fasciolopsis </i>spp., <i>Cyclocoelum </i>spp., <i>Typhlocoelum </i>spp., <i>Paramphistomum </i>spp., <i>Calicophoron </i>spp., <i>Cotylophoron </i>spp., <i>Gigantoctyle </i>spp., <i>Fischoederius </i>spp., <i>Gastrothylacus </i>spp., <i>Notocotylus </i>spp., <i>Catatropis </i>spp., <i>Plagiorchis </i>spp., <i>Prosthogonimus </i>spp., <i>Dicrocoelium </i>spp., <i>Eurytema </i>spp., <i>Troglotrema </i>spp., <i>Paragonimus </i>spp., <i>Collyriclum </i>spp., <i>Nanophyetus </i>spp., <i>Opisthorchis </i>spp., <i>Clonorchis </i>spp., <i>Metorchis </i>spp., <i>Heterophyes </i>spp., <i>Metagonimus </i>spp., etc.);</p>
+      <p id="p-00097-en" num="0097">Cestoda, such as Pseudophyllidea (for example, <i>Diphyllobothrium </i>spp., <i>Spirometra </i>spp., <i>Schistocephalus </i>spp., <i>Ligula </i>spp., <i>Bothridium </i>spp., <i>Diplogonoporus </i>spp., etc.), and Cyclophyllidea (for example, <i>Mesocestoides </i>spp., <i>Anoplocephala </i>spp., <i>Paranoplocephala </i>spp., <i>Moniezia </i>spp., <i>Thysanosomsa </i>spp., <i>Thysaniezia </i>spp., <i>Avitellina </i>spp., <i>Stilesia </i>spp., <i>Cittotaenia </i>spp., <i>Andyra </i>spp., <i>Bertiella </i>spp., <i>Taenia </i>spp., <i>Echinococcus </i>spp., <i>Hydatigera </i>spp., <i>Davainea </i>spp., <i>Raillietina </i>spp., <i>Hymenolepis </i>spp., <i>Echinolepis </i>spp., <i>Echinocotyle </i>spp., <i>Diorchis </i>spp., <i>Dipylidium </i>spp., <i>Joyeuxiella </i>spp., <i>Diplopylidium </i>spp., etc.); and others including parasites belonging to Acanthocephala and Linguatulida.</p>
+      <p id="p-00098-en" num="0098">Examples of fish parasites include skin parasites, such as <i>Neobenedenia girellae, Benedenia seriolae, Benedenia sekii, Benedenia hoshinai, Benedenia epinepheli, Benedenia girellae, Anoplodiscus tai </i>sp. <i>nov., Anoplodiscus spari, Caligus lalandei, Caligus longipedis </i>and <i>Pseudocaligus fugu</i>; and gill parasites, such as <i>Heteraxine heterocerca, Zeuxapta japonica, Bivagina tai, Heterobothrium okamotoi, Heterobothrium tetrodonis, Neoheterobothrium hirame </i>and <i>Caligus spinosus. </i></p>
+      <p id="p-00099-en" num="0099">Also included are <i>Dactylogyrus, Pseudodactylogyrus, Tetraonchus, Gyrodactylus, Benedenia, Neobenedenia </i>and <i>Anoplodiscus</i>; Polyopisthocotylea, such as <i>Microcotyle, Bivagina, Heteraxine, Heterobothrium, Neoheterobothrium </i>and <i>Eudiplozoon</i>; Trematoda, such as <i>Diplostomum, Galactosomum </i>and <i>Paradeontacylix</i>; and Cestoidea, such as <i>Bothriocephalus </i>and <i>Proteocephalus</i>. Also included are Nematoda, such as <i>Anguillicoloides, Philometra </i>and <i>Philometroides</i>; Acanthocephala, such as <i>Acanthocephalus </i>and <i>Longicollum</i>; Bivalvia (a class of the phylum Mollusca), such as <i>Margaritifera</i>; Hirudinea (a class of the phylum Annelida), such as <i>Limnotrachelobdella</i>; and Crustacea (a subphylum of the phylum Arthropoda), such as <i>Ergasilus, Lernaea, Caligus, Argulus, Bromolochus, Chondrocaushus, Lepeophtheirus </i>(for example, <i>L. salmonis </i>etc.), <i>Elythrophora, Dichelestinum, Lamproglenz, Hatschekia, Legosphilus, Symphodus, Ceudrolasus, Pseudoscymnus, Lernaeocera, Pennella, Achthales, Basanistes, Salmincola, Brachiella, Epibrachiella </i>and <i>Pseudotracheliastes</i>. Further included are Ergasilidae, Bromolochidae, Chondracanthidae, Caligidae, Dichelestiidae, Phylichthyidae, Pseudocycnidae, Lernaeidae, Lernaeopodidae, Sphyriidae, Cercopidae, Copepodae (for example, Cyclops, fish-lice, etc.), Branchiuriae (carp lice), which includes the family Argulidae containing the genus <i>Argulus</i>, Cirripediae (for example, cirripedes, barnacles, etc.) and <i>Ceratothoa gaudichaudii</i>. Furthermore included are Ciliophora, such as causative agents of white spot disease (<i>Ichthyophthirius multifiliis </i>and <i>Cryptocaryon irritans</i>), <i>Trichodina </i>sp., <i>Chilodonella </i>sp., <i>Brooklynella hostilis </i>belonging to the class Kinetofragminophorea, and scuticociliates (<i>Uronema marinum, Philasterides dicentrarchi, Miamiensis avidus, Uronema nigricans </i>and <i>Uronema </i>sp.).</p>
+      <p id="p-00100-en" num="0100">The endoparasite control agent of the present invention is effective against not only parasites that live in the body of an intermediate or final host, but also parasites that live in the body of a reservoir host. The carboxamide derivative represented by the general formula (I) is effective at every developmental stage of parasites. For example, in the case of protozoa, the compound is effective against their cysts, precystic forms and trophozoites; schizonts and amoeboid forms at the asexual stage; gametocytes, gametes and zygotes at the sexual stage; sporozoites; etc. In the case of nematodes, the compound is effective against their eggs, larvae, and adults. The compound of the present invention is capable of not only combating parasites in the living body, but also even preventing parasitic infection by application to the environment as a route of infection. For example, soil-borne infection, i.e., infection from soil of crop fields and parks; percutaneous infection from water in rivers, lakes, marshes, paddy fields, etc.; oral infection from feces of animals such as dogs and cats; oral infection from saltwater fish, freshwater fish, crustaceans, shellfish, raw meat of domestic animals, etc.; infection from mosquitoes, gadflies, flies, cockroaches, mites, fleas, lice, assassin bugs, trombiculid mites, etc.; and the like can be prevented from occurring.</p>
+      <p id="p-00101-en" num="0101">The endoparasite control agent of the present invention can be administered as a pharmaceutical for treatment or prevention of parasitosis in humans, animals of non-human mammalian or avian species and fish. The mode of administration may be oral or parenteral administration. In the case of oral administration, the endoparasite control agent of the present invention can be administered, for example, as a capsule, a tablet, a pill, a powder, a granule, a fine granule, a powder, a syrup, an enteric-coated preparation, a suspension or a paste, or after blended in a liquid drink or feed for animals. In the case of parenteral administration, the endoparasite control agent of the present invention can be administered in a dosage form which allows sustained mucosal or percutaneous absorption, for example, as an injection, an infusion, a suppository, an emulsion, a suspension, a drop, an ointment, a cream, a solution, a lotion, a spray, an aerosol, a cataplasm or a tape.</p>
+      <p id="p-00102-en" num="0102">In the case where the endoparasite control agent of the present invention is used as a pharmaceutical for humans, animals of non-human mammalian or avian species and fish, the optimum amount (effective amount) of the active ingredient varies with the purpose (treatment or prevention), the kind of infectious parasite, the type and severity of infection, the dosage form, etc., but in general, the oral daily dose is in the range of about 0.0001 to 10000 mg/kg body weight and the parenteral daily dose is in the range of about 0.0001 to 10000 mg/kg body weight, and such a dose may be administered as a single dose or multiple doses.</p>
+      <p id="p-00103-en" num="0103">The concentration of the active ingredient in the endoparasite control agent of the present invention is generally about 0.001 to 100% by mass, preferably about 0.001 to 99% by mass, and more preferably about 0.005 to 20% by mass. The endoparasite control agent of the present invention may be a composition that can be directly administered, or a highly concentrated composition that is used for administration after diluted to a suitable concentration.</p>
+      <p id="p-00104-en" num="0104">For the purpose of reinforcing or complementing the effect of the endoparasite control agent of the present invention, a combined use with any existing endoparasite control agent is possible. In such a combined use, two or more active ingredients may be mixed and formulated into a preparation before administration, or two or more different preparations may be administered separately.</p>
+      <heading id="h-00013-en" level="1">EXAMPLES</heading>
+      <p id="p-00105-en" num="0105">Next, the present invention will be illustrated in detail by formulation examples and test examples of the endoparasite control agent of the present invention, but the scope of the present invention is not limited by the following formulation examples and test examples.</p>
+      <p id="p-00106-en" num="0106">In the Examples, the “part (s)” refers to apart (s) by weight.</p>
+      <heading id="h-00014-en" level="1">Formulation Example 1</heading>
+      <heading id="h-00015-en" level="1">Emulsion</heading>
+      <p id="p-00107-en" num="0107">Ten parts of the carboxamide derivative represented by the general formula (I), 6 parts of Sorpol 355S (surfactant, manufactured by Toho Chemical Industry), and 84 parts of Solvesso 150 (manufactured by Exxon) are uniformly mixed with stirring to give an emulsion.</p>
+      <heading id="h-00016-en" level="1">Formulation Example 2</heading>
+      <heading id="h-00017-en" level="1">Ointment</heading>
+      <p id="p-00108-en" num="0108">One part of the carboxamide derivative represented by the general formula (I), 50 parts of white beeswax, and 49 parts of white petrolatum are well mixed to give an ointment.</p>
+      <heading id="h-00018-en" level="1">Formulation Example 3</heading>
+      <heading id="h-00019-en" level="1">Tablet</heading>
+      <p id="p-00109-en" num="0109">Two parts of the carboxamide derivative represented by the general formula (I), 10 parts of vegetable oil (olive oil), 3 parts of crystalline cellulose, 20 parts of white carbon, and 65 parts of kaolin are well mixed and compressed into a tablet.</p>
+      <heading id="h-00020-en" level="1">Formulation Example 4</heading>
+      <heading id="h-00021-en" level="1">Injection</heading>
+      <p id="p-00110-en" num="0110">Ten parts of the carboxamide derivative represented by the general formula (I), 10 parts of propylene glycol for use as a food additive, and 80 parts of vegetable oil (corn oil) are mixed to give an injection.</p>
+      <heading id="h-00022-en" level="1">Formulation Example 5</heading>
+      <heading id="h-00023-en" level="1">Solution</heading>
+      <p id="p-00111-en" num="0111">Five parts of the carboxamide derivative represented by the general formula (I), 20 parts of surfactant, and 75 parts of ion exchanged water are well mixed to give a solution.</p>
+      <heading id="h-00024-en" level="1">Test Example 1</heading>
+      <heading id="h-00025-en" level="1">In Vitro Measurement of Inhibitory Activity on <i>Ascaris suum </i>Succinate-Ubiquinone Reductase (Mitochondrial Complex II)</heading>
+      <p id="p-00112-en" num="0112">To a solution containing 50 mM potassium phosphate (pH 7.4) and 0.1% (w/v) sucrose monolaurate, an electron acceptor ubiquinone-2 (UQ<sub>2</sub>) was added at a final concentration of 60 μM, and the mixture was allowed to stand at 25° C. for 20 minutes. To this, potassium cyanide (final concentration: 2 mM) and mitochondria prepared from adult <i>Ascaris suum </i>muscle were added, and thorough mixing was done. To aliquots of the mixture, an inhibitor to be tested was added at various concentrations, and the mixtures were allowed to stand at 25° C. for 3 minutes. The enzymatic reaction was initiated by addition of potassium succinate (final concentration: 10 mM). The enzymatic activity was calculated based on the measurement of change in the absorbance at 278 nm of UQ<sub>2 </sub>(e=1.5×10<sup>4 </sup>M<sup>−1 </sup>cm<sup>−1</sup>), and IC<sub>50 </sub>was determined from the plot of the inhibition percentage against the inhibitor concentration. The results are shown in Table 2.</p>
+      <p id="p-00113-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="133pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Compound</entry>
+                  <entry>
+                    <i>Ascaris</i>
+                    <i>suum</i>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>No.</entry>
+                  <entry>IC<sub>50 </sub>value (A)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="70pt" align="right" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry> 1</entry>
+                  <entry>5.2 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> 3</entry>
+                  <entry>1.4 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> 4</entry>
+                  <entry>1.9 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> 5</entry>
+                  <entry>5.8 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> 6</entry>
+                  <entry>2.0 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> 7</entry>
+                  <entry>1.7 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>14</entry>
+                  <entry>1.8 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>18</entry>
+                  <entry>3.1 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>23</entry>
+                  <entry>1.8 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>24</entry>
+                  <entry>11 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>26</entry>
+                  <entry>1.4 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>27</entry>
+                  <entry>260 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>28</entry>
+                  <entry>1.2 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>31</entry>
+                  <entry>8.2 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>32</entry>
+                  <entry>48 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>34</entry>
+                  <entry>2.1 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>35</entry>
+                  <entry>2.3 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>36</entry>
+                  <entry>1.2 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>37</entry>
+                  <entry>2.6 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>39</entry>
+                  <entry>5.3 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>40</entry>
+                  <entry>39 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>42</entry>
+                  <entry>2.5 </entry>
+                  <entry>nM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00114-en" num="0113">As is clear from the results in Table 2, the carboxamide derivatives represented by the general formula (I) and salts thereof showed a strong inhibitory activity on the parasitic succinate-ubiquinone reductase (mitochondrial complex II) (IC<sub>50 </sub>values: 1.2 to 260 nM). Therefore, the carboxamide derivatives and salts thereof are highly active in parasite control.</p>
+      <heading id="h-00026-en" level="1">Test Example 2</heading>
+      <heading id="h-00027-en" level="1">In Vivo Activity Test on <i>Haemonchus </i>Nematode</heading>
+      <p id="p-00115-en" num="0114">In a 96-well plate, twenty L1-stage larvae (<i>Haemonchus contortus</i>) per well were maintained so that they could freely move, and solutions of compounds of the present invention dissolved at predetermined concentrations in DMSO (the final concentration of DMSO was 0.78% (v/v)) were added at 0.5 Ill/well each. The plate was kept under the conditions of 27° C./95% RH for 4 days. The motor ability of the larvae was examined and the concentration required for 50% inhibition of the motor ability (EC<sub>50</sub>) was determined. Based on the EC<sub>50 </sub>value, the activity against the <i>Haemonchus </i>nematode was graded according to the criterion shown below. The results are shown in Table 3.</p>
+      <heading id="h-00028-en" level="2">Grading Criterion</heading>
+      <p id="p-00116-en" num="0115">A: The EC<sub>50 </sub>value is lower than 0.5 ppm. <br /> B: The EC<sub>50 </sub>value is 0.5 ppm or higher but lower than 5 ppm. <br /> C: The EC<sub>50 </sub>value is 5 ppm or higher. </p>
+      <p id="p-00117-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="133pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Compound </entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>No.</entry>
+                  <entry>Grade</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry> 1</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> 2</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> 3</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> 4</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> 5</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> 7</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>10</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>23</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>24</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>25</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>26</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>27</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>28</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>32</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>36</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00118-en" num="0116">As is clear from the results in Table 3, the carboxamide derivatives represented by the general formula (I) and salts thereof were graded as B or higher in the in vivo test using the <i>Haemonchus </i>nematode. Therefore, the carboxamide derivatives and salts thereof also have a strong and high in vivo activity in parasite control.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An endoparasite control agent comprising a carboxamide derivative represented by the general formula (I):</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00007">
+          <img id="imgc-00001-en" he="20.91mm" wi="59.01mm" alt="embedded image" img-content="chem" file="US20150259322A1_00007.PNG" img-format="png" original="US20150259322A1-20150917-C00007.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>{wherein each X may be the same or different, and represents a halogen atom; a cyano group; a nitro group; an amino group; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; or a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group,
+<claim-text>m represents an integer of 0 to 5,</claim-text><claim-text>A represents a (C<sub>1</sub>-C<sub>8</sub>) alkylene group; or a substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group and a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group, with the proviso that the (C<sub>1</sub>-C<sub>8</sub>) alkylene group and the substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group may be modified by incorporation, into the carbon chain, of at least one group selected from —O—, —S—, —SO—, —SO<sub>2</sub>— and —N(R)— (wherein R represents a hydrogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkylcarbonyl group or a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group), and with the proviso that when the alkylene group or the substituted alkylene group having one or more substituents is a (C<sub>3</sub>-C<sub>6</sub>) or (C<sub>3</sub>-C<sub>8</sub>) alkylene group, or a (C<sub>2</sub>-C<sub>6</sub>) or (C<sub>2</sub>-C<sub>8</sub>) alkylene group modified by incorporation, into the carbon chain, of at least one group selected from —O—, —S—, —SO—, —SO<sub>2</sub>— and —N(R)— (wherein R is as defined above), A may form a cyclic structure,</claim-text><claim-text>E represents a hydrogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkylcarbonyl group; or a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group, and</claim-text><claim-text>B represents any of the moieties represented by the following B1 to B8:</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00008">
+          <img id="imgc-00002-en" he="161.63mm" wi="50.55mm" alt="embedded image" img-content="chem" file="US20150259322A1_00008.PNG" img-format="png" original="US20150259322A1-20150917-C00008.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>(wherein each Y may be the same or different, and represents a halogen atom; a cyano group; a nitro group; a hydroxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>2</sub>-C<sub>6</sub>) alkenyl group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkenyl group; a (C<sub>2</sub>-C<sub>6</sub>) alkynyl group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkynyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a (C<sub>2</sub>-C<sub>6</sub>) alkenyloxy group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkenyloxy group; a (C<sub>2</sub>-C<sub>6</sub>) alkynyloxy group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkynyloxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxyimino (C<sub>1</sub>-C<sub>3</sub>) alkyl group; a (C<sub>3</sub>-C<sub>30</sub>) trialkylsilyl group; a mono (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonylamino group; a mono halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonylamino group; a phenyl group; a substituted phenyl group having one or more substituents selected from group Z substituents on the ring; a phenoxy group; a substituted phenoxy group having one or more substituents selected from group Z substituents on the ring; a heterocyclic group; a substituted heterocyclic group having one or more substituents selected from group Z substituents on the ring; a heterocycloxy group; or a substituted heterocycloxy group having one or more substituents selected from group Z substituents on the ring,
+<claim-text>the group Z substituents are a halogen atom; a cyano group; a nitro group; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a (C<sub>2</sub>-C<sub>6</sub>) alkenyl group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkenyl group; a (C<sub>2</sub>-C<sub>6</sub>) alkynyl group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkynyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group; a (C<sub>2</sub>-C<sub>6</sub>) alkenyloxy group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkenyloxy group; a (C<sub>2</sub>-C<sub>6</sub>) alkynyloxy group; a halo (C<sub>2</sub>-C<sub>6</sub>) alkynyloxy group; a (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylthio group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfinyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkylsulfonyl group; a (C<sub>1</sub>-C<sub>6</sub>) alkoxycarbonyl group; and a (C<sub>1</sub>-C<sub>6</sub>) alkoxyimino (C<sub>1</sub>-C<sub>3</sub>) alkyl group,</claim-text><claim-text>Y<sup>1 </sup>represents a (C<sub>1</sub>-C<sub>6</sub>) alkyl group,</claim-text><claim-text>n represents an integer of 0 to 5, with the proviso that when n is an integer of 2 to 5, two adjacent Y groups may join together to form a (C<sub>3</sub>-C<sub>5</sub>) alkylene group; a (C<sub>3</sub>-C<sub>5</sub>) alkenylene group; a (C<sub>2</sub>-C<sub>4</sub>) alkyleneoxy group; a (C<sub>1</sub>-C<sub>3</sub>) alkylene dioxy group; or a halo (C<sub>1</sub>-C<sub>3</sub>) alkylene dioxy group, and</claim-text><claim-text>the numbers on each ring represent positions where the ring can be substituted by Y and the free bond extending from each ring is a bond between A and B)}, or</claim-text></claim-text>
+      <claim-text>a salt thereof as an active ingredient.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The endoparasite control agent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein A is a (C<sub>1</sub>-C<sub>8</sub>) alkylene group; or a substituted (C<sub>1</sub>-C<sub>8</sub>) alkylene group having a substituent(s) which may be the same or different from each other and is/are selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group and a (C<sub>3</sub>-C<sub>6</sub>) cycloalkyl group.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The endoparasite control agent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein B is B1, B2 or B5.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The endoparasite control agent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>wherein each X may be the same or different, and is a halogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; or a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group,
+<claim-text>m is 1 or 2,</claim-text><claim-text>A is a (C<sub>1</sub>-C<sub>8</sub>) alkylene group; or a (C<sub>1</sub>-C<sub>8</sub>) alkylene group substituted by a (C<sub>1</sub>-C<sub>6</sub>) alkyl group,</claim-text><claim-text>E is a hydrogen atom,</claim-text><claim-text>B is B1, B2 or B5,</claim-text><claim-text>each Y may be the same or different, and is a halogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a phenyl group; a substituted phenyl group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a phenoxy group; a substituted phenoxy group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a pyridyl group; a substituted pyridyl group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a pyridyloxy group; or a substituted pyridyloxy group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring, and</claim-text><claim-text>n is an integer of 1 to 3.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The endoparasite control agent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>wherein each X may be the same or different, and is a halogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; or a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group,
+<claim-text>m is 1 or 2,</claim-text><claim-text>A is a (C<sub>1</sub>-C<sub>8</sub>) alkylene group; or a (C<sub>1</sub>-C<sub>8</sub>) alkylene group substituted by a (C<sub>1</sub>-C<sub>6</sub>) alkyl group,</claim-text><claim-text>E is a hydrogen atom,</claim-text><claim-text>B is B1,</claim-text><claim-text>each Y may be the same or different, and is a halogen atom; a (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group; a phenyl group; a substituted phenyl group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a phenoxy group; a substituted phenoxy group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a pyridyl group; a substituted pyridyl group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring; a pyridyloxy group; or a substituted pyridyloxy group having one or more substituents selected from a halogen atom, a (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a halo (C<sub>1</sub>-C<sub>6</sub>) alkyl group, a (C<sub>1</sub>-C<sub>6</sub>) alkoxy group and a halo (C<sub>1</sub>-C<sub>6</sub>) alkoxy group on the ring, and</claim-text><claim-text>n is an integer of 1 to 3.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A method for controlling endoparasites, comprising orally or parenterally administering an effective amount of the endoparasite control agent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> to a non-human mammal or a bird.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A method for controlling endoparasites, comprising orally or parenterally administering an effective amount of the endoparasite control agent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> to a non-human mammal.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the non-human mammal is a domestic animal.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259322A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259322A1-20150917-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259322A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259322A1-20150917-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259322A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259322A1-20150917-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259322A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259322A1-20150917-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259322A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259322A1-20150917-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259322A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259322A1-20150917-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259322A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259322A1-20150917-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259322A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259322A1-20150917-C00008.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150259322A1.PDF" type="pdf" size="759709" pages="14" />
+</lexisnexis-patent-document>

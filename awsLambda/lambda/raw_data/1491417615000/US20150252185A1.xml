@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252185A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021806" date-changed="20160118" time-changed="124606">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229178">
+        <country>US</country>
+        <doc-number>20150252185</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14721595</doc-number>
+        <date>20150526</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C08L  63/00        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>63</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B05D   7/24        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C09D 163/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>163</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C08L  63/00        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>63</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B05D   7/24        20130101 LI20130801BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130801</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B29C  67/2205      20130101 LI20130801BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>2205</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130801</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C08G  59/68        20130101 LI20150219BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>59</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150219</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C08J   9/04        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>9</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C08J2207/04        20130101 LA20150629BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2207</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150629</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08J2363/00        20130101 LA20150219BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2363</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150219</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C09D 163/00        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>163</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">39</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">FOAM, COMPOSITION, AND METHOD</invention-title>
+    <references-cited date-changed="20151223">
+      <patent-citations name="patcit" date-changed="20151223" />
+      <citation>
+        <patcit num="1" dnum="US3310507A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3310507</doc-number>
+            <kind>A</kind>
+            <name>SHEPHERD JAMES W</name>
+            <date>19670321</date>
+          </document-id>
+          <application-date>
+            <date>19631226</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US3311574A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3311574</doc-number>
+            <kind>A</kind>
+            <name>SAMUEL BOWERING WILLIAM DAVID, et al</name>
+            <date>19670328</date>
+          </document-id>
+          <application-date>
+            <date>19630423</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US6444713B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6444713</doc-number>
+            <kind>B1</kind>
+            <name>PACHL JEFFREY T [US], et al</name>
+            <date>20020903</date>
+          </document-id>
+          <application-date>
+            <date>19981120</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US6479560B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6479560</doc-number>
+            <kind>B2</kind>
+            <name>FREITAG JAMES W [US], et al</name>
+            <date>20021112</date>
+          </document-id>
+          <application-date>
+            <date>20000524</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150910">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13729103</doc-number>
+              <date>20121228</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007215</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61581595</doc-number>
+          <date>20111229</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>CertainTeed Corporation</orgname>
+            <address>
+              <city>Valley Forge</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>PETROVIC</last-name>
+            <first-name>Zoran S.</first-name>
+            <address>
+              <city>Pittsburg</city>
+              <state>KS</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>JAVNI</last-name>
+            <first-name>Ivan J.</first-name>
+            <address>
+              <city>Pittsburg</city>
+              <state>KS</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>IONESCU</last-name>
+            <first-name>Mihail</first-name>
+            <address>
+              <city>Pittsburg</city>
+              <state>KS</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>CVETKOVIC</last-name>
+            <first-name>Ivana</first-name>
+            <address>
+              <city>Tulsa</city>
+              <state>OK</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>ZLATANIC</last-name>
+            <first-name>Alisa</first-name>
+            <address>
+              <city>Pittsburg</city>
+              <state>KS</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>BILIC</last-name>
+            <first-name>Nikola</first-name>
+            <address>
+              <city>Pittsburg</city>
+              <state>KS</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>SONG</last-name>
+            <first-name>Kwangjin</first-name>
+            <address>
+              <city>Pittsford</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HONG</last-name>
+            <first-name>DooPyo</first-name>
+            <address>
+              <city>Pittsburg</city>
+              <state>KS</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="9" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>BOZEK</last-name>
+            <first-name>John J.</first-name>
+            <address>
+              <city>Harleysville</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="10" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>TOAS</last-name>
+            <first-name>Murray S.</first-name>
+            <address>
+              <city>Norristown</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173566011">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252185</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150526</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566010">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252185</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150526</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method of producing a foam is disclosed. The method includes providing an epoxy-containing compound, a cationic catalyst, an optional blowing agent, and at least one additive. The method further includes combining the epoxy-containing compound with the cationic catalyst, the optional blowing agent, and the at least one additive, wherein the epoxy-containing compound and the cationic catalyst react to polymerize the epoxy-containing compound to provide the foam having a density from about 0.3 lbs/ft<sup>3 </sup>to about 5.0 lbs/ft<sup>3 </sup>as measured by ASTM D1622. Further disclosed are the foam and a method for installing the foam.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION(S)</heading>
+      <p id="p-00001-en" num="0001">This application claims priority under 35 U.S.C. §120 to and is a divisional of U.S. application Ser. No. 13/729,103 entitled “Foam, Composition, and Method,” by Petrovic et al., filed Dec. 28, 2012, which in turn claims priority under 35 U.S.C. §119(e) to U.S. Patent Application No. 61/581,595 entitled “Foam, Composition, and Method,” by Petrovic et al., filed Dec. 29, 2011, both of which are assigned to the current assignee hereof and incorporated herein by reference in their entireties.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Disclosure</p>
+      <p id="p-00003-en" num="0003">This invention relates generally to providing a foam for application to and installation in buildings or other end uses requiring a cellular insulating, cushioning, or packaging material and, in particular, to a method for the spraying or production of the foam.</p>
+      <p id="p-00004-en" num="0004">2. Description of the Related Art</p>
+      <p id="p-00005-en" num="0005">Polyurethane foam is a popular form of thermal insulation in the construction industry and as cushioning in the furniture and bedding industry. Polyurethane foam is generally produced by mixing a polyol and an isocyanate along with amine or organometallic catalysts and a combination of water and a hydrofluorocarbon blowing agent. Rigid foams use methylene diphenyl diisocyanate (MDI) as the isocyanate component. Exposure to high concentration of the isocyanate will elicit direct irritant response which may be accompanied by such symptoms as a cough, chest pain, increased fluid in the lungs, and possibly difficulty in breathing. While polyurethane spray foams have been used for about 30 years with a significant market share of foams, there is an un-met need in developing a safer and environmentally friendly spray foam system.</p>
+      <p id="p-00006-en" num="0006">Safe foam is defined as a non-isocyanate polyurethane or non-polyurethane spray foam which can be installed without fresh air supply to the installer with the only requirement of safety goggles, an air filtering respirator and chemically resistant gloves. Target foaming/curing rates and the foam densities should be similar to the commercially available spray foam polyurethane products.</p>
+      <p id="p-00007-en" num="0007">Accordingly, an improved spray foam composition would be desirable.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">In an embodiment, a method of producing a foam includes providing an epoxy-containing compound, a cationic catalyst, an optional blowing agent, and at least one additive; and combining the epoxy-containing compound with the cationic catalyst, the optional blowing agent, and the at least one additive, wherein the epoxy-containing compound and the cationic catalyst react to polymerize the epoxy-containing compound to provide the foam having a density from about 0.3 lbs/ft<sup>3 </sup>to about 5.0 lbs/ft<sup>3 </sup>as measured by ASTM D1622.</p>
+      <p id="p-00009-en" num="0009">In another embodiment, a foam includes a composition comprising an epoxy-containing compound, a cationic catalyst, an optional blowing agent, and at least one additive, the foam having a density from about 0.3 lbs/ft<sup>3 </sup>to about 5.0 lbs/ft<sup>3 </sup>as measured by ASTM D1622.</p>
+      <p id="p-00010-en" num="0010">In an embodiment, a method of installing a foam includes mixing an epoxy-containing composition with a cationic catalyst, an optional blowing agent, and at least one additive to form a foam composition; and applying the foam composition to a material to form the foam, wherein the foam has a density from about 0.3 lbs/ft<sup>3 </sup>to about 5.0 lbs/ft<sup>3 </sup>as measured by ASTM D1622.</p>
+      <p id="p-00011-en" num="0011">The foregoing and other objects and advantages of these embodiments will be apparent to those of ordinary skill in the art in view of the following detailed description taken in conjunction with the appended claims.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00012-en" num="0012">Embodiments of a method of producing a foam, the foam, and a method of installing the aforementioned foam are disclosed. In an embodiment, a composition for producing foam includes an epoxy-containing compound, a cationic catalyst, an optional blowing agent, and at least one additive. In an embodiment, the at least one additive includes a surfactant, a flame retardant, and combinations thereof. The resulting foam composition provides a foam that has a desirable density as well as cure time. In a particular embodiment, the foam has a density that is about 0.3 lbs/ft<sup>3 </sup>to about 5.0 lbs/ft<sup>3 </sup>as measured by ASTM D1622. In another particular embodiment, the foam composition produces foam that is non-toxic. “Non-toxic” as used herein refers to a composition that is free of an isocyanate compound. In an embodiment, the foam may be used for insulation applications.</p>
+      <p id="p-00013-en" num="0013">In an embodiment, the epoxy-containing compound provides the matrix for the foam. Any reasonable epoxy-containing compound may be envisioned having terminal epoxy groups, epoxy groups contained within the internal chemical structure of the epoxy-containing compound, or combination thereof. Exemplary epoxy-containing compounds include bio-based epoxy compounds such as an epoxidized biological oil, petrochemical epoxy resins, or combinations thereof. In a particular embodiment, the epoxy-containing compound is a combination of the epoxidized biological oil and the petrochemical epoxy resin. For instance, the bio-based epoxy resin and the petrochemical epoxy resin are present at a ratio of about 100:0 wt. % to about 0:100 wt. %, such as about 10:90 wt. % to about 50:50 wt. %.</p>
+      <p id="p-00014-en" num="0014">In an embodiment, the epoxy-containing compound may be a petrochemical-based epoxy resin. A petrochemical epoxy resin typically includes a cycloaliphatic and aromatic epoxy compound derived from petrochemicals. The petrochemical resin can include, for example, epoxy resins of glycidyl ethers of polyphenol compounds such as bisphenol A, bisphenol F and 1,1,2,2-tetrakis(4-hydroxyphenyl)ethane; epoxy resins of glycidyl ethers of polyhydric phenols such as catechol, resorcinol, hydroquinone and phloroglucinol; epoxy resins of glycidyl ethers of polyhydric alcohols such as ethylene glycol, butane diol, glycerol, erythritol and polyoxyalkylene glycol; novolak type epoxy resins; alicyclic epoxy resins such as vinylcyclohexene dioxide, limonene dioxide and dicyclopentadiene dioxide; epoxy resins of polyglcidyl esters of condensates of polycarboxylic acids such as phthalic acid and cyclohexane-1,2-dicarboxylic acid; polyglycidyl amine type epoxy resins; and methylepichlorohydrin type epoxy resins. In a particular embodiment, the epoxy resin is an epoxy resin of a glycidyl ether of a polyphenol compound and a novolak type epoxy resin. In another particular embodiment, the epoxy resin is an epoxy resin of a glycidyl ether of bisphenol A or bisphenol F.</p>
+      <p id="p-00015-en" num="0015">A bio-based epoxy compound may also be used as the epoxy-containing component. Any reasonable bio-based epoxy compound may be envisioned. In an embodiment, the bio-based epoxy compound is an at least partially epoxidized biological oil. Examples of suitable biological oils include vegetable oils such as soybean oil, safflower oil, linseed oil, corn oil, sunflower oil, olive oil, canola oil, sesame oil, cottonseed oil, palm oil, rapeseed oil, tung oil, fish oil, peanut oil, and combinations thereof. Natural vegetable oils may be used, and also useful are partially hydrogenated vegetable oils and genetically modified vegetable oils, including high oleic safflower oil, high oleic soybean oil, high oleic peanut oil, high oleic sunflower oil, and high erucic oil such as rape seed oil and crambe oil. In a particular embodiment, the bio-based epoxy compound is derived from a linseed oil. The partially epoxidized vegetable oil may be prepared by a method that includes reacting a vegetable oil with a peroxyacid under conditions that convert less than 100% of the double bonds of the vegetable oil to epoxide groups. Typically, the preparation of the partially epoxidized vegetable oil will also include combining another acid with the vegetable oil and peroxyacid components to form a mixture that reacts to form a partially epoxidized vegetable oil. The partially epoxidized vegetable oil may include at least about 10%, at least about 20%, at least about 25%, at least about 30%, at least about 35%, at least about 40% or more of the original amount of double bonds present in the vegetable oil. The partially epoxidized vegetable oil may include up to about 90%, up to about 80%, up to about 75%, up to about 70%, up to about 65%, up to about 60%, or fewer of the original amount of double bonds present in the vegetable oil.</p>
+      <p id="p-00016-en" num="0016">The foam composition further includes a cationic catalyst. Any reasonable cationic catalyst is envisioned that reacts with and polymerizes the epoxy-containing compound. In a particular embodiment, the cationic catalyst reacts within a desirable time period to cure the epoxy-containing compound. In an exemplary embodiment, the cationic catalyst polymerizes the epoxy-containing resin to both evaporate the blowing agent when present as well as cure the epoxy-containing compound. For instance, the cationic catalyst includes an acid such as a Lewis acid (such as a BF<sub>3 </sub>complex) or a Brønsted acid. In an embodiment, the acid is a superacid, a partial ester of an acid, a borane catalyst, a phosphoric acid derivative, or any combination thereof. Examples of superacids include HBF<sub>4</sub>, CF<sub>3</sub>SO<sub>3</sub>H (triflic acid), HSbF<sub>6</sub>, HPF<sub>6</sub>, FSO<sub>3</sub>H, HClO<sub>4</sub>, CF<sub>3</sub>(CF<sub>2</sub>)<sub>x</sub>—SO<sub>3</sub>H, FSO<sub>3</sub>H—SbF<sub>5 </sub>(magic acid), or combinations thereof. In an embodiment, the superacid has a pKa of about −8 to about −<sup>+</sup>25. In an embodiment, borane catalysts include, for example, trimethoxyboroxine, pyridine borane, or combinations thereof. Exemplary phosphoric acid derivatives include glyceryl phosphoric, glyceryl di-phosphate, glycerol-phosphic acid solution, glycerol propoxylate-phosphate, or combinations thereof. In an embodiment, the cationic catalyst is present in an amount to polymerize the epoxy-containing compound. In an embodiment, the cationic catalyst is present in an amount of less than about 5.0 wt. %, such as less than 4.0 wt. %, such as less than 3.0 wt. %, or even less than 2.0 wt. %, based on the total weight of the composition. In a particular embodiment, the cationic catalyst is present at an amount of about 0.05 wt. % to about 2.0 wt. %, based on the total weight of the composition. For instance, the superacid catalyst is present at an amount of about 0.05 wt. % to about 2.0 wt. %, based on the total weight of the composition.</p>
+      <p id="p-00017-en" num="0017">The foam composition may include an optional blowing agent. Any reasonable blowing agent used for foams is envisioned. Blowing agents may include compounds that have a chemical action and/or compounds having physical action. The term physical blowing agents means compounds which have been emulsified or dissolved in the starting materials for the polymerization of the epoxy-containing compound and vaporize under the conditions of the polymerization. The term chemical blowing agents means compounds which form gaseous products via a chemical reaction. Chemical blowing agents can be any of a variety of chemicals which release a gas upon thermal decomposition. Chemical blowing agents may also be referred to as foaming agents. The blowing agent, or agents, if more than one is used, can be selected from chemicals containing decomposable groups such as azo, N-nitroso, carboxylate, carbonate, hetero-cyclic nitrogen-containing and sulfonyl hydrazide groups. In a particular embodiment, blowing agents are selected from endothermic and exothermic varieties, such as dinitrosopentamethylene tetramine, p-toluene solfonyl semicarbazide, 5-phenyltetrazole, calcium oxalate, trihydrazino-s-triazine, 5-phenyl-3,6-dihydro-1,3,4-oxandiazin-2-one, 3,6-dihydro 5,6-diphenyl-1,3,4 oxadiazin-2-one, azodicarbonamide, sodium bicarbonate, and mixtures thereof. In an embodiment, the blowing agents are materials that liberate gas when heated by means of a chemical reaction or upon decomposition. Blowing agents further include, for example, water, carbon dioxide, butane, pentane, the like, or combinations thereof.</p>
+      <p id="p-00018-en" num="0018">The blowing agent may be added to the epoxy-containing compound in several different ways which are known to those skilled in the art, for example, by adding a solid power, liquid or gaseous agents directly to the epoxy-containing compound in a liquid resin state to obtain uniform dispersion of the agent in the foam composition. The temperature and pressure to which the composition of the invention are subjected to provide the foam will vary within a wide range, depending upon the amount and type of the blowing agent, epoxy-containing compound, and cationic catalyst that is used. In a particular embodiment, the blowing agent is present in an amount to provide the foam with the density as described. For instance, the blowing agent may be present in an amount of at least about 1.0 wt. %, such as about 5.0 wt. % to about 30.0 wt. %, based on the total weight of the composition.</p>
+      <p id="p-00019-en" num="0019">In an embodiment, the foam composition includes an additive such as a flame retardant. Any reasonable flame retardant is envisioned. In an embodiment, the flame retardant includes organohalogen or organophosphorus-type flame-retardants, such as tris(dichloropropyl)phosphate, tris(chloroethyl)phosphate, melamine polyphosphate, dibromoneopentyl glycol, glycol esters or ethers derived from tetrabromo or tetrachlorophthalic anhydride, tetrabromophthalate diol, as well as other reactive or non-reactive additive types of flame-retardants containing combinations of P, Cl, Br, and N, can be added to impart flame-resistant properties to the foam and foam composites. In an embodiment, the flame retardant is added in an amount to provide self-extinguishing properties of the foam. For instance, the flame retardant is present at about 5.0 wt. % to about 30.0 wt. %, based on the total weight of the composition.</p>
+      <p id="p-00020-en" num="0020">In an embodiment, the material may include any number of other additives to impart or to enhance properties desired in the final foam. Such additives may include, for example, a surfactant, a catalyst carrier, a co-reactant, a lubricant, a substance having fungistatic and bacteriostatic action, a filler, and the like. For instance, any reasonable surfactants may be envisioned. In a particular embodiment, the surfactant may be used to regulate cell size, foam density, or combination thereof. Exemplary surfactants include silicone-based surfactants such as those commercially available from Dow Corning Corporation of Midland, Mich., USA and Siltech Corporation of Toronto, Ontario, CANADA. Exemplary surfactants further include Dabco®-brand surfactant commercially available from Air Products and Chemicals, Inc. of Allentown, Pa., USA and Struktol®-brand surfactant commercially available from CellChem International, LLC of Atlanta, Ga., USA. An exemplary catalyst carrier may be, for example, phthalates such as dimethyl phthalate, polyhydroxyl compounds, or combinations thereof. In a particular embodiment, the catalyst carrier is dimethyl phthalate. In an embodiment, at least one additive may be used to regulate the reaction rate of the polymerization of the epoxy-containing resin. For instance, a co-reactant may be used to regulate the ring opening of the epoxy functional group. An exemplary co-reactant includes, for example, diols, glycerin, or combination thereof. In an embodiment, fillers may include fibers such as glass and natural fibers. Fillers further include micron and nano-sized particulates including clays, calcium carbonate, silica, quartz, graphite, antistatic graphenes, carbon black and others.</p>
+      <p id="p-00021-en" num="0021">In an embodiment, the foam can have properties desirable for insulation applications. For instance, the foam can have desirable physical properties such as thermal resistance in the range of R 3.0 per inch to R 7.0 per inch (R=hr ° F. ft<sup>2</sup>/BTU), density, compressive strength, tensile strength, water vapor permeation, air permeability, and dimensional stability. As stated earlier, the density of the foam is typically from about 0.3 lbs/ft<sup>3 </sup>to about 5.0 lbs/ft<sup>3 </sup>as measured by ASTM D1622. In an embodiment, the morphology of the cells of the foam may be a substantially open cell structure or a substantially closed cell structure. In a particular embodiment, the foam is a substantially closed cell structure. “Substantially closed cell” as used herein refers to a foam wherein the cell structure of the foam is formed of individual polyhedral cells wherein at least greater than about 50% of the cells do not have open windows or panes within each individual cell. In a particular embodiment, the foam has a substantially open cell structure. “Substantially open cell” as used herein refers to foam wherein the cell structure of the foam is formed of individual polyhedral cells wherein at least greater than about 50% of the cells have open windows or panes within each individual cell. In an embodiment, the cell structure is substantially uniform. “Substantially uniform” as used herein refers to a cell structure wherein the size of the cells throughout the foam vary by less than about 50%, such as less than about 40%, such as less than about 30%.</p>
+      <p id="p-00022-en" num="0022">In an embodiment, the foam can be further have desirable properties such as adhesive bonding to a substrate, mechanical properties, weather, and thermal stability, and desirable flame resistance. For instance, the foam cohesively bonds to the substrate to which it is applied. In an embodiment, “cohesively bonds” as used herein refers to no visible delamination of the foam to the substrate.</p>
+      <p id="p-00023-en" num="0023">Turning to the method of making the foam, the epoxy-containing compound can be combined with a cationic catalyst, the optional blowing agent, and at least one additive. Any suitable combination may be used to combine the components and form the foam composition. For instance, the components may be mixed in a single part system or a multiple part system. In an embodiment, the components are mixed in a two part system, with each part having any suitable combination of the components. The two part system can be mixed together to form the foam composition. In a particular embodiment, the epoxy-containing compound and the cationic catalyst react to polymerize the epoxy-containing compound. In an embodiment, the foam composition can react to form a foam without a blowing agent. In an alternative embodiment, the blowing agent is present to foam the polymerized epoxy-containing compound to provide the foam. In an embodiment, the cationic catalyst is chosen to provide a speed of polymerization of the epoxy-containing compound that both cures the epoxy-containing compound and evaporates the blowing agent. In a particular embodiment, the cationic catalyst provides a gel time of about 5 seconds to about 180 seconds, such as about 10 seconds to about 50 seconds. “Gel time” as used herein refers to the time it takes for the combined components to reach a transition change that occurs between a liquid form to a solid form.</p>
+      <p id="p-00024-en" num="0024">In a particular embodiment, the foam may be installed by applying the foam composition on a material; or on a continuous conveyor; or into a container, cavity, or mold that defines a shape. In an embodiment, the material may be a structure for a building, a furniture article, an automotive article, and the like. Applying may be by any reasonable means such as spraying, pouring such as pouring-in place, or molding. Spraying may be by any reasonable means envisioned, such as with a spray gun or static mixer with air atomization. In a particular embodiment, the components of the foam composition are mixed and the composition is then sprayed in-place directly on the material. In a particular embodiment, the sprayed foam composition hardens to form the foam in about 30 seconds to about 5 minutes from the time the foam composition exits the spray gun. Conditions for spraying may be dependent on the materials chosen as well as the application. Typically, the spray gun uses an air atomizer to apply the foam composition. An air atomizer may be a low pressure atomizer or a high pressure atomizer. “Low pressure” as used herein refers to a pressure of about 10 psi to about 100 psi. “High pressure” as used herein refers to a pressure of about 200 psi to about 1500 psi.</p>
+      <p id="p-00025-en" num="0025">The foam composition and foam can be used for any application where the above-properties are desired. Any applications of the foam composition and foam include, for example, uses when the properties such as the above-mentioned physical properties, speed of gel time and cure, and/or mechanical properties are desired. The foam composition and foam may also possess other properties desired for any particular application envisioned. In a particular embodiment, the foam composition and foam are desirable for an insulation structure. In a further embodiment, the foam composition and foam can be used for acoustical insulation, air sealing, gasketing, cushioning, bedding, packaging applications and for applications that require a product to float in water.</p>
+      <heading id="h-00005-en" level="1">Examples</heading>
+      <p id="p-00026-en" num="0026">Five samples of a foam composition are prepared. The compositions can be found in Tables 1-5.</p>
+      <p id="p-00027-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Boroxine Example</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>% Weight in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Component</entry>
+                  <entry>Formulation</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Epoxidized Soybean Oil</entry>
+                  <entry>60.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Blowing Agent (Enovate</entry>
+                  <entry>22.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3000)</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Trimethoxy Boroxine</entry>
+                  <entry>11.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>cycloaliphatic diepoxy ELR- </entry>
+                  <entry>3.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4221</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Surfactant, Tegostab B 8476 </entry>
+                  <entry>0.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Surfactant, Tegostab B 8526 </entry>
+                  <entry>0.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Pyridine Borane</entry>
+                  <entry>0.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Total</entry>
+                  <entry>100.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00028-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Pure Bio-Based Example</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>% Weight in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Component</entry>
+                  <entry>Formulation</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Epoxidized Linseed Oil</entry>
+                  <entry>68.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Blowing Agent (Enovate</entry>
+                  <entry>25.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3000)</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Terol 925</entry>
+                  <entry>3.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Surfactant-Silstab 3000</entry>
+                  <entry>1.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Catalyst-HBF<sub>4</sub></entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Total</entry>
+                  <entry>100.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00029-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Pure Petrochemical Based Example</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>% Weight in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Component</entry>
+                  <entry>Formulation</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Dow Epoxy Resin 330</entry>
+                  <entry>58.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Blowing Agent (Enovate</entry>
+                  <entry>16.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3000)</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Fire Retardant, DP-45</entry>
+                  <entry>14.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dimethyl Phthalate</entry>
+                  <entry>8.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Surfactant Silstab 2760</entry>
+                  <entry>1.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>0.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Catalyst-HBF<sub>4</sub></entry>
+                  <entry>0.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Total</entry>
+                  <entry>100.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00030-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Blended Resin Example</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>% Weight in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Component</entry>
+                  <entry>Formulation</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Dow Epoxy Resin 331</entry>
+                  <entry>35.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Epoxidized Linseed Oil </entry>
+                  <entry>19.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Blowing Agent (Enovate</entry>
+                  <entry>16.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3000)</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Fire Retardant, BP-59</entry>
+                  <entry>14.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Terol 305</entry>
+                  <entry>6.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>SPI-ERL 4221 Epoxy</entry>
+                  <entry>3.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Plasticizer</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dimethyl Phalate</entry>
+                  <entry>1.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Surfactant Silstab 3000</entry>
+                  <entry>1.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>0.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Catalyst-HBF<sub>4</sub></entry>
+                  <entry>0.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Total</entry>
+                  <entry>100.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00031-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>BF<sub>3 </sub>Complex Catalyst Example</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>% Weight in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Component</entry>
+                  <entry>Formulation</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Dow Epoxy Resin 383 </entry>
+                  <entry>50.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Blowing Agent (Enovate</entry>
+                  <entry>16.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3000)</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Fire Retardant, Melamine</entry>
+                  <entry>13.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Polyphosphate</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dimethyl Phalate</entry>
+                  <entry>8.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dow Epoxy Resin 661 </entry>
+                  <entry>5.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>SPI-ERL 4221 Epoxy</entry>
+                  <entry>3.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Plasticizer</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Surfactant</entry>
+                  <entry>1.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Catalyst-BF<sub>3 </sub>Dihydrate</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>compex</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Total</entry>
+                  <entry>100.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00032-en" num="0027">The compositions are then applied on a wood surface using both a low pressure air atomizer (80 psi) or a high pressure air atomizer (1200 psi). The foams have excellent reactivity with no delamination or shrinkage. Further, the foams all have a density of about 0.5 lbs/ft<sup>3 </sup>to about 2.5 lbs/ft<sup>3</sup>.</p>
+      <p id="p-00033-en" num="0028">Note that not all of the activities described above in the general description or the examples are required, that a portion of a specific activity may not be required, and that one or more further activities may be performed in addition to those described. Still further, the order in which activities are listed are not necessarily the order in which they are performed.</p>
+      <p id="p-00034-en" num="0029">In the foregoing specification, the concepts have been described with reference to specific embodiments. However, one of ordinary skill in the art appreciates that various modifications and changes can be made without departing from the scope of the invention as set forth in the claims below. Accordingly, the specification and figures are to be regarded as an illustrative rather than a restrictive sense, and all such modifications are intended to be included within the scope of invention.</p>
+      <p id="p-00035-en" num="0030">As used herein, the terms “comprises,” “comprising,” “includes,” “including,” “has,” “having” or any other variation thereof, are intended to cover a non-exclusive inclusion. For example, a process, method, article, or apparatus that comprises a list of features is not necessarily limited only to those features but may include other features not expressly listed or inherent to such process, method, article, or apparatus. Further, unless expressly stated to the contrary, “or” refers to an inclusive-or and not to an exclusive-or. For example, a condition A or B is satisfied by any one of the following: A is true (or present) and B is false (or not present), A is false (or not present) and B is true (or present), and both A and B are true (or present).</p>
+      <p id="p-00036-en" num="0031">Also, the use of “a” or “an” are employed to describe elements and components described herein. This is done merely for convenience and to give a general sense of the scope of the invention. This description should be read to include one or at least one and the singular also includes the plural unless it is obvious that it is meant otherwise.</p>
+      <p id="p-00037-en" num="0032">Benefits, other advantages, and solutions to problems have been described above with regard to specific embodiments. However, the benefits, advantages, solutions to problems, and any feature(s) that may cause any benefit, advantage, or solution to occur or become more pronounced are not to be construed as a critical, required, or essential feature of any or all the claims.</p>
+      <p id="p-00038-en" num="0033">After reading the specification, skilled artisans will appreciate that certain features are, for clarity, described herein in the context of separate embodiments, may also be provided in combination in a single embodiment. Conversely, various features that are, for brevity, described in the context of a single embodiment, may also be provided separately or in any subcombination. Further, references to values stated in ranges include each and every value within that range.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of producing a foam comprising:
+<claim-text>providing an epoxy-containing compound, a cationic catalyst, an optional blowing agent and at least one additive; and</claim-text><claim-text>combining the epoxy-containing compound with the cationic catalyst, the optional blowing agent, and the at least one additive, wherein the epoxy-containing compound and the cationic catalyst react to polymerize the epoxy-containing compound to provide the foam having a density from about 0.3 lbs/ft<sup>3 </sup>to about 5.0 lbs/ft<sup>3 </sup>as measured by ASTM D1622.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the epoxy-containing compound is bio-based, petrochemical based, or combination thereof.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the bio-based epoxy compound is derived from linseed oil, corn oil, soybean oil, sunflower oil, safflower oil, canola oil, rapeseed oil, palm oil, camelina oil, fish oil, tall oil, algae oil, or combinations thereof.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the bio-based epoxy compound is derived from linseed oil.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cationic catalyst is an acid.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the acid is a superacid, a partial ester of an acid, a borane catalyst, a phosphoric acid, or combination thereof.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the superacid is HBF<sub>4</sub>, CF<sub>3</sub>SO<sub>3</sub>H (triflic acid), HSbF<sub>6</sub>, HPF<sub>6</sub>, FSO<sub>3</sub>H, HClO<sub>4</sub>, CF<sub>3</sub>(CF<sub>2</sub>)<sub>x</sub>—SO<sub>3</sub>H, FSO<sub>3</sub>H—SbF<sub>5 </sub>(magic acid), or combinations thereof.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the superacid has a pKa of about −8 to about −25.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the acid is a Lewis Acid such as a BF<sub>3 </sub>complex.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the foam is a substantially open cell foam.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the foam is a substantially closed cell foam.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cationic catalyst is present at an amount of about 0.05 wt. % to about 2.0 wt. %, based on the total composition.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the blowing agent is present at an amount of about 5.0 wt. % to about 30.0 wt. %, based on the total composition.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the additive comprises a surfactant.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the additive comprises a flame retardant.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the additive comprises a co-reactant including a diol, a glycerin, or a combination thereof.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cationic catalyst provides a gel time of about 5 seconds to about 180 seconds.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the cationic catalyst provides a gel time of about 10 seconds to about 50 seconds.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en" independent="true">
+      <claim-text>
+        <b>19</b>. A method of producing a foam comprising:
+<claim-text>providing a bio-based epoxy resin, a cationic catalyst, a blowing agent, a surfactant, a fire retardant, and at least one additive; and</claim-text><claim-text>combining the bio-based epoxy resin with the cationic catalyst, the blowing agent, the fire retardant, and the at least one additive, wherein the bio-based epoxy compound and the cationic catalyst react to polymerize the bio-based epoxy compound to provide the foam.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. A method of installing a foam comprising:
+<claim-text>mixing an epoxy-containing resin with a cationic catalyst, a surfactant, an optional blowing agent, and at least one additive to form a foam composition; and</claim-text><claim-text>applying the foam composition to a material to form the foam, wherein the foam has a density from about 0.3 lbs/ft<sup>3 </sup>to about 5.0 lbs/ft<sup>3 </sup>as measured by ASTM D1622.</claim-text></claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the epoxy-containing resin is bio-based, petrochemical based, or combination thereof.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein the bio-based epoxy resin is derived from linseed oil, corn oil, soybean oil, sunflower oil, safflower oil, canola oil, rapeseed oil, palm oil, camelina oil, fish oil, tall oil, algae oil, or combinations thereof.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, wherein the bio-based epoxy resin is derived from linseed oil.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the cationic catalyst is an acid.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The method of <claim-ref idref="clm-00024-en">claim 24</claim-ref>, wherein the acid is a superacid, a partial ester of an acid, a borane catalyst, a phosphoric acid, or combination thereof.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The method of <claim-ref idref="clm-00025-en">claim 25</claim-ref>, wherein the superacid is HBF<sub>4</sub>, CF<sub>3</sub>SO<sub>3</sub>H (triflic acid), HSbF<sub>6</sub>, HPF<sub>6</sub>, FSO<sub>3</sub>H, HClO<sub>4</sub>, CF<sub>3</sub>(CF<sub>2</sub>)<sub>x</sub>—SO<sub>3</sub>H, FSO<sub>3</sub>H—SbF<sub>5 </sub>(magic acid) or combinations thereof.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The method of <claim-ref idref="clm-00026-en">claim 26</claim-ref>, wherein the superacid has a pKa of about −8 to about −25.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. The method of <claim-ref idref="clm-00025-en">claim 25</claim-ref>, wherein the acid is a Lewis Acid such as a BF<sub>3 </sub>complex.</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the foam is a substantially open cell foam.</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>30</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the foam is a substantially closed cell foam.</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the cationic catalyst is present at an amount of about 0.05 wt. % to about 2.0 wt. %, based on the total composition.</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>32</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the blowing agent is present at an amount of about 5% to about 30%, based on the total composition.</claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en">
+      <claim-text>
+        <b>33</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the sprayed foam composition hardens in about 30 seconds to about 5 minutes.</claim-text>
+    </claim>
+    <claim num="34" id="clm-00034-en">
+      <claim-text>
+        <b>34</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the additive comprises a surfactant.</claim-text>
+    </claim>
+    <claim num="35" id="clm-00035-en">
+      <claim-text>
+        <b>35</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the additive comprises a flame retardant.</claim-text>
+    </claim>
+    <claim num="36" id="clm-00036-en">
+      <claim-text>
+        <b>36</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the additive comprises a co-reactant including a diol, a glycerin, or a combination thereof.</claim-text>
+    </claim>
+    <claim num="37" id="clm-00037-en">
+      <claim-text>
+        <b>37</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein applying the foam composition comprises spraying, pouring, or molding.</claim-text>
+    </claim>
+    <claim num="38" id="clm-00038-en">
+      <claim-text>
+        <b>38</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the material is a structure for a building, a furniture article, or an automotive article.</claim-text>
+    </claim>
+    <claim num="39" id="clm-00039-en" independent="true">
+      <claim-text>
+        <b>39</b>. A method of installing a foam comprising:
+<claim-text>mixing a bio-based epoxy compound with a cationic catalyst, a surfactant, a blowing agent, a flame retardant, and at least one additive to form a foam composition; and</claim-text><claim-text>spraying the foam composition on a material to form the foam. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <image file="US20150252185A1.PDF" type="pdf" size="365112" pages="7" />
+</lexisnexis-patent-document>

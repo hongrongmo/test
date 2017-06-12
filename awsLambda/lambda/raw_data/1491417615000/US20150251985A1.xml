@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150251985A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021943" date-changed="20160111" time-changed="150455">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121230479">
+        <country>US</country>
+        <doc-number>20150251985</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14431907</doc-number>
+        <date>20131011</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012227838</doc-number>
+        <date>20121015</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>C07C  35/08        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>35</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C07C  29/16        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>29</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>C07C  35/08        20130101 FI20151218BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>35</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151218</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07C  29/149       20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>29</main-group>
+        <subgroup>149</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C07C  29/16        20130101 LI20151218BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>29</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151218</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C07C  31/276       20130101 LI20150915BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>31</main-group>
+        <subgroup>276</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C07C  51/58        20130101 LI20141024BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>51</main-group>
+        <subgroup>58</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141024</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C07C  67/14        20130101 LI20141024BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141024</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C07C2101/14        20130101 LA20150915BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>2101</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C07C  67/14        20130101 LI20141024BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>67</main-group>
+            <subgroup>14</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20141024</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C07C  69/75        20130101 LI20141024BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>69</main-group>
+            <subgroup>75</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20141024</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C07C  51/58        20130101 LI20150915BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>51</main-group>
+            <subgroup>58</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150915</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C07C  61/08        20130101 LI20150915BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>61</main-group>
+            <subgroup>08</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150915</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>3</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C07C  29/149       20130101 LI20150915BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>29</main-group>
+            <subgroup>149</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150915</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C07C  31/276       20130101 LI20150915BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>31</main-group>
+            <subgroup>276</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150915</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">2</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">NEW ALICYCLIC DIOL COMPOUND AND MANUFACTURING METHOD THEREOF</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Mitsubishi Gas Chemical Company, Inc.</orgname>
+            <role>03</role>
+            <address>
+              <city>Chiyoda-ku, Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kitamura</last-name>
+            <first-name>Mitsuharu</first-name>
+            <address>
+              <city>Kurashiki-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13077710</doc-number>
+        <date>20131011</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014061570</doc-number>
+        <date>20140424</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151215">
+      <main-family family-id="165373326">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104781224</doc-number>
+            <kind>A</kind>
+            <date>20150715</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9212115</doc-number>
+            <kind>B2</kind>
+            <date>20151215</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2907800</doc-number>
+            <kind>A1</kind>
+            <date>20150819</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150067198</doc-number>
+            <kind>A</kind>
+            <date>20150617</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251985</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014061570</doc-number>
+            <kind>A1</kind>
+            <date>20140424</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>3843DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20151002</date>
+          </document-id>
+          <application-date>
+            <date>20150506</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201420556</doc-number>
+            <kind>A</kind>
+            <date>20140601</date>
+          </document-id>
+          <application-date>
+            <date>20131015</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165373325">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104781224</doc-number>
+            <kind>A</kind>
+            <date>20150715</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9212115</doc-number>
+            <kind>B2</kind>
+            <date>20151215</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2907800</doc-number>
+            <kind>A1</kind>
+            <date>20150819</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150067198</doc-number>
+            <kind>A</kind>
+            <date>20150617</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251985</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014061570</doc-number>
+            <kind>A1</kind>
+            <date>20140424</date>
+          </document-id>
+          <application-date>
+            <date>20131011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>3843DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20151002</date>
+          </document-id>
+          <application-date>
+            <date>20150506</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201420556</doc-number>
+            <kind>A</kind>
+            <date>20140601</date>
+          </document-id>
+          <application-date>
+            <date>20131015</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The alicyclic diol compound of the present invention is represented by the following formula (1).</p>
+    <p id="p-a-00002-en" num="0000">
+      <chemistry id="chema-00001-en" num="00001">
+        <img id="imga-00001-en" he="28.53mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150251985A1_00007.PNG" img-format="png" original="US20150251985A1-20150910-C00001.TIF" />
+      </chemistry>
+    </p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150415</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015251985A1</docdb-publication-number>
+      <docdb-application-id>444310039</docdb-application-id>
+      <new-owner>MITSUBISHI GAS CHEMICAL COMPANY, INC., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:KITAMURA, MITSUHARU;REEL/FRAME:035414/0034</free-text-description>
+      <effective-date>
+        <date>20150408</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a new alicyclic diol compound having a cyclohexane ring, and a manufacturing method thereof.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">A polyester resin synthesized from an alicyclic dicarboxylic acid and an alicyclic diol can be applied to use as optical materials, electronic information materials, and medical appliance materials, due to excellence in transparency, heat resistance, weather resistance, gas barrier property, and optical properties.</p>
+      <p id="p-00003-en" num="0003">For example, using 1,4-cyclohexane dicarboxylic acid (1,4-CHDA) as alicyclic dicarboxylic acid, and 1,4-cyclohexane dimethanol (1,4-CHDM) as alicyclic diol, a polyester resin excellent in biodegradability (refer to, for example, Patent Document 1), a conductive polyester emitting a less amount of gas (refer to, for example, Patent Document 2), and a polyester having a short foam-disappearing time, suitable for use in medical application (refer to, for example, Patent Document 3) are synthesized. Furthermore, using tricyclo[3.3.1.1<sup>3,7</sup>]decane dicarboxylic acid as alicyclic dicarboxylic acid, and tricyclo[3.3.1.1<sup>3,7</sup>]decane diol as alicyclic diol, a polyester resin having small optical anisotropy, excellent in moldability, is synthesized (refer to, for example, Patent Document 4).</p>
+      <heading id="h-00003-en" level="1">LIST OF PRIOR ART DOCUMENTS</heading>
+      <heading id="h-00004-en" level="1">Patent Document</heading>
+      <heading id="h-00005-en" level="2">Patent Document 1</heading>
+      <p id="p-00004-en" num="0004">Japanese Patent Laid-Open No. 2000-290356</p>
+      <heading id="h-00006-en" level="2">Patent Document 2</heading>
+      <p id="p-00005-en" num="0005">Japanese Patent Laid-Open No. 2004-124022</p>
+      <heading id="h-00007-en" level="2">Patent Document 3</heading>
+      <p id="p-00006-en" num="0006">Japanese Patent Laid-Open No. 2005-298555</p>
+      <heading id="h-00008-en" level="2">Patent Document 4</heading>
+      <p id="p-00007-en" num="0007">Japanese Patent No. 3862538</p>
+      <heading id="h-00009-en" level="1">SUMMARY OF INVENTION</heading>
+      <heading id="h-00010-en" level="1">Problems to be Solved by Invention</heading>
+      <p id="p-00008-en" num="0008">An object of the present invention is to provide a new alicyclic diol compound having a cyclohexane ring and a manufacturing method thereof.</p>
+      <heading id="h-00011-en" level="1">Means for Solving Problems</heading>
+      <p id="p-00009-en" num="0009">The present inventor has investigated a method of manufacturing a new alicyclic diol compound represented by the following formula (1) from 4-isopropenyl-1-methyl-1-cyclohexene represented by the following formula (4), and found out that the new alicyclic diol compound represented by the following formula (1) can be manufactured by, for example, reacting 4-isopropenyl-1-methyl-1-cyclohexene represented by the following formula (4) with carbon monoxide in the presence of hydrogen fluoride (hereinafter also referred to as “HF”), subsequently reacting the produced alicyclic dicarboxylic acid fluoride represented by the following formula (3) with alcohol so as to produce an alicyclic dicarboxylic acid ester compound represented by the following formula (2), and then reducing the alicyclic dicarboxylic acid ester compound represented by the following formula (2).</p>
+      <p id="p-00010-en" num="0010">The present invention has been thus accomplished based on the finding.</p>
+      <p id="p-00011-en" num="0000">
+        <chemistry id="chem-00001-en" num="00002">
+          <img id="img-00001-en" he="75.86mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150251985A1_00008.PNG" img-format="png" original="US20150251985A1-20150910-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00012-en" num="0011">wherein R each independently represent an alkyl group having 1 to 4 carbon atoms.</p>
+      <p id="p-00013-en" num="0012">Specifically, the present invention is described as follows.</p>
+      <p id="p-00014-en" num="0013">[1] An alicyclic diol compound represented by the following formula (1).</p>
+      <p id="p-00015-en" num="0000">
+        <chemistry id="chem-00002-en" num="00003">
+          <img id="img-00002-en" he="28.53mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150251985A1_00009.PNG" img-format="png" original="US20150251985A1-20150910-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00016-en" num="0014">[2] A method of manufacturing an alicyclic diol compound comprising the steps of:</p>
+      <p id="p-00017-en" num="0015">reacting 4-isopropenyl-1-methyl-1-cyclohexene represented by the following formula (4) with carbon monoxide in the presence of hydrogen fluoride so as to produce an alicyclic dicarboxylic acid fluoride represented by the following formula (3);</p>
+      <p id="p-00018-en" num="0016">reacting the produced alicyclic dicarboxylic acid fluoride represented by the following formula (3) with alcohol so as to produce an alicyclic dicarboxylic acid ester compound represented by the following formula (2); and</p>
+      <p id="p-00019-en" num="0017">reducing the produced alicyclic dicarboxylic acid ester compound represented by the following formula (2) so as to produce a new alicyclic diol compound represented by the following formula (1):</p>
+      <p id="p-00020-en" num="0000">
+        <chemistry id="chem-00003-en" num="00004">
+          <img id="img-00003-en" he="75.86mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150251985A1_00010.PNG" img-format="png" original="US20150251985A1-20150910-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00021-en" num="0018">wherein R each independently represent an alkyl group having 1 to 4 carbon atoms.</p>
+      <heading id="h-00012-en" level="1">Advantages of Invention</heading>
+      <p id="p-00022-en" num="0019">The new alicyclic diol compound represented by the formula (1) of the present invention can be used, for example, as a raw material of polyester resins. Since the manufacturing method of the present invention uses a compound represented by the formula (4) derived from biomass as a raw material, it can be said that the manufacturing method is environment-friendly in terms of carbon neutrality.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00013-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00023-en" num="0020">
+        <figref>FIG. 1</figref> is a chart showing DEPT 45°-NMR measurement results of a product obtained in Example 1.</p>
+      <p id="p-00024-en" num="0021">
+        <figref>FIG. 2</figref> is a chart showing DEPT 90°-NMR measurement results of a product obtained in Example 1.</p>
+      <p id="p-00025-en" num="0022">
+        <figref>FIG. 3</figref> is a chart showing DEPT 135°-NMR measurement results of a product obtained in Example 1.</p>
+      <p id="p-00026-en" num="0023">
+        <figref>FIG. 4</figref> is a chart showing Carbon i.g.-NMR measurement results of a product obtained in Example 1.</p>
+      <p id="p-00027-en" num="0024">
+        <figref>FIG. 5</figref> is a chart showing INADEQUATE-NMR measurement results of a product obtained in Example 1.</p>
+      <p id="p-00028-en" num="0025">
+        <figref>FIG. 6</figref> is an enlarged chart showing measurement results in a portion from 15 to 50 ppm in <figref>FIG. 5</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00014-en" level="1">MODE FOR CARRYING OUT INVENTION</heading>
+      <p id="p-00029-en" num="0026">The embodiments of the present invention (hereinafter also referred to as “the present embodiment”) are described in detail in the following. The following embodiments are, however, provided to illustrate the present invention, and the present invention is not limited thereto only.</p>
+      <p id="p-00030-en" num="0027">The new alicyclic diol compound of the present embodiment is a compound represented by the following formula (1).</p>
+      <p id="p-00031-en" num="0000">
+        <chemistry id="chem-00004-en" num="00005">
+          <img id="img-00004-en" he="28.53mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150251985A1_00011.PNG" img-format="png" original="US20150251985A1-20150910-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00032-en" num="0028">The alicyclic diol compound represented by the formula (1) may be used, for example, as a raw material for polyester resins, and a material excellent in optical properties and heat resistance can be manufactured by using the alicyclic diol compound. Examples of the application of the material having such properties include, but not particularly limited to, optical materials such as lenses.</p>
+      <p id="p-00033-en" num="0029">The method of manufacturing the new alicyclic diol compound of the present embodiment comprises the following steps (a) to (c):</p>
+      <p id="p-00034-en" num="0030">(a) A step of reacting 4-isopropenyl-1-methyl-1-cyclohexene represented by the following formula (4) with carbon monoxide in the presence of hydrogen fluoride (hereinafter also referred to as “HF”) so as to produce an alicyclic dicarboxylic acid fluoride represented by the following formula (3)(hereinafter sometimes abbreviated as “carbonylation step”);</p>
+      <p id="p-00035-en" num="0031">(b) A step of reacting the produced alicyclic dicarboxylic acid fluoride represented by the following formula (3) with alcohol so as to produce an alicyclic dicarboxylic acid ester compound represented by the following formula (2) (hereinafter sometimes abbreviated as “esterification step”); and</p>
+      <p id="p-00036-en" num="0032">(c) A step of reducing the produced alicyclic dicarboxylic acid ester compound represented by the following formula (2) so as to produce an alicyclic diol compound represented by the following formula (1) (hereinafter sometimes abbreviated as “reduction step”).</p>
+      <p id="p-00037-en" num="0000">
+        <chemistry id="chem-00005-en" num="00006">
+          <img id="img-00005-en" he="77.72mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150251985A1_00012.PNG" img-format="png" original="US20150251985A1-20150910-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00038-en" num="0033">wherein R each independently represent an alkyl group having 1 to 4 carbon atoms.</p>
+      <heading id="h-00015-en" level="2">&lt;(a) Carbonylation Step&gt;</heading>
+      <p id="p-00039-en" num="0034">In the step (a), the carbonylation reaction of 4-isopropenyl-1-methyl-1-cyclohexene represented by the following formula (4) is preferably performed in the presence of HF under pressure of carbon monoxide. Through the step (a), an alicyclic carbonyl compound represented by the following formula (3) (hereinafter also referred to as “alicyclic dicarboxylic acid fluoride”) is produced. The product of the carbonylation reaction in the step (a) may contain various by-products (containing other isomers).</p>
+      <p id="p-00040-en" num="0000">
+        <chemistry id="chem-00006-en" num="00007">
+          <img id="img-00006-en" he="31.41mm" wi="37.00mm" alt="embedded image" img-content="chem" file="US20150251985A1_00013.PNG" img-format="png" original="US20150251985A1-20150910-C00007.TIF" />
+        </chemistry>
+      </p>
+      <heading id="h-00016-en" level="2">[Carbon Monoxide]</heading>
+      <p id="p-00041-en" num="0035">The carbon monoxide for use in the carbonylation step may contain an inert gas such as nitrogen and methane. The carbonylation step is performed under a carbon monoxide partial pressure in the range of preferably 0.5 to 5 MPa, more preferably 1 to 4 MPa, furthermore preferably 1.5 to 3 MPa. Under a carbon monoxide partial pressure of more than 0.5 MPa, the carbonylation reaction proceeds sufficiently without concurrence of side reactions such as disproportionation and polymerization, so that the target substance, i.e. alicyclic dicarboxylic acid fluoride, can be obtained at a high yield. A carbon monoxide partial pressure of 5 MPa or less is preferred, considering the load on equipment.</p>
+      <heading id="h-00017-en" level="2">[Hydrogen Fluoride]</heading>
+      <p id="p-00042-en" num="0036">Since HF for use in the carbonylation step functions as a solvent, a catalyst, and a secondary raw material for the reaction, use of substantially anhydrous HF is preferred. In the present embodiment, the substantially anhydrous HF means HF with a water concentration of 200 ppm or less. In the carbonylation step, the amount of HF for use is preferably 4 to 30 times by mole, more preferably 7 to 20 times by mole, furthermore preferably 10 to 15 times by mole, as large as the amount of raw material 4-isopropenyl-1-methyl-1-cyclohexene. With an amount of HF for use of 4 times by mole or more, the carbonylation reaction proceeds efficiently, with concurrence of side reactions such as disproportionation and polymerization being suppressed, so that the target substance, i.e. alicyclic dicarboxylic acid fluoride, can be obtained at a high yield. The amount of HF for use is preferably 30 times by mole or less, more preferably 15 times by mole or less, considering raw material costs and productivity.</p>
+      <heading id="h-00018-en" level="2">[Reaction Conditions]</heading>
+      <p id="p-00043-en" num="0037">The type of carbonylation reaction in the step (a) is not particularly limited. Any of a batch type, a semi-continuous type, a continuous type, and the like may be employed.</p>
+      <p id="p-00044-en" num="0038">The reaction temperature of carbonylation reaction in the step (a) is preferably in the range of −50° C. to 30° C., more preferably −40° C. to 0° C., furthermore preferably −30 to −10° C. At a reaction temperature of the carbonylation reaction of 30° C. or less, in particular −10° C. or less, improved selectivity tends to be achieved. The carbonylation reaction in the step (a) is preferably performed at −50° C. or more, considering the reaction rate.</p>
+      <p id="p-00045-en" num="0039">The reaction pressure of carbonylation reaction in the step (a) is preferably in the range of 0.6 to 5.0 MPa, more preferably 1.1 to 4.0 MPa, furthermore preferably 1.6 to 3.0 MPa.</p>
+      <heading id="h-00019-en" level="2">&lt;(b) Esterification Step&gt;</heading>
+      <p id="p-00046-en" num="0040">The esterification step is a step of reacting the alicyclic dicarboxylic acid fluoride produced in the carbonylation step with an alcohol having 1 to 4 carbon atoms so as to produce an alicyclic dicarboxylic acid ester compound. In the esterification step, the reaction liquid produced in the carbonylation step may be directly used. Considering the corrosivity of a reaction apparatus, in the esterification step, a method in which a predetermined amount of alcohol is added to the reaction liquid produced in the carbonylation step is preferred. Alternatively, an excessive amount of HF may be distilled away from the reaction liquid produced in the carbonylation step and then alcohol may be added to the reaction liquid for esterification.</p>
+      <p id="p-00047-en" num="0041">Instead of using the reaction liquid of acid fluoride produced in the carbonylation reaction in the esterification step: (I) after distilling excessive amount of HF away, the reaction liquid may be refined by a conventional method such as distillation, so that the acid fluoride can be directly used as a raw material in the subsequent reduction step; or (II) after distilling excessive amount of HF away, the reaction liquid may be hydrolyzed to produce a corresponding carboxylic acid, which is refined by a conventional method such as distillation, so that the carboxylic acid can be used as a raw material in the subsequent reduction step.</p>
+      <p id="p-00048-en" num="0000">
+        <chemistry id="chem-00007-en" num="00008">
+          <img id="img-00007-en" he="31.41mm" wi="49.28mm" alt="embedded image" img-content="chem" file="US20150251985A1_00014.PNG" img-format="png" original="US20150251985A1-20150910-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00049-en" num="0042">wherein R each independently represent an alkyl group having 1 to 4 carbon atoms.</p>
+      <p id="p-00050-en" num="0043">Specific examples of the alcohol for use in the esterification step include methanol, ethanol, n-propanol, isopropanol, n-butyl alcohol, isobutyl alcohol, and tert-butyl alcohol, though not being particularly limited. Among them, methanol or ethanol is preferred, considering the reactivity. In the esterification step, one type of alcohol may be used alone or two or more types may be used in combination.</p>
+      <p id="p-00051-en" num="0044">The amount of alcohol for use in the esterification step is preferably 1.0 to 2.5 times by mole, more preferably 1.2 to 2.3 times by mole, furthermore preferably 1.5 to 2.0 times by mole, as large as the amount of raw material 4-isopropenyl-1-methyl-1-cyclohexene in the carbonylation step. With an amount of alcohol for use of 1.0 times by mole or more, the remaining amount of unreacted alicyclic dicarboxylic acid fluoride is small, resulting in little corrosion of apparatus in a subsequent step, which is preferable. An amount of alcohol for use of 2.5 times by mole or less is preferred, from the viewpoint of suppressing the corrosion of apparatus by water produced in an intermolecular dehydration reaction of alcohol.</p>
+      <p id="p-00052-en" num="0045">The reaction temperature in the esterification step is preferably −40° C. or more and 20° C. or less, more preferably −30° C. to 10° C., furthermore preferably −30° C. to 0° C., from the viewpoint of suppressing decomposition of the alicyclic dicarboxylic acid ester compound represented by the above formula (2). With a reaction temperature of −40° C. or more, the esterification rate can be accelerated to improve the yield. With a reaction temperature of 20° C. or less, the decomposition of ester can be suppressed and by-product water due to dehydration reaction of alcohol can be suppressed.</p>
+      <p id="p-00053-en" num="0046">The esterification step is preferably performed under normal pressure.</p>
+      <heading id="h-00020-en" level="2">&lt;(c) Reduction Step&gt;</heading>
+      <p id="p-00054-en" num="0047">In the step (c), the method for reducing the alicyclic dicarboxylic acid ester compound represented by the formula (2) (hereinafter also referred to as “alicyclic dicarboxylic acid ester compound”) produced in the esterification step may be any of the conventional method for reducing a carbonyl compound to alcohol, without particular limitations. The reduction method for use may be, for example, any of hydride reduction, reduction using a metal and a metal salt, and reduction by catalytic hydrogenation, which are described in The Fifth Series of Experimental Chemistry Vol. 14 (Maruzen) pp. 11-27. Among them, reduction by catalytic hydrogenation is preferred from the viewpoint of economic efficiency.</p>
+      <p id="p-00055-en" num="0000">
+        <chemistry id="chem-00008-en" num="00009">
+          <img id="img-00008-en" he="31.41mm" wi="56.30mm" alt="embedded image" img-content="chem" file="US20150251985A1_00015.PNG" img-format="png" original="US20150251985A1-20150910-C00009.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00056-en" num="0048">wherein R each independently represent an alkyl group having 1 to 4 carbon atoms.</p>
+      <heading id="h-00021-en" level="2">[Catalytic Hydrogenation Catalyst]</heading>
+      <p id="p-00057-en" num="0049">Although the catalyst for use in catalytic hydrogenation of an alicyclic dicarboxylic acid ester compound (hereinafter also referred to as “catalytic hydrogenation catalyst”) is not particularly limited as long as being a conventional catalysts for use in hydrogenation of a carbonyl compound, preferably the catalyst includes at least one selected from metals in groups 8 to 11 of the periodic table.</p>
+      <p id="p-00058-en" num="0050">Specific examples of the catalytic hydrogenation catalyst include a catalytic hydrogenation catalyst which contains at least one selected from iron, cobalt, nickel, copper, ruthenium, rhodium, palladium, silver, osmium, iridium, platinum, and gold, though not being particularly limited.</p>
+      <p id="p-00059-en" num="0051">Although the catalytic hydrogenation catalyst may be a solid catalyst or a homogeneous catalyst, a solid catalyst is preferred considering the isolation from reaction products. Examples of the solid catalyst include an unsupported metal catalyst and a supported metal catalyst, though not being particularly limited.</p>
+      <p id="p-00060-en" num="0052">Preferred examples of the unsupported metal catalyst include a Raney catalyst such as Raney nickel, Raney cobalt, and Raney copper, an oxide of platinum, palladium, rhodium, ruthenium, or the like, and a colloidal catalyst.</p>
+      <p id="p-00061-en" num="0053">Examples of the supported metal catalyst include a supported metal catalyst composed of at least one of iron, cobalt, nickel, copper, ruthenium, rhodium, palladium, silver, osmium, iridium, platinum, and gold supported on or blended with a carrier such as magnesia, zirconia, ceria, diatomaceous earth, activated carbon, alumina, silica, zeolite, or titania, though not being particularly limited. Among them, a supported copper catalyst such as a copper-chromium catalyst (Adkins catalyst), a copper-zinc or copper-iron catalyst, a supported platinum catalyst such as Pt/C and Pt/alumina, a supported palladium catalyst such as Pd/C and Pd/alumina, a supported ruthenium catalyst such as Ru/C and Ru/alumina, or a supported rhodium catalyst such as Rh/C and Rh/alumina is preferred. Among these, a catalyst which contains at least one selected from the group consisting of nickel and copper is more preferred in terms of the reaction activity.</p>
+      <p id="p-00062-en" num="0054">In the reduction step, the amount of catalytic hydrogenation catalyst for use is preferably 1 to 100 parts by mass, more preferably 3 to 30 parts by mass, furthermore preferably 5 to 20 parts by mass, relative to 100 parts by mass of the raw material alicyclic dicarboxylic acid ester compound, though depending on the type of catalyst.</p>
+      <heading id="h-00022-en" level="2">[Solvent]</heading>
+      <p id="p-00063-en" num="0055">The reduction step can be performed without solvent. Alternatively, a solvent may be used in the step.</p>
+      <p id="p-00064-en" num="0056">Examples of the solvent for use in the reduction step include water; organic acids such as formic acid and acetic acid; aromatic compounds such as benzene, o-dichlorobenzene, toluene, and xylene; hydrocarbons such as hexane, heptane, and cyclohexane; alcohols such as methanol, ethanol, isopropyl alcohol, t-butyl alcohol, ethylene glycol and diethylene glycol; ethers such as dioxane, tetrahydrofuran, dimethoxyethane, and diglyme; or a mixture thereof; though not being particularly limited. Among them, solvent-free; aromatic compounds such as benzene, o-dichlorobenzene, toluene, and xylene; hydrocarbons such as hexane, heptane, and cyclohexane; alcohols such as methanol, ethanol, isopropyl alcohol, t-butyl alcohol, ethylene glycol, and diethylene glycol; ethers such as dioxane, tetrahydrofuran, dimethoxyethane, and diglyme; or a mixture thereof, is preferably employed.</p>
+      <p id="p-00065-en" num="0057">In the reduction step, the amount of solvent for use is preferably 0 to 30 times by mass, more preferably 0 to 20 times by mass, furthermore preferably 0 to 10 times by mass, as large as the amount of alicyclic dicarboxylic acid ester compound represented by the formula (2) produced in the esterification step.</p>
+      <heading id="h-00023-en" level="2">[Reaction Conditions]</heading>
+      <p id="p-00066-en" num="0058">A higher hydrogen pressure in the reduction step is more preferred for shifting the reaction equilibrium to the alcohol side. The pressure is preferably 1 to 30 MPa, more preferably 5 to 25 MPa, furthermore preferably 10 to 20 MPa, considering equipment cost.</p>
+      <p id="p-00067-en" num="0059">The reaction temperature in the reduction step is preferably 100° C. or more, more preferably 150° C. or more, furthermore preferably 180° C. or more, from the viewpoint of obtaining a sufficient reaction rate. The reaction temperature in the reduction step is preferably 300° C. or less, more preferably 290° C. or less, furthermore preferably 280° C. or less, from the viewpoint of suppressing the transesterification reaction between an alicyclic diol compound represented by the formula (1) to be produced and an alicyclic dicarboxylic acid ester compound represented by the formula (2).</p>
+      <p id="p-00068-en" num="0060">The reaction pressure in the reduction step is in the range of preferably 1.5 to 30 MPa, more preferably 6 to 25 MPa, furthermore preferably 10 to 20 MPa.</p>
+      <p id="p-00069-en" num="0061">The type of reduction step is not particularly limited. For example, in the case of reduction by catalytic hydrogenation, the type of reduction step is not particularly limited as long as the catalytic hydrogenation reaction is feasible, so that a known, commonly used type may be employed. Examples of the reactor in which the reduction step is performed include a suspended bed reactor for performing catalytic hydrogenation reaction with catalysts fluidized in a fluid, and a fixed bed reactor filled with catalysts to be fixed for performing catalytic hydrogenation reaction by supplying a fluid, though not being particularly limited.</p>
+      <p id="p-00070-en" num="0062">In the reduction step, alcohols having 1 to 4 carbon atoms may be by-produced during the reaction in some cases. The reduction step may be performed with the by-products remaining, or may be performed with the by-products being continuously or intermittently removed during the reaction.</p>
+      <heading id="h-00024-en" level="2">&lt;Other Steps&gt;</heading>
+      <p id="p-00071-en" num="0063">The manufacturing method of the present embodiment may comprise other steps other than the steps (a) and (b) described above. Examples of the other step include a liquid-liquid extraction step, a catalyst recovery step, a neutralization and washing step, an auxiliary agent recovery step, and a refining step, though not being particularly limited.</p>
+      <p id="p-00072-en" num="0064">Examples of the refining step include: a step of, after distilling HF away from the reaction liquid containing an alicyclic dicarboxylic acid ester compound represented by the formula (2) produced in the esterification step, refining the reaction liquid by a conventional method such as distillation; and a step of, after separating the hydrogenation catalyst from the products containing the alicyclic diol compound represented by the formula (1) produced in the reduction step, refining the products by a conventional method such as distillation and recrystallization; though not being particularly limited. Through such a refining step, a new high-purity alicyclic diol represented by the formula (1) can be obtained.</p>
+      <heading id="h-00025-en" level="1">EXAMPLES</heading>
+      <p id="p-00073-en" num="0065">Hereinafter, the present invention will be specifically described with reference to Examples, but the present invention is not intended to be limited to these examples. Unless otherwise specified, “%” in the following means mass %.</p>
+      <heading id="h-00026-en" level="2">&lt;Analytical Method and Conditions&gt;</heading>
+      <heading id="h-00027-en" level="2">[Analysis Conditions for Gas Chromatography]</heading>
+      <p id="p-00074-en" num="0066">In gas chromatography, a measurement apparatus GC-17A made by SHIMADZU CORPORATION and a capillary column HR-1 made by ULBON (0.32 mmφ×25 m×0.50 μm) were used. The temperature-rising conditions were set such that the temperature was raised from 100° C. to 300° C. at a rate of 5° C./min.</p>
+      <heading id="h-00028-en" level="2">[Yield and Isomer Ratio of Dicarboxylic Acid Ester Compound]</heading>
+      <p id="p-00075-en" num="0067">By gas chromatography analysis, the area ratios (GC %) of several types of isomeric dicarboxylic acid ester compounds as products were obtained, and the yield and the isomer ratio of the dicarboxylic acid ester compounds were calculated by an internal reference method using the following expression.</p>
+      <p id="p-00076-en" num="0000">[in-line-formulae]{Yield of dicarboxylic acid ester compound(mol %)}={Total acquisition mass of dicarboxylic acid ester compound/256.3}/{Raw material feed mass/136.2}×100[/in-line-formulae]</p>
+      <p id="p-00077-en" num="0000">[in-line-formulae]{Isomer ratio(%)}={Methyl-4-(1-methoxy-2-methyl-1-oxopropan-2-yl)-1-methylcyclohexane carboxylate (GC %)}/{Total of dicarboxylic acid ester compounds(GC %)}×100[/in-line-formulae]</p>
+      <p id="p-00078-en" num="0068">The isomer in the description means a structural isomer having a carbonyl group at a different insertion position.</p>
+      <heading id="h-00029-en" level="2">[Yield of Alicyclic Diol Compounds]</heading>
+      <p id="p-00079-en" num="0069">By gas chromatography analysis, the area ratios (GC %) of several types of isomeric diol compounds as products were obtained, and the yield of 2-(4-(hydroxymethyl)-4-methylcyclohexyl)-2-methylpropan-1-ol was calculated by an internal reference method.</p>
+      <heading id="h-00030-en" level="2">[GC-MS]</heading>
+      <p id="p-00080-en" num="0070">As GC-MS measurement apparatus, a GC-MS spectrometer POLARIS Q made by Thermo ELECTRON Corporation was used.</p>
+      <heading id="h-00031-en" level="2">[NMR]</heading>
+      <p id="p-00081-en" num="0071">NMR was measured under the following conditions.</p>
+      <p id="p-00082-en" num="0072">Apparatus: Bruker Avance 60011 (600 MHz-NMR)</p>
+      <p id="p-00083-en" num="0073">Mode: Proton, Carbon, DEPT 45°, 90°, and 135°, Carbon i.g., and INADEQUATE</p>
+      <p id="p-00084-en" num="0074">Solvent: CDCl3 (deuterated chloroform)</p>
+      <p id="p-00085-en" num="0075">Internal reference substance: tetramethylsilane</p>
+      <heading id="h-00032-en" level="1">Example 1</heading>
+      <heading id="h-00033-en" level="1">Manufacturing of methyl-4-(1-methoxy-2-methyl-1-oxopropan-2-yl)-1-methylcyclohexane carboxylate ((a) Carbonylation Step and (b) Esterification Step)</heading>
+      <p id="p-00086-en" num="0076">
+        <chemistry id="chem-00009-en" num="00010">
+          <img id="img-00009-en" he="43.01mm" wi="64.60mm" alt="embedded image" img-content="chem" file="US20150251985A1_00016.PNG" img-format="png" original="US20150251985A1-20150910-C00010.TIF" />
+        </chemistry>
+      </p>
+      <heading id="h-00034-en" level="2">[Carbonylation Step]</heading>
+      <p id="p-00087-en" num="0077">Using a stainless steel autoclave with an internal volume of 500 ml including a Nack drive type stirrer and three inlet nozzles at the top and one extraction nozzle at the bottom, with a jacket for internal temperature control, the carbonylation step was performed as follows.</p>
+      <p id="p-00088-en" num="0078">First, the atmosphere in the autoclave was substituted with carbon monoxide. Subsequently, 230 g (11.5 mol) of anhydrous hydrogen fluoride was introduced into the autoclave, and the liquid temperature in the autoclave was set to −27° C. The inside of the autoclave was then pressurized to 2 MPa with carbon monoxide.</p>
+      <p id="p-00089-en" num="0079">In the autoclave with the reaction temperature being kept at −27° C., and the reaction pressure being kept at 2 MPa, 104.4 g (0.77 mol) of 4-isopropenyl-1-methyl-1-cyclohexene was supplied from the top of the autoclave, so that the carbonylation reaction was performed. After completion of the supply, with stirring of the reaction liquid being continued for about 10 minutes until no absorption of carbon monoxide was observed, an alicyclic dicarboxylic acid fluoride was thereby obtained.</p>
+      <heading id="h-00035-en" level="2">[Esterification Step]</heading>
+      <p id="p-00090-en" num="0080">Subsequently, in the autoclave with the reaction temperature being kept at −27° C., 49.1 g (1.53 mol) of methanol was supplied from the top of the autoclave, so that esterification of the alicyclic dicarboxylic acid fluoride was performed with the reaction liquid being stirred for 1 hour.</p>
+      <p id="p-00091-en" num="0081">The reaction liquid was extracted from the bottom of the autoclave into ice water, so that an oil phase and an aqueous phase were separated. Subsequently, the oil phase was washed twice with 100 ml of 2% caustic soda aqueous solution and twice with 100 ml of distilled water, and was dehydrated with 10 g of anhydrous sodium sulfate. After dehydration, the produced liquid was analyzed by gas chromatography. As a result, the yield of the dicarboxylic acid ester compound was 26.6 mol % (on 4-isopropenyl-1-methyl-1-cyclohexene basis), and the yield of methyl-4-(1-methoxy-2-methyl-1-oxopropan-2-yl)-1-methylcyclohexane carboxylate was 21.1 mol % (on 4-isopropenyl-1-methyl-1-cyclohexene basis, isomer ratio: 79.2%).</p>
+      <heading id="h-00036-en" level="2">[Isolation and Refining of Esterification Reaction Product]</heading>
+      <p id="p-00092-en" num="0082">By reduced-pressure distillation of the liquid produced in the esterification step with an evaporator, low-boiling point substances were removed from the liquid. Subsequently, the low-boiling point substance-removed liquid was rectified using a rectification column with a theoretical plate number of 20 (distillation temperature: 177° C., degree of vacuum: 20 torr). Through the rectification, 42.0 g of a product as main fraction having an isomer ratio of 92.0% by gas chromatography analysis (distilled yield: 93.2 mol %, on methyl-4-(1-methoxy-2-methyl-1-oxopropan-2-yl)-1-methylcyclohexane carboxylate basis) was obtained.</p>
+      <heading id="h-00037-en" level="2">[Reduction Step]</heading>
+      <heading id="h-00038-en" level="1">Manufacturing of 2-(4-(hydroxymethyl)-4-methylcyclohexyl)-2-methylpropan-1-ol</heading>
+      <p id="p-00093-en" num="0083">
+        <chemistry id="chem-00010-en" num="00011">
+          <img id="img-00010-en" he="45.97mm" wi="58.08mm" alt="embedded image" img-content="chem" file="US20150251985A1_00017.PNG" img-format="png" original="US20150251985A1-20150910-C00011.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00094-en" num="0084">In an stainless steel autoclave, 3.0 g of a copper-zinc catalyst supported on alumina (made by JGC Catalysts and Chemicals Ltd.) and 30.0 g of the product produced as main fraction in the isolation and refining (containing methyl-4-(1-methoxy-2-methyl-1-oxopropan-2-yl)-1-methylcyclohexane carboxylate with an isomer ratio of 92.0% and other isomers in an amount of 8.0%) were placed, and the mixture was stirred for 15 hours at 280° C., under a hydrogen pressure of 15 MPa, in a solvent-free state with hydrogen passing. The reduction reaction of methyl-4-(1-methoxy-2-methyl-1-oxopropan-2-yl)-1-methylcyclohexane carboxylate was thus performed.</p>
+      <p id="p-00095-en" num="0085">The catalyst was removed by filtering the reaction liquid, so that 19.1 g of a product (mixture) was manufactured, containing 0.8% of methyl-4-(1-methoxy-2-methyl-1-oxopropan-2-yl)-1-methylcyclohexane carboxylate, 9.6% of perhydrogenated product, 89.0% of 2-(4-(hydroxymethyl)-4-methylcyclohexyl)-2-methylpropan-1-ol, and 0.6% of other isomers. The yield of 2-(4-(hydroxymethyl)-4-methylcyclohexyl)-2-methylpropan-1-ol was 78.9 mol % (on methyl-4-(1-methoxy-2-methyl-1-oxopropan-2-yl)-1-methylcyclohexane carboxylate basis).</p>
+      <heading id="h-00039-en" level="2">[Recrystallization Refining of Reduction Reaction Product]</heading>
+      <p id="p-00096-en" num="0086">The product obtained in the reduction step was dissolved in methanol. Subsequently, 40 g of n-hexane was slowly poured into the produced solution, and the precipitated crystals were separated by filtration. The obtained product was a white solid with a purity of 100% (12.6 g, crystallization yield: 65.7 mol %, on 2-(4-(hydroxymethyl)-4-methylcyclohexyl)-2-methylpropan-1-ol basis).</p>
+      <heading id="h-00040-en" level="2">&lt;Product Identification&gt;</heading>
+      <p id="p-00097-en" num="0087">As a result of GC-MS analysis, the product obtained in the recrystallization refining in Example 1 had a molecular weight of 200.</p>
+      <p id="p-00098-en" num="0088">Using the NMR apparatus, 1H-NMR measurement, 13C-NMR measurement, DEPT 45°, 90°, and 135°-NMR measurement, Carbon i.g.-NMR measurement, and INADEQUATE-NMR measurement were performed. The results of 1H-NMR measurement and 13C-NMR measurement are shown as follows, and the results of DEPT 45°, 90°, and 135°-NMR measurement, Carbon i.g.-NMR measurement, and INADEQUATE-NMR measurement are shown in <figref>FIG. 1</figref> to <figref>FIG. 6</figref>.</p>
+      <heading id="h-00041-en" level="2">[NMR Measurement Results of Product Obtained in Example 1]</heading>
+      <p id="p-00099-en" num="0089">1H-NMR (600 MHz, CDCl3, TMS, ppm) δ: 0.700-0.955 (m, 9H), 1.113-1.231 (m, 6H), 1.473-1.560 (m, 2H), 1.638-1.726 (m, 2H), 3.281-3.457 (m, 4H), 4.907 (m, 1H)</p>
+      <p id="p-00100-en" num="0090">13C-NMR (600 MHz, CDCl3, TMS, ppm) δ: 22.27, 23.29, 28.22, 35.07, 36.02, 37.86, 43.94, 49.01, 66.64, 70.60</p>
+      <p id="p-00101-en" num="0091">
+        <figref>FIG. 1</figref> is a chart showing DEPT 45°-NMR measurement results. From <figref>FIG. 1</figref>, it was found that the fourth and sixth peaks for quaternary carbon atoms were missing. <figref>FIG. 2</figref> is a chart showing DEPT 90°-NMR measurement results. From <figref>FIG. 2</figref>, it was found that the seventh peak for a tertiary carbon atom was strongly detected. <figref>FIG. 3</figref> is a chart showing DEPT 135°-NMR measurement results. It was found that the second, fifth, eighth, and ninth peaks for secondary carbon atoms were detected in the downward direction. <figref>FIG. 4</figref> is a chart showing Carbon i.g.-NMR measurement results. From <figref>FIG. 4</figref>, the number of carbon was confirmed. <figref>FIG. 5</figref> and <figref>FIG. 6</figref> are charts showing INADEQUATE-NMR measurement results (<figref>FIG. 6</figref> is an enlarged chart showing measurement results in a portion for 15 to 50 ppm in <figref>FIG. 5</figref>.). From <figref>FIG. 5</figref> and <figref>FIG. 6</figref>, the correlations of direct bonding between carbons were elucidated.</p>
+      <p id="p-00102-en" num="0092">Based on comprehensive determination from the measurement results, the main component of the product obtained in Example 1 was identified to be 2-(4-(hydroxymethyl)-4-methylcyclohexyl)-2-methylpropan-1-ol.</p>
+      <heading id="h-00042-en" level="1">INDUSTRIAL APPLICABILITY</heading>
+      <p id="p-00103-en" num="0093">The new alicyclic diol compound obtained in the present invention is useful as various industrial chemical raw materials and raw materials for manufacturing functional optical materials and functional electronic materials.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An alicyclic diol compound represented by the following formula (1).</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00012">
+          <img id="imgc-00001-en" he="28.45mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150251985A1_00018.PNG" img-format="png" original="US20150251985A1-20150910-C00012.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en" independent="true">
+      <claim-text>
+        <b>2</b>. A method of manufacturing an alicyclic diol compound comprising the steps of:
+<claim-text>reacting 4-isopropenyl-1-methyl-1-cyclohexene represented by the following formula (4) with carbon monoxide in the presence of hydrogen fluoride so as to produce an alicyclic dicarboxylic acid fluoride represented by the following formula (3);</claim-text><claim-text>reacting the produced alicyclic dicarboxylic acid fluoride represented by the following formula (3) with alcohol so as to produce an alicyclic dicarboxylic acid ester compound represented by the following formula (2); and</claim-text><claim-text>reducing the produced alicyclic dicarboxylic acid ester compound represented by the following formula (2) so as to produce an alicyclic diol compound represented by the following formula (1):</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00013">
+          <img id="imgc-00002-en" he="75.86mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150251985A1_00019.PNG" img-format="png" original="US20150251985A1-20150910-C00013.TIF" />
+        </chemistry><claim-text>wherein R each independently represent an alkyl group having 1 to 4 carbon atoms. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251985A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251985A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251985A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251985A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251985A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251985A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150251985A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150251985A1-20150910-C00013.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150251985A1.PDF" type="pdf" size="450787" pages="14" />
+</lexisnexis-patent-document>

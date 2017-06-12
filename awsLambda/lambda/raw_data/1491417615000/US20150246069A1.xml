@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246069A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021308" date-changed="20151103" time-changed="063316">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139176">
+        <country>US</country>
+        <doc-number>20150246069</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14621824</doc-number>
+        <date>20150213</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61K  31/713       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>713</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  45/06        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61K  31/713       20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>713</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  45/06        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12Q   1/6886      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>6886</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12Q2600/158       20130101 LA20140304BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>158</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140304</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C12Q2600/178       20130101 LA20140304BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>178</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140304</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">4</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">METHOD OF USING SEQUENCE OF ANTAGOMIR FOR DEVELOPING MEDICINE FOR INHIBITING ORAL CANCER CELLS FROM SPREADING</invention-title>
+    <references-cited date-changed="20151103">
+      <patent-citations name="patcit" date-changed="20151103" />
+      <non-patent-citations name="nplcit" date-changed="20151103" />
+      <citation>
+        <patcit num="1" dnum="US8541385B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8541385</doc-number>
+            <kind>B2</kind>
+            <name>STOFFEL MARKUS [CH], et al</name>
+            <date>20130924</date>
+          </document-id>
+          <application-date>
+            <date>20100301</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2012122953A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20120122953</doc-number>
+            <kind>A1</kind>
+            <name>MOORWOOD CATHERINE [US], et al</name>
+            <date>20120517</date>
+          </document-id>
+          <application-date>
+            <date>20090427</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2013295160A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20130295160</doc-number>
+            <kind>A1</kind>
+            <name>RAO DONALD [US], et al</name>
+            <date>20131107</date>
+          </document-id>
+          <application-date>
+            <date>20130110</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Szafranska et al. (Oncogene (2007) vol. 26, pages 4442-4452).</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13558152</doc-number>
+              <date>20120725</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006218</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Cheng</last-name>
+            <first-name>Ann-Joy</first-name>
+            <address>
+              <city>Taoyuan County</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>TW</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lu</last-name>
+            <first-name>Ya-Ching</first-name>
+            <address>
+              <city>Taoyuan County</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>TW</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Cheng</last-name>
+            <first-name>Ann-Joy</first-name>
+            <address>
+              <city>Taoyuan County</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lu</last-name>
+            <first-name>Ya-Ching</first-name>
+            <address>
+              <city>Taoyuan County</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173462000">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246069</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150213</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173461999">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246069</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150213</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method of using sequence of antagomiR for developing medicine for inhibiting oral cancer cells from spreading is provided with the steps of combining a sequence of antagomiR with active ingredient to prepare a medicine which is configured to administer to oral cavity grown with oral cancer cells so that both miR-196a and miR-196b of the sequence of antagomiR are configuring of developing medicine for curing oral cancer cells. The miR-196a has a sequence of 5′-UAGGUAGUUUCAUGUUGUUGGG-3′(SEQ.ID.NO.1). The miR-196b has a sequence of 5′-UAGGUAGUUUCCUGUUGUUGGG-3′(SEQ.ID.NO.2).</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150302</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246069A1</docdb-publication-number>
+      <docdb-application-id>444208067</docdb-application-id>
+      <new-owner>CHANG GUNG UNIVERSITY, TAIWAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:CHENG, ANN-JOY;LU, YA-CHING;REEL/FRAME:035066/0129</free-text-description>
+      <effective-date>
+        <date>20150301</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation in part of U.S. application Ser. No. 13/558,152, filed Jul. 25, 2012, entitled “METHOD OF USING BOTH MIR-196A AND MIR-196B AS BIOMARKERS FOR DETECTING ORAL CANCER”. The entire teachings of the above application are incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">The invention relates to oral cancer treatments and more particularly to a method of using sequence of antagomiR for developing medicine for inhibiting oral cancer cells from spreading.</p>
+      <p id="p-00004-en" num="0004">2. Description of Related Art</p>
+      <p id="p-00005-en" num="0005">A biomarker is in general a substance used as an indicator of a biological state. It is a characteristic that is objectively measured and evaluated as an indicator of normal biological processes, pathogenic processes, or pharmacologic responses to a therapeutic intervention. Currently, CEA (carcinoembryonic antigen) is used for colorectal cancer indication and PSA (prostate-particular antigen) is used for prostate cancer indication. However, biomarkers for indicating oral cancer are not available as far as the present inventor is aware.</p>
+      <p id="p-00006-en" num="0006">MicroRNA (abbreviated miRNA) is a short ribonucleic acid (RNA) molecule found in eukaryotic cells. A microRNA molecule has very few nucleotides (average of 22) compared with other RNAs.</p>
+      <p id="p-00007-en" num="0007">It is found that miRNA is capable of control target genes based on recent research. Further, different types of cancer have different miRNA molecules based on other recent researches. However, their applications to oral cancer treatment are unknown. Further endeavor is thus desired.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">One aspect of the invention is to provide a method of developing medicine for inhibiting oral cancer cells from spreading comprising the steps of combining the sequence of antagomiR with active ingredient to prepare a medicine which is configured to administer to oral cavity grown with oral cancer cells so that both miR-196a and miR-196b of the sequence of antagomiR are configuring of developing medicine for curing oral cancer cells wherein the miR-196a has a sequence of 5′-UAGGUAGUUUCAUGUUGUUGGG-3′(SEQ ID NO.1), and the miR-196b has a sequence of 5′-UAGGUAGUUUCCUGUUGUUGGG-3′(SEQ ID NO.2).</p>
+      <p id="p-00009-en" num="0009">Preferably, the oral cancer cells spread includes oral cancer cells migration and invasion.</p>
+      <p id="p-00010-en" num="0010">Preferably, both anti-miR-196a and anti-miR-196b of the sequence of antagomiR are configuring of developing medicine for inhibiting oral cancer cell spreading; and wherein the anti-miR-196a has a sequence of 5′-CCCAACAACAUGAAACUACCUA-3′(SEQ.ID.NO.3) for inhibiting miR-196a, and the anti-miR-196b has a sequence of 5′-CCCAACAACAGGAAACUACCUA-3′(SEQ.ID.NO.4) for inhibiting miR-196b.</p>
+      <p id="p-00011-en" num="0011">Preferably, both anti-miR-196a for inhibiting miR-196a and anti-miR-196a for inhibiting miR-196a show a great reduction of cell migration/invasion ability in OECM1 and SAS cells.</p>
+      <p id="p-00012-en" num="0012">Preferably, both scramble anti-miR-196a and scramble anti-miR-196b are used as a reference group; and wherein the scramble anti-miR-196a has a sequence of 5′-AACAAAUUCAACCCGUCCCAAA-3′(SEQ.ID.NO.5), and the scramble anti-miR-196b has a sequence of 5′-AUACAAAUCGCACGAACCAACC-3′(SEQ.ID.NO.6).</p>
+      <p id="p-00013-en" num="0013">It is therefore one object of the invention to provide a method of developing medicine for inhibiting oral cancer cells from spreading. The invention uses miR-196a and miR-196b as biomarkers for oral cancer detection comprising the steps of analyzing a sample from each of a plurality of human beings in terms of miR-196a and miR-196b wherein the miR-196a has a sequence of SEQ ID NO.1 and miR-196b has a sequence of SEQ ID NO.2; anti-miR-196a has a sequence of SEQ ID NO.3 and anti-miR-196b has a sequence of SEQ ID NO.4; scramble anti-miR-196a has a sequence of SEQ ID NO.5 and scramble anti-miR-196b has a sequence of SEQ ID NO.6; and detecting one of the human beings to have oral cancer if intensity of either miR-196a or miR-196b of the sample belonging to the human being is higher than a predetermined value, wherein the predetermined value of miR-196a is 1.817±0.38 and the predetermined value of miR-196b is 7.683±1.88.</p>
+      <p id="p-00014-en" num="0014">Wherein the method of analyzing a sample from each of a plurality of human beings in terms of miR-196a and miR-196b comprises the sub-steps of:</p>
+      <p id="p-00015-en" num="0015">(a1) sampling blood plasma with each sample having a volume of 200 μl</p>
+      <p id="p-00016-en" num="0016">(a2) extracting nucleic acid by a reagent which does not remove small RNAs;</p>
+      <p id="p-00017-en" num="0017">(a3) adding 700 μl 1QlAzol to each sample for homogeneousness;</p>
+      <p id="p-00018-en" num="0018">(a4) adding 140 μl trichloromethane to each sample to extract RNAs;</p>
+      <p id="p-00019-en" num="0019">(a5) removing about 525 μl of upper pure liquid of the sample to a new tube after using a centrifuge;</p>
+      <p id="p-00020-en" num="0020">(a6) adding 750 μl pure alcohol to the sample to deposit nucleic acid;</p>
+      <p id="p-00021-en" num="0021">(a7) obtaining deposits from the sample by using the reagent;</p>
+      <p id="p-00022-en" num="0022">(a8) draining the sample;</p>
+      <p id="p-00023-en" num="0023">(a9) adding 20 μl water of RNase-free to the sample to extract nucleic acid from the sample;</p>
+      <p id="p-00024-en" num="0024">(a10) for obtaining a constant quantity of nucleic acid, employing a reverse constant polymerase chain reaction reagent;</p>
+      <p id="p-00025-en" num="0025">(a11) employing extracted 3 μl nucleic acid for reverse reaction;</p>
+      <p id="p-00026-en" num="0026">(a12) adding 4 units of reverse reaction enzyme, 10 units of nucleic acid water soluble enzyme inhibition reagent, and 25 mM deoxy-ribonucleoside triphosphate (dNTP) to a reaction chamber having 30 μl volume;</p>
+      <p id="p-00027-en" num="0027">(a13) maintaining the chamber at 37-degree Celsius for about 30 minutes;</p>
+      <p id="p-00028-en" num="0028">(a14) employing a real time polymerase chain reaction (PCR) detection instrument for real time constant quantity PCR;</p>
+      <p id="p-00029-en" num="0029">(a15) combining 8 μl reverse reacted product with 1 μl probe ;</p>
+      <p id="p-00030-en" num="0030">(a16) adding 1 μl water and 10 μl constant quantity PCR reagent to the mixture for reaction; and</p>
+      <p id="p-00031-en" num="0031">(a17) showing results as threshold cycle values in terms of relative presence.</p>
+      <p id="p-00032-en" num="0032">The above and other objects, features and advantages of the invention will become apparent from the following detailed description taken with the accompanying drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 1</figref> is a photograph showing values of 19 miRNA increased and values of 4 miRNA decreased with respect to an oral cancer group and a normal group of cells according to the invention;</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 2A</figref> plots mean intensity of 6 oral cancer cell lines versus mean intensity of 5 normal oral keratinocytes;</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 2B</figref> shows a table of 6 oral cancer cell lines (C) (mean value), 5 normal oral keratinocytes (mean value), fold (C/N), and P-value in columns;</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 3</figref> depicts oral cancer cells OECM1 and SAS detected by using scramble control (SC) and antagomiR of miR-196a and miR-196b in a wound healing assay; wherein SC means that nucleic acid in the sequence is the same as that in the anti-sequence (e.g., antagomiR, anti-miR-196a and anti-miR-196b) but with random sequence;</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 4</figref> depicts oral cancer cells OECM1 and SAS, and oral cancer cells OECM and SAS by using particular pcDNA (as vector control) and over-expressing plasmid of miR-196a and miR-196b in a wound healing assay;</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 5</figref> depicts oral cancer cells OECM1 and SAS detected by using scramble control (SC) and antagomiR of miR-196a and miR-196b in a cell invasion assay; wherein SC means that nucleic acid in the composition of sequence is the same as that in the anti-sequence (e.g., antagomiR, anti-miR-196a and anti-miR-196b) but with random sequence;</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 6</figref> is a plot similar to <figref>FIG. 5</figref> showing the cell invasion ability after whether over-expression of miR-196a and miR196b by plasmid in terms of pcDNA (vector control), miR-196a and miR-196b;</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 7</figref> depicts 52 out of 54 samples being tumor samples in which miR-196a is present in the tumor more than two times as that in the adjacent normal cells in part (a) and 48 out of 54 samples being tumor samples in which miR-196b is present in the tumor more than two times as that in the adjacent normal cells in part (B); and</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 8</figref> plots relative expression (fold) versus samples of blood plasma of a normal person and an oral cancer patient in black spots in part (A), and sensitivity versus specificity for an area under curve (AUC) in part (B), both being in terms of miR-196a; and</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 9</figref> plots relative expression (fold) versus samples of blood plasma of a normal person and an oral cancer patient in black spots in part (A), and sensitivity versus specificity for an area under curve (AUC) in part (B), both being in terms of miR-196b.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00043-en" num="0043">Referring to <figref>FIGS. 1 to 9</figref>, a method of using sequence of antagomiR for developing medicine for inhibiting oral cancer cells from spreading in accordance with the invention is illustrated below.</p>
+      <p id="p-00044-en" num="0044">It is envisaged by the invention that sequence of antagomiR can be combined with active ingredient to prepare a medicine which can be administered to the oral cavity cancer cell metastasis. Further, both miR-196a and miR-196b of sequence of antagomiR can effectively inhibit oral cancer cells from spreading. Both miR-196a and miR-196b present in the blood plasma, serum, saliva, or tumor of a patient are analyzed. miR-196a has the sequence of 5′-UAGGUAGUUUCAUGUUGUUGGG-3′(SEQ.ID.NO.1), miR-196b has the sequence of 5′-UAGGUAGUUUCCUGUUGUUGGG-3′(SEQ.ID.NO.2), anti-miR-196a has the sequence of 5′-CCCAACAACAUGAAACUACCUA-3′(SEQ.ID.NO.3), anti-miR-196b has the sequence of 5′-CCCAACAACAGGAAACUACCUA-3′(SEQ.ID.NO.4), scramble anti-miR-196a has the sequence of 5′-AACAAAUUCAACCCGUCCCAAA-3′(SEQ.ID.NO.5), and scramble anti-miR-196b has the sequence of 5′-AUACAAAUCGCACGAACCAACC-3′(SEQ.ID.NO.6). Intensity of miR-196a or miR-196b higher than normal value means the patient may have oral cancer. Oral cancer cells spread includes oral cancer cells migration and invasion.</p>
+      <p id="p-00045-en" num="0045">The oral cancer cells spread includes oral cancer cells migration and invasion.</p>
+      <p id="p-00046-en" num="0046">First, nucleic acids of oral cancer cells are analyzed by using miR-196a and miR-196b according to the invention. Intensity of miR-196a and miR-196b in blood plasma of an oral cancer patient is next compared with that of a normal person. It is found that the intensity of miR-196a and miR-196b in blood plasma of the oral cancer patient is much higher than that of the normal person. Thus, it is possible of determining whether a patient has oral cancer in an early stage or not by calculating the intensity of miR-196a and miR-196b of blood plasma of the patient.</p>
+      <p id="p-00047-en" num="0047">An analysis method developed by Agilent Technology (USA) is employed by the invention to compare nucleic acids in oral cancer cell lines of a patient with that in oral keratinocytes of a normal person. 470 nucleic acids in both 6 oral cancer cell lines of a patient and 5 normal oral keratinocyte are compared with each other and its results are shown in <figref>FIG. 2A</figref>. In Y-axis, mean intensity of 6 oral cancer cell lines is shown and in X-axis, mean intensity of 5 normal oral keratinocytes is shown.</p>
+      <p id="p-00048-en" num="0048">As shown in <figref>FIG. 2B</figref>, 23 miRNAs are significantly different from each other in terms of 6 oral cancer cell lines (C) (mean value), 5 normal oral keratinocytes (mean value), fold (C/N), and P-value in columns. Low P-values means substantially the same characteristics of nucleic acids in the same group. Fold (C/N) for miR-196a is 17.20 and that for miR-196b is 10.96. This means that both miR-196a and miR-196b play a great role in oral cancer detection. 470 nucleic acids are detected. Next, clustering analysis of 190 nucleic acids out of the 470 nucleic acids is done after normalization and weak signals removal. This unsupervised hierarchical clustering analysis is shown to divide samples into oral cancer cell lines and normal oral keratinocytes. These two groups are subjected to analysis of variance (ANOVA) with conditions of false discovery rate (FDR) less than 0.1 and more than two times variance. It is indicated that there exists a significant difference among 23 miRNAs with respect to oral cancer cell lines and normal oral keratinocytes. As shown in <figref>FIG. 1</figref>, values of 19 nucleic acids are increased and values of 4 nucleic acids are decreased with respect to an oral cancer patient and a normal person.</p>
+      <p id="p-00049-en" num="0049">Further, influence of miR-196a and miR-196b for cell migration is analyzed by the invention by conducting a wound healing assay. In detail, two oral cancer cells OECM1 and SAS are detected by using antagomiR, anti-miR-196a of miR-196a, and anti-miR-196b of miR-196b in order to decrease presence level of miR-196a and miR-196b in cells. Therefore, time for cells migrating to gap in the experiment group is greater than that in the control group as shown in <figref>FIG. 3</figref>. As shown, the oral cancer cells OECM1 and SAS are detected by using scramble control (SC) and antagomiR of miR-196a and miR-196b in the wound healing assay. SC means that nucleic acid in the sequence is the same as that in the anti-sequence (e.g., antagomiR, anti-miR-196a and anti-miR-196b) but with random sequence.</p>
+      <p id="p-00050-en" num="0050">Two cell lines show reduction of miR-196 as or miR-196bs by antagomiR with decreased number in the experiment group do not fill the gap when cells in the control group fill the gap. Moreover, for proving the influence of miR-196a and miR-196b to cells migration, a great number of miR-196as and miR-196bs are present in cells as shown in <figref>FIG. 4</figref>. As shown, oral cancer cell OECM1 and SAS have transduction of particular pcDNA, miR-196a and miR-196b plasmid. The pcDNA is taken as control group. Subsequently, a wound healing assay is conducted to test cells migration capability. After 9 hours, miR-196a of oral cancer cell OECM1 moves a great distance to fill the gap but pcDNA thereof moves a less distance with the gap not being filled (see top left corner). After 9 hours, miR-196a of oral cancer cell SAS moves a great distance to fill the gap but pcDNA thereof moves a less distance with the gap not being filled (see top right corner). After 9 hours, miR-196b of oral cancer cell OECM moves a great distance to fill the gap but pcDNA thereof moves a less distance with the gap not being filled (see bottom left corner). After 9 hours, miR-196b of oral cancer cell SAS moves a great distance to fill the gap but pcDNA thereof moves a less distance with the gap not being filled (see bottom right corner). In brief, miR-196a or miR-196b can move faster than a cell's particular pcDNA of the control group.</p>
+      <p id="p-00051-en" num="0051">Matrigel invasion assay is employed to determine whether miR-196a or miR-196b can change a cell's invasion capability. Two oral cancer cells OECM1 and SAS are detected by using antagomiR, anti-miR-196a and anti-miR-196b of miR-196a, and miR-196b in order to decrease presence level of miR-196a and miR-196b in cells. In detail, the oral cancer cells OECM1 and SAS are detected by using scramble control (SC) of miR-196a and miR-196b. SC means that nucleic acid in the sequence is the same as that in the anti-sequence (e.g., antagomiR, anti-miR-196a and anti-miR-196b) but with random sequence. This is best shown in <figref>FIG. 5</figref>. In <figref>FIG. 5</figref>, anti-196a is anti-miR-196a and anti-196b is anti-miR-196b.</p>
+      <p id="p-00052-en" num="0052">In the two oral cancer cells, antagonized sequence of miR-196a and miR-196b is employed to decrease the presence of miR-196a and miR-196b. Thus, the number of cells passing gel substance of substrate is less as compared with cells in the control group. As compared with cells in the experiment group, the number of OECM1 cells passing gel substance of substrate is decreased to 49% and the number of SAS cells passing gel substance of substrate is decreased to 31% in evaluating the performance of antagonizing miR-196a. Similarly, as compared with cells in the experiment group, the number of OECM1 cells passing gel substance of substrate is decreased to 34% and the number of SAS cells passing gel substance of substrate is decreased to 47% in evaluating the performance of antagonizing miR-196b. In other words, the effect of inhibiting miR-196a by using anti-miR-196a and the effect of inhibiting miR-196b by using anti-miR-196b cause a great reduction of presence levels of both OECM1 cells and SAS cells. The sequence of antagomiR can be used for developing medicine for treating oral cancer by means of the sequence of anti-miR-196a and the sequence of anti-miR-196b. Specifically, both anti-miR-196a for inhibiting miR-196a and anti-miR-196b for inhibiting miR-196b show a great reduction of OECM1 and SAS cells migration/invasion ability. The sequence of antagomiR can be combined with active ingredient to prepare a medicine which can be administered to inhibit the oral cavity cancer cell spreading. In detail, regeant is added to both antagomiR of miR-196a and miR-196b to prepare a medicine which can inhibit both miR-196a and miR-196b levels so as to effectively inhibit oral cancer cells from spreading.</p>
+      <p id="p-00053-en" num="0053">Over-expression of miR-196a and miR-196b in cells in shown in <figref>FIG. 6</figref>. Over-expression of miR-196a and miR-196b in cells can increase the invasion capability of oral cancer cells. Next, matrigel invasion assay is employed to test the invasion capability of oral cancer cells. Further, cells having particular pcDNA are taken as control group. It is found that the number of high presence miR-196a and miR-196b passing gel substance of substrate to reach the other end of the substrate is about two times as compared with that of cells having particular pcDNA.</p>
+      <p id="p-00054-en" num="0054">In addition to the oral cancer detection by using miR-196a and miR-196b, the invention also clinically detects presence of miR-196a and miR-196b in a tissue. 54 tumor samples (T) and adjacent normal samples (N) of a patient are detected by the invention. Polymerase chain reaction (PCR) is a scientific technique in molecular biology to amplify a single or a few copies of a piece of DNA across several orders of magnitude, generating thousands to millions of copies of a particular DNA sequence. RT-qPCR is employed by the invention to amplify presence of miR-196a and miR-196b. Further, U6 nucleic acid is taken as internal control of normalization so that results can be expressed in relative presence. In part (A) of <figref>FIG. 7</figref>, 52 out of 54 samples (i.e., 96.3%) are tumor samples in which miR-196a is present in the tumor more than two times as that in the adjacent normal cells (i.e., p&lt;0.001). In part (B) of <figref>FIG. 7</figref>, 48 out of 54 samples (i.e., 88.6%) are tumor samples in which miR-196b is present in the tumor more than two times as that in the adjacent normal cells (i.e., p&lt;0.001).</p>
+      <p id="p-00055-en" num="0055">For confirming whether miR-196a and miR-196b can be used clinically, the invention further detects presence of miR-196a and miR-196b in blood plasma of a patient having oral cancer and a normal person respectively. 54 samples of blood plasma of a patient having oral cancer and 33 samples of blood plasma of a normal person are taken and detected. The invention takes the following steps of detecting the presence of miR-196a and miR-196b:</p>
+      <p id="p-00056-en" num="0056">Step 1: Blood plasma is sampled. Samples have a volume of 200 μl. Nucleic acid is extracted from the sample by a reagent which does not remove small RNAs. In detail, miRNeasy® mini kit manufactured by 1QIAgen Inc. in Valencia, Calif. is employed. 700 μl 1QIAzol is added to the sample for homogeneousness. Next, 140 μl trichloromethane (i.e., chloroform) is added to the sample to extract RNAs. About 525 μl of upper pure liquid is removed to a new tube after using a centrifuge. Next, 750 μl pure alcohol is added to the sample to deposit nucleic acid. Further, deposits are obtained by activating the centrifuge to agitate the reagent. The sample is drained from its bottom. Next, 20 μl water of RNase-free is added to the sample to extract nucleic acid from the sample.</p>
+      <p id="p-00057-en" num="0057">Step 2: In a constant quantity method of nucleic acid, reverse constant poly-enzyme chain reaction reagent is employed. miRNA assays kit manufactured by ABI, in Forest City, Calif. is employed as reverse constant poly-enzyme chain reaction reagent. First, extracted 3 μl nucleic acid is employed for reverse reaction. Next, 4 units of reverse reaction enzyme, 10 units of nucleic acid water soluble enzyme inhibition reagent, and 25 mM deoxy-ribonucleoside triphosphate (dNTP) are added to a reaction chamber having 30 μl volume. The chamber is maintained at 37-degree Celsius for about 30 minutes. AMV manufactured by HT Biotech Ltd (UK) and nucleic acid soluble enzyme inhibition reagent manufactured by CalBiochem (CA, USA) are employed. Next, real time PCR detection instrument (e.g., MiniOpticon manufactured by Bio-Rad) is employed for real time constant quantity PCR. 8 μl reverse reacted product and 1 μl probe are mixed. Further, 1 μl water and 10 μl constant quantity PCR reagent are added for reaction. iQ supermix manufactured by Bio-Rad in Hercules, Calif. is employed as constant quantity PCR reagent. Results are shown as Ct value (i.e., threshold cycle) in terms of relative presence.</p>
+      <p id="p-00058-en" num="0058">Results show that miR-196a in blood plasma of oral cancer patient increases significantly as compared with that of a normal person. In detail, miR-196a presence in blood plasma of an oral cancer patient is 14.27 with P&lt;0.0001 (i.e., about 14 times of that of a normal person, wherein the value of miR-196a is 1.817±0.38). In part (A) of <figref>FIG. 8</figref>, samples of blood plasma of a normal person and an oral cancer patient are shown in black spots. Each sample represents a relative expression (fold) of miR-196a measured by RT-qPCT. Black horizontal line represents average of the samples belonging to either a normal person or an oral cancer patient. A chi square (X<sup>2</sup>) statistic is used to investigate whether distributions of categorical variables differ from one another (i.e., samples of a normal person and that of an oral cancer patient). In part (B) of <figref>FIG. 8</figref>, a receiver operational curve (ROC) analysis is employed to evaluate the marking capability of miR-196a in both a normal person and an oral cancer patient. Area under curve (AUC) is 0.938 and it means miR-196a can be used as a reliable biomarker for detecting an oral cancer patient out of a great number of normal persons. Logistic regression model is employed to estimate that sensitivity is 92.6% and specificity is 84.6% when miR-196a is used for detecting an oral cancer patient out of a great number of normal persons.</p>
+      <p id="p-00059-en" num="0059">Results further show that miR-196b in blood plasma of oral cancer patient increases significantly as compared with that of a normal person. In detail, miR-196b presence in blood plasma of an oral cancer patient is 10.03 with P&lt;0.0001 (i.e., about 10 times of that of a normal person, wherein the value of miR-196b is 7.683±1.88). In part (A) of <figref>FIG. 9</figref>, samples of blood plasma of a normal person and an oral cancer patient are shown in black spots. Each sample represents a relative expression (fold) of miR-196b measured by RT-qPCT. Black horizontal line represents average of the samples belonging to either a normal person or an oral cancer patient. A chi square (X<sup>2</sup>) statistic is used to investigate whether distributions of categorical variables differ from one another (i.e., samples of a normal person and that of an oral cancer patient). In part (B) of <figref>FIG. 9</figref>, a receiver operational curve (ROC) analysis is employed to evaluate the marking capability of miR-196b in both a normal person and an oral cancer patient. Area under curve (AUC) is 0.942 and it means miR-196b can be used as a reliable biomarker for detecting an oral cancer patient out of a great number of normal persons. Logistic regression model is employed to estimate that sensitivity is 90.7% and specificity is 84.9% when miR-196b is used for detecting an oral cancer patient out of a great number of normal persons.</p>
+      <p id="p-00060-en" num="0060">It is concluded that both miR-196a and miR-196a can be used as a reliable biomarker for detecting an oral cancer patient out of a great number of normal persons.</p>
+      <p id="p-00061-en" num="0061">While the invention has been described in terms of preferred embodiments, those skilled in the art will recognize that the invention can be practiced with modifications within the spirit and scope of the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of using sequence of antagomiR for developing medicine for inhibiting oral cancer cells from spreading comprising the steps of:
+<claim-text>combining a sequence of antagomiR with active ingredient to prepare a medicine which is configured to administer to oral cavity grown with oral cancer cells so that both miR-196a and miR-196b of the sequence of antagomiR are configuring of developing medicine for curing oral cancer cells wherein the miR-196a has a sequence of 5′-UAGGUAGUUUCAUGUUGUUGGG-3′(SEQ.ID.NO.1), and the miR-196b has a sequence of 5′-UAGGUAGUUUCCUGUUGUUGGG-3′(SEQ.ID.NO.2).</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the oral cancer cells spread includes oral cancer cells growth and migration.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein both anti-miR-196a and anti-miR-196b of the sequence of antagomiR are configuring of developing medicine for curing oral cancer cells; and wherein the anti-miR-196a has a sequence of 5′-CCCAACAACAUGAAACUACCUA-3′(SEQ.ID.NO.3) for inhibiting the miR-196a, and the anti-miR-196b has a sequence of 5′-CCCAACAACAGGAAACUACCUA-3′(SEQ.ID.NO.4) for inhibiting the miR-196b.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein both scramble anti-miR-196a and scramble anti-miR-196b are used as a reference group; and wherein the scramble anti-miR-196a has a sequence of 5′-AACAAAUUCAACCCGUCCCAAA-3′(SEQ.ID.NO.5), and the scramble anti-miR-196b has a sequence of 5′-AUACAAAUCGCACGAACCAACC-3′(SEQ.ID.NO.6).</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246069A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246069A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246069A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246069A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246069A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246069A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246069A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246069A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246069A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246069A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246069A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246069A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246069A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246069A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246069A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246069A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246069A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246069A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150246069A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246069A1-20150903-D00010.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246069A1.PDF" type="pdf" size="1259295" pages="17" />
+</lexisnexis-patent-document>

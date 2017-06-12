@@ -1,0 +1,1930 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247022A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021444" date-changed="20150918" time-changed="025311">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140069">
+        <country>US</country>
+        <doc-number>20150247022</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14424368</doc-number>
+        <date>20130902</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>FR</country>
+        <doc-number>12002349</doc-number>
+        <date>20120831</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C08K   5/092       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>092</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C01B  33/12        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>33</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C08K   3/22        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C08K   3/36        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C08K   5/092       20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>092</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C01B  33/128       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>33</main-group>
+        <subgroup>128</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C01B  33/193       20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>33</main-group>
+        <subgroup>193</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C01P2004/61        20130101 LA20140417BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2004</main-group>
+        <subgroup>61</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140417</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C01P2006/12        20130101 LA20140417BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2006</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140417</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C01P2006/16        20130101 LA20140417BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2006</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140417</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08K   3/22        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C08K   3/36        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C08K2003/2227      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>2003</main-group>
+        <subgroup>2227</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">23</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Novel method for preparing precipitated silicas, novel precipitated silicas and their uses, in particular for strengthening polymers</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>RHODIA OPERATIONS</orgname>
+            <address>
+              <city>Paris</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>FR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Boivin</last-name>
+            <first-name>Cèdric</first-name>
+            <address>
+              <city>Neuville Sur Saone</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Guy</last-name>
+            <first-name>Laurent</first-name>
+            <address>
+              <city>Rillieux-la-pape</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Perin</last-name>
+            <first-name>Eric</first-name>
+            <address>
+              <city>Villefranche Sur Saone</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lamira</last-name>
+            <first-name>Kilani</first-name>
+            <address>
+              <city>L'arbresle</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13068106</doc-number>
+        <date>20130902</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014033301</doc-number>
+        <date>20140306</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151128">
+      <main-family family-id="164584408">
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>I508919</doc-number>
+            <kind>B</kind>
+            <date>20151121</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247022</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2890638</doc-number>
+            <kind>A1</kind>
+            <date>20150708</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2994962</doc-number>
+            <kind>A1</kind>
+            <date>20140307</date>
+          </document-id>
+          <application-date>
+            <date>20120831</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015529625</doc-number>
+            <kind>A</kind>
+            <date>20151008</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201425225</doc-number>
+            <kind>A</kind>
+            <date>20140701</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2881281</doc-number>
+            <kind>A1</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104603055</doc-number>
+            <kind>A</kind>
+            <date>20150506</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2994962</doc-number>
+            <kind>B1</kind>
+            <date>20141226</date>
+          </document-id>
+          <application-date>
+            <date>20120831</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150046289</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015002581</doc-number>
+            <kind>A</kind>
+            <date>20150622</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014033301</doc-number>
+            <kind>A1</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164584397">
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>I508919</doc-number>
+            <kind>B</kind>
+            <date>20151121</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247022</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2890638</doc-number>
+            <kind>A1</kind>
+            <date>20150708</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2994962</doc-number>
+            <kind>A1</kind>
+            <date>20140307</date>
+          </document-id>
+          <application-date>
+            <date>20120831</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015529625</doc-number>
+            <kind>A</kind>
+            <date>20151008</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201425225</doc-number>
+            <kind>A</kind>
+            <date>20140701</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2881281</doc-number>
+            <kind>A1</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104603055</doc-number>
+            <kind>A</kind>
+            <date>20150506</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2994962</doc-number>
+            <kind>B1</kind>
+            <date>20141226</date>
+          </document-id>
+          <application-date>
+            <date>20120831</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150046289</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015002581</doc-number>
+            <kind>A</kind>
+            <date>20150622</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014033301</doc-number>
+            <kind>A1</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20130902</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention relates to a novel process for the preparation of a precipitated silica, in which: <ul id="ula-00001-en" list-style="none"><li><ul id="ula-00002-en" list-style="none"><li>a silicate is reacted with at least one acidifying agent, so as to obtain a suspension of precipitated silica,</li><li>said suspension of precipitated silica is filtered, so as to obtain a filtration cake,</li><li>said filtration cake is subjected to a liquefaction operation comprising the addition of an aluminum compound,</li><li>after the liquefaction operation, a drying stage is carried out, characterized in that methylglutaric acid is added to the filtration cake, during or after the liquefaction operation.</li></ul></li></ul></p>
+    <p id="p-a-00002-en" num="0000">It also relates to novel precipitated silicas and to their uses.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150625</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247022A1</docdb-publication-number>
+      <docdb-application-id>444209945</docdb-application-id>
+      <new-owner>RHODIA OPERATIONS, FRANCE</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:BOIVIN, CEDRIC;GUY, LAURENT;PERIN, ERIC;AND OTHERS;SIGNING DATES FROM 20150210 TO 20150305;REEL/FRAME:035956/0157</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <p id="p-00001-en" num="0001">The present invention relates to a novel process for the preparation of precipitated silica, to novel precipitated silicas and to their applications, such as the reinforcement of polymers.</p>
+      <p id="p-00002-en" num="0002">It is known to employ reinforcing white fillers in polymers, in particular elastomers, such as, for example, precipitated silica.</p>
+      <p id="p-00003-en" num="0003">The aim of the present invention is to provide in particular an alternative filler for polymer compositions which advantageously provides them with a reduction in their viscosity and an improvement in their dynamic properties, while retaining their mechanical properties. It thus advantageously makes possible an improvement in the hysteresis/reinforcement compromise.</p>
+      <p id="p-00004-en" num="0004">The present invention first of all provides a novel process for the preparation of precipitated silica employing, during or after the liquefaction operation, a particular polycarboxylic acid.</p>
+      <p id="p-00005-en" num="0005">Generally, the preparation of precipitated silica is carried out by a precipitation reaction of a silicate, such as an alkali metal silicate (for example sodium silicate), with an acidifying agent (for example sulfuric acid), then separation by filtration, with a filtration cake being obtained, of the precipitated silica obtained, subsequently liquefaction said filtration cake and, finally, drying (generally by atomization). The silica can be precipitated in any mode: in particular, addition of acidifying agent to a silicate vessel heel or total or partial simultaneous addition of acidifying agent and of silicate to a vessel heel of water or of silicate.</p>
+      <p id="p-00006-en" num="0006">The subject matter of the invention is a novel process for the preparation of a precipitated silica, in which: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>at least one silicate is reacted with at least one acidifying agent, so as to obtain a suspension of precipitated silica,</li><li>the suspension of precipitated silica obtained is filtered, so as to obtain a filtration cake,</li><li>the filtration cake obtained on conclusion of the filtration is subjected to a liquefaction operation comprising the addition of an aluminum compound,</li><li>after the liquefaction operation, a drying stage is preferably carried out (generally by atomization), <br /> characterized in that methylglutaric acid is added to the filtration cake, during or after the liquefaction operation. </li></ul></li></ul></p>
+      <p id="p-00007-en" num="0011">According to the invention, the filtration cake is subjected to a liquefaction operation during which an aluminum compound and methylglutaric acid are introduced or after which methylglutaric acid is introduced. The mixture then obtained (suspension of precipitated silica) is preferably subsequently dried (generally by atomization).</p>
+      <p id="p-00008-en" num="0012">The liquefaction operation is a fluidification or liquefaction operation, in which the filtration cake is rendered liquid, the precipitated silica being re-encountered in suspension.</p>
+      <p id="p-00009-en" num="0013">In two first alternative forms of the invention, this liquefaction operation is carried out by subjecting the filtration cake to a chemical action by addition of an aluminum compound, for example sodium aluminate, and of methylglutaric acid, preferably coupled with a mechanical action (for example, by passing through a continuously stirred tank or through a mill of colloid type) which normally brings about a reduction in particle size of the suspended silica. The suspension (in particular aqueous suspension) obtained after liquefaction exhibits a relatively low viscosity.</p>
+      <p id="p-00010-en" num="0014">In the first alternative form, during the liquefaction operation, the aluminum compound and the methylglutaric acid are simultaneously added (coaddition) to the filtration cake.</p>
+      <p id="p-00011-en" num="0015">In the second alternative form, during the liquefaction operation, the aluminum compound is added to the filtration cake prior to the addition of the methylglutaric acid.</p>
+      <p id="p-00012-en" num="0016">In a third (preferred) alternative form, this liquefaction operation is carried out by subjecting the filtration cake to a chemical action by addition of an aluminum compound, for example sodium aluminate, preferably coupled with a mechanical action (for example, by passing through a continuously stirred tank or through a mill of colloid type) which normally brings about a reduction in particle size of the suspended silica.</p>
+      <p id="p-00013-en" num="0017">In this third alternative form, methylglutaric acid is added after the liquefaction operation, that is to say, to the disintegrated silica cake.</p>
+      <p id="p-00014-en" num="0018">The filtration cake which has to be subjected to the liquefaction operation can be composed of the mixture of several filtration cakes, each of said cakes being obtained by filtration of a portion of the suspension of precipitated silica obtained above.</p>
+      <p id="p-00015-en" num="0019">According to the invention, the methylglutaric acid is preferably used without supplementary addition of another carboxylic acid.</p>
+      <p id="p-00016-en" num="0020">The methylglutaric acid employed according to the invention can be in the anhydride, ester, alkali metal (for example sodium or potassium) salt (carboxylate) or ammonium salt (carboxylate) form.</p>
+      <p id="p-00017-en" num="0021">The methylglutaric acid used in the invention can optionally be preneutralized (in particular by pretreating it with a base, for example of sodium hydroxide or potassium hydroxide type) before it is added to the filtration cake. This makes it possible in particular to modify the pH of the silica obtained.</p>
+      <p id="p-00018-en" num="0022">The methylglutaric acid can be employed in the form of an aqueous solution.</p>
+      <p id="p-00019-en" num="0023">According to the invention, the aluminum compound is preferably chosen from alkali metal aluminates. In particular, the aluminum compound is sodium aluminate.</p>
+      <p id="p-00020-en" num="0024">According to the invention, the amount of aluminum compound (in particular sodium aluminate) used is generally such that the ratio of aluminum compound to amount of silica, expressed as SiO<sub>2</sub>, present in the filtration cake is between 0.20% and 0.50% by weight, preferably between 0.25% and 0.45% by weight.</p>
+      <p id="p-00021-en" num="0025">The amount of methylglutaric acid employed is in general such that the ratio of methylglutaric acid to amount of silica, expressed as SiO<sub>2</sub>, present in the filtration cake (at the time of the addition of the methylglutaric acid) is between 0.75% and 2% by weight, preferably between 1% and 1.75% by weight, in particular between 1.1% and 1.5% by weight.</p>
+      <p id="p-00022-en" num="0026">In the invention, the filtration cake can optionally be washed.</p>
+      <p id="p-00023-en" num="0027">The precipitated silica thus obtained after the liquefaction operation is subsequently dried. This drying operation can be carried out by any means known per se.</p>
+      <p id="p-00024-en" num="0028">Preferably, the drying operation is carried out by atomization. To this end, use may be made of any type of suitable atomizer, in particular a rotary, nozzle, liquid pressure or two-fluid atomizer. In general, when the filtration is carried out using a filter press, a nozzle atomizer is used and, when the filtration is carried out using a vacuum filter, a rotary atomizer is used.</p>
+      <p id="p-00025-en" num="0029">When the drying operation is carried out using a nozzle atomizer, the precipitated silica capable of then being obtained usually exists in the form of substantially spherical beads.</p>
+      <p id="p-00026-en" num="0030">On conclusion of this drying operation, it is optionally possible to carry out a stage of milling the product recovered; the precipitated silica capable of then being obtained generally exists in the form of a powder.</p>
+      <p id="p-00027-en" num="0031">When the drying operation is carried out using a rotary atomizer, the silica capable of then being obtained can exist in the form of a powder.</p>
+      <p id="p-00028-en" num="0032">Finally, the product, dried (in particular by a rotary atomizer) or milled as indicated above, can optionally be subjected to an agglomeration stage which comprises, for example, a direct compression, a wet granulation (that is to say, with the use of a binder, such as water, silica suspension, and the like), an extrusion or, preferably, a dry compacting. When the latter technique is employed, it can prove to be opportune, before carrying out the compacting, to deaerate (operation also referred to as predensifying or degassing) the pulverulent products so as to remove the air included in the latter and to provide more uniform compacting.</p>
+      <p id="p-00029-en" num="0033">The precipitated silica capable of then being obtained by this agglomeration stage generally exists in the form of granules.</p>
+      <p id="p-00030-en" num="0034">Another subject matter of the present invention is a specific process for the preparation of a precipitated silica of the type comprising the precipitation reaction between a silicate and an acidifying agent, whereby a suspension of precipitated silica is obtained, followed by the separation and the drying of this suspension, characterized in that it comprises the following successive stages: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>the precipitation reaction is carried out in the following way:         <ul id="ul-00005-en" list-style="none"><li>(i) an initial vessel heel comprising at least a portion of the total amount of the silicate involved in the reaction and an electrolyte is formed, the concentration of silicate (expressed as SiO<sub>2</sub>) in said initial vessel heel being less than 100 g/l and, preferably, the concentration of electrolyte in said initial vessel heel being less than 19 g/l,</li><li>(ii) the acidifying agent is added to said vessel heel until a pH value for the reaction medium of at least 7.0, in particular of between 7 and 8.5, is obtained,</li><li>(iii) acidifying agent and, if appropriate, simultaneously the remaining amount of silicate is/are added to the reaction medium,</li></ul></li><li>the silica suspension obtained is filtered,</li><li>the filtration cake obtained on conclusion of the filtration is subjected to a liquefaction operation comprising the addition of an aluminum compound,</li><li>the filtration cake thus obtained, preferably exhibiting a solids content of at most 25% by weight, is dried, <br /> said process being characterized in that methylglutaric acid is added to the filtration cake, either during the liquefaction operation, or after the liquefaction operation and before the drying stage. </li></ul></li></ul></p>
+      <p id="p-00031-en" num="0042">That which is indicated in the above account on the subject of the liquefaction operation, of the addition of the methylglutaric acid and of the three alternative forms of the process applies to the present process according to the invention.</p>
+      <p id="p-00032-en" num="0043">The choice of the acidifying agent and of the silicate is made in a way well known per se.</p>
+      <p id="p-00033-en" num="0044">Use is generally made, as acidifying agent, of a strong inorganic acid, such as sulfuric acid, nitric acid or hydrochloric acid, or also of an organic acid, such as acetic acid, formic acid or carbonic acid.</p>
+      <p id="p-00034-en" num="0045">The acidifying agent can be dilute or concentrated; its normality can be between 0.4 and 36N, for example between 0.6 and 1.5N.</p>
+      <p id="p-00035-en" num="0046">In particular, in the case where the acidifying agent is sulfuric acid, its concentration can be between 40 and 180 g/l, for example between 60 and 130 g/l.</p>
+      <p id="p-00036-en" num="0047">Use may be made, as silicate, of any common form of silicates, such as metasilicates, disilicates and advantageously an alkali metal silicate, in particular sodium or potassium silicate.</p>
+      <p id="p-00037-en" num="0048">The silicate can exhibit a concentration (expressed as SiO<sub>2</sub>) of between 40 and 330 g/l, for example between 60 and 300 g/l.</p>
+      <p id="p-00038-en" num="0049">Preferably, use is made, as silicate, of sodium silicate.</p>
+      <p id="p-00039-en" num="0050">In the case where use is made of sodium silicate, the latter generally exhibits an SiO<sub>2</sub>/Na<sub>2</sub>O ratio by weight of between 2 and 4, in particular between 2.4 and 3.9, for example between 3.1 and 3.8.</p>
+      <p id="p-00040-en" num="0051">During stage (i), a vessel heel is formed which comprises silicate and an electrolyte. The amount of silicate present in the initial vessel heel advantageously represents only a portion of the total amount of silicate involved in the reaction.</p>
+      <p id="p-00041-en" num="0052">As regards the electrolyte present in the initial vessel heel (stage (i)), this term is understood here as normally accepted, that is to say that it means any ionic or molecular substance which, when it is in solution, decomposes or dissociates to form ions or charged particles; mention may be made, as electrolyte, of a salt of the group of the alkali metals and alkaline earth metals, in particular the salt of the starting silicate metal and of the acidifying agent, for example sodium chloride in the case of the reaction of a sodium silicate with hydrochloric acid or, preferably, sodium sulfate in the case of the reaction of a sodium silicate with sulfuric acid.</p>
+      <p id="p-00042-en" num="0053">According to one characteristic of this preparation process, the concentration of electrolyte in the initial vessel heel is less than 19 g/l, in particular less than 18 g/l, especially less than 17 g/l, for example less than 15 g/l (while generally being greater than 6 g/l).</p>
+      <p id="p-00043-en" num="0054">According to another characteristic of this process, the concentration of silicate (expressed as SiO<sub>2</sub>) in the initial vessel heel is less than 100 g/l. Preferably, this concentration is less than 80 g/l, in particular than 70 g/l. In particular, when the acid used for the neutralization exhibits a high concentration, in particular of greater than 70%, it is then advisable to work with an initial vessel heel of silicate, the SiO<sub>2 </sub>concentration of which is less than 80 g/l.</p>
+      <p id="p-00044-en" num="0055">The addition of acidifying agent in stage (ii) leads to a correlating fall in the pH of the reaction medium and is carried out until a value for the pH of the reaction medium of at least 7, in particular of between 7 and 8.5, for example of between 7.5 and 8.5, is reached.</p>
+      <p id="p-00045-en" num="0056">Once the desired pH value has been reached, and in the case of a starting vessel heel comprising only a portion of the total amount of the silicate involved, a simultaneous addition of acidifying agent and of the remaining amount of silicate is then advantageously carried out in stage (iii).</p>
+      <p id="p-00046-en" num="0057">This simultaneous addition is generally carried out in such a way that the value of the pH of the reaction medium is always equal (to within ±0.1) to that reached on conclusion of stage (ii).</p>
+      <p id="p-00047-en" num="0058">On conclusion of stage (iii) and in particular after the abovementioned simultaneous addition, a maturing of the reaction medium (aqueous suspension) obtained can be carried out, at the pH obtained on conclusion of stage (iii), in general with stirring, for example for 2 to 45 minutes, in particular for 3 to 30 minutes.</p>
+      <p id="p-00048-en" num="0059">Finally, it is possible, both in the case of a starting vessel heel comprising only a portion of the total amount of silicate involved and in the case of a starting vessel heel comprising the total amount of silicate involved, after the precipitation, in an optional subsequent stage, to add an additional amount of acidifying agent to the reaction medium. This addition is generally carried out until a pH value of between 3 and 6.5, preferably between 4 and 6.5, is obtained.</p>
+      <p id="p-00049-en" num="0060">The temperature of the reaction medium is generally between 75 and 97° C., preferably between 80 and 96° C.</p>
+      <p id="p-00050-en" num="0061">According to an alternative form of this preparation process, the reaction is carried out at a constant temperature of between 75 and 97° C. According to another alternative form of this process, the temperature at the end of the reaction is higher than the temperature at the start of the reaction: thus, the temperature at the start of the reaction is preferably maintained between 75 and 90° C.; then, the temperature is increased in a few minutes, preferably up to a value of between 90 and 97° C., at which it is maintained until the end of the reaction.</p>
+      <p id="p-00051-en" num="0062">On conclusion of the stages which have just been described, a silica slurry is obtained, which slurry is subsequently separated (liquid/solid separation). This separation normally comprises a filtration, followed, if necessary, by a washing operation, carried out by means of any suitable method, for example by means of a belt filter, a vacuum filter or, preferably, a filter press.</p>
+      <p id="p-00052-en" num="0063">The filtration cake is then subjected to a liquefaction operation comprising the addition of an aluminum compound. In accordance with the above account, methylglutaric acid is added during or after the liquefaction operation. According to the preferred alternative form, the methylglutaric acid is added to the disintegrated filtration cake after the liquefaction operation.</p>
+      <p id="p-00053-en" num="0064">The disintegrated filtration cake is subsequently dried.</p>
+      <p id="p-00054-en" num="0065">Preferably, in this preparation process, the suspension of precipitated silica obtained after the liquefaction operation should exhibit, immediately before it is dried, a solids content of at most 25% by weight, in particular of at most 24% by weight, especially of at most 23% by weight, for example of at most 22% by weight.</p>
+      <p id="p-00055-en" num="0066">This drying operation can be carried out according to any means known per se. Preferably, the drying operation is carried out by atomization. To this end, use may be made of any type of suitable atomizer, in particular a rotary, nozzle, liquid pressure or two-fluid atomizer. In general, when the filtration is carried out using a filter press, a nozzle atomizer is used and, when the filtration is carried out using a vacuum filter, a rotary atomizer is used.</p>
+      <p id="p-00056-en" num="0067">When the drying operation is carried out using a nozzle atomizer, the precipitated silica capable of then being obtained usually exists in the form of substantially spherical beads. On conclusion of this drying operation, it is optionally possible to carry out a stage of milling the product recovered; the precipitated silica capable of then being obtained generally exists in the form of a powder.</p>
+      <p id="p-00057-en" num="0068">When the drying operation is carried out using a rotary atomizer, the precipitated silica capable of then being obtained can exist in the form of a powder.</p>
+      <p id="p-00058-en" num="0069">Finally, the dried (in particular by a rotary atomizer) or milled product as indicated above can optionally be subjected to an agglomeration stage, which consists, for example, of a direct compression, a wet granulation (that is to say, with use of a binder, such as water, silica suspension, and the like), an extrusion or, preferably, a dry compacting. When the latter technique is employed, it can prove to be opportune, before carrying out the compacting, to deaerate (operation also referred to as predensifying or degassing) the pulverulent products so as to remove the air included in the latter and to provide more uniform compacting.</p>
+      <p id="p-00059-en" num="0070">The precipitated silica capable of then being obtained by this agglomeration stage generally exists in the form of granules.</p>
+      <p id="p-00060-en" num="0071">The invention also relates to the precipitated silicas obtained or capable of being obtained by the process according to the invention.</p>
+      <p id="p-00061-en" num="0072">In general, these precipitated silicas exhibit, at their surface, molecules of methylglutaric acid and/or of carboxylate corresponding to the methylglutaric acid.</p>
+      <p id="p-00062-en" num="0073">An additional subject matter of the present invention is a precipitated silica with the specific characteristics, which can be used in particular as alternative filler for polymer compositions, advantageously providing them with a reduction in their viscosity and an improvement in their dynamic properties, while retaining their mechanical properties.</p>
+      <p id="p-00063-en" num="0074">In the account which follows, the BET specific surface is determined according to the Brunauer-Emmett-Teller method described in The Journal of the American Chemical Society, Vol. 60, page 309, February 1938, and corresponding to the standard NF ISO 5794-1, Appendix D (June 2010). The CTAB specific surface is the external surface, which can be determined according to the standard NF ISO 5794-1, Appendix G (June 2010).</p>
+      <p id="p-00064-en" num="0075">The content of polycarboxylic acid+corresponding carboxylate denoted (C), expressed as total carbon, can be measured using a carbon/sulfur analyzer, such as the Horiba EMIA 320 V2. The principle of the carbon/sulfur analyzer is based on the combustion of a solid sample in a stream of oxygen in an induction furnace (adjusted to approximately 170 mA) and in the presence of combustion accelerators (approximately 2 grams of tungsten (in particular Lecocel 763-266) and approximately 1 gram of iron). The analysis lasts approximately 1 minute.</p>
+      <p id="p-00065-en" num="0076">The carbon present in the sample to be analyzed (weight of approximately 0.2 gram) combines with the oxygen to form CO<sub>2</sub>, CO. These decompression gases are subsequently analyzed by an infrared detector.</p>
+      <p id="p-00066-en" num="0077">The moisture from the sample and the water produced during these oxidation reactions is removed by passing over a cartridge comprising a dehydrating agent (magnesium perchlorate) in order not to interfere with the infrared measurement.</p>
+      <p id="p-00067-en" num="0078">The result is expressed as percentage by weight of element carbon.</p>
+      <p id="p-00068-en" num="0079">The content of aluminum, denoted (Al), can be determined by wavelength dispersive X-ray fluorescence, for example with a Panalytical 2400 spectrometer or, preferably, with a Panalytical MagixPro PW2540 spectrometer. The principal of the method of measurement by X-ray fluorescence is as follows: <ul id="ul-00006-en" list-style="none"><li><ul id="ul-00007-en" list-style="none"><li>grinding of the silica is necessary when it is provided in the form of substantially spherical beads (microbeads) or of granules, until a homogeneous powder is obtained. The grinding can be carried out with an agate mortar (grinding 15 grams of silica approximately for a time of 2 minutes) or any type of grinder not comprising aluminum,</li><li>the powder is analyzed as is in a vessel having a diameter of 40 mm with a polypropylene film with a thickness of 6 μm, under a helium atmosphere, at an irradiation diameter of 37 mm, and the amount of silica analyzed is 9 cm<sup>3</sup>. The measurement of the aluminum content, which requires at most 5 minutes, is obtained from the Kα line (2θ angle=145°, PE002 crystal, 550 μm collimator, gas flow detector, rhodium tube, 32 kV and 125 mA). The intensity of this line is proportional to the aluminum content. It is possible to employ a precalibration carried out using another measurement method, such as ICP-AES (Inductively Coupled Plasma-Atomic Emission Spectroscopy).</li></ul></li></ul></p>
+      <p id="p-00069-en" num="0082">The aluminum content can also be measured by any other suitable method, for example by ICP-AES after dissolving in water in the presence of hydrofluoric acid.</p>
+      <p id="p-00070-en" num="0083">The presence of methylglutaric acid in the acid form and/or in the carboxylate form can be established by surface infrared or diamond-ATR (Attenuated Total Reflection) Infrared.</p>
+      <p id="p-00071-en" num="0084">The surface infrared analysis (by transmission) is carried out on a Bruker Equinox 55 spectrometer on a pellet of pure product. The pellet is obtained after grinding the silica as is in an agate mortar and pelleting at 2 T/cm<sup>2 </sup>for 10 seconds. The diameter of the pellet is 17 mm. The weight of the pellet is between 10 and 20 mg. The pellet thus obtained is placed in the high vacuum chamber (10<sup>−7 </sup>mbar) of the spectrometer for one hour at ambient temperature before the analysis by transmission. Acquisition takes place under high vacuum (acquisition conditions: from 400 cm<sup>−1 </sup>to 6000 cm<sup>−1</sup>; number of scans: 100; resolution: 2 cm<sup>−1</sup>).</p>
+      <p id="p-00072-en" num="0085">The diamond-ATR analysis, carried out on a Bruker Tensor 27 spectrometer, consists in depositing, on the diamond, a spatula tip of silica preground in an agate mortar and in then exerting a pressure. The infrared spectrum is recorded on the spectrometer in 20 scans, from 650 cm<sup>−1 </sup>to 4000 cm<sup>−1</sup>. The resolution is 4 cm<sup>−1</sup>.</p>
+      <p id="p-00073-en" num="0086">The ratio denoted (R) is determined by the following relationship:</p>
+      <p id="p-00074-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mo>(</mo>
+                  <mi>R</mi>
+                  <mo>)</mo>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>N</mi>
+                  <mo>×</mo>
+                  <mfrac>
+                    <mrow>
+                      <mo>[</mo>
+                      <mrow>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mn>100</mn>
+                            <mo>×</mo>
+                            <mrow>
+                              <mi>C</mi>
+                              <mo>/</mo>
+                              <msub>
+                                <mi>C</mi>
+                                <mi>Theo</mi>
+                              </msub>
+                            </mrow>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mo>×</mo>
+                        <msub>
+                          <mi>M</mi>
+                          <mi>Al</mi>
+                        </msub>
+                      </mrow>
+                      <mo>]</mo>
+                    </mrow>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mi>Al</mi>
+                        <mo>×</mo>
+                        <msub>
+                          <mi>M</mi>
+                          <mi>Ac</mi>
+                        </msub>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150247022A1_00001.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150247022A1-20150903-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00075-en" num="0000">in which: <ul id="ul-00008-en" list-style="none"><li><ul id="ul-00009-en" list-style="none"><li>N is the number of carboxylic functional groups of the methylglutaric acid (N is equal to 2),</li><li>(C) and (Al) are the contents as defined above,</li><li>C<sub>T </sub>is the carbon content of the methylglutaric acid,</li><li>M<sub>Al </sub>is the molecular weight of aluminum,</li><li>M<sub>Ac </sub>is the molecular weight of the methylglutaric acid.</li></ul></li></ul></p>
+      <p id="p-00076-en" num="0092">The dispersive component of the surface energy γ<sub>s</sub><sup>d </sup>is determined by inverse gas chromatography. Grinding of the silica is generally necessary when it is provided in the form of granules, followed by sieving, for example at 106 μm-250 μm</p>
+      <p id="p-00077-en" num="0093">The technique used to calculate the dispersive component of the surface energy γ<sub>s</sub><sup>d </sup>is Inverse Gas Chromatography at Infinite Dilution (IGC-ID) at 110° C. using a series of alkanes (normal alkanes) ranging from 6 to 10 carbon atoms, a technique based on gas chromatography but where the roles of the mobile phase and of the stationary phase (packing) are reversed. In this instance, the stationary phase in the column is replaced by the (solid) material to be analyzed, in this instance the precipitated silica. With regard to the mobile phase, it consists of the carrier gas (helium) and of the “probe” molecules chosen as a function of their interaction capability. The measurements are successively carried out with each probe molecule. For each measurement, each probe molecule is injected into the column, in a very small amount (infinite dilution), as a mixture with methane. The methane is used to determine the t<b>0</b>, the dead time of the column.</p>
+      <p id="p-00078-en" num="0094">The subtraction of this dead time t<b>0</b> from the retention time of the injected probe results in the net retention time (t<sub>N</sub>) of the latter.</p>
+      <p id="p-00079-en" num="0095">These operating conditions, specific to the infinite dilution, mean that these retention times reflect solely the interactivity of the sample with regard to these molecules. Physically, t<sub>N </sub>corresponds to the mean time which the probe molecule has spent in contact with the stationary phase (the solid analyzed). For each probe molecule injected, three net retention times t<sub>N </sub>are measured. The mean value and the corresponding standard deviation are used to determine the specific retention volumes (V<sub>g</sub><sup>0</sup>) on the basis of the following relationship (formula [1]).</p>
+      <p id="p-00080-en" num="0000">
+        <maths id="maths-00002-en" num="00002">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <msubsup>
+                      <mi>V</mi>
+                      <mi>g</mi>
+                      <mn>0</mn>
+                    </msubsup>
+                    <mo>=</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <msub>
+                            <mi>D</mi>
+                            <mi>c</mi>
+                          </msub>
+                          <mo></mo>
+                          <msub>
+                            <mi>t</mi>
+                            <mi>N</mi>
+                          </msub>
+                        </mrow>
+                        <msub>
+                          <mi>M</mi>
+                          <mi>s</mi>
+                        </msub>
+                      </mfrac>
+                      <mo>×</mo>
+                      <mfrac>
+                        <mn>273.15</mn>
+                        <mi>T</mi>
+                      </mfrac>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo>[</mo>
+                    <mn>1</mn>
+                    <mo>]</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00002-en" wi="N/A" he="N/A" file="US20150247022A1_00002.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150247022A1-20150903-M00002.TIF" />
+        </maths>
+      </p>
+      <p id="p-00081-en" num="0096">The latter corresponds to the volume of carrier gas (brought back to 0° C.) necessary to elute the probe molecule per 1 gram of stationary phase (solid examined). This standard quantity makes it possible to compare the results, whatever the flow rate of carrier gas and the weight of stationary phase used. The formula [1] involves: M<sub>s </sub>the weight of solid in the column, D<sub>c </sub>the flow rate of carrier gas and T the measurement temperature.</p>
+      <p id="p-00082-en" num="0097">The specific retention volume is subsequently used to access ΔG<sub>a</sub>, the variation in free enthalpy of adsorption of the probe, according to the formula [2], with R the universal ideal gas constant (R=8.314 J·K<sup>−1</sup>·mol<sup>−1</sup>), on the solid present in the column.</p>
+      <p id="p-00083-en" num="0000">[in-line-formulae]<i>G</i><sub>a</sub><i>=RT</i>·Ln(<i>V</i><sub>g</sub><sup>0</sup>)   formula [2][/in-line-formulae]</p>
+      <p id="p-00084-en" num="0098">This quantity ΔG<sub>a </sub>is the starting point for the determination of the dispersive component of the surface energy (γ<sub>s</sub><sup>d</sup>). The latter is obtained by plotting the straight line representing the variation in free enthalpy of absorption (ΔG<sub>a</sub>) as a function of the carbon number n<sub>c </sub>of the n-alkane probes, as shown in the table below.</p>
+      <p id="p-00085-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>n-Alkane probes</entry>
+                  <entry>n<sub>c</sub></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>n-hexane</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>n-heptane</entry>
+                  <entry>7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>n-octane</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>n-nonane</entry>
+                  <entry>9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>n-decane</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00086-en" num="0099">It is then possible to determine the dispersive component of the surface energy γ<sub>s</sub><sup>d </sup>from the slope ΔG<sub>a</sub><sup>CH</sup><sup><sub2>2 </sub2></sup>of the straight line of the normal alkanes, corresponding to the free enthalpy of adsorption of the methylene group, obtained for a measurement temperature of 110° C.</p>
+      <p id="p-00087-en" num="0100">The dispersive component of the surface energy γ<sub>s</sub><sup>d </sup>is then related to the free enthalpy of adsorption ΔG<sub>a</sub><sup>CH</sup><sup><sub2>2 </sub2></sup>of the methylene group (Dorris and Gray method, <i>J. Colloid Interface Sci., </i>77 (180), 353-362) by the following relationship:</p>
+      <p id="p-00088-en" num="0000">
+        <maths id="maths-00003-en" num="00003">
+          <math overflow="scroll">
+            <mrow>
+              <msubsup>
+                <mi>γ</mi>
+                <mi>S</mi>
+                <mi>d</mi>
+              </msubsup>
+              <mo>=</mo>
+              <mfrac>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mi>Δ</mi>
+                      <mo></mo>
+                      <mstyle>
+                        <mspace width="0.3em" height="0.3ex" />
+                      </mstyle>
+                      <mo></mo>
+                      <msubsup>
+                        <mi>G</mi>
+                        <mi>a</mi>
+                        <msub>
+                          <mi>CH</mi>
+                          <mn>2</mn>
+                        </msub>
+                      </msubsup>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <mn>2</mn>
+                </msup>
+                <mrow>
+                  <mn>4</mn>
+                  <mo></mo>
+                  <mstyle>
+                    <mspace width="0.3em" height="0.3ex" />
+                  </mstyle>
+                  <mo></mo>
+                  <mrow>
+                    <msubsup>
+                      <mi>N</mi>
+                      <mi>A</mi>
+                      <mn>2</mn>
+                    </msubsup>
+                    <mo>·</mo>
+                    <msubsup>
+                      <mi>a</mi>
+                      <msub>
+                        <mi>CH</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mn>2</mn>
+                    </msubsup>
+                    <mo>·</mo>
+                    <msub>
+                      <mi>γ</mi>
+                      <msub>
+                        <mi>CH</mi>
+                        <mn>2</mn>
+                      </msub>
+                    </msub>
+                  </mrow>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+          <img id="img-00003-en" wi="N/A" he="N/A" file="US20150247022A1_00003.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150247022A1-20150903-M00003.TIF" />
+        </maths>
+      </p>
+      <p id="p-00089-en" num="0000">with N<sub>A </sub>being Avogadro's number (6.02×10<sup>23 </sup>mol<sup>−1</sup>), a<sub>CH</sub><sub><sub2>2 </sub2></sub>the area occupied by an adsorbed methylene group (0.06 nm<sup>2</sup>) and γ<sub>CH</sub><sub><sub2>2 </sub2></sub>the surface energy of a solid consisting solely of methylene group and determined on polyethylene (35.6 mJ/m<sup>2 </sup>at 20° C.).</p>
+      <p id="p-00090-en" num="0101">The coordination number of the aluminum is determined by solid aluminum NMR.</p>
+      <p id="p-00091-en" num="0102">The technique used to measure the water uptake consists generally in placing the predried silica sample under given relative humidity conditions for a predetermined time; the silica then hydrates, which causes the weight of the sample to change from an initial value w (in the dried state) to a final value w+dw. “Water uptake” of a silica specifically denotes, in particular throughout the continuation of the account, the dw/w ratio (that is to say, the weight of water incorporated in the sample with respect to the weight of the sample in the dry state), expressed as percentage, calculated for a silica sample subjected to the following conditions during the measurement method: <ul id="ul-00010-en" list-style="none"><li><ul id="ul-00011-en" list-style="none"><li>preliminary drying: 8 hours, at 150° C.;</li><li>hydration: 24 hours, at 20° C., and under a relative humidity of 70%.</li></ul></li></ul></p>
+      <p id="p-00092-en" num="0105">The experimental protocol employed consists in successively: <ul id="ul-00012-en" list-style="none"><li><ul id="ul-00013-en" list-style="none"><li>precisely weighing approximately 2 grams of the silica to be tested;</li><li>drying, for 8 hours, the silica thus weighed out in an oven adjusted to a temperature of 105° C.;</li><li>determining the weight w of the silica obtained on conclusion of this drying operation;</li><li>placing, for 24 hours, at 20° C., the dried silica in a closed container, such as a desiccator, comprising a water/glycerol mixture, so that the relative humidity of the closed medium is 70%;</li><li>determining the weight (w+dw) of the silica obtained subsequent to this treatment at 70% relative humidity for 24 hours, the measurement of this weight being carried out immediately after having removed the silica from the desiccator, so as to prevent variation in the weight of the silica under the influence of the change in hygrometry between the medium at 70% relative humidity and the atmosphere of the laboratory.</li></ul></li></ul></p>
+      <p id="p-00093-en" num="0111">The pore volumes and pore diameters are measured by mercury (Hg) porosimetry using a Micromeritics Autopore 9520 porosimeter and are calculated by the Washburn relationship with a contact angle theta equal to 130° and a surface tension gamma equal to 484 dynes/cm (standard DIN 66133). The preparation of each sample is carried out as follows: each sample is predried in an oven at 200° C. for 2 hours.</p>
+      <p id="p-00094-en" num="0112">The ability of the silicas to disperse and to deagglomerate can be quantified by means of the specific deagglomeration test below.</p>
+      <p id="p-00095-en" num="0113">A particle size measurement is carried out (by laser diffraction) on a suspension of silica deagglomerated beforehand by ultrasonication; the ability of the silica to deagglomerate (cleavage of the objects from 0.1 to several tens of microns) is thus measured. The deagglomeration under ultrasound is carried out using a Vibracell Bioblock (600 W) sonicator equipped with a probe having a diameter of 19 mm. The particle size measurement is carried out by laser diffraction on a Sympatec Helios/BF particle sizer (equipped with an optical lens of R3 (0.9-175 μm) type), employing the Fraunhofer theory.</p>
+      <p id="p-00096-en" num="0114">2 grams (+/−0.1 gram) of silica are introduced into a 50 ml beaker (height: 7.5 cm and diameter: 4.5 cm) and the weight is made up to 50 grams by addition of 48 grams (+/−0.1 gram) of deionized water. A 4% aqueous silica suspension is thus obtained.</p>
+      <p id="p-00097-en" num="0115">The deagglomeration under ultrasound is subsequently carried out as follows: the “TIMER” button of the sonicator is pressed and the time is adjusted to 5 minutes 30 seconds. The amplitude of the probe (corresponding to the nominal power) is adjusted to 80% and then the ultrasound probe is immersed over 5 centimeters in the silica suspension present in the beaker. The ultrasound probe is then switched on and the deagglomeration is carried out for 5 minutes 30 seconds at 80% amplitude of the probe.</p>
+      <p id="p-00098-en" num="0116">The particle size measurement is subsequently carried out by introducing, into the vessel of the particle sizer, a volume V (expressed in ml) of the suspension, this volume V being such that 8% optical density is achieved on the particle sizer.</p>
+      <p id="p-00099-en" num="0117">The median diameter Ø<sub>50</sub>, after deagglomeration with ultrasound, is such that 50% of the particles by volume have a size of less than Ø<sub>50 </sub>and 50% have a size of greater than Ø<sub>50</sub>. The value of the median diameter Ø<sub>50 </sub>which is obtained decreases in proportion as the ability of the silica to deagglomerate increases.</p>
+      <p id="p-00100-en" num="0118">It is also possible to determine the ratio (10×V/optical density of the suspension detected by the particle sizer), this optical density corresponding to the true value detected by the particle sizer during the introduction of the silica.</p>
+      <p id="p-00101-en" num="0119">This ratio (deagglomeration factor F<sub>D</sub>) is indicative of the content of particles with a size of less than 0.1 μm which are not detected by the particle sizer. This ratio increases in proportion as the ability of the silica to deagglomerate increases.</p>
+      <p id="p-00102-en" num="0120">The pH is measured according to the following method deriving from the standard ISO 787/9 (pH of a 5% suspension in water):</p>
+      <p id="p-00103-en" num="0121">Equipment: <ul id="ul-00014-en" list-style="none"><li><ul id="ul-00015-en" list-style="none"><li>calibrated pH meter (accuracy of reading to 1/100<sup>th</sup>)</li><li>combined glass electrode</li><li>200 ml beaker</li><li>100 ml measuring cylinder</li><li>balance accurate to within about 0.01 g.</li></ul></li></ul></p>
+      <p id="p-00104-en" num="0127">Procedure:</p>
+      <p id="p-00105-en" num="0128">5 grams of silica are weighed to within about 0.01 gram into the 200 ml beaker. 95 ml of water, measured from the graduated measuring cylinder, are subsequently added to the silica powder. The suspension thus obtained is vigorously stirred (magnetic stirring) for 10 minutes. The pH measurement is then carried out.</p>
+      <p id="p-00106-en" num="0129">The precipitated silica according to the invention is characterized in that it has: <ul id="ul-00016-en" list-style="none"><li><ul id="ul-00017-en" list-style="none"><li>a BET specific surface of between 45 and 550 m<sup>2</sup>/g, in particular between 70 and 370 m<sup>2</sup>/g, especially between 80 and 300 m<sup>2</sup>/g,</li><li>a content (C) of polycarboxylic acid+corresponding carboxylate, expressed as total carbon, of at least 0.15% by weight, in particular of at least 0.20% by weight,</li><li>an aluminum (Al) content of at least 0.20% by weight, in particular of at least 0.25% by weight.</li></ul></li></ul></p>
+      <p id="p-00107-en" num="0133">The precipitated silica according to the invention can in particular exhibit a BET specific surface of between 100 and 240 m<sup>2</sup>/g, in particular between 120 and 190 m<sup>2</sup>/g, for example between 130 and 170 m<sup>2</sup>/g.</p>
+      <p id="p-00108-en" num="0134">The precipitated silica according to the invention can in particular exhibit a content (C) of polycarboxylic acid+corresponding carboxylate, expressed as total carbon, of at least 0.25% by weight, in particular of at least 0.30% by weight, for example of at least 0.35% by weight, indeed even of at least 0.45% by weight.</p>
+      <p id="p-00109-en" num="0135">The precipitated silica in accordance with the invention can in particular exhibit an aluminum (Al) content of at least 0.30% by weight, in particular of at least 0.33% by weight. It generally exhibits an aluminum (Al) content of less than 1% by weight, in particular of at most 0.50% by weight, for example of at most 0.45% by weight.</p>
+      <p id="p-00110-en" num="0136">The presence of the polycarboxylic acids and/or of the carboxylates corresponding to the polycarboxylic acids at the surface of the silica according to the invention can be illustrated by the presence of shoulders characteristic of the C—O and C═O bonds, visible on the infrared spectra, obtained in particular by surface (transmission) infrared or diamond-ATR infrared (in particular between 1540 and 1590 cm<sup>−1 </sup>and between 1380 and 1420 cm<sup>−1 </sup>for C—O, and between 1700 and 1750 cm<sup>−1 </sup>for C═O).</p>
+      <p id="p-00111-en" num="0137">In general, the precipitated silica according to the invention exhibits, at its surface, molecules of methylglutaric acid in the acid form and/or in the carboxylate form.</p>
+      <p id="p-00112-en" num="0138">In general, the precipitated silica according to the invention has a CTAB specific surface of between 40 and 525 m<sup>2</sup>/g, in particular between 70 and 350 m<sup>2</sup>/g, especially between 80 and 310 m<sup>2</sup>/g, for example between 100 and 240 m<sup>2</sup>/g. It can in particular be between 130 and 200 m<sup>2</sup>/g, for example between 140 and 190 m<sup>2</sup>/g.</p>
+      <p id="p-00113-en" num="0139">In general, the precipitated silica according to the invention exhibits a BET specific surface/CTAB specific surface ratio of between 0.9 and 1.2, that is to say that it exhibits a low microporosity.</p>
+      <p id="p-00114-en" num="0140">Preferably, the precipitated silica according to the invention has a ratio (R) between 0.4 and 3.5, in particular between 0.4 and 2.5. This ratio (R) can also be between 0.5 and 3.5, in particular between 0.5 and 2.5, especially between 0.5 and 2, for example between 0.8 and 2, indeed even between 0.8 and 1.8, or between 0.8 and 1.6.</p>
+      <p id="p-00115-en" num="0141">Preferably, the precipitated silica according to the invention exhibits a dispersive component of the surface energy γ<sub>s</sub><sup>d </sup>of less than 43 mJ/m<sup>2</sup>, in particular of less than 42 mJ/m<sup>2</sup>.</p>
+      <p id="p-00116-en" num="0142">It can exhibit a dispersive component of the surface energy γ<sub>s</sub><sup>d </sup>of at least 40 mJ/m<sup>2 </sup>and of less than 43 mJ/m<sup>2</sup>, in particular of strictly between 40 and 43 mJ/m<sup>2</sup>, for example of strictly between 40 and 42 mJ/m<sup>2</sup>.</p>
+      <p id="p-00117-en" num="0143">Preferably, the silica according to the invention exhibits a dispersive component of the surface energy γ<sub>s</sub><sup>d </sup>of less than 40 mJ/m<sup>2</sup>, in particular of less than 35 mJ/m<sup>2</sup>.</p>
+      <p id="p-00118-en" num="0144">The precipitated silica according to the invention can have a specific distribution of the coordination number of the aluminum, determined by solid aluminum NMR. In general, at most 85% by number, in particular at most 80% by number, in particular between 70% and 85% by number, for example between 70% and 80% by number, of the aluminum atoms of the silica according to the invention can exhibit a tetrahedral coordination number, that is to say, can be in a tetrahedral site. In particular, between 15% and 30% by number, for example between 20% and 30% by number, of the aluminum atoms of the silica according to the invention can exhibit a pentahedral or octahedral coordination number, that is to say, can be in a pentahedral or octahedral site.</p>
+      <p id="p-00119-en" num="0145">The precipitated silica according to the invention can exhibit a water uptake of greater than 6%, in particular of greater than 7%, especially of greater than 7.5%, for example of greater than 8%, indeed even of greater than 8.5%.</p>
+      <p id="p-00120-en" num="0146">In general, the precipitated silica according to the invention exhibits a high ability to disperse (in particular in elastomers) and to deagglomerate.</p>
+      <p id="p-00121-en" num="0147">The precipitated silica according to the invention can exhibit a diameter Ø<sub>50</sub>, after deagglomeration with ultrasound, of at most 5 μm, preferably of at most 4 μm, in particular of between 3.5 and 2.5 μm.</p>
+      <p id="p-00122-en" num="0148">The precipitated silica according to the invention can exhibit an ultrasound deagglomeration factor F<sub>D </sub>of greater than 5.5 ml, in particular of greater than 7.5 ml, for example of greater than 12 ml.</p>
+      <p id="p-00123-en" num="0149">Another parameter of the precipitated silica according to the invention can lie in the distribution of its pore volume and in particular in the distribution of the pore volume which is generated by the pores having diameters of less than or equal to 400 Å. The latter volume corresponds to the useful pore volume of the fillers employed in the reinforcement of elastomers. In general, the analysis of the porograms shows that this silica, equally well in the form of substantially spherical beads (microbeads), of powder or of granules, preferably has a pore distribution such that the pore volume generated by the pores having a diameter of between 175 and 275 Å (V2) represents at least 50%, in particular at least 55%, especially between 55% and 65%, for example between 55% and 60%, of the pore volume generated by the pores with diameters of less than or equal to 400 Å (V1). When the precipitated silica according to the invention is provided in the form of granules, it can optionally have a pore distribution such that the pore volume generated by the pores having a diameter of between 175 and 275 Å (V2) represents at least 60% of the pore volume generated by the pores with diameters of less than or equal to 400 Å (V1).</p>
+      <p id="p-00124-en" num="0150">The precipitated silica according to the invention preferably exhibits a pH of between 3.5 and 7.5, more preferably still between 4 and 7, in particular between 4.5 and 6.</p>
+      <p id="p-00125-en" num="0151">The precipitated silica according to the invention can be provided in any physical state, that is to say that it can be provided in the form of substantially spherical beads (microbeads), of a powder or of granules.</p>
+      <p id="p-00126-en" num="0152">It can thus be provided in the form of substantially spherical beads with a mean size of at least 80 μm, preferably of at least 150 μm, in particular of between 150 and 270 μm; this mean size is determined according to the standard NF X 11507 (December 1970) by dry sieving and determination of the diameter corresponding to a cumulative oversize of 50%.</p>
+      <p id="p-00127-en" num="0153">It can also be provided in the form of a powder with a mean size of at least 3 μm, in particular of at least 10 μm, preferably of at least 15 μm.</p>
+      <p id="p-00128-en" num="0154">It can be provided in the form of granules (generally of substantially parallelepipedal shape) with a size of at least 1 mm, for example of between 1 and 10 mm, in particular along the axis of their greatest dimension.</p>
+      <p id="p-00129-en" num="0155">The silica according to the invention is preferably obtained by the process described above, in particular the specific preparation process.</p>
+      <p id="p-00130-en" num="0156">Advantageously, the precipitated silicas according to the present invention or (capable of being) obtained by the process according to the invention described above confer, on the polymeric (elastomeric) compositions into which they are introduced, a highly satisfactory compromise in properties, in particular a reduction in their viscosity and preferably an improvement in their dynamic properties, while retaining their mechanical properties. They thus advantageously make possible an improvement in the processing/reinforcement/hysteresis properties compromise. Preferably, they exhibit a good ability to disperse and to deagglomerate in polymeric (elastomeric) compositions.</p>
+      <p id="p-00131-en" num="0157">The precipitated silicas according to the present invention or (capable of being) obtained by the process described above according to the invention can be used in numerous applications.</p>
+      <p id="p-00132-en" num="0158">They can be employed, for example, as catalyst support, as absorbent for active materials (in particular support for liquids, especially used in food, such as vitamins (vitamin E) or choline chloride), in polymer, especially elastomer, or silicone compositions, as viscosifying, texturizing or anticaking agent, as battery separator component, or as additive for toothpaste, concrete or paper.</p>
+      <p id="p-00133-en" num="0159">However, they find a particularly advantageous application in the reinforcement of natural or synthetic polymers.</p>
+      <p id="p-00134-en" num="0160">The polymer compositions in which they can be employed, in particular as reinforcing filler, are generally based on one or more polymers or copolymers (especially bipolymers or terpolymers), in particular on one or more elastomers, preferably exhibiting at least one glass transition temperature of between −150° C. and +300° C., for example between −150° C. and +20° C.</p>
+      <p id="p-00135-en" num="0161">Mention may in particular be made, as possible polymers, of diene polymers, in particular diene elastomers.</p>
+      <p id="p-00136-en" num="0162">For example, use may be made of polymers or copolymers (in particular bipolymers or terpolymers) deriving from aliphatic or aromatic monomers, comprising at least one unsaturation (such as, in particular, ethylene, propylene, butadiene, isoprene, styrene, acrylonitrile, isobutylene or vinyl acetate), polybutyl acrylate, or their mixtures; mention may also be made of silicone elastomers, functionalized elastomers, for example functionalized by chemical groups positioned along the macromolecular chain and/or at one or more of its ends (for example by functional groups capable of reacting with the surface of the silica), and halogenated polymers. Mention may be made of polyamides.</p>
+      <p id="p-00137-en" num="0163">The polymer (copolymer) can be a bulk polymer (copolymer), a polymer (copolymer) latex or else a solution of polymer (copolymer) in water or in any other appropriate dispersing liquid.</p>
+      <p id="p-00138-en" num="0164">Mention may be made, as diene elastomers, for example, of polybutadienes (BRs), polyisoprenes (IRs), butadiene copolymers, isoprene copolymers, or their mixtures, and in particular styrene/butadiene copolymers (SBRs, in particular ESBRs (emulsion) or SSBRs (solution)), isoprene/butadiene copolymers (BIRs), isoprene/styrene copolymers (SIRs), isoprene/butadiene/styrene copolymers (SBIRs), ethylene/propylene/diene terpolymers (EPDMs), and also the associated functionalized polymers (exhibiting, for example, pendant polar groups or polar groups at the chain end, which can interact with the silica).</p>
+      <p id="p-00139-en" num="0165">Mention may also be made of natural rubber (NR) and epoxidized natural rubber (ENR).</p>
+      <p id="p-00140-en" num="0166">The polymer compositions can be vulcanized with sulfur (vulcanisates are then obtained) or crosslinked, in particular with peroxides or other crosslinking systems (for example diamines or phenolic resins).</p>
+      <p id="p-00141-en" num="0167">In general, the polymer compositions additionally comprise at least one (silica/polymer) coupling agent and/or at least one covering agent; they can also comprise, inter alia, an antioxidant.</p>
+      <p id="p-00142-en" num="0168">Use may in particular be made, as coupling agents, as nonlimiting examples, of “symmetrical” or “unsymmetrical” silane polysulfides; mention may more particularly be made of bis((C<sub>1</sub>-C<sub>4</sub>)alkoxyl(C<sub>1</sub>-C<sub>4</sub>)alkylsilyl(C<sub>1</sub>-C<sub>4</sub>)alkyl) polysulfides (in particular disulfides, trisulfides or tetrasulfides), such as, for example, bis(3-(trimethoxysilyl)propyl) polysulfides or bis(3-(triethoxysilyl)propyl) polysulfides, such as triethoxysilylpropyl tetrasulfide. Mention may also be made of monoethoxydimethylsilylpropyl tetrasulfide. Mention may also be made of silanes comprising masked or free thiol functional groups.</p>
+      <p id="p-00143-en" num="0169">The coupling agent can be grafted beforehand to the polymer.</p>
+      <p id="p-00144-en" num="0170">It can also be employed in the free state (that is to say, not grafted beforehand) or grafted at the surface of the silica. It is the same for the optional covering agent.</p>
+      <p id="p-00145-en" num="0171">The coupling agent can optionally be combined with an appropriate “coupling activator”, that is to say a compound which, mixed with this coupling agent, increases the effectiveness of the latter.</p>
+      <p id="p-00146-en" num="0172">The proportion by weight of silica in the polymer composition can vary within a fairly wide range. It normally represents from 10% to 200%, in particular from 20% to 150%, especially from 20% to 80% (for example from 30% to 70%) or from 80% to 120% (for example from 90% to 110%), of the amount of the polymer(s).</p>
+      <p id="p-00147-en" num="0173">The silica according to the invention can advantageously constitute all of the reinforcing inorganic filler and even all of the reinforcing filler of the polymer composition.</p>
+      <p id="p-00148-en" num="0174">However, this silica according to the invention can optionally be combined with at least one other reinforcing filler, such as, in particular, a commercial highly dispersible silica, such as, for example, Z1165MP or Z1115MP, a treated precipitated silica (for example, a precipitated silica “doped” using a cation, such as aluminum); another reinforcing inorganic filler, such as, for example, alumina, indeed even a reinforcing organic filler, in particular carbon black (optionally covered with an inorganic layer, for example of silica). The silica according to the invention then preferably constitutes at least 50% by weight, indeed even at least 80% by weight, of all of the reinforcing filler.</p>
+      <p id="p-00149-en" num="0175">Mention may be made, as nonlimiting examples of finished articles comprising at least one of (in particular based on) said polymer compositions described above (in particular based on the abovementioned vulcanisates), of footwear soles (preferably in the presence of a (silica/polymer) coupling agent, for example triethoxysilylpropyl tetrasulfide), floor coverings, gas barriers, flame-retardant materials and also engineering components, such as rollers for cableways, seals for domestic electrical appliances, seals for liquid or gas pipes, braking system seals, pipes (flexible), sheathings (in particular cable sheathings), cables, engine supports, battery separators, conveyor belts, transmission belts or, preferably, tires, in particular tire treads (especially for light vehicles or for heavy-goods vehicles (for example trucks)).</p>
+      <p id="p-00150-en" num="0176">The following examples illustrate the invention without, however, limiting the scope thereof.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00001-en" level="1">EXAMPLES</heading>
+      <heading id="h-00002-en" level="1">Example 1</heading>
+      <p id="p-00151-en" num="0177">The suspension of precipitated silica used is a silica cake (having a solids content of 23% by weight), obtained on conclusion of the filtration stage during the process for the preparation of the Z1165MP silica.</p>
+      <p id="p-00152-en" num="0178">Prior to the liquefaction operation, a 50% by weight solution of methylglutaric acid is prepared by dissolving methylglutaric acid in water (at 35° C.) with stirring.</p>
+      <p id="p-00153-en" num="0179">The cake obtained in the filtration stage (303 kilograms) is subjected to a liquefaction operation in a continuous vigorously stirred reactor (for approximately 3 hours) with 1740 grams of the sodium aluminate solution (Al/SiO<sub>2 </sub>ratio by weight of 0.32%).</p>
+      <p id="p-00154-en" num="0180">Once the liquefaction has been carried out, 730 grams of the previously prepared methylglutaric acid solution (methylglutaric acid/SiO<sub>2 </sub>ratio by weight of 1.20%) are added to a portion (125 liters) of the disintegrated cake.</p>
+      <p id="p-00155-en" num="0181">This treated portion (having a solids content of 22% by weight) of the disintegrated cake is subsequently dried using a nozzle atomizer by spraying the disintegrated cake through a 1.5 mm nozzle with a pressure of 25 bar for 35 minutes under the following mean conditions of flow rate and of temperatures:</p>
+      <p id="p-00156-en" num="0182">Mean inlet temperature: 569° C.</p>
+      <p id="p-00157-en" num="0183">Mean outlet temperature: 159° C.</p>
+      <p id="p-00158-en" num="0184">Mean flow rate: 211 l/h.</p>
+      <p id="p-00159-en" num="0185">The characteristics of the silica S1 obtained (in the form of substantially spherical beads) are then the following:</p>
+      <p id="p-00160-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="161pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="char" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>BET (m<sup>2</sup>/g)</entry>
+                  <entry>157</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Content of polycarboxylic acid + carboxylate (C) (%)</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Aluminum (Al) content (%)</entry>
+                  <entry>0.34</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ratio (R)</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>CTAB (m<sup>2</sup>/g)</entry>
+                  <entry>151</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Υ<sub>s</sub><sup>d </sup>(mJ/m<sup>2</sup>)</entry>
+                  <entry>34</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water uptake (%)</entry>
+                  <entry>8.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ø<sub>50 </sub>(μm) after deagglomeration with ultrasound</entry>
+                  <entry>3.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Fd after deagglomeration with ultrasound</entry>
+                  <entry>13.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>V2/V1 (%)</entry>
+                  <entry>57</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pH</entry>
+                  <entry>5.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00003-en" level="1">Example 2 (Comparative)</heading>
+      <p id="p-00161-en" num="0186">The suspension of precipitated silica used is a silica cake (having a solid content of 23% by weight) obtained on conclusion of the filtration stage during the process for the preparation of the Z1165MP silica.</p>
+      <p id="p-00162-en" num="0187">Prior to the liquefaction operation, a 100 g/l maleic acid solution is prepared by dissolving maleic acid in water (at 35° C.) with stirring.</p>
+      <p id="p-00163-en" num="0188">The cake obtained in the filtration stage is subjected to a liquefaction operation in a continuous vigorously stirred reactor (for approximately 90 minutes) with addition to the cake of 4400 grams of the 100 g/l maleic acid solution (maleic acid/SiO<sub>2 </sub>ratio by weight of 1.0%).</p>
+      <p id="p-00164-en" num="0189">This disintegrated cake (having a solids content of 22% by weight) is subsequently dried using a nozzle atomizer by spraying the disintegrated cake through a 1.5 mm nozzle with a pressure of 25 bar under the following mean conditions of flow rate and of temperatures:</p>
+      <p id="p-00165-en" num="0190">Mean inlet temperature: 577° C.</p>
+      <p id="p-00166-en" num="0191">Mean outlet temperature: 157° C.</p>
+      <p id="p-00167-en" num="0192">Mean flow rate: 220 l/h.</p>
+      <p id="p-00168-en" num="0193">The characteristics of the silica C1 obtained (in the form of substantially spherical beads) are then the following:</p>
+      <p id="p-00169-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="161pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="char" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>BET (m<sup>2</sup>/g)</entry>
+                  <entry>169</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Content of polycarboxylic acid + carboxylate (C) (%)</entry>
+                  <entry>0.19</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Aluminum (Al) content (%)</entry>
+                  <entry>&lt;0.05</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ratio (R)</entry>
+                  <entry>&gt;4.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>CTAB (m<sup>2</sup>/g)</entry>
+                  <entry>178</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Υ<sub>s</sub><sup>d </sup>(mJ/m<sup>2</sup>)</entry>
+                  <entry>51</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ø<sub>50 </sub>(μm) after deagglomeration with ultrasound</entry>
+                  <entry>3.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Fd after deagglomeration with ultrasound</entry>
+                  <entry>19.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>V2/V1 (%)</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pH</entry>
+                  <entry>3.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00004-en" level="1">Example 3</heading>
+      <p id="p-00170-en" num="0194">The elastomeric compositions, the make up of which, expressed as parts by weight per 100 parts of elastomers (phr), is shown in table I below, are prepared in an internal mixer of Haake type (380 ml):</p>
+      <p id="p-00171-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="77pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" rowsep="1">TABLE I</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Composition</entry>
+                  <entry>Control 1</entry>
+                  <entry>Composition 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="77pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>SBR (1)</entry>
+                  <entry>103</entry>
+                  <entry>103</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>BR (1)</entry>
+                  <entry>25</entry>
+                  <entry>25</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Silica C1 (2)</entry>
+                  <entry>80</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Silica S1 (3)</entry>
+                  <entry />
+                  <entry>80</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Coupling agent (4)</entry>
+                  <entry>6.4</entry>
+                  <entry>6.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Carbon black (N330)</entry>
+                  <entry>3.0</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ZnO</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Stearic acid</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Antioxidant (5)</entry>
+                  <entry>1.9</entry>
+                  <entry>1.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>DPG (6)</entry>
+                  <entry>1.5</entry>
+                  <entry>1.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>CBS (7)</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sulfur</entry>
+                  <entry>1.1</entry>
+                  <entry>1.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00001-en">(1) Solution SBR (Buna VSL5025-2 from Lanxess) with 50 +/− 4% of vinyl units; 25 +/− 2% of styrene units; Tg in the vicinity of −20° C.; 100 phr of SBR extended with 37.5 +/− 2.8% by weight of oil/BR (Buna CB 25 from Lanxess)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00002-en">(2) Silica C1 (liquefaction with addition of maleic acid (example 2- comparative))</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00003-en">(3) Silica S1 according to the present invention (liquefaction with addition of sodium aluminate, then addition of methylglutaric acid after liquefaction (example 1 above))</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00004-en">(4) TESPT (Luvomaxx TESPT from Lehvoss France sarl)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00005-en">(5) N-(1,3-Dimethylbutyl)-N-phenyl-para-phenylenediamine (Santoflex 6-PPD from Flexsys)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00006-en">(6) Diphenylguanidine (Rhenogran DPG-80 from RheinChemie)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00007-en">(7) N-Cyclohexyl-2-benzothiazolesulfenamide (Rhenogran CBS-80 from RheinChemie)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00172-en" num="0195">Process for the preparation of the elastomeric compositions:</p>
+      <p id="p-00173-en" num="0196">The process for the preparation of the rubber compositions is carried out in two successive preparation phases. A first phase consists of a phase of high-temperature thermomechanical working. It is followed by a second phase of mechanical working at temperatures of less than 110° C. This phase makes possible the introduction of the vulcanization system.</p>
+      <p id="p-00174-en" num="0197">The first phase is carried out using a mixing device, of internal mixer type, of Thermofischer Haake brand (capacity of 380 ml). The filling coefficient is 0.6. The initial temperature and the speed of the rotors are set on each occasion so as to achieve mixture dropping temperatures of approximately 140-160° C.</p>
+      <p id="p-00175-en" num="0198">Broken down here into two passes, the first phase makes it possible to incorporate, in a first pass, the elastomers and then the reinforcing filler (introduction in installments) with the coupling agent and the stearic acid. For this pass, the duration is between 4 and 10 minutes.</p>
+      <p id="p-00176-en" num="0199">After cooling the mixture (temperature of less than 100° C.), a second pass makes it possible to incorporate the zinc oxide and the protecting agents/antioxidants (in particular 6-PPD). The duration of this pass is between 2 and 5 minutes.</p>
+      <p id="p-00177-en" num="0200">After cooling the mixture (temperature of less than 100° C.), the second phase makes possible the introduction of the vulcanization system (sulfur and accelerators, such as CBS). It is carried out on an open mill, preheated to 50° C. The duration of this phase is between 2 and 6 minutes.</p>
+      <p id="p-00178-en" num="0201">Each final mixture is subsequently calandered in the form of plaques with a thickness of 2-3 mm.</p>
+      <p id="p-00179-en" num="0202">With regard to these “raw” mixtures obtained, an evaluation of their rheological properties makes it possible to optimize the vulcanization time and the vulcanization temperature.</p>
+      <p id="p-00180-en" num="0203">Subsequently, the mechanical and dynamic properties of the mixtures vulcanized at the curing optimum (T98) are measured.</p>
+      <p id="p-00181-en" num="0204">Rheological Properties</p>
+      <p id="p-00182-en" num="0205">Viscosity of the Raw Mixtures:</p>
+      <p id="p-00183-en" num="0206">The Mooney consistency is measured on the compositions in the raw state at 100° C. using an MV 2000 rheometer and also the determination of the Mooney stress-relaxation rate according to the standard NF ISO 289.</p>
+      <p id="p-00184-en" num="0207">The value of the torque, read at the end of 4 minutes after preheating for one minute (Mooney Large (1+4)—at 100° C.), is shown in table II. The test is carried out after preparing the raw mixtures and then after aging for 3 weeks at a temperature of 23+/−3° C.</p>
+      <p id="p-00185-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE II</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Compositions</entry>
+                  <entry />
+                  <entry>Control 1</entry>
+                  <entry>Composition 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="56pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>ML (1 + 4) - 100° C.</entry>
+                  <entry>Initial</entry>
+                  <entry>96</entry>
+                  <entry>87</entry>
+                </row>
+                <row>
+                  <entry>Mooney relaxation</entry>
+                  <entry>Initial</entry>
+                  <entry>0.303</entry>
+                  <entry>0.322</entry>
+                </row>
+                <row>
+                  <entry>ML (1 + 4) - 100° C.</entry>
+                  <entry>After 3 weeks</entry>
+                  <entry>106</entry>
+                  <entry>94</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(23 +/− 3° C.)</entry>
+                </row>
+                <row>
+                  <entry>Mooney relaxation</entry>
+                  <entry>After 3 weeks</entry>
+                  <entry>0.260</entry>
+                  <entry>0.290</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(23 +/− 3° C.)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00186-en" num="0208">It is found that the silica S1 of the present invention (Composition 1) makes possible a sizeable reduction in the initial raw viscosity, with respect to the value of the control mixture.</p>
+      <p id="p-00187-en" num="0209">It is also found that the silica S1 of the present invention (Composition 1) makes it possible to retain the advantage in reduced raw viscosity, with respect to the value of the control mixture, after 3 weeks of storage.</p>
+      <p id="p-00188-en" num="0210">This type of behavior over time is of great use to a person skilled in the art in the case of the processing of silica-comprising rubber mixtures.</p>
+      <p id="p-00189-en" num="0211">Rheometry of the Compositions:</p>
+      <p id="p-00190-en" num="0212">The measurements are carried out on the compositions in the raw state. The results relating to the rheology test, which is carried out at 160° C. using a Monsanto ODR rheometer according to the standard NF ISO 3417, have been given in table III.</p>
+      <p id="p-00191-en" num="0213">According to this test, the test composition is placed in the test chamber regulated at the temperature of 160° C. for 30 minutes, and the resistive torque opposed by the composition to a low-amplitude (3°) oscillation of a biconical rotor included in the test chamber is measured, the composition completely filling the chamber under consideration.</p>
+      <p id="p-00192-en" num="0214">The following are determined from the curve of variation in the torque as a function of time: <ul id="ul-00018-en" list-style="none"><li><ul id="ul-00019-en" list-style="none"><li>the minimum torque (Tmin), which reflects the viscosity of the composition at the temperature under consideration;</li><li>the maximum torque (Tmax);</li><li>the delta torque (ΔT=Tmax−Tmin), which reflects the degree of crosslinking brought about by the action of the crosslinking system and, if the need arises, of the coupling agents;</li><li>the time T98 necessary to obtain a vulcanization state corresponding to 98% of complete vulcanization (this time is taken as vulcanization optimum);</li><li>and the scorch time TS2, corresponding to the time necessary in order to have a rise of 2 points above the minimum torque at the temperature under consideration (160° C.) and which reflects the time during which it is possible to process the raw mixtures at this temperature without having initiation of vulcanization (the mixture cures from TS2).</li></ul></li></ul></p>
+      <p id="p-00193-en" num="0220">The results obtained are shown in table III.</p>
+      <p id="p-00194-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="77pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" rowsep="1">TABLE III</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Compositions</entry>
+                  <entry>Control 1</entry>
+                  <entry>Composition 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="77pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Tmin (dN · m)</entry>
+                  <entry>21.9</entry>
+                  <entry>19.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Tmax (dN · m)</entry>
+                  <entry>64.9</entry>
+                  <entry>69.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Delta torque (dN · m)</entry>
+                  <entry>43.0</entry>
+                  <entry>50.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>TS2 (min)</entry>
+                  <entry>4.7</entry>
+                  <entry>6.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>T98 (min)</entry>
+                  <entry>26.9</entry>
+                  <entry>25.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00195-en" num="0221">It is found that the composition resulting from the invention (Composition 1) exhibits a satisfactory combination of rheological properties.</p>
+      <p id="p-00196-en" num="0222">In particular, while having a reduced raw viscosity, it exhibits a lower minimum torque value and a higher maximum torque value than those of the control mixture, which reflects a greater processability of the prepared mixture.</p>
+      <p id="p-00197-en" num="0223">The use of the silica S1 of the present invention (Composition 1) makes it possible to reduce the minimum viscosity (sign of an improvement in the raw viscosity) with respect to the control mixture without damaging the vulcanization behavior.</p>
+      <p id="p-00198-en" num="0224">Mechanical Properties of the Vulcanisates:</p>
+      <p id="p-00199-en" num="0225">The measurements are carried out on the optimally vulcanized compositions (T98) for a temperature of 160° C.</p>
+      <p id="p-00200-en" num="0226">Uniaxial tensile tests are carried out in accordance with the instructions of the standard NF ISO 37 with test specimens of H2 type at a rate of 500 mm/min on an Instron 5564 device. The x % moduli, corresponding to the stress measured at x % of tensile strain, are expressed in MPa. It is possible to determine a reinforcing index (RI) equal to the ratio of the modulus at 300% strain to the modulus at 100% strain.</p>
+      <p id="p-00201-en" num="0227">The Shore A hardness measurement on the vulcanisates is carried out according to the instructions of the standard ASTM D 2240. The given value is measured at 15 seconds.</p>
+      <p id="p-00202-en" num="0228">The properties measured are collated in table IV.</p>
+      <p id="p-00203-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" rowsep="1">TABLE IV</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Compositions</entry>
+                  <entry>Control 1</entry>
+                  <entry>Composition 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="63pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>10% Modulus (MPa)</entry>
+                  <entry>0.7</entry>
+                  <entry>0.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100% Modulus (MPa)</entry>
+                  <entry>2.4</entry>
+                  <entry>2.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>300% Modulus (MPa)</entry>
+                  <entry>12.5</entry>
+                  <entry>15.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>RI</entry>
+                  <entry>5.3</entry>
+                  <entry>6.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Shore A hardness - 15 s (pts)</entry>
+                  <entry>63</entry>
+                  <entry>59</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00204-en" num="0229">It is found that the composition resulting from the invention (Composition 1) exhibits a satisfactory compromise in mechanical properties, with respect to what is obtained with the control mixture.</p>
+      <p id="p-00205-en" num="0230">Composition 1 thus exhibits relatively low 10% and 100% moduli and a relatively high 300% modulus, hence a good reinforcing index.</p>
+      <p id="p-00206-en" num="0231">The use of a silica S1 of the present invention (Composition 1) makes it possible to obtain a satisfactory level of reinforcement, with respect to the control mixture, by significantly improving the 300% modulus.</p>
+      <p id="p-00207-en" num="0232">Dynamic Properties of the Vulcanisates:</p>
+      <p id="p-00208-en" num="0233">The dynamic properties are measured on a viscosity analyser (Metravib VA3000) according to the standard ASTM D5992. The values for loss factor (tan δ) are recorded on vulcanized samples (cylindrical test specimen with a cross section of 95 mm<sup>2 </sup>and a height of 14 mm). The sample is subjected at the start to a 10% prestrain and then to a sinusoidal strain in alternating compression of plus or minus 2%. The measurements are carried out at 60° C. and at a frequency of 10 Hz.</p>
+      <p id="p-00209-en" num="0234">The results, presented in table V, are the loss factor (tan δ, 60° C., 10 Hz).</p>
+      <p id="p-00210-en" num="0235">The values for the loss factor (tan δ) and for amplitude of dynamic shear elastic modulus (ΔG′) are recorded on vulcanized samples (parallelepipedal test specimen with a cross section of 8 mm<sup>2 </sup>and a height of 7 mm). The sample is subjected to a double alternating sinusoidal shear strain at a temperature of 40° C. and at a frequency of 10 Hz. The strain amplitude sweeping processes are carried out according to an outward-return cycle, proceeding outward from 0.1% to 50% and then returning from 50% to 0.1%.</p>
+      <p id="p-00211-en" num="0236">The results, presented in table V, result from the return strain amplitude sweep and relate to the maximum value of the loss factor (tan δ max return, 40° C., 10 Hz) and to the amplitude of the elastic modulus (ΔG′, 40° C., 10 Hz) between the values at 0.1% and 50% strain (Payne effect).</p>
+      <p id="p-00212-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" rowsep="1">TABLE V</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>References</entry>
+                  <entry>Control 1</entry>
+                  <entry>Composition 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="63pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Tan δ, 60° C., 10 Hz</entry>
+                  <entry>0.143</entry>
+                  <entry>0.124</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ΔG′, 40° C., 10 Hz (MPa)</entry>
+                  <entry>1.9</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Tan δ max return, 40° C., 10 Hz</entry>
+                  <entry>0.228</entry>
+                  <entry>0.183</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00213-en" num="0237">The use of a silica S1 of the present invention (Composition 1) makes it possible to improve the maximum value of the loss factor in dynamic compression, the amplitude of the elastic modulus or Payne effect and the Tan δ max return loss factor, with respect to the control mixture.</p>
+      <p id="p-00214-en" num="0238">The examination of the various tables II to V shows that the composition in accordance with the invention (Composition 1) makes it possible to obtain a good processing/reinforcement/hysteresis properties compromise, with respect to the control mixture, and in particular a sizeable gain in raw viscosity, which remains stable on storage over time.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A process for the preparation of a precipitated silica, the process comprising:
+<claim-text>reacting at least one silicate with at least one acidifying agent, so as to obtain a suspension of precipitated silica,</claim-text><claim-text>filtering said suspension of precipitated silica, so as to obtain a filtration cake,</claim-text><claim-text>subjecting said filtration cake to a liquefaction operation comprising the addition of an aluminum compound, and</claim-text><claim-text>optionally drying the filtration cake after the liquefaction operation,</claim-text></claim-text>
+      <claim-text>wherein methylglutaric acid is added to the filtration cake, during or after the liquefaction operation.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The process as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the methylglutaric acid and the aluminum compound are simultaneously added to the filtration cake during the liquefaction operation.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The process as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the aluminum compound is added to the filtration cake during the liquefaction operation prior to the addition of the methylglutaric acid.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The process as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the methylglutaric acid is added to the filtration cake after the liquefaction operation.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The process as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a portion or all of the methylglutaric acid is in the anhydride, ester, alkali metal salt (carboxylate) or ammonium salt (carboxylate) form.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The process as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the aluminum compound is an alkali metal aluminate.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>-<b>9</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>10</b>. A precipitated silica having:, characterized in that it has:
+<claim-text>a BET specific surface of between 45 and 550 m<sup>2</sup>/g,</claim-text><claim-text>a content (C) of polycarboxylic acid and corresponding carboxylate, expressed as total carbon, of at least 0.15% by weight, and</claim-text><claim-text>an aluminum (Al) content of at least 0.20% by weight.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>11</b>. The precipitated silica as claimed in <claim-ref idref="clm-00008-en">claim 10</claim-ref>, wherein the BET specific surface is between 100 and 240 m<sup>2</sup>/g.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>12</b>. The precipitated silica as claimed in <claim-ref idref="clm-00008-en">claim 10</claim-ref>, wherein the content (C) of polycarboxylic acid and corresponding carboxylate, expressed as total carbon, is at least 0.25% by weight.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>13</b>. The precipitated silica as claimed in <claim-ref idref="clm-00008-en">claim 10</claim-ref>, wherein the aluminum (Al) content is at least 0.30% by weight.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>14</b>. The precipitated silica as claimed in <claim-ref idref="clm-00008-en">claim 10</claim-ref>, wherein the polycarboxylic acid comprises methylglutaric acid</claim-text>
+      <claim-text>
+        <maths id="mathsc-00001-en" num="00004">
+          <math overflow="scroll">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mo>(</mo>
+                  <mi>R</mi>
+                  <mo>)</mo>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>N</mi>
+                  <mo>×</mo>
+                  <mfrac>
+                    <mrow>
+                      <mo>[</mo>
+                      <mrow>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mn>100</mn>
+                            <mo>×</mo>
+                            <mrow>
+                              <mi>C</mi>
+                              <mo>/</mo>
+                              <msub>
+                                <mi>C</mi>
+                                <mi>Theo</mi>
+                              </msub>
+                            </mrow>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mo>×</mo>
+                        <msub>
+                          <mi>M</mi>
+                          <mi>Al</mi>
+                        </msub>
+                      </mrow>
+                      <mo>]</mo>
+                    </mrow>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mi>Al</mi>
+                        <mo>×</mo>
+                        <msub>
+                          <mi>M</mi>
+                          <mi>Ac</mi>
+                        </msub>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+          <img id="imgc-00001-en" wi="N/A" he="N/A" file="US20150247022A1_00004.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150247022A1-20150903-M00004.TIF" />
+        </maths>
+      </claim-text>
+      <claim-text>.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>15</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>16</b>. The precipitated silica as claimed in <claim-ref idref="clm-00008-en">claim 10</claim-ref>, wherein the precipitated silica exhibits a dispersive component of the surface energy γ<sub>s</sub><sup>d </sup>of less than 43 mJ/m<sup>2</sup>.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>17</b>. The precipitated silica as claimed in <claim-ref idref="clm-00008-en">claim 10</claim-ref>, wherein the precipitated silica exhibits a dispersive component of the surface energy γ<sub>s</sub><sup>d </sup>of at least 40 mJ/m<sup>2 </sup>and of less than 43 mJ/m<sup>2</sup>.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>18</b>. The precipitated silica as claimed in <claim-ref idref="clm-00008-en">claim 10</claim-ref>, wherein the precipitated silica exhibits a dispersive component of the surface energy γ<sub>s</sub><sup>d </sup>of less than 40 mJ/m<sup>2</sup>.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>19</b>. The precipitated silica as claimed in <claim-ref idref="clm-00008-en">claim 10</claim-ref>, wherein the precipitated silica exhibits a water uptake of greater than 6%.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>20</b>. The process as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the step of reacting at least one silicate with at least one acidifying agent comprises:
+<claim-text>(i) forming an initial vessel heel comprising at least a portion of the total amount of the silicate involved in the reaction and an electrolyte, the concentration of silicate (expressed as SiO<sub>2</sub>) in said initial vessel heel being less than 100 g/l,</claim-text><claim-text>(ii) adding the acidifying agent to said vessel heel until a value for the pH of the reaction medium of at least 7.0 is obtained, and</claim-text><claim-text>(iii) adding additional acidifying agent and, if appropriate, simultaneously adding the remaining amount of silicate to the reaction medium,</claim-text></claim-text>
+      <claim-text>wherein the methylglutaric acid is added to the filtration cake, either during the liquefaction operation, or after the liquefaction operation and before the drying stage.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>21</b>-<b>28</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>29</b>. A method for reducing the viscosity of a polymer composition, the method comprising adding a precipitated silica as claimed in <claim-ref idref="clm-00008-en">claim 10</claim-ref> to said composition.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>30</b>. A polymer composition comprising a precipitated silica as claimed in <claim-ref idref="clm-00008-en">claim 10</claim-ref>.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>31</b>. An article comprising at least one polymer composition as claimed in <claim-ref idref="clm-00021-en">claim 30</claim-ref>, this article consisting of a footwear sole, a floor covering, a gas barrier, a flame-retardant material, a roller for cableways, a seal for domestic electrical appliances, a seal for liquid or gas pipes, a braking system seal, a pipe, a sheathing, a cable, an engine support, a battery separator, a conveyor belt, a transmission belt or a tire.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>32</b>. (canceled)</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247022A1_00001.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150247022A1-20150903-M00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247022A1_00002.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150247022A1-20150903-M00002.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247022A1_00003.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150247022A1-20150903-M00003.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247022A1_00004.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150247022A1-20150903-M00004.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150247022A1.PDF" type="pdf" size="631482" pages="12" />
+</lexisnexis-patent-document>

@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2926827A3.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091257" date-changed="20151110" time-changed="083718">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Separate publication of the search report">
+      <document-id id="121940780">
+        <country>EP</country>
+        <doc-number>2926827</doc-number>
+        <kind>A3</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15153712</doc-number>
+        <date>20090209</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>27326</doc-number>
+        <date>20080208</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>US</country>
+        <doc-number>120380</doc-number>
+        <date>20081205</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>2732608</doc-number>
+        <kind>P</kind>
+        <date>20080208</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>US</country>
+        <doc-number>12038008</doc-number>
+        <kind>P</kind>
+        <date>20081205</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="docdb">
+        <country>EP</country>
+        <doc-number>09707916</doc-number>
+        <kind>A</kind>
+        <date>20090209</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>27326</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>120380</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="original">
+        <doc-number>09707916.4</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US20080027326P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>US20080120380P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="epodoc">
+        <doc-number>EP20090707916</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <supplemental-srep-reference>
+        <date>20151104</date>
+      </supplemental-srep-reference>
+      <unexamined-printed-without-grant>
+        <date>20151007</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <first-examination-report-despatched>
+        <date>20151104</date>
+      </first-examination-report-despatched>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151105">
+      <classification-ipcr sequence="1">
+        <text>A61K  38/12        20060101AFI20150930BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  38/17        20060101ALI20150930BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>17</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K  45/06        20060101ALI20150930BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61P  35/00        20060101ALI20150930BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>P</subclass>
+        <main-group>35</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C07K   7/64        20060101ALI20150930BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>7</main-group>
+        <subgroup>64</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151105">
+      <classification-cpc sequence="1">
+        <text>C07K   7/64        20130101 FI20150205BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>7</main-group>
+        <subgroup>64</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150205</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  38/12        20130101 LI20150206BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150206</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  38/1761      20130101 LI20140820BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>1761</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140820</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  45/06        20130101 LI20150205BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150205</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">Therapeutische peptidomimetische Macrocyclen</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">Therapeutic Peptidomimetic Macrocycles</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">Macrocycles peptidomimétiques thérapeutiques</invention-title>
+    <references-cited date-changed="20151110">
+      <patent-citations name="patcit" date-changed="20151110" />
+      <non-patent-citations name="nplcit" date-changed="20151110" />
+      <citation>
+        <patcit num="1" dnum="US2005250680A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050250680</doc-number>
+            <kind>A1</kind>
+            <name>WALENSKY LOREN D [US], et al</name>
+            <date>20051110</date>
+          </document-id>
+          <application-date>
+            <date>20041105</date>
+          </application-date>
+        </patcit>
+        <category>D</category>
+        <category>X</category>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO2008104000A2" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2008104000</doc-number>
+            <kind>A2</kind>
+            <name>AILERON THERAPEUTICS INC [US], et al</name>
+            <date>20080828</date>
+          </document-id>
+          <application-date>
+            <date>20080225</date>
+          </application-date>
+        </patcit>
+        <category>P</category>
+        <category>X</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="WO2009042237A2" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2009042237</doc-number>
+            <kind>A2</kind>
+            <name>DANA FARBER CANCER INST INC [US], et al</name>
+            <date>20090402</date>
+          </document-id>
+          <application-date>
+            <date>20080926</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="WO2008137633A2" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2008137633</doc-number>
+            <kind>A2</kind>
+            <name>DANA FARBER CANCER INST INC [US], et al</name>
+            <date>20081113</date>
+          </document-id>
+          <application-date>
+            <date>20080502</date>
+          </application-date>
+        </patcit>
+        <category>P</category>
+        <category>X</category>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>LEE ERINNA F ET AL: "A novel BH3 ligand that selectively targets Mcl-1 reveals that apoptosis can proceed without Mcl-1 degradation", THE JOURNAL OF CELL BIOLOGY : JCB, THE ROCKEFELLER UNIVERSITY PRESS, US, vol. 180, no. 2, 21 January 2008 (2008-01-21), pages 341 - 355, XP002522619, ISSN: 0021-9525, DOI: 10.1083/JCB.200708096</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-38749084498&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>Y</category>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20151104">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>EP</country>
+              <doc-number>09707916.4</doc-number>
+              <date>20090209</date>
+            </document-id>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>EP</country>
+              <doc-number>15153712</doc-number>
+              <date>20090209</date>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Aileron Therapeutics, Inc.</orgname>
+            <registered-number>101304938</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>281 Albany Street</address-1>
+              <city>Cambridge, MA 02139</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Nash, Huw, M.</name>
+            <address>
+              <address-1>4 Washington Street</address-1>
+              <city>Lexington, MA 02421</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Annis, David, Allen</name>
+            <address>
+              <address-1>508 Green Street, No. 3</address-1>
+              <city>Cambridge, MA 02139</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Kapeller-Libermann, Rosana</name>
+            <address>
+              <address-1>86 Beacon Street</address-1>
+              <city>Chestnut Hill, MA 02467</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>Sawyer, Tomi, K.</name>
+            <address>
+              <address-1>8 Nathan Stone Road</address-1>
+              <city>Southborough, MA 01772</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>Kawahata, Noriyuki</name>
+            <address>
+              <address-1>79 Garnet Road</address-1>
+              <city>West Roxbury, MA 02132</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>Han, Jiawen</name>
+            <address>
+              <address-1>355 Crafts St.</address-1>
+              <city>Newton, MA 02460</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Cole, William Gwyn et al</name>
+            <registered-number>101372899</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Avidity IP Broers Building Hauser Forum 21 J J Thomson Ave</address-1>
+              <city>Cambridge CB3 0FA</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>AL</country>
+          <country>BA</country>
+          <country>RS</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151104">
+      <main-family family-id="174018575">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926827</doc-number>
+            <kind>A3</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20090209</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926827</doc-number>
+            <kind>A2</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20090209</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174018574">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926827</doc-number>
+            <kind>A3</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20090209</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926827</doc-number>
+            <kind>A2</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20090209</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides biologically active peptidomimetic macrocycles for the treatment of cell proliferative disorders such as cancer and immunoproliferative disease.</p>
+  </abstract>
+  <legal-data date-changed="20151016">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AC</event-code-1>
+      <legal-description>DIVISIONAL APPLICATION (ART. 76) OF:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926827A2</docdb-publication-number>
+      <docdb-application-id>426170096</docdb-application-id>
+      <corresponding-publication-number>2242503</corresponding-publication-number>
+      <corresponding-authority>
+        <country>EP</country>
+      </corresponding-authority>
+      <corresponding-kind>P</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926827A2</docdb-publication-number>
+      <docdb-application-id>426170096</docdb-application-id>
+      <corresponding-kind>A2</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926827A2</docdb-publication-number>
+      <docdb-application-id>426170096</docdb-application-id>
+      <countries-concerned>
+        <country>AL</country>
+        <country>BA</country>
+        <country>RS</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+  <image file="EP2926827A3.PDF" type="pdf" size="231497" pages="6" />
+</lexisnexis-patent-document>

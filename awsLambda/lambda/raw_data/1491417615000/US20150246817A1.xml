@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246817A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021220" date-changed="20151006" time-changed="063125">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121138796">
+        <country>US</country>
+        <doc-number>20150246817</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14431038</doc-number>
+        <date>20130923</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>C01B  33/12        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>33</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>C01B  33/12        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>33</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C01B  33/126       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>33</main-group>
+        <subgroup>126</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C01B  37/02        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C01P2006/12        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2006</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C01P2006/14        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2006</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C01P2006/16        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2006</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>Y10T 428/2982      20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>2982</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">10</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">COMPOSITIONS AND PROCESSES FOR MESOPOROUS SILICAS HAVING LARGE PORES WITH NARROW DIAMETER DISTRIBUTIONS</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61708229</doc-number>
+          <date>20121001</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>DOW GLOBAL TECHNOLOGIES LLC</orgname>
+            <address>
+              <city>Midland</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Akolekar</last-name>
+            <first-name>Deepak</first-name>
+            <address>
+              <city>Pune</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bollapragada</last-name>
+            <first-name>Phani Kiran</first-name>
+            <address>
+              <city>Pune</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Khokarale</last-name>
+            <first-name>Santosh</first-name>
+            <address>
+              <city>Pune</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13061251</doc-number>
+        <date>20130923</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014055281</doc-number>
+        <date>20140410</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173461492">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246817</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130923</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173461491">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246817</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130923</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A process for preparing a mesoporous silica comprising contacting as starting components (1) a structure-directing template selected from the group consisting of hydrogenated and non-hydrogenated natural vegetable oils, silicone oils, and combinations thereof; (2) water; (3) silica; and, optionally, (4) a structure-directing co-template selected from tetramethylammonium hydroxide, tetraethylammonium hydroxide, tetrapropylammonium hydroxide, cetyltrimethylammonium bromide (CTAB), hexadecyltrimethylammonium chloride; hexadecyltrimethylammonium hydroxide hydrate, hexadecyltrimethylammonium p-toluenesulfonate, hexadecyltrimethylammonium bis-sulfonate, poloxamers having a weight average molecular weight ranging from 5,000 to 20,000 Daltons (Da), and combinations thereof; in the substantial absence of an alcohol solvent; under conditions such that a mesoporous silica having an average pore diameter ranging from 50 to 175 angstroms and a pore diameter distribution that, within one standard deviation of its mean, is substantially unimodal, is formed. The product composition may offer preferred use in, for example, gas separations, sensing, water purification, heavy metal removal, and electronics, where its narrower pore diameter distribution increases its selectivity.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">REFERENCE TO RELATED APPLICATIONS The present application claims the benefit of U.S. Provisional Application No. 61/708,229, filed on Oct. 1, 2012.</heading>
+      <p num="" />
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">1. Field of the Invention</p>
+      <p id="p-00002-en" num="0002">This invention relates to the field of mesoporous silicas. More particularly, it relates to mesoporous silicas prepared using natural and synthetic oils, having relatively large pore diameters and relatively narrow, substantially unimodal pore diameter distribution ranges.</p>
+      <p id="p-00003-en" num="0003">2. Background of the Art</p>
+      <p id="p-00004-en" num="0004">Mesoporous materials have been known to researchers for many years, and are used for a variety of applications. In general these materials are inorganic solid materials characterized by a porous structure which is formed of channels or pores that frequently have average diameters in a general range of from 2 to 50 nanometers (nm). These channels or pores may be relatively uniform, with fairly constant diameters, or non-uniform, with a variety of diameters. The porous structure provides for a large internal surface area with adsorptive capacity for molecular species which are capable of entering therein.</p>
+      <p id="p-00005-en" num="0005">Mesoporous materials may be amorphous or crystalline. Examples of mesoporous materials include synthetic and natural crystalline pure silicates and aluminosilicates. Such may also be referred to as framework aluminosilicates, where the framework is based on a three-dimensional network of [(Al,Si)<sub>4</sub>] tetrahedra which are linked to each other, at their corners, by shared oxygen atoms.</p>
+      <p id="p-00006-en" num="0006">However, despite successful use of such mesoporous silica materials in certain applications, some of these materials suffer from less than desirable selectivity. Such may be due to, for example, less than desirable uniformity in pore diameters, i.e., broad pore diameter distributions, or to pore diameters that are too small for larger molecules, such as certain biomolecules. In view of this, it is desirable to develop new means of modifying silica-based mesoporous materials to reduce or eliminate one or more of these problems.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00007-en" num="0007">In one aspect the invention provides a process for preparing a mesoporous silica comprising contacting as starting components (1) a structure-directing template selected from the group consisting of partially and fully hydrogenated and non-hydrogenated oils and combinations thereof; (2) water; (3) silica; and, optionally, (4) a structure-directing co-template selected from tetramethylammonium hydroxide, tetraethylammonium hydroxide, tetrapropylammonium hydroxide, cetyltrimethylammonium bromide (CTAB), hexadecyltrimethylammonium chloride; hexadecyltrimethylammonium hydroxide hydrate, hexadecyltrimethylammonium p-toluenesulfonate, hexadecyltrimethylammonium bis-sulfonate, poloxamers having a weight average molecular weight ranging from 5,000 to 20,000 Daltons (Da), and combinations thereof; in the substantial absence of an alcohol solvent; under conditions such that a mesoporous silica composition having an average pore diameter ranging from 50 angstroms to 175 angstroms and a pore diameter distribution that, within one standard deviation of the mean thereof, is substantially unimodal, is formed.</p>
+      <p id="p-00008-en" num="0008">In a second aspect, the invention provides a composition comprising a mesoporous silica composition having an average pore diameter ranging from 50 angstroms to 175 angstroms and a pore diameter distribution that, within one standard deviation of the mean thereof, is substantially unimodal.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE EMBODIMENTS</heading>
+      <p id="p-00009-en" num="0009">The invention produces mesoporous silica compositions having in particular embodiments a relatively large average pore diameter, from 50 Å to 175 Å, and a relatively narrow, substantially unimodal pore diameter distribution, as described in greater detail hereinbelow. Because the average pore diameter may be controlled via selection of the starting components, the inventive compositions may be designed for preferential use in a wide variety of applications including, but not limited to, gas separations, in electronic devices for purposes such as regulation of current flow and for thermal stability, for drug and fragrance release, gas sensing, heavy metal removal, and water purification.</p>
+      <p id="p-00010-en" num="0010">The mesoporous silica composition may be effectively prepared by a process generally defined as including contact of at least three (3) starting components. These starting components are (1) a structure-directing template selected from the group consisting of fully and partially hydrogenated and non-hydrogenated oils and combinations thereof; (2) water; and (3) silica. An optional fourth component, (4), is a structure-directing co-template, which is selected from the group defined hereinbelow.</p>
+      <p id="p-00011-en" num="0011">Each of the components may be most conveniently sourced via commercial purchase, or via direct preparation prior to use in the invention. Starting component (1), the structure-directing template, is a least one oil. As the term is used herein, “oil” is defined as any of numerous mineral, vegetable, and synthetic substances, including in non-limiting embodiments animal and vegetable fats, which are generally slippery, combustible, viscous, liquid or liquefiable at room temperatures, and soluble in various organic solvents such as ether, but not in water. Therefore, such may include materials meeting this description that are obtained from plants and animals, from mineral deposits (e.g., as petroleum), and via synthesis. Included within these categories, in non-limiting example, are plant-based oils such as castor oil, mustard oil, cottonseed oil, rapeseed oil, palm oil, sunflower oil, peanut oil, soybean oil, corn oil, coconut oil, linseed oil, sesame oil, and combinations thereof; animal-based oils such as clarified butter; mineral-based oils such as hydrocarbon oils including hydrocracked and hydroisomerized oils and combinations thereof; synthetic oils such as silicone oils, polyalphaolefin oils, non-polyalphaolefin oils including diesters, polyolesters, alkylated naphthalenes, alkylated benzenes, and combinations thereof; and combinations thereof. Such may also be defined generally to include liquid triesters of glycerol and unsaturated fatty acids, including, for example, lipids, which are loosely defined as substances of biological origin that are soluble in non-polar solvents. In general, oils useful in the invention may be fully hydrogenated, partially hydrogenated, or non-hydrogenated, and either edible or non-edible. In certain particular embodiments, sunflower oil, coconut oil, linseed oil, sesame oil, corn oil, and soybean oil, and combinations thereof may be preferred for reasons such as convenience, cost and/or commercial availability, with coconut oil being in such embodiments often particularly preferred.</p>
+      <p id="p-00012-en" num="0012">Starting component (2), water, used in the invention is preferably deionized (DI) water.</p>
+      <p id="p-00013-en" num="0013">Starting component (3), silica, may be any conventionally known silica or silicate, such as fumed silica, colloidal silica, sodium silicate, tetraethyl orthosilicate (TEOS), or a combination thereof. In preferred embodiments a silica having a relatively high Brunauer-Emmett-Teller surface area, preferably at least 100 m<sup>2</sup>/g, more preferably at least 120 m<sup>2</sup>/g, and still more preferably at least 150 m<sup>2</sup>/g, may be employed. This silica is, obviously, distinct from the mesoporous silica composition that is a product of the inventive process. Sources of the silica starting component (3) may be, for example, organic sources, such as rice husks, and/or mineral sources, such as sand, quartzite, talc and mica.</p>
+      <p id="p-00014-en" num="0014">Where the formulation includes an optional starting component (4), a structure-directing co-template, such may be selected from tetramethylammonium hydroxide (TMAOH), tetraethylammonium hydroxide (TEAOH), tetrapropylammonium hydroxide (TPAOH), cetyltrimethylammonium bromide (CTAB), hexadecyltrimethylammonium chloride, hexadecyltrimethylammonium hydroxide hydrate, hexadecyltrimethylammonium p-toluenesulfonate, hexadecyltrimethylammonium bis-sulfonate, poloxamers having a weight average molecular weight ranging from 5,000 Da to 20,000 Da, and combinations thereof. Of these poloxamers, those having a weight average molecular weight ranging from 5,000 to 13,000 Da may be preferred in certain embodiments, and those having a weight average molecular weight ranging from 5,500 to 12,500 Da may be particularly preferred. Preparation of these may be by any effective means. For example, hydrolysis of tetramethylammonium cetyl iodide (TMACI) or tetramethylammonium bromide (TMABr) may be used to prepare TMAOH; hydrolysis of tetraethylammonium bromide (TEABr) may be used to prepare TEAOH; and hydrolysis of TPAOH may be used to prepare tetrapropylammonium bromide (TPABr). Preparation of cetyltrimethylammonium bromide (CTAB) may be via brominating a hexadecyl quaternary ammonium compound.</p>
+      <p id="p-00015-en" num="0015">Another selection for the optional starting component (4), the structure-directing co-template may be a block copolymer surfactant, i.e., a block copolymer surfactant, also termed a “poloxamer.” This poloxamer is desirably non-ionic and has a weight average molecular weight ranging from 5,000 to 20,000 Da, more desirably from 5,000 to 13,000 Da, still more desirably from 5,500 to 12,500 Da. Suitable non-limiting examples may include PLURONIC P-123, PLURONIC F-127, and combinations thereof. (PLURONIC is a trademark of BASF Corporation.) PLURONIC P-123 is a triblock copolymer based on poly(ethylene glycol)-poly(propylene glycol)-poly(ethylene glycol), having a molecular weight of about 5,800 Da. PLURONIC F-127 is described as a hydrophilic, nonionic surfactant polyol having a central hydrophobic block and a molecular weight of approximately 12,500 Da. In some embodiments, a combination of PLURONIC P-123 and PLURONIC F-127 may be employed. It may be useful to use a molar ratio of PLURONIC P-123 to PLURONIC F-127 ranging from 1.6:1 to 2,500:1.</p>
+      <p id="p-00016-en" num="0016">In preparing the mesoporous silica materials of the invention, the required components (1)-(3) (or, in certain embodiments, (1)-(4)), respectively, are desirably combined in order such that contact between them is as extensive and continuous as possible, throughout a period of time until the inventive products are formed to a desired extent, preferably to or near a maximum yield thereof. Such may be conveniently carried out, in one particularly preferred embodiment, by adding the structure-directing template (1) to the water (2), then adding the silica (3) thereto. Where a structure-directing co-template (4) is to be included as a starting component, such may, in certain embodiments, be added to the water (2) prior to adding the structure-directing template (1) thereto. Those skilled in the art will obtain further direction and alternative embodiments via the Examples included in this specification and from knowledge generally available within the industry. During this process the components are desirably stirred together, at a rate described as “vigorous,” which is preferably from 300 to 700 revolutions per minute (rpm). Adjustment of starting pH to a range of from 2.0 to 5.0 may be desirable, and conveniently effected by means of, for example, use of a 1.6 molar (M) hydrogen chloride (HC1) solution in representation of the water starting component (2). Stirring rate generally facilitates the synthesis process. In preferred embodiments, the temperature during the synthesis period is desirably maintained within a range from 25 degrees Celsius (° C.,) and 190° C., and more desirably from 25° C. to 170° C. The synthesis period may desirably range from 5 to 100 hours (h), and preferably from 10 h to 40 h, and pressure may desirably range from 101 kilopascals (kPa) to 1000 kPa. Such synthesis parameters may offer acceptable production levels within commercially practical limits. Proportions of the starting components are desirably controlled in order to ensure formation of the inventive compositions. In general, based upon 1 mole (mol) of the selected silica (3), the amount of the structure-directing template (1) may desirably range from 0.1 mol to 1.0 mol. The amount of water (2) may desirably range from 20 mol to 80 mol, and preferably from 40 mol to 70 mol. The amount of the optional structure-directing co-template (4) may desirably range from 0.25 to 0.7 mol, preferably from 0.25 mol to 0.65 mol, and more preferably from 0.25 mol to 0.5 mol.</p>
+      <p id="p-00017-en" num="0017">An additional component, a promoter (5), may, in some less preferred embodiments, be optionally included among the starting materials, particularly where tetraethyl ortho-silicate (TEOS) is selected as the silica source. Such promoters may be selected from alkali and alkaline nitrates, sulfates, chlorides, and combinations thereof, including, in non-limiting example, sodium nitrate (NaNO<sub>3</sub>). These materials may help to accelerate crystal growth in definite patterns, and also enhance thermal stability of the final mesoporous material. If a promoter is used, a desired amount is preferably from 0 mol to 0.3 mol, based on 1 mol of silica.</p>
+      <p id="p-00018-en" num="0018">It is desirable in the present invention that alcohol, in any form, is absent or substantially absent from the synthesis mixture. In particular, this means that alcohol is not intentionally used as a solvent therein. The term “substantial absence” means, therefore, that, while such absence is desirably absolute, the presence of alcohol in trace amounts, less than 0.2 percent by weight, may be tolerated. Included within the definition of alcohols are any organic materials having a functional hydroxyl group, with the exception of those specifically named as possible first or second structure-directing template selections.</p>
+      <p id="p-00019-en" num="0019">Once product synthesis is visually observed, the product may be filtered and washed using means and methods well known to those skilled in the art. Filtration using a suitable filter means, desirably of 650 to 2000 U.S mesh size, followed by washings in DI water, is desirable. Drying using conventional means and temperatures ranging desirably from 80° C. to 100° C., with or without subsequent calcinations(s) at temperatures ranging from 500° C. to 650° C. (with or without steam), may also be preferably employed, in order to increase the porosity of the final mesoporous silica material.</p>
+      <p id="p-00020-en" num="0020">The final product is, in preferred embodiments, a mesoporous silica composition having unique physical characteristics. These characteristics may be generally described as including an average pore diameter ranging from 50 Å to 195 Å, preferably from 50 Å to 175 Å, and still more preferably from 60 to 165 Å, with a substantially unimodal pore diameter distribution, preferably with at least 90 weight percent (wt %) of the mesoporous silica falling within one standard deviation of the mean pore diameter. In particular embodiments at least 95 wt % falls within one standard deviation of the mean pore diameter. The term “substantially unimodal” takes its meaning from statistics, wherein a unimodal distribution is a probability distribution having a single mode, with the mode being the value at which the probability mass function takes its maximum value, i.e., the mode may be stated as being the most likely value. Graphically speaking, “substantially unimodal” means that the pore diameter distribution will exhibit only one peak, or only one major peak, with any other, lesser peaks present being mathematically insignificant to calculation of the maximum (most likely) value. This maximum value is herein, then, taken as being approximately equivalent to the distribution's mean. Furthermore, the mesoporous silica desirably exhibits a Brunauer-Emmett-Teller surface area ranging from 300, preferably 500, to 1000, preferably 800, m<sup>2</sup>/g, and preferably from 500 to 800 m<sup>2</sup>/g; and an average pore volume ranging from 0.4 to 1.5 cm<sup>3</sup>/g, preferably from 0.7 to 1.5 cm<sup>3</sup>/g, and still more preferably from 0.9 to 1.2 cm<sup>3</sup>/g. Because of these characteristics, the inventive materials may be characterized, in summary, as having unexpectedly large pores diameters and unexpectedly narrow, substantially unimodal pore diameter distributions.</p>
+      <p id="p-00021-en" num="0021">The inventive mesoporous silica also has an MCM-48 framework type, as defined by the International Zeolite Association (IZA). This means that its bicontinuous structure is still centered on the gyoid minimal surface (i.e., it is “cubic”), as is the case with all MCM-48 silicas. Thus, it is an MCM-48 silica having larger average pore diameter than many or most other MCM-48 silicas, thereby enabling its use in a variety of applications for which such other MCM-48 silicas may not be useful, for example, with separations involving relatively large biomolecules. Furthermore, because of the greater uniformity, i.e., narrower pore diameter distribution, it is anticipated that the performance of the inventive mesoporous silica in such applications will be enhanced due to improved selectivity. Confirmation of the given physical characteristics may be by means readily known to those skilled in the art, including, for example, X-ray diffraction (XRD), transmission electron microscopy (TEM), Fourier transmission infrared spectrophotometry (FTIR), Fourier transmission-Raman (FT-Raman), and/or nitrogen physiosorption.</p>
+      <heading id="h-00005-en" level="1">EXAMPLES</heading>
+      <heading id="h-00006-en" level="1">Example 1</heading>
+      <p id="p-00022-en" num="0022">Place 75 milliliters (mL) of 1.6 M HCl in a 500 mL round bottom flask and dissolve 2.0 g of PLURONIC P-123 therein. Stir at room temperature for 30 minutes (min) and then add 3.0 g of sunflower oil. Increase the temperature to 45° C. and stir at this temperature for 1 hour (h) at 500 rpm. Next, add 4.4 g of TEOS and stir at the same rate at 50° C. for 24 h. After 24 h, transfer the mixture to an autoclave and heat at 105° C. for 96 h in an oven. Then cool to room temperature, filter, wash with hot water, and dry at room temperature for 2 days. Remove organics by heating the mixture in a furnace at 535° C. for 6 h.</p>
+      <heading id="h-00007-en" level="1">Example 2 </heading>
+      <p id="p-00023-en" num="0023">Follow the procedure of Example 1, except use silicone oil instead of sunflower oil.</p>
+      <heading id="h-00008-en" level="1">Example 3</heading>
+      <p id="p-00024-en" num="0024">Follow the procedure of Example 1, except use natural clarified butter instead of sunflower oil.</p>
+      <heading id="h-00009-en" level="1">Example 4 </heading>
+      <p id="p-00025-en" num="0025">Follow the procedure of Example 1, except use coconut oil instead of sunflower oil.</p>
+      <heading id="h-00010-en" level="1">Example 5</heading>
+      <p id="p-00026-en" num="0026">Follow the procedure of Example 4, except omit the PLURONIC P-123 and heat at 158° C. for 100 h.</p>
+      <heading id="h-00011-en" level="1">Example 6 </heading>
+      <p id="p-00027-en" num="0027">Follow the procedure of Example 4, except heat at 105° C. for 10 days.</p>
+      <heading id="h-00012-en" level="1">Example 7 </heading>
+      <p id="p-00028-en" num="0028">Follow the procedure of Example 5, except heat at 105° C. for 100 h.</p>
+      <heading id="h-00013-en" level="1">Comparative Example A (MCF)</heading>
+      <p id="p-00029-en" num="0029">Synthesize a mesoporous cellular foam (MCF) by dissolving 1 g of PLURONIC P-123 in 37.5 mL water at room temperature with stirring, then add 4 g of 1,3,5-trimethylbenzene (TMB), i.e., a ratio of TMB to PLURONIC P-123 of 4:1. Add 2.2 g of TEOS and adjust pH by adding 6.1 g of ammonium hydroxide solution. Cover and stir the mixture to form a microemulsion. Cover and stir the microemulsion at 38° C. for 24 h and then age at 110° C. for 24 h in an autoclave. Rinse the as-synthesized materials with DI water and dry under vacuum for 12 h.</p>
+      <heading id="h-00014-en" level="1">Comparative Example B (MCM-48)</heading>
+      <p id="p-00030-en" num="0030">Synthesize MCM-48 using an aqueous micellar solution containing a quaternary ammonium surfactant, C<sub>16</sub>H<sub>33</sub>(CH<sub>3</sub>)<sub>3</sub>NBr (cetyltrimethylammonium bromide, or CTAB), NaOH, and DI water under stirring for 1 h. Add this solution to TEOS. The molar composition of the mixture is 0.59 CTAB/1.0 TEOS/0.5 NaOH/61 H<sub>2</sub>O. Stir the mixture for 90 min and transfer it to an autoclave, allowing the reaction to proceed at 100° C. for 96 h. Filter the MCM-48 silica and wash with DI water, then dry and calcine it at above 500° C.</p>
+      <heading id="h-00015-en" level="1">Comparative Example C (MCM-41)</heading>
+      <p id="p-00031-en" num="0031">Synthesize MCM-41 according to the molar ratio of components: 1.0 Si:0.2 CTAB:0.25 TMAOH:40 H<sub>2</sub>O. Add fumed silica to a mixture of CTAB, TMAOH and H<sub>2</sub>O, and stir the solution for 2 h at room temperature. Transfer the resulting gel into a Teflon-lined autoclave and age at 150° C. for 48 h. After aging, filter the gel, wash it several times with DI water, dry it, and calcine it at above 500° C.</p>
+      <heading id="h-00016-en" level="1">Comparative Example D</heading>
+      <p id="p-00032-en" num="0032">Compare the surface areas of Examples 1-4 based on their nitrogen physiosorption, i.e., Brunauer-Emmett-Teller, surface areas. Record results in Table 1.</p>
+      <p id="p-00033-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Nitrogen Physiosorption Data</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Surface </entry>
+                  <entry>Pore </entry>
+                  <entry>Pore</entry>
+                  <entry>Quantity Adsorbed</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Area</entry>
+                  <entry>Volume</entry>
+                  <entry>Diameter </entry>
+                  <entry>(cm<sup>3</sup>/g STP*)/</entry>
+                </row>
+                <row>
+                  <entry>Example #</entry>
+                  <entry>(m<sup>2</sup>/g)</entry>
+                  <entry>(cm<sup>3</sup>/g)</entry>
+                  <entry>(Å)</entry>
+                  <entry>(m<sup>2</sup>/g)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>573.8028</entry>
+                  <entry>0.896128</entry>
+                  <entry>78.170</entry>
+                  <entry>1.0097</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>355.4574</entry>
+                  <entry>0.408315</entry>
+                  <entry>73.324</entry>
+                  <entry>0.7408</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>700.2253</entry>
+                  <entry>1.088587</entry>
+                  <entry>78.133</entry>
+                  <entry>1.0051</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>53.4825</entry>
+                  <entry>1.183113</entry>
+                  <entry>83.338</entry>
+                  <entry>1.0151</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00001-en">*Standard Temperature and Pressure</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00017-en" level="1">Comparative Example E</heading>
+      <p id="p-00034-en" num="0033">Compare weight loss of the samples prepared in Examples 1-4 (Ex. 1-4) and Comparative Examples A-C (CEx. A-C). Weight loss illustrates the amount of organic template removed by calcination.</p>
+      <p id="p-00035-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Weight loss of the as-synthesized mesoporous materials (containing</entry>
+                </row>
+                <row>
+                  <entry>organic template) in air by thermogravimetric analysis (TGA)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="140pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Weight loss (%)</entry>
+                  <entry>Total</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Ex. or </entry>
+                  <entry>RT*-</entry>
+                  <entry>100-</entry>
+                  <entry>250-</entry>
+                  <entry>500-</entry>
+                  <entry>weight</entry>
+                </row>
+                <row>
+                  <entry>CEx.</entry>
+                  <entry>100° C.</entry>
+                  <entry>250° C.</entry>
+                  <entry>500° C.</entry>
+                  <entry>850° C.</entry>
+                  <entry>loss (%)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="35pt" align="char" char="." />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Ex. 1</entry>
+                  <entry>1.0</entry>
+                  <entry>36.0</entry>
+                  <entry>25.0</entry>
+                  <entry>6.5</entry>
+                  <entry>68.5</entry>
+                </row>
+                <row>
+                  <entry>Ex. 2</entry>
+                  <entry>1.3</entry>
+                  <entry>23.0</entry>
+                  <entry>17.0</entry>
+                  <entry>1.3</entry>
+                  <entry>42.6</entry>
+                </row>
+                <row>
+                  <entry>Ex. 3</entry>
+                  <entry>1.5</entry>
+                  <entry>54.0</entry>
+                  <entry>18.0</entry>
+                  <entry>1.3</entry>
+                  <entry>74.8</entry>
+                </row>
+                <row>
+                  <entry>Ex. 4</entry>
+                  <entry>1.0</entry>
+                  <entry>69.2</entry>
+                  <entry>4.0</entry>
+                  <entry>0.8</entry>
+                  <entry>75</entry>
+                </row>
+                <row>
+                  <entry>CEx. A</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                  <entry>50</entry>
+                  <entry>4</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry>CEx. B</entry>
+                  <entry>4</entry>
+                  <entry>50</entry>
+                  <entry>4</entry>
+                  <entry>2</entry>
+                  <entry>60</entry>
+                </row>
+                <row>
+                  <entry>CEx. C</entry>
+                  <entry>2</entry>
+                  <entry>40</entry>
+                  <entry>5</entry>
+                  <entry>11</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00002-en">*Room temperature</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00018-en" level="1">Comparative Example F</heading>
+      <p id="p-00036-en" num="0034">Compare surface characteristics of samples prepared in Ex. 1-7 and CEx. A-C.</p>
+      <p id="p-00037-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Characterizing data.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Surface</entry>
+                  <entry>Pore</entry>
+                  <entry>BET average</entry>
+                </row>
+                <row>
+                  <entry>Ex. or</entry>
+                  <entry />
+                  <entry>Area</entry>
+                  <entry>Volume</entry>
+                  <entry>pore</entry>
+                </row>
+                <row>
+                  <entry>CEx.</entry>
+                  <entry>Template type</entry>
+                  <entry>(m<sup>2</sup>/g)</entry>
+                  <entry>(cm<sup>3</sup>/g)</entry>
+                  <entry>diameter(Å)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Ex. 1</entry>
+                  <entry>Sunflower oil + P-123</entry>
+                  <entry>573.8</entry>
+                  <entry>0.90</entry>
+                  <entry>78</entry>
+                </row>
+                <row>
+                  <entry>Ex. 2</entry>
+                  <entry>Silicone oil + P-123</entry>
+                  <entry>355.5</entry>
+                  <entry>0.41</entry>
+                  <entry>73</entry>
+                </row>
+                <row>
+                  <entry>Ex. 3</entry>
+                  <entry>Clarified butter + P-123</entry>
+                  <entry>700.2</entry>
+                  <entry>1.09</entry>
+                  <entry>78</entry>
+                </row>
+                <row>
+                  <entry>Ex. 4</entry>
+                  <entry>Coconut Oil + P-123</entry>
+                  <entry>753.5</entry>
+                  <entry>1.18</entry>
+                  <entry>83</entry>
+                </row>
+                <row>
+                  <entry>Ex. 5</entry>
+                  <entry>Only coconut oil;</entry>
+                  <entry>353</entry>
+                  <entry>1.45</entry>
+                  <entry>164.07</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>no P-123; 158° C.</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Ex. 6</entry>
+                  <entry>Coconut oil + P = 123</entry>
+                  <entry>785</entry>
+                  <entry>1.20</entry>
+                  <entry>60.88</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>105° C. reaction temp, </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>10 days.</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Ex. 7</entry>
+                  <entry>Only coconut oil;</entry>
+                  <entry>674</entry>
+                  <entry>1.21</entry>
+                  <entry>72.02</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>no P-123,</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>105° C. reaction temp</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>CEx. A</entry>
+                  <entry>P-123 + TMB</entry>
+                  <entry>1006</entry>
+                  <entry>2.07</entry>
+                  <entry>82</entry>
+                </row>
+                <row>
+                  <entry>CEx. B</entry>
+                  <entry>CTAB</entry>
+                  <entry>1425</entry>
+                  <entry>1.08</entry>
+                  <entry>25</entry>
+                </row>
+                <row>
+                  <entry>CEx. C</entry>
+                  <entry>CTAB + TMAOH</entry>
+                  <entry>986</entry>
+                  <entry>0.95</entry>
+                  <entry>30</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00019-en" level="1">Comparative Example G</heading>
+      <p id="p-00038-en" num="0035">Measure and graph pore diameter distributions for samples from Examples 1-7 and Comparative Examples A-B in order to determine mean and standard deviations of pore diameter versus total pore volume. Pore volume is defined as the sum of the volumes of all pores in one gram of adsorbent, or the volume of pores in cubic centimeters (cm<sup>3</sup>) per gram of material. These graphs show that pore volumes and diameters do not necessarily correlate, and that, for example, a high pore volume may not indicate large pore diameters, and vice versa. FIGS. 1-7 correspond to Examples 1-7; FIG. 8 corresponds to Comparative Example A; and FIG. 9 corresponds to Comparative Example B. FIGS. 1-7 show that the inventive Examples 1-7 show a pore diameter distribution that, within one standard deviation of the mean thereof, are substantially unimodal as defined.  </p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A process for preparing a mesoporous silica composition comprising contacting as starting components (1) a structure-directing template selected from the group consisting of partially and fully hydrogenated and non-hydrogenated oils and combinations thereof; (2) water; (3) silica;
+<claim-text>and, optionally, (4) a structure-directing co-template selected from tetramethylammonium hydroxide, tetraethylammonium hydroxide, tetrapropylammonium hydroxide, cetyltrimethylammonium bromide (CTAB), hexadecyltrimethylammonium chloride; hexadecyltrimethylammonium hydroxide hydrate, hexadecyltrimethylammonium p-toluenesulfonate, hexadecyltrimethylammonium bis-sulfonate, poloxamers having a weight average molecular weight ranging from 5,000 to 20,000 Daltons (Da), and combinations thereof; in the substantial absence of an alcohol solvent; under conditions such that a mesoporous silica having an average pore diameter ranging from 50 angstroms to 175 angstroms and a pore diameter distribution that, within one standard deviation of the mean thereof, is substantially unimodal, is formed.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the structure-directing template (1) is selected from the group consisting of fully and partially hydrogenated and non-hydrogenated oils from animal, plant and mineral sources, and synthetic oils.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the structure-directing template (1) is selected from the group consisting of plant-based oils selected from castor oil, mustard oil, cottonseed oil, rapeseed oil, palm oil, sunflower oil, peanut oil, soybean oil, corn oil, coconut oil, linseed oil, sesame oil, and combination thereof; clarified butter; mineral-based oils selected from hydrocracked and hydroisomerized hydrocarbon oils and combinations thereof; synthetic oils selected from silicone oils, polyalphaolefin oils, non-polyalphaolefin oils including diesters, polyolesters, alkylated naphthalenes, alkylated benzenes, and combinations thereof; and combinations thereof.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein (4) is a poloxamer comprising (a) a non-ionic triblock copolymer based on poly(ethylene glycol)-poly(propylene glycol)-poly(ethylene glycol), having a molecular weight of 5,800 Daltons, and (b) a hydrophilic nonionic, surfactant polyol having a central hydrophobic block and a molecular weight of 12,500 Daltons.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, based upon one mole of the silica (3), the amount of the structure-directing template (1) ranges from 0.1 to 1.0 mole; the amount of the water (2) ranges from 20 to 80 moles; and the amount of the optional structure-directing co-template (4) ranges from 0 to 0.7 mole.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the starting components are stirred at a rate from 300 to 700 revolutions per minute while the mesoporous silica composition is forming.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the conditions are selected from the group consisting of a temperature ranging from 25° C. to 190° C.; a time ranging from 5 to 100 hours; a pressure ranging from 101 to 1000 kilopascals; and combinations thereof.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The mesoporous silica composition formed by the process of <claim-ref idref="clm-00001-en">claims 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The mesoporous silica composition of <claim-ref idref="clm-00008-en">claim 8</claim-ref> having an average pore diameter ranging from 50 angstroms to 175 angstroms and a pore diameter distribution that, within one standard deviation of the mean thereof, is substantially unimodal.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The mesoporous silica composition of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, further defined as having a Brunauer-Emmett-Teller surface area from 300 to 1000 square meters per gram and an average pore volume ranging from 0.4 to 1.5 cubic centimeters per gram.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246817A1_00001.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246817A1-20150903-P00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246817A1_00002.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246817A1-20150903-P00002.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246817A1_00003.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246817A1-20150903-P00003.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246817A1_00004.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246817A1-20150903-P00004.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246817A1_00005.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246817A1-20150903-P00005.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246817A1_00006.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246817A1-20150903-P00006.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246817A1_00007.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246817A1-20150903-P00007.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246817A1_00008.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246817A1-20150903-P00008.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246817A1_00009.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246817A1-20150903-P00009.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150246817A1.PDF" type="pdf" size="755722" pages="15" />
+</lexisnexis-patent-document>

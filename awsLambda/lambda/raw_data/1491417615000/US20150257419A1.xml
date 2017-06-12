@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257419A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030233" date-changed="20151214" time-changed="112941">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316534">
+        <country>US</country>
+        <doc-number>20150257419</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14280989</doc-number>
+        <date>20140519</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A23L   1/18        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A23L   1/1812      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>1812</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">28</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Hot Air Popcorn Popper</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61952595</doc-number>
+          <date>20140313</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Focus Products Group International, LLC</orgname>
+            <role>02</role>
+            <address>
+              <city>Lincolnshire</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Mastroianni</last-name>
+            <first-name>Michael R.</first-name>
+            <address>
+              <city>Crystal Lake</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Liu</last-name>
+            <first-name>Rong</first-name>
+            <address>
+              <city>Vernon Hills</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sohi</last-name>
+            <first-name>Bikram</first-name>
+            <address>
+              <city>Buffalo Grove</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bucklew</last-name>
+            <first-name>William A.</first-name>
+            <address>
+              <city>Wilmette</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173670571">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257419</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140519</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173692706">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015138952</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257419</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140519</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A popcorn popping unit has a heating element and a blower fan, and a cooking surface adapted to receive kernels of corn. The popping unit is configurable for two flow paths of pressurized air through the popping unit. In the first path, pressurized air is configured to flow over the heating element, flow over the cooking surface, cook the kernels of corn, and move the cooked kernels of corn to a serving dispenser. In a second path, pressurized air is configured to flow over the cooking surface, and move un-popped seeds into a seed collection bin.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140812</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257419A1</docdb-publication-number>
+      <docdb-application-id>444510530</docdb-application-id>
+      <new-owner>FOCUS PRODUCTS GROUP INTERNATIONAL, LLC, ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:MASTROIANNI, MICHAEL R.;LIU, RONG;SOHI, BIKRAM;AND OTHERS;REEL/FRAME:033516/0438</free-text-description>
+      <effective-date>
+        <date>20140811</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150109</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257419A1</docdb-publication-number>
+      <docdb-application-id>444510530</docdb-application-id>
+      <new-owner>BANK OF AMERICA, N.A., AS LENDER, ILLINOIS</new-owner>
+      <free-text-description>PATENT SECURITY AGREEMENT;ASSIGNOR:FOCUS PRODUCTS GROUP INTERNATIONAL, LLC;REEL/FRAME:034747/0863</free-text-description>
+      <effective-date>
+        <date>20141224</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20150109</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257419A1</docdb-publication-number>
+      <docdb-application-id>444510530</docdb-application-id>
+      <new-owner>SJC DLF II-H, LLC, AS AGENT, CONNECTICUT</new-owner>
+      <free-text-description>PATENT SECURITY AGREEMENT;ASSIGNOR:FOCUS PRODUCTS GROUP INTERNATIONAL, LLC;REEL/FRAME:034747/0027</free-text-description>
+      <effective-date>
+        <date>20141224</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">RELATED APPLICATION DATA</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of provisional application Ser. No. 61/952,595, filed Mar. 13, 2014, currently pending, the disclosure of which is incorporated by reference herein.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND AND SUMMARY</heading>
+      <p id="p-00002-en" num="0002">This application relates to hot air popcorn poppers. The popcorn popper has an on-board storage compartment for storing un-popped kernels of corn. The un-popped kernels of corn may be directed from the storage compartment to cooking surfaces via a seed feeding assembly. The seed feeding assembly may have a metering scoop that provides a desired serving size of kernels. A popping chamber may be arranged around and above the cooking surfaces. Once the kernels are cooked and popped, they may flow into the popping chamber and into a hood assembly arranged at an open end of the popping chamber opposite the cooking surfaces. The popped kernels may exit through an opening in the hood assembly into a dispensing bowl. The popping unit may have a bypass that may be positioned between first and second positions. In the first position, the bypass may be selected such that popped kernels may flow through the popping chamber, to the hood assembly, and to the serving dispenser, for instance, during normal popping operations. In the second position, the bypass may be selected to allow seeds and other uncooked kernels to be removed from the cooking surface to a seed cleaning chamber of the popping unit.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00003-en" num="0003">
+        <figref>FIG. 1</figref> shows a perspective view of the popping unit.</p>
+      <p id="p-00004-en" num="0004">
+        <figref>FIG. 2</figref> shows a perspective view of the popping unit of <figref>FIG. 1</figref> with a portion of a housing removed to show internal components of the popping unit.</p>
+      <p id="p-00005-en" num="0005">
+        <figref>FIG. 3</figref> shows a partial perspective view of a seed feeding assembly of the popping unit.</p>
+      <p id="p-00006-en" num="0006">
+        <figref>FIG. 4</figref> shows a partial side elevation view of the seed feeding assembly.</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 5</figref> shows a partial side elevation view of the popping unit with a portion of the housing removed to show internal components of the bypass and seed cleaning assembly.</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 6</figref> shows a partial perspective view of the bypass and seed cleaning assembly.</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 7</figref> shows a partial perspective view of the popping unit in a normal popping mode.</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 8</figref> shows a partial perspective view of the popping unit after normal popping operations have stopped.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 9</figref> shows a partial side elevation view of the popping unit during seed cleaning operations with a handle to the seed feeding assembly removed for ease of illustration.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 10</figref> shows a perspective view of another embodiment of a popping unit.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 11</figref> shows a rear perspective view of the popping unit of <figref>FIG. 10</figref> with a housing of the popping unit removed for ease of illustrating components of the popping unit.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 12</figref> shows a front perspective view of the popping unit of <figref>FIG. 10</figref> with the housing removed for ease of illustrating components of the popping unit.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 13</figref> shows a side perspective, cross sectional view of the popping unit of <figref>FIG. 10</figref> with the housing removed for ease of illustrating components of the popping unit.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 14</figref> shows a side perspective, and cross sectional view of a seed storage compartment and a popping vessel of the popping unit of <figref>FIG. 10</figref> with the housing removed for ease of illustrating components of the popping unit.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 15</figref> shows a perspective view of a scoop of the popping unit of <figref>FIG. 10</figref>.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 16</figref> shows a partial, cross-section view of an alternate embodiment of a popping vessel of a popping unit configured for mechanical removal of un-popped kernels.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 17</figref> shows an exploded view of the popping vessel of the popping unit of <figref>FIG. 16</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 1</figref> illustrates a perspective view of a popping unit <b>20</b>. The popping unit <b>20</b> comprises a housing <b>22</b> that houses internal components of the popping unit as will be described later in reference to <figref>FIG. 2</figref>. The popping unit <b>20</b> has a popping chamber <b>24</b> which may be arranged within the housing <b>22</b>. A hood assembly <b>26</b> may be positioned at an open top end of the popping chamber and releasably connected therewith and/or the housing <b>22</b>. A storage compartment <b>28</b> for un-popped kernels may be arranged exterior to the housing. A seed feeding assembly <b>30</b> may direct un-popped kernels from the storage compartment to cooking surfaces of the popping unit. A seed cleaning assembly <b>32</b> may be arranged in the housing interior opposite the seed feeding assembly <b>30</b>.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 2</figref> shows a perspective view of the popping unit <b>20</b> with a portion of a housing <b>22</b> removed to show internal components of the popping unit. In <figref>FIG. 2</figref>, a bottom portion of the housing <b>22</b> is shown. The housing <b>22</b> of the popping unit defines a generally hollow interior. A blower fan assembly <b>38</b> and a heating element <b>42</b> may be disposed in the hollow interior. Through the action of the blower fan <b>38</b>, ambient air may be drawn into the hollow interior through openings <b>46</b> in the housing. The openings <b>46</b> may be formed on a bottom of the housing. The bottom of the housing <b>22</b> may be raised off a countertop or support surface by feet (<figref>FIG. 1</figref>; ‘<b>48</b>’) to allow adequate air to be drawn into the housing interior. The blower fan and/or heating element may be battery powered or powered from a DC power source or external AC power source and/or with a power cord <b>50</b>. The blower fan and/or heating element may be de-energized with a switch located (<figref>FIG. 1</figref>; ‘<b>52</b>’) on the housing. In the alternative, the switch may be located on the power cord. The switch may be manual or operated via a timer. A plenum <b>54</b> located in an upper part of the housing interior may direct the heated air to a cooking grate <b>56</b> and/or cooking surfaces <b>58</b> after passing over the heating element. In the upper part of the housing interior, the cooking grate <b>56</b> and/or the cooking surface <b>58</b> may be provided. Un-popped kernels may be placed on the cooking surface and or grate. The grate may be surrounded with a cooking surface. The cooking surface may comprise a frustra-conical shape with the grate extending across the bottom cooking surface. Un-popped kernels may slide down the cooking surface to the grate. The hot air may exit the plenum and circulate around the cooking surface and pass through the grate, thereby heating the kernels and enabling the kernels to pop. Once the kernels pop, the kernels may expand upward into the popping chamber <b>24</b> from the cooking grate and/or cooking surfaces. The pressurized, heated air may flow through the popping chamber to the hood assembly <b>26</b> and out through an opening <b>60</b> in the hood assembly. The pressurized and heated air may push popped kernels away from the cooking grate and cooking surface into the popping chamber, thereby allowing other un-popped kernels to be positioned on the cooking surface and cooking grate. The heated air has sufficient pressure and velocity to push the popped kernels through the popping chamber and out through the hood assembly into a serving dispenser (not shown) during normal popping operations, as will be described in greater detail below.</p>
+      <p id="p-00022-en" num="0022">The hood assembly <b>26</b> may be detachably connected to the open top end of the popping chamber <b>24</b>. The hood assembly <b>26</b> may be formed from a plastic material. The hood assembly may snap across the open top of the popping chamber or may be rotatably connected to the popping chamber at the open top. The hood assembly <b>26</b> may have an access <b>62</b> with a lid to allow access into the popping chamber with the hood assembly in place. The access lid <b>62</b> may comprise a measuring scoop to assist the user in measuring kernels and seasonings that may be sprinkled on the popped kernels in the serving dispenser. The access lid scoop <b>62</b> may be detachably connected to the hood assembly <b>26</b> for ease of storage and to provide access into the interior of the popping chamber.</p>
+      <p id="p-00023-en" num="0023">The seed storage compartment <b>28</b> of the popping unit may be located on the exterior of the popping unit to facilitate filling of the storage compartment and to allow visualization of the level of kernels stored in the compartment. The storage compartment <b>28</b> may be located opposite the opening <b>60</b> of the hood assembly <b>26</b> as shown in the drawings. The storage compartment may be formed from a clear plastic material to allow the user to visualize the level of seeds stored in the storage compartment. The storage compartment may also be located in the hollow interior of the housing and may have a sight glass to indicate the level of kernels in the storage compartment.</p>
+      <p id="p-00024-en" num="0024">Making reference to <figref>FIGS. 3 and 4</figref>, the seed feeding assembly <b>30</b> may be arranged under the storage compartment <b>28</b>. The seed feeding assembly <b>30</b> may have a chute <b>68</b> that extends from the bottom of the storage compartment <b>28</b> through the housing to the popping chamber <b>24</b>. For ease of illustration, the housing is not shown in <figref>FIGS. 3 and 4</figref>. The seed feeding assembly may have a scoop <b>70</b> disposed in the chute. The seed feeding assembly may comprise a lever or knob <b>72</b> for operating the scoop. The scoop <b>70</b> may be positioned at the bottom of the chute to receive the kernels directly from the storage compartment <b>28</b> through the action of gravity into an open end of the scoop. The scoop <b>70</b> enables the user to measure a desired amount of kernels for popping. The scoop <b>70</b> may have an interior sized to hold a single or desired serving size of kernels. The scoop <b>70</b> may be rotatably disposed in the chute. Accordingly, the chute <b>68</b> may be formed with a generally cylindrical shape prior to its entry in the popping chamber <b>24</b>, and the scoop <b>70</b> may rotate within the generally cylindrical shaped portion of the chute. In this arrangement, the amount of kernels to be introduced to the cooking surface and cooking grate may equate to the volume of the scoop taking into account the cylindrical shaped portion of the chute through which the scoop rotates.</p>
+      <p id="p-00025-en" num="0025">The scoop <b>70</b> may have an exterior with arcuate surfaces <b>74</b> to allow the scoop to rotate in the generally cylindrical shaped portion of the chute. The arcuate surfaces <b>74</b> of the scoop may be arranged in a cooperating manner with the chute and the popping chamber to allow the scoop to be open with the either the chute (for instance, when filling the scoop from the storage compartment) or the popping chamber (for instance, when emptying the scoop and directing the kernels to the cooking surfaces and cooking grate). For instance, making reference to <figref>FIGS. 3 and 4</figref>, as the scoop is rotated in the counter-clockwise position, the leading edge <b>76</b> of the scoop moves from a filling position (<figref>FIG. 3</figref>) in which the leading edge is adjacent to the bottom edge of the chute <b>68</b> to close the chute from the popping chamber, to an emptying position (<figref>FIG. 4</figref>) in which the leading edge rotates away from the bottom edge of the chute to allows kernels in the scoop to flow from the scoop opening into the popping chamber and cooking grate. In the filling position (<figref>FIG. 3</figref>), a lagging edge <b>78</b> of the scoop may be positioned away from the bottom of the chute <b>68</b>, thereby allowing the kernels in the storage compartment to flow via gravity in to the trough. In the emptying position (<figref>FIG. 4</figref>), the lagging edge <b>78</b> may be positioned adjacent to the bottom of the chute, thereby preventing kernels in the storage compartment <b>28</b> from flowing out of the storage compartment down the chute and into the popping chamber. Accordingly, the leading and lagging edges <b>76</b>,<b>78</b> of the trough may be geometrically configured to seal and unseal with the chute <b>68</b> as desired when the scoop <b>70</b> is rotated within the seed feeding assembly <b>30</b>. The scoop <b>70</b> may only oscillate along a small arc segment between filling and emptying positions. For instance, as shown in the drawings, the scoop may rotate less than a quarter turn to allow the scoop to empty its contents into the popping chamber.</p>
+      <p id="p-00026-en" num="0026">The lever arm or knob <b>72</b> may be directly coupled to the scoop via an axle <b>80</b> that is rotatably connected to side walls of the chute. In this configuration the lever arm or knob may rotate or oscillate the same amount as the scoop as the scoop is moved between the filling and emptying positions. The lever arm or knob may have indicia representative of the filling and emptying positions. The lever arm or knob may include mechanisms to make audible sounds representative of the filling and emptying positions. The lever arm or knob may include mechanisms to restrict its rotary motion to allow movement only between the filling and emptying positions.</p>
+      <p id="p-00027-en" num="0027">The scoop <b>70</b> may have a bottom <b>82</b> extending between the arcuate surfaces <b>74</b> that generally conforms to the interior contour of the popping chamber <b>24</b>. For instance, as shown in the drawings, the bottom <b>82</b> of the scoop is flat and conforms to the side walls of the popping chamber <b>24</b>. The bottom of the scoop may be other shapes. The bottom of the scoop may form a seal or be tight fitting with the popping chamber and the chute to prevent pressurized, heated air from leaking from the popping chamber into the chute and into the storage container.</p>
+      <p id="p-00028-en" num="0028">The seed cleaning assembly <b>32</b> may be arranged on the popping unit opposite the seed feeding assembly <b>30</b>. The seed cleaning assembly <b>32</b> may comprise an un-popped seed bin <b>90</b> that is separated from the popping chamber <b>24</b> during normal operations by a bypass <b>92</b>. In normal popping operations, the bypass <b>92</b> is positioned in a manner such that pressurized air flows from the blower fan assembly <b>38</b>, through the cooking grate <b>56</b>, through the popping chamber <b>24</b> and out through the opening <b>60</b> of the hood assembly <b>26</b>. In this way, the popped kernels cooked on the cooking surface <b>58</b> and grate <b>56</b>, expand upward through the popping chamber <b>24</b> through the hood assembly <b>26</b> and into a serving dispenser. In seed cleaning operations, the bypass <b>92</b> is positioned in a manner such that pressurized air flows from the blower fan assembly <b>38</b>, through the cooking grate <b>56</b>, and into the un-popped seed bin <b>90</b>. In this way, un-popped kernels on the cooking surface <b>58</b> and grate <b>56</b> may be swept into the un-popped seed bin via the pressurized air.</p>
+      <p id="p-00029-en" num="0029">The bypass <b>92</b> may comprise a seed bin door positionable in the popping chamber <b>24</b>. The seed bin door may be pivotally connected to the popping chamber. As shown in the drawings, the seed bin door <b>92</b> is pivotally connected to a top portion of the popping chamber. The bypass may also be slidingly movable to control flow between the cooking grate and/or surfaces, and the hood assembly or the un-popped seed bin. In normal operations, the seed bin door <b>92</b> may be in a closed position where the door conforms to the interior of the popping chamber and allows pressurized air to flow from the blower unit, through the cooking grate, through the popping chamber and out through the hood assembly. In seed cleaning operations, the seed bin door <b>92</b> may be in an open position where the seed bin door extends into the popping chamber <b>24</b> to form a seal in the popping chamber otherwise blocking the path through the popping chamber to the hood assembly. In the open position, the seed bin door <b>92</b> opens an access <b>94</b> in the popping chamber interior which in turn creates a path directing any un-popped seeds from the cooking grate <b>56</b> and cooking surface <b>58</b> into un-popped seed bin. As shown in the drawings, the path <b>96</b> may comprise a portion of the popping chamber. However, the seed bin door may be positioned in the popping unit to enable the un-popped seeds to flow directly from the cooking grate and cooking surfaces to the un-popped seed bin <b>90</b>. The un-popped seed bin may be positioned in the interior of the housing as best shown in <figref>FIG. 1</figref>. The un-popped seed bin may have an access door <b>98</b> releasably attachable to the housing. The access door <b>98</b> allows the user to open the access door, access the un-popped seed bin <b>90</b>, and clean the un-popped seed bin. The un-popped seed bin access door <b>98</b> may have perforations <b>100</b> or the seed bin <b>90</b> may otherwise be vented to allow pressurized air to exit the un-popped seed bin as will be explained in greater detail below. The un-popped seed bin <b>90</b> may be integrally formed with the door <b>98</b>, for instance, as a container integrally formed with the door. In this configuration, any un-popped seeds are contained in the container as the un-popped seed bin door is removed from the housing thereby facilitating the emptying and the cleaning of the popping unit.</p>
+      <p id="p-00030-en" num="0030">The seed bin door <b>92</b> may be rotated between the open (“bypass”) position and the closed (“normal”) position with a lever <b>102</b>. The lever may be spring loaded to return the seed bin door to the closed position. The lever may also lock the seed bin door in the open (“bypass”) position. A distal end of the seed bin door may cooperate with the interior of the popping chamber to support the seed bin door in the open position. For instance, the seed bin door may snap into a groove formed in the interior of the popping chamber. The lever may be directly coupled to the door via an axle <b>104</b> or may be operatively coupled thereto with linkages. The lever may comprise a knob. The axle <b>104</b> may be operatively or directly coupled to a peripheral edge of the seed bin door <b>92</b>, thereby allowing the seed bin door to pivot along its edge between the open (“bypass”) and closed (“normal”) positions. In the bypass position, the seed bin door <b>92</b> may extend across the popping chamber <b>24</b> to seal the popping chamber and prevent unwanted or un-popped seeds from exiting through the top of the popping chamber and the hood assembly <b>26</b>. The seed bin door <b>92</b> may act as a deflector to deflect any un-popped seeds through the access <b>94</b> into the un-popped seed bin. In seed cleaning operations, the blower fan assembly <b>38</b> may be energized. However, the heating element <b>42</b> need not be energized. The blower fan may be energized once the bypass is actuated for seed cleaning operations. For instance, the popping unit may energize the blower unit <b>38</b> for seed cleaning operations automatically when the seed bin door <b>98</b> is rotated to the bypass position. A position switch in the lever or knob, or a switch actuated by the seed bin door <b>98</b> may provide signals to actuate the blower fan <b>38</b>. In the alternative, the user may actuate the blower fan manually once the seed bin door is in the bypass position. For instance, a three position switch may be provided with a position for “off,” a position for “blower on,” and a position for “blower/heater on.” The lever for the seed bin door may have a positional switch such that when the seed bin door is rotated to the open or bypass position, the blower is energized to draw air in through the housing, through the plenum, and through the cooking grate, thereby allowing pressurized air to clean the cooking grate and cooking surface and directing any un-popped kernels into the un-popped seed bin. In operation, the heating element need not be energized so ambient air is drawn into the housing for seed cleaning operations. The air drawn into the housing, blown through the un-popped seed bin may be vented from the un-popped seed bin through perforations in the un-popped seed bin compartment door.</p>
+      <p id="p-00031-en" num="0031">In normal operation, the storage compartment <b>28</b> has a volume of un-popped kernels of corn. The un-popped kernels of corn in the storage compartment <b>28</b> may slide down the chute <b>68</b> to fill the scoop <b>70</b>. The scoop lagging edge <b>78</b> is spaced from the chute <b>68</b> to allow seeds to freely flow under gravity from the storage compartment <b>28</b> into the chute to fill the scoop. The leading edge <b>76</b> of the scoop forms a seal with the chute <b>68</b>, thereby preventing any seeds from the storage compartment <b>28</b> from flowing through the chute into the popping chamber <b>24</b>. In this position, the flat bottom <b>82</b> of the scoop conforms to the interior of the popping chamber forming a virtually seamless or smooth interior in the popping chamber to allow popped kernels to easily flow from the popping chamber to the hood assembly. The seed bin door <b>92</b> is in the closed position, thereby also forming a virtually seamless or smooth interior in the popping chamber to allow popped kernels to easily flow from the popping chamber to the hood assembly.</p>
+      <p id="p-00032-en" num="0032">To begin popping operations, the scoop <b>70</b> is rotated counter-clockwise (<figref>FIGS. 3 and 4</figref>) such that the scoop lagging edge <b>78</b> forms a seal with the chute <b>68</b> and the scoop leading edge <b>76</b> rotates to a position that it clears the chute enabling the scoop opening to communicate with the popping chamber <b>24</b> and allowing seeds to flow out of the scoop into the popping chamber. Once the scoop <b>70</b> has been emptied into the popping chamber, the user may release the scoop lever <b>72</b>. The scoop lever <b>72</b> may spring return to a position such that the leading edge <b>76</b> of the scoop <b>70</b> forms a seal with the chute <b>68</b> and the lagging edge <b>78</b> of the scoop moves away from the chute to allow seeds to flow from the storage compartment through the chute into the scoop. At this point, the user may actuate the popping unit by depressing the switch <b>50</b>. Depressing the switch activates the blower fan <b>38</b> and the heating element <b>42</b>. Air is drawn in through the housing interior from the blower fan, passed over the heating element <b>42</b>, and heated. The hot air passes over the cooking grate <b>56</b> and cooking surfaces <b>58</b>, thereby cooking the kernels. The popped kernels expand through the popping chamber <b>24</b> out through the hood assembly <b>26</b> and into a serving dispenser. <figref>FIG. 7</figref> shows the path <b>106</b> of the kernels during normal cooking operations.</p>
+      <p id="p-00033-en" num="0033">Once popping operations are complete, the user may de-energize the popping unit by actuating the switch <b>50</b>. In embodiments where the popping unit has a timer, popping operations may be automatically completed upon expiration of the timer. To clean the popping unit, the user may rotate the seed bin door lever <b>102</b> to the bypass position. Once the seed bin door lever is in the bypass position, the blower fan <b>38</b> may automatically actuate. The blower fan may actuate at a low speed or the normal speed. In the seed cleaning mode, the heating element <b>42</b> need not energize, so the air that is drawn in by the blower into the popping unit housing interior is at ambient temperature. The air drawn in by blower fan <b>38</b> is directed across the cooking grate <b>56</b> and cooking surfaces <b>58</b>. The air may flow partly into the popping chamber <b>24</b> (for instance as shown in <figref>FIG. 6</figref>) and through the access <b>94</b> into the un-popped seed bin <b>90</b>. The flow clears any un-popped seeds from the cooking surface and cooking grate into the un-popped seed bin. The air flowing into the un-popped seed bin <b>90</b> exits the popping unit through perforations <b>100</b> formed in the un-popped seed bin access door <b>98</b>. After cleaning operations are complete, the unit may again be de-energized. The un-popped seed bin access door <b>98</b> may be opened and any un-popped seeds may be removed from the un-popped seed bin <b>90</b>.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIGS. 10-15</figref> show an alternate embodiment of a popping unit <b>220</b>. Many of the components of the popping unit <b>220</b> are similar to those previously described. For the sake of brevity, they will not be addressed herein unless they differ significantly from those previously described. Generally speaking, the popping unit <b>220</b> includes a housing <b>222</b> that defines the hollow interior of the popping unit. The popping unit <b>220</b> has a popping chamber <b>224</b> which may be arranged within the housing <b>222</b>. A hood assembly <b>226</b> may be positioned at an open top end of the popping chamber and releasably connected therewith and/or the housing <b>222</b>. The popping unit has a storage compartment <b>228</b> for unpopped kernels. As shown in the drawings, the seed storage compartment <b>228</b> may be located opposite the opening of the hood assembly. The storage compartment <b>228</b> may be formed of a clear plastic material to allow the user to visual the level of seed stored in the storage compartment. A seed feeding assembly <b>230</b> directs unpopped kernels from the storage compartment to the cooking surfaces of the popping unit. A seed cleaning assembly <b>232</b> may be arranged in the housing interior opposite the seed feeding assembly <b>230</b>.</p>
+      <p id="p-00035-en" num="0035">In the interior of the housing is a blower fan assembly <b>238</b> and a heating element <b>242</b> that are disposed in the housing hollow interior. The blower fan and/or heating element may be de-energized with a switch assembly located <b>252</b> on the housing. Through the action of the blower fan <b>238</b>, ambient air is drawn into the hollow interior through openings in the housing bottom. Heated air flows through the popping chamber <b>224</b> to the hood assembly <b>226</b> and out through an opening in the hood assembly. In this way, the pressurized heated air pushes popped kernels away from the cooking surfaces in the popping chamber, allowing other unpopped kernels to be positioned on the cooking surface and cooking grate.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIGS. 11-15</figref> provide additional detail of the seed feeding assembly <b>232</b> and a scoop <b>270</b> positioned in a chute <b>268</b> under the seed storage compartment <b>228</b>. The scoop <b>270</b> may be rotatably disposed in the chute <b>268</b> and operatively connected to a lever arm <b>272</b>. The lever arm <b>272</b> may be operatively connected to a gearing system <b>273</b> which drives the scoop <b>270</b> in a pivoting manner about an axle <b>280</b> defining an axis of rotation of the scoop in the chute <b>268</b>. As discussed previously, the scoop <b>270</b> may be sized to meter an amount of kernels to the cooking surface based upon a serving size. The chute <b>268</b> may have a smooth transition area <b>274</b> adjacent to the scoop and the transition area <b>274</b> may be curved to facilitate delivery of the kernels down the shoot into the scoop. The curved transition area <b>274</b> in the chute may reduce the likelihood of kernels becoming jammed in the chute between the chute and the scoop <b>270</b>.</p>
+      <p id="p-00037-en" num="0037">As shown in <figref>FIG. 15</figref>, the scoop has a leading edge <b>276</b> and a lagging edge <b>278</b>. The lagging edge <b>278</b> which may be formed with teeth or serrations. The lagging edge teeth or serrations may be formed of a resilient material, which may be rubber or silicone. Forming the lagging edge <b>278</b> with teeth or serrations and forming the teeth or serration from a resilient material reduces resistance in the chute <b>268</b> as the scoop <b>270</b> is pivoted therein, and assists in reducing the possibility of kernels jamming the scoop during operation.</p>
+      <p id="p-00038-en" num="0038">The seed cleaning assembly <b>232</b> may be arranged on the popping unit <b>220</b> opposite the seed feeding assembly <b>230</b>. The seed cleaning assembly <b>232</b> may comprise an unpopped seed bin <b>290</b> that is separated from the popping chamber during normal operations by a bypass <b>292</b>. To align the seed cleaning bin <b>292</b> with the popping vessel or popping chamber <b>224</b>, the bypass <b>292</b> is positionable across the normal opening of the popping chamber to divert the flow of pressurized air into the unpopped seed bin <b>290</b>. In the embodiment of the popping unit <b>220</b> shown in <figref>FIGS. 10-15</figref>, the switch assembly <b>252</b> may include an actuator <b>293</b> that is mechanically linked to the bypass <b>292</b> with a rack <b>294</b> and pinion gear <b>295</b>. The rack <b>294</b> extends vertically in the drawings from the switch assembly <b>252</b> to pinion gear <b>295</b>. As best shown in <figref>FIGS. 11 and 12</figref>, the switch assembly <b>252</b> has three positions. The middle position is an off position. In the most vertically upward position (i.e., the normal popping mode), the actuator <b>293</b> of the switch assembly engages a switch <b>296</b> which energizes the blower fan <b>238</b> and the heating element <b>242</b> for normal popping operations. In the most vertically downward position, the actuator <b>293</b> of the switch assembly engages a switch <b>297</b> that energizes the blower fan <b>238</b> for seed cleaning operations. In the most vertically downward position (i.e., the cleaning mode), the blower unit <b>238</b> is energized but the heating element <b>242</b> is not such that pressurized air may flow through the blower unit in the popping chamber through the bypass <b>292</b> into the seed cleaning bin <b>290</b>. The rack <b>294</b> and switch assembly <b>252</b> is configured to allow vertical motion of the switch actuator <b>293</b> upward to engage the switch <b>296</b> for the normal popping mode without movement of the rack. The switch actuator <b>293</b> has a slot and the rack <b>294</b> is configured to slide in the slot of the arm. With upward movement of the switch assembly, the switch actuator freely slides along the rack (with the rack in the slot) to the required vertical position to energize the switch <b>296</b> for energizing the blower <b>238</b> and heating element <b>242</b>. With downward movement of the switch assembly <b>252</b>, the switch actuator engages a flange <b>298</b> on a distal end of the rack <b>294</b>. Vertically downward motion drives the rack vertically downward to the required vertical position to energize the switch <b>297</b> for energizing the blower <b>238</b> only. Vertically downward motion also drives the rack <b>294</b> vertically downward to rotate the pinion gear <b>295</b> (counter-clockwise rotation in <figref>FIG. 11</figref>). This in turn pivots the bypass <b>292</b> across the popping vessel or popping chamber <b>224</b>. The pivot connection comprises an axle <b>304</b> which is driven by the rack <b>294</b> and the pinion gear <b>295</b>. The switch assembly may have a spring <b>305</b> to return the switch actuator <b>293</b> to the neutral off position from the most vertically downward position during seed cleaning operations. The spring <b>305</b> moves the rack <b>294</b> upward in the drawings and causes rotation of the pinion gear <b>295</b> to reposition the bypass <b>292</b> to seal the popping chamber <b>224</b> for normal popping operations. In such an arrangement, to maintain the bypass <b>292</b> in the bypass position for seed cleaning operations, the switch assembly <b>252</b> must be held by the user in the vertically for cleaning operations and released when cleaning operations are finished. The spring may be omitted and the user may return the switch assembly to the neutral position manually thereby manually repositioning the rack and the pivoting the bypass to the normal position. Another pivot mechanism may also be provided to position the bypass across the popping chamber.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIGS. 16 and 17</figref> show an alternate embodiment of a popping unit <b>420</b> and a popping chamber assembly <b>424</b> therefor. In the popping unit <b>420</b> associated with the popping chamber assembly <b>424</b> of <figref>FIGS. 16 and 17</figref>, the popping unit uses mechanical seed cleaning methods rather than the automatic seed cleaning methods described previously. The popping chamber assembly <b>424</b> is shown with a portion cut-way for ease of illustration. The popping chamber assembly <b>424</b> includes a ladle member <b>426</b> which is positioned in the popping chamber <b>428</b> above the heated air plenum <b>430</b> associated with the popping unit. The popping chamber <b>428</b> comprises a cylindrical tubular member with a hollow interior and open axial ends. The bottom axial end is position over the heated air plenum <b>430</b> and the top end exits to a hood assembly. The ladle member <b>426</b> is removably attached to the popping chamber <b>428</b> and may be removed from the popping chamber by the user to clean and remove unwanted kernels from the popping unit. A rim <b>432</b> around the top open end of the popping chamber <b>428</b> may have a notch <b>434</b> to releasably secure the ladle member <b>426</b> to the popping chamber <b>428</b>. The rim <b>432</b> may define the transition of the popping chamber to the hood assembly and the opening of the hood. The ladle member comprises a tab <b>436</b> with a depending arm <b>438</b> extending to a screen portion <b>440</b>. The screen portion <b>440</b> may contain the kernels. The kernels may be delivered to the popping chamber and located on the screen portion <b>440</b> via the seed feeding mechanisms previously described. In the alternative, the seeds may be manually introduced to the popping chamber and located on the screen portion <b>440</b>. For instance, the user may detach the hood assembly from the popping chamber exposing the inside of the popping chamber and allowing the user to place seeds for popping on the screen portion <b>440</b> of the ladle member <b>426</b>. The ladle member screen portion <b>440</b> may have a flexible outer rim <b>442</b> to allow the screen portion to conform to the bottom opening of the popping chamber adjacent to the heated air plenum <b>430</b>. The screen portion <b>440</b> may form the cooking surfaces associated with the popping unit <b>420</b>. The screen portion <b>440</b> allows heated and pressurized air to flow through the screen portion to pop the kernels and direct the popped kernels through the popping chamber and out through the top opening and into the hood assembly. Once popping operations are completed, the hood assembly may be detached from the popping chamber assembly <b>424</b> to expose the inside of the popping chamber <b>428</b> and the ladle member tab <b>436</b>. The ladle member tab <b>436</b> may then be released from the notch <b>434</b> in the rim <b>432</b> and lifted vertically upward. Unpopped kernels collected on the screen portion <b>440</b> may be removed from the popping chamber. Once the kernels are removed and discarded, the ladle member <b>426</b> may be repositioned in the popping chamber for future use with the tab <b>436</b> engaged in the notch <b>434</b> and the screen portion <b>440</b> positioned over the heated air plenum <b>430</b>.</p>
+      <p id="p-00040-en" num="0040">In view of the foregoing, it will be seen that the several advantages are achieved and attained. The embodiments were chosen and described in order to best explain a practical application to thereby enable others skilled in the art to best utilize the principles herein in various embodiments and with various modifications as are suited to the particular use contemplated. As various modifications could be made in the constructions and methods herein described and illustrated without departing from the scope of the invention, it is intended that all matter contained in the foregoing description or shown in the accompanying drawings shall be interpreted as illustrative rather than limiting. Thus, the breadth and scope of the present invention should not be limited by any of the above-described exemplary embodiments, but should be defined only in accordance with the following claims appended hereto and their equivalents.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A popcorn popping unit having a heating element and a blower fan, a cooking surface adapted to received kernels of corn, the popping unit being configurable for two flow paths of pressurized air through the popping unit; and
+<claim-text>wherein in the first path, pressurized air is configured to flow over the heating element, flow over the cooking surface, and move cooked kernels of corn to a serving dispenser; and</claim-text><claim-text>wherein in the second path, pressurized air is configured to flow over the cooking surface, and move un-popped seeds into a seed collection bin.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The popcorn popping unit of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the seed collection bin comprises the housing.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The popcorn popping unit of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the seed collection bin is vented.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The popcorn popping unit of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a seed storage compartment.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The popcorn popping unit of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the seed storage compartment has a chute that directs seeds from the storage compartment to the cooking surface.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The popcorn popping unit of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the chute has an inlet that receives seed from the seed storage compartment and an outlet that directs seeds from the storage compartment to the cooking surface.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The popcorn popping unit of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, further comprising a scoop in the chute.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The popcorn popping unit of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the scoop is moveable in the chute between a first position in which the scoop receives seed from the chute inlet and a second position in which the scoop empties its contents to the cooking surface.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The popcorn popping unit of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the scoop is rotatably disposed in the chute.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The popcorn popping unit of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the scoop has a bottom surface and sides extending around the bottom surface that define an open top opposite the bottom.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The popcorn popping unit of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the open top cooperates with the chute in the first position to receive seed from the chute inlet.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The popcorn popping unit of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the open top cooperates with the chute in the second position to block seed from chute inlet.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. A popcorn popping unit with a blower unit and a popping chamber, the blower unit having a heating element and a blower fan, the blower unit being adapted to direct pressurized air into the popping chamber, the popping chamber having a hollow interior with a proximal end receiving the pressurized air from the blower unit and a distal end opposite the proximal end, the popping unit having a bypass, the bypass being movable between first and second positions within the popping chamber;
+<claim-text>wherein in the first position, the bypass cooperates with the popping chamber to allow the pressurized air to flow to the through the popping chamber to the popping chamber distal end; and</claim-text><claim-text>wherein in the second position, the bypass obstructs the pressurized air flowing through the popping chamber to the popping chamber distal end, and redirects the pressurized air to a seed collection bin.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The popcorn popping unit of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein movement of the bypass to the second position forms an opening to the seed collection bin.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The popcorn popping unit of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein movement of the bypass to the second position energizes the blower.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The popcorn popping unit of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the seed collection bin comprises the housing.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The popcorn popping unit of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the seed collection bin is vented.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The popcorn popping unit of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the bypass pivots relative to the popping chamber interior.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The popcorn popping unit of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, further comprising a seed storage compartment.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The popcorn popping unit of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the seed storage compartment has a chute that communicates with the popping chamber.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The popcorn popping unit of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, further comprising a scoop in the chute.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The popcorn popping unit of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein the scoop is moveable in the chute between a first position in which the scoop receives seed from the chute inlet and a second position in which the scoop empties its contents to the cooking surface.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The popcorn popping unit of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, wherein the scoop is rotatably disposed in the chute.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The popcorn popping unit of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein the scoop has a bottom surface and sides extending around the bottom surface that define an open top opposite the bottom.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The popcorn popping unit of <claim-ref idref="clm-00024-en">claim 24</claim-ref>, wherein the open top cooperates with the popping chamber to allow seed to flow from the scoop to the cooking surface in the second position.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The popcorn popping unit of <claim-ref idref="clm-00024-en">claim 24</claim-ref>, wherein the open top cooperates with the chute outlet to direct the flow of seeds from scoop and chute outlet to the popping chamber interior in the first position.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The popcorn popping unit of <claim-ref idref="clm-00024-en">claim 24</claim-ref>, wherein the scoop bottom surface defines a portion of the interior the popping surface with the scoop in the first position.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en" independent="true">
+      <claim-text>
+        <b>28</b>. A hot air popcorn popping unit having a popping chamber with a seed support surface positioned in the popping chamber, the seed support surface being removably detachable from the popping chamber, the seed support surface being configured to allow heat air to pass therethrough into the popping chamber. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150257419A1_00017.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257419A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257419A1.PDF" type="pdf" size="1670103" pages="22" />
+</lexisnexis-patent-document>

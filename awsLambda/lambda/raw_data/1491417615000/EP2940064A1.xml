@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940064A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="090640" date-changed="20151202" time-changed="052156">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121937908">
+        <country>EP</country>
+        <doc-number>2940064</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>12890740</doc-number>
+        <date>20121228</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151105">
+      <priority-claim sequence="1" kind="international">
+        <country>WO</country>
+        <doc-number>JP12084186</doc-number>
+        <kind>W</kind>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012084186</doc-number>
+        <kind>W</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012084186</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>WO2012JP84186</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150722</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151202">
+      <classification-ipcr sequence="1">
+        <text>C08J   5/00        20060101AFI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C08L  23/06        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>23</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151202">
+      <classification-cpc sequence="1">
+        <text>C08L  23/06        20130101 FI20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>23</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B65D   1/40        20130101 LI20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>Y10T 428/1397      20130101 LA20151023BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>1397</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">7</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">STRUKTUR AUF POLYETHYLENBASIS</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">POLYETHYLENE-BASED STRUCTURE</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">STRUCTURE À BASE DE POLYÉTHYLÈNE</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Mitsubishi Gas Chemical Company, Inc.</orgname>
+            <registered-number>100981148</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>5-2, Marunouchi 2-chome Chiyoda-ku</address-1>
+              <city>Tokyo 100-8324</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>ISHII, Kentaro</name>
+            <address>
+              <address-1>c/o Mitsubishi Gas Chemical Company Inc. Hiratsuka Research Laboratory 6-2 Higashiyawata 5-chome</address-1>
+              <city>Hiratsuka-shi Kanagawa 254-0016</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>KATOU, Tomonori</name>
+            <address>
+              <address-1>c/o Mitsubishi Gas Chemical Company Inc. Hiratsuka Research Laboratory 6-2 Higashiyawata 5-chome</address-1>
+              <city>Hiratsuka-shi Kanagawa 254-0016</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>KOUNO, Kenji</name>
+            <address>
+              <address-1>c/o Mitsubishi Gas Chemical Company Inc. Hiratsuka Research Laboratory 6-2 Higashiyawata 5-chome</address-1>
+              <city>Hiratsuka-shi Kanagawa 254-0016</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>KOBAYASHI, Hiroshi</name>
+            <address>
+              <address-1>c/o Mitsubishi Gas Chemical Company Inc. Hiratsuka Research Laboratory 6-2 Higashiyawata 5-chome</address-1>
+              <city>Hiratsuka-shi Kanagawa 254-0016</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Vossius &amp; Partner Patentanwälte Rechtsanwälte mbB</name>
+            <registered-number>100751388</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Siebertstrasse 3</address-1>
+              <city>81675 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP12084186</doc-number>
+        <date>20121228</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014103054</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151105">
+      <main-family family-id="166467828">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103054</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104870529</doc-number>
+            <kind>A</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2012397741</doc-number>
+            <kind>A1</kind>
+            <date>20150716</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940064</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166467826">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103054</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104870529</doc-number>
+            <kind>A</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2012397741</doc-number>
+            <kind>A1</kind>
+            <date>20150716</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940064</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A polyethylene-based structure of the present invention is a polyethylene-based structure composed of a resin composition containing 60 to 90% by mass of a polyethylene (A), 5 to 35% by mass of an acid-modified polyethylene (B), and 5 to 35% by mass of a m-xylylene group-containing polyamide (C), wherein the m-xylylene group-containing polyamide (C) is dispersed in the form of layers in the resin composition which constitutes the structure, and the acid value of the acid-modified polyethylene (B) is from 5 to 30 mg/g.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">Technical Field</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a polyethylene-based structure having excellent barrier property and strength.</p>
+    <heading id="h-00002-en">Background Art</heading>
+    <p id="p-00002-en" num="0002">Containers for storing hydrocarbons or various chemicals or pipes for transporting these materials include, for example, bottles for chemicals, fuel tanks for automobiles or small size engines, fuel pipes, etc. Many of the metals or glasses conventionally used as raw materials of these members have been now replaced with a plastic material as an alternative material. The plastic material has advantages such as a light weight, no need of a rust-proof treatment, less breakage, and a high degree of freedom of shape as compared with metals or glasses.</p>
+    <p id="p-00003-en" num="0003">In most of the above applications, a high-density polyethylene (hereinafter sometimes abbreviated as "HDPE") is used. The HDPE has excellent mechanical strength, molding processability, and economical efficiency. However, the HDPE has a disadvantage that an article stored in a container is likely to permeate through an HDPE wall and to be scattered in the air. In recent years, regulations on the amount of permeation of gasoline for gasoline tanks made of a resin and peripheral members thereof have become stricter year by year from the viewpoint of environmental pollution, and therefore, the existing containers made of HDPE encounter difficultly in complying with such regulations. As a result, there is an increasing demand for techniques for enhancing the barrier property against gasoline.</p>
+    <p id="p-00004-en" num="0004">As a method of enhancing the fuel barrier property of an HDPE container, there is known a method of subjecting the inner surface of the HDPE container to a freon treatment or a sulfone treatment (see, for example, Patent Document 1). In addition, there is known a method of forming an HDPE container having a multilayer structure by laminating a barrier resin such as an ethylene-vinyl alcohol copolymer resin (hereinafter sometimes abbreviated as "EVOH") as an intermediate layer (see, for example, Patent Documents 2 and 3). Further, as a method of enhancing the fuel barrier property of an HDPE container, there is known a method of producing a single-layer container from a composition prepared by blending a polyamide resin such as nylon 6, 66 or EVOH together with an adhesive resin into HDPE (see, for example, Patent Documents 4 and 5). Further, there is also disclosed a method in which poly-m-xylylene adipamide (hereinafter sometimes abbreviated as "N-MXD6") having a more excellent barrier property than nylon 6, 66 is used in the above blend single-layer container (see, for example, Patent Documents 6 and 7).</p>
+    <heading id="h-00003-en">Citation List</heading>
+    <heading id="h-00004-en">Patent Documents</heading>
+    <p id="p-00005-en" num="0005">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>Patent Document 1: <patcit id="pcit-00001" dnum="JP60006735A"><text>JP-A 60-006735</text></patcit></li>
+        <li>Patent Document 2: <patcit id="pcit-00002" dnum="JP6328634A"><text>JP-A 06-328634</text></patcit></li>
+        <li>Patent Document 3: <patcit id="pcit-00003" dnum="JP7052333A"><text>JP-A 07-052333</text></patcit></li>
+        <li>Patent Document 4: <patcit id="pcit-00004" dnum="JP55121017A"><text>JP-A 55-121017</text></patcit></li>
+        <li>Patent Document 5: <patcit id="pcit-00005" dnum="JP58209562A"><text>JP-A 58-209562</text></patcit></li>
+        <li>Patent Document 6: <patcit id="pcit-00006" dnum="JP2005206806A"><text>JP-A 2005-206806</text></patcit></li>
+        <li>Patent Document 7: <patcit id="pcit-00007" dnum="JP2007177208A"><text>JP-A 2007-177208</text></patcit></li>
+      </ul>
+    </p>
+    <heading id="h-00005-en">Summary of Invention</heading>
+    <heading id="h-00006-en">Technical Problem</heading>
+    <p id="p-00006-en" num="0006">The method disclosed in Patent Document 1 in which the inner surface of the HDPE container is subjected to a Freon treatment or a sulfone treatment has an advantage that the production facility for the conventionally produced HDPE container can be used as such, but also has disadvantages that it is necessary to ensure safety against the handling of a harmful gas during a fluorine treatment, a recovery method after the treatment is problematic, and moreover, it is difficult to carry out a quality examination after a fluorinating treatment, and so on.</p>
+    <p id="p-00007-en" num="0007">According to the multilayer container disclosed in Patent Documents 2 and 3 which is formed from HDPE and EVOH, a more excellent barrier property than the conventional HDPE container can be imparted, and also the barrier performance of the container can be controlled according to the thickness of the EVOH layer laminated therein, and therefore, a container having a desired barrier property is easily produced. However, this container cannot be produced in the production facility for the HDPE single-layer container, and it is necessary to introduce a multilayer blow-molding device equipped with at least three or more extruders for extruding HDPE, an adhesive resin, and EVOH, respectively, and therefore, an economical problem remains. Further, a container produced by a direct blow method inevitably has a so-called pinch-off portion in which a parison is bitten off by a mold; however, in the above-mentioned multilayer container, a mating face of the inner HDPE layer is formed in the section of the pinch-off portion, so that a portion in which the EVOH layer is cut off is formed. When the container has a very thin wall thickness, the thickness of the mating face of the inner HDPE layer in the bitten-off portion becomes very thin, and therefore, there are practically no significant problems. However, in the case of a container requiring a high strength such as a fuel container, the thickness of an inner HDPE layer is generally set to be thick, and therefore, the container has a disadvantage that fuel easily permeates through the mating face.</p>
+    <p id="p-00008-en" num="0008">On the other hand, in the method described in Patent Document 4 or 5, nylon 6, 66 is dispersed in the form of layers in HDPE, and a single-layer container is formed from a composite material. According to the method, the facility for producing the conventional HDPE container can be substantially used, and also, since the polyamide resin is dispersed in the form of layers, a barrier property similar to that of a multilayer structure can be imparted. Further, a resin material forming cut chips or purge debris generated upon production of the container is the same as the resin material forming the container itself, and therefore, unlike the container subjected to a fluorinating treatment, the cut chips or purge debris can be reused as the material constituting the container as a recycling material.</p>
+    <p id="p-00009-en" num="0009">However, the barrier property of nylon 6, 66 used as the barrier resin itself is not so excellent, and therefore, the property is often insufficient in recent years in which the requirements for the barrier property have become stricter. In addition, in order to bring the dispersion state of nylon 6, 66 to an ideal state so that a good barrier property can be exhibited, it is necessary to strictly control the molding processing conditions, and therefore, the method cannot be applied in many cases in recent years in which the shape of containers is diversified.</p>
+    <p id="p-00010-en" num="0010">Further, according to the method disclosed in Patent Document 6 or 7 in which N-MXD6 is dispersed in the form of layers in place of nylon 6, 66, since the barrier resin itself has a considerably excellent barrier property, it is possible to obtain a container having a more excellent barrier property than the container produced using nylon 6, 66.</p>
+    <p id="p-00011-en" num="0011">However, the requirements for the barrier property have become stricter year by year, and containers which satisfy the strict requirements for the barrier property and have an excellent strength cannot be provided in some cases.</p>
+    <p id="p-00012-en" num="0012">An object of the present invention is to provide a polyethylene-based structure which can satisfy the recent strict requirements for barrier property and has an excellent strength.</p>
+    <heading id="h-00007-en">Solution to Problem</heading>
+    <p id="p-00013-en" num="0013">The present invention provides the following polyethylene-based structure.</p>
+    <p id="p-00014-en" num="0014">That is, the polyethylene-based structure is a polyethylene-based structure comprising a resin composition containing 60 to 90% by mass of a polyethylene (A), 5 to 35% by mass of an acid-modified polyethylene (B), and 5 to 35% by mass of a m-xylylene group-containing polyamide (C), wherein the m-xylylene group-containing polyamide (C) is dispersed in the form of layers in the structure and the acid value of the acid-modified polyethylene (B) is from 5 to 30 mg/g.</p>
+    <heading id="h-00008-en">Advantageous Effects of Invention</heading>
+    <p id="p-00015-en" num="0015">The polyethylene-based structure according to the present invention has an excellent barrier property against fuels and chemicals and an excellent barrier property against various gases such as oxygen, and further exhibits a strength suitable for practical use.</p>
+    <heading id="h-00009-en">Brief Description of Drawings</heading>
+    <p id="p-00016-en" num="0016">
+      <ul id="ul-00002-en" list-style="none" compact="compact">
+        <li>
+          <figref>Fig. 1</figref> is an SEM image of a section of a side wall of a tank obtained in Example 1.</li>
+        <li>
+          <figref>Fig. 2</figref> is an SEM image of a section of a side wall of a tank obtained in Comparative Example 2.</li>
+      </ul>
+    </p>
+    <heading id="h-00010-en">Description of Embodiments</heading>
+    <p id="p-00017-en" num="0017">Hereinafter, an embodiment of the present invention will be described.</p>
+    <heading id="h-00011-en">(Resin Composition)</heading>
+    <p id="p-00018-en" num="0018">The polyethylene-based structure according to the present invention is formed from a resin composition containing a polyethylene (A), an acid-modified polyethylene (B), and a m-xylylene group-containing polyamide (C). Hereinafter, these respective components contained in the resin composition will be described in detail.</p>
+    <heading id="h-00012-en">(Polyethylene (A))</heading>
+    <p id="p-00019-en" num="0019">The polyethylene (A) used in the present invention is a main material constituting the structure. The polyethylene (A) used in the present invention preferably has a specific melt viscosity, a specific molecular weight, and a specific crystallinity from the viewpoints of prevention of the occurrence of drawdown causing unevenness in thickness of the resulting molded article, enhancement of the strength of the structure itself, and a problem of a breakage, a crack, etc. upon dropping or upon applying an impact thereto.</p>
+    <p id="p-00020-en" num="0020">As an index of the crystallinity of the polyethylene, a density may be used. The density of the polyethylene (A) used in the present invention is preferably from 0.94 to 0.97 g/cm<sup>3</sup>, more preferably from 0.943 to 0.965 g/cm<sup>3</sup>, and particularly preferably from 0.945 to 0.96 g/cm<sup>3</sup>. When the density of the polyethylene (A) is 0.94 g/cm<sup>3</sup> or more, a sufficient crystallinity is obtained, and therefore, the contents to be stored in the structure can be stored regardless of the types of the contents. Further, when the density is 0.97 g/cm<sup>3</sup> or less, the polyethylene (A) is not brittle like glass, and therefore, a strength suitable for practical use can be exhibited as the structure.</p>
+    <p id="p-00021-en" num="0021">As an index for the melt viscosity and the molecular weight of a polyethylene, a melt flow rate (MFR) may be typically used. The MFR of the polyethylene (A) used in the present invention is preferably from 0.1 to 1 (g/10 min, 190°C, 2.16 kgf), more preferably from 0.1 to 0.6 (g/10 min, 190°C, 2.16 kgf), further more preferably from 0.1 to 0.55 (g/10 min, 190°C, 2.16 kgf), and most preferably from 0.15 to 0.40 (g/10 min, 190°C, 2.16 kgf) as a value measured according to the method described in JIS K 7210.</p>
+    <p id="p-00022-en" num="0022">In general, a m-xylylene group-containing polyamide has a larger density than a polyethylene, so that a polyethylene in which a m-xylylene group-containing polyamide is compounded tends to cause large drawdown upon molding processing as compared with a polyethylene solely. For this reason, in the present invention, by setting the MFR of the polyethylene (A) to 1 or less, the occurrence of drawdown upon molding processing can be suppressed, and moreover, the resulting structure has excellent thickness accuracy. Further, when the MFR of the polyethylene (A) is 0.1 or more, the melt viscosity is suitable upon molding, and also the dispersion state of the m-xylylene group-containing polyamide (C) in the resin composition constituting the resulting structure is favorable, and thus, a molded article having an excellent barrier property can be obtained.</p>
+    <p id="p-00023-en" num="0023">Further, to the polyethylene (A), an additive such as an antioxidant, a delustering agent, a heat stabilizer, a weathering stabilizer, an ultraviolet absorber, a nucleating agent, a plasticizer, a flame retardant, an antistatic agent, an anti-coloring agent, or a lubricant, or the like can be added as long as the effects of the present invention are not impaired. Further, any of various materials may be mixed therein without being limited to those described above. The polyethylene (A) is preferably composed of a high-density polyethylene alone; however, the polyethylene (A) may contain another polyethylene such as a low-density polyethylene, a medium-density polyethylene, or a linear low-density polyethylene, a colored master batch obtained by adding a pigment to a polyethylene, or the like as long as the effects of the present invention are not impaired.</p>
+    <heading id="h-00013-en">(Acid-Modified Polyethylene (B))</heading>
+    <p id="p-00024-en" num="0024">The acid-modified polyethylene (B) used in the present invention is a material which is prepared by graft-modifying a polyethylene with an unsaturated carboxylic acid or an anhydride thereof, and is generally widely used as an adhesive resin.</p>
+    <p id="p-00025-en" num="0025">Specific examples of the unsaturated carboxylic acid or anhydride thereof include acrylic acid, methacrylic acid, α-ethyl acrylic acid, maleic acid, fumaric acid, itaconic acid, citraconic acid, tetrahydrophthalic acid, chloromaleic acid, butenyl succinic acid, and anhydrides thereof. Among these, maleic acid and maleic anhydride are preferably used. As a method of obtaining an acid-modified polyethylene by graft-copolymerizing a polyethylene with the above-mentioned unsaturated carboxylic acid or anhydride thereof, various conventionally known methods can be used. For example, a method in which a polyethylene is melted using an extruder or the like, and then a graft monomer is added to the molten polyethylene to effect copolymerization, a method in which a polyethylene is dissolved in a solvent, and then a graft monomer is added to the resulting solution to effect copolymerization, a method in which an aqueous suspension of a polyethylene is prepared, and then a graft monomer is added to the aqueous suspension to effect copolymerization, and the like can be used.</p>
+    <p id="p-00026-en" num="0026">Further, the m-xylylene group-containing polyamide (C) is a relatively hard material, and therefore, a crack or peeling is liable to occur at an interface when an impact or the like is applied to the structure, so that the strength or barrier property of the structure may be impaired. For this reason, by using a material which has a relatively low density and is relatively soft as the acid-modified polyethylene (B) to be used in the present invention, a decrease in the impact strength caused by the m-xylylene group-containing polyamide (C) is lessened, and thus, it is effective in maintaining the strength suitable for practical use of the structure.</p>
+    <p id="p-00027-en" num="0027">From these viewpoints, the density of the acid-modified polyethylene (B) used in the present invention is preferably from 0.90 to 0.96 g/cm<sup>3</sup>, more preferably from 0.905 to 0.945 g/cm<sup>3</sup>, and particularly preferably from 0.91 to 0.93 g/cm<sup>3</sup>. When the density of the acid-modified polyethylene (B) is 0.90 g/cm<sup>3</sup> or more, a good compatibility is obtained between the preferred polyethylene (A) of the present invention and the acid-modified polyethylene (B), and moreover, the adhesiveness to the m-xylylene group-containing polyamide (C) is enhanced, whereby the resulting structure has excellent strength and barrier property. Further, when the density of the acid-modified polyethylene (B) is 0.96 g/cm<sup>3</sup> or less, the acid-modified polyethylene (B) has a moderate softness, and therefore, even if an impact or the like is applied to the structure, a decrease in the strength or barrier property can be prevented.</p>
+    <p id="p-00028-en" num="0028">In the present invention, the acid-modified polyethylene (B) plays a role in bonding the polyethylene (A) and the m-xylylene group-containing polyamide (C) to each other. Then, in the resin composition constituting the structure of the present invention, the m-xylylene group-containing polyamide (C) is considered to be in a state of chemical bonding to the acid-modified substituent of the acid-modified polyethylene (B), and as a result, the m-xylylene group-containing polyamide (C) is present in the vicinity of the acid-modified polyethylene (B), and thus, a difference in acid modification ratio largely contributes to the adhesive strength. Due to this, in the present invention, by adjusting the acid modification ratio of the acid-modified polyethylene (B) within a specific range, the adhesive strength between the polyethylene (A) and the m-xylylene group-containing polyamide (C) can be largely enhanced, and as a result, the barrier property of the resulting structure is largely enhanced.</p>
+    <p id="p-00029-en" num="0029">As an index of the acid modification ratio of the acid-modified polyethylene (B), an acid value may be used. The acid value in the present invention is measured according to the method described in JIS K 0070. In the present invention, the acid value of the acid-modified polyethylene (B) is set to 5 to 30 mg/g. In the present invention, if the acid value of the acid-modified polyethylene (B) is less than 5 mg/g, the adhesiveness between the polyethylene (A) and the m-xylylene group-containing polyamide (C) in the resin composition is insufficient, so that a void occurs at a bonding interface between the two materials, and as a result, the barrier property of the resulting structure is deteriorated, and moreover, the strength of the structure may be deteriorated. On the other hand, if the acid value of the acid-modified polyethylene (B) exceeds 30 mg/g, larger drawdown upon molding processing occurs, so that the thickness accuracy or</p>
+    <p id="p-00030-en" num="0030">barrier property of the structure may be deteriorated.</p>
+    <p id="p-00031-en" num="0031">The acid value of the acid-modified polyethylene (B) is more preferably from 10 to 30 mg/g, and particularly preferably from 15 to 25 mg/g. By setting the acid value within such a range, the barrier property and the strength of the structure, particularly the strength of the structure at low temperature can be enhanced with a small amount of the acid-modified polyethylene (B) without causing drawdown.</p>
+    <p id="p-00032-en" num="0032">Further, as an index of the acid modification ratio also in consideration of the amount of the m-xylylene group-containing polyamide (C), there is a value A which is obtained by converting the acid value of the acid-modified polyethylene (B) in the resin composition constituting the structure into the acid value per unit mass of the m-xylylene group-containing polyamide (C) in the resin composition and which is represented by the following formula (1). In the present invention, by further taking the value A into consideration, it is possible to compound the acidic group according to the compounding amount of the m-xylylene group-containing polyamide (C) which is the target to be bonded so as to facilitate the achievement of an appropriate adhesive property, and therefore, such a consideration is preferred. <maths id="maths-00001-en" num="(1)"><math display="block"><mrow><mi mathvariant="normal">A</mi><mo>=</mo><mi mathvariant="normal">A</mi><mfenced><mi mathvariant="normal">b</mi></mfenced><mo>×</mo><mi mathvariant="normal">P</mi><mfenced><mi mathvariant="normal">b</mi></mfenced><mo>/</mo><mi mathvariant="normal">P</mi><mfenced><mi mathvariant="normal">c</mi></mfenced></mrow></math><img id="img-00001-en" wi="82" he="5" img-content="math" file="imgb0001.tif" img-format="tif" /></maths></p>
+    <p id="p-00033-en" num="0033">(In the above formula, A(b) represents the acid value of the acid-modified polyethylene (B), P(b) represents the mass ratio of the acid-modified polyethylene (B) in the resin composition constituting the polyethylene-based structure, and P(c) represents the mass ratio of the m-xylylene group-containing polyamide (C) in the resin composition constituting the polyethylene-based structure.)</p>
+    <p id="p-00034-en" num="0034">That is, the value A is calculated by multiplying the acid value of the acid-modified polyethylene (B) [A(b)] by the mass ratio of the acid-modified polyethylene (B) in the resin composition [P(b)], and dividing the resulting value by the mass ratio of the m-xylylene group-containing polyamide (C) in the resin composition [P(b)].</p>
+    <p id="p-00035-en" num="0035">In the present invention, the value A is preferably from 5 to 40 mg/g, more preferably from 10 to 40 mg/g, further more preferably from 20 to 40 mg/g, and particularly preferably from 25 to 40 mg/g. By setting the value A to 5 mg/g or more, the adhesiveness between the polyethylene (A) and the m-xylylene group-containing polyamide (C) in the resin composition is enhanced, and as a result, the strength and barrier property of the structure are enhanced. Further, by setting the value A to 40 mg/g or less, drawdown upon molding processing is less likely to occur. Further, by setting the value A within the range of 15 to 40 mg/g, insufficient adhesion or drawdown is made further less likely to occur.</p>
+    <p id="p-00036-en" num="0036">As for the MFR of the acid-modified polyethylene (B) used in the present invention, it is preferred to use an acid-modified polyethylene having a high melt viscosity from the viewpoints of molding processing stability and retention of the strength of the structure. Specifically, the MFR of the acid-modified polyethylene (B) is preferably from 0.1 to 5 (g/10 min, 190°C, 2.16 kgf), more preferably from 0.3 to 4 (g/10 min, 190°C, 2.16 kgf), further more preferably from 0.5 to 3 (g/10 min, 190°C, 2.16 kgf), and particularly preferably from 1.0 to 2 (g/10 min, 190°C, 2.16 kgf) as a value measured according to the method described in JIS K 7210.</p>
+    <p id="p-00037-en" num="0037">Further, to the acid-modified polyethylene (B), an additive such as an antioxidant, a delustering agent, a heat stabilizer, a weathering stabilizer, an ultraviolet absorber, a nucleating agent, a plasticizer, a flame retardant, an antistatic agent, an anti-coloring agent, or a lubricant, or the like can be added as long as the effects of the present invention are not impaired. Further, any of various materials may be mixed therein without being limited to those described above.</p>
+    <heading id="h-00014-en">(m-Xylylene Group-Containing Polyamide (C))</heading>
+    <p id="p-00038-en" num="0038">The m-xylylene group-containing polyamide (C) used in the present invention is a material which imparts an effect of enhancing the barrier property of the structure. A diamine unit constituting the m-xylylene group-containing polyamide preferably contains a m-xylylenediamine unit in an amount of 70 mol% or more, more preferably 80 mol% or more, and further more preferably 90 mol% or more from the viewpoint of a gas barrier property.</p>
+    <p id="p-00039-en" num="0039">Examples of the diamine which can be used other than m-xylylenediamine include p-xylylenediamine, 1,3-bis(aminomethyl)cyclohexane, 1,4-bis(aminomethyl)cyclohexane, tetramethylenediamine, hexamethylenediamine, nonamethylenediamine, and 2-methyl-1,5-pentanediamine, but are not limited to these.</p>
+    <p id="p-00040-en" num="0040">The dicarboxylic acid unit constituting the m-xylylene group-containing polyamide (C) preferably contains an α,ω-aliphatic dicarboxylic acid in an amount of 50 mol% or more, more preferably 60 mol% or more, and further more preferably 70 mol% or more from the viewpoint of crystallinity.</p>
+    <p id="p-00041-en" num="0041">Examples of the α,ω-aliphatic dicarboxylic acid include suberic acid, adipic acid, azelaic acid, sebacic acid, and dodecanoic acid; however, adipic acid and sebacic acid are preferably used from the viewpoints of a gas barrier property and crystallinity.</p>
+    <p id="p-00042-en" num="0042">Examples of the dicarboxylic acid unit other than the α,ω-aliphatic dicarboxylic acid include alicyclic dicarboxylic acids such as 1,3-cyclohexanedicarboxylic acid and 1,4-cyclohexanedicarboxylic acid, and aromatic dicarboxylic acids such as terephthalic acid, isophthalic acid, orthophthalic acid, xylylenedicarboxylic acid, and naphthalenedicarboxylic acid, but are not limited to these.</p>
+    <p id="p-00043-en" num="0043">Among these, isophthalic acid and 2,6-naphthalenedicarboxylic acid are preferred because a polyamide having an excellent barrier property can be easily obtained without inhibiting a polycondensation reaction upon production of the m-xylylene group-containing polyamide (C). The content of isophthalic acid and 2,6-naphthalenedicarboxylic acid in the dicarboxylic acid unit is preferably 30 mol% or less, more preferably 20 mol% or less, and further more preferably 15 mol% or less from the viewpoints of the dispersibility of the m-xylylene group-containing polyamide (C) in the polyethylene-based structure and the barrier property of the structure.</p>
+    <p id="p-00044-en" num="0044">Further, as a unit constituting the m-xylylene group-containing polyamide (C) other than the above-mentioned diamine unit and dicarboxylic acid unit, a lactam such as ε-caprolactam or laurolactam, an aliphatic aminocarboxylic acid such as aminocaproic acid or aminoundecanoic acid, an aromatic aminocarboxylic acid such as p-aminomethylbenzoic acid, or the like can be used as a copolymerization unit as long as the effects of the present invention are not impaired.</p>
+    <p id="p-00045-en" num="0045">The m-xylylene group-containing polyamide (C) is produced by a melt polycondensation method (melt polymerization method). For example, there is a method in which a nylon salt composed of a diamine and a dicarboxylic acid is polymerized in a molten state in the presence of water while heating under pressure and removing added water and condensed water. Further, the m-xylylene group-containing polyamide (C) is also produced by a method in which a diamine is directly added to a dicarboxylic acid being in a molten state to effect polycondensation. In this method, in order to maintain the reaction system in a uniform liquid state, the diamine is continuously added to the dicarboxylic acid, and during such a period, the polycondensation is allowed to proceed while elevating the temperature of the reaction system such that the reaction temperature is not lowered below the melting point of an oligoamide and a polyamide to be produced.</p>
+    <p id="p-00046-en" num="0046">Further, a phosphorus atom-containing compound may be added to the polycondensation system for production of the m-xylylene group-containing polyamide (C) for obtaining an effect of accelerating the amidation reaction or an effect of preventing coloration upon the polycondensation.</p>
+    <p id="p-00047-en" num="0047">Examples of the phosphorus atom-containing compound include dimethyl phosphinic acid, phenylmethyl phosphinic acid, hypophosphorous acid, sodium hypophosphite, potassium hypophosphite, lithium hypophosphite, ethyl hypophosphite, phenylphosphonous acid, sodium phenylphosphonite, potassium phenylphosphonite, lithium phenylphosphonite, ethyl phenylphosphonite, phenylphosphonic acid, ethylphopsphonic acid, sodium phenylphosphonate, potassium phenylphosphonate, lithium phenylphosphonate, diethyl phenylphosphonate, sodium ethylphosphonate, potassium ethylphosphonate, phosphorous acid, sodium hydrogen phosphite, sodium phosphite, triethyl phosphite, triphenyl phosphite, and pyrophosphorous acid. Among these, metal salts of hypophosphorous acid such as sodium hypophosphite, potassium hypophosphite, and lithium hypophosphite are preferably used because these compounds exhibit a high effect of accelerating the amidation reaction and also have an excellent effect of preventing coloration, and sodium hypophosphite is particularly preferred. However, the phosphorus atom-containing compound which can be used in the present invention is not limited to these compounds.</p>
+    <p id="p-00048-en" num="0048">The addition amount of the phosphorus atom-containing compound added to the polycondensation system for production of the m-xylylene group-containing polyamide (C) is preferably from 1 to 500 ppm, more preferably from 5 to 450 ppm, and further more preferably from 10 to 400 ppm in terms of phosphorus atom concentration in the m-xylylene group-containing polyamide (C) from the viewpoint of prevention of coloration of the m-xylylene group-containing polyamide (C) during the polycondensation.</p>
+    <p id="p-00049-en" num="0049">It is preferred that an alkali metal compound or an alkaline earth metal compound is added in combination with the phosphorus atom-containing compound to the polycondensation system for production of the m-xylylene group-containing polyamide (C). In order to prevent coloration of the m-xylylene group-containing polyamide (C) during the polycondensation, it is necessary that the phosphorus atom-containing compound is allowed to be present in a sufficient amount in the polycondensation system, and moreover, in order to control the amidation reaction rate, it is preferred that the alkali metal compound or the alkaline earth metal compound is allowed to coexist therewith in the polycondensation system.</p>
+    <p id="p-00050-en" num="0050">Examples of the alkali metal compound or the alkaline earth metal compound include hydroxides of an alkali metal or an alkaline earth metal such as lithium hydroxide, sodium hydroxide, potassium hydroxide, rubidium hydroxide, cesium hydroxide, magnesium hydroxide, calcium hydroxide, and barium hydroxide, and acetates of an alkali metal or an alkaline earth metal such as lithium acetate, sodium acetate, potassium acetate, rubidium acetate, cesium acetate, magnesium acetate, calcium acetate, and barium acetate; however, an alkali metal compound or an alkaline earth metal compound can be used without being limited to these compounds.</p>
+    <p id="p-00051-en" num="0051">When the alkali metal compound or the alkaline earth metal compound is added to the polycondensation system for production of the m-xylylene group-containing polyamide (C), a value obtained by dividing the molar number of the compound by the molar number of the phosphorus atom-containing compound is preferably from 0.5 to 2.0, more preferably from 0.6 to 1.8, and further more preferably from 0.7 to 1.5. By setting the addition amount of the alkali metal compound or the alkaline earth metal compound within the above-mentioned range, it is possible to suppress the generation of a gel while obtaining an effect of accelerating the amidation reaction by the phosphorus atom-containing compound.</p>
+    <p id="p-00052-en" num="0052">The m-xylylene group-containing polyamide (C) obtained by the melt polycondensation is once withdrawn from the reaction system, pelletized and then dried before use. In addition, the m-xylylene group-containing polyamide (C) may be further subjected to solid-state polymerization in order to increase the polymerization degree. As a heating device to be used in the drying and solid-state polymerization, a continuous type heating and drying device, a rotary drum type heating device to be called a tumble dryer, a conical dryer, or a rotary dryer, or a conical type heating device equipped with a rotating blade therein called a Nauta mixer can be used. However, the method and the device are not limited thereto, and a known method and device can be used. In particular, when the solid-state polymerization of the polyamide is carried out, the rotary drum type heating device among the above-mentioned devices is preferably used because the system can be hermetically sealed, and also the polycondensation is allowed to easily proceed in a state where oxygen causing coloration is removed.</p>
+    <p id="p-00053-en" num="0053">As an index of the polymerization degree of the m-xylylene group-containing polyamide (C), there are several indices; however, a relative viscosity is generally used. The relative viscosity of the m-xylylene group-containing polyamide (C) used in the present invention is preferably from 2.5 to 4.5, more preferably from 3.0 to 4.3, and most preferably from 3.5 to 4.2. As the relative viscosity of the m-xylylene group-containing polyamide (C) is higher, it becomes difficult for the m-xylylene group-containing polyamide (C) to be compatible with the polyethylene (A), and it becomes easy to form a dispersion state in the form of layers. However, when the relative viscosity of the m-xylylene group-containing polyamide (C) is increased, the polymerization time is prolonged so that the production cost is increased. By setting the relative viscosity of the m-xylylene group-containing polyamide (C) within the above-mentioned range, a favorable dispersion state in the form of layers can be formed, and also the production cost can be kept low.</p>
+    <p id="p-00054-en" num="0054">Meanwhile, the relative viscosity as used herein is a ratio of a dropping time (t) of a solution prepared by dissolving 1 g of a polyamide in 100 mL of 96% sulfuric acid as measured at 25°C using a Cannon-Fenske viscometer to a dropping time (t0) of the 96% sulfuric acid itself as measured in the same manner, and is represented by the following formula. <maths id="maths-00002-en" num="(2)"><math display="block"><mrow><mi mathvariant="normal">Relative Viscosity</mi><mo>=</mo><mi mathvariant="normal">t</mi><mo>/</mo><mi mathvariant="normal">t</mi><mo>⁢</mo><mn mathvariant="normal">0</mn></mrow></math><img id="img-00002-en" wi="96" he="6" img-content="math" file="imgb0002.tif" img-format="tif" /></maths></p>
+    <p id="p-00055-en" num="0055">In addition, the amount of a component having a number-average molecular weight as measured by GPC of 1000 or less in the m-xylylene group-containing polyamide (C) used in the present invention is preferably 2% by mass or less, more preferably 1.5% by mass or less, and further more preferably 1% by mass or less from the viewpoints of the appearance and barrier property of the structure. In order to obtain such a m-xylylene group-containing polyamide (C), it is preferred that the m-xylylene group-containing polyamide (C) produced by melt polycondensation is subjected to rinsing with hot water, vacuum drying, or solid-state polymerization so as to remove oligomers therefrom.</p>
+    <p id="p-00056-en" num="0056">To the m-xylylene group-containing polyamide (C), an additive such as an antioxidant, a delustering agent, a heat stabilizer, a weathering stabilizer, an ultraviolet absorber, a nucleating agent, a plasticizer, a flame retardant, an antistatic agent, an anti-coloring agent, a lubricant, or an anti-gelling agent, a clay such as a phyllosilicate, a nano filler, or the like can be added as long as the effects of the present invention are not impaired. In addition, for the purpose of modifying the m-xylylene group-containing polyamide (C), various polyamides such as nylon 6, nylon 66, and non-crystalline nylons produced using an aromatic dicarboxylic acid as a monomer or modified resins thereof, polyolefins or modified resins thereof, elastomers containing styrene in the skeleton thereof or the like may also be added thereto as needed. Further, any of various materials may be mixed therein without being limited to those described above.</p>
+    <heading id="h-00015-en">(Compounding Ratios of Respective Materials)</heading>
+    <p id="p-00057-en" num="0057">The compounding ratios of the respective materials constituting the structure of the present invention are as follows: 60 to 90% by mass of the polyethylene (A), 5 to 35% by mass of the acid-modified polyethylene (B), and 5 to 35% by mass of the m-xylylene group-containing polyamide (C), preferably as follows: 65 to 90% by mass of the polyethylene (A), 5 to 30% by mass of the acid-modified polyethylene (B), and 5 to 30% by mass of the m-xylylene group-containing polyamide (C), and more preferably as follows: 70 to 90% by mass of the polyethylene (A), 5 to 25% by mass of the acid-modified polyethylene (B), and 5 to 25% by mass of the m-xylylene group-containing polyamide (C). However, the sum of the compounding ratios of the three components (A) to (C) does not exceed 100% by mass. By setting the compounding ratios of the respective materials within the above-mentioned range, the barrier property of the structure can be efficiently enhanced, and also a decrease in the strength of the structure can be minimized. The structure of the present invention is preferably composed of the following three components: the polyethylene (A), the acid-modified polyethylene (B), and the m-xylylene group-containing polyamide (C).</p>
+    <p id="p-00058-en" num="0058">Further, in the case where the acid-modified polyethylene (B) having a higher acid value (10 to 30 mg/g or 15 to 25 mg/g) is used, the compounding ratios of the respective materials constituting the structure of the present invention are particularly preferably as follows: 70 to 90% by mass of the polyethylene (A), 5 to 20% by mass of the acid-modified polyethylene (B), and 5 to 20% by mass of the m-xylylene group-containing polyamide (C). The acid-modified polyethylene (B) having a higher acid value is relatively likely to cause drawdown; however, by decreasing the amount of the acid-modified polyethylene (B), drawdown is less likely to occur. Further, the acid-modified polyethylene (B) having a higher acid value provides a high enhancement effect on the adhesive performance in a small amount, and therefore, the barrier property can be significantly enhanced even in a small amount, and thus, a high-performance structure can be obtained at a low cost.</p>
+    <heading id="h-00016-en">(Other Resins)</heading>
+    <p id="p-00059-en" num="0059">In addition, to the resin composition, a polypropylene, the typical examples of which include a propylene homopolymer, an ethylene-propylene block copolymer, an ethylene-propylene random copolymer, or the like; a homopolymer of an α-olefin having 3 to 20 carbon atoms such as polybutene-1 or polymethyl pentene; a copolymer of an α-olefin having 3 to 20 carbon atoms; a copolymer of an α-olefin having 3 to 20 carbon atoms with a cyclic olefin; an monomer; various modified polyethylenes such as an ethylene-ethyl acrylate copolymer and an ethylene-methyl acrylate copolymer; a polystyrene; various polyesters such as polyethylene terephtalate; various polyamides such as nylon 6 and nylon 66; a styrene-butadiene copolymer or a hydrogenated product thereof; various thermoplastic elastomers, or the like can be added other than the above-mentioned materials as long as the effects of the present invention are not impaired. Further, various materials may be mixed therein without being limited to those described above.</p>
+    <heading id="h-00017-en">(Structure)</heading>
+    <p id="p-00060-en" num="0060">The polyethylene-based structure of the present invention is a hollow molded article, more specifically is in the form of a bottle, a tank, a drum, a cup, a tray, a pipe, or the like, preferably is in the form of a tank, a pipe, a drum, or a bottle, and is an article obtained by molding by a known molding method such as a blow method. Further, in the case where the structure is a container in the form of a bottle, a tank, a drum, or the like, the structure is preferably produced by a direct blow method.</p>
+    <p id="p-00061-en" num="0061">In the direct blow method, for example, in the case where the structure is a single-layer container, a molding device equipped with an extruder, an adaptor, a cylindrical die, a mold clamping device, a mold, and a cooling device is used, and the following method is illustrated. A mixed material prepared by dry-blending the polyethylene (A), the acid-modified polyethylene (B), and the m-xylylene group-containing polyamide (C), and in some cases further dry-blending a pulverized material obtained by pulverizing a molded article, are put into the extruder and melt-kneaded therein. The melt-kneaded material is extruded through the adaptor and the cylindrical die into a tubular shape (hereinafter sometimes referred to as a "parison"), and sandwiched by the mold at the time when the parison is extruded into an appropriate length, and then air is blown into the parison to inflate the parison and bring the parison into close contact with the inside of the cooled mold. After cooling, the mold is opened, and the resulting molded container is taken out therefrom.</p>
+    <p id="p-00062-en" num="0062">The m-xylylene group-containing polyamide (C) is dispersed in the form of layers in the structure, and the dispersed m-xylylene group-containing polyamide (C) may partially continue to form a continuous phase. The m-xylylene group-containing polyamide (C) dispersed in the form of layers is preferably in a dispersed state so as to be present alternately with the other resin component in the thickness direction of the structure. Further, in the structure, the m-xylylene group-containing polyamide (C) is preferably disposed more on the outer side than in the center of the thickness of the structure. Incidentally, the structure is generally composed of a single-layer structure formed from the resin composition containing the above-mentioned components (A) to (C).</p>
+    <p id="p-00063-en" num="0063">Further, the polyethylene-based structure of the present invention has a thickness of preferably 0.5 mm or more, more preferably more than 1.5 mm, and most preferably more than 2.5 mm. Further, the thickness thereof is preferably 10 mm or less, and more preferably 5 mm or less.</p>
+    <p id="p-00064-en" num="0064">In the present invention, even if unevenness in thickness is caused due to the use of the acid-modified polyethylene (B) having a high acid value, by making the thickness relatively thick as described above, a decrease in the barrier property, a decrease in the strength, a defect in the appearance, etc. due to the unevenness in thickness are less likely to occur. Incidentally, the thickness is determined by cutting the container horizontally at the half of the height thereof, measuring the thickness at 4 sites on the front, rear, right, and left sides, and calculating the average of the measurements.</p>
+    <p id="p-00065-en" num="0065">As the extruder to be used when the structure of the present invention is produced, a known extruder can be used; however, a single-screw extruder is preferably used because it has an adequate kneading capability and enables stable extrusion even under a high resin pressure. The screw of the single-screw extruder is usually constituted by the following three sections: a feed section for transporting a raw material toward a tip end of the extruder; a compression section for completely melting the resin softened by absorbing heat therein; and a metering section for controlling a discharge amount. In the present invention, as the screw, an ordinary screw can be used without limitation; however, a screw generally to be called a full flight and having no kneading section to be called Dulmage or Maddock is preferably used from the viewpoint of preventing excessive dispersion of the m-xylylene group-containing polyamide (C).</p>
+    <p id="p-00066-en" num="0066">Incidentally, as the screw, in order to facilitate the control of the dispersion state of the m-xylylene group-containing polyamide (C), a rapid compression type screw which has a relatively short compression section is preferably used. As the full flight screw of a rapid compression type, in the case where the number of pitches (one pitch corresponds to the one rotation of the flight) of the entire screw is taken as 100, a screw in which the number of pitches is set as follows: 40 to 60 in the feed section; 5 to 20 in the compression section, and 30 to 50 in the metering section is preferably selected, and more preferred is a screw in which the number of pitches is set as follows: 45 to 55 in the feed section; 10 to 15 in the compression section, and 35 to 45 in the metering section. The distance between the pitches may be arbitrary. In addition, a so-called double flight screw in which the number of flights is set to two in part can also be used.</p>
+    <p id="p-00067-en" num="0067">Further, also in order to maintain such a state that the m-xylylene group-containing polyamide (C) is dispersed in the form of layers by the shear force of the screw, it is preferred that any breaker plate which is generally provided in the extruder head is not provided therein. There is a possibility that due to the pores perforated in the breaker plate, the m-xylylene group-containing polyamide (C) dispersed in the form of layers in the extruder may be cut into pieces and thus extremely finely-dispersed.</p>
+    <p id="p-00068-en" num="0068">A general behavior of dispersing a resin as a minor component in another resin as a major component in the extruder is as follows. First, the whole of resins are softened by heat applied from a heater in the extruder. Then, the resins are melted when applying a shear stress thereto by rotation of the screw. At this time, the resin as the minor component is more stretched by the shear stress applied thereto, and then cut into pieces in the form of layers (i.e., dispersion) when further applying a shear stress thereto, and the cut pieces are uniformly scattered (distribution) throughout the resin mixture. The behavior of dispersion and distribution is repeated many times, so that the resin as the minor component is finely and uniformly kneaded in the major component.</p>
+    <p id="p-00069-en" num="0069">In the structure of the present invention, in order to effectively enhance the barrier property thereof, the m-xylylene group-containing polyamide (C) is required to be dispersed in the form of layers therein, and therefore, the material is required to be extruded from a tip end of the extruder while the resin pellets are in the form of layers by being stretched by a shear stress in the extruder described above. As a method of realizing this, there are a method of reducing the rotating rate of the screw mainly and a method of optimizing the set temperature of the extruder. Although the method of reducing the rotating rate of the screw is seemingly a simple method, there are concerns that a decrease in the production efficiency is caused, and a decrease in the strength of the container is caused due to exposure of a parison to air for a long period of time, and therefore, the range of the application thereof is limited in some cases. For such a case, the method of controlling the resin temperature in the extruder is preferably used. Specifically, the control of the temperature of the extruder is preferably carried out so that the resin temperature when the material is melt-kneaded in the extruder is within the temperature range of the melting point of the m-xylylene group-containing polyamide (C) ±20°C. The temperature range is more preferably the melting point of the m-xylylene group-containing polyamide (C) ±15°C, and further more preferably the melting point of the m-xylylene group-containing polyamide (C) ±10°C. It is preferred that as the resin temperature, a temperature determined by actually measuring the actual temperature of the resin extruded from the tip end of the extruder is adopted. However, in the case where how much to differ between a numerical value of the temperature measured by a thermocouple provided at the tip end of the extruder and the actual temperature of the resin is known to some extent, the temperature of the resin may be adjusted by referring to the numerical value. By carrying out the melt-kneading at a resin temperature which is not lower than the melting point of the m-xylylene group-containing polyamide (C) -20°C, the m-xylylene group-containing polyamide (C) is sufficiently softened, so that contamination of the molded article with unmolten pellets, or application of an excessive load to the motor of the extruder is prevented. Further, by setting the resin temperature to the melting point of the m-xylylene group-containing polyamide (C) +20°C or lower, the m-xylylene group-containing polyamide (C) is not completely melted, and therefore is prevented from being dispersed excessively by a shear stress generated by the rotation of the screw. As a result, the dispersion state in the form of layers in the resin composition is also maintained in the structure, and thus, the barrier property of the structure can be made favorable.</p>
+    <p id="p-00070-en" num="0070">The structure obtained by the method of the present invention can adopt various shapes such as a container in the shape of a bottle, a cup, a tray, a tank, a drum, or the like, a tube, a pipe, and the like. The structure of the present invention can more effectively suppress the permeation of fuels such as gasoline, kerosene, and light oil, lubricating oils such as engine oils and brake oils, various sanitary goods such as bleaching agents, detergents, and shampoos, various chemical products such as ethanol and oxydol, various beverages such as vegetable juices and milk beverages, various goods such as condiments, or components contained in these materials therethrough as compared with conventional structures. Therefore, the structure of the present invention can be effectively used as a structure for enhancing the storage stability of goods.</p>
+    <heading id="h-00018-en">Examples</heading>
+    <p id="p-00071-en" num="0071">Hereinafter, the present invention will be described in more detail with reference to Examples. Incidentally, in the Examples and so on, various evaluations were carried out by the following methods.</p>
+    <heading id="h-00019-en">(1) MFR (g/10 min) of Polyethylene (A) and Acid-Modified Polyethylene (B)</heading>
+    <p id="p-00072-en" num="0072">The measurement was carried out at 190°C under a load of 2.16 kgf using a melt indexer manufactured by Toyo Seiki Seisaku-Sho, Ltd., according to JIS K 7210.</p>
+    <heading id="h-00020-en">(2) Density (g/cm<sup>3</sup>) of Polyethylene (A) and Acid-Modified Polyethylene (B)</heading>
+    <p id="p-00073-en" num="0073">By using a sheet forming device equipped with an extruder, a T-die, a cooling roll, a puller, etc., a single-layer sheet having a thickness of about 1 mm was formed. Subsequently, a test piece having a size of 50 mm in length and 50 mm in width was cut from the thus formed sheet, and the true specific gravity thereof was measured using a true specific gravity meter.</p>
+    <heading id="h-00021-en">(3) Acid Value (mg/g) of Acid-Modified Polyethylene (B)</heading>
+    <p id="p-00074-en" num="0074">The measurement was carried out by neutralization titration according to JIS K 0070. 1 g of the acid-modified polyethylene was accurately weighed and dissolved in 100 mL of xylene at about 120°C while stirring. After completely dissolving the acid-modified polyethylene therein, a phenolphthalein solution was added thereto, and neutralization titration was carried out by using a 0.1 mol/L potassium hydroxide ethanol solution whose concentration was accurately determined in advance. The acid value was calculated according to the formula (3) from the dropping amount (T), the factor of the 0.1 mol/L potassium hydroxide ethanol solution (f), 1/10 of the formula weight: 56.11 of potassium hydroxide (5.611), and the mass of the acid-modified polyethylene (S). <maths id="maths-00003-en" num="(3)"><math display="block"><mrow><mi mathvariant="normal">Acid value</mi><mo>=</mo><mi mathvariant="normal">T</mi><mo>×</mo><mi mathvariant="normal">f</mi><mo>×</mo><mn mathvariant="normal">5.611</mn><mo>/</mo><mi mathvariant="normal">S</mi></mrow></math><img id="img-00003-en" wi="97" he="5" img-content="math" file="imgb0003.tif" img-format="tif" /></maths></p>
+    <heading id="h-00022-en">(4) Relative Viscosity of m-Xylylene Group-Containing Polyamide (C)</heading>
+    <p id="p-00075-en" num="0075">1 g of the m-xylylene group-containing polyamide was accurately weighed and dissolved in 100 mL of 96% sulfuric acid at 20 to 30°C while stirring. After completely dissolving the m-xylylene group-containing polyamide therein, a 5-mL of the resulting solution was rapidly sampled and placed in a Canon-Fenske viscometer. After the viscometer was left in a thermostatic chamber at 25°C for 10 minutes, a dropping time (t) of the solution was measured. Also, a dropping time (t0) of the 96% sulfuric acid itself was measured under the same conditions. The relative viscosity was calculated according to the following formula (2) from the t and t0: <maths id="maths-00004-en" num="(2)"><math display="block"><mrow><mi mathvariant="normal">Relative Viscosity</mi><mo>=</mo><mi mathvariant="normal">t</mi><mo>/</mo><mi mathvariant="normal">t</mi><mo>⁢</mo><mn mathvariant="normal">0</mn></mrow></math><img id="img-00004-en" wi="96" he="6" img-content="math" file="imgb0004.tif" img-format="tif" /></maths></p>
+    <heading id="h-00023-en">(5) Fuel Barrier Property of Container</heading>
+    <p id="p-00076-en" num="0076">Into each of the containers produced in Examples and Comparative Examples, 400 mL of a pseudo-gasoline (toluene/isooctane/ethanol at a ratio of 45/45/10 vol%) was put, and then an opening of a mouth portion of the container was sealed with an aluminum foil and further plugged with a cap, and the total mass was measured and recorded. Subsequently, the container in which the pseudo-gasoline was enclosed was kept in an explosion-proof thermostatic chamber controlled at 40°C, and the total mass was recorded every 24 hours. When the mass loss rate became stable, the pseudo-gasoline in the container was withdrawn from the container, and immediately thereafter, the pseudo-gasoline was newly enclosed in the container again, and the measurement was continued in the same manner. The weight loss amount corresponds to the amount of the permeated pseudo-gasoline. The permeation amount of the pseudo-gasoline was divided by the surface area of the container (0.0429 m<sup>2</sup>), whereby the pseudo-gasoline permeability (g/m<sup>2</sup>·day) was determined.</p>
+    <heading id="h-00024-en">(6) Drop Test at Room Temperature</heading>
+    <p id="p-00077-en" num="0077">Each of the containers produced in Examples and Comparative Examples was filled with 400 mL of water and closed by a cap. Then, after the temperature of the container was controlled for 4 hours in a thermostatic chamber at 23°C, the container was dropped with its bottom facing downward onto concrete from a height of 2 m 30 times in a continuous manner. The number of broken containers in the test among 5 containers was counted.</p>
+    <heading id="h-00025-en">(7) Drop Test at Low Temperature</heading>
+    <p id="p-00078-en" num="0078">Each of the containers produced in Examples and Comparative Examples was filled with 400 mL of an antifreeze solution and closed by a cap. Then, after the temperature of the container was controlled for 4 hours in a thermostatic chamber at -20°C, the container was dropped with its bottom facing downward onto concrete from a height of 2 m 30 times in a continuous manner. The number of broken containers in the test among 5 containers was counted.</p>
+    <heading id="h-00026-en">(8) Observation of Interface between Polyethylene (A) and m-Xylylene Group-Containing Polyamide (C) Dispersed in Resin Composition</heading>
+    <p id="p-00079-en" num="0079">A molded tank was cut, and the section of the tank was flattened and smoothened by a microtome (manufactured by Reichert-Jung Limited, trade name: Ultracut E). Thereafter, dilute iodine tincture (manufactured by Tsukishima Yakuhin Co., Ltd.) was applied to the section to dye the portion of the m-xylylene group-containing polyamide. Then, Pt-Pd was deposited thereon using a vapor deposition device (manufactured by Hitachi, Ltd., trade name: E102), and whereafter, the state of the interface between the polyethylene (A) and m-xylylene group-containing polyamide (C) in the resin composition was observed using an SEM (manufactured by Hitachi, Ltd., trade name: S-4800).</p>
+    <heading id="h-00027-en">&lt; Polyethylene (A) Used&gt;</heading>
+    <p id="p-00080-en" num="0080">
+      <ul id="ul-00003-en" list-style="none" compact="compact">
+        <li>HDPE-1: Novatec HD HB420R (trade name), manufactured by Japan Polyethylene Corporation, MFR: 0.2, density: 0.956 g/cm<sup>3</sup></li>
+        <li>HDPE-2: Novatec HD HB439R (trade name), manufactured by Japan Polyethylene Corporation, MFR: 0.55, density: 0.96 g/cm<sup>3</sup></li>
+      </ul>
+    </p>
+    <heading id="h-00028-en">&lt;Acid-Modified Polyethylene (B) Used&gt;</heading>
+    <p id="p-00081-en" num="0081">
+      <ul id="ul-00004-en" list-style="none" compact="compact">
+        <li>AD-1: ADMER AT2490 (trade name), manufactured by Mitsui Chemicals, Incorporated, MFR: 0.3, density: 0.923 g/cm<sup>3</sup>, acid value 19.0 mg/g</li>
+        <li>AD-2: Adtex L6100M (trade name), manufactured by Japan Polyethylene Corporation, MFR: 1.1, density: 0.92 g/cm<sup>3</sup>, acid value 9.8 mg/g</li>
+        <li>AD-3: ADMER NB550 (trade name), manufactured by Mitsui Chemicals, Incorporated, MFR: 0.9, density: 0.92 g/cm<sup>3</sup>, acid value 3.2 mg/g</li>
+      </ul>
+    </p>
+    <heading id="h-00029-en">&lt;m-Xylylene Group-Containing Polyamide (C) Used&gt;</heading>
+    <p id="p-00082-en" num="0082">
+      <ul id="ul-00005-en" list-style="none" compact="compact">
+        <li>PA-1: MX-Nylon S6121 (trade name), manufactured by Mitsubishi Gas Chemical Company, Inc., relative viscosity: 3.5, melting point: 238°C</li>
+        <li>PA-2: MX-Nylon S7007 (trade name), manufactured by Mitsubishi Gas Chemical Company, Inc., relative viscosity: 2.6, melting point: 229°C</li>
+      </ul>
+    </p>
+    <heading id="h-00030-en">Example 1</heading>
+    <p id="p-00083-en" num="0083">By using a single-layer direct blow container molding device equipped with a 50 mm single-screw extruder, an adaptor, a cylindrical die with a parison controller, a mold, a clamping device, a cooler, etc., mixed pellets prepared by dry-blending HDPE-1/AD-1/PA-1 at a ratio of 80/10/10 (% by mass) were put into a hopper of the extruder, and a parison was extruded therefrom by setting the temperature of the extruder cylinder to 210 to 235°C, the temperature of the adaptor to 235°C, the temperature of the die to 230°C and the screw rotating speed to 30 rpm, and the resulting parison was molded into a tank with a threaded plug, which had an internal volume of 450 mL and an average wall thickness of 3 mm, by a direct blow method.</p>
+    <p id="p-00084-en" num="0084">With respect to the obtained tank, measurement of pseudo-gasoline permeability and drop tests were carried out. The results are shown in Table 1. Further, an SEM image of a section of a side wall of the tank is shown in <figref>Fig. 1</figref> (observation magnification: 5,000 times). In <figref>Fig. 1</figref>, a material obliquely crossing the center is the m-xylylene group-containing polyamide (C), and a material sandwiching the m-xylylene group-containing polyamide (C) is the polyethylene (A).</p>
+    <heading id="h-00031-en">Examples 2 to 10</heading>
+    <p id="p-00085-en" num="0085">Tanks with a threaded plug were molded in the same manner as in Example 1 except that the types and compounding amounts of the polyethylene (A), the acid-modified polyethylene (B), and the m-xylylene group-containing polyamide (C) were changed as shown in Table 1.</p>
+    <p id="p-00086-en" num="0086">With respect to the obtained tanks, measurement of pseudo-gasoline permeability and drop tests were carried out. The results are shown in Table 1.</p>
+    <heading id="h-00032-en">Comparative Example 1</heading>
+    <p id="p-00087-en" num="0087">A tank with a threaded plug was molded in the same manner as in Example 1 except that only the polyethylene (A) was used.</p>
+    <p id="p-00088-en" num="0088">With respect to the obtained tank, measurement of pseudo-gasoline permeability and drop tests were carried out. The results are shown in Table 1.</p>
+    <heading id="h-00033-en">Comparative Examples 2 and 3</heading>
+    <p id="p-00089-en" num="0089">Tanks with a threaded plug were molded in the same manner as in Example 1 except that the types and compounding amounts of the polyethylene (A) and the acid-modified polyethylene (B) were changed as shown in Table 1.</p>
+    <p id="p-00090-en" num="0090">With respect to the obtained tanks, measurement of pseudo-gasoline permeability and drop tests were carried out. The results are shown in Table 1. Further, an SEM image of a section of a side wall of the tank obtained in Comparative Example 2 is shown in <figref>Fig. 2</figref> (observation magnification: 5,000 times). In <figref>Fig. 2</figref>, a material obliquely crossing the center is the m-xylylene group-containing polyamide (C), and a material sandwiching the m-xylylene group-containing polyamide (C) is the polyethylene (A). <tables id="tables-00001-en" num="0001"><table frame="all"><title>Table 1</title><tgroup cols="12"><colspec colnum="1" colname="col1" colwidth="24mm" /><colspec colnum="2" colname="col2" colwidth="17mm" /><colspec colnum="3" colname="col3" colwidth="15mm" /><colspec colnum="4" colname="col4" colwidth="13mm" /><colspec colnum="5" colname="col5" colwidth="13mm" /><colspec colnum="6" colname="col6" colwidth="15mm" /><colspec colnum="7" colname="col7" colwidth="18mm" /><colspec colnum="8" colname="col8" colwidth="18mm" /><colspec colnum="9" colname="col9" colwidth="24mm" /><colspec colnum="10" colname="col10" colwidth="23mm" /><colspec colnum="11" colname="col11" colwidth="32mm" /><colspec colnum="12" colname="col12" colwidth="35mm" /><thead><row rowsep="0"><entry align="center" valign="middle" /><entry namest="col2" nameend="col3" align="center" valign="middle">Polyethylene (A)</entry><entry namest="col4" nameend="col6" align="center" valign="middle">Acid-modified polyethylene (B)</entry><entry namest="col7" nameend="col8" align="center" valign="middle">m-Xylylene group-containing polyamide (C)</entry><entry morerows="1" rowsep="1" align="center" valign="middle">A acid value obtained by conversion [mg/g]</entry><entry morerows="1" rowsep="1" align="center" valign="middle">Pseudo-gasoline permeability [g/m<sup>2</sup>·day]</entry><entry namest="col11" nameend="col12" align="center" valign="middle">Breakage upon dropping</entry></row><row><entry align="center" valign="middle" /><entry align="center" valign="middle">type</entry><entry align="center" valign="middle">mass ratio [%]</entry><entry align="center" valign="middle">type</entry><entry align="center" valign="middle">mass ratio [%]</entry><entry align="center" valign="middle">acid value [mg/g]</entry><entry align="center" valign="middle">type</entry><entry align="center" valign="middle">mass ratio [%]</entry><entry align="center" valign="middle">23°C [number of broken containers/number of tested containers]</entry><entry align="center" valign="middle">-20°C [number of broken containers/number of tested containers]</entry></row></thead><tbody><row><entry align="center" valign="middle">Example 1</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">80</entry><entry align="center" valign="middle">AD-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">19.0</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">19.0</entry><entry align="center" valign="middle">1.0</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">0/5</entry></row><row><entry align="center" valign="middle">Example 2</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">70</entry><entry align="center" valign="middle">AD-1</entry><entry align="center" valign="middle">20</entry><entry align="center" valign="middle">19.0</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">38.0</entry><entry align="center" valign="middle">0.8</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">0/5</entry></row><row><entry align="center" valign="middle">Example 3</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">85</entry><entry align="center" valign="middle">AD-1</entry><entry align="center" valign="middle">5</entry><entry align="center" valign="middle">19.0</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">9.5</entry><entry align="center" valign="middle">1.2</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">0/5</entry></row><row><entry align="center" valign="middle">Example 4</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">85</entry><entry align="center" valign="middle">AD-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">19.0</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">5</entry><entry align="center" valign="middle">38.0</entry><entry align="center" valign="middle">1.6</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">0/5</entry></row><row><entry align="center" valign="middle">Example 5</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">80</entry><entry align="center" valign="middle">AD-2</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">9.8</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">9.8</entry><entry align="center" valign="middle">1.3</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">1/5</entry></row><row><entry align="center" valign="middle">Example 6</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">70</entry><entry align="center" valign="middle">AD-2</entry><entry align="center" valign="middle">20</entry><entry align="center" valign="middle">9.8</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">19.6</entry><entry align="center" valign="middle">0.9</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">0/5</entry></row><row><entry align="center" valign="middle">Example 7</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">60</entry><entry align="center" valign="middle">AD-2</entry><entry align="center" valign="middle">30</entry><entry align="center" valign="middle">9.8</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">29.4</entry><entry align="center" valign="middle">1.0</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">0/5</entry></row><row><entry align="center" valign="middle">Example 8</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">85</entry><entry align="center" valign="middle">AD-2</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">9.8</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">5</entry><entry align="center" valign="middle">19.6</entry><entry align="center" valign="middle">2.0</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">0/5</entry></row><row><entry align="center" valign="middle">Example 9</entry><entry align="center" valign="middle">HDPE-2</entry><entry align="center" valign="middle">80</entry><entry align="center" valign="middle">AD-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">19.0</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">19.0</entry><entry align="center" valign="middle">1.1</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">0/5</entry></row><row><entry align="center" valign="middle">Example 10</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">80</entry><entry align="center" valign="middle">AD-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">19.0</entry><entry align="center" valign="middle">PA-2</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">19.0</entry><entry align="center" valign="middle">1.3</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">0/5</entry></row><row><entry align="center" valign="middle">Comparative Example 1</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">100</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">18.2</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">0/5</entry></row><row><entry align="center" valign="middle">Comparative Example 2</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">80</entry><entry align="center" valign="middle">AD-3</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">3.2</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">3.2</entry><entry align="center" valign="middle">2.8</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">4/5</entry></row><row><entry align="center" valign="middle">Comparative Example 3</entry><entry align="center" valign="middle">HDPE-1</entry><entry align="center" valign="middle">70</entry><entry align="center" valign="middle">AD-3</entry><entry align="center" valign="middle">20</entry><entry align="center" valign="middle">3.2</entry><entry align="center" valign="middle">PA-1</entry><entry align="center" valign="middle">10</entry><entry align="center" valign="middle">6.4</entry><entry align="center" valign="middle">1.5</entry><entry align="center" valign="middle">0/5</entry><entry align="center" valign="middle">2/5</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00091-en" num="0091">The polyethylene-based structures of the present invention exhibited an excellent barrier property against the pseudo-gasoline in all the Examples. Further, the obtained structures had excellent drop strength, and breakage of the container did not occur at all upon dropping at room temperature. The section of a side wall of the container as the structure obtained in Example 1, which is representative of the Examples, was observed using an SEM (<figref>Fig. 1</figref>). As a result, it was confirmed that the polyethylene (A) and the m-xylylene group-containing polyamide (C) are tightly adhered to each other at the interface, and the adhesiveness at the interface is favorable.</p>
+    <p id="p-00092-en" num="0092">On the other hand, in the case of Comparative Example 1 in which the structure is composed only of a high-density polyethylene, although the drop strength was excellent, the barrier property against the pseudo-gasoline was poor.</p>
+    <p id="p-00093-en" num="0093">In the case of Comparative Example 2 in which the acid value is low, as a result of the SEM observation in the same manner as in Example 1 with respect to the section of a side wall of the container as the structure obtained (<figref>Fig. 2</figref>), peeling occurred at the interface because the adhesiveness between the polyethylene (A) and the m-xylylene group-containing polyamide (C) was poor, and due to this, the barrier property against the pseudo-gasoline was poor, and moreover, breakage of the container frequently occurred upon dropping at low temperature. Further, in the case of Comparative Example 3, since the addition amount of the acid-modified polyethylene (B) was increased as compared with Comparative Example 2, the barrier property against the pseudo-gasoline and the drop strength were enhanced as compared with Comparative Example 2, but were still poor as compared with the respective Examples.</p>
+    <heading id="h-00034-en">Industrial Applicability</heading>
+    <p id="p-00094-en" num="0094">The polyethylene-based structure according to the present invention has an excellent barrier property against fuels or chemicals and an excellent barrier property against various gases such as oxygen, and further exhibits a strength suitable for practical use. The polyethylene-based structure according to the present invention can be suitably used in fuel tanks for working machines such as mowers and chainsaws, motor cycles, outboard motors, automobiles, etc., pipes for transportation of gasoline, pipe-shaped parts to be attached to fuel tanks, containers for agricultural chemicals, detergents for toiletry or sanitary purposes, and various chemical products, containers for foods, beverages, etc., and the like.</p>
+    <heading id="h-00035-en">Reference Signs List</heading>
+    <p id="p-00095-en" num="0095">
+      <ul id="ul-00006-en" list-style="none" compact="compact">
+        <li>1: m-xylylene group-containing polyamide</li>
+        <li>2: resin composition</li>
+      </ul>
+    </p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A polyethylene-based structure, comprising a resin composition containing: 60 to 90% by mass of a polyethylene (A); 5 to 35% by mass of an acid-modified polyethylene (B); and 5 to 35% by mass of a m-xylylene group-containing polyamide (C), wherein the m-xylylene group-containing polyamide (C) is dispersed in a form of layers in the structure, and an acid value of the acid-modified polyethylene (B) is from 5 to 30 mg/g.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The polyethylene-based structure according to claim 1, wherein the acid value is from 10 to 30 mg/g.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The polyethylene-based structure according to claim 1 or 2, wherein a density of the polyethylene (A) is from 0.94 to 0.97 g/cm<sup>3</sup>, and a melt flow rate of the polyethylene (A) is from 0.1 to 1 (g/10 min, 190°C, 2.16 kgf).</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The polyethylene-based structure according to any one of claims 1 to 3, wherein a density of the acid-modified polyethylene (B) is from 0.90 to 0.96 g/cm<sup>3</sup>, and a melt flow rate of the acid-modified polyethylene (B) is from 0.1 to 5 (g/10 min, 190°C, 2.16 kgf).</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The polyethylene-based structure according to any one of claims 1 to 4, wherein a relative viscosity of the m-xylylene group-containing polyamide (C) is from 2.5 to 4.5.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The polyethylene-based structure according to any one of claims 1 to 5, wherein the structure is a hollow molded article.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The polyethylene-based structure according to claim 6, wherein the hollow molded article has a shape of a tank, a pipe, a drum, or a bottle.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940064A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940064A1_00002.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940064A1_00003.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940064A1_00004.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940064A1_00005.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="EP2940064A1.PDF" type="pdf" size="729693" pages="20" />
+</lexisnexis-patent-document>

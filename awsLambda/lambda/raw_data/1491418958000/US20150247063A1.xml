@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247063A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021456" date-changed="20151215" time-changed="165838">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140187">
+        <country>US</country>
+        <doc-number>20150247063</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14709609</doc-number>
+        <date>20150512</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151204">
+      <classification-ipcr sequence="1">
+        <text>C09G   1/02        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>H01L  21/3105      20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>3105</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>H01L  21/762       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>762</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151204">
+      <classification-cpc sequence="1">
+        <text>C09G   1/02        20130101 FI20140426BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140426</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B24B   1/00        20130101 LI20141225BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>24</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141225</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C01F  17/00        20130101 LA20141015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>17</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C01F  17/0043      20130101 LI20150210BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>17</main-group>
+        <subgroup>0043</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150210</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C01P2004/52        20130101 LA20151126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2004</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C01P2004/62        20130101 LA20151126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2004</main-group>
+        <subgroup>62</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C09K   3/1409      20130101 LI20150210BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>1409</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150210</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C09K   3/1463      20130101 LI20141015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>1463</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>H01L  21/31053     20130101 LI20141015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>31053</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>H01L  21/31055     20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>31055</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>H01L  21/76224     20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>76224</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Chemical Mechanical Polishing (CMP) Composition for Shallow Trench Isolation (STI) Applications and Methods of Making Thereof</invention-title>
+    <references-cited date-changed="20151215">
+      <patent-citations name="patcit" date-changed="20151215" />
+      <citation>
+        <patcit num="1" dnum="US6338670B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6338670</doc-number>
+            <kind>B1</kind>
+            <name>OKUMURA KATSUYA [JP], et al</name>
+            <date>20020115</date>
+          </document-id>
+          <application-date>
+            <date>20000317</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US5021567A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5021567</doc-number>
+            <kind>A</kind>
+            <name>JOHNSON DAVID K [US], et al</name>
+            <date>19910604</date>
+          </document-id>
+          <application-date>
+            <date>19870924</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US6876490B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6876490</doc-number>
+            <kind>B2</kind>
+            <name>KANE THOMAS J [US], et al</name>
+            <date>20050405</date>
+          </document-id>
+          <application-date>
+            <date>20030310</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14482590</doc-number>
+              <date>20140910</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9062230</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007096</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14030657</doc-number>
+              <date>20130918</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8859428</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14004825</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61716471</doc-number>
+          <date>20121019</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>AIR PRODUCTS AND CHEMICALS, INC.</orgname>
+            <role>02</role>
+            <address>
+              <city>Allentown</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Shi</last-name>
+            <first-name>Xiaobo</first-name>
+            <address>
+              <city>Chandler</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hughes</last-name>
+            <first-name>John Edward Quincy</first-name>
+            <address>
+              <city>Cave Creek</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Zhou</last-name>
+            <first-name>Hongjun</first-name>
+            <address>
+              <city>Chandler</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Castillo, II</last-name>
+            <first-name>Daniel Hernandez</first-name>
+            <address>
+              <city>Laveen</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Choo</last-name>
+            <first-name>Jae Ouk</first-name>
+            <address>
+              <city>Chandler</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Schlueter</last-name>
+            <first-name>James Allen</first-name>
+            <address>
+              <city>Phoenix</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Schwartz</last-name>
+            <first-name>Jo-Ann Theresa</first-name>
+            <address>
+              <city>Fountain Hills</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ledenbach</last-name>
+            <first-name>Laura</first-name>
+            <address>
+              <city>Gilbert</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="9" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Winchester</last-name>
+            <first-name>Steven Charles</first-name>
+            <address>
+              <city>Phoenix</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="10" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Usmani</last-name>
+            <first-name>Saifi</first-name>
+            <address>
+              <city>Phoenix</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="11" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Marsella</last-name>
+            <first-name>John Anthony</first-name>
+            <address>
+              <city>Allentown</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="12" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Mungai</last-name>
+            <first-name>Martin Kamau Ngigi</first-name>
+            <address>
+              <city>Gilbert</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463266">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247063</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150512</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463265">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247063</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150512</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Methods for removing, reducing or treating the trace metal contaminants and the smaller fine sized cerium oxide particles from cerium oxide particles, cerium oxide slurry or chemical mechanical polishing (CMP) compositions for Shallow Trench Isolation (STI) process are applied. The treated chemical mechanical polishing (CMP) compositions, or the CMP polishing compositions prepared by using the treated cerium oxide particles or the treated cerium oxide slurry are used to polish substrate that contains at least a surface comprising silicon dioxide film for STI (Shallow trench isolation) processing and applications. The reduced nano-sized particle related defects have been observed due to the reduced trace metal ion contaminants and reduced very smaller fine cerium oxide particles in the Shallow Trench Isolation (STI) CMP polishing.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a divisional application of U.S. application Ser. No. 14/482,590, filed on Sep. 10, 2014; which is a divisional application of U.S. application Ser. No. 14/030,657, filed on Sep. 18, 2013; which claims benefit of U.S. Provisional Application No. 61/716,471, filed Oct. 19, 2012. The disclosures of those applications are hereby incorporated by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">This invention relates to chemical mechanical planarization (CMP) for Shallow Trench Isolation (STI) process. More specifically, the present invention is directed to methods or processes of reducing (treating) trace metal contaminants and smaller or fine sized cerium oxide particles in cerium oxide particles or cerium oxide slurry and in STI polishing compositions.</p>
+      <p id="p-00003-en" num="0003">Chemical mechanical polishing (CMP) compositions for Shallow Trench Isolation (STI) generally contain abrasive such as cerium oxide particles or colloidal cerium oxide particles, and suitable dispersing agents.</p>
+      <p id="p-00004-en" num="0004">For example, U.S. Pat. No. 5,876,490 discloses the polishing compositions containing abrasive particles and exhibiting normal stress effects. The slurry further contains non-polishing particles resulting in reduced polishing rate at recesses, while the abrasive particles maintain high polish rates at elevations. This leads to improved planarization. More specifically, the slurry comprises cerium oxide particles and polymeric electrolyte, and can be used for Shallow Trench Isolation (STI) polishing applications.</p>
+      <p id="p-00005-en" num="0005">As another example, U.S. Pat. No. 6,964,923 teaches the polishing compositions containing cerium oxide particles and polymeric electrolyte for Shallow Trench Isolation (STI) polishing applications. Polymeric electrolyte being used includes the salts of polyacrylic acid, similar as those in U.S. Pat. No. 5,876,490. Ceria, alumina, silica &amp; zirconia are used as abrasives. Molecular weight for such listed polyelectrolyte is from 300 to 20,000, but in overall, &lt;100,000.</p>
+      <p id="p-00006-en" num="0006">However, those Shallow Trench Isolation (STI) polishing compositions usually contain trace metal contaminants, that are known to cause defects in a STI CMP process. The trace metal contaminants include, but not limited, to Al, Zr, Fe, Ni, Mg and others.</p>
+      <p id="p-00007-en" num="0007">In addition, very small and fine cerium or colloidal cerium oxide particles in the STI polishing compositions are also known to cause defects in a STI CMP process.</p>
+      <p id="p-00008-en" num="0008">Thus, there is still a need for Shallow Trench Isolation (STI) polishing compositions that provide reduced trace metal contaminants; and reduced very small and fine cerium oxide particles to achieve reduced defects in a STI chemical and mechanical polishing (CMP) process.</p>
+      <heading id="h-00003-en" level="1">BRIEF SUMMARY OF THE INVENTION</heading>
+      <p id="p-00009-en" num="0009">Described herein are CMP polishing compositions for Shallow Trench Isolation (STI) process. The CMP polishing compositions provide reduced polishing defects due to the reduced trace metal contaminants and reduced smaller or fine sized cerium oxide particles. Described herein are also methods of reducing trace metal contaminants and smaller sized cerium oxide particles from cerium oxide slurries or Shallow Trench Isolation (STI) CMP polishing composition.</p>
+      <p id="p-00010-en" num="0010">In one aspect, there is provided a chemical mechanical polishing (CMP) composition having reduced trace metal contaminants for Shallow Trench Isolation (STI) having reduced defects, comprising:</p>
+      <p id="p-00011-en" num="0000">cerium oxide slurry having trace metal contaminants; <br /> polymeric electrolyte; <br /> biocide; <br /> chemical chelator; <br /> and solvent being deionized water; <br /> wherein <br /> the chemical chelator is hydroxyl quinoline or its derivatives having chemical structures selected from the group consisting of: </p>
+      <p id="p-00012-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="63.67mm" wi="54.78mm" alt="embedded image" img-content="chem" file="US20150247063A1_00009.PNG" img-format="png" original="US20150247063A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00013-en" num="0000">and combinations thereof; <br /> wherein R is selected from the group consisting of alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine groups, and combinations thereof; <br /> R′ and R″ can be the same or different, and are independently selected from the group consisting of alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine, and combinations thereof; <br /> wherein the chemical chelator reacts with trace metal ions in trace metal contaminants to form metal ion-chelator complexes. </p>
+      <p id="p-00014-en" num="0011">In another aspect, there is provided a method of chemical mechanical polishing (CMP) a substrate having at least one surface comprising silicon dioxide using the chemical mechanical polishing (CMP) composition described above in Shallow Trench Isolation (STI) process.</p>
+      <p id="p-00015-en" num="0012">In yet another aspect, there is provided a method of reducing trace metal contaminants and smaller sized cerium oxide particles in a cerium oxide slurry, comprising steps selected from the group consisting of:</p>
+      <p id="p-00016-en" num="0000">(1) (a) adding ion exchange resin to the cerium oxide slurry to form a treated cerium oxide slurry; and (b) removing the ion exchange resin from the treated cerium oxide slurry through filtration to obtain treated cerium oxide slurry; <br /> (2) running deionized water with controlled volume through the cerium oxide slurry with at least one filtration membrane to obtain treated cerium oxide slurry; <br /> (3) (a) centrifuging the cerium oxide slurry at different centrifuge times and rotating at various speeds; (b) collecting cerium oxide particles from precipitate of centrifugation; and (c) mixing deionized water with the collected cerium oxide particles to form a new cerium oxide slurry; repeating steps (a) to (c) at least twice to have treated cerium oxide slurry made with cerium oxide particles from precipitate of the last centrifugation; <br /> (4)(a) adding a chemical additive to the cerium oxide slurry to form a mixture containing water soluble chemical additive-metal ion complexes formed from the reaction of the chemical additive reacting with trace metal ions in the trace metal contaminants; (b) centrifuging the mixture; (c) collecting cerium oxide particles from precipitate of the centrifugation; (d) mixing deionized water with the collected cerium oxide particles to obtain treated cerium oxide slurry; <br /> (5) adding a chemical chelator to the cerium oxide slurry to obtain treated cerium oxide slurry containing metal ion-chelator complexes formed from the reaction of the chemical chelator with trace metal ions in the trace metal contaminants; <br /> wherein <br /> the chemical chelator is hydroxyl quinoline or its derivative having chemical structure selected from the group consisting of: </p>
+      <p id="p-00017-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="63.67mm" wi="54.78mm" alt="embedded image" img-content="chem" file="US20150247063A1_00010.PNG" img-format="png" original="US20150247063A1-20150903-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00018-en" num="0000">and combinations thereof; <br /> wherein R is selected from the group consisting of alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine groups, and combinations thereof; R′ and R″ can be the same or different, and are independently selected from the group consisting of alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine, and combinations thereof; <br /> wherein the chemical chelator reacts with trace metal ions in trace metal contaminants to form metal ion-chelator complexes. <br /> and <br /> combinations thereof. </p>
+      <p id="p-00019-en" num="0013">In another aspect, there is provided a method of chemical mechanical polishing (CMP) a substrate having at least one surface comprising silicon dioxide using the chemical mechanical polishing (CMP) composition comprising the treated cerium oxide slurry described above in Shallow Trench Isolation (STI) process.</p>
+      <p id="p-00020-en" num="0014">In yet another aspect, there is provided a method of forming Chemical mechanical polishing (CMP) composition for Shallow Trench Isolation (STI) comprising:</p>
+      <p id="p-00021-en" num="0000">reducing trace metal contaminants and smaller sized cerium oxide particles in a cerium oxide slurry to form a treated cerium oxide slurry; <br /> adding polymeric electrolyte to the treated cerium oxide slurry; and <br /> adding biocide to the treated cerium oxide slurry; <br /> wherein the reducing comprising steps selected from the group consisting of: <br /> (1) (a) adding ion exchange resin to the cerium oxide slurry to form a treated cerium oxide slurry; and (b) removing the ion exchange resin from the treated cerium oxide slurry through filtration to obtain treated cerium oxide slurry; <br /> (2) running deionized water with controlled volume through the cerium oxide slurry with at least one filtration membrane to obtain treated cerium oxide slurry; <br /> (3) (a) centrifuging the cerium oxide slurry at different centrifuge times and rotating at various speeds; (b) collecting cerium oxide particles from precipitate of centrifugation; <br /> and (c) mixing deionized water with the collected cerium oxide particles to form a new cerium oxide slurry; repeating steps (a) to (c) at least twice to have treated cerium oxide slurry made with cerium oxide particles from precipitate of the last centrifugation; <br /> (4)(a) adding a chemical additive to the cerium oxide slurry to form a mixture containing water soluble chemical additive-metal ion complexes formed from the reaction of the chemical additive reacting with trace metal ions in the trace metal contaminants; (b) centrifuging the mixture; (c) collecting cerium oxide particles from precipitate of the centrifugation; (d) mixing deionized water with the collected cerium oxide particles to obtain treated cerium oxide slurry; <br /> (5) adding a chemical chelator to the cerium oxide slurry to obtain treated cerium oxide slurry containing metal ion-chelator complexes formed from the reaction of the chemical chelator with trace metal ions in the trace metal contaminants; <br /> wherein <br /> the chemical chelator is hydroxyl quinoline or its derivative having chemical structure selected from the group consisting of: </p>
+      <p id="p-00022-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="63.67mm" wi="54.78mm" alt="embedded image" img-content="chem" file="US20150247063A1_00011.PNG" img-format="png" original="US20150247063A1-20150903-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00023-en" num="0000">and combinations thereof; <br /> wherein R is selected from the group consisting of alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine groups, and combinations thereof; R′ and R″ can be the same or different, and are independently selected from the group consisting of alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine, and combinations thereof; <br /> wherein the chemical chelator reacts with trace metal ions in trace metal contaminants to form metal ion-chelator complexes. <br /> and <br /> combinations thereof. </p>
+      <p id="p-00024-en" num="0015">In another aspect, there is provided a method of chemical mechanical polishing (CMP) a substrate having at least one surface comprising silicon dioxide using the chemical mechanical polishing (CMP) composition comprising the treated cerium oxide slurry described above in Shallow Trench Isolation (STI) process.</p>
+      <p id="p-00025-en" num="0016">Examples of a polymeric electrolyte includes but not limited to ammonium salt of polyacrylic acid, ammonium salt of polyvinyl sulfonic acid, ammonium salt of poly(4-styrene sulfonic acid), and combinations thereof. Examples of a chemical chelator includes but not limited to 8-hydroxyl quinoline, 8-hydroxyl quinoline-5-sulfonic acid, and combinations thereof. Examples of a chemical additive includes but not limited to oxalic acid having concentration ranging from 0.01 M to 0.1 M. The ion exchange resin can be a cationic ion exchange resin or an anionic ion exchange resin. Examples of a cationic ion exchange resin includes but not limited to proton or potassium ions; and an anionic ion exchange resin includes but not limited to an anionic ion exchange resin having hydroxyl group.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF SEVERAL VIEWS OF THE DRAWINGS</heading>
+      <p id="p-00026-en" num="0017">
+        <figref>FIG. 1</figref> shows the impacts of STI Slurry with or without chelators on TEOS Removal Rates and Defect Counts.</p>
+      <p id="p-00027-en" num="0018">
+        <figref>FIG. 2</figref> shows the impacts of STI Slurry with or without chelators on Zr concentration reduction in chelator treated ceria particles.</p>
+      <p id="p-00028-en" num="0019">
+        <figref>FIG. 3</figref> shows the effects of different resin treatments on Al contents.</p>
+      <p id="p-00029-en" num="0020">
+        <figref>FIG. 4</figref> shows the effects of ultra filtration treatment on Al and Mg contents.</p>
+      <p id="p-00030-en" num="0021">
+        <figref>FIG. 5</figref> shows the effects of ultra filtration treatment on Zr contents.</p>
+      <p id="p-00031-en" num="0022">
+        <figref>FIG. 6</figref> shows the particle size and distribution of the treated and re-dispersed cerium particles after the ultra filtration treatment.</p>
+      <p id="p-00032-en" num="0023">
+        <figref>FIG. 7</figref> shows the impacts of STI Slurry with reduced fine ceria particles on TEOS Removal Rates and Defect Counts.</p>
+      <p id="p-00033-en" num="0024">
+        <figref>FIG. 8</figref> shows the effects of chemical additive treatment on Al contents—<figref>FIG. 8</figref> (<i>a</i>), on Mg contents—<figref>FIG. 8</figref> (<i>b</i>), and on Zr contents—<figref>FIG. 8</figref> (<i>c</i>).</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00034-en" num="0025">Trace metal contaminants in polishing compositions include, but not limited, to Al, Zr, Fe, Ni, Mg and others. In general, trace metal contaminants and the smaller sized (&lt;10 nm) cerium oxide particles in polishing compositions are considered to be two root causes for the potentially increased nano-sized particle related defects. Trace metal ions and their related oxide particles can migrate or penetrate into the oxide film lattices, forming nano-sized residues on wafer surfaces in a STI CMP process.</p>
+      <p id="p-00035-en" num="0026">The present invention is directed to methods or processes of reducing trace metal contaminants and smaller or fine sized cerium oxide particles in cerium oxide particles or cerium oxide slurry or ceria abrasive. The present invention is also directed to methods or processes of reducing trace metal contaminants and smaller or fine sized cerium oxide particles in STI polishing compositions.</p>
+      <p id="p-00036-en" num="0027">Removing or reducing trace metal contaminants and smaller sized cerium oxide particles in ceria abrasives or STI polishing compositions can reduce the defects that might be introduced from these trace metal contaminants or smaller sized cerium oxide particles in a STI CMP process.</p>
+      <p id="p-00037-en" num="0028">A number of treating methods or embodiments for reducing trace metal and smaller sized and fine cerium oxide particles are described herein.</p>
+      <p id="p-00038-en" num="0029">Chemical Chelator Treatment</p>
+      <p id="p-00039-en" num="0030">A chemic additive acting as chelator is added into the cerium oxide slurry or STI polishing compositions. The chemical chelator reacts with trace metal ions to form neutral, or charged metal ion-chelator complexes. The complexes can be removed more easily from wafer surface in a STI CMP process. Thus, the trace metal contaminants induced defects can be reduced.</p>
+      <p id="p-00040-en" num="0031">Ion-Exchange Resin Treatment</p>
+      <p id="p-00041-en" num="0032">An ion-exchange resin is used to treat cerium oxide slurry to remove or reduce trace metal ions from the cerium oxide slurry.</p>
+      <p id="p-00042-en" num="0033">Ultra Filtration Treatment</p>
+      <p id="p-00043-en" num="0034">Ultra filtration is used to remove or reduce trace metal contaminants ions from the cerium oxide slurry.</p>
+      <p id="p-00044-en" num="0035">Deionized Water Washing and Centrifuge Treatment</p>
+      <p id="p-00045-en" num="0036">To remove smaller fine sized cerium oxide particles, a cerium oxide slurry is rinsed with deionized water (DI water) and then centrifuged. The treated cerium oxide particles are used for the preparation of STI polishing compositions to reduce the defects caused by the smaller sized cerium oxide particles on the wafer surfaces.</p>
+      <p id="p-00046-en" num="0037">Chemical Additive Treatment</p>
+      <p id="p-00047-en" num="0038">By adding suitable chemical additives into the cerium oxide slurry, the solution is treated either at room temperature or at elevated temperature with subsequent pH adjustment.</p>
+      <p id="p-00048-en" num="0039">In such treatment, the suitable chemical additives can react with various trace metal ions to form water soluble chemical additive-metal ion complexes so that such water soluble chemical additive-metal ion complexes can be removed from the supernatant solution phase after centrifuging the treated cerium oxide slurry.</p>
+      <p id="p-00049-en" num="0040">The cerium oxide slurry being treated by any one of the method described above, can be further treated by any other, or any combinations of other methods. For example, the cerium oxide slurry being treated by suitable chemical additives, can be further treated by any one, or combinations of, Chemical Chelator Treatment; ion exchange resin treatment, ultra filtration treatment, and deionized water washing and centrifuge treatment described above.</p>
+      <p id="p-00050-en" num="0041">Upon the reduction of trace metal contaminants in the cerium oxide slurry, the treated cerium oxide slurry is used to make STI polishing compositions. The defects, such as metal ion penetrating into silicon oxide films or forming nano-sized residues on wafer surfaces from a STI CMP process can be reduced.</p>
+      <p id="p-00051-en" num="0042">In the following working examples, a STI polishing composition comprising 1.5 wt % cerium oxide with density larger than 6.8 g/cm<sup>3</sup>; 0.1 to 0.5 wt % an ammonium salt of polyacrylic acid; a biocide ranging from 0.0001% to 0.05%, and solvent being deionized water, was prepared. This STI polishing composition was used as a base/control reference.</p>
+      <p id="p-00052-en" num="0043">A cerium oxide slurry comprising 40 wt % cerium oxide particles, and solvent being deionized water was also prepared and used as a base/control reference.</p>
+      <heading id="h-00006-en" level="1">Chemical Chelator Treatment</heading>
+      <p id="p-00053-en" num="0044">By adding a chemical additive as chelator (or ligand) to a STI polishing composition or a cerium oxide slurry, the chelator reacts with trace metal ions to form Metal Ion-Chelator complexes.</p>
+      <p id="p-00054-en" num="0045">The metal-ion-chelator complexes can be in neutral form with no net charges on the whole complex molecules or can be the complexes either carrying positive charges or negative charges. The preferred form of the complexes is a non-charged neutral complex compound in aqueous solutions. The neutral complexes have less interactions with the silicon oxide films to be polished.</p>
+      <p id="p-00055-en" num="0046">The complexes are removed more easily from wafer surface in a STI CMP process to potentially reduce or prevent the adhesion and the penetration of trace metal ions onto or into the high density silicon dioxide films. Thus, the trace metal contaminants induced defects can be reduced to enhance polishing performance with reduced total defects.</p>
+      <p id="p-00056-en" num="0047">Examples of the chelators or ligands that can be used to form metal-ion-chelator complexes or metal-ion-ligand complexes include but not limited to: a). organic acids; b). amino acids; c). organic acid derivatives; d). amino acid derivatives; e). organic amine compounds; f). organic sulfuric acids; g). organic phosphoric acids; h). organic chelators containing multi-type function groups; i). pyridine and its derivatives; j). bipyridine and its derivatives; k). terpyridine and its derivatives; l). quinoline and its derivatives; m). hydroxyl quinoline and its derivatives; and n). the combinations of chelators or ligands as listed from a) to m).</p>
+      <p id="p-00057-en" num="0048">Among above listed chelators or ligands, hydroxyl quinoline and its derivatives can form various complex compounds with different metal ions, such as aluminum, copper, nickel irons and others.</p>
+      <p id="p-00058-en" num="0049">The hydroxyl quinoline and its derivatives have the following two general molecular structures:</p>
+      <p id="p-00059-en" num="0000">
+        <chemistry id="chem-00004-en" num="00004">
+          <img id="img-00004-en" he="63.67mm" wi="56.81mm" alt="embedded image" img-content="chem" file="US20150247063A1_00012.PNG" img-format="png" original="US20150247063A1-20150903-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00060-en" num="0050">In molecular Structure 1, R can be alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine groups, and combinations thereof;</p>
+      <p id="p-00061-en" num="0051">In molecular Structure 2, R′ and R″ can be the same or different, and are independently selected from alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine, and combinations thereof;</p>
+      <p id="p-00062-en" num="0052">Hydroxyl quinoline, such as, 8-hydroxyl quinoline and 8-hydroxyl quinoline-5-sulfonic acid was used as the chelating reagents in the working examples.</p>
+      <heading id="h-00007-en" level="1">WORKING EXAMPLES</heading>
+      <heading id="h-00008-en" level="1">Composition 1</heading>
+      <p id="p-00063-en" num="0053">100 ppm 8-hydroxyl quinoline was added to the base STI polishing composition. The pH of the solution was about 5.5. The composition was then stirred overnight at room temperature.</p>
+      <p id="p-00064-en" num="0054">The solution was then centrifuged at 10,000 rpm for 60 minutes. The supernatant solutions and the remaining cerium oxide particles were collected separately. The supernatant solution was analyzed by ICP-Mass Spectroscopy (Full digestion). The supernatant solution of the base STI polishing composition was used as the reference.</p>
+      <heading id="h-00009-en" level="1">Composition 2</heading>
+      <p id="p-00065-en" num="0055">100 ppm 8-hydroxyl quinoline-5-sulfonic acid was added to the base STI polishing composition. The pH of the solution was about 5.25. The composition was then stirred overnight at room temperature.</p>
+      <p id="p-00066-en" num="0056">The solution was then centrifuged at 10,000 rpm for 60 minutes. The supernatant solutions and the remaining cerium oxide particles were collected separately. The supernatant solution was analyzed by ICP-Mass Spectroscopy (Full digestion). The supernatant solution of the base STI polishing composition was used as the reference.</p>
+      <heading id="h-00010-en" level="1">Composition 3</heading>
+      <p id="p-00067-en" num="0057">1,000 ppm 8-hydroxyl quinoline (chelator 1) was added to a 200 mL of Cerium Oxide (ceria) Slurry (40 wt %). The pH of the solution was about 9.5. The solution was stirred overnight at room temperature.</p>
+      <p id="p-00068-en" num="0058">The solution was then centrifuged at 10,000 rpm for 60 minutes. The supernatant solutions and the remaining cerium oxide particles were collected separately. The supernatant solution was analyzed by ICP-Mass Spectroscopy (Full digestion). The supernatant solution from the base cerium oxide slurry was used as the reference.</p>
+      <heading id="h-00011-en" level="1">Composition 4</heading>
+      <p id="p-00069-en" num="0059">1,000 ppm 8-hydroxyl quinoline-5-sulfonic acid hydrate (chelator 2) was added to a 200 mL of Cerium Oxide (ceria) (40 wt %) slurry. The pH of the solution was about 9.5. The solution was stirred overnight at room temperature.</p>
+      <p id="p-00070-en" num="0060">The solution was then centrifuged at 10,000 rpm for 60 minutes. The supernatant solutions and the remaining cerium oxide particles were collected separately. The supernatant solution was analyzed by ICP-Mass Spectroscopy (Full digestion). The supernatant solution from the base cerium oxide slurry was used as the reference.</p>
+      <p id="p-00071-en" num="0061">The results from compositions 1 and 2 were shown in Table 1 and <figref>FIG. 1</figref>.</p>
+      <p id="p-00072-en" num="0062">With the addition of 100 ppm of 8-hydroxyl quinoline as the chelator additive, the averaged total defects after CMP process was reduced from 1107 for the base STI polishing composition to 443.</p>
+      <p id="p-00073-en" num="0063">With the addition of 100 ppm of 8-hydroxyl quinoline-5-sulfonic acid hydrate as the chelator additive, the averaged total defects after CMP process were reduced from 1107 for the base STI polishing composition to 385.</p>
+      <heading id="h-00012-en" level="2">Polishing Silicon Dioxide (TEOS) Films</heading>
+      <p id="p-00074-en" num="0064" />
+      <p id="p-00075-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Effects of Chelator in STI Slurry on Removal Rates and Defects</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Defects</entry>
+                  <entry>Added Defects</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Averaged</entry>
+                  <entry>detected</entry>
+                  <entry>detected</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Removal Rates</entry>
+                  <entry>by Metrology</entry>
+                  <entry>by Metrology</entry>
+                </row>
+                <row>
+                  <entry>Composition</entry>
+                  <entry>(A/min.)</entry>
+                  <entry>Tool 1</entry>
+                  <entry>Tool 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="char" char="." />
+              <colspec colname="3" colwidth="49pt" align="char" char="." />
+              <colspec colname="4" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Base STI Slurry</entry>
+                  <entry>2958</entry>
+                  <entry>1107</entry>
+                  <entry>821</entry>
+                </row>
+                <row>
+                  <entry>Base STI Slurry with</entry>
+                  <entry>2826</entry>
+                  <entry>443</entry>
+                  <entry>186</entry>
+                </row>
+                <row>
+                  <entry>100 ppm 8-hydroxyl</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>quinoline</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Base STI Slurry with</entry>
+                  <entry>3290</entry>
+                  <entry>385</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry>100 ppm 8-hydroxyl</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>quinoline-5-sulfonic</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>acid hydrate</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00076-en" num="0065">It was observed that the total defects after CMP process detected by metrology tool 1 were reduced by using chelator 8-hydroxyl quinoline or 8-hydroxyl quinoline-5-sulfonic acid hydrate in the STI polishing composition, respectively.</p>
+      <p id="p-00077-en" num="0066">Also as shown in Table 1, with the addition of 100 ppm of 8-hydroxyl quinoline as the chelator additive, the averaged total added defects after CMP process was reduced from 1107 for the reference STI polishing composition to 443. With the addition of 100 ppm of 8-hydroxyl quinoline-5-sulfonic acid hydrate as the chelator additive, the averaged total defects after CMP process was reduced from 1107 for the reference STI polishing composition to 385.</p>
+      <p id="p-00078-en" num="0067">ICP-Mass Spectroscopy analytic results indicated a larger than 30% Zr concentration reductions on the composition being treated with two chelators.</p>
+      <p id="p-00079-en" num="0068">The removal rates of polishing silicon dioxide film were also shown in Table 1. The result indicated that the removal rates were similar while having the benefit of reduced defects.</p>
+      <p id="p-00080-en" num="0069">The results from compositions 3 and 4 were shown in Table 2 and <figref>FIG. 2</figref>.</p>
+      <p id="p-00081-en" num="0070">The addition of 1000 ppm of 8-hydroxyl quinoline as the chelator additive (chelator 1), the averaged total added defects after CMP process was reduced from 93000 for the Cerium Oxide (40 wt %) slurry to 54000. With the addition of 1000 ppm of 8-hydroxyl quinoline-5-sulfonic acid hydrate as the chelator additive (chelator 2), the averaged total defects after CMP process was reduced from 93000 for the Cerium Oxide (40 wt %) slurry to 60000.</p>
+      <p id="p-00082-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Zr Concentration Reduction in Chelator Treated Ceria Particles</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="left" />
+              <colspec colname="3" colwidth="119pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Samples</entry>
+                  <entry>Zr Conc. (ppb)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ceria only</entry>
+                  <entry>93000</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ceria + Chelator 1</entry>
+                  <entry>54000</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ceria + Chelator 2</entry>
+                  <entry>60000</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00083-en" num="0071">ICP-Mass Spectroscopy analytic results indicated the Zr concentration of cerium oxide samples treated with chelator 1 or chelator 2 were reduced by more than 35% than that of reference cerium oxide sample without using any chelator for the treatment.</p>
+      <p id="p-00084-en" num="0072">The cerium oxide slurry treated with chelator 1 or chelator 2 can then be used to prepare STI polishing compositions.</p>
+      <heading id="h-00013-en" level="1">Ion-Exchange Resin Treatment</heading>
+      <heading id="h-00014-en" level="1">Working Example</heading>
+      <p id="p-00085-en" num="0073">Cerium oxide slurry was treated with various types of ion exchange resin. The ion exchange resin includes cationic ion exchange resin with potassium ions (Cationic-K Resin) or protons (Cationic-H Resin), and anionic ion exchange resin with hydroxyl groups (OH) (Anionic-OH Resin) on the surface.</p>
+      <p id="p-00086-en" num="0074">In a typical ion exchange treatment process, either 40 wt % or the diluted 10 wt % cerium oxide slurry was used. After treatment, the recovered cerium oxide slurry has the concentrations several percent less than 40% and 10% respectively.</p>
+      <p id="p-00087-en" num="0075">The ion exchange resin was added to or mixed with the cerium oxide slurry under stirring condition for 15 to 20 minutes. Afterwards, ion exchange resins were removed from the solution through filtration (filters). The steps were repeated at least three times to complete the ion exchange treatment.</p>
+      <p id="p-00088-en" num="0076">Upon the completion of ion exchange resin treatment process, the collected cerium oxide slurry was centrifuged. The supernatant solutions and the residues of cerium oxide particles were collected for ICP-Mass Spectroscopy analysis on trace metal ion concentrations.</p>
+      <p id="p-00089-en" num="0077">Following the procedure about, a cationic ion exchange resin with potassium ions was used to treat the cerium oxide slurry (Cationic-K resin). The final treated cerium oxide slurry was centrifuged.</p>
+      <p id="p-00090-en" num="0078">A cationic ion exchange resin with a proton functional group was used to treat the cerium oxide slurry (Cationic-H resin). The final treated cerium oxide slurry was centrifuged.</p>
+      <p id="p-00091-en" num="0079">A mixed treatments from a cationic ion exchange resin and a anionic ion exchange resin were conducted in the following example.</p>
+      <p id="p-00092-en" num="0080">A cationic ion exchange resin having potassium ions was used to treat the cerium oxide slurry first. The treated cerium oxide slurry was separated from the cationic ion exchange resin, and was treated subsequently with the anionic ion exchange resin having hydroxyl group as the functional groups. Then, the treated cerium oxide slurry was separated from the anionic ion exchange resin.</p>
+      <p id="p-00093-en" num="0081">Such alternative ion exchange resin treatment was repeated three times.</p>
+      <p id="p-00094-en" num="0082">Then, the collected cerium oxide slurry was further centrifuged. The supernatant and cerium oxide particle residues were collected for ICP-Mass Spectroscopy analysis on trace metal ion concentrations respectively.</p>
+      <p id="p-00095-en" num="0083">The original cerium oxide slurry, without ion exchange process treatment and the centrifuge process, was also analyzed as the reference for trace metal ion concentrations by ICP-Mass Spectroscopy analysis.</p>
+      <p id="p-00096-en" num="0084">The results were shown in Table 3 and <figref>FIG. 3</figref>.</p>
+      <p id="p-00097-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Effects of Ion-Exchange Treatment on</entry>
+                </row>
+                <row>
+                  <entry>Aluminum Conc. In Cerium oxide slurry</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Al ion (ppb)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Al ion (ppb)</entry>
+                  <entry>Al ion (ppb)</entry>
+                  <entry>cerium oxide</entry>
+                </row>
+                <row>
+                  <entry>Ion Exchange Resin</entry>
+                  <entry>supernatant</entry>
+                  <entry>sediment</entry>
+                  <entry>slurry as it is</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="char" char="." />
+              <colspec colname="3" colwidth="49pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>No ion-exchange resin</entry>
+                  <entry>11,000</entry>
+                  <entry>220</entry>
+                  <entry>10,780</entry>
+                </row>
+                <row>
+                  <entry>Cationic-H Resin</entry>
+                  <entry>7,232</entry>
+                  <entry>26</entry>
+                  <entry>7,206</entry>
+                </row>
+                <row>
+                  <entry>Cationic-K Resin</entry>
+                  <entry>5,554</entry>
+                  <entry>140</entry>
+                  <entry>5,414</entry>
+                </row>
+                <row>
+                  <entry>Cationic-K Resin and</entry>
+                  <entry>5,281</entry>
+                  <entry>120</entry>
+                  <entry>5,161</entry>
+                </row>
+                <row>
+                  <entry>Anionic-OH Resin</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00098-en" num="0085">As the results shown in Table 3 and <figref>FIG. 3</figref>, the ion exchange treatment processes reduced trace metal ion concentrations, especially Aluminum ion concentrations.</p>
+      <p id="p-00099-en" num="0086">All three different ion-exchange resin treatments have shown reduced trace aluminum ion concentrations to different degrees while comparing to the aluminum ion concentrations detected for the original cerium oxide slurry without using ion exchange resin treatments.</p>
+      <p id="p-00100-en" num="0087">The cerium oxide slurry after ion-exchange resin treatments can be used to prepare STI polishing compositions.</p>
+      <heading id="h-00015-en" level="1">Ultra Filtration Treatment</heading>
+      <heading id="h-00016-en" level="1">Working Example 1</heading>
+      <p id="p-00101-en" num="0088">Ultra filtration method was used as another approach to remove or reduce trace metal contaminants such as Al, Ng, and Zr from cerium oxide particles used for STI polishing compositions.</p>
+      <p id="p-00102-en" num="0089">In this method, at least one suitable filtration membrane was employed. The cerium oxide slurry was treated by running deionized water with controlled volume to allow the continuous replacement of solvent (such as deionized water) in the cerium oxide slurry. Such continuous replacement of solvent helped to reduce or remove the trace metal contaminants from the cerium oxide particles.</p>
+      <p id="p-00103-en" num="0090">The results were shown in Table 4, and <figref>FIGS. 4 and 5</figref>.</p>
+      <p id="p-00104-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Ultra Filtration Treatment Process and AL, Mg, Zr Contents</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Ceria Particle Ultra Filtration</entry>
+                  <entry>Al Content</entry>
+                  <entry>Mg Content</entry>
+                  <entry>Zr Content</entry>
+                </row>
+                <row>
+                  <entry>Treatment Process</entry>
+                  <entry>(ppb)</entry>
+                  <entry>(ppb)</entry>
+                  <entry>(ppb)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>No Treatment</entry>
+                  <entry>22000</entry>
+                  <entry>1300</entry>
+                  <entry>5200000</entry>
+                </row>
+                <row>
+                  <entry>With Ultra Filtration Treatment</entry>
+                  <entry>7200</entry>
+                  <entry>440</entry>
+                  <entry>1840000</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00105-en" num="0091">As the results shown in Table 4, a new milled cerium oxide slurry was used in ultra filtration treatment process. Without ultra filtration treatment, the Al, Mg, and Zr contents were 22000 ppb, 1300 ppb, and 5200000 ppb respectively. After ultra filtration process treatment, the Al, Mg and Zr contents were reduced to 7200 ppn, 440 ppb, and 1840000 ppb respectively which correspond to 205.6% reduction in Al content, 195.5% reduction in Mg content, and 182.6% reduction in Zr content.</p>
+      <p id="p-00106-en" num="0092">The cerium oxide slurry after ultra filtration process treatment can be used to prepare STI polishing compositions.</p>
+      <heading id="h-00017-en" level="1">Working Example 2</heading>
+      <p id="p-00107-en" num="0093">The treatment started with inducing agglomeration of ceria particles, collecting the treated ceria particles through the ultrafiltration process, and then conducting re-dispersion to get the treated cerium oxide particle solution.</p>
+      <p id="p-00108-en" num="0094">In this treatment, saturated potassium nitrate (KNOB) was added to the pre-prepared 10% cerium oxide particle solution under stirring condition until the conductivity of the solution reaching˜19.8-20 mS/cm. The stirring was continued for 5 more minutes before it was stopped. The solution was sat for 20 minutes to allow the ceria particles settle down. The upper layer solution was then removed, and the deionized water (DIW) was added into the solution (part of the re-dispersion). The new solution was stirred for 5 minutes. Then, the KNO<sub>3</sub>-settlement-DIW steps stated before were repeated two more times. The final remained ceria solution was filtered through ultra filtration until the solution conductivity reaching ˜200-300 μS/cm. After that, the ceria particle solution was sonicated for 30 minutes to break down some agglomerated ceria particles, to complete the re-dispersion process.</p>
+      <p id="p-00109-en" num="0095">The particle size and distribution (PSD) of the treated cerium particles was analyzed and shown in <figref>FIG. 6</figref>.</p>
+      <p id="p-00110-en" num="0096">As the PSD curves indicated in <figref>FIG. 6</figref>, the treated ceria particles had a narrower PSD showing that the treatment process effectively reduced the smaller sized fraction of ceria particles, at the same time, also reduced some larger sized ceria particles. Such new narrow sized ceria particles can be used to prepare STI polishing compositions and may provide the benefits of reducing defects while being used for STI polishing slurry and applications.</p>
+      <heading id="h-00018-en" level="1">Deionized Water Washing and Centrifuge Treatment</heading>
+      <p id="p-00111-en" num="0097">In this method, the deionized water was added to the cerium oxide particles performing the function of rinsing or washing cerium oxide particles. Then, the well-controlled centrifuge and separation process, also called multi-passes, were used to reduce or remove smaller sized and fine cerium oxide particles (or ceria particles).</p>
+      <heading id="h-00019-en" level="1">Working Example</heading>
+      <p id="p-00112-en" num="0098">In the working experiments, the deionized water was added to the cerium oxide particles to make concentrated (40 wt %) cerium oxide slurry, while stirring at room temperature for 15 to 20 minutes. The cerium oxide slurry was stirred or shaken thoroughly to increase the washing process efficiency. Then, different centrifuge times and various rotating speed (rotations per minute) were selected to treat the cerium oxide slurry.</p>
+      <p id="p-00113-en" num="0099">After centrifuging at different centrifuge times and rotating at various speeds, the separation process started. The supernatant solutions were removed and discarded, the remaining cerium oxide particles were re-dispersed in deionized water.</p>
+      <p id="p-00114-en" num="0100">The washing, centrifuge and separation process repeated to have multi passes.</p>
+      <p id="p-00115-en" num="0101">The particle distributions were measured by light scattering technique to monitor the changes of the particle distributions.</p>
+      <p id="p-00116-en" num="0102">The analytic results of the particle distributions revealed that very small sized (less than 10 nm) cerium oxide particle percentages were reduced, which also led to the slight shift of mean particle size toward the increased MPS direction.</p>
+      <p id="p-00117-en" num="0103">The percentages of the very small cerium oxide particles were reduced in the ranges of more than 11% to 78% depending on the number of the passes treating the cerium oxide slurry. The small particle fraction was reduced 11.2%, 27.8%, 50.6% and 78.3% corresponding to the wash pass 1, 2, 3 and 4, respectively, compared to the control cerium oxide slurry. The results were shown in Table 5.</p>
+      <p id="p-00118-en" num="0104">Further, a new STI polishing composition was made by using the cerium oxide particles having reduced very small sized cerium oxide particles (after 4 washes) to replace the cerium oxide particles in the base/control reference STI slurries.</p>
+      <p id="p-00119-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Effects of to Reducing Small Particles of Ceria</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="84pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>DI-Water Washing</entry>
+                  <entry>Small Ceria</entry>
+                  <entry>Small Ceria Particle</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Treatment</entry>
+                  <entry>Particle %</entry>
+                  <entry>Reduction %</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>No wash</entry>
+                  <entry> 100%</entry>
+                  <entry>
+                    <sup> </sup>100%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Wash 1</entry>
+                  <entry>88.8%</entry>
+                  <entry>−11.2%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Wash 2</entry>
+                  <entry>72.2%</entry>
+                  <entry>−27.8%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Wash 3</entry>
+                  <entry>49.4%</entry>
+                  <entry>−50.6%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Wash 4</entry>
+                  <entry>21.7%</entry>
+                  <entry>−78.3%</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00120-en" num="0105">The polishing testing using the STI polishing composition made from the cerium oxide particles having reduced very small sized cerium oxide particles was conducted and compared with the results obtained from the standard/control STI composition.</p>
+      <p id="p-00121-en" num="0106">The results were shown in Table 6 and <figref>FIG. 7</figref>.</p>
+      <p id="p-00122-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 6</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Effects of Reducing Fine Particle Fraction of Ceria</entry>
+                </row>
+                <row>
+                  <entry>in STI Slurry on Removal Rates and Defects</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Defects</entry>
+                  <entry>Added Defects</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Averaged</entry>
+                  <entry>detected</entry>
+                  <entry>detected</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Removal Rates</entry>
+                  <entry>by Metrology</entry>
+                  <entry>by Metrology</entry>
+                </row>
+                <row>
+                  <entry>Composition</entry>
+                  <entry>(A/min.)</entry>
+                  <entry>Tool 1</entry>
+                  <entry>Tool 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="char" char="." />
+              <colspec colname="3" colwidth="49pt" align="char" char="." />
+              <colspec colname="4" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>STI Slurry as control</entry>
+                  <entry>2958</entry>
+                  <entry>1107</entry>
+                  <entry>821</entry>
+                </row>
+                <row>
+                  <entry>STI Slurry with</entry>
+                  <entry>3898</entry>
+                  <entry>344</entry>
+                  <entry>282</entry>
+                </row>
+                <row>
+                  <entry>reduced fine</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>particle fraction</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>of ceria</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00123-en" num="0107">As shown in Table 6 and <figref>FIG. 7</figref>, when cerium oxide particles having reduced very small sized cerium oxide particles was used in STI polishing composition, the removal rate of polishing silicon dioxide film was increased from 2958 A/minute to 3898 A/minute. The total defects detected by metrology tool 1 was reduced from 1107 to 344. The total added defects after CMP process and detected by metrology tool 2 was reduced from 821 to 282.</p>
+      <p id="p-00124-en" num="0108">The results indicated that using multi-pass deionized water washing and centrifuge treatment, the fine particle fractions were indeed reduced, which led the total defects in a STI CMP process were reduced.</p>
+      <heading id="h-00020-en" level="1">Chemical Additive Treatment</heading>
+      <p id="p-00125-en" num="0109">In this treatment, the suitable chemical additives are added to cerium oxide slurry. The suitable chemical additives can react with various trace metal ions in the cerium oxide slurry to form water soluble chemical additive-metal ion complexes so that such water soluble chemical additive-metal ion complexes can be removed from supernatant solution phase after centrifuging the treated cerium oxide slurry.</p>
+      <p id="p-00126-en" num="0110">The suitable chemical additives include, but not limited to,</p>
+      <p id="p-00127-en" num="0000">a). organic acids; such as oxalic acid, citric acid, malic acid, tartaric acid, maleic acid, itaconic acid, gluconic acid, lactic acid, ethylenediaminetetraacetic acid (ETDA), and others; b). amino acids; such as glycine, alanine, serine, proline, and others; c). organic acid derivatives which refer to all organic compounds that contain at least one or more than one carboxylic acid group(s); d). amino acid derivatives which refer to all organic compounds that contain at least one or more than one amine acid moieties others; such as iminodiacetic acid; e). organic amine compounds others; such as ethylene diamine, propylene diamine, ethylenimine, and other organic compounds that contain primary or secondary amino groups; f). organic sulfuric acids that refer to all organic compounds that contain at least one or more sulfuric acid group(s); g). organic phosphoric acids that refer to all organic compounds that contain at least one or more phosphoric acid group(s); h). pyridine and its derivatives others; such as pyridine, 2-methyl pyridine, and substituted pyridine at position 2, 3, 4, 5 or 6 respectively; i). bipyridine and its derivatives others; such as 2,2′-bipyrine, 4,4′-dimethyl bipyridine, 4,4′-bipyridine, and all other substituted 2,2′-bipyrine or 4,4′-bipyridine derivatives; j). terpyridine and its derivatives; k). quinoline and its derivatives; m). hydroxyl quinoline and its derivatives; and m). ammonium hydroxide.</p>
+      <p id="p-00128-en" num="0111">If the chemical additive is in solid state, then the first step of the method is adding the chemical additive into a cerium oxide slurry to treat the cerium oxide particles in the solution. If the chemical additive is a solution, then cerium oxide powder or cerium oxide slurry can be added to the chemical additive solution. The treatment can be performed either at room temperature or at elevated temperature with subsequent pH adjustment. The collected cerium oxide particles from the centrifugation are mixed with deioized water to form a new cerium oxide slurry.</p>
+      <heading id="h-00021-en" level="1">Working Example</heading>
+      <p id="p-00129-en" num="0112">Lower concentration oxalic acid (0.01 M) was used to treat 12 wt % cerium oxide slurry first. The mixture of lower concentration oxalic acid with 12 wt % cerium oxide slurry was stirred and heated for 3 to 4 hours under N2 protection. Upon the completion of the heating treatment process, the mixed solution of oxalic acid with cerium oxide particles was centrifuged and the supernatant solution was decanted off.</p>
+      <p id="p-00130-en" num="0113">The deionized water was then added to the cerium oxide particles collected from the centrifuge process as the precipitate. The resulting cerium oxide slurry was adjusted to basic pH condition using low concentration of KOH.</p>
+      <p id="p-00131-en" num="0114">The trace metal ion concentrations in treated cerium oxide slurry was conducted by ICP-Mass Spectroscopy analysis through full digestion method.</p>
+      <p id="p-00132-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 7</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Effects of Chemical Additive Treatment at Heating Condition on Al,</entry>
+                </row>
+                <row>
+                  <entry>Mg, and Zr Ion Concentrations in Cerium Oxide Particle Slurry</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Sample</entry>
+                  <entry>Al ion (ppb)</entry>
+                  <entry>Mg ion (ppb)</entry>
+                  <entry>Zr ion(ppb)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="char" char="." />
+              <colspec colname="3" colwidth="49pt" align="char" char="." />
+              <colspec colname="4" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Untreated cerium</entry>
+                  <entry>11,000</entry>
+                  <entry>120</entry>
+                  <entry>2700,000</entry>
+                </row>
+                <row>
+                  <entry>oxide slurry</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Treated with oxalic</entry>
+                  <entry>5,660</entry>
+                  <entry>157</entry>
+                  <entry>57,000</entry>
+                </row>
+                <row>
+                  <entry>acid at 70° C.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00133-en" num="0115">As the results shown in Table 7 and <figref>FIG. 8</figref>, the ion exchange treatment processes reduced trace metal ion concentrations, especially Aluminum ion concentrations.</p>
+      <p id="p-00134-en" num="0116">All three different ion-exchange resin treatments have shown reduced trace aluminum ion concentrations to different degrees while comparing to the aluminum ion concentrations detected for the original cerium oxide slurry without using ion exchange resin treatments.</p>
+      <p id="p-00135-en" num="0117">The analytic results of several trace metal ion concentrations in the treated cerium oxide slurry along with those trace metal ion concentrations in an untreated cerium oxide slurry were listed in Table 7 and <figref>FIG. 8(</figref><i>a</i>)-(<i>c</i>).</p>
+      <p id="p-00136-en" num="0118">As shown in Table 7, the Al and Zr metal ion concentrations were reduced by a relatively large percentage after the treatment. Mg ion concentration was slightly increased after the treatment. These results indicated that the treatment was an effective way to remove some trace metal ions, such as Al and Zr, from cerium oxide slurry.</p>
+      <p id="p-00137-en" num="0119">Further shown in Table 7, using the chemical additives to treat the cerium oxide particles in solution at different temperatures was an efficient approach to reduce the Al and Zr contents in cerium oxide particles. Such effective Al and Zr content reduction mainly due to that these chemical additives can react with Al or Zr contained on cerium particle surfaces to convert them to the soluble Al or Zr chemical additive complexes, after that, the cerium oxide particles can be separated from supernatant and re-dispersed for making STI slurry formulations with reduced Al and Zr contents.</p>
+      <p id="p-00138-en" num="0120">When the concentration of oxalic acid was changed from 0.01 M to 0.1 M, there was no impact observed on Al content (ppb) which indicated that 0.01 M of oxalic acid concentration was adequate for the efficient removal of some Al and Zr contents from cerium oxide particles.</p>
+      <p id="p-00139-en" num="0121">The cerium oxide slurry after chemical additive treatment can be used to prepare STI polishing compositions.</p>
+      <p id="p-00140-en" num="0122">The different treatments, methods or embodiments for reducing trace metal and smaller sized and fine cerium oxide particles described above, can be combined in any orders. For example, the cerium oxide slurry being treated by any one of the method described above, can be further treated by any other, or any combinations of other methods. For example, the cerium oxide slurry being treated by suitable chemical additives, can be further treated by any one, or combinations of, chemical chelator treatment; ion exchange resin treatment, ultra filtration treatment, and deionized water washing and centrifuge treatment described above.</p>
+      <p id="p-00141-en" num="0123">Upon the reduction of trace metal contaminants in the cerium oxide slurry, the treated cerium oxide slurry is used to make STI polishing compositions. The defects, such as metal ion penetrating into silicon oxide films or forming nano-sized residues on wafer surfaces from a STI CMP process can be reduced.</p>
+      <p id="p-00142-en" num="0124">The working examples and embodiments of this invention listed above, are exemplary of numerous embodiments that may be made of this invention. It is contemplated that numerous materials other than those specifically disclosed may be made. Numerous other configurations of the process may also be used, and the materials used in the process may be elected from numerous materials other than those specifically disclosed.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A chemical mechanical polishing (CMP) composition having reduced defects, comprising:
+<claim-text>cerium oxide slurry having trace metal contaminants;</claim-text><claim-text>polymeric electrolyte;</claim-text><claim-text>biocide;</claim-text><claim-text>chemical chelator selected from the group consisting of organic acid selected from the group consisting of oxalic acid, citric acid, malic acid, tartaric acid, maleic acid, itaconic acid, gluconic acid, lactic acid, ethylenediaminetetraacetic acid, and combinations thereof; amino acid selected from the group consisting of glycine, alanine, serine, proline, and combinations thereof; organic acid derivative containing at least one carboxylic acid group; amino acid derivative containing at least one amine acid moieties; organic amine compound containing primary or secondary amino groups; organic sulfuric acid containing at least one sulfuric acid group; organic phosphoric acid containing at least one or more phosphoric acid group; organic chelators containing multi-type function groups; pyridine and its derivative selected from the group consisting of pyridine, 2-methyl pyridine, and substituted pyridine at position 2, 3, 4, 5 or 6 respectively; and combinations thereof; bipyridine and its derivative selected from the group consisting of 2,2′-bipyrine, substituted 2,2′-bipyrine, 4,4′-dimethyl bipyridine, 4,4′-bipyridine, 4,4′-bipyridine derivative; terpyridine and its derivative; quinoline and its derivative; hydroxyl quinoline and its derivative; ammonium hydroxide; and combinations thereof; and</claim-text><claim-text>deionized water as a solvent;</claim-text><claim-text>wherein the chemical chelator reacts with trace metal ions in trace metal contaminants to form metal ion-chelator complexes.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The chemical mechanical polishing (CMP) composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the chemical chelator is hydroxyl quinoline or its derivative having chemical structure selected from the group consisting of:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00005">
+          <img id="imgc-00001-en" he="63.67mm" wi="54.78mm" alt="embedded image" img-content="chem" file="US20150247063A1_00013.PNG" img-format="png" original="US20150247063A1-20150903-C00005.TIF" />
+        </chemistry><claim-text>and combinations thereof;</claim-text><claim-text>wherein R is selected from the group consisting of hydrogen, alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine groups, and combinations thereof;</claim-text><claim-text>R′ and R″ can be the same or different, and are independently selected from the group consisting of hydrogen, alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine, and combinations thereof.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The chemical mechanical polishing (CMP) composition of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the chemical chelator is selected from the group consisting of 8-hydroxyl quinoline, 8-hydroxyl quinoline-5-sulfonic acid, and combinations thereof.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The chemical mechanical polishing (CMP) composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the polymeric electrolyte is selected from the group consisting of ammonium salt of polyacrylic acid, ammonium salt of polyvinyl sulfonic acid, ammonium salt of poly(4-styrene sulfonic acid), and combinations thereof.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The chemical mechanical polishing (CMP) composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the polymeric electrolyte is an ammonium salt of polyacrylic acid; the chemical chelator is selected from the group consisting of 8-hydroxyl quinoline, 8-hydroxyl quinoline-5-sulfonic acid, and combinations thereof.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en" independent="true">
+      <claim-text>
+        <b>6</b>. A method of chemical mechanical polishing (CMP) a substrate having at least one surface comprising silicon dioxide in Shallow Trench Isolation (STI) process, comprising movably contacting the surface of the substrate with a chemical mechanical polishing (CMP) composition having reduced defects, comprising
+<claim-text>cerium oxide slurry having trace metal contaminants;</claim-text><claim-text>polymeric electrolyte;</claim-text><claim-text>biocide;</claim-text><claim-text>chemical chelator selected from the group consisting of organic acid selected from the group consisting of oxalic acid, citric acid, malic acid, tartaric acid, maleic acid, itaconic acid, gluconic acid, lactic acid, ethylenediaminetetraacetic acid, and combinations thereof; amino acid selected from the group consisting of glycine, alanine, serine, proline, and combinations thereof; organic acid derivative containing at least one carboxylic acid group; amino acid derivative containing at least one amine acid moieties; organic amine compound containing primary or secondary amino groups; organic sulfuric acid containing at least one sulfuric acid group; organic phosphoric acid containing at least one or more phosphoric acid group; organic chelators containing multi-type function groups; pyridine and its derivative selected from the group consisting of pyridine, 2-methyl pyridine, and substituted pyridine at position 2, 3, 4, 5 or 6 respectively; and combinations thereof; bipyridine and its derivative selected from the group consisting of 2,2′-bipyrine, substituted 2,2′-bipyrine, 4,4′-dimethyl bipyridine, 4,4′-bipyridine, 4,4′-bipyridine derivative; terpyridine and its derivative; quinoline and its derivative;</claim-text><claim-text>hydroxyl quinoline and its derivative; ammonium hydroxide; and combinations thereof; and</claim-text><claim-text>deionized water as a solvent;</claim-text><claim-text>wherein the chemical chelator reacts with trace metal ions in trace metal contaminants to form metal ion-chelator complexes which are easily removed to reduce defects caused by the trace metal contaminants.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the chemical chelator is hydroxyl quinoline or its derivative having chemical structure selected from the group consisting of:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00006">
+          <img id="imgc-00002-en" he="63.67mm" wi="54.78mm" alt="embedded image" img-content="chem" file="US20150247063A1_00014.PNG" img-format="png" original="US20150247063A1-20150903-C00006.TIF" />
+        </chemistry><claim-text>and combinations thereof;</claim-text><claim-text>wherein R is selected from the group consisting of hydrogen, alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine groups, and combinations thereof;</claim-text><claim-text>R′ and R″ can be the same or different, and are independently selected from the group consisting of hydrogen, alkyl, alkoxy, organic group with one or more hydroxyl groups, substituted organic sulfonic acid, substituted organic sulfonic acid salt, substituted organic carboxylic acid, substituted organic carboxylic acid salt, organic carboxylic ester, organic amine, and combinations thereof;</claim-text><claim-text>and the chemical mechanical polishing (CMP) composition is for Shallow Trench Isolation (STI) having reduced defects.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the chemical chelator is selected from the group consisting of 8-hydroxyl quinoline, 8-hydroxyl quinoline-5-sulfonic acid, and combinations thereof.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the polymeric electrolyte is selected from the group consisting of ammonium salt of polyacrylic acid, ammonium salt of polyvinyl sulfonic acid, ammonium salt of poly(4-styrene sulfonic acid), and combinations thereof.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the polymeric electrolyte is an ammonium salt of polyacrylic acid; the chemical chelator is selected from the group consisting of 8-hydroxyl quinoline, 8-hydroxyl quinoline-5-sulfonic acid, and combinations thereof.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the method comprises a first step of centrifuging the chemical mechanical polishing (CMP) composition to remove metal ion-chelator complexes.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A method of reducing trace metal contaminants and smaller sized cerium oxide particles in a cerium oxide slurry, comprising step(s) selected from the group consisting of:
+<claim-text>(1) (a) adding an ion exchange resin to the cerium oxide slurry; and (b) removing the ion exchange resin through filtration to obtain treated cerium oxide slurry; wherein the ion exchange resin is a cationic ion exchange resin having proton or potassium ions or an anionic ion exchange resin having hydroxyl group;</claim-text><claim-text>(2) running deionized water through the cerium oxide slurry using at least one ultra filtration membrane to obtain a treated cerium oxide slurry as retentate;</claim-text><claim-text>(3) (a) centrifuging the cerium oxide slurry; (b) collecting cerium oxide particles from the precipitate of centrifugation; (c) mixing deionized water with the collected cerium oxide particles to form a new cerium oxide slurry; and (d) repeating steps (a) to (c) at least twice to obtain a treated cerium oxide slurry comprising cerium oxide particles from the precipitate of the last centrifugation;</claim-text><claim-text>(4)(a) adding a chemical additive to the cerium oxide slurry to form a mixture; wherein the chemical additive reacts with trace metal ions in the trace metal contaminants to form water soluble chemical additive-metal ion complexes in the mixture; (b) centrifuging the mixture; (c) collecting cerium oxide particles from the precipitate of the centrifugation; and (d) mixing deionized water with the collected cerium oxide particles to obtain treated cerium oxide slurry; and</claim-text><claim-text>(6) combinations thereof.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the method comprises the step (1) and the ion exchange resin is the cationic ion exchange resin having potassium ions; and the step (1) further comprises
+<claim-text>(c) adding anionic ion exchange resin having hydroxyl group to the treated cerium oxide slurry after step (b);</claim-text><claim-text>(d) removing the anionic ion exchange resin from the cerium oxide slurry in (c) through filtration; and</claim-text><claim-text>repeating steps (a) to (d) at least twice.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the method further comprises the step (3).</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the method comprises the step (2) and the step (3).</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the method comprises the step (2); and the method further comprising (a) inducing agglomeration of cerium oxide particles before the step (2); and (b) sonicating the treated cerium oxide slurry after the step (2).</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the method further comprises the step (3).</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the method comprises the step (4); and the chemical additive is selected from the group consisting of (a) organic acid selected from the group consisting of oxalic acid, citric acid, malic acid, tartaric acid, maleic acid, itaconic acid, gluconic acid, lactic acid, ethylenediaminetetraacetic acid, and combinations thereof; (b) amino acids selected from the group consisting of glycine, alanine, serine, proline, and combinations thereof; (c) organic compound containing at least one carboxylic acid group; (d) amino acid derivatives containing at least one amine acid moieties or iminodiacetic acid; (e) organic amine compound selected from the group consisting of ethylene diamine, propylene diamine, ethylenimine, organic compound containing primary or secondary amino groups; and combinations thereof; (f) organic sulfuric acids containing at least one sulfuric acid group; (g) organic phosphoric acids containing at least one phosphoric acid group; (h) pyridine and its derivatives selected from the group consisting of pyridine, 2-methyl pyridine, substituted pyridine at position 2, 3, 4, 5 or 6 respectively, and combinations thereof; (i) bipyridine and its derivatives selected from the group consisting of 2,2′-bipyrine, 4,4′-dimethyl bipyridine, 4,4′-bipyridine, and all other substituted 2,2′-bipyrine or 4,4′-bipyridine derivatives, and combinations thereof; (j) terpyridine and its derivatives; (k) quinoline and its derivatives; (l) hydroxyl quinoline and its derivatives; and (m) ammonium hydroxide; and (n) combinations thereof.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the method further comprises the step (3).</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the chemical additive is oxalic acid having concentration ranging from 0.01 M to 0.1 M. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247063A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247063A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247063A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247063A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247063A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247063A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247063A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247063A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247063A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247063A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247063A1-20150903-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247063A1-20150903-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247063A1-20150903-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150247063A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247063A1-20150903-C00006.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150247063A1.PDF" type="pdf" size="724340" pages="19" />
+</lexisnexis-patent-document>

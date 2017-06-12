@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2939542A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091059" date-changed="20160112" time-changed="114828">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939336">
+        <country>EP</country>
+        <doc-number>2939542</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13867023</doc-number>
+        <date>20131226</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012287291</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012287291</doc-number>
+        <kind>A</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013084994</doc-number>
+        <kind>W</kind>
+        <date>20131226</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012287291</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013084994</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120287291</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP84994</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150623</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20160112">
+      <classification-ipcr sequence="1">
+        <text>A21D   2/26        20060101AFI20140722BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>2</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A21D   2/18        20060101ALI20140722BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>2</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A21D   2/36        20060101ALI20140722BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>2</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A21D  13/08        20060101ALI20140722BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160112">
+      <classification-cpc sequence="1">
+        <text>A21D  13/02        20130101 FI20160106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A21D   2/18        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>2</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A21D   2/181       20130101 LI20151215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>2</main-group>
+        <subgroup>181</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A21D   2/26        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>2</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A21D   2/266       20130101 LI20151215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>2</main-group>
+        <subgroup>266</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A21D   2/36        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>2</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A21D  13/08        20130101 LI20160106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">GEBACKENE SÜSSWARE</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">BAKED CONFECTIONERY</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">CONFISERIE CUITE AU FOUR</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Kao Corporation</orgname>
+            <registered-number>100807019</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>14-10, Nihonbashi Kayabacho 1-chome</address-1>
+              <city>Chuo-Ku Tokyo 103-8210</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>SATO, Mioto</name>
+            <address>
+              <address-1>c/o Kao Corporation Research Laboratories 2-1-3 Bunka Sumida-ku</address-1>
+              <city>Tokyo 131-8501</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>AOYAMA, Hiroshi</name>
+            <address>
+              <address-1>c/o Kao Corporation 14-10 Nihonbashi Kayabacho 1-chome Chuo-ku</address-1>
+              <city>Tokyo 103-8210</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Hoffmann Eitle</name>
+            <registered-number>100061036</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Patent- und Rechtsanwälte PartmbB Arabellastraße 30</address-1>
+              <city>81925 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13084994</doc-number>
+        <date>20131226</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014104250</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151231">
+      <main-family family-id="166466344">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939542</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014140364</doc-number>
+            <kind>A</kind>
+            <date>20140807</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104883889</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150374000</doc-number>
+            <kind>A1</kind>
+            <date>20151231</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104250</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166466343">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939542</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014140364</doc-number>
+            <kind>A</kind>
+            <date>20140807</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104883889</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150374000</doc-number>
+            <kind>A1</kind>
+            <date>20151231</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104250</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Baked confectionery, containing:<br /> insoluble dietary fiber in an amount of from 4.0 to 12.0 mass%;<br /> protein in an amount of from 10.0 to 30.0 mass% of; and<br /> lipid in an amount of from 8.0 to 15.0 mass%; wherein the insoluble dietary fiber includes wheat-bran-derived insoluble dietary fiber.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">Field of the Invention</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to baked confectionery.</p>
+    <heading id="h-00002-en">Background of the Invention</heading>
+    <p id="p-00002-en" num="0002">Wheat hull, also called wheat bran, is attracting attention as a material of health food, since it is rich in insoluble dietary fiber, vitamins, minerals and the like. Whole wheat flour obtained by milling whole wheat grains including their hulls is reported to have a hypotensive effect and an abdominal fat reducing effect, and also reported to reduce risk of mortality of diabetic patients.</p>
+    <p id="p-00003-en" num="0003">In addition, protein is a nutrient required for producing blood, muscle, various enzymes and so forth, and is classified as one of the three major nutrients together with carbohydrate and fat.</p>
+    <p id="p-00004-en" num="0004">Thus, the physiological function and nutritional balance of food can be improved by increasing the content of the insoluble dietary fiber and/or increasing the protein content of the food.</p>
+    <p id="p-00005-en" num="0005">Patent Literature 1 describes an invention of producing a protein-rich and fiber-rich baked food which contains at least about 4 g of protein and 4 g of fiber per 30 g unit. Patent Literature 1 teaches a technique for producing a cracker rich in soybean protein, pea protein, wheat protein or milk protein, and digestion-resistant starch or oat fiber, through a specific production process, to thereby obtain a crispy cracker having texture that is not hard.</p>
+    <p id="p-00006-en" num="0006">Patent Literature 1: <patcit id="pcit-00001" dnum="JP2010279352A"><text>JP-A-2010-279352</text></patcit> ("JP-A" means unexamined published Japanese patent application)</p>
+    <heading id="h-00003-en">Summary of the Invention</heading>
+    <p id="p-00007-en" num="0007">The present invention provides baked confectionery, containing: <ul id="ul-00001-en" list-style="none" compact="compact"><li>insoluble dietary fiber in an amount of from 4.0 to 12.0 mass%;</li><li>protein in an amount of from 10.0 to 30.0 mass%; and</li><li>lipid in an amount of from 8.0 to 15.0 mass%;</li></ul> wherein the insoluble dietary fiber includes wheat-bran-derived insoluble dietary fiber.</p>
+    <p id="p-00008-en" num="0008">Further, the present invention provides a method of producing the baked confectionery described above, including preparing dough by blending therein at least wheat flour, wheat bran, protein-containing powder, and fat and oil, and then baking the dough.</p>
+    <p id="p-00009-en" num="0009">In this specification, when the term "insoluble dietary fiber" is simply used to indicate an ingredient in the baked confectionery, the term means all of the insoluble dietary fiber contained in the baked confectionery.</p>
+    <p id="p-00010-en" num="0010">Other and further objects, features and advantages of the invention will appear more fully from the following description.</p>
+    <heading id="h-00004-en">Detailed Description of the Invention</heading>
+    <p id="p-00011-en" num="0011">The present invention is contemplated for providing baked confectionery increased in the blended amounts of both insoluble dietary fiber and protein, in which the baked confectionery causes little dry feeling in the mouth and has a moist food texture even though it is rich in insoluble dietary fiber, and the baked confectionery has a softer food texture due to having the dough being loosely packed and can be easily bitten off even though it is rich in protein.</p>
+    <p id="p-00012-en" num="0012">In baked confectionery made using farina as a main ingredient, such as cookies, biscuits and low-calorie snack bars, moist and easy-to-eat ones, namely, ones that are easily bitten off and do not cause a dry feeling in the mouth during chewing, are generally favored.</p>
+    <p id="p-00013-en" num="0013">The present inventors pursued a study on baked confectionery in which wheat bran is blended in order to improve a physiological function of the baked confectionery, and the protein content is increased in order to improve a nutritional balance. As a result, the present inventors found that baked confectionery reduced in dry feeling caused by saliva absorption, and thus being moist and easy-to-eat, and also having low dough agglomeration, and thus offering a softer food texture easily bite off, can be obtained by adjusting the content of the insoluble dietary fiber including the wheat bran and the protein content to specific ranges, in the baked confectionery containing a specific amount of lipid. Furthermore, the present inventors found that the so-obtained baked confectionery resists crumbling and is excellent in dough shape stability (quality stability).</p>
+    <p id="p-00014-en" num="0014">The present invention has been completed based on these findings.</p>
+    <p id="p-00015-en" num="0015">In the present invention, "baked confectionery" means a biscuit, a cookie, a cracker, a hardtack, a pretzel, a pie, cut bread, shortbread, or the like as described in "<nplcit id="ncit-00001" npl-type="b"><text>Seikajiten (Confectionery Dictionary)," the first edition, October 30, 1981, p.204</text></nplcit>. The baked confectionery preferably includes a biscuit, a cookie, a hardtack, a pretzel, a pie, cut bread, and the like specified in the<nplcit id="ncit-00002" npl-type="s"><text> Fair Competition Code in 1971</text></nplcit>.</p>
+    <p id="p-00016-en" num="0016">More specifically, "baked confectionery" in the present invention means a product that is different from bread prepared by baking dough after many gas bubbles are incorporated therein by fermenting the dough with yeast, and also different from cake prepared by baking dough after many gas bubbles are incorporated therein by adding baking powder, meringue or the like to the dough. "Baked confectionery" of the present invention contains a smaller amount of gas bubbles, and has lower elasticity, higher penetration strength, a lower moisture content, and also lower water activity in comparison with the bread and the cake.</p>
+    <p id="p-00017-en" num="0017">The baked confectionery of the present invention contains a specific amount of lipid, and the content of the insoluble dietary fiber and the protein content in the baked confectionery are increased to specific levels. The baked confectionery of the present invention is described in detail below.</p>
+    <p id="p-00018-en" num="0018">The baked confectionery of the present invention contains wheat-bran-derived insoluble dietary fiber. The baked confectionery of the present invention may further contain, in addition to the wheat-bran-derived insoluble dietary fiber, one kind or two or more kinds of insoluble dietary fiber other than the wheat-bran-derived insoluble dietary fiber.</p>
+    <p id="p-00019-en" num="0019">Here, "dietary fiber" means a whole of hardly-digestible ingredients in food, the ingredients being not digested by a human digestive enzyme. Among them, one that is hard to be dissolved into water is called the insoluble dietary fiber. The insoluble dietary fiber is not particularly limited, and may be derived from cereal, legumes, fruits, green goods or the like, such as cellulose and hemicellulose, or may be derived from shells of crustacea, such as chitin and chitosan, or may be derived from cell walls of fungi.</p>
+    <p id="p-00020-en" num="0020">From viewpoints of shape stability, the packing degree of dough, moist food texture, and the shape stability, a ratio of the wheat-bran-derived insoluble dietary fiber in the insoluble dietary fiber present in the baked confectionery of the present invention is preferably 30.0 mass% or more, more preferably 40.0 mass% or more, more preferably 45.0 mass% or more. Moreover, the insoluble dietary fiber derived from blended wheat flour or the like is also ordinarily contained in the baked confectionery, and therefore the ratio of the wheat-bran-derived insoluble dietary fiber in the insoluble dietary fiber present in the baked confectionery is ordinarily 95.0 mass% or less, and may be 90.0 mass% or less, or 80.0 mass% or less.</p>
+    <p id="p-00021-en" num="0021">A content of the insoluble dietary fiber in the wheat bran is ordinarily from about 40 mass% to about 50 mass%.</p>
+    <p id="p-00022-en" num="0022">The content of the insoluble dietary fiber in the baked confectionery of the present invention is from 4.0 to 12.0 mass%. From viewpoints of the shape stability and the packing degree of dough, the content of the insoluble dietary fiber in the baked confectionery of the present invention is preferably 4.5 mass% or more, more preferably 5.0 mass% or more, more preferably 5.5 mass% or more, more preferably 6.0 mass% or more. Moreover, from viewpoints of hardness and the moist food texture, the content of the insoluble dietary fiber in the baked confectionery of the present invention is preferably 11.0 mass% or less, more preferably 10.0 mass% or less, more preferably 9.0 mass% or less.</p>
+    <p id="p-00023-en" num="0023">The content of the insoluble dietary fiber can be measured according to the method described in Examples shown later.</p>
+    <p id="p-00024-en" num="0024">The baked confectionery of the present invention contains a specific amount of one kind or two or more kinds of protein. The protein includes protein derived from a raw material such as wheat flour and an egg, protein derived from a preparation containing edible protein such as protein-containing powder describe later, which is used as the raw material, and a combination thereof.</p>
+    <p id="p-00025-en" num="0025">Kinds of protein to be contained in the baked confectionery of the present invention is not particularly limited, and animal-derived protein, vegetable-derived protein or a combination thereof can be blended in. Among them, vegetable-derived protein is preferably blended in.</p>
+    <p id="p-00026-en" num="0026">The above-described animal-derived protein is not particularly limited, and specific examples include one kind or two or more kinds selected from milk-derived protein, whey protein, whey protein concentrate, whey protein isolate, hydrolysate whey peptide, casein protein, egg protein, hen's egg-derived protein, albumen-derived protein, fish-derived protein, shellfish-derived protein, chicken-derived protein, swine-derived protein and bovine-derived protein.</p>
+    <p id="p-00027-en" num="0027">The above-described vegetable-derived protein is not particularly limited, and specific examples include one kind or two or more kinds selected from grain-derived protein, corm-derived protein and algae-derived protein, and grain-derived protein is preferred. Specific examples of the grain-derived protein include one kind or two or more kinds selected from wheat-derived protein, soybean-derived protein, rice-derived protein, adlay-derived protein, oat-derived protein and corn-derived protein. Above all, one kind or two or more kinds selected from wheat-derived protein, soybean-derived protein, adlay-derived protein and oat-derived protein are preferred, and soybean-derived protein is further preferred. Moreover, as the soybean-derived protein, defatted soybean-derived protein is preferred, and defatted soybean-milk-derived protein is further preferred.</p>
+    <p id="p-00028-en" num="0028">The protein content in the baked confectionery of the present invention is from 10.0 to 30.0 mass%. From viewpoints of the stability and the moist food texture, the protein content in the baked confectionery of the present invention is preferably 11.0 mass % or more, more preferably 12.0 mass % or more. Moreover, from viewpoints of the hardness, the packing degree of dough and the moist food texture, the protein content in the baked confectionery of the present invention is preferably 25 mass% or less, more preferably 20.0 mass% or less.</p>
+    <p id="p-00029-en" num="0029">The protein content can be measured according to the method described in Examples shown later.</p>
+    <p id="p-00030-en" num="0030">The baked confectionery of the present invention contains a specific amount of one kind or two or more kinds of lipid. The lipid is mainly derived from fat and oil or the like blended in as the raw material, and is measured according to the method shown in Examples as described later.</p>
+    <p id="p-00031-en" num="0031">A lipid content in the baked confectionery of the present invention is from 8.0 to 15.0 mass%. From viewpoints of the hardness, the moist food texture and the shape stability, the lipid content in the baked confectionery of the present invention is preferably 8.5 mass% or more, more preferably 9.0 mass% or more, more preferably 10.0 mass% or more. Moreover, from viewpoints of the shape stability and the hardness, the lipid content in the baked confectionery of the present invention is preferably 14.0 mass% or less, more preferably 13.0 mass% or less.</p>
+    <p id="p-00032-en" num="0032">The baked confectionery of the present invention preferably contains one kind or two or more kinds of starch. Specific examples of the starch include starch derived from the raw material such as the wheat flour, starch derived from a starch preparation used as the raw material, and a combination thereof. The starch is not particularly limited, and specific examples thereof include one kind or two or more kinds selected from wheat starch, barley starch, rye starch, oats starch, corn starch, rice starch, legumes starch, potato starch, sweet potato starch, tapioca starch, water chestnut starch, chestnut starch, sago starch, yam starch, lotus root starch, arrowhead starch, bracken starch, lily bulb starch and amylomaize starch. The baked confectionery of the present invention preferably contains one kind or two or more kinds selected from wheat starch and corn starch.</p>
+    <p id="p-00033-en" num="0033">A starch content in the baked confectionery of the present invention is not particularly limited, and appropriately adjusted according to an intended purpose. From a viewpoint of melt-in-the-mouth, the starch content in the baked confectionery of the present invention is preferably 10 mass% or more, more preferably 15 mass% or more, more preferably 20 mass% or more. Moreover, from a viewpoint of powderiness, the starch content in the baked confectionery of the present invention is preferably 50 mass% or less, more preferably 40 mass% or less, more preferably 35 mass% or less.</p>
+    <p id="p-00034-en" num="0034">The baked confectionery of the present invention preferably contains a saccharide. The saccharide is not particularly limited, and specific examples of the saccharide include one kind or two or more kinds selected from a monosaccharide, a disaccharide, a trisaccharide, a tetrasaccharide, a pentasaccaride, a hexasaccharide, a starch hydrolysate, and sugar alcohol obtained by reducing these saccharides. More specific examples of the saccharide include one kind or two or more kinds selected from glucose, maltose, fructose, sucrose, lactose, trehalose, maltotriose, maltotetraose, sorbitol, xylitol, erythritol, maltitol, starch syrup, high-fructose corn syrup, invert sugar, cyclodextrin, dextrin and branched cyclodextrin.</p>
+    <p id="p-00035-en" num="0035">A saccharide content in the baked confectionery of the present invention is not particularly limited, and appropriately adjusted according to an intended purpose. The saccharide content in the baked confectionery of the present invention is ordinarily from 0.1 to 50 mass%, and may be from 1.0 to 50 mass%. When the content is adjusted in such a range, flavor, food texture and unity of taste can be further preferable.</p>
+    <p id="p-00036-en" num="0036">The baked confectionery of the present invention may contain a synthetic sweetener. Specific examples of the synthetic sweetener include one kind or two or more kinds selected from sucralose, aspartame, acesulfame potassium and saccharin.</p>
+    <p id="p-00037-en" num="0037">A synthetic sweetener content in the baked confectionery of the present invention is not particularly limited, and appropriately adjusted according to an intended purpose. The synthetic sweetener content in the baked confectionery of the present invention is ordinarily from 0.001 to 1.0 mass%, and may be from 0.005 to 1.0 mass%. When the content is adjusted in such a range, the flavor of the baked confectionery of the present invention can be further clearly developed.</p>
+    <p id="p-00038-en" num="0038">In addition to each ingredient described above, the baked confectionery of the present invention may also contain, in a remainder, various ingredients derived from the raw material that may be blended in during preparation of the dough, or various kinds of ingredients derived from condiments to be added thereto after the dough is baked. As origins of such ingredients, specific examples include one kind or two or more kinds selected from wheat flour, an egg, powder containing insoluble dietary fiber, powder milk, milk, coconut milk, kitchen salt, powder, a condiment, baking powder, a pH adjuster, an antioxidant, a flavoring agent and water.</p>
+    <p id="p-00039-en" num="0039">From a viewpoint of storage stability, a moisture content (water content) in the baked confectionery of the present invention is preferably 20 mass% or less, more preferably 15 mass% or less, more preferably 10 mass% or less. Moreover, from a viewpoint of the food texture, the moisture content in the baked confectionery of the present invention is preferably 3 mass% or more, more preferably 4 mass% or more, more preferably 5 mass% or more. More specifically, the moisture content in the baked confectionery of the present invention is preferably from 3 to 20 mass%, more preferably from 4 to 15 mass%, more preferably from 5 to 10 mass%.</p>
+    <p id="p-00040-en" num="0040">From a viewpoint of the storage stability, water activity in the baked confectionery of the present invention is preferably 0.8 or less, more preferably 0.7 or less, more preferably 0.6 or less.</p>
+    <p id="p-00041-en" num="0041">Even though the baked confectionery of the present invention abundantly contains the insoluble dietary fiber, the baked confectionery of the present invention is hard to cause dry feeling in the mouth and is moist and easily eatable. Moreover, even though the baked confectionery of the present invention abundantly contains the protein, the baked confectionery of the present invention has softer food texture and is easily bitten off. Further, the baked confectionery of the present invention is hard to crumble and excellent in the dough shape stability.</p>
+    <p id="p-00042-en" num="0042">Subsequently, preparation of the baked confectionery of the present invention is described below.</p>
+    <p id="p-00043-en" num="0043">The baked confectionery of the present invention can be obtained by preparing the dough by blending therein, for example, at least the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil, and then baking the dough. Moreover, when necessary, the powder containing the insoluble dietary fiber, other than the wheat bran, can also be blended together with the wheat bran.</p>
+    <p id="p-00044-en" num="0044"> The above-described wheat flour is not particularly limited, and any of strong flour, medium-strength flour and weak flour can be used. Among them, weak flour is preferably used.</p>
+    <p id="p-00045-en" num="0045">The above-described "powder containing the insoluble dietary fiber, other than the wheat bran" means powder highly containing the insoluble dietary fiber, and contains the insoluble dietary fiber in an amount of preferably 20 mass% or more, more preferably 30 mass% or more, more preferably 40 mass% or more. The powder containing the insoluble dietary fiber is not particularly limited, and specific examples include one kind or two or more kinds selected from a cellulose preparation, a crystalline cellulose preparation, a methylcellulose preparation, a hemicellulose preparation, a preparation obtained by powdering hulls of cereal seeds other than wheat, soybean pulp left after squeezing soybean milk from a soybean, a preparation obtained by powdering shells of crustacea and a preparation obtained by powdering cell walls of fungi.</p>
+    <p id="p-00046-en" num="0046">The above-described "protein-containing powder" means a powder preparation highly containing edible protein, and contains the protein in an amount of preferably 40 mass% or more, more preferably 50 mass% or more, more preferably 60 mass% or more. Specific examples of commercially available protein-containing powder include soybean protein-containing powder (trade name: Proleena, Soyafit, both manufactured by Fuji Oil Co., Ltd.; Sorubi, Soya Flour, both manufactured by The Nisshin Oillio Group, Ltd.; ALPHA, SUPRO, both manufactured by The Solae Company), whey powder (trade name: Milei 80, manufactured by Milei GmbH), casein powder (trade name: Calcium Caseinate 380, manufactured by Fonterra Co-Operative Group Ltd.), rice protein (trade name: Ripro N80, manufactured by CJ CheilJedang Corporation.), pea protein (trade name : PP-CS, manufactured by Organo Foodtech Corporation).</p>
+    <p id="p-00047-en" num="0047">As the above-described "fat and oil," for example, one kind or two or more kinds selected from vegetable fat and oil, animal fat and oil, emulsified fat and oil and shortening can be used.</p>
+    <p id="p-00048-en" num="0048">Specific examples of the vegetable fat and oil includes one kind or two or more kinds selected from soybean oil, rapeseed oil, corn oil, cotton seed oil, safflower oil, olive oil, palm oil, rice bran oil, sunflower seed oil, sesame oil, and hydrogenated oil thereof, transesterified oil thereof or fractionated oil thereof.</p>
+    <p id="p-00049-en" num="0049">Specific examples of the animal fat and oil includes one kind or two or more kinds selected from lard, bovine fat, fish oil, milk fat, swine fat, horse oil, and hydrogenated oil thereof, transesterified oil thereof or fractionated oil thereof.</p>
+    <p id="p-00050-en" num="0050">Further, specific examples of the emulsified fat and oil includes water-in-oil emulsified fat and oil. Specific examples of the water-in-oil emulsified fat and oil includes one kind or two or more kinds selected from margarine, fat spread and butter. Moreover, when necessary, oil-in-water emulsified fat and oil may be used.</p>
+    <p id="p-00051-en" num="0051">Moreover, one kind or two or more kinds selected from purified or partially purified monoacylglycerol, diacylglycerol and triacylglycerol may be used.</p>
+    <p id="p-00052-en" num="0052">In the preparation of the baked confectionery of the present invention, an amount of each ingredient blended in the dough is not particularly limited, as long as the content of each of the insoluble dietary fiber, the protein and the lipid is within the range specified in the present invention in the baked confectionery obtained by baking the dough,. For example, the amount of each ingredient blended in the dough can be adjusted as described below.</p>
+    <p id="p-00053-en" num="0053">In the preparation of the dough, an amount of the wheat flour blended in the dough is adjusted to be preferably from 25 to 75 parts by mass, more preferably from 30 to 70 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</p>
+    <p id="p-00054-en" num="0054">In the preparation of the dough, an amount of the wheat bran blended in the dough is adjusted to be preferably from 6 to 26 parts by mass, more preferably from 8 to 25 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</p>
+    <p id="p-00055-en" num="0055">In the preparation of the dough, an amount of the protein-containing powder blended in the dough is adjusted to be preferably from 6 to 45 parts by mass, more preferably from 8 to 40 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</p>
+    <p id="p-00056-en" num="0056">In the preparation of the dough, an amount of the fat and oil blended in the dough is adjusted to be preferably from 5 to 25 parts by mass, more preferably from 7 to 20 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</p>
+    <p id="p-00057-en" num="0057">In the preparation of the baked confectionery of the present invention, the egg may be blended in. The egg is not particularly limited, and a hen's egg, an ostrich's egg, a duck's egg or the like can be used. Among them, a hen's egg is preferably used. The above-described egg means egg white, egg york or a combination thereof.</p>
+    <p id="p-00058-en" num="0058">A form of processing the egg to be used is not particularly limited. For example, one kind or two or more kinds selected from a raw egg, a frozen egg, a powdered egg, a sugar-added egg, and a pasteurized egg can be used. Among them, a pasteurized egg is preferably used.</p>
+    <p id="p-00059-en" num="0059">In the preparation of the dough, an amount of the egg blended in the dough is adjusted to be preferably from 5 to 20 parts by mass, more preferably from 7 to 15 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</p>
+    <p id="p-00060-en" num="0060">In the preparation of the baked confectionery of the present invention, the saccharide or the sweetener may be blended in the dough. As the saccharide and sweetener, ones described above in the baked confectionery of the present invention can be used.</p>
+    <p id="p-00061-en" num="0061">A total amount of the saccharide and the sweetener blended in the dough is adjusted to be preferably from 5 to 50 parts by mass, more preferably from 10 to 45 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</p>
+    <p id="p-00062-en" num="0062">In the preparation of the baked confectionery of the present invention, starch (more specifically, a starch preparation) other than the starch that is inevitably incorporated in the dough by blending in the wheat flour may be blended in the dough. Specific examples of the starch preparation include one kind or two or more kinds selected from wheat starch, barley starch, rye starch, oats starch, corn starch, rice starch, legumes starch, potato starch, sweet potato starch, tapioca starch, water chestnut starch, chestnut starch, sago starch, yam starch, lotus root starch, arrowhead starch, bracken starch, lily bulb starch and amylomaize starch. Among them, one kind or two or more kinds selected from wheat starch and corn starch are preferably blended in.</p>
+    <p id="p-00063-en" num="0063">When the starch preparation is blended in, an amount of the starch preparation blended in the dough is adjusted to be preferably from1 to 5 parts by mass, more preferably from 2 to 4 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</p>
+    <p id="p-00064-en" num="0064">In the preparation of the baked confectionery of the present invention, for example, one kind or two or more kinds selected from milk powder, milk, coconut milk, maple syrup, almond powder, various condiments, baking powder, a pH adjuster, an antioxidant, a flavoring agent, kitchen salt and water may be blended in the dough.</p>
+    <p id="p-00065-en" num="0065">In the preparation of the dough of the baked confectionery of the present invention, an ordinary method such as a sugar batter method and a flour batter method can be employed. Moreover, such a method can also be employed as hard biscuit cutting, soft biscuit cutting (embossing), biscuit rotary cutting, biscuit wire cutting, biscuit route press, biscuit depositing (drops) and hand-made biscuit.</p>
+    <p id="p-00066-en" num="0066">The baked confectionery of the present invention is obtained by baking the dough prepared as described above. The baked confectionery of the present invention can be obtained by baking the dough described above. Baking conditions are not particularly limited, and can be appropriately determined according to types of baked confectionery.</p>
+    <p id="p-00067-en" num="0067">With regard to the above-mentioned embodiment, the present invention discloses the baked confectionery or the method of producing the same as shown below. <ol><li>&lt;1&gt; Baked confectionery, containing:<br /> insoluble dietary fiber in an amount of from 4.0 to 12.0 mass%;<br /> protein in an amount of from 10.0 to 30.0 mass%; and<br /> lipid in an amount of from 8.0 to 15.0 mass%;<br /> wherein the insoluble dietary fiber includes wheat-bran-derived insoluble dietary fiber.</li><li>&lt;2&gt; The baked confectionery according to the item &lt;1&gt;, wherein, when the insoluble dietary fiber includes insoluble dietary fiber other than the wheat-bran-derived insoluble dietary fiber, the insoluble dietary fiber other than the wheat-bran-derived insoluble dietary fiber is preferably derived from one kind or two or more kinds selected from grains other than wheat, legumes, fruits, green goods, shells of crustacea, and cell walls of fungi.</li><li>&lt;3&gt; The baked confectionery according to the item &lt;1&gt; or &lt;2&gt;, wherein a ratio of the wheat-bran-derived insoluble dietary fiber in the insoluble dietary fiber is preferably 30.0 mass% or more, more preferably 40.0 mass% or more, more preferably 45.0 mass% or more.</li><li>&lt;4&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;3&gt;, wherein a ratio of the wheat-bran-derived insoluble dietary fiber in the insoluble dietary fiber is preferably from 95.0 mass% or less, more preferably from 90.0 mass% or less, more preferably from 80 mass% or less.</li><li>&lt;5&gt; The baked confectionery according to the item &lt;1&gt; or &lt;2&gt;, wherein a ratio of the wheat-bran-derived insoluble dietary fiber in the insoluble dietary fiber is preferably from 30.0 to 95.0 mass%, more preferably from 40.0 to 90.0 mass%, more preferably from 45.0 to 80.0 mass%.</li><li>&lt;6&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;5&gt;, wherein a content of the insoluble dietary fiber is preferably 4.5 mass% or more, more preferably 5.0 mass% or more, more preferably 5.5 mass% or more, more preferably 6.0 mass% or more.</li><li>&lt;7&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;6&gt;, wherein a content of the insoluble dietary fiber is preferably 11.0 mass% or less, more preferably 10.0 mass% or less, more preferably 9.0 mass% or less.</li><li>&lt;8&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;5&gt;, wherein a content of the insoluble dietary fiber is preferably from 4.5 to 11.0 mass%, more preferably from 5.0 to 11.0 mass%, more preferably from 5.5 to 11.0 mass%, more preferably from 6.0 to 11.0 mass%, more preferably from 6.0 to 10.0 mass%, more preferably from 6.0 to 9.0 mass%.</li><li>&lt;9&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;8&gt;, wherein the protein preferably contains one kind or two or more kinds selected from vegetable-derived protein and animal-derived protein, more preferably contains one kind or two or more kinds of vegetable-derived protein.</li><li>&lt;10&gt; The baked confectionery according to the item &lt;9&gt;, wherein the animal-derived protein is preferably one kind or two or more kinds selected from milk-derived protein, whey protein, whey protein concentrate, whey protein isolate, hydrolysate whey peptide, casein protein, egg protein, hen's egg-derived protein, albumen-derived protein, fish-derived protein, shellfish-derived protein, chicken-derived protein, swine-derived protein and bovine-derived protein.</li><li>&lt;11&gt; The baked confectionery according to the item &lt;9&gt; or &lt;10&gt;, wherein the vegetable-derived protein is preferably one kind or two or more kind selected from grain-derived protein, corm-derived protein and algae-derived protein, more preferably grain-derived protein.</li><li>&lt;12&gt; The baked confectionery according to the item &lt;11&gt;, wherein the grain-derived protein is preferably one kind or two or more kinds selected from wheat-derived protein, soybean-derived protein, rice-derived protein, adlay-derived protein, oat-derived protein and corn-derived protein, more preferably one kind or two or more kinds selected from wheat-derived protein, soybean-derived protein, adlay-derived protein and oat-derived protein, more preferably soybean-derived protein, more preferably defatted-soybean-derived protein, more preferably defatted-soybean-milk-derived protein.</li><li>&lt;13&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;12&gt;, wherein a protein content is preferably 11.0 mass% or more, more preferably 12.0 mass% or more.</li><li>&lt;14&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;13&gt;, wherein a protein content is preferably 25.0 mass% or less, more preferably 20.0 mass% or less.</li><li>&lt;15&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;12&gt;, wherein a protein content is preferably from 11.0 to 25.0 mass%, more preferably from 12.0 to 20.0 mass%.</li><li>&lt;16&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;15&gt;, wherein a lipid content is preferably 8.5 mass% or more, more preferably 9.0 mass% or more, more preferably 10.0 mass% or more.</li><li>&lt;17&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;16&gt;, wherein a lipid content is preferably 14.0 mass% or less, more preferably 13.0 mass% or less.</li><li>&lt;18&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;15&gt;, wherein a lipid content is preferably from 8.5 to 14.0 mass%, more preferably from 9.0 to 13.0 mass%, more preferably from 10.0 to 13.0 mass%.</li><li>&lt;19&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;18&gt;, wherein the baked confectionery preferably contains starch.</li><li>&lt;20&gt; The baked confectionery according to the item &lt;19&gt;, wherein a starch content is preferably 10 mass% or more, more preferably 15 mass% or more, more preferably 20 mass% or more.</li><li>&lt;21&gt; The baked confectionery according to the item &lt;19&gt;, wherein a starch content is preferably 50 mass% or less, more preferably 40 mass% or less, more preferably 35 mass% or less.</li><li>&lt;22&gt; The baked confectionery according to any one of the items &lt;19&gt; to &lt;21&gt;, wherein the starch is preferably one kind or two or more kinds selected from wheat starch, barley starch, rye starch, oats starch, corn starch, rice starch, legumes starch, potato starch, sweet potato starch, tapioca starch, water chestnut starch, chestnut starch, sago starch, yam starch, lotus root starch, arrowhead starch, bracken starch, lily bulb starch and amylomaize starch, more preferably one kind or two or more kinds selected from wheat starch, barley starch, rye starch, oats starch and corn starch, more preferably one kind or two or more kinds selected from wheat starch and corn starch.</li><li>&lt;23&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;22&gt;, wherein the baked confectionery preferably contains a saccharide.</li><li>&lt;24&gt; The baked confectionery according to the item &lt;23&gt;, wherein the saccharide is preferably one kind or two or more kinds selected from a monosaccharide, a disaccharide, a trisaccharide, a tetrasaccharide, a pentasaccaride, a hexasaccharide, a starch hydrolysate, and sugar alcohol obtained by reducing these saccharides, more specifically, one kind or two or more kinds selected from glucose, maltose, fructose, sucrose, lactose, trehalose, maltotriose, maltotetraose, sorbitol, xylitol, erythritol, maltitol, starch syrup, high-fructose corn syrup, invert sugar, cyclodextrin, dextrin and branched cyclodextrin.</li><li>&lt;25&gt; The baked confectionery according to the item &lt;23&gt; or &lt;24&gt;, wherein a saccharide content is preferably from 0.1 to 50 mass%, more preferably 1.0 to 50 mass%.</li><li>&lt;26&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;25&gt;, wherein the baked confectionery contains a synthetic sweetener.</li><li>&lt;27&gt; The baked confectionery according to the item &lt;26&gt;, wherein the synthetic sweetener is one kind or two or more kinds selected from sucralose, aspartame, acesulfame potassium and saccharin.</li><li>&lt;28&gt; The baked confectionery according to the item &lt;26&gt; or &lt;27&gt;, wherein a synthetic sweetener content is preferably from 0.001 to 1.0 mass%, more preferably from 0.005 to 1.0 mass%.</li><li>&lt;29&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;28&gt;, wherein a moisture content in the baked confectionery is preferably 20 mass% or less, more preferably 15 mass% or less, more preferably 10 mass% or less.</li><li>&lt;30&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;29&gt;, wherein the moisture content in the baked confectionery is preferably 3 mass% or more, more preferably 4 mass% or more, more preferably 5 mass% or more.</li><li>&lt;31&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;28&gt;, wherein the moisture content in the baked confectionery is preferably from 3 to 20 mass%, more preferably from 4 to 15 mass%, more preferably from 5 to 10 mass%.</li><li>&lt;32&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;31&gt;, wherein the backed confectionery is obtained by preparing dough by blending therein at least wheat flour, wheat bran, protein-containing powder, and fat and oil, and then baking the dough, or a method of producing the baked confectionery according to any one of the items &lt;1&gt; to &lt;31&gt;, including preparing dough by blending therein at least wheat flour, wheat bran, protein-containing powder, and fat and oil, and then baking the dough.</li><li>&lt;33&gt; The baked confectionery or the method of producing the baked confectionery according to the item &lt;32&gt;, wherein the dough is prepared by further blending powder containing insoluble dietary fiber other than wheat bran.</li><li>&lt;34&gt; The baked confectionery or the method of producing the baked confectionery according to the item &lt;33&gt;, wherein the powder containing insoluble dietary fiber other than the wheat bran is preferably one kind or two or more kinds selected from a cellulose preparation, a crystalline cellulose preparation, a methylcellulose preparation, a hemicellulose preparation, a preparation obtained by powdering hulls of cereal seeds other than wheat, soybean pulp left after squeezing soybean milk from a soybean, a preparation obtained by powdering shells of crustacea and a preparation obtained by powdering cell walls of fungi.</li><li>&lt;35&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;34&gt;, wherein the wheat flour is preferably one kind or two or more kinds selected from strong flour, medium-strength flour and weak flour, more preferably weak flour.</li><li>&lt;36&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;35&gt;, wherein the protein-containing powder preferably contains protein in an amount of 40 mass% or more, more preferably 50 mass% or more, more preferably 60 mass% or more.</li><li>&lt;37&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;36&gt;, wherein the protein-containing powder is preferably one kind or two or more kinds selected from soybean protein-containing powder, whey powder, casein powder, rice protein, and pea protein, more preferably soybean protein-containing powder.</li><li>&lt;38&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;37&gt;, wherein the fat and oil is preferably one kind or two or more kinds selected from vegetable fat and oil, animal fat and oil, emulsified fat and oil, and shortening.</li><li>&lt;39&gt; The baked confectionery or the method of producing the baked confectionery according to the item &lt;38&gt;, wherein the vegetable fat and oil is preferably one kind or two or more kinds selected from soybean oil, rapeseed oil, corn oil, cotton seed oil, safflower oil, olive oil, palm oil, rice bran oil, sunflower seed oil, sesame oil, and a hydrogenated oil thereof, a transesterified oil thereof or a fractionated oil thereof.</li><li>&lt;40&gt; The baked confectionery or the method of producing the baked confectionery according to the item &lt;38&gt;, wherein the animal oil is preferably one kind or two or more kinds selected from lard, bovine fat, fish oil, milk fat, swine fat, horse oil, and a hydrogenated oil thereof, a transesterified oil thereof or a fractionated oil thereof.</li><li>&lt;41&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;38&gt; to &lt;40&gt;, wherein the emulsified fat and oil is preferably a water-in-oil emulsified fat and oil, more specifically, one kind or two or more kinds selected from margarine, fat spread and butter.</li><li>&lt;42&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;41&gt;, wherein an egg is blended in, or the dough is prepared by blending the egg.</li><li>&lt;43&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;42&gt;, wherein one kind or two or more kinds of saccharide and sweetener are blended in, or the dough is prepared by blending one kind or two or more kinds of saccharide and sweetener therein.</li><li>&lt;44&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;43&gt;, wherein starch is blended in, or the dough is prepared by blending a starch preparation therein.</li><li>&lt;45&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;44&gt;, wherein, in the preparation of the dough, an amount of the wheat flour blended in the dough is preferably from 25 to 75 parts by mass, more preferably from 30 to 70 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</li><li>&lt;46&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;45&gt;, wherein, in the preparation of the dough, an amount of the wheat bran blended in the dough is preferably from 6 to 26 parts by mass, more preferably from 8 to 25 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</li><li>&lt;47&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;46&gt;, wherein, in the preparation of the dough, an amount of the protein-containing powder blended in the dough is preferably from 6 to 45 parts by mass, more preferably from 8 to 40 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</li><li>&lt;48&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;47&gt;, wherein, in the preparation of the dough, an amount of the fat and oil blended in the dough is preferably from 5 to 25 parts by mass, more preferably from 7 to 20 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</li><li>&lt;49&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;42&gt; to &lt;48&gt;, wherein, in the preparation of the dough, an amount of the egg blended in the dough is preferably from 5 to 20 parts by mass, more preferably from 7 to 15 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</li><li>&lt;50&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;43&gt; to &lt;49&gt;, wherein, in the preparation of the dough, a total amount of the saccharide and the sweetener blended in the dough is preferably from 5 to 50 parts by mass,, more preferably from 10 to 45 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder and the fat and oil blended in the dough.</li><li>&lt;51&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;44&gt; to &lt;50&gt;, wherein, in the preparation of the dough, an amount of the starch preparation is preferably from 1 to 5 parts by mass, more preferably from 2 to 4 parts by mass, with respect to 100 parts by mass of the total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</li><li>&lt;52&gt; The baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;51&gt;, wherein the dough is prepared by a sugar batter method, a flour batter method, hard biscuit cutting, soft biscuit cutting (embossing), biscuit rotary cutting, biscuit wire cutting, biscuit route press, biscuit depositing (drops), or hand-made biscuit.</li><li>&lt;53&gt; The baked confectionery according to any one of the items &lt;1&gt; to &lt;30&gt;, or the baked confectionery or the method of producing the baked confectionery according to any one of the items &lt;32&gt; to &lt;52&gt;, wherein the baked confectionery is preferably a biscuit, a cookie, a cracker, a hard biscuit, a pretzel, a pie, cut bread or shortbread, more preferably a biscuit, a cookie, a hard biscuit, a pretzel, a pie or cut bread.</li></ol></p>
+    <heading id="h-00005-en">Examples</heading>
+    <p id="p-00068-en" num="0068">The present invention will be described in more detail based on the following examples, but the invention is not intended to be limited thereto.</p>
+    <heading id="h-00006-en">[Measurement of insoluble dietary fiber]</heading>
+    <p id="p-00069-en" num="0069">An amount of insoluble dietary fiber was measured by the modified Prosky method described in AOAC Method 991.42. Specifically the amount was measured by the following method.</p>
+    <p id="p-00070-en" num="0070">A sample was processed using a homogenizer, and then sieved using a 10-mesh sieve to obtain powder having a particle size of 2 mm or less. Then, 125 mL of petroleum ether was added to 5 g of a powder sample, and the resultant mixture was allowed to stand for 15 minutes while the mixture was occasionally stirred, and then centrifuged (2150 G, 10 minutes), and a supernatant was poured into a glass filter G-3. Further, similar operation was repeated twice, and finally a total amount was poured into the glass filter, a residue was air-dried, and then the resultant defatted sample was weighed. Then, 1 g of defatted sample was collected into a 500 mL-volume tall beaker, and then, 50 mL of 0.08 M phosphate buffer solution having pH of 6.0, and 0.1 mL of thermostable α-amylase (trade name: Termacyl 120L, manufactured by NovoZymes A/S) were added thereto. The resultant mixture was allowed to stand in a water bath at 95°C for 30 minutes while the mixture was shaken at an interval of 5 minutes, and allowed to cool for 10 minutes at room temperature, and then 0.275 M sodium hydroxide solution was added thereto and adjusted to pH 7.5. Then, 0.1 mL of protease (manufactured by Sigma-Aldrich Corporation) solution adjusted to be a concentration of 50 mg/mL by dissolving the protease into 0.08 M phosphate buffer solution adjusted to pH 6.0 was added thereto. Activity of the added protease was 500 U/mL. Then, the resultant mixture was shaken at 60°C for 30 minutes, allowed to cool at room temperature for 10 minutes, and then adjusted to pH 4.3 using 0.325 M hydrochloric acid. Then, 0.1 mL of amyloglucosidase (trade name: Amyloglucosidase solution from Aspergillus niger, manufactured by Sigma-Aldrich Corporation) was added thereto, and the resultant mixture was shaken at 60°C for 30 minutes. Filtration was made using a crucible type glass 2G2, a product obtained by drying a residue at 105°C overnight was weighed, and taken as an amount of insoluble dietary fiber. A content of the insoluble dietary fiber in a baked confectionery was calculated based on thus obtained amount of insoluble dietary fiber.</p>
+    <heading id="h-00007-en">[Measurement of protein]</heading>
+    <p id="p-00071-en" num="0071">Measurement of protein was carried out according to a Kjeldahl method. Specifically, the measurement was carried out by the following method.</p>
+    <p id="p-00072-en" num="0072">A sample in an amount of 0.5 to 1 g was accurately weighed, and put into a decomposition flask. Then, 3 g of contact agent and 20 mL of concentrated sulfuric acid were gradually added thereto and the sample was thermally decomposed. A liquid in the decomposition flask became transparent and blue by copper sulfate was developed, and then heating was further continued for about 1 hour. After the liquid was cooled, water in an amount of 2 to 3 times the liquid was gradually added thereto and diluted. After the diluted decomposition liquid was sufficiently cooled, the liquid was put into 100 mL-volume measuring flask, and distilled by a Kjeldahl distillation apparatus. After distillation, the Erlenmeyer flask was removed, and titration was conducted using a 0.1 N NaOH standard solution. A value obtained by multiplying 6.25 times a nitrogen amount determined from a value obtained by titration was taken as a protein content.</p>
+    <heading id="h-00008-en">[Measurement of lipid]</heading>
+    <p id="p-00073-en" num="0073">An analysis of a lipid content was conducted according to a Soxhlet extraction method. Specifically, the analysis was conducted by the following method.</p>
+    <p id="p-00074-en" num="0074">A sample in an amount of 10 g was accurately weighed, and put into an extraction thimble. The extraction thimble was placed inside a Soxhlet extraction tube, and 100 mL of diethyl ether (guaranteed reagent: Wako Pure Chemical Industries, Ltd.) was put in the extraction tube, and the sample was subjected to extraction for 8 hours while the tube was warmed at 50°C in a hot bath. The resultant extract was put into a rotary evaporator to distill diethyl ether, and then the weight of the residue was measured, and taken as a lipid content.</p>
+    <heading id="h-00009-en">[Production Example] Production of baked confectionery</heading>
+    <p id="p-00075-en" num="0075">Each ingredient was mixed according to a blending amount (unit: parts by mass) described in Table 1 below to prepare dough, and baked confectionery of Examples 1 to 13 and Comparative Examples 1 to 6 were produced by baking the dough. A specific production method is described in detail below.</p>
+    <p id="p-00076-en" num="0076">In HOBART mixer N50 MIXER manufactured by HOBART GmbH, margarine (trade name: Cherica Gold E(A), manufactured by Kao Corporation), reduced sugar syrup (trade name: Sweet OL, manufactured by B Food Science Co., Ltd.), sucralose (manufactured by San-Ei Gen F.F.I., Inc.), ammonium carbonate (manufactured by Wako Pure Chemical Industries, Ltd.) as baking powder, sodium bicarbonate (manufactured by Wako Pure Chemical Industries, Ltd.), and kitchen salt (manufactured by The Salt Industry Center of Japan) were weighed and put therein, and the resultant mixture was mixed at a low speed for 30 seconds, and then mixed at a medium speed.</p>
+    <p id="p-00077-en" num="0077">Further, while the resultant mixture was stirred at a low speed for 30 seconds, whole hen's egg beaten was added thereto in 3 parts. After a first part of beaten egg was added thereto, the resultant mixture was stirred at a low speed for 30 seconds, and subsequently, a second part of beaten egg was added thereto, and the resultant mixture was stirred at a low speed for 30 seconds. After oil adhered to a wall of the mixer was scraped off, a remaining egg was added thereto, and the resultant mixture was stirred at a low speed for 30 seconds, and further stirred at a medium speed for 1 minute until a uniform cream state was formed.</p>
+    <p id="p-00078-en" num="0078">Subsequently, wheat flour (trade name: Violet, manufactured by Nisshin Flour Milling Inc.), soybean protein-containing powder (derived from defatted soybean milk, trade name: Proleena 700, manufactured by Fuji Oil Co., Ltd.), casein powder (trade name: Calcium Caseinate 380, manufactured by Fonterra Co-operative Group Limited), whey powder (trade name: Milei 80, manufactured by Milei GmbH), corn starch (manufactured by Nihon Shokuhin Kako Co., Ltd.) were mixed according to blending amounts described in Table 1 below, and the resultant mixture was stirred at a low speed for 45 seconds.</p>
+    <p id="p-00079-en" num="0079">Finally, wheat bran (trade name: Wheat Bran DF, manufactured by Nisshin Pharma Inc.) was mixed according to a blending amount described in Table 1 below, and the resultant mixture was stirred at a low speed for 45 seconds.</p>
+    <p id="p-00080-en" num="0080">The dough obtained as described above was packed into rectangular baking pans and set them in line on a top plate on which a release paper was placed. As the baking pan, one made of metal and having a dimension of vertical × horizontal × height: 70 mm × 20 mm × 15 mm was used.</p>
+    <p id="p-00081-en" num="0081">Subsequently, baking was performed under the following baking conditions.<br /> Baking temperature: upper flame 180°C/lower flame 180°C<br /> Baking time: 12 minutes<br /> Moisture contents in all of the baked confectionery after being baked were within the range of 4 to 7 mass%.</p>
+    <p id="p-00082-en" num="0082">With regard to baked confectionery after elapse of one day at room temperature from baking, contents (unit: mass%) of insoluble dietary fiber, protein and lipid were measured by above-mentioned methods. The results are shown in Table 1 below.</p>
+    <p id="p-00083-en" num="0083">Moreover, the following test was conducted using the baked confectionery after elapse of one day at room temperature from baking.</p>
+    <heading id="h-00010-en">[Test Example 1]</heading>
+    <p id="p-00084-en" num="0084">With regard to the baked confectionery produced in the above-described Production Example, hardness upon biting the confectionery, packing condition (packing degree) of dough, moist food texture sensed in the mouth, and shape stability (disintegrability) were evaluated based on the following evaluation criteria. Each evaluation was conducted by a panel of three experts.</p>
+    <heading id="h-00011-en">- Evaluation criteria of hardness -</heading>
+    <p id="p-00085-en" num="0085">
+      <ul id="ul-00002-en" list-style="none" compact="compact">
+        <li>5 : Bitten off very easily, resists crumbling, and minimal crumb scattering.</li>
+        <li>4 : Bitten off easily, resists crumbling, and minimal crumb scattering.</li>
+        <li>3 : Bitten off rather easily, resists crumbling, and minimal crumb scattering.</li>
+        <li>2 : Hard and not easy to bite off, or brittle and easily crumbled.</li>
+        <li>1 : Very hard and difficult to bite off, or too brittle and very easily crumbled.</li>
+      </ul>
+    </p>
+    <heading id="h-00012-en">- Packing condition of dough -</heading>
+    <p id="p-00086-en" num="0086">
+      <ul id="ul-00003-en" list-style="none" compact="compact">
+        <li>5 : Packing degree of dough significantly loose, and food texture very soft.</li>
+        <li>4 : Packing degree of dough relatively loose, and food texture soft.</li>
+        <li>3 : Packing degree of dough somewhat loose, and food texture somewhat soft.</li>
+        <li>2 : Dough lumpy and somewhat thickly packed, and food texture hard.</li>
+        <li>1 : Dough lumpy and thickly packed, and food texture very hard.</li>
+      </ul>
+    </p>
+    <heading id="h-00013-en">- Moist food texture -</heading>
+    <p id="p-00087-en" num="0087">
+      <ul id="ul-00004-en" list-style="none" compact="compact">
+        <li>5 : Very little feeling of saliva absorption, and no dry feeling in the mouth.</li>
+        <li>4 : Little feeling of saliva absorption, and almost no dry feeling in the mouth.</li>
+        <li>3 : Some dry feeling in the mouth.</li>
+        <li>2 : Strong feeling of saliva absorption, and dry feeling in the mouth.</li>
+        <li>1 : Very strong feeling of saliva absorption, and difficult to eat due to dry feeling in the mouth.</li>
+      </ul>
+    </p>
+    <heading id="h-00014-en">- Dough shape stability -</heading>
+    <p id="p-00088-en" num="0088">
+      <ul id="ul-00005-en" list-style="none" compact="compact">
+        <li>5 : Greatly improved dough strength makes for good shape-keeping.</li>
+        <li>4 : Signigicantly improved dough strength makes for good shape-keeping.</li>
+        <li>3 : Somewhat improved dough strength makes for good shape-keeping.</li>
+        <li>2 : Somewhat weak dough strength causes poor shape-keeping.</li>
+        <li>1 : Very weak dough strength causes total lack of shape-keeping.</li>
+      </ul>
+    </p>
+    <p id="p-00089-en" num="0089">Dough shape stability was evaluated based on forming properties (degree of shapelessness) and degree of dough cracking after kneading, forming and standing for 30 minutes at room temperature.</p>
+    <p id="p-00090-en" num="0090">The results are shown in Table 1 below. An evaluation of "hard and not easy to bite off' or "very hard and difficult to bite off" in the evaluation criteria of hardness and an evaluation of "somewhat weak dough strength causes poor shape-keeping" or "very weak dough strength causes total lack of shape-keeping" in the evaluation criteria of dough shape stability can be compatible. More specifically, "hardness" in the evaluation of hardness means the food texture associated with mastication when baked confectionery are eaten and a feeling when the confectionery is broken. "Dough strength" in the evaluation of dough shape stability means shape retainability of dough or connection in the dough. Therefore, the baked confectionery having hardness in physical properties and low dough strength may be produced depending on the ingredient composition of the baked confectionery. <tables id="tables-00001-en" num="0001"><img id="img-00001-en" wi="114" he="190" img-content="table" file="EP2939542A1_00001.PNG" img-format="png" original="imgb0001.tif" /></tables><tables id="tables-00002-en" num="0002"><img id="img-00002-en" wi="114" he="168" img-content="table" file="EP2939542A1_00002.PNG" img-format="png" original="imgb0002.tif" /></tables><tables id="tables-00003-en" num="0003"><img id="img-00003-en" wi="119" he="174" img-content="table" file="EP2939542A1_00003.PNG" img-format="png" original="imgb0003.tif" /></tables></p>
+    <p id="p-00091-en" num="0091">As shown in Table 1, even when the protein content and the lipid content were within the range specified in the present invention, if the content of the insoluble dietary fiber was lower than the content defined in the present invention, the confectionery was hard and difficult to be bitten off, and also, the food texture was very hard. Moreover, strong dry feeling was sensed in the mouth, and further, the confectionery resulted in poor shape stability (Comparative Example 1). Conversely, if the content of insoluble dietary fiber was increased over the content defined in the present invention, the baked confectionery was brittle and easily crumbled (Comparative Example 2). Although the content of insoluble dietary fiber was not actually measured in the baked confectionery in Comparative Example 2, if the content is calculated from the blended amount of the wheat bran, the content of insoluble dietary fiber therein is obviously higher than the content defined in the present invention.</p>
+    <p id="p-00092-en" num="0092">Moreover, even when the content of insoluble dietary fiber and the lipid content were within the range defined in the present invention, if the protein content was higher than the content defined in the present invention, the confectionery was also hard and difficult to be bitten off, and simultaneously the food texture was very hard. Further, the strong dry feeling was sensed in the mouth and the baked confectionery resulted in the poor shape stability (Comparative Example 3). Conversely, if the protein content was lower than the content defined in the present invention, the baked confectionery was brittle and easily crumbled (Comparative Example 4).</p>
+    <p id="p-00093-en" num="0093">Moreover, even when the content of insoluble dietary fiber and the protein content were within the range defined in the present invention, if the lipid content was lower than the content defined in the present invention, the baked confectionery was hard and difficult to be bitten off, and simultaneously the food texture was very hard. Further, the strong dry feeling was sensed in the mouth and the baked confectionery resulted in the poor shape stability (Comparative Example 5). Conversely, if the lipid content was increased over the content defined in the present invention, the baked confectionery was brittle and easily crumbled (Comparative Example 6).</p>
+    <p id="p-00094-en" num="0094">In contrast, the baked confectionery of Examples 1 to 13 gave good results in all evaluation items of the hardness, the packing condition of dough, the moist food texture and the shape stability.</p>
+    <p id="p-00095-en" num="0095">Having described our invention as related to this embodiments, it is our intention that the invention not be limited by any of the details of the description, unless otherwise specified, but rather be construed broadly within its spirit and scope as set out in the accompanying claims.</p>
+    <p id="p-00096-en" num="0096">This application claims priority on Patent Application No. <patcit id="pcit-00002" dnum="JP2012287291A"><text>2012-287291</text></patcit> filed in Japan on December 28, 2012, which is entirely herein incorporated by reference.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>Baked confectionery, comprising:
+<claim-text>insoluble dietary fiber in an amount of from 4.0 to 12.0 mass%;</claim-text><claim-text>protein in an amount of from 10.0 to 30.0 mass% of; and</claim-text><claim-text>lipid in an amount of from 8.0 to 15.0 mass%;</claim-text>
+wherein the insoluble dietary fiber includes wheat-bran-derived insoluble dietary fiber.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The baked confectionery according to claim 1, wherein a ratio of the wheat-bran-derived insoluble dietary fiber in the insoluble dietary fiber is 30.0 mass% or more.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The baked confectionery according to claim 1 or 2, wherein the baked confectionery comprises vegetable-derived protein.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The baked confectionery according to claim 3, wherein the baked confectionery comprises grain-derived protein.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The baked confectionery according to any one of claims 1 to 4, wherein a content of the insoluble dietary fiber is from 6.0 to 11.0 mass%.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The baked confectionery according to any one of claims 1 to 5, wherein a moisture content in the baked confectionery is from 3 to 20 mass%.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The baked confectionery according to any one of claims 1 to 6, wherein the baked confectionery is a biscuit, a cookie, a cracker, a hard biscuit, a pretzel, a pie, cut bread or shortbread.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>A method of producing the baked confectionery according to any one of claims 1 to 7, comprising preparing dough by blending therein at least wheat flour, wheat bran, protein-containing powder, and fat and oil, and then baking the dough.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The method of producing the baked confectionery according to claim 8,<br />
+wherein an amount of the wheat flour blended in the dough is preferably from 25 to 75 parts by mass with respect to 100 parts by mass of a total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The method of producing the baked confectionery according to claim 8 or 9, wherein an amount of the wheat bran blended in the dough is from 6 to 26 parts by mass with respect to 100 parts by mass of a total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The method of producing the baked confectionery according to any one of claims 8 to 10, wherein an amount of the protein-containing powder blended in the dough is from 6 to 45 parts by mass with respect to 100 parts by mass of a total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The method of producing the baked confectionery according to any one of claims 8 to 11, wherein an amount of the fat and oil blended in the dough is from 5 to 25 parts by mass with respect to 100 parts by mass of a total amount of the wheat flour, the wheat bran, the protein-containing powder, and the fat and oil blended in the dough.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2939542A1_00001.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2939542A1_00002.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2939542A1_00003.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="EP2939542A1.PDF" type="pdf" size="403371" pages="20" />
+</lexisnexis-patent-document>

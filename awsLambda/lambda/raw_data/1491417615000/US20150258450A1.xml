@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150258450A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030350" date-changed="20150928" time-changed="061041">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121318107">
+        <country>US</country>
+        <doc-number>20150258450</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14656785</doc-number>
+        <date>20150313</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A63F  13/77        20140101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>77</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A63F  11/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>11</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A63F  13/71        20140101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>71</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A63F  13/77        20140902 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140902</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>77</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A63F  11/0011      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>11</main-group>
+        <subgroup>0011</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A63F  13/71        20140902 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140902</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>71</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>G07F  17/3225      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>17</main-group>
+        <subgroup>3225</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>G07F  17/3272      20130101 LI20150608BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>17</main-group>
+        <subgroup>3272</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150608</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>G07F  17/3283      20130101 LI20150608BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>17</main-group>
+        <subgroup>3283</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150608</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>G07F  17/3293      20130101 LI20150608BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>17</main-group>
+        <subgroup>3293</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150608</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">11</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Method and System for Providing a Secure Shuffle of Game Objects Across Multiple Entities</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61952303</doc-number>
+          <date>20140313</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Scientific Games International, Inc.</orgname>
+            <address>
+              <city>Newark</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Irwin, JR.</last-name>
+            <first-name>Kenneth Earl</first-name>
+            <address>
+              <city>Dawsonville</city>
+              <state>GA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173672836">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258450</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173672835">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258450</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A computer-implemented method and system are provided for ensuring the integrity and security of digital shuffles of cards or objects across multiple entities and/or jurisdictions. All entities participating in the shuffle can optionally review the forensic data to ensure that the shuffle was legitimate and that no other entity prematurely peeked at another entity's private hand.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">PRIORITY CLAIM</heading>
+      <p id="p-00001-en" num="0001">The present invention claims priority to U.S. Provisional Application No. 61/952,303, filed Mar. 13, 2014.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to Internet-based games played by a plurality of competing individuals or entities, and more particularly to Internet games involving shuffles of objects or cards across multiple entities, wherein the shuffle remains secure from unauthorized rearrangement of the shuffle, as well as unauthorized peeking at other players' hands. These secure shuffle methods and systems may be used to verify the authenticity of said shuffles after play and thereby function as a forensic tool ensuring valid play.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">United States Internet gaming is still in its infancy. Currently, three states have legislated card playing (e.g., poker) within their borders. All three of these states are now offering live gaming on the Internet with poor results. For all three states, having enough players to sustain an interactive Internet game requiring a quorum of play has been problematic. Having a real time quorum of players required before Internet play can commence creates problems for smaller gaming jurisdictions with impatient players exiting before a quorum can be achieved. Additionally, larger gaming jurisdictions may still suffer the same player liquidity by allowing a multiplicity of competing gaming companies to operate within their borders.</p>
+      <p id="p-00004-en" num="0004">Interstate gaming agreements are generally viewed as the best method of increasing the pool of players available at any time and therefore the best solution to player liquidity for games requiring a quorum. However, the significant differences in the regulations, and consequently approaches taken by different jurisdictions regarding Internet gaming, make reaching an overall agreement for sharing a player and associated gaming format across state/jurisdictional lines problematic at best.</p>
+      <p id="p-00005-en" num="0005">For example, legalized Nevada and New Jersey Internet gaming (iGaming) licenses are tied to casinos physically located within those states, wherein there is no such restriction in Delaware. In another example, Internet gaming licensing in Nevada requires that all iGaming servers be located within the state's geographical boundaries unless given an exemption from the chairman of the Nevada Gaming Board; however, New Jersey specifies that all iGaming servers must reside within its geographical boundaries with no exemptions.</p>
+      <p id="p-00006-en" num="0006">Aside from the daunting logistical challenges of adopting inter-jurisdictional sharing of players with common games, there remains the problem of each jurisdiction/state ensuring that its players are playing a fair game when dealing with jurisdictions and associated gaming operators outside of its control. Additionally, there are security concerns about unauthorized prediction of shuffles as well as peeking at other player's (assumed concealed) hands even within one gaming organization/operator.</p>
+      <p id="p-00007-en" num="0007">Given the varying licensing requirements implemented by the various jurisdictions permitting iGaming, allowing for a pooling of available players to satisfy a quorum would be inherently complex and cumbersome, especially when each jurisdiction strives to ensure the fairness and security of a game for their players. Furthermore, within each jurisdiction there may be a multiplicity of iGaming providers that are also reluctant to share their players with an untrusted quorum, not to mention concerns over which entity controls the actual shuffle of cards/objects in the game.</p>
+      <p id="p-00008-en" num="0008">The relatively short history of Internet gaming is already wrought with examples of cheating by insiders or players, even with just one operator. For example, the poker site www.AbsolutePoker.com famously had an insider that was able to examine, in real time, the hands of the other poker players he was playing against without their knowledge. By most reports, this fraud was going on for at least six months before it was detected. Another example was the Internet site www.PlanetPoker.com that publicly displayed its shuffling algorithm in an attempt to advertise how fair its game was to any interested players. However, in the publicly displayed source code, the call to randomize was included to produce a random deck before each deck was generated. This implementation, built with Delphi 4, seeds the random number generator with the number of milliseconds since midnight according to the system clock of the host server. This means players outside of the organization easily predicted the output of the random number generator. By synchronizing a player's personal computer clock with the clock on PlanetPoker.com, the outside computer program can calculate the exact shuffle. Thus, the outside player knew all the cards that have yet to appear, everyone's hand, and who will win. This fraud, while unintended by the operator, still allowed some outside players to gain an unfair advantage over others.</p>
+      <p id="p-00009-en" num="0009">There are multiplicities of digital card shuffling algorithms already in the public domain. However, none of these algorithms addresses the vexing problem of maintaining security and integrity across a multiplicity of computing entities. Additionally, none of these algorithms enable various jurisdictions to share their players with other jurisdictions over a common game with assurances the gameplay is fair.</p>
+      <p id="p-00010-en" num="0010">Therefore, it is highly desirable to develop methodologies to ensure the integrity and security of a common shuffle across multiple entities and jurisdictions participating in a quorum. Ideally, these methodologies should not only protect both against unauthorized card/object manipulations by any player, but also protect against any player knowing the cards/objects held in secret by another player.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00011-en" num="0011">Objects and advantages of the invention will be set forth in part in the following description, or may be obvious from the description, or may be learned through practice of the invention.</p>
+      <p id="p-00012-en" num="0012">Methodologies are proposed to ensure the integrity and security of digital shuffles of cards or objects across multiple entities and/or jurisdictions. The methodologies disclosed herein thereby verify the authenticity and legitimacy of the shuffle to all participating entities. Additionally, the methods disclosed also enable a forensic audit by any outside party after the shuffle has occurred.</p>
+      <p id="p-00013-en" num="0013">Shuffles produced by the present methods are created using specified protocols across varying computing platforms where knowledge between the participating entities is shared at specified intervals. The methodologies and systems disclosed herein enable enhanced shuffle security with minimal increase in cost, as well as no detrimental impact on the player's play or transaction experience.</p>
+      <p id="p-00014-en" num="0014">Described are a number of computing mechanisms that provide practical details for reliably producing secure shuffles across multiple jurisdictions and entities ultimately culminating with a digital audit trail. Although the examples provided herein are primarily related to Internet games (iGames), it is clear that the same methods are applicable to any type of shuffling of digital objects across multiple entities.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 1</figref> is a block diagram providing a graphical overview of a first embodiment as applied to the popular poker game Texas Hold'em;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 2</figref> is a flow chart of the information exchanged between the various entities prior to initiating the local (individual) shuffles of <figref>FIG. 1</figref>;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 3</figref> is a block diagram providing a graphical overview of subsequent cards dispensed after the initial shuffles of <figref>FIG. 1</figref>;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 4</figref> is a block diagram providing a graphical overview of subsequent cards dispensed after the initial shuffles of <figref>FIG. 1</figref> wherein the global issuer ensures that no entity can anticipate a future draw card;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 5</figref> is a flow chart of the information exchanged after the play is completed from the shuffles of <figref>FIG. 1</figref>, <figref>FIG. 3</figref>, and <figref>FIG. 4</figref>;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 6</figref> is a two-dimensional time line illustrating how information segmentation is achieved with respect to time of <figref>FIG. 1</figref> through <figref>FIG. 5</figref>;</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 7</figref> is a block diagram providing a graphical overview of a common, 32-bit, Linear Congruential Generator (LCG) mapped to indicia from a standard deck of playing cards;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 8</figref> is a block diagram of a graphical overview of a another embodiment as applied to the popular poker game Texas Hold'em wherein a LCG performs the shuffle and pluck functions for each entity with the global and forensic responsibilities shared among all entities;</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 9</figref> is a block diagram providing a graphical overview of the embodiment of <figref>FIG. 8</figref> wherein draw cards are selected after each entity has selected its' private hands;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 10</figref> is a flow chart of an embodiment wherein the obfuscation values utilized in <figref>FIG. 8</figref> and <figref>FIG. 9</figref> are all combined into a single hash value transmitted to the global issuer; and,</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 11</figref> is a two-dimensional time line illustrating information segmentation is achieved with respect to time of <figref>FIG. 7</figref> thru <figref>FIG. 10</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00026-en" num="0026">Reference will now be made in detail to examples of the present invention, one or more embodiments of which are illustrated in the figures. Each example is provided by way of explanation of the invention, and not as a limitation of the invention. For instance, features illustrated or described with respect to one embodiment may be used with another embodiment to yield still a further embodiment. It is intended that the present application encompass these and other modifications and variations as come within the scope and spirit of the invention.</p>
+      <p id="p-00027-en" num="0027">Ensuring the security of a shuffle across multiple jurisdictions where there is no trusted party requires both segmentation and synchronized release of information. By controlling both the game information available to each entity in a quorum, as well as the timing of when the information is available for group disclosure, a secure shuffle can occur that is both protected from alteration of the intended shuffle as well as unauthorized peeking at other players secret set of objects—e.g., card hands.</p>
+      <p id="p-00028-en" num="0028">In the context of this invention an “entity” can be defined as a digital computer server associated with a jurisdiction. Thus, each “entity” could be a separate jurisdiction with at least one player within each jurisdiction playing the game in the quorum. Alternatively, an “entity” can also be an individual player's Internet device (e.g., computer, iPad, smartphone, etc.) interacting directly with both the player and the gaming quorum.</p>
+      <p id="p-00029-en" num="0029">An “entity” may also be a separate computing server managed by a jurisdiction or host not participating in the game quorum, but serving only as a “global issuer.” Of course, an “entity” within the gaming quorum could also be the “global issuer” having the dual functionality of both “global issuer” and “entity” participating in the gaming quorum. In this case, it is desirable that the assignment of which “entity” in the gaming quorum also functions as “global issuer” changes from game hand to game hand.</p>
+      <p id="p-00030-en" num="0030">Reference will now be made to one or more embodiments of the system and methodology of the invention as illustrated in the figures. It should be appreciated that each embodiment is presented by way of explanation of aspects of the invention, and is not meant as a limitation of the invention. For example, features illustrated or described as part of one embodiment may be used with another embodiment to yield still a further embodiment. It is intended that the invention include these and other modifications that come within the scope and spirit of the invention.</p>
+      <p id="p-00031-en" num="0031">Probably the easiest to understand embodiment of secure shuffles via information segmentation and releases is provided in <figref>FIG. 1</figref>. Illustrated in <figref>FIG. 1</figref> is a conceptual block diagram <b>100</b> that begins with a predefined array <b>101</b> of objects that will be shuffled into various shuffled subsets by a global issuer <b>151</b> who distributes the sub-shuffles <b>107</b> and <b>108</b> to the entities/players of the game's quorum. As illustrated in <figref>FIG. 1</figref> the predefined array <b>101</b> is comprised of the 52 indicia of a standard card deck that will be shuffled for a game of Texas Hold'em; however, as is understood by one skilled in the art the array of cards <b>101</b> and the game of Texas Hold'em are merely one possible example of this embodiment with other games and objects to be shuffled (e.g., straight poker, dice, baccarat, etc.) possible.</p>
+      <p id="p-00032-en" num="0032">In block diagram <b>100</b>, algorithm <b>103</b> shuffles the predefined array of 52 playing cards <b>101</b> based on global shuffling seed <b>102</b>. The exact structure of shuffle algorithm <b>103</b> is irrelevant and any one of the myriads of public domain shuffling algorithms may be employed for this purpose so long as the shuffling algorithm uses an initial seed <b>102</b> to determine the final shuffled order of the cards/objects <b>104</b>. It should be noted that the structure of shuffle algorithm <b>103</b> can be known to all entities of the game without compromising the security of the system and in some cases security is actually enhanced with all entities having knowledge of shuffle algorithm's <b>103</b> functionality. However, in this embodiment, keeping shuffle seed <b>102</b> secret from the other entities until after the game is completed is necessary to maintain the security of the system. In this embodiment, shuffle seed <b>102</b> is determined by the global issuer responsible for the shuffle. Global issuer <b>102</b> also is responsible for verifying the integrity of the entire game.</p>
+      <p id="p-00033-en" num="0033">After the global initial shuffle is completed and the cards (objects) are in a new order <b>104</b> the shuffle is divided into sub-shuffles with each entity in the game quorum receiving a sub-shuffle (e.g., <b>107</b> and <b>108</b>) that is preferably unknown to the other entities in the game. These sub-shuffles are a number of cards (objects) taken from the initial shuffle <b>104</b> in a predetermined manner such that the entire deck (i.e., complete set of objects) is distributed among all the entities. The exact method of selecting the sub-shuffle is not relevant to the security of the system since the deck of cards (set of objects) were already pseudorandomly distributed by global shuffle algorithm <b>103</b> in the generation of the global shuffle <b>104</b>; however, it is essential for audit purposes that both global shuffle algorithm <b>103</b> and the distribution of sub-shuffles logic be available to all participating entities prior to starting the game. For example, as shown in <b>100</b>, the sub-shuffles predetermined order of distribution is to take the first ten cards (objects) off of the initial shuffle stack <b>104</b> and transfer the ten cards <b>107</b> to the first entity in the quorum <b>105</b>. This process is repeated until all n entities <b>106</b> in the quorum have received their associated primary sub-shuffles <b>108</b> and all cards (objects) are distributed. In games where the number of cards (objects) in the global shuffle <b>104</b> is not evenly divisible by the number of players, one or more entities will receive a secondary sub-shuffle comprising the same number of cards (objects) as the primary sub-shuffle plus the remainder.</p>
+      <p id="p-00034-en" num="0034">Once each entity in the quorum (e.g., <b>105</b> and <b>106</b>) have received their respective sub-shuffles, a local pluck seed <b>109</b> and <b>110</b> that was determined by each local entity is applied to a local pluck algorithm <b>111</b> and <b>112</b> to produce a final hand (set) that will be held in secret by the player during the course of the game. Notice that the final hand was derived from the sub-shuffle and would remain unknown to any other entity or player in the game so long as the local pluck seed <b>109</b> or <b>110</b> remains unknown. This would be true even if the exact structure of each sub-shuffle was known by all the other entities or players in the game quorum. Thus, a significant part of the security stopping one player or entity from peeking at another player or entities' hand is derived from the locally generated nature of the pluck seeds <b>109</b> and <b>110</b>.</p>
+      <p id="p-00035-en" num="0035">Like the global shuffle <b>103</b>, the exact structure of the pluck algorithm <b>111</b> and <b>112</b> is irrelevant to the security of the system so long as the pluck algorithm <b>111</b> and <b>112</b> is repeatable with the same seed and is unpredictable so long as the seed is unknown. For example, in one embodiment the pluck algorithm <b>111</b> and <b>112</b> could be a shuffle algorithm reshuffling the sub-shuffle <b>107</b> and <b>108</b> where the first cards of the reshuffle become the player's hand <b>113</b> and <b>114</b>.</p>
+      <p id="p-00036-en" num="0036">In block diagram <b>100</b> there are only two cards (<b>113</b> and <b>114</b>) in the final hand (set), which is compliant with the rules of Texas Hold'em; however, other size sets are possible and necessary for different games—e.g., five cards for classic Poker. Therefore, the number of cards (objects) in the final hand (set) will vary depending on the game as well as the number of cards (objects) in each sub-shuffles depends on the number of entities in the quorum.</p>
+      <p id="p-00037-en" num="0037">For example, since block diagram <b>100</b> is for a game of Texas Hold'em and assuming n=5 entities there will be four primary sub-shuffles of ten cards each with one secondary sub-shuffle having twelve cards to completely distribute the 52 cards in a standard playing deck. From these distributed sub-shuffles each entity will pluck two cards for their final hand. Thus, for the four primary entities receiving ten cards per sub-shuffle there are 45 possible hands with the one secondary entity receiving 12 cards in its sub-shuffle having 66 possible hands. If the previous example is changed to another game (e.g., straight poker) requiring five cards in a hand with n=5 entities in the quorum, there will be 252 possible hands for the four entities receiving primary sub-shuffles with ten cards and 792 for the other entity with the secondary sub-shuffle of twelve cards.</p>
+      <p id="p-00038-en" num="0038">Since the security against peeking in this embodiment is provided by the local pluck <b>111</b> and <b>112</b> remaining unknown to the other entities at the time of game play, the number of objects in the sub-shuffle <b>107</b> and <b>108</b> and the local pluck <b>111</b> and <b>112</b> for the private hand <b>113</b> and <b>114</b> obviously affects the number of possible final hand (set) combinations that can be guessed by an attempting cheater—assuming the cheater has complete knowledge of the sub-shuffles sent to every entity in the quorum. Thus, for security to be maintained in this embodiment, the number of combinations of possible final set (hands —<b>113</b> and <b>114</b>) derived from the local shuffles <b>111</b> and <b>112</b> must be sufficiently large that it would be impractical to attempt to gain an advantage by guessing which hand an entity actually held. This actual quantity is difficult to speculate, however it may be reasonably assumed that any number of possible private hands (sets) for each entity of ten or higher would be too cumbersome for a cheater to gain any advantage guessing from the possible hands (sets) on a consistent basis.</p>
+      <p id="p-00039-en" num="0039">Fortunately, for most common card games using the standard 52 card deck the number of possible sets for each entity almost always exceeds 10—see table below. In the table, ‘S<sub>1</sub>/S<sub>2</sub>’ denotes the number of objects in the primary (S<sub>1</sub>) and secondary (S<sub>2</sub>) sub-shuffles. The slash in the entries in the game row denotes the number of combinations for the given number of players, game type, and number of objects associated with the two sub-shuffles—i.e., primary and secondary.</p>
+      <p id="p-00040-en" num="0040">As listed in the table there are only two configurations in two types of games, highlighted in shading, where the number of combinations for all entities falls below ten—i.e., 8 and 9 players per game with 5 cards per hand. These special cases could be dealt with by simply forbidding any game requiring 5 cards (objects) from having more than seven players. It should also be noted that for simplicity the below table displays the entire remainder given to one entity, other distributions of the remainder (e.g., two entities in a five player quorum playing Texas Hold'em could each receiving one remainder card) are possible and in some cases more desirable.</p>
+      <p id="p-00041-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Number of Entities (Players) in the Game</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Game</entry>
+                  <entry>2</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>5</entry>
+                  <entry>6</entry>
+                  <entry>7</entry>
+                  <entry>8</entry>
+                  <entry>9</entry>
+                </row>
+                <row>
+                  <entry>S<sub>1</sub>/S<sub>2</sub></entry>
+                  <entry>26/0</entry>
+                  <entry>17/18</entry>
+                  <entry>13/0</entry>
+                  <entry>10/12</entry>
+                  <entry>8/10</entry>
+                  <entry>7/10</entry>
+                  <entry>6/8</entry>
+                  <entry>5/16</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Texas Hold'em</entry>
+                  <entry>325/0</entry>
+                  <entry>136/153</entry>
+                  <entry>78/0</entry>
+                  <entry>45/66</entry>
+                  <entry>28/45</entry>
+                  <entry>21/45</entry>
+                  <entry>15/28</entry>
+                  <entry>10/120</entry>
+                </row>
+                <row>
+                  <entry>(2 Cards)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Straight Poker</entry>
+                  <entry>65,780/0</entry>
+                  <entry>6,188/</entry>
+                  <entry>1,287/0</entry>
+                  <entry>252/792</entry>
+                  <entry>56/792</entry>
+                  <entry>21/252</entry>
+                  <entry>6/56</entry>
+                  <entry>1/4,386</entry>
+                </row>
+                <row>
+                  <entry>(5 Cards)</entry>
+                  <entry />
+                  <entry>8,568</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Draw Poker</entry>
+                  <entry>65,780/0</entry>
+                  <entry>6,188/ </entry>
+                  <entry>1,287/0</entry>
+                  <entry>252/792</entry>
+                  <entry>56/792</entry>
+                  <entry>21/252</entry>
+                  <entry>6/56</entry>
+                  <entry>1/4,386</entry>
+                </row>
+                <row>
+                  <entry>(5 Cards)</entry>
+                  <entry />
+                  <entry>8,568</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>7 Card Stud</entry>
+                  <entry>2,600/0</entry>
+                  <entry>680/816</entry>
+                  <entry>286/0</entry>
+                  <entry>120/220</entry>
+                  <entry>56/220</entry>
+                  <entry>35/120</entry>
+                  <entry>20/56</entry>
+                  <entry>20/560</entry>
+                </row>
+                <row>
+                  <entry>Poker</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>(3 Cards)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00042-en" num="0041">To ensure that each entity is performing a fair pluck (i.e., not deliberately picking the best cards in the given sub-shuffle), it is essential that each entity registers its pluck seed with the issuer of the global shuffle <b>104</b> before receiving a sub-shuffle. However, at the same time to ensure that the issuer does not gain knowledge of an entity's hand during the game, the exact nature of each entity's local pluck seed cannot be transmitted in plaintext. Rather, each entity's pluck seed could be transmitted encrypted in cipher text with the decryption key only transmitted after the hand of the game is completed. In a preferred embodiment, a cryptographic hash (e.g., SHA—Secure Hash Algorithm) of each entity's pluck seed can be safely transmitted to the issuer prior to receiving a sub-shuffle. While this hash must be transmitted before the entity receives its sub-shuffle, for bandwidth efficiency the pluck seed hash need not be transmitted before each shuffle of a game hand. Rather, a block of sequential pluck seed hashes could be transmitted to the issuer at the start of the game quorum formation with the next hash in the sequence being used for each subsequent game hand.</p>
+      <p id="p-00043-en" num="0042">In any case, the flowchart for transfer of each entity's pluck seed hash is illustrated in <figref>FIG. 2</figref> as embodiment <b>150</b>. As illustrated in <b>150</b>, when or before global issuer <b>151</b> generates the global shuffle seed <b>155</b>, all the entities in the game quorum <b>105</b> and <b>106</b> transmit a hash <b>158</b> and <b>159</b> of their generated pluck seeds <b>109</b> and <b>110</b>), which are received <b>160</b> by the global issuer <b>151</b>. When all of the hashes are received from all the entities in the game quorum, the hashes are saved <b>161</b> with either the result of the global shuffle <b>103</b>, or the global shuffle seed <b>155</b>, or both. Prior to all hashes being received <b>161</b>, the global issuer <b>151</b> can parse <b>163</b> the global shuffle into sub-shuffles. However, the resultant sub-shuffles cannot be transmitted <b>164</b> to the associated entities in the game quorum until all hashes have been received and logged. Once all hashes are received and logged <b>161</b> and the respective sub-shuffles are transmitted <b>164</b> and received <b>165</b> and <b>166</b> by each entity in the gaming quorum <b>164</b>, the local plucks <b>111</b> and <b>112</b> can commence with each entity resulting in a player's private hand <b>113</b> and <b>114</b> for each entity as shown in <figref>FIG. 1</figref>.</p>
+      <p id="p-00044-en" num="0043">After the private individual players hands have been selected, in most card games and the example of Texas Hold'em in particular, there is the possibility of subsequent cards being drawn as part of the game hand. The problem being that if each entity in the game quorum has secretly selected their hand independent of the issuer there is no one source available to dispense draw cards with confidence that the same card has not already been used in a private hand in the game quorum.</p>
+      <p id="p-00045-en" num="0044">
+        <figref>FIG. 3</figref> illustrates an embodiment <b>200</b> where the problem of subsequent draw cards that are assured to not also be present in any entity's private hand is solved by the various entities in the gaming quorum contributing draw cards. For the purposes of instruction and clarification five entities <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> are illustrated in embodiment <b>200</b> of <figref>FIG. 3</figref>. However, it should be understood that the embodiment of <b>200</b> would work equally well with other numbers of entities participating in the gaming quorum.</p>
+      <p id="p-00046-en" num="0045">Within each entity's domain there is a priori knowledge of the sub-shuffle set of cards <b>107</b>, <b>108</b>, <b>206</b>, <b>208</b>, and <b>210</b>, as well as the two cards selected for the entity's private hand. Thus, it is possible for each entity to select an additional card <b>205</b>, <b>207</b>, <b>209</b>, <b>211</b>, and <b>213</b> from their respective sub-shuffle <b>107</b>, <b>108</b>, <b>206</b>, <b>208</b>, and <b>210</b> that has not been previously selected for their private hand. As illustrated in embodiment <b>200</b>, the same local pluck algorithm (i.e., <b>111</b>, <b>112</b>, <b>207</b>, <b>209</b>, and <b>211</b>) with the same local pluck seed that selected the entity's private hand can simply be iterated an additional cycle to produce a subsequent dealt card <b>205</b>, <b>207</b>, <b>209</b>, <b>211</b>, and <b>213</b> for each entity. These subsequently dealt cards <b>205</b>, <b>207</b>, <b>209</b>, <b>211</b>, and <b>213</b> can then be transmitted to a global issuer <b>151</b> to form the subsequent draw cards <b>220</b> available for the quorum game hand.</p>
+      <p id="p-00047-en" num="0046">In a preferred embodiment, the global issuer pseudorandomly selects the order of which subsequently dealt card <b>205</b>, <b>207</b>, <b>209</b>, <b>211</b>, and <b>213</b> becomes the next draw card in the quorum game hand <b>220</b> with two sequential draw cards from the same entity (with the local pluck algorithm iterated another cycle) being a possibility. This embodiment has the advantage of no entity having a priori knowledge of the subsequent draw card for the quorum hand <b>220</b> and altering their betting strategy accordingly. It should be noted that even if an entity is no longer participating in a particular game hand (e.g., the entity folded in a poker game), the entity should still be utilized as a possible source for draw cards. To ensure that the pseudorandom sequence of quorum draw card entity selection remains both unpredictable and auditable, the seed for the pseudorandom entity selection for a subsequent draw card dispersion algorithm could be derived from human decisions during game play—e.g., total of all bets made and time tag in milliseconds of when the final bet was made with the resulting seed logged for forensic purposes.</p>
+      <p id="p-00048-en" num="0047">Thus, even in the preferred embodiment each entity still has knowledge of their next candidate draw card <b>205</b>, <b>207</b>, <b>209</b>, <b>211</b>, and <b>213</b> and may still attempt to develop a strategy on betting based on the possibility of their candidate draw card becoming the next actual global draw card. While with larger numbered quorums the effectiveness of this strategy is questionable, in smaller number quorums (e.g., only two entities playing in a game hand) this strategy may become more practical. Fortunately, the embodiment <b>200</b>′ of <figref>FIG. 4</figref> provides an effective countermeasure to this cheating strategy especially in quorums with a small number of entities. As illustrated in <b>200</b>′, the sub-shuffles <b>107</b>, <b>108</b>, <b>206</b>, <b>208</b>, and <b>210</b>, as well as local hand selection, would still function as previously described; however, before any entity <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> executed its local pluck algorithm <b>111</b>′, <b>112</b>′, <b>215</b>′, <b>216</b>′, and <b>217</b>′ for a draw card, it must first receive a new pluck seed <b>225</b> from the global issuer <b>151</b>. Once received, the entity <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> would apply the new pluck seed <b>225</b> to its local pluck algorithm <b>111</b>′, <b>112</b>′, <b>215</b>′, <b>216</b>′, and <b>217</b>′ to generate the next draw card <b>205</b>′, <b>207</b>′, <b>209</b>′, <b>211</b>′, and <b>213</b>′ to the global hand <b>220</b>. Notice that the new pluck seed <b>225</b> is only transmitted to the entity at the same time the global issuer notified the entity to provide the next draw card <b>205</b>′, <b>207</b>′, <b>209</b>′, <b>211</b>′, and <b>213</b>′ to the global hand <b>220</b>. Thus, no advantage can be gained since the entity providing the next draw card <b>205</b>′, <b>207</b>′, <b>209</b>′, <b>211</b>′, and <b>213</b>′ would only have knowledge of the card milliseconds before the other entities and the resultant draw card is dispensed at a time when betting is suspended. Of course, in this embodiment, since a new seed is provided to the local pluck algorithm <b>111</b>′, <b>112</b>′, <b>215</b>′, <b>216</b>′, and <b>217</b>′, an added process would have to be included to ensure that the resulting next draw card <b>205</b>′, <b>207</b>′, <b>209</b>′, <b>211</b>′, and <b>213</b>′ was not previously selected from the entity's sub-shuffle <b>107</b>, <b>108</b>, <b>206</b>, <b>208</b>, and <b>210</b> for use in a local hand. Optionally, the global pluck seed <b>225</b> transmitted to each entity could be algorithmically combined with the entity's local pluck seed (e.g., modulo added, exclusive-OR, etc.), thereby ensuring the global issuer also has no knowledge of the resulting next draw card <b>205</b>′, <b>207</b>′, <b>209</b>′, <b>211</b>′, and <b>213</b>′ in addition to the entity plucking the draw card.</p>
+      <p id="p-00049-en" num="0048">After each hand is played and a winner determined, it is then necessary to reconcile the hand to ensure that all entities in the quorum acted legitimately. Embodiment <b>250</b> of <figref>FIG. 5</figref> illustrates one possible method of conducting this reconciliation. As shown in <b>250</b>, the various entities <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> participating in the gaming hand quorum pass their respective pluck seeds <b>109</b>, <b>110</b>, <b>256</b>, <b>257</b>, and <b>258</b> in clear text <b>259</b> to the global issuer <b>151</b> at the conclusion of the game hand <b>255</b>. Once all of the clear text pluck seeds <b>109</b>, <b>110</b>, <b>256</b>, <b>257</b>, and <b>258</b> are received, the global issuer <b>151</b> compares <b>260</b> the clear text pluck seeds <b>109</b>, <b>110</b>, <b>256</b>, <b>257</b>, and <b>258</b> to the previous received hashes or cipher text <b>161</b> that were transmitted from the same entities before the start of quorum game hand play, as well as ensure that the clear text pluck seeds result in the same private hand cards played by a given entity. If the clear text pluck seeds <b>109</b>, <b>110</b>, <b>256</b>, <b>257</b>, and <b>258</b> compute <b>262</b> to the same hashes/cipher texts received at the start of the quorum game hand <b>161</b>, then the quorum game hand is certified legitimate <b>263</b> and subsequent hands can be played without concern. Conversely, if the clear text pluck seeds <b>109</b>, <b>110</b>, <b>256</b>, <b>257</b>, and <b>258</b> compute <b>262</b> to different hashes/cipher texts than were received at the start of the quorum game hand <b>161</b>, then the quorum game hand is not legitimate <b>264</b> and the hand is flagged for further review. In the event the hand is calculated to be not legitimate <b>264</b>, then exact action performed at that time will vary depending on business decisions. For example, further play may be stopped until the discrepancy is resolved, or possibly one illegitimate hand may not stop ongoing play but still be subjected to a future audit.</p>
+      <p id="p-00050-en" num="0049">Thus, by partitioning quorum game play information to various entities with information only shared at specific times, no one entity in the gaming quorum (including the global issuer) has a priori knowledge of the other entities' private hands. While each entity does possess some knowledge of cards that cannot be in other entities hands, the fluctuations from hand to hand, as well as the number of cards in each sub-shuffle, make developing a cheating strategy based on only this information inconsistent and consequently not economically feasible on a reliable basis.</p>
+      <p id="p-00051-en" num="0050">
+        <figref>FIG. 6</figref> illustrates a two-dimensional time line <b>300</b> diagrammatically illustrating how game play information is partitioned relative the various entitles with respect to time. In <figref>FIG. 6</figref>, time flows from top to bottom with the various entities <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> in the gaming quorum illustrated in a horizontal row across the top of <b>300</b> and the global issuer <b>151</b> shown vertically on the left-hand side of <b>300</b>. As previously discussed, in some embodiments, the global issuer <b>151</b> can also physically be an entity <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> in the gaming quorum; however, for the purposes of clarity of <figref>FIG. 6</figref> the global issuer <b>151</b> functionality is illustrated separately.</p>
+      <p id="p-00052-en" num="0051">At the top of timeline <b>300</b>, the entire process is shown starting with the various entities <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> in the gaming quorum all transmitting cryptographic hashes of their associated pluck seeds <b>305</b> to the global issuer <b>151</b>. As previously stated, these various hashes can be transmitted in groups covering multiple quorum game hands, the significant point being that hashes are received <b>305</b> by the global issuer <b>151</b> from all entities <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> participating in the gaming quorum prior to quorum game play for the given hand <b>301</b>.</p>
+      <p id="p-00053-en" num="0052">After the hashes are received <b>305</b>, the global issuer <b>151</b> transmits the assigned sub-shuffles <b>306</b> to all entities <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> in the gaming quorum. Once each entity receives its respective sub-shuffle, its local pluck algorithm utilizes its local pluck seed to select its respective player's private hand. In the example of the game Texas Hold'em, bidding (i.e., call, fold, or raise) between the players in the gaming quorum would then ensue with the various bids optionally transmitted <b>307</b> to the global issuer <b>151</b> for logging and possible use in selecting which entity would pluck a subsequent draw card and/or draw card global seed generation.</p>
+      <p id="p-00054-en" num="0053">After the first round of bidding is concluded, if necessary, the global issuer <b>151</b> selects entities in the quorum <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> to dispense any needed draw cards <b>308</b>. Once a selected entity (e.g., <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, or <b>203</b>) receives a request from the global issuer <b>151</b>, it selects the next draw card and transmits that draw card's identity <b>308</b> back to the global issuer <b>151</b> for use in the quorum game hand. This process <b>308</b> can be repeated until a sufficient number of draw cards are generated for the given stage of the game hand—e.g., three draw cards for the flop in Texas Hold'em. At this point, the bidding <b>307</b> and draw card issuing <b>308</b> processes may or may not be repeated depending on game play.</p>
+      <p id="p-00055-en" num="0054">Eventually the quorum game hand will end <b>302</b> with one or more players being the winner(s) for that hand. The only remaining information transfer to occur is for all the entities in the quorum <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> to send their selected pluck seeds <b>309</b> to the global issuer <b>151</b> to certify that the previous game hand was legitimate by calculating each hash value of the clear text pluck seeds received and comparing the newly calculated hashes to the pluck seed hashes received <b>305</b> before the start of the game hand <b>301</b>. Additionally, the newly received clear text pluck seeds <b>309</b> can also be applied to the sub-shuffle that was sent to the associated quorum entity <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> to ensure that the any cards publicly displayed at the end of game <b>302</b> were derived from the sub-shuffle and pluck seed. Since the game hand is concluded <b>302</b>, the secrecy of the clear text pluck seeds is no longer of any concern.</p>
+      <p id="p-00056-en" num="0055">While the previous embodiments ensure security and privacy for each entity's private card hand, most of these embodiments do have the problem of each entity having potential knowledge of a limited number of cards that the other entities cannot have. While it is at most questionable that this knowledge could impart an unfair advantage bidding or calculating the odds of winning a draw on an economically reliable basis, it is fair to say that this potential knowledge is an undesirable artifact of the previous embodiments.</p>
+      <p id="p-00057-en" num="0056">Fortunately, with the use of a modified Linear Congruential Generator (LCG) or similar type algorithm to perform shuffle/pluck functions, the problem of each entity having a priori knowledge of a sample of cards that the other entities cannot have can be greatly reduced or eliminated. A LCG is an algorithm that yields a sequence of randomized numbers calculated with a linear equation. A LCG is fast, and more to the point, accepts a starting seed that causes the LCG to pseudorandomly select numbers over a given period while never repeating the same number so long as the period is not exceeded. For example, most common LCG algorithms' periods are 2<sup>32 </sup>(i.e., 4,294,967,296). Thus, with most 32-bit LCG algorithms, over four billion unique pseudorandom numbers can be selected before the algorithm repeats itself. By mapping a LCG output to a set of objects, the pseudorandom jumping nature of the LCG algorithm allows for unpredictable selections of objects from the set (i.e., shuffle and pluck functionality) that is nevertheless completely auditable if the LCG starting parameters are known.</p>
+      <p id="p-00058-en" num="0057">For example, <figref>FIG. 7</figref> provides a conceptual illustration <b>350</b> of a period <b>353</b> of a 32-bit LCG with 4,294,967,296 numbers in the period before repeating. In <b>350</b>, the first fifty-two numbers are mapped to the fifty-two cards <b>351</b> in a standard deck with the remaining 4,294,967,244 numbers <b>354</b> in the LCG period <b>353</b> not mapped to anything <b>352</b>. If this example LCG were utilized as a combination shuffle/pluck algorithm, when the LCG output was between zero and fifty-one (355) a card would be selected from a standard deck. Any other number selected (i.e., 52 thru 4,294,967,295) <b>354</b> would return a null selection <b>352</b> with no card being selected. In other words, the vast majority of the LCG output numbers result in null with only approximately 0.000012% of the numbers in the period <b>355</b> selecting an actual card for a virtual deck. So if one entity were to be assigned an arbitrary starting point in the example LCG period, that entity could easily add a random number less than some value (e.g., one-thousand) to the starting point with very little probability of exhausting the set of fifty-two playing cards over the skipped (i.e., added) portion of the LCG period <b>353</b>.</p>
+      <p id="p-00059-en" num="0058">However, as a practical manner, even with modern computing power, incorporating a 32-bit LCG is too large a period (i.e., 4,294,967,296 numbers to a period) to enable rapid card selection. To be efficient, the starting parameter m for the LCG should be a power of two—for bit shifting in the CPU (Central Processing Unit). Consequently, a modified LCG can employ a smaller power-of-two-value for m and still offer the same shuffle and plucking functionality. To ensure sufficient obfuscation, making it impractical for other entities to guess a given entity's private hand, it is desirable to seek a LCG value for m (modulus) that yields a period that is at least one-hundred times greater than the number of objects to be shuffled and plucked. So, for the standard fifty-two-card-deck, the minimum value for m should be 2<sup>13</sup>, which yields a period of 8,192 cycles assuming the other LCG parameters are correctly selected for maximum period. The upper limit for m is driven by the speed of the CPU and how quickly the complete period can be calculated such that it will not result in an unacceptable delay shuffling and plucking the objects for the gaming quorum. Therefore, the example LCG illustration <b>350</b> can be used as the algorithm for card shuffling and plucking for each entity so long as a shorter, more practical, period is programmed into the LCG or similar algorithm.</p>
+      <p id="p-00060-en" num="0059">Regardless of the LCG period, the algorithm would be utilized for shuffling selecting cards (objects) by first receiving a starting pointer in the LCG period and other parameters from a global issuer or another entity. Secondly, the receiving entity would combine a locally selected obfuscation number to the starting pointer—to ensure that the previous entity/issuer would have no knowledge of the actual starting point of the receiving entity by obfuscation. Thirdly, the entity would then sequentially run the LCG algorithm through a number of cycles until a sufficient number of cards were selected for a private hand. Once the private hand was achieved, the same entity could then combine another random obfuscation number to the ending in the LCG private hand selection pointer and pass the newly obfuscated pointer to another entity, thereby ensuring the pointer was sufficiently obfuscated that knowledge of the actual stopping place in the sequence by an outside party would be extremely difficult if not impossible to obtain. Ideally, that when an entity was selecting a private hand, there would be a pseudorandom probability that one or more cards may be skipped to further obscure the actual cards selected for the private hand. For added security, the pseudorandom number combined with the actual end point could also be tested to ensure that it included sufficient cycles that some number of cards could also be skipped. Thus, by repeating this process for each entity in the quorum, it can be seen that, so long as some cards remain for draw cards in the virtual deck, the handoff of an obfuscated pointer to the next entity using the same LCG shuffle and pluck algorithm would ensure that no entity would have a priori knowledge of another entity's private hand.</p>
+      <p id="p-00061-en" num="0060">For example, <figref>FIG. 8</figref> illustrates an embodiment <b>375</b> that utilizes a LCG type algorithm common among all of the entities to perform each entity's private shuffle and pluck functionality. As in the previous embodiments, a global issuer <b>151</b> initiates the local shuffle/pluck functionality <b>376</b> for each entity <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> where the global issuer could be one of the entities participating in the gaming quorum. However, in this embodiment <b>375</b>, the local issuer <b>151</b> initiates the process by selecting the parameters for the LCG as well as the starting pointer for the LCG period <b>376</b> for the first entity <b>105</b>. These parameters <b>376</b> are global and therefore will be known by all entities in the gaming quorum with only the first entity <b>105</b> processing the parameters <b>377</b> in an LCG type algorithm at this time.</p>
+      <p id="p-00062-en" num="0061">Once parameters <b>376</b> are received by the first entity <b>105</b>, the initial starting point pointer parameter <b>376</b> received by entity <b>105</b> is combined by an algorithm <b>377</b> with an internal skip obfuscation value <b>378</b> that was determined by entity <b>105</b> prior to receiving the starting point parameters <b>376</b> from global issuer <b>151</b>. The exact structure of algorithm <b>377</b> is not important (e.g., modulo adding, exclusive-OR, etc.) so long as the output of algorithm <b>377</b> could not be predicted without knowledge of both the initial starting point pointer parameter <b>376</b> as well as the internal skip obfuscation value <b>378</b>—i.e., the actual starting point of the LCG shuffle and pluck algorithm is obfuscated. The output of algorithm <b>377</b> is then applied to an internal shuffle and pluck algorithm <b>379</b>, which optionally can accept another locally generated skip obfuscation value <b>380</b> to pseudo-randomize its selection of private hand cards <b>381</b> such that the next two sequential cards selected by the LCG algorithm may or may not necessarily become the private hand <b>381</b>. After the private hand <b>381</b> is determined by the shuffle and pluck LCG algorithm <b>379</b>, the ending point pointer value is then passed to another algorithm <b>382</b>, which combines the ending pointer value with another locally selected skip obfuscation value <b>393</b> to determine the obfuscated value of the ending/starting pointer that is passed to the second entity <b>201</b> in the gaming queue. Again, the exact structure of algorithm <b>382</b> is not important so long as its output could not be predicted without knowledge of the internal values generated in the first entity <b>105</b>.</p>
+      <p id="p-00063-en" num="0062">This above process is then repeated with the second <b>201</b> and other entities <b>202</b>, <b>203</b>, and <b>106</b> until every entity in the gaming quorum has selected internal private hands. After the last entity private hand selection is completed, the obfuscated ending point pointer value <b>384</b> is sent to the global issuer <b>151</b> to become the starting pointer for the draw cards.</p>
+      <p id="p-00064-en" num="0063">
+        <figref>FIG. 9</figref> illustrates an embodiment <b>400</b> where subsequent draw cards <b>401</b> can be generated after private hands were shuffled and plucked by an LCG algorithm while assuring that no subsequent draw cards were also selected for a private hand. Within the embodiment of <b>400</b> each entity's domain, there is a priori knowledge of the two cards selected for each entity's private hand. Thus, it is possible for each entity to select an additional card (i.e., <b>406</b> thru <b>410</b>) from any cards that may have been skipped by obfuscation cycles of the LCG during the selection of private hands. However, in LCG type embodiments, the pool of skipped cards will vary from entity to entity and may not include any skipped cards.</p>
+      <p id="p-00065-en" num="0064">In a certain embodiment, the global issuer pseudorandomly selects the order of which subsequently dealt cards <b>406</b> thru <b>410</b> will be drawn from each entity. When the global issuer <b>151</b> alerts the entity <b>105</b> to provide the next draw card in the sequence <b>405</b>, the global issuer <b>151</b> also passes the value of the draw card pointer <b>402</b> to the entity <b>105</b>. For the first draw card, the pointer value <b>402</b> will be identical to the pointer value <b>384</b> (<figref>FIG. 8</figref>) received from the final entity in the gaming quorum <b>106</b>. However, for all other draw cards the pointer value <b>402</b> (<figref>FIG. 9</figref>) will be whatever value was returned from the previous entity that selected a draw card.</p>
+      <p id="p-00066-en" num="0065">Regardless of how the draw card pointer value <b>402</b> was determined, the current value is passed to the entity that has been chosen to select the next draw card <b>401</b>. Once the entity <b>105</b> receives the draw card pointer value <b>402</b>, it applies it to a draw card shuffle/pluck algorithm <b>403</b> that also accepts another obfuscation value <b>404</b> that was locally generated by the same entity <b>105</b> prior to choosing any private hands. This second value <b>404</b> applied to the draw card shuffle/pluck algorithm is algorithmically combined <b>403</b> with the received draw card pointer value <b>402</b> to produce the actual shuffle/pluck value used by the entity <b>105</b> and then determines the draw card either from cycling through from the pointer <b>402</b> received or by selecting a card previously skipped in the entity's obfuscation cycles. Along with the selected draw card <b>405</b>, the entity <b>105</b> also returns a new value for the draw card pointer <b>402</b>, which was the actual end value of the shuffle/pluck algorithm pointer combined with an obfuscation value <b>405</b> that was selected before the private hands were determined. As before, the exact nature of the structure of algorithm <b>403</b>'s obfuscation functionality is not important so long as its output could not be predicted without knowledge of the internal values generated in the first entity <b>105</b>. The obfuscated end pointer <b>402</b> is then returned with the associated draw card identity <b>406</b> to the global issuer <b>151</b>. This process is then repeated with the same or other entities in the gaming quorum to produce the number of draw cards <b>406</b> thru <b>410</b> necessary to complete play of the hand <b>401</b>.</p>
+      <p id="p-00067-en" num="0066">In a preferred embodiment, the structure of the draw card shuffle and pluck algorithm would allow for either selection of a card that would be plucked by cycling the LCG from the starting pointer or to possibly select one of the cards that may have been skipped as part of the obfuscation process when the same entity was selecting its private hand. One method of achieving this functionality is to assign some probability of selecting a skipped card whenever the LCG cycles through a null pointer address <b>352</b> (<figref>FIG. 7</figref>).</p>
+      <p id="p-00068-en" num="0067">Thus, so long as the period of the LCG is not exhausted by the private hand and draw card selection processes, the embodiments of <b>375</b> (<figref>FIG. 8) and 400</figref> (<figref>FIG. 9</figref>) can be utilized to select cards for a game where no one entity has a priori knowledge of another entity's private hand. In the rare cases where selection of a draw card would cause a LCG algorithm to repeat a period, the cards skipped by the entities in the obfuscation process can be used exclusively for draw card candidates.</p>
+      <p id="p-00069-en" num="0068">As in previous embodiments, after each hand is played and a winner determined, it is then necessary to reconcile the hand to ensure that all entities in the quorum acted legitimately. This process can be similar to embodiment <b>250</b> of <figref>FIG. 5</figref> with all the various entities <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> participating in the gaming hand quorum passing all of their respective obfuscation values to the global issuer <b>151</b> at the conclusion of the game hand <b>255</b>. As before, once all of the clear text values have been received by the global issuer <b>151</b>, the previous received hashes or cipher text <b>161</b> that were transmitted from the same entities before the start of quorum game hand play can be computationally compared to ensure that the received clear text obfuscation values compute to the previously received hashes. However, in the LCG embodiments, multiplicities of obfuscation values are employed during the play of each hand. While it is not essential, it is desirable (to minimize logistical communications) that all of the obfuscation values employed by an entity are combined into one hash or cipher text that is transmitted to the global issuer prior to play. For example, <figref>FIG. 10</figref> illustrates one possible embodiment <b>425</b> wherein all of the obfuscation values <b>378</b>, <b>380</b>, <b>383</b>, <b>404</b>, and <b>405</b> utilized in the embodiments of <b>375</b> and <b>400</b> are concatenated and applied to a single hash function <b>426</b>. In this embodiment the single resulting output hash <b>427</b> is transmitted to the global issuer by all entities participating in the gaming quorum prior to any play.</p>
+      <p id="p-00070-en" num="0069">Thus, LCG type embodiments also partition quorum game play information to various entities with information only shared at specific times and no one entity in the gaming quorum (including the global issuer) having a priori knowledge of the other entities' private hands. In these LCG type embodiments, the partitioning of information is achieved by the obfuscation of the LCG pointer when it is handed from one entity to another. Nevertheless, as in previous embodiments, the timing of critical information exchange is critical to the security of the system.</p>
+      <p id="p-00071-en" num="0070">
+        <figref>FIG. 11</figref> illustrates a two-dimensional time line <b>450</b> diagrammatically illustrating how game play information is partitioned relative the various entitles with respect to time. In <figref>FIG. 11</figref>, time flows from top to bottom with the various entities <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> in the gaming quorum illustrated in a horizontal row across the top of <b>450</b> and the global issuer <b>151</b> shown vertically on the left-hand side of <b>450</b>. As previously discussed, in some embodiments, the global issuer <b>151</b> can also physically be an entity <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> in the gaming quorum; however, for the purposes of clarity of <figref>FIG. 11</figref> the global issuer <b>151</b> functionality is illustrated separately.</p>
+      <p id="p-00072-en" num="0071">At the top of timeline <b>450</b>, the entire process is shown starting with the various entities <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> in the gaming quorum all transmitting cryptographic hashes of their obfuscation values <b>455</b> to the global issuer <b>151</b>. As previously stated, these various hashes can be transmitted in groups covering multiple quorum game hands, the significant point being that hashes are received <b>455</b> by the global issuer <b>151</b> from all entities <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> participating in the gaming quorum prior to quorum game play for the given hand <b>451</b>.</p>
+      <p id="p-00073-en" num="0072">After the hashes are received <b>455</b>, the global issuer <b>151</b> transmits the starting pointer <b>456</b> and other parameters to the first entity <b>105</b> in the gaming quorum. Once entity <b>105</b> receives the parameters and pointer, its local LCG type algorithm selects its player's private hand. Once the hand selection is completed, entity <b>105</b> then obfuscates the ending pointer and passes the original parameters plus the current (obfuscated) pointer to the second entity <b>201</b> in the gaming quorum. Entity <b>201</b> then applies the original parameters and modified pointer to its local LCG algorithm to select its player's private hand and this same process is continued throughout all entities participating in the gaming quorum (<b>202</b>, <b>203</b>, and <b>106</b>) with the final n<sup>th </sup>entity <b>106</b> obfuscating the pointer and passing its obfuscated value <b>457</b> back to the global issuer <b>151</b>.</p>
+      <p id="p-00074-en" num="0073">In the example of the game Texas Hold'em, bidding (i.e., call, fold, or raise) between the players in the gaming quorum would then ensue with the various bids optionally transmitted <b>458</b> to the global issuer <b>151</b> for logging and possible use in selecting the entity to select a draw card.</p>
+      <p id="p-00075-en" num="0074">After the first round of bidding is concluded, the global issuer <b>151</b> selects entities in the gaming quorum <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> to dispense any needed draw cards <b>459</b>—e.g., three draw cards for the flop in Texas Hold'em. Once a selected entity (e.g., <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, or <b>203</b>) receives a request from the global issuer <b>151</b>, it selects the next draw card and transmits that draw card's identity <b>459</b> back to the global issuer <b>151</b> for use in the quorum game hand. This process <b>459</b> can be repeated until a sufficient number of draw cards are generated for the given stage of the game hand—e.g., three draw cards for the flop in Texas Hold'em. At this point the bidding <b>458</b> and draw card issuing <b>459</b> processes may or may not be repeated depending on game play.</p>
+      <p id="p-00076-en" num="0075">Eventually the quorum game hand will end <b>452</b> with one or more players the winner(s) for that hand. The only remaining information transfer to occur is for all the entities in the quorum <b>105</b>, <b>106</b>, <b>201</b>, <b>202</b>, and <b>203</b> to send their clear text obfuscation values <b>460</b> to the global issuer <b>151</b> to certify that the previous game hand was legitimate by calculating each hash value of the clear text obfuscation values received and comparing the newly calculated hashes to the obfuscation value hashes received <b>455</b> before the start of the game hand <b>451</b>. Since the game hand is concluded <b>452</b>, the securities of the clear text pluck seeds are no longer of any concern.</p>
+      <p id="p-00077-en" num="0076">It should be appreciated by those skilled in the art that various modifications and variations may be made present invention without departing from the scope and spirit of the invention. It is intended that the present invention include such modifications and variations as come within the scope of the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A secure computer platform implemented method for generating shuffled objects across multiple entities, comprising:
+<claim-text>a global issuer shuffling a predefined array of objects into a new order with a global computer platform executing a shuffle algorithm and using a global shuffle seed, wherein the shuffle algorithm is known to the multiple entities;</claim-text><claim-text>dividing the shuffled array of objects into sub-shuffles, and distributing one of the sub-shuffles to each of the multiple entities, wherein all of the objects in the shuffled array are assigned to one of the sub-shuffles; and</claim-text><claim-text>at each of the multiple entities, applying a local pluck algorithm and local pluck seed to the sub-shuffle with a computer platform to produce a final set of the objects used by the entity for play of a game, wherein the local pluck algorithm and local pluck seed are not known to the other entities.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method as in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the global shuffle seed is made known to the multiple entities at conclusion of the game.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method as in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein in order to ensure that all of the objects in the shuffled array are assigned to one of the sub-shuffles, the sub-shuffles may not have the same number of objects.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method as in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the final set of objects varies as a function of the game played with the objects.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method as in <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the predefined array of objects is a standard card deck of fifty-two cards, and the final set of objects corresponds to a player's hand in a card game.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method as in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each entity is required to register its local pluck seed in encrypted form with the global issuer prior to receipt of the sub-shuffle, the entity transmitting a decryption key for the encrypted pluck seed at conclusion of the game.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method as in <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the global issuer receives the encrypted local pluck seed from each entity prior to the global issue generating the global shuffle seed.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method as in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the game requires selection of additional draw objects that are common to the entities, each of the entities generating one or more potential draw objects from remaining objects in their respective sub-shuffle and transmitting the potential draw objects to the global issuer, wherein the global issuer randomly selects a final set of common draw objects from all of the potential draw objects and transmits the final set of common draw objects to the entities.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method as in <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the entities use their local pluck algorithm and local pluck seed to generate the potential draw objects.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method as in <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the entities use their local pluck algorithm and a new local pluck seed transmitted by the global issuer to generate the potential draw objects.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method as in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the global issuer receives the local pluck seed in encrypted form from each entity prior to the global issue generating the global shuffle seed, the entities transmitting a decryption key for their encrypted local pluck seed at conclusion of the game as well as a clear text version of the local pluck seed, the global issuer comparing the clear text version of the local pluck seed with a decrypted versions of the local pluck seed received from the entity prior to issue of the local pluck seek to certify the game as legitimate. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150258450A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258450A1-20150917-D00011.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150258450A1.PDF" type="pdf" size="1227840" pages="21" />
+</lexisnexis-patent-document>

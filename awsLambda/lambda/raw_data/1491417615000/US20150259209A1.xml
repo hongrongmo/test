@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259209A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030025" date-changed="20160127" time-changed="023635">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121313560">
+        <country>US</country>
+        <doc-number>20150259209</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14644369</doc-number>
+        <date>20150311</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>DE</country>
+        <doc-number>102014103346</doc-number>
+        <date>20140312</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160127">
+      <classification-ipcr sequence="1">
+        <text>C01B  31/02        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B01J  19/24        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>19</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>G05B  15/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>05</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160127">
+      <classification-cpc sequence="1">
+        <text>C01B  31/02        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01J  19/24        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>19</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B01J2219/00164     20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00164</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B01J2219/24        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C10L   3/101       20130101 LI20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>101</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C10L   9/086       20130101 LI20150721BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>9</main-group>
+        <subgroup>086</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C10L2290/546       20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2290</main-group>
+        <subgroup>546</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C10L2290/548       20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2290</main-group>
+        <subgroup>548</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C10L2290/60        20130101 LA20150721BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2290</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>G05B  15/02        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>05</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>Y02E  50/10        20130101 LA20160120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>50</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>Y02E  50/30        20130101 LA20160120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>50</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">8</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">METHOD AND APPARATUS FOR CARRYING OUT A HYDROTHERMAL CARBONIZATION REACTION AND USE OF A SENSOR OR ANALYSIS DEVICE FOR THIS PURPOSE</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>AVA-CO2 SCHWEIZ AG</orgname>
+            <role>03</role>
+            <address>
+              <city>Zug</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>VYSKOCIL</last-name>
+            <first-name>Jan</first-name>
+            <address>
+              <city>Zug</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173664538">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918662</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259209</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102014103346</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173664537">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918662</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259209</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102014103346</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">It is the goal of a hydrothermal carbonization reaction to obtain the best possible yield of specific substances, for example the greatest possible carbon yield. However, biomass of very different types and grades is fed into the process, so that the reaction can take place very differently within each individual batch. Influencing the process is generally problematical, because the process proceeds in closed manner. For this reason, it is proposed to assign a sensor or an analysis device for the total organic carbon for the dissolved organic carbon, or for fractions of the total organic carbon. An adaptation of the process parameters can then be undertaken manually or by way of a process controller, as a function of the sensor's measurement results.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150331</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259209A1</docdb-publication-number>
+      <docdb-application-id>444514031</docdb-application-id>
+      <new-owner>AVA-CO2 SCHWEIZ AG, SWITZERLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:VYSKOCIL, JAN;REEL/FRAME:035297/0316</free-text-description>
+      <effective-date>
+        <date>20150317</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">Applicant claims priority under 35 U.S.C. §119 of German Application No. 10 2014 103 346.9 field Mar. 12, 2014, the disclosure of which is incorporated by reference.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">The present invention relates to a method for operation of a reactor using hydrothermal carbonization, the use of a sensor or of an analysis device for the total organic carbon, for the dissolved organic carbon, or for fractions of the total organic carbon, and an apparatus for carrying out a hydrothermal carbonization reaction.</p>
+      <p id="p-00004-en" num="0004">2. The Prior Art</p>
+      <p id="p-00005-en" num="0005">In a hydrothermal carbonization reaction, carbon and other byproducts are obtained from biomass, at elevated pressure and elevated temperature. Efficiency can be improved by using pressure and temperature correctly at certain points in time, and thereby following appropriately developed programs correctly, so that the biomass can be converted into carbonaceous substances that can be utilized, or into carbon itself, with very little energy being used.</p>
+      <p id="p-00006-en" num="0006">In this connection, the efficiency is clearly increased by means of a suitable adaptation of the method to the biomass selected. Not only the parameters stated, but also further parameters such as the method and point in time of supplying steam, as well as the amount of steam supplied, play a prominent role in this regard, as does the composition of the supplied biomass. Fundamentally, therefore, an adaptation of the hydrothermal carbonization process to each biomass selected, would have to take place, in order to process the biomass selected in the most efficient way possible. In a rough outline, this is also easily possible by means of a selection of suitable settings, by hand, if, for example, liquid mixtures that contain carbon must be distinguished from garden waste. However, one type of garden waste also differs from another type of garden waste, so that here a more precise distinction will be required to further increase efficiency.</p>
+      <p id="p-00007-en" num="0007">Since it is impossible to intervene in a hydrothermal carbonization process from the outside in practical manner, in view of the closed state of a reaction vessel, other possibilities are being sought, within the scope of the invention, for acting on the hydrothermal carbonization process in order to improve the efficiency of the process.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">Against this background, it is an object of the invention to obtain data from the ongoing carbonization process, on the basis of which data parameters of a hydrothermal carbonization process can be influenced from the outside, in order to improve the efficiency of the process.</p>
+      <p id="p-00009-en" num="0009">This object is accomplished by a method for operation of a reactor within the scope of hydrothermal carbonization. Furthermore, this task is accomplished by means of the use of a sensor or of an analysis device for the total organic content, for the dissolved organic content, or for fractions of the total organic content. Finally, the problem is also solved by means of an apparatus for carrying out a hydrothermal carbonization reaction.</p>
+      <p id="p-00010-en" num="0010">According to the invention, a bypass line is assigned to a reaction vessel in which the hydrothermal carbonization reaction takes place in a batch method, into which line the process water mixed with the biomass can run. This bypass line then has a sensor or also an analysis device assigned to it, with which values for the total organic carbon (TOC, Total Organic Carbon), for the dissolved organic carbon (DOC, Dissolved Organic Carbon), or for fractions of the total organic carbon can be determined. Using what is called a TOC or DOC sensor or a TOC or DOC analysis device, a list can be generated, stating what carbon compounds, including pure carbon, are present in the process water, and in what concentrations. From this, it is possible to derive the degree of progress of the hydrothermal carbonization reaction at a specific point in time, so that a well-founded estimate of the current status within the reactor is made possible.</p>
+      <p id="p-00011-en" num="0011">Aside from purely obtaining information by way of the sensor or of the analysis device, these can also be set up in such a manner that a reporting signal is issued when a limit value of various monitored carbon compounds is exceeded, or fails to be exceeded, to which signal the operating personnel can react. Alternatively, a sensor or analysis device transmits such a signal directly to a process controller, which in turn either outputs the signal directly, passes it on to a control console, or itself intervenes in the process. In the latter case, means for influencing the hydrothermal carbonization reaction are assigned to the process controller, with which means it is possible to influence parameters such as the feed of biomass, the feed of steam, and pressure and temperature can also be influenced. For its orientation, the process controller will access database entries of a reference database and compare the measurement values of the sensor or of the sensors or of the analysis device or of the analysis devices with these database entries. In this connection, rulebooks for controlling the means for influencing the hydrothermal carbonization process are assigned to the database entries, so that the process controller can derive from them what measures must be taken. If no precise agreement of the measurement values with the predetermined database entries can be found, the process controller will select the closest value, in accordance with criteria that are also predetermined.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00012-en" num="0012">Other objects and features of the present invention will become apparent from the following detailed description considered in connection with the accompanying drawing. It is to be understood, however, that the drawing is designed as an illustration only and not as a definition of the limits of the invention.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 1</figref> shows a diagram of a reactor according to the invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENT</heading>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 1</figref> shows a reaction vessel <b>1</b>, to which a steam feed <b>7</b> and a slurry feed <b>9</b> are assigned. The hydrothermal carbonization reaction takes place in the interior of the reaction vessel <b>1</b> after steam and slurry have been fed in. Furthermore, a bypass line <b>2</b> is assigned to the reaction vessel <b>1</b>, which line is filled with process water during the course of the hydrothermal carbonization reaction, which water flows through the bypass line <b>2</b>. If necessary, a pump or another flow drive can also be assigned to the bypass line for this purpose, which pump or drive is provided for conveying the process water, mixed with slurry, through the bypass line. Furthermore, a sensor <b>3</b> for the total organic carbon (TOC sensor) is assigned to the bypass line <b>2</b>, which sensor is able to identify and quantify pure carbon as well as multiple carbon compounds within the process water in the bypass line <b>2</b>. In this manner, it can be determined how far advanced the carbonization reaction in the reaction vessel <b>1</b> already is at a specific point in time. From this, conclusions can be drawn as to whether or not an adaptation of the reaction conditions might be necessary. The sensor for the total organic carbon <b>3</b> passes its measurement data on to a process controller <b>4</b>, which in turn is connected with a reference database <b>5</b>. The reference database <b>5</b> comprises a plurality of database entries, which are selected on the basis of the measurement data delivered by the sensor <b>3</b> for the total organic carbon and made available to the process controller <b>4</b>. Each database entry, independent of the measurement value that calls it up, has a rulebook according to which the hydrothermal carbonization reaction is to be influenced. Means for controlling the steam feed <b>6</b> as well as means for controlling the slurry feed <b>8</b> are provided to the process controller <b>4</b> for this purpose. If a measurement datum of the sensor <b>3</b> for the total organic carbon therefore reaches the process controller <b>4</b>, the process controller <b>4</b> will call up a database entry from the reference database <b>5</b>, which entry corresponds to the measurement datum, taking into consideration the time point of collection of the measurement data in relation to the start of the carbonization reaction or another reference time point, and will control the means for controlling the steam feed <b>6</b> as well as the means for controlling the slurry feed <b>8</b> in accordance with the rulebook stored in this data entry, and, if necessary, further controller components, not indicated in any detail here. In this way, the process can be adapted by means of the process controller <b>4</b>, depending on the course of the hydrothermal carbonization reaction within the reaction vessel <b>1</b>, in such a manner that it proceeds as efficiently as possible.</p>
+      <p id="p-00015-en" num="0015">What has been described above is therefore a method and an apparatus for operation of a reactor within the scope of hydrothermal carbonization, as well as the use of a sensor or of an analysis device for the total organic carbon, for the dissolved organic carbon, or for fractions of the total organic carbon in a bypass line of the reaction vessel, with the goal of obtaining suitable information for influencing the ongoing hydrothermal carbonization process with regard to a possible increase in efficiency.</p>
+      <p id="p-00016-en" num="0016">Accordingly, while only a few embodiments of the present invention have been shown and described, it is obvious that many changes and modifications may be made thereunto without departing from the spirit and scope of the invention.</p>
+      <heading id="h-00006-en" level="1">REFERENCE SYMBOL LIST</heading>
+      <p id="p-00017-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>
+            <b>1</b> reaction vessel</li>
+          <li>
+            <b>2</b> bypass line</li>
+          <li>
+            <b>3</b> sensor for the dissolved organic carbon</li>
+          <li>
+            <b>4</b> process controller</li>
+          <li>
+            <b>5</b> reference database</li>
+          <li>
+            <b>6</b> means for controlling the steam feed</li>
+          <li>
+            <b>7</b> steam feed</li>
+          <li>
+            <b>8</b> means for controlling the slurry feed</li>
+          <li>
+            <b>9</b> slurry feed</li>
+        </ul>
+      </p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for operation of a reactor for hydrothermal carbonization, comprising:
+<claim-text>conducting a hydrothermal carbonization reaction in a reaction vessel having a bypass line; and</claim-text><claim-text>determining a concentration value for the total organic carbon or fractions of carbon in process water contained in the reaction vessel using a sensor or an analysis device.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the step of determining includes determining a concentration value for the carbon content using the sensor or analysis device.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the step of determining includes determining concentration values for one or more carbon compounds using the sensor or analysis device.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein measurement values of the sensor or analysis device are compared with predetermined limit values and wherein a reporting signal is output to a process controller, depending on whether individual measurement values are exceeded or not reached.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the process controller outputs the reporting signal by way of an output device.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the process controller controls a device for influencing the hydrothermal carbonization reaction, and wherein the process controller compares an incoming reporting signal with database entries of a reference database, and implements a rulebook stored in memory in a corresponding database entry for controlling the device for influencing the hydrothermal carbonization reaction.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. Use of a sensor or of an analysis device for determining total organic carbon, for dissolved organic carbon, or for fractions of the total organic carbon in a bypass line of a reaction vessel for a hydrothermal carbonization reaction, to obtain measurement data for a process controller for controlling a device for influencing the hydrothermal carbonization reaction.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>
+        <b>8</b>. An apparatus for carrying out a hydrothermal carbonization reaction, comprising:
+<claim-text>a reaction vessel having a bypass line; and</claim-text><claim-text>a sensor or an analysis device adapted for determining the total organic carbon, for dissolved organic carbon, or for fractions of the total organic carbon, said sensor or analysis device being assigned to the bypass line.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259209A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150259209A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259209A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259209A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259209A1_00003.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150259209A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259209A1.PDF" type="pdf" size="194366" pages="4" />
+</lexisnexis-patent-document>

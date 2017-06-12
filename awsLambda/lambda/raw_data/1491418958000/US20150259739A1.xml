@@ -1,0 +1,2603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259739A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030110" date-changed="20150928" time-changed="061039">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314107">
+        <country>US</country>
+        <doc-number>20150259739</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14715424</doc-number>
+        <date>20150518</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>C12Q   1/68        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61Q  17/04        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>17</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61Q  19/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61Q  19/08        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>G01N  33/53        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>53</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>C12Q   1/6876      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>6876</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61Q  17/04        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>17</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61Q  19/00        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61Q  19/08        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C12Q   1/6883      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>6883</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C12Q2600/148       20130101 LA20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>148</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C12Q2600/156       20130101 LA20131028BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>156</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131028</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C12Q2600/158       20130101 LA20131023BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>158</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>G01N  33/5308      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>5308</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>G01N  33/6881      20130101 LI20131028BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>6881</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131028</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>G01N2500/04        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2500</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>G01N2800/20        20130101 LA20131028BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2800</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131028</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">49</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">DETERMINING AGE RANGES OF SKIN SAMPLES</invention-title>
+    <related-documents date-changed="20150917">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12550060</doc-number>
+              <date>20090828</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007154</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61092687</doc-number>
+          <date>20080828</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>DERMTECH INTERNATIONAL</orgname>
+            <address>
+              <city>La Jolla</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chang</last-name>
+            <first-name>Sherman H.</first-name>
+            <address>
+              <city>San Diego</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Naughton</last-name>
+            <first-name>Gail K.</first-name>
+            <address>
+              <city>La Jolla</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173666806">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259739</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173666804">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259739</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides methods for characterizing a skin sample of a subject as belonging to an age range by analyzing nucleic acid or protein molecules obtained from the subject. The methods include analyzing expression or mutations in epidermal samples, of one or more skin markers. The methods can include the use of a microarray to analyze gene or protein profiles from a sample and compare them with a known skin age index. Therapeutic and cosmetic formulations are also provided herein.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATION(S)</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of priority under 35 U.S.C. §119(e) of U.S. Ser. No. 61/092,687, filed Aug. 28, 2008, the entire content of which is incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">The present invention relates generally to skin sampling and more specifically to methods of characterizing skin based on an age index.</p>
+      <p id="p-00004-en" num="0004">2. Background Information</p>
+      <p id="p-00005-en" num="0005">Aging is the accumulation of changes in an organism or object over time. Aging in humans refers to a multidimensional process of physical, psychological, and social change. Some dimensions of aging grow and expand over time, while others decline. Reaction time, for example, may slow with age, while knowledge of world events and wisdom may expand. Research shows that even late in life potential exists for physical, mental, and social growth and development. Aging is an important part of all human societies reflecting the biological changes that occur, but also reflecting cultural and societal conventions.</p>
+      <p id="p-00006-en" num="0006">As far as mammals go, humans are essentially hairless; that is, most of the skin of the human body can be seen without interference from hair. The skin is thus exposed to whatever insults (natural and man-made) the environment harbors. Since it was first understood that the sun caused erythema, people have taken measures to avoid its “harmful rays.” A century ago, in Elizabethan England, it was the fashion to avoid the sun at all costs. Yet the skin of those Elizabethans still wrinkled and displayed other signs of chronological aging.</p>
+      <p id="p-00007-en" num="0007">Human skin is a complex organ which extends over the entire body. There are different types of skin at different portions of the body; for example, facial skin is different from that of the scalp, and even the skin on the front (palm) of the hand is different than that on the back of the hand. Although the type of skin can vary over a person's body, skin is generally composed of two main layers of tissue. The epidermis or cuticle, the outermost layer, is composed of superficial layers (from the outside in: stratum corneum, stratum lucidem, and stratum granulosum) and deep layers (stratum spinosum and stratum basale). The dermis, cutis vera, or the true skin, is composed of a papillary layer above and a reticular layer below.</p>
+      <p id="p-00008-en" num="0008">Since ancient times, a variety of substances have been applied to the skin to improve its appearance, generally by affecting the outermost layer of the skin, or to treat a skin ailment, generally by affecting the true skin. More recently, efforts have been made to rejuvenate the skin and reclaim the elasticity and suppleness lost from exposure to sunlight (UV radiation) and weather.</p>
+      <p id="p-00009-en" num="0009">There is a difference between the physiology of chronologically-aged or intrinsically-aged skin (old skin) in comparison with that of photoaged skin (i.e., skin that appears old due to damage from solar UV irradiation). Old skin typically maintains a smooth and unblemished appearance, in comparison with the leathery, blotchy, and often deep wrinkling of photoaged skin. The epidermis of old skin is typically thinner than normal, whereas that of photoaged aged skin is typically thicker than normal (acanthotic) and atrophies over time. Photoaged skin typically has a large Grenz zone (a wide band of eosinophilic material just beneath the epidermis, and collagen formation and structures indicative of wound healing) which is absent from chronologically-aged skin. See also N. A. Fenske and C. W. Lober, “Structural and functional changes of normal aging skin,” J. Am. Acad. Dermatol., 15:571-585 (1986).</p>
+      <p id="p-00010-en" num="0010">In biology, “senescence” is the state or process of aging. “Cellular senescence” is a phenomenon where isolated cells demonstrate a limited ability to divide in culture (i.e., the Hayflick Limit, discovered by Leonard Hayflick in 1965), while “Organismal senescence” is the aging of organisms. After a period of near perfect renewal (in humans, between about 20 and 35 years of age), organismal senescence is characterized by the declining ability to respond to stress, increasing homeostatic imbalance and increased risk of disease. This irreversible series of changes inevitably ends in death. Some researchers (specifically biogerontologists) are treating aging as a disease. As genes that have an effect on aging are discovered, aging is increasingly being regarded in a similar fashion to other genetic conditions, i.e., potentially “treatable.”</p>
+      <p id="p-00011-en" num="0011">Clearly there is a need for further development of technology that will enable physicians to develop a skin age index to predict aging of individuals' skin.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00012-en" num="0012">The present invention is based, in part, on the discovery that analysis of nucleic acids or protein products from specific genes can be used to distinguish or categorize skin samples of individuals. The methods provide valuable genetic information based on DNA, RNA, or protein products obtained therefrom, for example.</p>
+      <p id="p-00013-en" num="0013">In one embodiment, the method involves use of a non-invasive approach for recovering nucleic acids such as DNA or RNA or proteins from the surface of skin via a tape stripping procedure that permits a direct quantitative and qualitative assessment of biomarkers. Although tape-harvested nucleic acid and protein products are shown to be comparable in quality and utility to recovering such molecules by biopsy, the non-invasive method provides information regarding cells of the outermost layers of the skin that may not be obtained using biopsy samples. Finally, the non-invasive method is far less traumatic than a biopsy, although the invention does not exclude the use of such invasive methods for skin sampling.</p>
+      <p id="p-00014-en" num="0014">Thus, the method is used to capture cells on the skin of individuals for determination of the appropriate age range. Nucleic acid molecules obtained from skin are analyzed in order to characterize the skin sample as being young or old. In one embodiment, a nucleic acid molecule is amplified prior to analysis. Secondary outcomes could include tests for diagnosis and prognosis of a variety of symptoms of photoaging and/or chronoaging of skin, and to predict a therapeutic or cosmetic regimen for treating the skin. In another embodiment, the skin cells are lysed to extract one or more proteins, which are then quantitated to compare with gene products of the genes listed in Table 1, Table 2, Table 3, or any combination thereof, for example, however, the combination must include at least one “young” gene and at least “old” gene. It should be understood that the methods of the invention are not limited to non-invasive techniques as described herein for obtaining skin samples. For example, but not by limitation, one of skill in the art would know other techniques for obtaining a skin sample such as scraping of the skin, biopsy, suction, blowing and other techniques. As described herein, non-invasive tape stripping, as described in U.S. Pat. No. 6,949,338, incorporated herein by reference, is an illustrative example for obtaining a skin sample.</p>
+      <p id="p-00015-en" num="0015">In another embodiment, the methods involve detection of one or more mutations in the nucleic acid sequence of the nucleic acid molecule obtained from the skin. Such mutations may be a substitution, a deletion, and/or an insertion of the nucleic acid sequence that results in symptoms associated with chronoaging and/or photoaging of skin from the subject from which the skin sample is obtained.</p>
+      <p id="p-00016-en" num="0016">In one embodiment, the nucleic acid analyzed is any one or more of those listed in Table 1, Table 2, Table 3, or any combination thereof. Accordingly, provided herein is a method for determining the age range of a skin sample of a subject, including obtaining a nucleic acid or protein by tape stripping or biopsy of the skin or a skin lesion, for example, from the subject, and analyzing the nucleic acid as compared to the nucleic acids or protein products thereof listed in Table 1, Table 2, Table 3, or any combination thereof. In this method, at least one nucleic acid molecule whose expression is informative of an appropriate age range of the skin is detected in the sample.</p>
+      <p id="p-00017-en" num="0017">The non-invasive methods of the invention involve applying an adhesive tape to a target area of skin in a manner sufficient to isolate a sample adhering to the adhesive tape, wherein the sample includes nucleic acid molecules and/or proteins. Typically, at least one nucleic acid molecule or protein whose expression is informative of the age or age range of the skin in the sample. The method of characterizing skin using tape stripping has a number of applications, such as the following: (i) age classification of the skin; (ii) monitoring the severity and progression of photoaging and/or chronoaging; (iii) monitoring treatment efficacy; and (iv) prediction of a particular treatment or cosmetic regimen. All of these applications, which themselves represent embodiments disclosed herein, preferably use non-invasive sampling to recover information that is otherwise difficult or impractical to recover (e.g., through the use of biopsies). The information may be contained in the DNA, protein, or RNA of skin cells close to the surface of the skin. In one embodiment, expression of one or more of the genes listed in Table 1, Table 2, Table 3, or any combination thereof is detected in the sample to characterize the sample. Tables 1-3 are presented by way of example to show the genes of three exemplary skin “age indexes”. It should be understood that an age index can be developed by using less than the number of genes presented in any of Tables 1-3, as long as young and old stratifications are clear from the genes selected.</p>
+      <p id="p-00018-en" num="0018">Other embodiments are based in part on the discovery that for tape stripping of the skin, non-polar, pliable, adhesive tapes, especially pliable tapes with rubber adhesive, are more effective than other types of adhesive tapes. Using pliable tapes with rubber adhesives, as few as 10 or less tape strippings and in certain examples as few as 4 or even 1 tape stripping can be used to isolate and/or detect nucleic acid molecules from the epidermal layer of the skin.</p>
+      <p id="p-00019-en" num="0019">In another embodiment, the methods of the invention provide for determining the age range of a skin sample or of skin in situ, including application of a detectably labeled probe directly to the skin of a subject for visual analysis. At least one nucleic acid molecule whose expression is informative of the age range of the skin is detected on the skin using a specific probe. In one example, expression of one or more of the genes listed in Table 1, Table 2, Table 3, or any combination thereof is detected on the skin to determine the age range of the skin. In one embodiment, expression of one or more of the genes listed in Table 1, Table 2, Table 3, or any combination thereof is detected in the sample to characterize the skin sample.</p>
+      <p id="p-00020-en" num="0020">In another aspect, the invention provides kits for characterizing a skin sample in a subject. In one embodiment, the kit includes a skin sample collection device, such as a biopsy needle or an adhesive tape for non-invasive tape stripping, and one or more probes or primers that selectively bind to one or more nucleic acid molecules in Table 1, Table 2, Table 3, or any combination thereof, or to a nucleic acid or protein expression product of a nucleic acid molecule in Table 1, Table 2, Table 3, or any combination thereof. The kit may include one or more pairs of forward primers that selectively bind upstream of a gene on one strand and reverse primers that selectively bind upstream of a gene on a complementary strand. In another embodiment, the kit includes a microarray containing at least a fragment of a gene or a nucleic acid or protein product of a gene identified in Table 1, Table 2, Table 3, or any combination thereof, or any combination thereof.</p>
+      <p id="p-00021-en" num="0021">In another embodiment, the kit for characterizing a skin sample from a subject includes an applicator and one or more probes or primers that selectively bind to one or more nucleic acid molecules in Table 1, Table 2, Table 3, or any combination thereof, or to a nucleic acid or protein expression product of a nucleic acid molecule in Table 1, Table 2, Table 3, or any combination thereof. In one embodiment, the probes are detectably labeled for visual identification of expression of RNA.</p>
+      <p id="p-00022-en" num="0022">In another aspect, the invention provides a cosmetic formulation containing agents for reducing or increasing expression of genes. In one embodiment, the agent reduce or increase expression of the genes listed in Table 1, Table 2, Table 3, or any combination thereof. In another embodiment, the cosmetic formulation is an emulsion, a cream, a lotion, a solution, an anhydrous base, a paste, a powder, a gel, or an ointment. The emulsion may be an oil-in-water emulsion or a water-in-oil emulsion. Alternatively, the formulation may be a solution, such as an aqueous solution or a hydro-alcoholic solution. In another embodiment, the cosmetic formulation is an anhydrous base, such as a lipstick or a powder. In yet another embodiment, the formulation is comprised within an anti-aging product or a moisturizing product. The cosmetic formulation may further contain one or more of estradiol; progesterone; pregnanalone; coenzyme Q10; methylsolanomethane (MSM); copper peptide (copper extract); plankton extract (phytosome); glycolic acid; kojic acid; ascorbyl palmitate; all trans retinol; azaleic acid; salicylic acid; broparoestrol; estrone; adrostenedione; androstanediols; or sunblocks.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 1</figref> is a hierarchial cluster analysis of the identified 100-gene classifier distinguishing skin samples of young individuals from skin samples of old individuals. The tree configuration shown at the left of the cluster analysis is representative of the genes in the order as shown in Table 1.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 2</figref> is a graphical diagram showing a skin age index generated from the 100-gene classifier that distinguishes skin samples of young individuals from skin samples of old individuals.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 3</figref> is a hierarchial cluster analysis of the identified 61-gene classifier distinguishing skin samples of young individuals from skin samples of old individuals. Skin age index=Sum of “Group A”−Sum of “group B”+α (constant). The tree configuration shown at the left of the cluster analysis is representative of the genes in the order as shown in Table 2.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 4</figref> is a graphical diagram showing a skin age index generated from the 61-gene classifier that distinguishes skin samples of young individuals from skin samples of old individuals.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 5</figref> is a hierarchial cluster analysis of an 83-gene classifier distinguishing skin samples of young individuals from skin samples of old individuals. Skin age index=Sum of “Group A”−Sum of “group B”+α (constant). The tree configuration shown at the left of the cluster analysis is representative of the genes in the order as shown in Table 3.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 6</figref> is a graphical diagram showing a skin age index generated from the 83-gene classifier that distinguishes skin samples of young individuals from skin samples of old individuals.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00029-en" num="0029">The present invention is based, in part, on the discovery that analysis of nucleic acid molecules or protein products from specific genes can be used to characterize skin samples from individuals based on an age index. Accordingly, the present invention provides methods and kits useful for characterizing a skin sample based on determining an expression profile of the sample based on identification of one or more genes or proteins.</p>
+      <p id="p-00030-en" num="0030">In humans and other animals, cellular senescence has been attributed to the shortening of telomeres with each cell cycle; when telomeres become too short, the cells die. The length of telomeres is therefore the “molecular clock,” predicted by Hayflick. Telomere length is maintained in immortal cells (e.g., germ cells and keratinocyte stem cells, but not other skin cell types) by the enzyme telomerase. In the laboratory, mortal cell lines can be immortalized by the activation of their telomerase gene, present in all cells but active in few cell types.</p>
+      <p id="p-00031-en" num="0031">As used in this specification and the appended claims, the singular forms “a”, “an”, and “the” include plural references unless the context clearly dictates otherwise. Thus, for example, references to “the method” includes one or more methods, and/or steps of the type described herein which will become apparent to those persons skilled in the art upon reading this disclosure and so forth.</p>
+      <p id="p-00032-en" num="0032">Unless defined otherwise, all technical and scientific terms used herein have the same meaning as commonly understood by one of ordinary skill in the art to which this invention belongs. Although any methods and materials similar or equivalent to those described herein can be used in the practice or testing of the invention, the preferred methods and materials are now described.</p>
+      <p id="p-00033-en" num="0033">A number of genetic components of aging have been identified using model organisms, ranging from the simple budding yeast <i>Saccharomyces cerevisiae </i>to worms such as <i>Caenorhabditis elegans </i>and fruit flies (<i>Drosophila melanogaster</i>). Study of these organisms has revealed the presence of at least two conserved aging pathways.</p>
+      <p id="p-00034-en" num="0034">One of these pathways involves the gene Sir2, a NAD+-dependent histone deacetylase. In yeast, Sir2 is required for genomic silencing at three loci: the yeast mating loci, the telomeres and the ribosomal DNA (rDNA). In some species of yeast replicative aging may be partially caused by homologous recombination between rDNA repeats; excision of rDNA repeats results in the formation of extrachromosomal rDNA circles (ERCs). These ERCs replicate and preferentially segregate to the mother cell during cell division, and are believed to result in cellular senescence by titrating away (competing for) essential nuclear factors. ERCs have not been observed in other species of yeast (which also display replicative senescence), and ERCs are not believed to contribute to aging in higher organisms such as humans. Extrachromosomal circular DNA (eccDNA) has been found in worms, flies and humans. The role of eccDNA in aging, if any, is unknown.</p>
+      <p id="p-00035-en" num="0035">Despite the lack of a connection between circular DNA and aging in higher organisms, extra copies of Sir2 are capable of extending the lifespan of both worms and flies. The mechanisms by which Sir2 homologues in higher organisms regulate lifespan is unclear, but the human SIRT1 protein has been demonstrated to deacetylate p53, Ku70, and the forkhead family of transcription factors. SIRT1 can also regulate acetylates such as CBP/p300, and has been shown to deacetylate specific histone residues.</p>
+      <p id="p-00036-en" num="0036">RAS1 and RAS2 also affect aging in yeast and have a human homologue. RAS2 overexpression has been shown to extend lifespan in yeast.</p>
+      <p id="p-00037-en" num="0037">Other genes regulate aging in yeast by increasing the resistance to oxidative stress. Superoxide dismutase, a protein that protects against the effects of mitochondrial free radicals, can extend yeast lifespan in stationary phase when overexpressed.</p>
+      <p id="p-00038-en" num="0038">In higher organisms, aging is likely to be regulated in part through the insulin/IGF-1 pathway. Mutations that affect insulin-like signaling in worms, flies and mice are associated with extended lifespan. In yeast, Sir2 activity is regulated by the nicotinamidase PNC1. PNC1 is transcriptionally upregulated under stressful conditions such as caloric restriction, heat shock, and osmotic shock. By converting nicotinamide to niacin, it removes nicotinamide, which inhibits the activity of Sir2. A nicotinamidase found in humans, known as PBEF, may serve a similar function, and a secreted form of PBEF known as visfatin may help to regulate serum insulin levels. It is not known, however, whether these mechanisms also exist in humans since there are obvious differences in biology between humans and model organisms.</p>
+      <p id="p-00039-en" num="0039">Sir2 activity has been shown to increase under calorie restriction. Due to the lack of available glucose in the cells more NAD+ is available and can activate Sir2. Resveratrol, a polyphenol found in the skin of red grapes, was reported to extend the lifespan of yeast, worms, and flies. It has been shown to activate Sir2 and therefore mimics the effects of calorie restriction.</p>
+      <p id="p-00040-en" num="0040">The particularly important causes of chronological aging of human skin likely vary among a population of elderly humans, including such factors as diet, genetics, and environment. In general, though, it is believed that chronological skin aging is due to activation of the stress-activated pathways (SAPs) and a repression of the mitogen-activated pathways (ERK). However, contrary to conventional wisdom, it has been found that chronoaging and photoaging of human skin have a similar molecular pathophysiology. ERK mediates the actions of growth factors necessary for healthy skin. Interference with ERK can lead to thinning of chronologically-aged skin because of reduced number of cells in the epidermis and dermis. Almost conversely, SAPs activate factors (e.g., c-Jun) that promote both inhibition of procollagen synthesis and degradation of mature collagen, and thereby lead to reduced form, strength, and function of skin. Chronological aging of skin might be expected to include some interference with ERK and/or some activation of the SAPs.</p>
+      <p id="p-00041-en" num="0041">Gene expression is imperfectly controlled, and it is possible that random fluctuations in the expression levels of many genes contribute to the aging process as suggested by a study of such genes in yeast. Individual cells, which are genetically identical, none-the-less can have substantially different responses to outside stimuli, and markedly different lifespans, indicating the epigenetic factors play an important role in gene expression and aging as well as genetic factors.</p>
+      <p id="p-00042-en" num="0042">Accordingly, in one embodiment, the present invention employs a non-invasive tape stripping technology to obtain samples of skin from individuals. As such, DNA microarray assays are used to create a skin age index to predict the aging of an individual. Tape-stripping removes superficial cells from the surface of the skin as well as adnexal cells. Small amounts of nucleic acid molecules isolated from tape-stripped cells can be amplified and used for microarray analyses and quantitative PCR. In addition, proteins obtained from the lysed cells may be quantitated for characterization and determination of age. Consequently, tape-stripping is a non-invasive diagnostic method, which does not interfere with subsequent histological analyses. While tape stripping will primarily sample superficial cells from the epidermis, this method holds great promise in the determination of age and age-related disorders. Consequently, this feature may help characterize an individual as having skin characterized as being younger or older than the actual age of the individual. Further, there are changes in the dermis and epidermis resulting from environmental factors, such as exposure to UV radiation. Accordingly, the present invention demonstrates that stratum corneum RNA, harvested by tape stripping with Epidermal Genetic Information Retrieval (EGIR) (see U.S. Pat. No. 6,949,338, incorporated herein by reference), can be used to distinguish skin samples of young individuals from skin samples of old individuals.</p>
+      <p id="p-00043-en" num="0043">The term “subject” or “individual” as used herein refers to any individual or patient to which the subject methods are performed. Generally the subject is human, although as will be appreciated by those in the art, the subject may be an animal. Thus other animals, including mammals such as rodents (including mice, rats, hamsters and guinea pigs), cats, dogs, rabbits, farm animals including cows, horses, goats, sheep, pigs, etc., and primates (including monkeys, chimpanzees, orangutans and gorillas) are included within the definition of subject.</p>
+      <p id="p-00044-en" num="0044">As used herein, the terms “sample” and “biological sample” refer to any sample suitable for the methods provided by the present invention. A sample of cells can be any sample, including, for example, a skin sample obtained by non-invasive tape stripping or biopsy of a subject, or a sample of the subject's bodily fluid. Thus, in one embodiment, the biological sample of the present invention is a tissue sample, e.g., a biopsy specimen such as samples from needle biopsy. In one embodiment, the term “sample” refers to any preparation derived from skin of a subject. For example, a sample of cells obtained using the non-invasive method described herein can be used to isolate nucleic acid molecules or proteins for the methods of the present invention.</p>
+      <p id="p-00045-en" num="0045">As used herein “corresponding cells” or “corresponding sample” refers to cells or a sample from a subject that is from the same organ and of the same type as the cells being examined. In one aspect, the corresponding cells comprise a sample of cells obtained from a healthy individual that is age-matched or within an acceptable age range such that the sample is representative of a sample typically obtained from individuals within the range. Such corresponding cells can, but need not be, from an individual that is of the same sex as the individual providing the cells being examined. Thus, the term “normal sample” or “control sample” refers to any sample taken from a subject of similar species that is considered healthy and of a known age. As such, a normal/standard level of RNA denotes the level of RNA present in a sample from a subject of known age. A normal level of RNA can be established by combining skin samples or cell extracts taken from normal healthy age-matched subjects and determining the level of one or more RNAs present. In addition, a normal level of RNA also can be determined as an average value taken from a population of subjects that fall within a known age range. Accordingly, levels of RNA in subject and control samples can be compared with the standard values. Deviation between standard and subject values establishes the parameters for characterizing age and/or distinguishing samples based on age.</p>
+      <p id="p-00046-en" num="0046">The term “skin” refers to the outer protective covering of the body, consisting of the epidermis (including the stratum corneum) and the underlying dermis, and is understood to include sweat and sebaceous glands, as well as hair follicle structures. Throughout the present application, the adjective “cutaneous” can be used, and should be understood to refer generally to attributes of the skin, as appropriate to the context in which they are used. The epidermis of the human skin comprises several distinct layers of skin tissue. The deepest layer is the stratum basalis layer, which consists of columnar cells. The overlying layer is the stratum spinosum, which is composed of polyhedral cells. Cells pushed up from the stratum spinosum are flattened and synthesize keratohyalin granules to form the stratum granulosum layer. As these cells move outward, they lose their nuclei, and the keratohyalin granules fuse and mingle with tonofibrils. This forms a clear layer called the stratum lucidum. The cells of the stratum lucidum are closely packed. As the cells move up from the stratum lucidum, they become compressed into many layers of opaque squamae. These cells are all flattened remnants of cells that have become completely filled with keratin and have lost all other internal structure, including nuclei. These squamae constitute the outer layer of the epidermis, the stratum corneum. At the bottom of the stratum corneum, the cells are closely compacted and adhere to each other strongly, but higher in the stratum they become loosely packed, and eventually flake away at the surface.</p>
+      <p id="p-00047-en" num="0047">As used herein, “chronoaging” refers to inevitable changes that occur over time that affect the skin of a subject. In contrast, “photoaging” refers to changes to the skin of a subject over time resulting from external environmental aggressors. Exemplary external aggressors include, but are not limited to UV rays, free radicals, chemicals, and toxins. Exemplary symptoms of chronoaging and/or photoaging of skin include, but are not limited to, loss of firmness and elasticity, dryness, loss of sheen, and lines and wrinkles. As such, the terms “sun damage” and “environmental damage,” when used in reference to skin are used broadly to encompass any external environmental aggressors that may prematurely age the skin of a subject.</p>
+      <p id="p-00048-en" num="0048">As used herein, the term “gene” refers to a linear sequence of nucleotides along a segment of DNA that provides the coded instructions for synthesis of RNA, which, when translated into protein, leads to the expression of hereditary character. As such, the term “skin marker” or “biomarker” refers to a gene whose expression level is different between skin surface samples from individuals of distinct ages or age ranges, and skin surface samples of individuals of known age or age range. Therefore, expression of a skin marker of the invention is related to, or indicative of, the age of the subject being tested. Many statistical techniques are known in the art, which can be used to determine whether a statistically significant difference in expression is observed at a high (e.g., 90% or 95%) confidence level. As such, an increase or decrease in expression of these genes is related to and can characterize age of the subject.</p>
+      <p id="p-00049-en" num="0049">As used herein, the term “nucleic acid molecule” means DNA, RNA (e.g., messenger RNA, miRNA, etc.), single-stranded, double-stranded or triple stranded and any chemical modifications thereof. Virtually any modification of the nucleic acid is contemplated. A “nucleic acid molecule” can be of almost any length, from 10, 20, 30, 40, 50, 60, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 400, 500, 600, 700, 800, 900, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000, 7000, 8000, 9000, 10,000, 15,000, 20,000, 30,000, 40,000, 50,000, 75,000, 100,000, 150,000, 200,000, 500,000, 1,000,000, 1,500,000, 2,000,000, 5,000,000 or even more bases in length, up to a full-length chromosomal DNA molecule. For methods that analyze expression of a gene, the nucleic acid isolated from a sample is typically RNA.</p>
+      <p id="p-00050-en" num="0050">Micro-RNAs (miRNA) are small single stranded RNA molecules an average of 22 nucleotides long that are involved in regulating mRNA expression in diverse species including humans. Hundreds of miRNAs have been discovered in flies, plants and mammals. miRNAs regulate gene expression by binding to the 3′-untranslated regions of mRNA and catalyze either i) cleavage of the mRNA; or 2) repression of translation. The regulation of gene expression by miRNAs is central to many biological processes such as cell development, differentiation, communication, and apoptosis. Recently it has been shown that miRNA are active during embryogenesis of the mouse epithelium and play a significant role in skin morphogenesis.</p>
+      <p id="p-00051-en" num="0051">Given the role of miRNA in gene expression it is clear that miRNAs will influence, if not completely specify the relative amounts of mRNA in particular cell types and thus determine a particular gene expression profile (i.e., a population of specific mRNAs) in different cell types. In addition, it is likely that the particular distribution of specific miRNAs in a cell will also be distinctive in different cell types. Thus, determination of the miRNA profile of a tissue may be used as a tool for expression profiling of the actual mRNA population in that tissue. Accordingly, miRNA levels are useful for the purposes of characterization of a subject within an age range.</p>
+      <p id="p-00052-en" num="0052">As used herein, the term “protein” refers to at least two covalently attached amino acids, which includes proteins, polypeptides, oligopeptides and peptides. A protein may be made up of naturally occurring amino acids and peptide bonds, or synthetic peptidomimetic structures. Thus “amino acid”, or “peptide residue”, as used herein means both naturally occurring and synthetic amino acids. For example, homo-phenylalanine, citrulline and noreleucine are considered amino acids for the purposes of the invention. “Amino acid” also includes imino acid residues such as proline and hydroxyproline. The side chains may be in either the (R) or the (S) configuration.</p>
+      <p id="p-00053-en" num="0053">A “probe” or “probe nucleic acid molecule” is a nucleic acid molecule that is at least partially single-stranded, and that is at least partially complementary, or at least partially substantially complementary, to a sequence of interest. A probe can be RNA, DNA, or a combination of both RNA and DNA. It is also within the scope of the present invention to have probe nucleic acid molecules comprising nucleic acids in which the backbone sugar is other that ribose or deoxyribose. Probe nucleic acids can also be peptide nucleic acids. A probe can comprise nucleolytic-activity resistant linkages or detectable labels, and can be operably linked to other moieties, for example a peptide.</p>
+      <p id="p-00054-en" num="0054">A single-stranded nucleic acid molecule is “complementary” to another single-stranded nucleic acid molecule when it can base-pair (hybridize) with all or a portion of the other nucleic acid molecule to form a double helix (double-stranded nucleic acid molecule), based on the ability of guanine (G) to base pair with cytosine (C) and adenine (A) to base pair with thymine (T) or uridine (U). For example, the nucleotide sequence 5′-ATAC-3′ is complementary to the nucleotide sequence 5′-GTAT-3′.</p>
+      <p id="p-00055-en" num="0055">The term “antibody” as used in this invention is meant to include intact molecules of polyclonal or monoclonal antibodies, as well as fragments thereof, such as Fab and F(ab′)<sub>2</sub>, Fv and SCA fragments which are capable of binding an epitopic determinant. The term “specifically binds” or “specifically interacts,” when used in reference to an antibody means that an interaction of the antibody and a particular epitope has a dissociation constant of at least about 1×10<sup>−6</sup>, generally at least about 1×10<sup>−7</sup>, usually at least about 1×10<sup>−8</sup>, and particularly at least about 1×10<sup>−9 </sup>or 1×10<sup>−10 </sup>or less.</p>
+      <p id="p-00056-en" num="0056">As used herein “hybridization” refers to the process by which a nucleic acid strand joins with a complementary strand through base pairing. Hybridization reactions can be sensitive and selective so that a particular sequence of interest can be identified even in samples in which it is present at low concentrations. In an in vitro situation, suitably stringent conditions can be defined by, for example, the concentrations of salt or formamide in the prehybridization and hybridization solutions, or by the hybridization temperature, and are well known in the art. In particular, stringency can be increased by reducing the concentration of salt, increasing the concentration of formamide, or raising the hybridization temperature. For example, hybridization under high stringency conditions could occur in about 50% formamide at about 37° C. to 42° C. Hybridization could occur under reduced stringency conditions in about 35% to 25% formamide at about 30° C. to 35° C. In particular, hybridization could occur under high stringency conditions at 42° C. in 50% formamide, 5×SSPE, 0.3% SDS, and 200 mg/ml sheared and denatured salmon sperm DNA. Hybridization could occur under reduced stringency conditions as described above, but in 35% formamide at a reduced temperature of 35° C. The temperature range corresponding to a particular level of stringency can be further narrowed by calculating the purine to pyrimidine ratio of the nucleic acid of interest and adjusting the temperature accordingly. Variations on the above ranges and conditions are well known in the art.</p>
+      <p id="p-00057-en" num="0057">As used herein, the term “mutation” refers to a change in the genome with respect to the standard wild-type sequence. Mutations can be deletions, insertions, or rearrangements of nucleic acid sequences at a position in the genome, or they can be single base changes at a position in the genome, referred to as “point mutations.” Mutations can be inherited, or they can occur in one or more cells during the lifespan of an individual.</p>
+      <p id="p-00058-en" num="0058">As used herein, the term “kit” or “research kit” refers to a collection of products that are used to perform a biological research reaction, procedure, or synthesis, such as, for example, a detection, assay, separation, purification, etc., which are typically shipped together, usually within a common packaging, to an end user.</p>
+      <p id="p-00059-en" num="0059">Samples from a tissue can be isolated by any number of means well known in the art. Invasive methods for isolating a sample include, but are not limited to the use of needles or scalpels, for example during biopsies of various tissues. Non-invasive methods for isolating a sample include, but are not limited to tape-stripping and skin scraping.</p>
+      <p id="p-00060-en" num="0060">As such, the tape stripping methods provided herein typically involve applying an adhesive tape to the skin of a subject and removing the adhesive tape from the skin of the subject one or more times. In certain examples, the adhesive tape is applied to the skin and removed from the skin about one to ten times. Alternatively, about ten adhesive tapes can be sequentially applied to the skin and removed from the skin. These adhesive tapes are then combined for further analysis. Accordingly, an adhesive tape can be applied to and removed from a target site 10, 9, 8, 7, 6, 5, 4, 3, 2, or 1 time, and/or 10, 9, 8, 7, 6, 5, 4, 3, 2, or 1 adhesive tape can be applied to and removed from the target site. In one illustrative example, the adhesive tape is applied to the skin between about one and eight times, in another example, between one and five times, and in another illustrative example the tape is applied and removed from the skin four times.</p>
+      <p id="p-00061-en" num="0061">The rubber based adhesive can be, for example, a synthetic rubber-based adhesive. The rubber based adhesive in illustrative examples, has high peel, high shear, and high tack. For example, the rubber based adhesive can have a peak force tack that is at least 25%, 50%, or 100% greater than the peak force tack of an acrylic-based tape such as D-SQUAME™. D-SQUAME™ has been found to have a peak force of 2 Newtons, wherein peak force of the rubber based adhesive used for methods provided herein, can be 4 Newtons or greater. Furthermore, the rubber based adhesive can have adhesion that is greater than 2 times, 5 times, or 10 times that of acrylic based tape. For example, D-SQUAME™ has been found to have adhesion of 0.0006 Newton meters, whereas the rubber based tape provided herein can have an adhesion of about 0.01 Newton meters using a texture analyzer. Furthermore, in certain illustrative examples, the adhesive used in the methods provided herein has higher peel, shear and tack than other rubber adhesives, especially those used for medical application and Duct tape.</p>
+      <p id="p-00062-en" num="0062">Virtually any size and/or shape of adhesive tape and target skin site size and shape can be used and analyzed, respectively, by the methods of the present invention. For example, adhesive tape can be fabricated into circular discs of diameter between 10 millimeters and 100 millimeters, for example between 15 and 25 millimeters in diameter. The adhesive tape can have a surface area of between about 50 mm<sup>2 </sup>and 1000 mm<sup>2</sup>, between about 100 mm<sup>2 </sup>to 500 mm<sup>2 </sup>or about 250 mm<sup>2</sup>.</p>
+      <p id="p-00063-en" num="0063">In another embodiment, the sample may be obtained by means of an invasive procedure, such as biopsy. Biopsies may be taken instead of or after tape stripping and are subjected to standard histopathologic analysis. Analysis of biopsy samples taken simultaneously with tape stripping samples may then be correlated with the data generated from one or more of analysis of selected lesion RNA samples by DNA microarray, correlation of gene expression data with histopathology, and creation of a candidate expression classifier for the skin age index.</p>
+      <p id="p-00064-en" num="0064">As used herein, “biopsy” refers to the removal of cells or tissues for analysis. There are many different types of biopsy procedures known in the art. The most common types include: (1) incisional biopsy, in which only a sample of tissue is removed; (2) excisional biopsy, in which an entire lump or suspicious area is removed; and (3) needle biopsy, in which a sample of tissue or fluid is removed with a needle. When a wide needle is used, the procedure is called a core biopsy. When a thin needle is used, the procedure is called a fine-needle aspiration biopsy. Other types of biopsy procedures include, but are not limited to, shave biopsy, punch biopsy, curettage biopsy, and in situ biopsy. In another embodiment, the skin sample is obtained by scraping the skin with an instrument to remove one or more nucleic acid molecules from the skin.</p>
+      <p id="p-00065-en" num="0065">The skin sample obtained using the tape stripping method includes, epidermal cells including cells comprising adnexal structures. In certain illustrative examples, the sample includes predominantly epidermal cells, or even exclusively epidermal cells. The epidermis consists predominantly of keratinocytes (&gt;90%), which differentiate from the basal layer, moving outward through various layers having decreasing levels of cellular organization, to become the cornified cells of the stratum corneum layer. Renewal of the epidermis occurs every 20-30 days in uninvolved skin. Other cell types present in the epidermis include melanocytes, Langerhans cells, and Merkel cells. As illustrated in the Examples herein, the tape stripping method of the present invention is particularly effective at isolating epidermal samples.</p>
+      <p id="p-00066-en" num="0066">Nucleic acid molecules can also be isolated by lysing the cells and cellular material collected from the skin sample by any number of means well known to those skilled in the art. For example, a number of commercial products available for isolating polynucleotides, including but not limited to, RNeasy™ (Qiagen, Valencia, Calif.) and TriReagent™ (Molecular Research Center, Inc, Cincinnati, Ohio) can be used. The isolated polynucleotides can then be tested or assayed for particular nucleic acid sequences, including a polynucleotide encoding a cytokine. Methods of recovering a target nucleic acid molecule within a nucleic acid sample are well known in the art, and can include microarray analysis.</p>
+      <p id="p-00067-en" num="0067">Nucleic acid molecules may be analyzed in any number of ways known in the art. For example, the presence of nucleic acid molecules can be detected by DNA-DNA or DNA-RNA hybridization or amplification using probes or fragments of the specific nucleic acid molecule. Nucleic acid amplification based assays involve the use of oligonucleotides or oligomers based on the nucleic acid sequences to detect transformants containing the specific DNA or RNA.</p>
+      <p id="p-00068-en" num="0068">In one embodiment, analysis of the nucleic acid molecules includes genetic analysis to determine the nucleotide sequence of a gene. Since a difference in length or sequence between DNA fragments isolated from a sample and those of known sequences are due to an insertion, deletion, or substitution of one or more nucleotides, the determination of nucleic acid sequences provides information concerning mutations resulting from environmental affects on the skin of individuals. These mutations may also include transposition or inversion and are difficult to detect by techniques other than direct sequencing. Accordingly, the methods of the present invention may be used to detect genetic mutations in one or more genes listed in Table 1, Table 2, Table 3, or any combination thereof for determination and/or characterization of the age of the subject.</p>
+      <p id="p-00069-en" num="0069">A variety of protocols for detecting and measuring the expression of nucleic acid molecules, using either polyclonal or monoclonal antibodies specific for the protein expression product are known in the art. Examples include enzyme-linked immunosorbent assay (ELISA), radioimmunoassay (RIA), and fluorescence activated cell sorting (FACS). These and other assays are described, among other places, in Hampton, R. et al. (1990; Serological Methods, a Laboratory Manual, APS Press, St Paul, Minn.) and Maddox, D. E. et al. (1983; J. Exp. Med. 158:1211-1216).</p>
+      <p id="p-00070-en" num="0070">In another embodiment, antibodies that specifically bind to the expression products of the nucleic acid molecules of the invention may be used to characterize the skin sample of the subject. The antibodies may be used with or without modification, and may be labeled by joining them, either covalently or non-covalently, with a reporter molecule.</p>
+      <p id="p-00071-en" num="0071">A wide variety of labels and conjugation techniques are known by those skilled in the art and may be used in various nucleic acid and amino acid assays. Means for producing labeled hybridization or PCR probes for detecting sequences related to the nucleic acid molecules of Table 1, Table 2, Table 3, or any combination thereof include oligolabeling, nick translation, end-labeling or PCR amplification using a labeled nucleotide. Alternatively, the nucleic acid molecules, or any fragments thereof, may be cloned into a vector for the production of an mRNA probe. Such vectors are known in the art, are commercially available, and may be used to synthesize RNA probes in vitro by addition of an appropriate RNA polymerase such as T7, T3, or SP6 and labeled nucleotides. These procedures may be conducted using a variety of commercially available kits (Pharmacia &amp; Upjohn, (Kalamazoo, Mich.); Promega (Madison Wis.); and U.S. Biochemical Corp., Cleveland, Ohio). Suitable reporter molecules or labels, which may be used for ease of detection, include radionuclides, enzymes, fluorescent, chemiluminescent, or chromogenic agents as well as substrates, cofactors, inhibitors, magnetic particles, and the like.</p>
+      <p id="p-00072-en" num="0072">PCR systems usually use two amplification primers and an additional amplicon-specific, fluorogenic hybridization probe that specifically binds to a site within the amplicon. The probe can include one or more fluorescence label moieties. For example, the probe can be labeled with two fluorescent dyes: 1) a 6-carboxy-fluorescein (FAM), located at the 5′-end, which serves as reporter, and 2) a 6-carboxy-tetramethyl-rhodamine (TAMRA), located at the 3′-end, which serves as a quencher. When amplification occurs, the 5′-3′ exonuclease activity of the Taq DNA polymerase cleaves the reporter from the probe during the extension phase, thus releasing it from the quencher. The resulting increase in fluorescence emission of the reporter dye is monitored during the PCR process and represents the number of DNA fragments generated. In situ PCR may be utilized for the direct localization and visualization of target nucleic acid molecules and may be further useful in correlating expression with chronoaging or photoaging of skin.</p>
+      <p id="p-00073-en" num="0073">Means for producing specific hybridization probes for nucleic acid molecules of the invention include the cloning of the nucleic acid sequences into vectors for the production of mRNA probes. Such vectors are known in the art, commercially available, and may be used to synthesize RNA probes in vitro by means of the addition of the appropriate RNA polymerases and the appropriate labeled nucleotides. Hybridization probes may be labeled by a variety of reporter groups, for example, radionuclides such as 32P or 35S, or enzymatic labels, such as alkaline phosphatase coupled to the probe via avidin/biotin coupling systems, and the like.</p>
+      <p id="p-00074-en" num="0074">In order to provide a basis for the determination or characterization of chronoaging and/or photoaging of skin associated with expression of the nucleic acid molecules of the invention, a normal or standard profile for expression is established. Such a standard profile may be used to develop a skin age index for comparison to test samples of individuals of unknown age. Standard hybridization may be quantified by comparing the values obtained from subjects of known skin characterization or age range (e.g., from subjects falling with the range of “young” (i.e., ages of about 18-30, about 19-30, about 23-29 or about 23-42) or subjects falling within the range of “old” (i.e., ages of about 60-69 or about 46-90)). Standard values obtained from such samples may be compared with values obtained from samples from subjects of known age and/or known age range. Deviation between standard and subject values is used to characterize the skin of a subject.</p>
+      <p id="p-00075-en" num="0075">Accordingly, in one aspect of the invention, a non-invasive sampling method is provided for the characterization of the skin of a subject. In one embodiment, a sample set of skin samples of individuals of known age is created. Each sample consists of nucleic acid molecules recovered by tape stripping or biopsy sample of the superficial epidermis of the individuals of known age range. In addition to tape striping, a standard biopsy of the same lesion may also be performed, along with accompanying analysis and characterization. Nucleic acid molecules recovered by tape stripping the superficial epidermis of normal skin will serve as a negative control.</p>
+      <p id="p-00076-en" num="0076">In another aspect, the invention provides a method of distinguishing young individuals from old individuals. In one embodiment, the method includes analyzing a nucleic acid molecule from one or more genes listed in Table 1, Table 2, Table 3, or any combination thereof. The skin sample of a subject of unknown age range is assayed for expression of a large number of genes. Analyzing expression includes any qualitative or quantitative method for detecting expression of a gene, many of which are known in the art. The method can include analyzing expression of specific markers by measuring expression of the markers using a quantitative method, or by using a qualitative method. Non-limiting methods for analyzing polynucleotides and polypeptides are discussed below.</p>
+      <p id="p-00077-en" num="0077">Methods of analyzing expression of a gene of the present invention can utilize a microarray, or other miniature high-throughput technology, for detecting expression of one or more gene products. Quantitative measurement of expression levels using such microarrays is also known in the art, and typically involves a modified version of a traditional method for measuring expression as described herein. For example, such quantitation can be performed by measuring a phosphor image of a radioactive-labeled probe binding to a spot of a microarray, using a phospohor imager and imaging software.</p>
+      <p id="p-00078-en" num="0078">By identifying gene sets that are unique to a given age range, differences in the genetic expression can be utilized for characterization of individuals of unknown age. In one embodiment, the nucleic acid molecule is RNA, including messenger RNA (mRNA) that is isolated from a sample from the subject. Up-regulated and down-regulated gene sets for a given disease state may be subsequently combined. The combination enables those of skill in the art to identify gene sets or panels that are unique to a given age range. Such gene sets are of immense determinative and characteristic value as they can be routinely used in assays that are simpler than microarray analysis (for example “real-time” quantitative PCR). Such gene sets also provide insights into pathogenesis and targets for the design of new drugs.</p>
+      <p id="p-00079-en" num="0079">A reference database containing a number of reference projected profiles is also created from skin samples of subjects of known age and/or age range, such as, for example, “young” (i.e., ages of about 18-30, about 19-30, about 23-29 or about 23-42) or “old” (i.e., ages of about 60-69 or about 46-90). The projected profile is then compared with the reference database containing the reference projected profiles. If the projected profile of the subject matches best with the profile of a particular age range in the database, the subject is determined to have skin characteristic of an individual within the identified age range. Various computer systems and software can be utilized for implementing the analytical methods of this invention and are apparent to one of skill in the art. Exemplary software programs include, but are not limited to, Cluster &amp; TreeView (Stanford, URLs: rana.lbl.gov or microarray.org), GeneCluster (MIT/Whitehead Institute, URL: MPR/GeneCluster/GeneCluster.html), Array Explorer (SpotFire Inc, URL: spotfire.com/products/scicomp.asp#SAE) and GeneSpring (Silicon Genetics Inc, URL: sigenetics.com/Products/GeneSpring/index.html) (for computer systems and software, see also U.S. Pat. No. 6,203,987, incorporated herein by reference).</p>
+      <p id="p-00080-en" num="0080">In another aspect, the methods of the present invention involve in situ analysis of the skin for characterization thereof. For in situ methods, nucleic acid molecules do not need to be isolated from the subject prior to analysis. In one embodiment, detectably labeled probes are contacted with a cell or tissue of a subject for visual detection of expressed RNA to characterize the skin as discussed above.</p>
+      <p id="p-00081-en" num="0081">In another aspect, the methods of the present invention can also be useful for monitoring the progression of chronoaging and/or photoaging, and for monitoring the effectiveness of one or more treatments for the symptoms of chronoaging and/or photoaging. For example, by comparing the projected profile prior to treatment with the profile after treatment.</p>
+      <p id="p-00082-en" num="0082">In a related aspect, the methods of the present invention can also be useful for determining an appropriate treatment regimen for a subject having a specific symptom of chronoaging and/or photoaging. Thus, the methods of the invention are useful for providing a means for practicing personalized medicine, wherein treatment is tailored to a subject based on the particular characteristics of the skin of the subject. The method can be practiced, for example, by first characterizing the skin of the subject, as described above.</p>
+      <p id="p-00083-en" num="0083">Once photoaging and/or chronoaging of the skin of a subject is established and a treatment protocol is initiated, the methods of the invention may be repeated on a regular basis to monitor the expression profiles of the genes of interest in the subject. The results obtained from successive assays may be used to show the efficacy of treatment over a period ranging from several days to months. Accordingly, another aspect of the invention is directed to methods for monitoring a therapeutic regimen for treating a subject having symptoms of photoaging and/or chronoaging. A comparison of the expression profile or mutations in the nucleic acid sequence of the nucleic acid molecule prior to and during therapy will be indicative of the efficacy of the therapy. Therefore, one skilled in the art will be able to recognize and adjust the therapeutic approach as needed.</p>
+      <p id="p-00084-en" num="0084">The efficacy of a therapeutic regimen for treating symptoms of photoaging and/or chronoaging can be identified by an absence of symptoms or clinical signs characteristic of the age range of the subject at the time of onset of therapy. For example, restoration of skin elasticity, reduction of wrinkles, and/or restoration of skin density may all be used to identify efficacy of a therapeutic regimen.</p>
+      <p id="p-00085-en" num="0085">When performed in a high throughput (or ultra-high throughput) format, the methods of the invention can be performed on a solid support (e.g., a microtiter plate, a silicon wafer, or a glass slide), wherein cell samples and/or genes of interest are positioned such that each is delineated from each other (e.g., in wells). Any number of samples or genes (e.g., 96, 1024, 10,000, 100,000, or more) can be examined in parallel using such a method, depending on the particular support used. Where samples are positioned in an array (i.e., a defined pattern), each sample in the array can be defined by its position (e.g., using an x-y axis), thus providing an “address” for each sample. An advantage of using an addressable array format is that the method can be automated, in whole or in part, such that cell samples, reagents, genes of interest, and the like, can be dispensed to (or removed from) specified positions at desired times, and samples (or aliquots) can be monitored, for example, for expression products and/or mutations in the nucleic acid sequence of the nucleic acid molecules from any one or more of the genes listed in Table 1, Table 2, Table 3, or any combination thereof.</p>
+      <p id="p-00086-en" num="0086">Thus, the microarray can be used to monitor the expression level of large numbers of genes simultaneously (to produce a transcript image), and to identify genetic variants, mutations and polymorphisms. Polynucleotides used in the microarray may be oligonucleotides that are specific to a gene or genes of interest in which at least a fragment of the sequence is known or that are specific to one or more unidentified cDNAs which are common to a particular cell type or age range. In order to produce oligonucleotides to a known sequence for a microarray, the gene of interest is examined using a computer algorithm which starts at the 5′ or more preferably at the 3′ end of the nucleotide sequence. The algorithm identifies oligomers of defined length that are unique to the gene, have a GC content within a range suitable for hybridization, and lack predicted secondary structure that may interfere with hybridization. In certain situations it may be appropriate to use pairs of oligonucleotides on a microarray. The “pairs” will be identical, except for one nucleotide which preferably is located in the center of the sequence. The second oligonucleotide in the pair (mismatched by one) serves as a control. The number of oligonucleotide pairs may range from two to one million. The oligomers are synthesized at designated areas on a substrate using a light-directed chemical process. The substrate may be paper, nylon or other type of membrane, filter, chip, glass slide or any other suitable solid support.</p>
+      <p id="p-00087-en" num="0087">According to another aspect of the present invention, a kit is provided that is useful for characterizing the skin of an individual, e.g., using the methods provided by the present invention to determine the age range characteristic of the skin of a subject. In one embodiment, a kit of the invention includes a skin sample collection device and one or more probes or primers that selectively bind to one or more of the nucleic acid molecules of Table 1, Table 2, Table 3, or any combination thereof. In another embodiment, the kit includes one or more applicators in addition to or instead of the skin sample collection device. Such applicators are useful for in situ analysis of gene expression on the skin of a subject. For example, an applicator may be used to apply detectably labeled probes for visual detection of expressed RNA to characterize the skin lesion.</p>
+      <p id="p-00088-en" num="0088">In another embodiment, a kit of the invention includes a probe that binds to a portion of a nucleic acid molecule in Table 1, Table 2, Table 3, or any combination thereof. In another embodiment, the kit further includes a microarray that contains at least a fragment of a gene or a nucleic acid molecule or a protein product of any one of the genes listed in Table 1, Table 2, Table 3, or any combination thereof. In some embodiments, many reagents may be provided in a kit of the invention, only some of which should be used together in a particular reaction or procedure. For example, multiple primers may be provided, only two of which are needed for a particular application.</p>
+      <p id="p-00089-en" num="0089">In another embodiment, the kit of the invention provides a compartmentalized carrier including a first container containing a pair of primers. The primers are typically a forward primer that selectively binds upstream of a gene on one strand, and a reverse primer that selectively binds upstream of a gene on a complementary strand. Optionally the kits of the present invention can further include an instruction insert, e.g., disclosing methods for sample collection using the sample collection device and/or exemplary gene expression profiles for comparison with the expression profile of the sample taken from the subject.</p>
+      <p id="p-00090-en" num="0090">The following examples are provided to further illustrate the advantages and features of the present invention, but are not intended to limit the scope of the invention. While they are typical of those that might be used, other procedures, methodologies, or techniques known to those skilled in the art may alternatively be used.</p>
+      <heading id="h-00006-en" level="1">Example 1</heading>
+      <heading id="h-00007-en" level="1">RNA Quantitation and Profiling</heading>
+      <p id="p-00091-en" num="0091">This study is divided into two separate phases, a sample collection and characterization phase (phase 1) and an RNA profiling phase (phase 2). In phase 1 the tape stripped specimens and biopsied sample collections were performed by the principal investigator or trained individuals delegated by the principal investigator to obtain the biopsy sample at various sites. The RNA profiling phase (Phase 2), includes, but is not limited to RNA purification and hybridization to DNA microarrays for gene expression profiling.</p>
+      <p id="p-00092-en" num="0092">Materials and reagents. Adhesive tape was purchased from Adhesives Research (Glen Rock, Pa.) in bulk rolls. These rolls were custom fabricated into small circular discs, 17 millimeters in diameter, by Diagnostic Laminations Engineering (Oceanside, Calif.). Human spleen total RNA was purchased from Ambion (catalogue #7970; Austin, Tex.). RNeasy RNA extraction kit was purchased from Qiagen (Valencia, Calif.). Reverse transcriptase, PCR primers and probes, and TaqMan Universal Master Mix, which included all buffers and enzymes necessary for the amplification and fluorescent detection of specific cDNAs, were purchased from Applied Biosystems (Foster City, Calif.). MELT total nucleic acid isolation system was purchased from Ambion (Austin, Tex.).</p>
+      <p id="p-00093-en" num="0093">RNA Isolation.</p>
+      <p id="p-00094-en" num="0094">RNA was extracted from tapes using either pressure cycling technology (PCT; Garrett, Tao et al. 2002; Schumacher, Manak et al. 2002) or MELT total nucleic acid system. Tapes were extracted in pairs by insertion into a PULSE™ tube (Pressure Biosciences, Gaithersburg, Md.) with 1.2 mls of buffer RLT (supplied in the Qiagen RNeasy kit). PULSE™ tubes were inserted into the PCT-NEP2017 pressure cycler and the sample was extracted using the following parameters: room temperature; 5 pressure cycles of 35 Kpsi with pressure held for 20 seconds at the top and bottom of each cycle. After pressure extraction the buffer was removed and used to process the remaining tapes used to strip that site; the buffer was then processed according to the standard Qiagen RNeasy protocol for the collection of larger RNAs (&gt;200 nucleotides) by application to a purification column to which large RNA molecules (i.e. mRNAs) bind, while the column flow-through is saved for microRNA purification. The column flow-through, which contains miRNA separated from mRNA, is processed according to the Qiagen miRNA purification procedure (on the world wide web at qiagen.com/literature/protocols/pdf/RY20.pdf) to purify the microRNA. RNA from the 2 sites stripped on each subject was pooled to create a single sample from each subject.</p>
+      <p id="p-00095-en" num="0095">RNA Isolation Using MELT Total Nucleic Acid Protocol.</p>
+      <p id="p-00096-en" num="0096">Tapes were extracted in a 2 ml eppendorf tube with 192 μl MELT buffer plus 8 μl of MELT cocktail and vortexed for 10 minutes at room temperature. The MELT lysates were transferred to the dispensed binding bead master mix after spinning down for 3 minutes at &gt;10,000×g and washed with 300 μl of Wash Solution 1 and 2. RNAs were eluted in 100 μl of elution solution.</p>
+      <p id="p-00097-en" num="0097">Quantitation of mRNA.</p>
+      <p id="p-00098-en" num="0098">Experimental data is reported as the number of PCR cycles required to achieve a threshold fluorescence for a specific cDNA and is described as the “C<sub>t</sub>” value (Gibson, Heid et al. 1996; Heid, Stevens et al. 1996; AppliedBiosystems 2001). Quantitation of total RNA mass was performed as previously described (Wong, Tran et al. 2004). Briefly, RNA mass recovered from tapes is determined by using quantitative RT-PCR with reference to a standard curve (C<sub>t, actin </sub>vs. log[RNA]; AppliedBiosystems 2001) created from commercially purchased human spleen total RNA. The average of 6 replicate C<sub>t, actin </sub>values was used to calculate the concentration of RNA in a sample with reference to the standard curve.</p>
+      <p id="p-00099-en" num="0099">RNA Amplification and Array Hybridization.</p>
+      <p id="p-00100-en" num="0100">RNA was isolated by the Multi-Enzymatic Liquefaction of Tissue method (Ambion, Austin, Tex.) and amplified using the WT-Ovation pico amplification system (NuGen, San Carlos, Calif.). The amplified RNA was hybridized to Affymetrix U133 plus 2.0 microarray and data were processed and analyzed using R from Bioconductor.</p>
+      <p id="p-00101-en" num="0101">Preprocessing GeneChip Data.</p>
+      <p id="p-00102-en" num="0102">The image files from scanning the Affymetrix GeneChips with the Affymetrix series 3000 scanner will be converted using GCOS software (Affymetrix) to “CEL” format files. Normalization of CEL files will be carried out using software from the Bioconductor suite (on the world wide web at bioconductor.org). In particular, a robust multiarray analysis with adjustments for optical noise and binding affinities of oligonucleotide probes (Wu et al., 2006; and Wu et al., 2004) as implemented by the function “just.gcrma” in the “gcrma” package will be used to normalize the GeneChip Data.</p>
+      <p id="p-00103-en" num="0103">Statistical Approach for Microarray Data Analysis.</p>
+      <p id="p-00104-en" num="0104">Two generic statistical problems are addressed in this proposal: (i) identifying genes that are differentially expressed in different age ranges (i.e. young versus old) and (ii) forming (and evaluating) rules for classification of young and old skin samples into groups based on gene expression data.</p>
+      <p id="p-00105-en" num="0105">The methods that will be used to address the problems identified above are now standard in the statistical evaluation of microarray data. These methods have been applied by others to data from Affymetrix arrays to study gene expression in prostate cancer, to characterize changes in gene expression subsequent to HIV infection, and to develop a high throughput genotyping platform. For identifying differentially expressed genes, permutation based estimates of false discovery rates are preferred. Scripts for the R quantitative programming environment were developed to implement these methods in our previous work, but will likely use or adapt the “siggenes” package from the Bioconductor suite in this project. The development of classification rules will rely on resampling methods (k-fold cross-validation, the 632 plus bootstrap, and/or bagging applied to the naive Bayes classifier and the nearest shrunken centroid classifier and the support vector machine (SVM) which both performed well in classifying prostate tissues as malignant or benign, used in our previous work. The implementation likely to be used is to perform k-fold cross-validation. Within each of the k train/test cycles an initial screen of the training data for differentially expressed genes is performed and genes are ordered according to their posterior probability of differential expression. Naive Bayes and nearest shrunken centroid classifiers based on the genes with the highest posterior probability of differential expression are formed choosing enough values of r between 1 and 1024 to allow accurate interpolation of the classification error rate. The “one se rule” is applied to the error rates for the test sets to choose the classifier that minimizes the error rate. For SVM, an internal 632+bootstrap is applied to each training sample to select the number of genes to be used in forming the classifier. The “1 se rule” error rates from the k test sets are used to characterize the classification accuracy.</p>
+      <p id="p-00106-en" num="0106">In addition to the use of univariate and multivariate statistical analysis tools, sophisticated bioinformatic analysis approaches will help make sense of possible biological links between the genes found to be differentially expressed between, e.g., normal aging and advanced aging samples. These approaches will focus on the analysis of genetic networks and pathways and have been implemented in software packages such as Ingenuity (on the world wide web at ingenuity.com) and MetaCore (on the world wide web at genego.com). The identification of the biological links between genes that emerge from a gene expression microarray analysis can help put into context the biological meaningfulness of their expression patterns as well as help reduce the set of differentially expressed genes to be represented on a diagnostic panel based on their biology. The end result of this analysis will be to define a candidate expression classifier that will be validated in future, larger clinical trials.</p>
+      <p id="p-00107-en" num="0107">QC Metrics for RNA, Amplified cDNA and Microarray Data.</p>
+      <p id="p-00108-en" num="0108">Following informed consent, the skin of subjects was tape stripped using EGIR. The resulting RNA isolated from the EGIR tape was amplified and profiled on the Affymetrix U133 plus 2.0 GeneChip. Microarray data were normalized by the GCRMA algorithm. To assure high quality of microarray data are generated, QC metrics were established for RNA, amplified cDNA and microarray data. The quality of RNA was assessed by capillary electrophoresis using the Experion system (Biorad, Hercule, Calif.) and RNA with at least one visible 18S rRNA was further processed for RNA amplification. The amplified cDNA was quantified by the Nanodrop system and quality of the amplified cDNA was also assessed by the Experion system. The yield of the amplified cDNAs greater than 5 μg and the average size distribution of the cDNAs greater than 750 nt were carried forward for microarray hybridization. Quality of the array data was further assessed using simpleaffy program in R and the array data with scaling factor less than 5.0 and % present call greater than 30% were used for further data analysis.</p>
+      <p id="p-00109-en" num="0109">Class Modeling—PAM.</p>
+      <p id="p-00110-en" num="0110">After passing the array data QC, skin specimens from “young” and “old” individuals were further analyzed and three separate gene classifiers identified.</p>
+      <p id="p-00111-en" num="0111">First, gene expression values less than 100 across all samples were filtered out and 14000 probesets were tested. These 14000 probesets were subjected to a statistical analysis for differentially expressed genes among “young” and “old” skin using ANOVA (p&lt;0.05), multiple testing correction algorithm (Westafall and Young permutation) and false discover rate (FDR) of 0.05. With a false discovery rate of q&lt;0.05, the results showed a two-fold difference between “young” and “old” samples, and identified 483 differentially expressed genes. A 100-gene panel (Table 1) was found to be a potential classifer that discerned skin from “young” and “old” individuals. The genes and respective classifier panels were analyzed using the Prediction Analysis of Microarrays (PAM) software freely available from Stanford University (Stanford, Calif.).</p>
+      <p id="p-00112-en" num="0112">Second, approximately 14,000 genes were subjected to statistical analysis for differentially expressed genes after eliminating very low expressed genes (expression level &lt;100 across all samples). t-test was performed to compare “young” (18˜30) and “old” (60˜69), (p&lt;0.05). Multiple testing correction using Benjamini and Hochberg methods were performed. With a false discovery rate of q&lt;0.05, the results showed a two-fold difference between “young” and “old” samples, and identified 313 differentially expressed genes. PAM was used to rank these genes: between “young” and “old” and a 61-gene classifier was selected (Table 2).</p>
+      <p id="p-00113-en" num="0113">Third, approximately 24,200 genes were subjected to statistical analysis for differentially expressed genes after eliminating very low expressed genes (expression level &lt;100 across all samples). t-test was performed to compare “young” and “old” samples (p&lt;0.01), which were divided into four groups: age 31˜39, 40˜50, 51˜59 and 70˜96. Age ranges, 31˜39 and 40˜50, belong to the “Young” group, while age ranges, 51˜59 and 70˜96, belong to the “Old” group. Multiple testing correction using Benjamini and Hochberg methods were performed. With a false discovery rate of q&lt;0.05, the results identified 2354 differentially expressed genes. PAM was used to rank these genes: between “young” and “old” and an 83 gene (106 probesets) classifier was selected (Table 3).</p>
+      <p id="p-00114-en" num="0114">The PAM software uses a modification of the nearest centroid method, which computes a standardized centroid for each class in a training set. This refers to the average gene expression for each gene in each class divided by the within-class standard deviation for that gene. Nearest centroid classification takes the gene expression profile of a new sample, and compares it to each of these class centroids. The class, whose centroid it is closest to, in squared distance, is the predicted class for that new sample.</p>
+      <p id="p-00115-en" num="0115">These genes were all subjected to a hierarchical clustering analysis (<figref>FIG. 1</figref>), with the “young” specimens grouped together and clearly distinguished from “old” specimens. These data suggest stratum corneum RNA, harvested by tape stripping with EGIR, can be used to distinguish and/or characterize skin as being “young” or “old.” Thus, RNA harvested by EGIR technology is more than adequate for microarray-based gene expression profiling and appropriately reflects the pathologic state of skin.</p>
+      <heading id="h-00008-en" level="1">Example 2</heading>
+      <heading id="h-00009-en" level="1">Tape Stripping to Recover Nucleic Acids from Skin</heading>
+      <p id="p-00116-en" num="0116">The following procedure was used to recover nucleic acids from normal skin (e.g., the mastoid or upper back areas) of a subject.</p>
+      <p id="p-00117-en" num="0117">Tapes were handled with gloved hands at all times. A particular site that is relatively blemish-free and healthy was located, unless otherwise specified by the protocol. Preferred normal skin sites are the mastoid process (the bony process behind the ear at the base of the skull) and the upper back, immediately superior to the scapular spine. Shave the site if necessary to remove non-vellus hairs. The site was cleansed with an alcohol wipe (70% isopropyl alcohol) and let air dry completely before application of the tape. The tape was then applied to the skin site. If more than one tape was used, application was in sequential order starting from the left side. A surgical skin marker and/or a water soluble marker was used to mark the location of the tape on the skin in order to align subsequent tapes.</p>
+      <p id="p-00118-en" num="0118">The tape harvesting procedure was started by applying pressure to the tape and ensuring that the skin was held taut to ensure that the tape does not move while applying pressure. The tape was then removed slowly in one direction. An edge of the tape was then placed onto the strip at the top of a packet with the adhesive surface of the tape facing down to protect the sample. Sequential tapes were then put on the same site, if applicable, and removed slowly in an opposite direction to that used in the immediately previous application.</p>
+      <p id="p-00119-en" num="0119">The sites of application were stripped with a total of at least four tapes, unless otherwise specified in the protocol. Tapes were then put into a storage bag and immediately placed on dry ice or into storage at −20° C. or below until analysis.</p>
+      <p id="p-00120-en" num="0120">Recent work by Benson et al (2006) demonstrates that RNA can be recovered from psoriatic lesions and that the general RNA expression profile of tape strip recovered RNA is consistent with biopsy RNA derived from lesions on the same patient. Further work (see U.S. Pat. No. 7,183,057, incorporated herein by reference) has shown that psoriatic lesions can be sampled with tape during treatment with Enbrel and that strong correlations could be made between gene expression in week one of treatment and clinical response at weeks 4 and 8. This work further establishes the credentials of tape stripping for the recovery of physiologically relevant RNA from the surface of the skin.</p>
+      <p id="p-00121-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="224pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>No.</entry>
+                  <entry>Gene</entry>
+                  <entry>Description</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="char" char="." />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="224pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>235859_at</entry>
+                  <entry>Myeloid/lymphoid or mixed-lineage leukemia 3</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>200799_at</entry>
+                  <entry>heat shock 70 kDa protein 1A</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>1561754_at</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>210734_x_at</entry>
+                  <entry>MYC associated factor X</entry>
+                </row>
+                <row>
+                  <entry>5</entry>
+                  <entry>208403_x_at</entry>
+                  <entry>MYC associated factor X</entry>
+                </row>
+                <row>
+                  <entry>6</entry>
+                  <entry>212195_at</entry>
+                  <entry>Interleukin 6 signal transducer (gp130, oncostatin M receptor)</entry>
+                </row>
+                <row>
+                  <entry>7</entry>
+                  <entry>218250_s_at</entry>
+                  <entry>CCR4-NOT transcription complex, subunit 7</entry>
+                </row>
+                <row>
+                  <entry>8</entry>
+                  <entry>201305_x_at</entry>
+                  <entry>acidic (leucine-rich) nuclear phosphoprotein 32 family, member B</entry>
+                </row>
+                <row>
+                  <entry>9</entry>
+                  <entry>211858_x_at</entry>
+                  <entry>GNAS complex locus</entry>
+                </row>
+                <row>
+                  <entry>10</entry>
+                  <entry>1558733_at</entry>
+                  <entry>zinc finger and BTB domain containing 38</entry>
+                </row>
+                <row>
+                  <entry>11</entry>
+                  <entry>225778_at</entry>
+                  <entry>fucosyltransferase 1 (galactoside 2-alpha-L-fucosyltransferase)</entry>
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>214656_x_at</entry>
+                  <entry>myosin IC</entry>
+                </row>
+                <row>
+                  <entry>13</entry>
+                  <entry>227797_x_at</entry>
+                  <entry>Hypothetical protein dJ122O8.2</entry>
+                </row>
+                <row>
+                  <entry>14</entry>
+                  <entry>222404_x_at</entry>
+                  <entry>butyrate-induced transcript 1</entry>
+                </row>
+                <row>
+                  <entry>15</entry>
+                  <entry>1559950_at</entry>
+                  <entry>hypothetical LOC401449</entry>
+                </row>
+                <row>
+                  <entry>16</entry>
+                  <entry>207332_s_at</entry>
+                  <entry>transferrin receptor (p90, CD71)</entry>
+                </row>
+                <row>
+                  <entry>17</entry>
+                  <entry>225345_s_at</entry>
+                  <entry>F-box protein 32</entry>
+                </row>
+                <row>
+                  <entry>18</entry>
+                  <entry>210904_s_at</entry>
+                  <entry>interleukin 13 receptor, alpha 1</entry>
+                </row>
+                <row>
+                  <entry>19</entry>
+                  <entry>213002_at</entry>
+                  <entry>Myristoylated alanine-rich protein kinase C substrate</entry>
+                </row>
+                <row>
+                  <entry>20</entry>
+                  <entry>201670_s_at</entry>
+                  <entry>myristoylated alanine-rich protein kinase C substrate</entry>
+                </row>
+                <row>
+                  <entry>21</entry>
+                  <entry>211945_s_at</entry>
+                  <entry>integrin, beta 1 (fibronectin receptor, beta polypeptide, antigen CD29 includes</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>MDF2, MSK12)</entry>
+                </row>
+                <row>
+                  <entry>22</entry>
+                  <entry>201294_s_at</entry>
+                  <entry>WD repeat and SOCS box-containing 1</entry>
+                </row>
+                <row>
+                  <entry>23</entry>
+                  <entry>204083_s_at</entry>
+                  <entry>tropomyosin 2 (beta)</entry>
+                </row>
+                <row>
+                  <entry>24</entry>
+                  <entry>208658_at</entry>
+                  <entry>protein disulfide isomerase family A, member 4</entry>
+                </row>
+                <row>
+                  <entry>25</entry>
+                  <entry>201635_s_at</entry>
+                  <entry>fragile X mental retardation, autosomal homolog 1</entry>
+                </row>
+                <row>
+                  <entry>26</entry>
+                  <entry>204688_at</entry>
+                  <entry>sarcoglycan, epsilon</entry>
+                </row>
+                <row>
+                  <entry>27</entry>
+                  <entry>218045_x_at</entry>
+                  <entry>parathymosin</entry>
+                </row>
+                <row>
+                  <entry>28</entry>
+                  <entry>209715_at</entry>
+                  <entry>chromobox homolog 5 (HP1 alpha homolog, <i>Drosophila</i>)</entry>
+                </row>
+                <row>
+                  <entry>29</entry>
+                  <entry>220154_at</entry>
+                  <entry>dystonin</entry>
+                </row>
+                <row>
+                  <entry>30</entry>
+                  <entry>226400_at</entry>
+                  <entry>Cell division cycle 42 (GTP binding protein, 25 kDa)</entry>
+                </row>
+                <row>
+                  <entry>31</entry>
+                  <entry>200748_s_at</entry>
+                  <entry>ferritin, heavy polypeptide 1</entry>
+                </row>
+                <row>
+                  <entry>32</entry>
+                  <entry>211628_x_at</entry>
+                  <entry>ferritin, heavy polypeptide pseudogene 1; ferritin, heavy polypeptide</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>pseudogene 1</entry>
+                </row>
+                <row>
+                  <entry>33</entry>
+                  <entry>224559_at</entry>
+                  <entry>metastasis associated lung adenocarcinoma transcript 1 (non-coding RNA)</entry>
+                </row>
+                <row>
+                  <entry>34</entry>
+                  <entry>211452_x_at</entry>
+                  <entry>leucine rich repeat (in FLII) interacting protein 1</entry>
+                </row>
+                <row>
+                  <entry>35</entry>
+                  <entry>214316_x_at</entry>
+                  <entry>Calreticulin</entry>
+                </row>
+                <row>
+                  <entry>36</entry>
+                  <entry>238427_at</entry>
+                  <entry>GrpE-like 2, mitochondrial (<i>E.</i><i>coli</i>)</entry>
+                </row>
+                <row>
+                  <entry>37</entry>
+                  <entry>208637_x_at</entry>
+                  <entry>actinin, alpha 1</entry>
+                </row>
+                <row>
+                  <entry>38</entry>
+                  <entry>200800_s_at</entry>
+                  <entry>heat shock 70 kDa protein 1A; heat shock 70 kDa protein 1B</entry>
+                </row>
+                <row>
+                  <entry>39</entry>
+                  <entry>225767_at</entry>
+                  <entry>hypothetical protein LOC284801</entry>
+                </row>
+                <row>
+                  <entry>40</entry>
+                  <entry>1565525_a_at</entry>
+                  <entry>t-complex 11 (mouse) like 2</entry>
+                </row>
+                <row>
+                  <entry>41</entry>
+                  <entry>224625_x_at</entry>
+                  <entry>small EDRK-rich factor 2</entry>
+                </row>
+                <row>
+                  <entry>42</entry>
+                  <entry>217756_x_at</entry>
+                  <entry>small EDRK-rich factor 2</entry>
+                </row>
+                <row>
+                  <entry>43</entry>
+                  <entry>215904_at</entry>
+                  <entry>myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, <i>Drosophila</i>);</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>translocated to, 4</entry>
+                </row>
+                <row>
+                  <entry>44</entry>
+                  <entry>1558048_x_at</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>45</entry>
+                  <entry>201631_s_at</entry>
+                  <entry>immediate early response 3</entry>
+                </row>
+                <row>
+                  <entry>46</entry>
+                  <entry>217137_x_at</entry>
+                  <entry>Kpni repeat mrna (cdna clone pcd-kpni-8), 3′ end</entry>
+                </row>
+                <row>
+                  <entry>47</entry>
+                  <entry>224153_s_at</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>48</entry>
+                  <entry>217202_s_at</entry>
+                  <entry>glutamate-ammonia ligase (glutamine synthetase)</entry>
+                </row>
+                <row>
+                  <entry>49</entry>
+                  <entry>214279_s_at</entry>
+                  <entry>NDRG family member 2</entry>
+                </row>
+                <row>
+                  <entry>50</entry>
+                  <entry>214278_s_at</entry>
+                  <entry>NDRG family member 2</entry>
+                </row>
+                <row>
+                  <entry>51</entry>
+                  <entry>202289_s_at</entry>
+                  <entry>transforming, acidic coiled-coil containing protein 2</entry>
+                </row>
+                <row>
+                  <entry>52</entry>
+                  <entry>236009_at</entry>
+                  <entry>Transcribed locus</entry>
+                </row>
+                <row>
+                  <entry>53</entry>
+                  <entry>207320_x_at</entry>
+                  <entry>staufen, RNA binding protein (<i>Drosophila</i>)</entry>
+                </row>
+                <row>
+                  <entry>54</entry>
+                  <entry>208640_at</entry>
+                  <entry>ras-related C3 botulinum toxin substrate 1 (rho family, small GTP binding</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>protein Rac1)</entry>
+                </row>
+                <row>
+                  <entry>55</entry>
+                  <entry>211383_s_at</entry>
+                  <entry>WD repeat domain 37</entry>
+                </row>
+                <row>
+                  <entry>56</entry>
+                  <entry>200840_at</entry>
+                  <entry>lysyl-tRNA synthetase</entry>
+                </row>
+                <row>
+                  <entry>57</entry>
+                  <entry>200042_at</entry>
+                  <entry>hypothetical protein HSPC117; hypothetical protein HSPC117</entry>
+                </row>
+                <row>
+                  <entry>58</entry>
+                  <entry>221532_s_at</entry>
+                  <entry>WD repeat domain 61</entry>
+                </row>
+                <row>
+                  <entry>59</entry>
+                  <entry>203983_at</entry>
+                  <entry>translin-associated factor X</entry>
+                </row>
+                <row>
+                  <entry>60</entry>
+                  <entry>225176_at</entry>
+                  <entry>MSTP146 (MST146)</entry>
+                </row>
+                <row>
+                  <entry>61</entry>
+                  <entry>214131_at</entry>
+                  <entry>chromosome Y open reading frame 15B</entry>
+                </row>
+                <row>
+                  <entry>62</entry>
+                  <entry>204409_s_at</entry>
+                  <entry>eukaryotic translation initiation factor 1A, Y-linked</entry>
+                </row>
+                <row>
+                  <entry>63</entry>
+                  <entry>201909_at</entry>
+                  <entry>ribosomal protein S4, Y-linked 1</entry>
+                </row>
+                <row>
+                  <entry>64</entry>
+                  <entry>225540_at</entry>
+                  <entry>Microtubule-associated protein 2</entry>
+                </row>
+                <row>
+                  <entry>65</entry>
+                  <entry>223279_s_at</entry>
+                  <entry>uveal autoantigen with coiled-coil domains and ankyrin repeats</entry>
+                </row>
+                <row>
+                  <entry>66</entry>
+                  <entry>225846_at</entry>
+                  <entry>RNA binding motif protein 35A</entry>
+                </row>
+                <row>
+                  <entry>67</entry>
+                  <entry>204571_x_at</entry>
+                  <entry>protein (peptidyl-prolyl cis/trans isomerase) NIMA-interacting, 4 (parvulin)</entry>
+                </row>
+                <row>
+                  <entry>68</entry>
+                  <entry>204060_s_at</entry>
+                  <entry>protein kinase, X-linked; protein kinase, Y-linked</entry>
+                </row>
+                <row>
+                  <entry>69</entry>
+                  <entry>218109_s_at</entry>
+                  <entry>major facilitator superfamily domain containing 1</entry>
+                </row>
+                <row>
+                  <entry>70</entry>
+                  <entry>202088_at</entry>
+                  <entry>solute carrier family 39 (zinc transporter), member 6</entry>
+                </row>
+                <row>
+                  <entry>71</entry>
+                  <entry>228259_s_at</entry>
+                  <entry>Erythrocyte membrane protein band 4.1 like 4A</entry>
+                </row>
+                <row>
+                  <entry>72</entry>
+                  <entry>202020_s_at</entry>
+                  <entry>LanC lantibiotic synthetase component C-like 1 (bacterial)</entry>
+                </row>
+                <row>
+                  <entry>73</entry>
+                  <entry>212929_s_at</entry>
+                  <entry>family with sequence similarity 21, member B; family with sequence</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>similarity 21, member C; similar to KIAA0592 protein; similar to KIAA0592</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>protein</entry>
+                </row>
+                <row>
+                  <entry>74</entry>
+                  <entry>217846_at</entry>
+                  <entry>glutaminyl-tRNA synthetase</entry>
+                </row>
+                <row>
+                  <entry>75</entry>
+                  <entry>213728_at</entry>
+                  <entry>lysosomal-associated membrane protein 1</entry>
+                </row>
+                <row>
+                  <entry>76</entry>
+                  <entry>211755_s_at</entry>
+                  <entry>ATP synthase, H+ transporting, mitochondrial F0 complex, subunit b, isoform</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>1; ATP synthase, H+ transporting, mitochondrial F0 complex, subunit b,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>isoform 1</entry>
+                </row>
+                <row>
+                  <entry>77</entry>
+                  <entry>217724_at</entry>
+                  <entry>SERPINE1 mRNA binding protein 1</entry>
+                </row>
+                <row>
+                  <entry>78</entry>
+                  <entry>217900_at</entry>
+                  <entry>isoleucine-tRNA synthetase 2, mitochondrial</entry>
+                </row>
+                <row>
+                  <entry>79</entry>
+                  <entry>222980_at</entry>
+                  <entry>RAB10, member RAS oncogene family</entry>
+                </row>
+                <row>
+                  <entry>80</entry>
+                  <entry>228520_s_at</entry>
+                  <entry>Amyloid beta (A4) precursor-like protein 2</entry>
+                </row>
+                <row>
+                  <entry>81</entry>
+                  <entry>217773_s_at</entry>
+                  <entry>NADH dehydrogenase (ubiquinone) 1 alpha subcomplex, 4, 9 kDa</entry>
+                </row>
+                <row>
+                  <entry>82</entry>
+                  <entry>217940_s_at</entry>
+                  <entry>hypothetical protein FLJ10769</entry>
+                </row>
+                <row>
+                  <entry>83</entry>
+                  <entry>214431_at</entry>
+                  <entry>guanine monphosphate synthetase</entry>
+                </row>
+                <row>
+                  <entry>84</entry>
+                  <entry>218403_at</entry>
+                  <entry>p53-inducible cell-survival factor</entry>
+                </row>
+                <row>
+                  <entry>85</entry>
+                  <entry>209212_s_at</entry>
+                  <entry>Kruppel-like factor 5 (intestinal)</entry>
+                </row>
+                <row>
+                  <entry>86</entry>
+                  <entry>209211_at</entry>
+                  <entry>Kruppel-like factor 5 (intestinal)</entry>
+                </row>
+                <row>
+                  <entry>87</entry>
+                  <entry>223302_s_at</entry>
+                  <entry>zinc finger protein 655</entry>
+                </row>
+                <row>
+                  <entry>88</entry>
+                  <entry>209135_at</entry>
+                  <entry>aspartate beta-hydroxylase</entry>
+                </row>
+                <row>
+                  <entry>89</entry>
+                  <entry>233080_s_at</entry>
+                  <entry>formin binding protein 3</entry>
+                </row>
+                <row>
+                  <entry>90</entry>
+                  <entry>208704_x_at</entry>
+                  <entry>amyloid beta (A4) precursor-like protein 2</entry>
+                </row>
+                <row>
+                  <entry>91</entry>
+                  <entry>208248_x_at</entry>
+                  <entry>amyloid beta (A4) precursor-like protein 2</entry>
+                </row>
+                <row>
+                  <entry>92</entry>
+                  <entry>213194_at</entry>
+                  <entry>roundabout, axon guidance receptor, homolog 1 (<i>Drosophila</i>)</entry>
+                </row>
+                <row>
+                  <entry>93</entry>
+                  <entry>231896_s_at</entry>
+                  <entry>density-regulated protein</entry>
+                </row>
+                <row>
+                  <entry>94</entry>
+                  <entry>228538_at</entry>
+                  <entry>zinc finger protein 662</entry>
+                </row>
+                <row>
+                  <entry>95</entry>
+                  <entry>224650_at</entry>
+                  <entry>mal, T-cell differentiation protein 2</entry>
+                </row>
+                <row>
+                  <entry>96</entry>
+                  <entry>204256_at</entry>
+                  <entry>ELOVL family member 6, elongation of long chain fatty acids (FEN1/Elo2,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>SUR4/Elo3-like, yeast)</entry>
+                </row>
+                <row>
+                  <entry>97</entry>
+                  <entry>201553_s_at</entry>
+                  <entry>lysosomal-associated membrane protein 1</entry>
+                </row>
+                <row>
+                  <entry>98</entry>
+                  <entry>202594_at</entry>
+                  <entry>leptin receptor overlapping transcript-like 1</entry>
+                </row>
+                <row>
+                  <entry>99</entry>
+                  <entry>229017_s_at</entry>
+                  <entry>receptor interacting protein kinase 5</entry>
+                </row>
+                <row>
+                  <entry>100</entry>
+                  <entry>227717_at</entry>
+                  <entry>FLJ41603 protein</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00122-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="14pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="203pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Class </entry>
+                  <entry>No. </entry>
+                  <entry>Gene</entry>
+                  <entry>Description</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="14pt" align="char" char="." />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="203pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>“Old”</entry>
+                  <entry>1</entry>
+                  <entry>202227_s_at</entry>
+                  <entry>bromodomain containing 8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2</entry>
+                  <entry>201024_x_at</entry>
+                  <entry>eukaryotic translation initiation factor 5B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3</entry>
+                  <entry>228360_at</entry>
+                  <entry>hypothetical protein LOC130576</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4</entry>
+                  <entry>214314_s_at</entry>
+                  <entry>eukaryotic translation initiation factor 5B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5</entry>
+                  <entry>200842_s_at</entry>
+                  <entry>glutamyl-prolyl-tRNA synthetase</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>6</entry>
+                  <entry>213136_at</entry>
+                  <entry>protein tyrosine phosphatase, non-receptor type 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>7</entry>
+                  <entry>36129_at</entry>
+                  <entry>RUN and TBC1 domain containing 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>8</entry>
+                  <entry>237626_at</entry>
+                  <entry>RB1-inducible coiled-coil 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>9</entry>
+                  <entry>233303_at</entry>
+                  <entry>Threonine synthase, chloroplast</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>10</entry>
+                  <entry>213387_at</entry>
+                  <entry>KIAA1240 protein</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>11</entry>
+                  <entry>238408_at</entry>
+                  <entry>Oxidation resistance 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>12</entry>
+                  <entry>241245_at</entry>
+                  <entry>Splicing factor, arginine/serine-rich 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>13</entry>
+                  <entry>1557012_a_at</entry>
+                  <entry>CDNA clone IMAGE: 4816709</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>14</entry>
+                  <entry>232406_at</entry>
+                  <entry>Jagged 1 (Alagille syndrome)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>15</entry>
+                  <entry>228103_s_at</entry>
+                  <entry>Neuropilin 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>16</entry>
+                  <entry>201685_s_at</entry>
+                  <entry>chromosome 14 open reading frame 92</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>17</entry>
+                  <entry>210319_x_at</entry>
+                  <entry>msh homeo box homolog 2 (<i>Drosophila</i>)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>18</entry>
+                  <entry>222513_s_at</entry>
+                  <entry>sorbin and SH3 domain containing 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>19</entry>
+                  <entry>225988_at</entry>
+                  <entry>hect domain and RLD 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>20</entry>
+                  <entry>239203_at</entry>
+                  <entry>hypothetical protein FLJ39575</entry>
+                </row>
+                <row>
+                  <entry>“Young” </entry>
+                  <entry>21</entry>
+                  <entry>211467_s_at</entry>
+                  <entry>nuclear factor I/B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>22</entry>
+                  <entry>213029_at</entry>
+                  <entry>Nuclear factor I/B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>23</entry>
+                  <entry>226614_s_at</entry>
+                  <entry>chromosome 8 open reading frame 13</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>24</entry>
+                  <entry>201365_at</entry>
+                  <entry>ornithine decarboxylase antizyme 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>25</entry>
+                  <entry>218062_x_at</entry>
+                  <entry>CDC42 effector protein (Rho GTPase binding) 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>26</entry>
+                  <entry>222404_x_at</entry>
+                  <entry>butyrate-induced transcript 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>27</entry>
+                  <entry>215707_s_at</entry>
+                  <entry>prion protein (p27-30) (Creutzfeld-Jakob disease, Gerstmann-Strausler-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Scheinker syndrome, fatal familial insomnia)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>28</entry>
+                  <entry>226835_s_at</entry>
+                  <entry>transaldolase 1; similar to RPE-spondin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>29</entry>
+                  <entry>209109_s_at</entry>
+                  <entry>tetraspanin 6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>30</entry>
+                  <entry>39249_at</entry>
+                  <entry>aquaporin 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>31</entry>
+                  <entry>210734_x_at</entry>
+                  <entry>MYC associated factor X</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>32</entry>
+                  <entry>210125_s_at</entry>
+                  <entry>barrier to autointegration factor 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>33</entry>
+                  <entry>218143_s_at</entry>
+                  <entry>secretory carrier membrane protein 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>34</entry>
+                  <entry>207332_s_at</entry>
+                  <entry>transferrin receptor (p90, CD71)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>35</entry>
+                  <entry>202731_at</entry>
+                  <entry>programmed cell death 4 (neoplastic transformation inhibitor)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>36</entry>
+                  <entry>202730_s_at</entry>
+                  <entry>programmed cell death 4 (neoplastic transformation inhibitor)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>37</entry>
+                  <entry>203126_at</entry>
+                  <entry>inositol(myo)-1(or 4)-monophosphatase 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>38</entry>
+                  <entry>200862_at</entry>
+                  <entry>24-dehydrocholesterol reductase</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>39</entry>
+                  <entry>214091_s_at</entry>
+                  <entry>glutathione peroxidase 3 (plasma)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>40</entry>
+                  <entry>201348_at</entry>
+                  <entry>glutathione peroxidase 3 (plasma)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>41</entry>
+                  <entry>214687_x_at</entry>
+                  <entry>aldolase A, fructose-bisphosphate</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>42</entry>
+                  <entry>221764_at</entry>
+                  <entry>chromosome 19 open reading frame 22</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>43</entry>
+                  <entry>215243_s_at</entry>
+                  <entry>gap junction protein, beta 3, 31 kDa (connexin 31)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>44</entry>
+                  <entry>205490_x_at</entry>
+                  <entry>gap junction protein, beta 3, 31 kDa (connexin 31)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>45</entry>
+                  <entry>225177_at</entry>
+                  <entry>RAB11 family interacting protein 1 (class I)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>46</entry>
+                  <entry>41858_at</entry>
+                  <entry>FGF receptor activating protein 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>47</entry>
+                  <entry>209173_at</entry>
+                  <entry>anterior gradient 2 homolog (<i>Xenopus</i><i>laevis</i>)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>48</entry>
+                  <entry>229013_at</entry>
+                  <entry>LOC440282</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>49</entry>
+                  <entry>201888_s_at</entry>
+                  <entry>interleukin 13 receptor, alpha 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>50</entry>
+                  <entry>227475_at</entry>
+                  <entry>forkhead box Q1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>51</entry>
+                  <entry>214279_s_at</entry>
+                  <entry>NDRG family member 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>52</entry>
+                  <entry>229004_at</entry>
+                  <entry>ADAM metallopeptidase with thrombospondin type 1 motif, 15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>53</entry>
+                  <entry>208792_s_at</entry>
+                  <entry>clusterin (complement lysis inhibitor, SP-40, 40, sulfated glycoprotein </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>2, testosterone-repressed prostate message 2, apolipoprotein J)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>54</entry>
+                  <entry>205470_s_at</entry>
+                  <entry>kallikrein 11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>55</entry>
+                  <entry>205783_at</entry>
+                  <entry>kallikrein 13</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>56</entry>
+                  <entry>209792_s_at</entry>
+                  <entry>kallikrein 10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>57</entry>
+                  <entry>204733_at</entry>
+                  <entry>kallikrein 6 (neurosin, zyme)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>58</entry>
+                  <entry>1552620_at</entry>
+                  <entry>small proline rich protein 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>59</entry>
+                  <entry>214549_x_at</entry>
+                  <entry>small proline-rich protein 1A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>60</entry>
+                  <entry>213796_at</entry>
+                  <entry>small proline-rich protein 1A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>61</entry>
+                  <entry>232729_at</entry>
+                  <entry>F-box protein 32</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00123-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="14pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="210pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Class</entry>
+                  <entry>No.</entry>
+                  <entry>Gene</entry>
+                  <entry>description</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="14pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="210pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>“Young” </entry>
+                  <entry>1</entry>
+                  <entry>202054_s_at</entry>
+                  <entry>aldehyde dehydrogenase 3 family, member A2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2</entry>
+                  <entry>202053_s_at</entry>
+                  <entry>aldehyde dehydrogenase 3 family, member A2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3 </entry>
+                  <entry>210544_s_at</entry>
+                  <entry>aldehyde dehydrogenase 3 family, member A2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4 </entry>
+                  <entry>211467_s_at</entry>
+                  <entry>nuclear factor I/B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5</entry>
+                  <entry>213029_at</entry>
+                  <entry>Nuclear factor I/B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>6</entry>
+                  <entry>209290_s_at</entry>
+                  <entry>nuclear factor I/B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>7</entry>
+                  <entry>209289_at</entry>
+                  <entry>Nuclear factor I/B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>8</entry>
+                  <entry>1552703_s_at</entry>
+                  <entry>caspase 1, apoptosis-related cysteine peptidase (interleukin 1, beta,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>convertase); caspase-1 dominant-negative inhibitor pseudo-ICE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>9</entry>
+                  <entry>225911_at</entry>
+                  <entry>nephronectin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>10</entry>
+                  <entry>217722_s_at</entry>
+                  <entry>neugrin, neurite outgrowth associated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>11</entry>
+                  <entry>218062_x_at</entry>
+                  <entry>CDC42 effector protein (Rho GTPase binding) 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>12</entry>
+                  <entry>224570_s_at</entry>
+                  <entry>interferon regulatory factor 2 binding protein 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>13</entry>
+                  <entry>224571_at</entry>
+                  <entry>interferon regulatory factor 2 binding protein 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>14</entry>
+                  <entry>233814_at</entry>
+                  <entry>CDNA: FLJ22256 fis, clone HRC02860</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>15</entry>
+                  <entry>213032_at</entry>
+                  <entry>Nuclear factor I/B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>16</entry>
+                  <entry>230291_s_at</entry>
+                  <entry>Nuclear factor I/B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>17</entry>
+                  <entry>213033_s_at</entry>
+                  <entry>Nuclear factor I/B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>18</entry>
+                  <entry>226465_s_at</entry>
+                  <entry>SON DNA binding protein</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>19</entry>
+                  <entry>200906_s_at</entry>
+                  <entry>palladin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>20</entry>
+                  <entry>200897_s_at</entry>
+                  <entry>palladin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>21</entry>
+                  <entry>201286_at</entry>
+                  <entry>syndecan 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>22</entry>
+                  <entry>202712_s_at</entry>
+                  <entry>creatine kinase, mitochondrial 1B; creatine kinase, mitochondrial 1A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>23</entry>
+                  <entry>223601_at</entry>
+                  <entry>olfactomedin 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>24</entry>
+                  <entry>210734_x_at</entry>
+                  <entry>MYC associated factor X</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>25</entry>
+                  <entry>208403_x_at</entry>
+                  <entry>MYC associated factor X</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>26</entry>
+                  <entry>218045_x_at</entry>
+                  <entry>parathymosin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>27</entry>
+                  <entry>204306_s_at</entry>
+                  <entry>CD151 antigen</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>28</entry>
+                  <entry>200621_at</entry>
+                  <entry>cysteine and glycine-rich protein 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>29</entry>
+                  <entry>202592_at</entry>
+                  <entry>biogenesis of lysosome-related organelles complex-1, subunit 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>30</entry>
+                  <entry>206140_at</entry>
+                  <entry>LIM homeobox 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>31</entry>
+                  <entry>203921_at</entry>
+                  <entry>carbohydrate (N-acetylglucosamine-6-O) sulfotransferase 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>32</entry>
+                  <entry>217897_at</entry>
+                  <entry>FXYD domain containing ion transport regulator 6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>33</entry>
+                  <entry>227317_at</entry>
+                  <entry>LIM and cysteine-rich domains 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>34</entry>
+                  <entry>212082_s_at</entry>
+                  <entry>myosin, light polypeptide 6, alkali, smooth muscle and non-muscle</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>35</entry>
+                  <entry>213214_x_at</entry>
+                  <entry>actin, gamma 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>36</entry>
+                  <entry>224585_x_at</entry>
+                  <entry>actin, gamma 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>37</entry>
+                  <entry>212988_x_at</entry>
+                  <entry>actin, gamma 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>38</entry>
+                  <entry>211970_x_at</entry>
+                  <entry>actin, gamma 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>39</entry>
+                  <entry>211985_s_at</entry>
+                  <entry>calmodulin 1 (phosphorylase kinase, delta)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>40</entry>
+                  <entry>203752_s_at</entry>
+                  <entry>jun D proto-oncogene</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>41</entry>
+                  <entry>206453_s_at</entry>
+                  <entry>NDRG family member 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>42</entry>
+                  <entry>202935_s_at</entry>
+                  <entry>SRY (sex determining region Y)-box 9 (campomelic dysplasia, autosomal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>sex-reversal)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>43</entry>
+                  <entry>202936_s_at</entry>
+                  <entry>SRY (sex determining region Y)-box 9 (campomelic dysplasia, autosomal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>sex-reversal)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>44</entry>
+                  <entry>200762_at</entry>
+                  <entry>dihydropyrimidinase-like 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>45</entry>
+                  <entry>209118_s_at</entry>
+                  <entry>tubulin, alpha 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>46</entry>
+                  <entry>201556_s_at</entry>
+                  <entry>vesicle-associated membrane protein 2 (synaptobrevin 2)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>47</entry>
+                  <entry>202575_at</entry>
+                  <entry>cellular retinoic acid binding protein 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>48</entry>
+                  <entry>229004_at</entry>
+                  <entry>ADAM metallopeptidase with thrombospondin type 1 motif, 15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>49</entry>
+                  <entry>228993_s_at</entry>
+                  <entry>hypothetical protein LOC92482</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>50</entry>
+                  <entry>212593_s_at</entry>
+                  <entry>programmed cell death 4 (neoplastic transformation inhibitor)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>51</entry>
+                  <entry>202730_s_at</entry>
+                  <entry>programmed cell death 4 (neoplastic transformation inhibitor)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>52</entry>
+                  <entry>202731_at</entry>
+                  <entry>programmed cell death 4 (neoplastic transformation inhibitor)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>53</entry>
+                  <entry>212594_at</entry>
+                  <entry>programmed cell death 4 (neoplastic transformation inhibitor)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>54</entry>
+                  <entry>39248_at</entry>
+                  <entry>aquaporin 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>55</entry>
+                  <entry>201631_s_at</entry>
+                  <entry>immediate early response 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>56</entry>
+                  <entry>205249_at</entry>
+                  <entry>early growth response 2 (Krox-20 homolog, <i>Drosophila</i>)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>57</entry>
+                  <entry>201464_x_at</entry>
+                  <entry>v-jun sarcoma virus 17 oncogene homolog (avian)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>58</entry>
+                  <entry>200965_s_at</entry>
+                  <entry>actin binding LIM protein 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>59</entry>
+                  <entry>225615_at</entry>
+                  <entry>hypothetical protein LOC126917</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>60</entry>
+                  <entry>212377_s_at</entry>
+                  <entry>Notch homolog 2 (<i>Drosophila</i>)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>61</entry>
+                  <entry>202443_x_at</entry>
+                  <entry>Notch homolog 2 (<i>Drosophila</i>)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>62</entry>
+                  <entry>226614_s_at</entry>
+                  <entry>chromosome 8 open reading frame 13</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>63</entry>
+                  <entry>205157_s_at</entry>
+                  <entry>keratin 17</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>64</entry>
+                  <entry>212236_x_at</entry>
+                  <entry>keratin 17</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>65</entry>
+                  <entry>223449_at</entry>
+                  <entry>sema domain, transmembrane domain (TM), and cytoplasmic domain,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(semaphorin) 6A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>66</entry>
+                  <entry>204254_s_at</entry>
+                  <entry>vitamin D (1,25-dihydroxyvitamin D3) receptor</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>67</entry>
+                  <entry>229013_at</entry>
+                  <entry>LOC440282</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>68</entry>
+                  <entry>225345_s_at</entry>
+                  <entry>F-box protein 32</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>69</entry>
+                  <entry>228922_at</entry>
+                  <entry>Src homology 2 domain containing F</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>70 </entry>
+                  <entry>226899_at</entry>
+                  <entry>unc-5 homolog B (<i>C.</i><i>elegans</i>)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>71 </entry>
+                  <entry>1556839_s_at</entry>
+                  <entry>Spectrin, beta, non-erythrocytic 5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>72 </entry>
+                  <entry>1553602_at</entry>
+                  <entry>small breast epithelial mucin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>73 </entry>
+                  <entry>209792_s_at</entry>
+                  <entry>kallikrein 10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>74 </entry>
+                  <entry>213796_at</entry>
+                  <entry>small proline-rich protein 1A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>75 </entry>
+                  <entry>1552620_at</entry>
+                  <entry>small proline rich protein 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>76 </entry>
+                  <entry>206595_at</entry>
+                  <entry>cystatin E/M</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>77 </entry>
+                  <entry>213680_at</entry>
+                  <entry>keratin 6B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>78 </entry>
+                  <entry>203315_at</entry>
+                  <entry>NCK adaptor protein 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>79 </entry>
+                  <entry>233641_s_at</entry>
+                  <entry>Chromosome 8 open reading frame 13</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>80 </entry>
+                  <entry>202341_s_at</entry>
+                  <entry>tripartite motif-containing 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>81 </entry>
+                  <entry>228575_at</entry>
+                  <entry>fibronectin type III domain containing 6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>82 </entry>
+                  <entry>201161_s_at</entry>
+                  <entry>cold shock domain protein A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>83 </entry>
+                  <entry>200696_s_at</entry>
+                  <entry>gelsolin (amyloidosis, Finnish type)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>84 </entry>
+                  <entry>209126_x_at</entry>
+                  <entry>keratin 6B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>85</entry>
+                  <entry>225035_x_at</entry>
+                  <entry>CXYorf1-related protein; CXYorf1-related protein; CXYorf1-related</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>protein</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>86</entry>
+                  <entry>208864_s_at</entry>
+                  <entry>thioredoxin</entry>
+                </row>
+                <row>
+                  <entry>“Old”</entry>
+                  <entry>87</entry>
+                  <entry>231925_at</entry>
+                  <entry>CDNA: FLJ23006 fis, clone LNG00414</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>88</entry>
+                  <entry>219756_s_at</entry>
+                  <entry>premature ovarian failure, 1B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>89</entry>
+                  <entry>201926_s_at</entry>
+                  <entry>decay accelerating factor for complement (CD55, Cromer blood group</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>system)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>90</entry>
+                  <entry>201925_s_at</entry>
+                  <entry>decay accelerating factor for complement (CD55, Cromer blood group</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>system)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>91</entry>
+                  <entry>203691_at</entry>
+                  <entry>peptidase inhibitor 3, skin-derived (SKALP); peptidase inhibitor 3, skin-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>derived (SKALP)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>92 </entry>
+                  <entry>41469_at</entry>
+                  <entry>peptidase inhibitor 3, skin-derived (SKALP)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>93 </entry>
+                  <entry>218963_s_at</entry>
+                  <entry>keratin 23 (histone deacetylase inducible)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>94 </entry>
+                  <entry>236119_s_at</entry>
+                  <entry>small proline-rich protein 2G</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>95 </entry>
+                  <entry>242204_at</entry>
+                  <entry>WAP four-disulfide core domain 5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>96 </entry>
+                  <entry>206177_s_at</entry>
+                  <entry>arginase, liver</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>97 </entry>
+                  <entry>207381_at</entry>
+                  <entry>arachidonate 12-lipoxygenase, 12R type</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>98 </entry>
+                  <entry>203575_at</entry>
+                  <entry>casein kinase 2, alpha prime polypeptide</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>99 </entry>
+                  <entry>215380_s_at</entry>
+                  <entry>chromosome 7 open reading frame 24</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100</entry>
+                  <entry>207908_at</entry>
+                  <entry>keratin 2A (epidermal ichthyosis bullosa of Siemens)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>101</entry>
+                  <entry>237563_s_at</entry>
+                  <entry>LOC440731</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>102</entry>
+                  <entry>225239_at</entry>
+                  <entry>CDNA FLJ26120 fis, clone SYN00419</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>103</entry>
+                  <entry>238320_at</entry>
+                  <entry>trophoblast-derived noncoding RNA</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>104</entry>
+                  <entry>220983_s_at</entry>
+                  <entry>sprouty homolog 4 (<i>Drosophila</i>); sprouty homolog 4 (<i>Drosophila</i>)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>105</entry>
+                  <entry>236266_at</entry>
+                  <entry>CDNA FLJ31407 fis, clone NT2NE2000137</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>106</entry>
+                  <entry>202179_at</entry>
+                  <entry>bleomycin hydrolase</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00124-en" num="0121">Although the invention has been described with reference to the above examples, it will be understood that modifications and variations are encompassed within the spirit and scope of the invention. Accordingly, the invention is limited only by the following claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for determining the age range of a skin sample of a subject comprising
+<claim-text>a) providing a skin sample of the subject comprising nucleic acids expressed by genes in a classifier comprising at least one young gene and at least one old gene; wherein the skin sample is obtained by a non-invasive technique; and</claim-text><claim-text>b) determining expression levels of the nucleic acids in the skin sample by application of at least one detectably labeled probe that hybridizes to one or more of the nucleic acids; whereby the comparison of expression levels of the nucleic acids in the skin sample to expression levels of the nucleic acids in one or more reference skin samples of known age range is indicative of the age range of the skin sample.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleic acids are RNA.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en" independent="true">
+      <claim-text>
+        <b>3</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>
+        <b>4</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleic acids are amplified prior to hybridization.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the non-invasive technique comprises applying an adhesive tape to a target area of skin in a manner sufficient to isolate the sample adhering to the adhesive tape.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising using the age range of the skin sample to determine a treatment regimen for photoaging or chronoaging symptoms of the subject.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleic acids or amplification products thereof, are applied to a microarray.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the expression levels of the nucleic acids generate an expression profile.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the tape comprises a rubber adhesive on a polyurethane film.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the method further comprises taking a biopsy of the target area of the skin.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en" independent="true">
+      <claim-text>
+        <b>19</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en" independent="true">
+      <claim-text>
+        <b>21</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en" independent="true">
+      <claim-text>
+        <b>22</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en" independent="true">
+      <claim-text>
+        <b>23</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en" independent="true">
+      <claim-text>
+        <b>24</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en" independent="true">
+      <claim-text>
+        <b>25</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en" independent="true">
+      <claim-text>
+        <b>26</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en" independent="true">
+      <claim-text>
+        <b>27</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en" independent="true">
+      <claim-text>
+        <b>28</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en" independent="true">
+      <claim-text>
+        <b>29</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en" independent="true">
+      <claim-text>
+        <b>30</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en" independent="true">
+      <claim-text>
+        <b>31</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en" independent="true">
+      <claim-text>
+        <b>32</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en" independent="true">
+      <claim-text>
+        <b>33</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="34" id="clm-00034-en" independent="true">
+      <claim-text>
+        <b>34</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="35" id="clm-00035-en" independent="true">
+      <claim-text>
+        <b>35</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="36" id="clm-00036-en" independent="true">
+      <claim-text>
+        <b>36</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="37" id="clm-00037-en" independent="true">
+      <claim-text>
+        <b>37</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="38" id="clm-00038-en" independent="true">
+      <claim-text>
+        <b>38</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="39" id="clm-00039-en" independent="true">
+      <claim-text>
+        <b>39</b>. A kit for characterizing a skin sample from a subject comprising a skin sample collection device, one or more probes or primers that selectively bind to one or more nucleic acid molecules expressed from a young gene, and one or more probes or primers that selectively bind to one or more nucleic acid molecules expressed from an old gene.</claim-text>
+    </claim>
+    <claim num="40" id="clm-00040-en">
+      <claim-text>
+        <b>40</b>. The kit of <claim-ref idref="clm-00039-en">claim 39</claim-ref>, wherein the skin sample collection device is a biopsy needle or an adhesive tape.</claim-text>
+    </claim>
+    <claim num="41" id="clm-00041-en">
+      <claim-text>
+        <b>41</b>. The kit of <claim-ref idref="clm-00039-en">claim 39</claim-ref>, further comprising a microarray containing at least a fragment of a young gene or a nucleic acid expressed from a young gene and at least a fragment of an old gene or a nucleic acid expressed from an old gene.</claim-text>
+    </claim>
+    <claim num="42" id="clm-00042-en" independent="true">
+      <claim-text>
+        <b>42</b>. A method for determining the age range of a skin sample of a subject comprising
+<claim-text>a) providing a skin sample of the subject comprising proteins expressed by genes in a classifier comprising at least one young gene and at least one old gene; wherein the skin sample is obtained by a non-invasive technique; and</claim-text><claim-text>b) determining levels of the proteins in the skin sample by application of at least one antibody that hybridizes to one or more of the proteins; whereby the comparison of the levels of the proteins in the skin sample to levels of the proteins in one or more reference skin samples of known age range is indicative of the age range of the skin sample.</claim-text></claim-text>
+    </claim>
+    <claim num="43" id="clm-00043-en">
+      <claim-text>
+        <b>43</b>. The method of <claim-ref idref="clm-00042-en">claim 42</claim-ref>, wherein the non-invasive technique comprises applying an adhesive tape to a target area of skin a manner sufficient to isolate the sample adhering to the adhesive tape.</claim-text>
+    </claim>
+    <claim num="44" id="clm-00044-en">
+      <claim-text>
+        <b>44</b>. The method of <claim-ref idref="clm-00043-en">claim 43</claim-ref>, wherein the tape comprises a rubber adhesive on a polyurethane film.</claim-text>
+    </claim>
+    <claim num="45" id="clm-00045-en" independent="true">
+      <claim-text>
+        <b>45</b>. A method for determining the age range of a target area of skin of a subject comprising:
+<claim-text>a) providing a gene expression profile of the target area of the skin of the subject, wherein the target gene expression profile comprises expression levels of nucleic acids expressed from one or more young genes and one or more old genes; wherein the expression levels are determined by application of at least one detectably labeled probe that hybridizes to one or more of the nucleic acids within a sample of the target area of the skin of the subject obtained by a non-invasive technique; and</claim-text><claim-text>b) comparing the target gene expression profile to one or more reference gene expression profiles obtained from corresponding reference skin samples of known age range, wherein the one or more reference gene expression profiles comprises expression levels of nucleic acids expressed from the one or more young genes and the one or more old genes; optionally wherein the one or more reference gene expression profiles are contained within a database; optionally wherein the comparing is carried out using a computer algorithm; whereby if the target gene expression profile best matches with one of the one or more reference gene expression profiles, the subject is determined to have skin characteristic of the known age range of the matched corresponding reference skin sample.</claim-text></claim-text>
+    </claim>
+    <claim num="46" id="clm-00046-en">
+      <claim-text>
+        <b>46</b>. The method of <claim-ref idref="clm-00045-en">claim 45</claim-ref>, wherein the non-invasive technique comprises applying an adhesive tape to a target area of skin a manner sufficient to isolate the sample adhering to the adhesive tape.</claim-text>
+    </claim>
+    <claim num="47" id="clm-00047-en">
+      <claim-text>
+        <b>47</b>. The method of <claim-ref idref="clm-00046-en">claim 46</claim-ref>, wherein the tape comprises a rubber adhesive on a polyurethane film.</claim-text>
+    </claim>
+    <claim num="48" id="clm-00048-en">
+      <claim-text>
+        <b>48</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the one or more young genes comprises immediate early response 3, nuclear factor I/B, F-box protein 32, or any combination thereof.</claim-text>
+    </claim>
+    <claim num="49" id="clm-00049-en">
+      <claim-text>
+        <b>49</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the one or more old genes comprises complement decay accelerating factor. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259739A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259739A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259739A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259739A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259739A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259739A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259739A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259739A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259739A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259739A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259739A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259739A1-20150917-D00006.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259739A1.PDF" type="pdf" size="1228003" pages="23" />
+</lexisnexis-patent-document>

@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150258066A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030318" date-changed="20151013" time-changed="074839">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121317575">
+        <country>US</country>
+        <doc-number>20150258066</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14714935</doc-number>
+        <date>20150518</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A61K  31/4166      20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>4166</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K   9/14        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C01B  31/20        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A61K  31/4166      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>4166</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   9/146       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>146</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C01B  31/20        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">21</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">METHOD FOR PRODUCING FINE POWDER AND THE FINE POWDER PRODUCED BY THE SAME</invention-title>
+    <related-documents date-changed="20150917">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13509573</doc-number>
+              <date>20120719</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9044758</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007149</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Moriroku Chemicals Company, Ltd.</orgname>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Niwa</last-name>
+            <first-name>Toshiyuki</first-name>
+            <address>
+              <city>Nagoya-shi Aichi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sugimoto</last-name>
+            <first-name>Shohei</first-name>
+            <address>
+              <city>Nagoya-shi Aichi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Danjo</last-name>
+            <first-name>Kazumi</first-name>
+            <address>
+              <city>Nagoya-shi Aichi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nishio</last-name>
+            <first-name>Masaaki</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nakanishi</last-name>
+            <first-name>Yasuo</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kawamura</last-name>
+            <first-name>Sakiko</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173672026">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258066</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173672025">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258066</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed is a method for producing a fine powder. Two or more kinds of original materials are suspended and liquefied inert gas to form two or more kinds of slurries wherein each slurry contains at least one or more different kinds of original materials. Granular dry ice grinding medium is put into the slurries. The slurries are individually stirred and the original materials are pulverized into submicron-sized or nano-sized particles in the liquefied inert gas. The slurries are thereafter mixed. The liquefied inert gas is vaporized and the granular dry ice is sublimated. A mixture of the particles of the two or more kinds of original materials is recovered.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150904</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015258066A1</docdb-publication-number>
+      <docdb-application-id>444511798</docdb-application-id>
+      <new-owner>MORIROKU CHEMICALS COMPANY, LTD., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:NIWA, TOSHIYUKI;SUGIMOTO, SHOHEI;DANJO, KAZUMI;AND OTHERS;REEL/FRAME:036498/0182</free-text-description>
+      <effective-date>
+        <date>20150708</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO PENDING APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a divisional application of U.S. patent application Ser. No. 13/509,573 filed Jul. 19, 2012 entitled “Method for Producing Fine Powder and the Fine Powder Produced by the Same”.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Technical Field</p>
+      <p id="p-00003-en" num="0003">The present invention relates to a method for producing fine powder of raw and processed materials that are used for the products in all sorts of technical fields, such as pharmaceutical products, cosmetics, paint, copiers, solar cells, secondary batteries and recording media. The present invention further relates to the fine powder produced by the present method. The present invention especially relates to a method for producing fine powder having significantly improved dissolvability and mixing uniformity.</p>
+      <p id="p-00004-en" num="0004">2. Background Art</p>
+      <p id="p-00005-en" num="0005">The existing candidate compounds for medicines often have a low solubility. The medicines of a low solubility is not absorbed effectively from digestive organs and is increased in dosage and also varied in absorption depending upon individual differences of patients, and thereby becomes difficult in making into a pharmaceutical product in some cases. In addition, particular medicines have a very small percentage of active ingredients in the medicines. In order to expect medical effects from medicines, therefore, it is important to secure the content uniformity of active ingredients in a pharmaceutical preparation.</p>
+      <p id="p-00006-en" num="0006">The fine or impalpable powder has been produced by pulverizing various forms of raw materials such as particulate and powdery materials in smaller size and/or by dispersing aggregated particles in the raw material. As such a method for producing the fine or impalpable powder as mentioned above, a dry pulverization method represented by a jet mill and a hammer mill, and a wet medium pulverization method using a solid medium for pulverization such as a ball mill and a sand mill and a bead mill have been used. In the wet medium pulverization method using a bead mill, a slurry including the raw materials is agitated in a vessel together with a number of beads, each of which is formed by a sphere having a diameter of a few hundred microns to a few millimeters, and the raw materials are pulverized to become a fine or impalpable powder, for example, by a collision of a number of beads moving in the slurry and by a dispersion of secondary aggregated particles. As the beads for pulverization or dispersion, for example, ceramic beads made of hard and chemically stable zirconia, resin beads made of urethane or nylon that can reduce metal contamination or metal beads made of abrasion-resistant stainless steel have been used.</p>
+      <p id="p-00007-en" num="0007">In general, the bead that is used by the wet medium pulverization method for the purpose of pulverization or dispersion is made of the material having a higher degree of hardness than the hardness of the raw material to be pulverized.</p>
+      <p id="p-00008-en" num="0008">The beads are driven by rapidly spinning desks of a wet medium pulverizer, for example, a bead mill, so that the beads gain commensurate momentum to move in the slurry at a proper speed. As a result, the beads strike against an inner wall of the vessel or a rotating shaft of the disks, and thereby abrade the inner wall of the vessel or the rotating shaft of the disks. Therefore, the materials of the vessel and the rotating shaft might mix in the slurry and contaminate the raw material to be pulverized. In addition, the beads collide with each other and are subject to wear. Therefore, the materials of the beads might also mix in the slurry.</p>
+      <p id="p-00009-en" num="0009">Japanese Patent Publication No. 03-068444 (JP03-068444A) teaches that a process of charging fine powder having the particle size of below 100 μm, for example, below 10 μm into a bath of cryogenic or cryoscopic liquid prevents the particles of the fine powder from cohering and can mix a different kind of powder particles homogeneously.</p>
+      <p id="p-00010-en" num="0010">Japanese Patent Publication No. 2001-046899 (JP2001-046899A) discloses a continuous circulation type bead mill, which is adapted to prevent the abrasion of a vessel etc. of a wet type media grinding machine, comprising a plurality of stirring members disposed in a cylindrical stirring tank and arranged at predetermined intervals apart from each other, a stirring part for agitating bead-like dispersion media filled in the stirring tank and a slurry-like ground material to be injected into the stirring tank, a centrifugal separation part arranged above the stirring part to centrifuge the dispersion media from the ground material and take the ground material out of the stirring tank, and means for preventing the abrasion of an upper surface of the centrifugal separation part and an inner wall of the stirring tank.</p>
+      <p id="p-00011-en" num="0011">Japanese Patent Publication No. 2002-306940 (JP2002-306940A) discloses a continuous circulation type bead mill, which is adapted to use dispersion beads having very small particle size without causing any clogging with undispersed pigment particles and any wear by the dispersion beads, wherein a flow passage is formed to extend from an annular space defined by an inner wall of a vessel and an outer peripheral surface of a rotor to a discharge port of the vessel through the inside of the rotor, a centrifuge is arranged at an intermediate position of the flow passage in the rotor, the bead mill is used for centrifugally separating the dispersion beads from dispersion-treated paste due to the centrifugal force created by the rotor of the centrifuge.</p>
+      <p id="p-00012-en" num="0012">Next, in the slurry retained in the vessel (a pulverization chamber) of the wet type media grinding machine, the fine powder created by the wet type media grinding machine is mixed with the beads for pulverization or dispersion. Therefore, when pulverizing other materials by the same wet type grinding machine, it is necessary to take the slurry and the beads out of the vessel to clean the vessel and it would be necessary to make a cleaning operation of the wet type grinding machine and wash out the beads taken out of the vessel.</p>
+      <p id="p-00013-en" num="0013">Japanese Patent Publication No. 2007-268403 (JP2007-268403A) discloses a bead mill adapted to facilitate the maintenance of the grinding machine by minimizing the quantity of the residue slurry in the grinding machine and taking the residue slurry and the small beads out of the grinding machine, easily, completely and in a short time.</p>
+      <p id="p-00014-en" num="0014">As mentioned above, the fine powder of the ground material produced by the wet type grinding machine is mixed with the beads for pulverization or dispersion in the slurry retained in the vessel of the wet type grinding machine. Usually, the beads are separated from the slurry first and then the fine powder is separated. Since the fine powder separated from the slurry is slurry-like substance, it should be subject to a drying process for producing dry powder. If the powder heated in the drying process is reaggregated, the powder should be pulverized or dispersed again.</p>
+      <p id="p-00015-en" num="0015">Japanese Patent Publication No. 2003-1129 (JP2003-001129A) discloses a method for producing fine powder comprising the steps of charging usual beads for pulverization and cryogenic liquefied inert gas in a wet type grinding machine, producing a suspension formed by dispersing the materials to be pulverized in the liquefied inert gas, and pulverizing the materials by agitating the suspension together with the beads and then evaporating the liquefied inert gas to obtain dry powder. Thereby, a conventional dry process can be eliminated when producing dried-fine powder of the material to be pulverized by the wet type grinding machine.</p>
+      <heading id="h-00003-en" level="1">PRIOR ART DOCUMENT</heading>
+      <heading id="h-00004-en" level="1">Patent Document</heading>
+      <p id="p-00016-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>Patent Document 1: JP03-068444A</li>
+          <li>Patent Document 2: JP2001-046899A</li>
+          <li>Patent Document 3: JP2002-306940A</li>
+          <li>Patent Document 4: JP2007-268403A</li>
+          <li>Patent Document 5: 2003-001129A</li>
+        </ul>
+      </p>
+      <heading id="h-00005-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <heading id="h-00006-en" level="1">Problems to be Solved by the Invention</heading>
+      <p id="p-00017-en" num="0021">Various means of wear prevention are suggested so as to prevent an abrasion of an upper surface of a centrifuge or an abrasion of an inner wall of an agitated vessel in a wet type media grinding machine, however, these means of wear prevention cannot prevent an abrasion of bead that may be caused by a collision of beads in a process of pulverization or dispersion. Zirconia is a hard and abrasion-resistant material appropriate to bead, however, a measure of abrasion of a bead cannot be avoided even by the use of zirconia beads. When producing fine powder of a high degree of purity, for example, a medicinal bulk powder and the like, it is necessary to prevent a bead material from mixing in the fine powder so as to ensure the safety of humans.</p>
+      <p id="p-00018-en" num="0022">In a conventional method of a wet type medium grind performed by the use of a wet type medium grinding machine, it is necessary to separate beads for pulverization or dispersion from a slurry by a centrifuge and the like, because when the medium grinding process is completed, the beads for pulverization or dispersion remain in the slurry where the fine powder produced from a bulk material exists. The process for separating the beads increases the number of steps for producing fine powder by the use of a wet type medium grinding method.</p>
+      <p id="p-00019-en" num="0023">Furthermore, the fine powder produced by the above method adheres to a surface of the beads for pulverization or dispersion and separating the beads from the slurry brings out the fine powder adhered to the surface of the beads from the slurry together with the beads. In order to collect the fine powder adhered to the surface of the beads, a further process for recovering the fine powder is necessary, and it would be difficult to collect the fine powder from the small surface of the beads. Since the conventional method of a wet type medium grind is required for a process for separating the beads used as a medium for pulverization or dispersion, as mentioned above, and thereby is subject to reduction of the recovery rate of the fine powder, the conventional method is not necessarily appropriate to a method for pulverizing such an expensive material as a bulk material of medicine and the like.</p>
+      <p id="p-00020-en" num="0024">In the conventional wet grinding method that employs grinding media, the dispersive medium is mainly water and the grinding is performed at normal temperature. Therefore, a method for pulverizing the material that is hydrolysable and is easily affected by heat is required. When using water as dispersive medium, a process for separating fine powder from slurry is necessary, and a particular drying process of the fine powder is required because the fine powder is separated as powder slurry. In addition, the powder slurry has the disadvantage that it readily forms cohesive powder when dried.</p>
+      <p id="p-00021-en" num="0025">In order to enhance pulverization of the material by using solid beads for pulverization or dispersion, the pulverization has to be performed by using beads having a smaller diameter as the pulverization proceeds. In other words, it is necessary to change the beads during the pulverization process or the dispersion process of the material. This is because the beads having a smaller diameter can reduce the size of powder particle. To replace the beads for pulverization or dispersion requires a process for drawing the beads having a larger diameter from the slurry and a process for putting the beads having a smaller diameter into the slurry. As a result, the number of processes for producing fine powder is increased, and the collection rate of the produced fine powder is decreased because it is difficult to collect the fine powder adhered to the beads.</p>
+      <p id="p-00022-en" num="0026">The first object of the present invention is to provide an extreme cold grinding method that employs grinding media, which can pulverize materials into a submicron-sized to nano-sized powder particle; which can pulverize low-melting materials and water-soluble substances; which can pulverize materials even more uniformly; which can pulverize materials simultaneously with retaining the crystal structure of the materials; which makes it possible to obtain dry powder without an operation of liquid-solid separation.</p>
+      <p id="p-00023-en" num="0027">The second object of the present invention is to provide an extreme cold grinding method that employs grinding media, which can improve the resolvability of bulk powder of drugs and medicines significantly.</p>
+      <p id="p-00024-en" num="0028">Another object of the present invention is to provide a method for producing a fine power, simultaneously with avoiding the possibility of contaminating the fine power, and to provide the fine powder produced by the method of the present invention.</p>
+      <p id="p-00025-en" num="0029">Further object of the present invention is to provide a method for producing fine powder, wherein a process for separating beads for pulverization or dispersion from slurry is eliminated, and to provide fine powder produced by the method of the present invention.</p>
+      <p id="p-00026-en" num="0030">Further object of the present invention is to provide a method for producing a fine power, which can achieve a high collection rate of fine powder, and to provide the fine powder produced by the method of the present invention.</p>
+      <p id="p-00027-en" num="0031">Further object of the present invention is to provide a method for producing fine powder, wherein the fine powder can be dried easily and can hardly agglutinate after dried, and to provide the fine powder produced by the method of the present invention.</p>
+      <p id="p-00028-en" num="0032">Further object of the present invention is to provide a method for producing fine powder, which can promote pulverization of the fine powder without exchanging the beads for pulverization or dispersion, and to provide the fine powder produced by the method of the present invention.</p>
+      <p id="p-00029-en" num="0033">Further object of the present invention is to provide a method for producing fine powder inexpensively, readily and without increasing the number of processes, and to provide the fine powder produced by the method of the present invention.</p>
+      <heading id="h-00007-en" level="1">Means of Solving the Problems</heading>
+      <p id="p-00030-en" num="0034">In the first embodiment of the present invention, the raw materials for pulverization such as bulk powder for medicines and additives, for example, dispersing agents and the like, are suspended in a liquefied inert gas, for example, liquid nitrogen and the like, and then the raw materials are subjected to a dry grinding at very low temperature by a grinding method employing grinding media and are pulverized to a submicron-sized to nano-sized powder particle.</p>
+      <p id="p-00031-en" num="0035">In the second embodiment of the present invention, the raw materials for pulverization and the additives are individually or simultaneously ground by means of grinding media, for example, zirconia beads and the like, in the liquefied inert gas, for example, liquid nitrogen, and then the grinding media is removed and the liquefied inert gas is vaporized. Thereby, the raw materials can be pulverized to a submicron-sized to nano-sized powder particle and the homogeneous mixture of the raw materials for pulverization and the additives can be obtained. The grinding medium is preferably a bead of zirconia, agate, quartz, titania, tungsten carbide, silicon nitride, alumina, stainless steel, soda glass, low soda glass, less soda glass, high-density glass, and dry ice (frozen carbon dioxide, frozen nitrous oxide). The particle diameter of the bead is preferably in the range of 0.03 mm to 25.00 mm, more preferably in the range of 0.03 mm to 2.00 mm. The liquefied inert gas is preferably liquid nitrogen, liquid helium, liquid neon, liquid argon, liquid krypton, liquid xenon and the like. The additives are preferably water-soluble additives for medicines and dispersion accelerating agents for medicines, such as Hypromellose-Acetate-Succinate (HPMCAS), polyvinylpyrrolidone (PVP), Methacrylic Acid Polymer (Eudragit L100), carboxymethylcellulose (CMC), microcrystalline cellulose (MMC), low substituted hydroxy-propylcellulose (L-HPC), hydroxypropyl-cellulose (HPMC), and lactose.</p>
+      <p id="p-00032-en" num="0036">In the third embodiment of the present invention, the material for pulverization and granular dry ice are dispersed in liquefied inert gas, which is used as a dispersive medium, to produce the slurry and then, the slurry is agitated by a grinding machine so that the material for pulverization is pulverized in the slurry. The pulverization of the material means pulverization and/or dispersion of the material. By using granular dry ice as substitute for the conventional beads for pulverization, it can be prevented that an inner wall of a grinding vessel and a rotating shaft of a grinding machine wear by the impingement of the conventional beads and the abrasion powder of those materials mixes in the slurry; and it is also prevented that the conventional beads hit each other and the abrasion powder of the conventional beads mixes in the slurry. The conventional bead includes a ceramic bead made of alumina, agate, zirconia, silicon nitride, titania etc., a metal bead made of steel, tungsten carbide, stainless steel etc., a glass bead made of soda glass, fused quartz etc., and a plastic bead made of urethane and so on. When using the conventional bead, the conventional bead that is harder than the material for pulverization is chosen. Since those conventional bead pulverize the material by shock compression, friction, shearing and/or shear stress and so on, the bead is destroyed and any exogenous material is generated if the bead is not harder than the material for pulverization. In contrast to the conventional bead, the granular dry ice used by the present invention does not contaminate the produced fine powder because the granular dry ice sublimes and evaporates after the pulverization of the material is completed.</p>
+      <p id="p-00033-en" num="0037">The third embodiment of the present invention is further characterized by the steps of: after the material is pulverized in slurry, vaporizing the liquefied inert gas from the slurry and sublimating the granular dry ice to produce dry powder of the material. The vaporization of the liquefied inert gas and the sublimation of the granular dry ice may be carried out by leaving the slurry out at room temperature. When the material is pulverized in slurry and then the liquefied inert gas is vaporized and the dry ice is sublimated, the pulverized material having the form of fine powder remains. Therefore, the fine powder can be collected directly. In other words, the pulverized material having the form of fine powder can be absolutely prevented from discharging out of the slurry together with the liquefied inert gas and the dry ice, because a process for collecting the fine powder of the pulverized material, that is, a process for separating liquefied inert gas and dry ice from slurry, is not necessary for this embodiment of the present invention. Therefore, the collection rate of the fine powder of the pulverized material can be progressed grossly. Since the collected fine powder has low water content, therefore, it can be dried easily and it can be prevented from agglutinating after dried.</p>
+      <p id="p-00034-en" num="0038">The present invention uses liquefied inert gas as a dispersive medium, wherein preferred dispersive medium is liquid nitrogen, liquid helium, liquid neon, liquid argon, liquid krypton, and liquid xenon.</p>
+      <p id="p-00035-en" num="0039">Carbon dioxide and nitrous oxide can be cited as the dry ice used by the present invention, wherein preferred dry ice is solid carbon dioxide.</p>
+      <p id="p-00036-en" num="0040">The dry ice used by the present invention can be prepared by crushing so-called “rigid dry ice”, which is formed by molding powdery dry ice, in an appropriate manner. The average size of granular dry ice used by the present invention may be determined, for example, in the rage of 0.01 mm to 25.0 mm. The average size of the granular dry ice may be set in the range of 0.10 mm to 1.00 mm. In order to pulverize the material, the average size of the granular dry ice may be determined in the range of 0.30 mm to 1.00 mm. In order to disperse the material in slurry, the average size of granular dry ice may be determined in the range of 0.03 mm to 0.30 mm. In addition, a lump of dry ice is prepared as substitute for granular dry ice and the lump of dry ice is agitated in liquefied inert gas together with the material for pulverization by means of a grinding machine, so that the lump of dry ice is crushed to granular dry ice and simultaneously, the material is pulverized and/or dispersed by the granular dry ice to obtain fine particles having a predetermined particle size. Furthermore, the particle size of dry ice can be adjusted to a desired range of diameter by the processes of putting beads for pulverization, for example, zirconia beads and the like and a lump of or granular dry ice in liquefied inert gas, pulverizing the dry ice in a grinding machine for a predetermined period of time, and then separating the beads for pulverization. In addition, the material for pulverization can be included in a grain of dry ice.</p>
+      <p id="p-00037-en" num="0041">The dry ice grain used in this embodiment can be generated by the processes of filling liquid nitrogen in a container for storing liquefied gas, putting a commercially produced dry ice, for example, dry ice for shot blasting, in the liquid nitrogen, and immersing the dry ice in the liquid nitrogen for twelve hours. In the prosecution of those processes, the liquid nitrogen and the dry ice should be mixed so that the ratio of the volume occupied by the liquid nitrogen to the volume occupied by the dry ice is 2:1. The granular dry ice is obtained by separating the liquid nitrogen from the mixture after the immersion of twelve hours. The granular dry ice can be used as dry ice beads for pulverization. When the cylindrical dry ice for shot blasting having the diameter of 3.0 mm and the length of 5.0 mm to 30.0 mm, called “Shot Dry”, is immersed in liquid nitrogen according to those processes, for example, for twelve hours, granular dry ice having an average diameter of 0.5 mm to 1.5 mm is generated.</p>
+      <p id="p-00038-en" num="0042">The method for producing fine powder according to the present invention is further characterized by generating the slurry of material that the material for pulverization and the granular dry ice are dispersed in the dispersive medium of liquefied inert gas, and agitating the slurry in a grinding machine so that the particle size of the granular dry ice reduces while the material for pulverization is pulverized in the slurry. As the particle size of granular dry ice gradually reduces, for example, by the abrasion of the dry ice particle, the material for pulverization is pulverized to fine particles having smaller size in a similar fashion to the conventional process for enhancing the pulverization of the material by exchanging a bead of larger size to a bead of smaller size. The method for producing fine powder according to the present invention can enhance the pulverization of the material effectively only by prolonging the operation time of a grinding machine and without exchanging the beads for pulverization or dispersion.</p>
+      <p id="p-00039-en" num="0043">The method for producing fine powder according to the present invention comprises the steps of generating a suspension of pulverizing material in a dispersive medium of a liquefied inert gas, and agitating the suspension together with beads for pulverization or dispersion by a pulverizer to pulverize the material in the suspension, wherein a granular dry ice is substituted for all of the beads or a part of the beads. Since the amount of beads to be used for pulverization or dispersion can be reduced by substituting granular dry ice for all of or a part of the conventional beads for pulverization or dispersion that has been used in a pulverizer, the quantity of abrasion of beads is decreased and the degree of contamination of fine powder can be reduced. By substituting the granular dry ice for a part of the beads for pulverization or dispersion, the pulverization or dispersion by the beads and by the dry ice can be performed simultaneously. Hereinbefore, liquid nitrogen can be used as the liquefied inert gas and a bead mill can be used as the pulverizer. In addition, the granular dry ice can consist of particles of solid carbon dioxide having a particle size of 0.30 to 1.00 mm.</p>
+      <heading id="h-00008-en" level="1">Effects of the Invention</heading>
+      <p id="p-00040-en" num="0044">Due to the cold brittleness of the substance existing at a very low temperature and due to the effect of preventing particles from aggregation by the dispersive medium that permeates to a nicety of particles, the present invention can pulverize materials to fine particles of submicron size or nano-size, which cannot be attained by the conventional methods.</p>
+      <p id="p-00041-en" num="0045">According to the conventional pulverization method, amorphous transformation of bulk powder is found after the pulverization, however, according to the present method for pulverization, neither crystalline transformation of bulk powder nor crystalline descent is found before and after the pulverization. In other words, the method of the present invention can pulverize bulk powder with retaining the crystal form and crystalline of the bulk powder.</p>
+      <p id="p-00042-en" num="0046">The method of the present invention can pulverize low melting point materials or easily water-solvable materials. The method of the present invention can also pulverize materials more uniformly as compared to the method for pulverizing at normal temperature. Furthermore, the liquefied inert gas such as liquid nitrogen sublimes at a normal temperature and dry powder can be obtained directly from the material subject to the pulverization process. As a result, the present invention can improve the resolvability of bulk powder of drugs and medicines and, especially, the present invention will contribute to the development of pharmaceutical preparations that improves physiological application for oral administration due to the improvement of resolvability of low-solubility bulk powder of drugs. Thereby, the present invention can drastically improve the resolvability of active constituents of medicines and also improve the resolvability and the rate of dissolution of industrial materials when the present invention is applied to industrial materials.</p>
+      <p id="p-00043-en" num="0047">The method of the present invention can pulverize the material and additives into the particles of submicron size or nano size so that the solvability of the pulverized material and additives can be improved dramatically and simultaneously, a homogeneous mixture of the material and additives pulverized into submicron size or nano size can be obtained by a simple and easy operation.</p>
+      <p id="p-00044-en" num="0048">The method of the present invention can manufacture fine powder at a lower price and without difficulty and by smaller number of processes. Although the materials that can be pulverized by the present invention is not limited, water-soluble materials that are difficult to be pulverized by the conventional wet medium pulverization method and pharmaceutical bulk powder that should not be contaminated by any impurities can effectively be pulverized and dispersed by the method of present invention. Recently, the number of low solubility substances to be used as raw materials of pharmaceutical products is expressly increasing. It is eagerly required to improve the dissolution behavior of those medicines of low solubility by means of pulverization. The method for producing fine powder according to the present invention is expected to facilitate controlling the degree of pulverization and consequently improve the solubility and the rate of dissolution of medicines of low solubility, because the method of the present invention can improve the degree of pulverization of medicines merely by extending the processing time for pulverization, without carrying out the conventional process for changing beads. In addition, the method for producing fine powder according to the present invention can improve the collection rate of fine powder without contaminating expensive raw materials of medicines. Since the method for producing fine powder according to the present invention uses liquefied inert gas as dispersive medium, the raw materials can be pulverized without mixing dispersing agent such as a polymeric dispersant and a surfactant into the dispersive medium. Therefore, the fine powder to be produced is not contaminated with the exotic components for improving dispersion.</p>
+      <p id="p-00045-en" num="0049">Further characteristics of the present invention become apparent from the following description of preferred embodiments.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00009-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00046-en" num="0050">
+        <figref>FIG. 1</figref> shows a schematic view of an apparatus for carrying out the extreme cold medium pulverization method according to the present invention.</p>
+      <p id="p-00047-en" num="0051">FIG. <b>2</b>(A)-(C) are photographs of phenytoin as a medicine of low solubility, taken by a scanning electron microscope, wherein <figref>FIG. 2(A)</figref> is an electron micrograph of raw material of phenytoin taken at 3000× magnifications, <figref>FIG. 2(B)</figref> is an electron micrograph of phenytoin, pulverized by a ultra low temperature media grinding method of the present invention, taken at 10000× magnifications, and <figref>FIG. 2(C)</figref> is an electron micrograph of phenytoin, pulverized by a dry jet mill method, taken at 10000× magnifications.</p>
+      <p id="p-00048-en" num="0052">FIG. <b>3</b>(A)-(C) are photographs of ibuprofen as a medicine of low solubility, taken by a scanning electron microscope, wherein <figref>FIG. 3(A)</figref> is an electron micrograph of raw material of ibuprofen taken at 1000× magnifications, <figref>FIG. 3(B)</figref> is an electron micrograph of ibuprofen, pulverized by a ultra low temperature media grinding method of the present invention, taken at 5000× magnifications, and <figref>FIG. 3(C)</figref> is an electron micrograph of ibuprofen, pulverized by a dry jet mill method, taken at 5000× magnifications.</p>
+      <p id="p-00049-en" num="0053">FIG. <b>4</b>(A)-(C) are photographs of salbutamol sulfate as a water-soluble medicine, taken by a scanning electron microscope, wherein <figref>FIG. 4(A)</figref> is an electron micrograph of raw material of salbutamol sulfate taken at 1000× magnifications, <figref>FIG. 4(B)</figref> is an electron micrograph of salbutamol sulfate, pulverized by a ultra low temperature media grinding method of the present invention, taken at 5000× magnifications, and <figref>FIG. 4(C)</figref> is an electron micrograph of salbutamol sulfate, pulverized by a dry jet mill method, taken at 5000× magnifications.</p>
+      <p id="p-00050-en" num="0054">
+        <figref>FIG. 5</figref> is a diagram illustrating the dissolution behavior of pulverized mixture of phenytoin and hydroxypropylmethylcellulose acetate succinate (HPMCAS). (Example 12)</p>
+      <p id="p-00051-en" num="0055">
+        <figref>FIG. 6</figref> is a diagram showing the dissolution behavior of pulverized phenytoin. (Reference example 1)</p>
+      <p id="p-00052-en" num="0056">
+        <figref>FIG. 7</figref> is a diagram showing the dissolution behavior of a mixture of phenytoin and commercially available additives (lactose and L-HPC). (Reference example 2)</p>
+      <p id="p-00053-en" num="0057">
+        <figref>FIG. 8</figref> is a diagram showing the dissolution behavior of a pulverized mixture of phenytoin and polyvinylpyrrolidone (PVP). (Example 13)</p>
+      <p id="p-00054-en" num="0058">
+        <figref>FIG. 9</figref> is a diagram showing the dissolution behavior of a pulverized mixture of phenytoin and Methacrylic Acid Polymer (Eudragit L100). (Example 14)</p>
+      <p id="p-00055-en" num="0059">
+        <figref>FIG. 10</figref> is a diagram showing the dissolution behavior of a pulverized mixture of phenytoin and Carboxymethyl cellulose (CMC). (Example 15)</p>
+      <p id="p-00056-en" num="0060">
+        <figref>FIG. 11</figref> is a diagram showing the dissolution behavior of a pulverized mixture of phenytoin and microcrystalline cellulose (MCC). (Example 16)</p>
+      <p id="p-00057-en" num="0061">
+        <figref>FIG. 12</figref> is a diagram showing the dissolution behavior of a pulverized mixture of phenytoin and low substituted hydroxy-propylcellulose (L-HPC). (Example 17)</p>
+      <p id="p-00058-en" num="0062">
+        <figref>FIG. 13</figref> is a diagram showing the dissolution behavior of a pulverized mixture of phenytoin and hydroxy-propylcellulose (HPMC). (Example 18)</p>
+      <p id="p-00059-en" num="0063">
+        <figref>FIG. 14</figref> is a diagram showing the solubility of pulverized materials and additives. (Example 18)</p>
+      <p id="p-00060-en" num="0064">
+        <figref>FIG. 15</figref> is a diagram showing the dissolution behavior of the sample, which chemical compound (phenytoin) and additive (PVP) are concurrently pulverized, and the dissolution behavior of the sample, which chemical compound (phenytoin) and additive (PVP) are individually pulverized, respectively and mixed with liquid nitrogen before dried. (Example 20)</p>
+      <p id="p-00061-en" num="0065">
+        <figref>FIG. 16</figref> is a diagram showing the dissolution behavior of the sample, which chemical compound (phenytoin) is individually pulverized and mixed with untreated additive (PVP). (Example 21)</p>
+      <p id="p-00062-en" num="0066">
+        <figref>FIG. 17</figref> is an overall view of a wet media-agitating mill that is available for the method for producing fine powder according to the present invention; wherein <figref>FIG. 17(A)</figref> illustrates a front view of the mill and <figref>FIG. 17(B)</figref> illustrates a left side view of the mill.</p>
+      <p id="p-00063-en" num="0067">
+        <figref>FIG. 18</figref> illustrates a vertical section view of a pulverization vessel of the wet media-agitating mill.</p>
+      <p id="p-00064-en" num="0068">
+        <figref>FIG. 19</figref> is a photograph of the standard type discs to be installed in the wet media-agitating mill in <figref>FIGS. 17 and 18</figref>.</p>
+      <p id="p-00065-en" num="0069">
+        <figref>FIG. 20</figref> is a photograph of the discs with rotating blades to be installed in the wet media-agitating mill in <figref>FIGS. 17 and 18</figref>.</p>
+      <p id="p-00066-en" num="0070">
+        <figref>FIG. 21</figref> is a photograph of the particles of dry ice taken by a digital type optical microscope at 100× magnifications before pulverization.</p>
+      <p id="p-00067-en" num="0071">
+        <figref>FIG. 22</figref> is a photograph of the pulverized particles of dry ice taken by a digital type optical microscope at 100× magnifications.</p>
+      <p id="p-00068-en" num="0072">
+        <figref>FIG. 23</figref> is a photograph of the phenytoin pulverized by the method for producing fine powder according to the present invention for 30 minutes and then taken by an electron microscope at 10000× magnifications.</p>
+      <p id="p-00069-en" num="0073">
+        <figref>FIG. 24</figref> is a photograph of the phenytoin pulverized by the method for producing fine powder according to the present invention for 60 minutes and then taken by an electron microscope at 10000× magnifications.</p>
+      <p id="p-00070-en" num="0074">
+        <figref>FIG. 25</figref> a photograph of the phenytoin pulverized by the method for producing fine powder according to the present invention for 120 minutes and then taken by an electron microscope at 10000× magnifications.</p>
+      <p id="p-00071-en" num="0075">
+        <figref>FIG. 26</figref> is a photograph of the mixture of phenytoin and dry ice particles, taken by a digital type optical microscope at 100× magnifications, after pulverizing phenytoin by means of dry ice particles according to the method for producing fine powder of the present invention for 30 minutes and then vaporizing liquid nitrogen.</p>
+      <p id="p-00072-en" num="0076">
+        <figref>FIG. 27</figref> is a photograph of indomethacin pulverized according to the method for producing fine powder of the present invention for 60 minutes and taken by an electron microscope at 10000× magnifications.</p>
+      <p id="p-00073-en" num="0077">
+        <figref>FIG. 28</figref> is a photograph of indomethacin pulverized according to the method for producing fine powder of the present invention for 120 minutes and taken by an electron microscope at 1000× magnifications.</p>
+      <p id="p-00074-en" num="0078">
+        <figref>FIG. 29</figref> is a graph or chart showing a dry method particle size distribution;</p>
+      <p id="p-00075-en" num="0079">
+        <figref>FIG. 30</figref> is a graph or chart showing a wet method particle size distribution;</p>
+      <p id="p-00076-en" num="0080">
+        <figref>FIG. 31</figref> is a graph or chart showing a wet method particle size distribution;</p>
+      <p id="p-00077-en" num="0081">
+        <figref>FIG. 32</figref> is a graph or chart showing a dry method particle size distribution;</p>
+      <p id="p-00078-en" num="0082">
+        <figref>FIG. 33</figref> is a graph or chart showing a wet method particle size distribution;</p>
+      <p id="p-00079-en" num="0083">
+        <figref>FIG. 34</figref> is a graph or chart showing the results of powder x-ray diffractometry;</p>
+      <p id="p-00080-en" num="0084">
+        <figref>FIG. 35</figref> is a graph or chart representing differential scanning calory;</p>
+      <p id="p-00081-en" num="0085">
+        <figref>FIG. 36</figref> is a graph or chart showing additives and a rate of pulverized particles having a diameter of 1 μm and below;</p>
+      <p id="p-00082-en" num="0086">
+        <figref>FIG. 37</figref> is a chart showing mixing rates;</p>
+      <p id="p-00083-en" num="0087">
+        <figref>FIG. 38</figref> is a chart showing mixing rates of the mixture;</p>
+      <p id="p-00084-en" num="0088">
+        <figref>FIG. 39</figref> is a chart showing particle sizes of dry ice before pulverization;</p>
+      <p id="p-00085-en" num="0089">
+        <figref>FIG. 40</figref> is a chart showing particle sizes of dry ice after agitation in liquid nitrogen;</p>
+      <p id="p-00086-en" num="0090">
+        <figref>FIG. 41</figref> is a graph or chart showing measured distribution of particle size;</p>
+      <p id="p-00087-en" num="0091">
+        <figref>FIG. 42</figref> is a graph or chart showing average particle diameters;</p>
+      <p id="p-00088-en" num="0092">
+        <figref>FIG. 43</figref> is a graph or chart showing measured distribution of particle size of indomethacin;</p>
+      <p id="p-00089-en" num="0093">
+        <figref>FIG. 44</figref> is a graph or chart showing average particle diameter of indomethacin;</p>
+      <p id="p-00090-en" num="0094">
+        <figref>FIG. 45</figref> is a chart of the quantitative value (%) from pulverization;</p>
+      <p id="p-00091-en" num="0095">
+        <figref>FIG. 46</figref> is a graph or chart illustrating solubility over time; and</p>
+      <p id="p-00092-en" num="0096">
+        <figref>FIG. 47</figref> is a chart showing results of grinding by dry ice and a disc assembly.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00010-en" level="1">EMBODIMENTS OF THE INVENTION</heading>
+      <p id="p-00093-en" num="0097">The material or substance that can be pulverized by the present invention is not limited to extraordinary materials or substances. However, the present invention is especially available for pulverization of raw material of low dissoluble medicines such as Phenytoin and Ibuprofen.</p>
+      <p id="p-00094-en" num="0098">The additives or addition agents that is available for the present invention may be additives that are usually used as additives of medicines, such as hydroxypropylmethylcellulose acetate succinate (HPMCAS), polyvinylpyrrolidone (PVP), Methacrylic Acid Polymer (Eudragit L100), Carboxymethyl cellulose (CMC), microcrystalline cellulose (MCC), low substituted hydroxy-propylcellulose (L-HPC) hydroxy-propylcellulose (HPMC) and lactose. The additives should be selected as appropriate according to the kind of material concurrently pulverized with the additives.</p>
+      <p id="p-00095-en" num="0099">As to beads that would be available for the present invention, the beads made of the materials such as zirconia, agate, quarts, titania, tungsten carbide, silicon nitride, alumina, stainless steel, soda glass, low soda glass, soda less glass, high density glass and dry ice (carbon dioxide, nitrous oxide) can be quoted. The adequate diameter of a particle of a bead is considered to be within the range from 0.03 to 25 mm, preferably within the range from 0.03 to 2 mm. The material and size of a bead should be determined depending on the properties of the material and additive to be pulverized and the targeted size of particles etc.</p>
+      <p id="p-00096-en" num="0100">The method of the present invention is performed under the extreme cold condition generated by liquefied inert gas such as liquid nitrogen, liquid helium, liquid neon, liquid argon, liquid krypton and liquid xenon. Among these liquefied gases, liquid nitrogen is most preferable for the present invention.</p>
+      <p id="p-00097-en" num="0101">According to the pulverizing method of the present invention, pulverized and homogeneously mixed particles can be obtained by the steps of: pulverizing the material and additives in liquefied inert gas at a ultra low temperature with use of medium of bead, and removing the beads by the means commonly used in the technical field and evaporating or spontaneously evaporating the liquefied inert gas.</p>
+      <p id="p-00098-en" num="0102">As a result of concurrently pulverizing the material and additives in liquefied inert gas at ultra low temperature with use of medium of bead, the material and additives can be simultaneously pulverized into submicron-sized particles or nano-sized particles whereby pulverized materials having improved resolvability can be produced. After the simultaneous pulverization of the material and additives, the medium of pulverization is removed by commonly used means and the liquefied inert gas is evaporated or spontaneously evaporated, whereby the pulverized and homogeneously mixed particles having improved resolvability can be obtained.</p>
+      <p id="p-00099-en" num="0103">On the other hand, the pulverized and homogeneously mixed particles can be obtained by the steps of: individually pulverizing the material and the additives in liquefied inert gas at ultra low temperature with use of medium of bead, removing the medium of bead by the means commonly used in the field of technology, mixing the slurry containing the pulverized material with the slurry containing the pulverized additives, and evaporating or spontaneously evaporating the liquid nitrogen.</p>
+      <p id="p-00100-en" num="0104">Since the method of the present invention can be operated with use of a bead mill etc. in accordance with the manner of operation commonly used in the technical field, the manner of operation is not described in detail in the specification of this application.</p>
+      <heading id="h-00011-en" level="1">Brief Summary of Example 1-4</heading>
+      <heading id="h-00012-en" level="1">Materials</heading>
+      <p id="p-00101-en" num="0105">Phenytoin and Ibuprofen (low melting point: 76° C.) were used as very insoluble medical agent. Salbutamol sulfate was used as water-soluble medical agent. Zirconia bead (a small sphere, spherule) (YTZ ball by NIKKATO CORPORATION) having the particle diameter of 0.1 mmØ, 0.3 mmØ, 0.6 mmØ, and 1.0 mmØ was used as a grinding medium.</p>
+      <p id="p-00102-en" num="0106">Pulverizing Apparatus</p>
+      <p id="p-00103-en" num="0107">The ultra low temperature medium pulverizing apparatus (LN2 Bead Mill) that is schematically illustrated in <figref>FIG. 1</figref> was used. This apparatus is a batch bead pulverizer (Ready Mill RMB-4, AIMEX CO., LTD.) that has been modified as a device for pulverizing in liquid nitrogen. The apparatus comprises a vessel <b>1</b> and rotating discs <b>3</b>, all of which are made of zirconia.</p>
+      <p id="p-00104-en" num="0108">Basic Physicality of Liquid Nitrogen (LN2)</p>
+      <p id="p-00105-en" num="0109">Low responsiveness and avirulent: nonreactive to contactant</p>
+      <p id="p-00106-en" num="0110">Boiling point: −196° C.</p>
+      <p id="p-00107-en" num="0111">Low lytic potential: Not dissolving almost all solid materials</p>
+      <p id="p-00108-en" num="0112">Surface tension value: 10.5 mN/m (which is approximately seventh part of the surface tension value of water and LN2 has a high wettability to powder.)</p>
+      <p id="p-00109-en" num="0113">Degree of viscosity: 0.15×10<sup>−2 </sup>poise (which is approximately seventh part of the viscosity of water and LN2 is easy to penetrate through fine pores.)</p>
+      <p id="p-00110-en" num="0114">Latent heat of vaporization: 47.7 Kcal/Kg (which is eleventh part of the latent heat of vaporization of water and LN2 rapidly evaporate at normal temperature and at normal pressures.)</p>
+      <p id="p-00111-en" num="0115">The Method of Ultra Low Temperature Medium Grinding</p>
+      <p id="p-00112-en" num="0116">In an ultra low temperature medium grinding apparatus (LN2 bead mill) illustrated in <figref>FIG. 1</figref>, the bulk volume of 180 mL (the weight of 658 g) of a zirconia bead (a spherule) <b>4</b> having a diameter of 0.1 mmø, 0.3 mmø, 0.6 mmø or 1.0 mmø was put into a vessel <b>1</b> having a volume of 400 mL and then the bulk volume of 50 mL (the weight of 15 g to 20 g) of medical substance was fed into the vessel <b>1</b>. Next, liquid nitrogen <b>5</b> was fed into the vessel <b>1</b> to occupy the volume of 90% in the vessel <b>1</b>. And, by rotating a rotating shaft <b>2</b> at a predetermined velocity, a medium grind (bead milling) was performed. The rotating shaft <b>2</b> was continuously rotated for 30 minutes while liquid nitrogen <b>5</b> was supplied to the vessel <b>1</b> as needed to make up for the loss caused by vaporization of liquid nitrogen <b>5</b>. After the pulverization, the beads were sieved from the slurry by use of a sieve having apertures corresponding the size of bead. The sieved slurry was left at a room temperature and under atmospheric pressure in order to volatilize liquid nitrogen <b>5</b> from the slurry. Thereby, the dry powder of pulverized particles was obtained.</p>
+      <p id="p-00113-en" num="0117">The Dry Method for Pulverization by Use of a Jet Mill</p>
+      <p id="p-00114-en" num="0118">Bulk powder 20 g were pulverized under air pressure of 0.7 MPa by a jet mill (A-O jet mill, SEISHIN ENTERPRISE CO., LTD.) and the results of the jet milling were compared with the results of the ultra low temperature medium grinding.</p>
+      <p id="p-00115-en" num="0119">Evaluation Method of Pulverized Particles</p>
+      <heading id="h-00013-en" level="2">(1) Observation by a Scanning Electron Microscope (SEM)</heading>
+      <p id="p-00116-en" num="0120">The exterior appearance of pulverized particles on which platinum is deposited was observed by a scanning electron microscope (JSM-6060, JEOL LTD.).</p>
+      <heading id="h-00014-en" level="2">(2) Particle Size Distribution</heading>
+      <p id="p-00117-en" num="0121">The pulverized particles were dispersed by compressed air (0.4 MPa) and then, the dry particle size distribution was measured by a laser diffraction apparatus for measuring particle size distribution (LMS-30, SEISHIN ENTERPRISE CO., LTD.). On the other hand, the pulverized particles were dispersed in purified water by ultrasonic dispersion (30 seconds) and then, the wet particle size distribution was measured by a laser diffraction apparatus for measuring particle size distribution (SALD-2100, SHIMADZU CORPORATION).</p>
+      <heading id="h-00015-en" level="2">(3) Crystalline Properties</heading>
+      <p id="p-00118-en" num="0122">The crystalline states of the bulk powder and the pulverized particles were measured by a X-ray powder diffraction apparatus (RAD-2VC, Rigaku Corporation) and a differential scanning calorimeters (DSC-60, SHIMADZU CORPORATION). In addition, a quantity of heat for melting (J/g) that was calculated on the basis of a peak area of melting point on the DCS curve was used as an index of the degree of crystallization.</p>
+      <heading id="h-00016-en" level="1">Example 1</heading>
+      <p id="p-00119-en" num="0123">
+        <figref>FIG. 2</figref> shows electron micrographs (SEM) of the original bulk of phenytoin and the pulverized particles of phenytoin. Comparing <figref>FIG. 2(B)</figref> and <figref>FIG. 2(C)</figref>, it was found that the particles pulverized by the LN2 bead mill were regular in shape and they are smaller in particle size and elongation than the particles pulverized by the Jet mill. Since the majority of the particles of phenytoin, which were pulverized by the LN2 bead mill, have the dimension of 1 μm or below, as shown in <figref>FIG. 2(B)</figref>, it is found that the objective of pulverizing the material into submicron size has been attained by the ultra low temperature medium grinding with the LN2 bead mill, although it could not be attained by the conventional dry method for pulverization.</p>
+      <p id="p-00120-en" num="0124">
+        <figref>FIG. 29</figref> shows a dry method particle size distribution that represents the effects of the rotating speed of the rotating shaft <b>2</b> on the particle size of pulverized phenytoin, while <figref>FIG. 30</figref> shows a wet method particle size distribution that represents the effects of the rotating speed of the rotating discs <b>3</b> on the particle size of pulverized phenytoin. As stated above, the dry method particle size distribution was measured by the laser diffraction scattering method (Dry method), while the wet method particle size distribution was measured by the laser diffraction method (Wet method).</p>
+      <p id="p-00121-en" num="0125">
+        <figref>FIG. 31</figref> shows a wet method particle size distribution that represents the effects of the diameter of the bead on the particle size of pulverized phenytoin. As stated above, this wet method particle size distribution was measured by the laser diffraction method (Wet method).</p>
+      <p id="p-00122-en" num="0126">
+        <figref>FIG. 32</figref> represents the particle distribution of the bulk powder of phenytoin (OriB), the particle distribution of the phenytoin (Jet) pulverized by the dry method jet mill, and the particle distribution of the phenytoin (LN2) pulverized by the ultra low temperature medium grinding apparatus (LN2 bead mill) according to the present invention, wherein all the particle distributions were the results measured by the aforementioned dry method (Dry method). <figref>FIG. 33</figref> represents the particle distribution of the bulk powder of phenytoin (OriB), the particle distribution of the phenytoin (Jet) pulverized by the dry method jet mill, and the particle distribution of the phenytoin (LN2) pulverized by the ultra low temperature medium grinding apparatus (LN2 bead mill) according to the present invention, wherein all the particle distribution were the results measured by the aforementioned wet method (Wet method). In both the measurement values of the dry method and the wet method, the particle distributions of the pulverized phenytoin (LN2) were broadened from approximately 0.3 μm to 10 μm, which were inconsistent with the electron micrographs (SEM). It is presumed that these measurement values were the results of measuring the sizes of the particles and the sizes of the aggregated particles contained therein. However, the percentage of the mass consisting of the particles having the size of 1 μm or below (the rate of submicron size particles) was measured up to 32% with regard to the particles pulverized by the wet method, which were three and a half times as much as the percentage figures measured as to the particles pulverized by the dry method, and thereby indicating excellent pulverizing effects of the wet method. When the diameter of zirconia bead is in the range of 0.3-1.0 mmØ, the effects of pulverization were substantially the same over the range. When the diameter of zirconia bead is 0.1 mmØ, however, a relatively inferior effect of pulverization was measured. From these measurement values, it is presumed that the results of pulverization depend not only upon the number of collisions among beads but also upon the force generated by the collision of a bead.</p>
+      <p id="p-00123-en" num="0127">
+        <figref>FIG. 34</figref> represents the results of powder X-ray diffractometry (XRPD) of the original bulk of phenytoin (OriB), the phenytoin (Jet) pulverized by the dry method jet mill, and the phenytoin (LN2) pulverized by the ultra low temperature medium grinding apparatus (LN2 bead mill) according to the present invention, which were measured by a powder X-ray diffractometry device (RAD-2VC, Rigaku Corporation). <figref>FIG. 35</figref> represents differential scanning calory of the original bulk of phenytoin (OriB), the phenytoin (Jet) pulverized by the dry method jet mill, and the phenytoin (LN2) pulverized by the ultra low temperature medium grinding apparatus (LN2 bead mill) according to the present invention, which were measured by a differential scanning calorimetry apparatus (DSC-60, SHIMADZU CORPORATION). As seen in the sample values attached to <figref>FIG. 35</figref>, the difference between AH value of the original bulk of phenytoin and AH value of the phenytoin (LN2) pulverized by the LN2 bead mill was very little, and crystalline descent was not found in the phenytoin (LN2) pulverized by the LN2 bead mill. On the other hand, the difference between AH value of the original bulk of phenytoin and AH value of the phenytoin (Jet) pulverized by the dry method jet mill was substantial, and it was found that the degree of crystallinity of the phenytoin (Jet) pulverized by the dry method jet mill was reduced to 81%. As described above, neither crystalline transformation nor crystalline descent was found in the phenytoin (LN2) before or after pulverized by the LN2 bead mill, so that it was found that the pulverization of phenytoin was processed with retaining the crystal form and crystalline of the phenytoin.</p>
+      <heading id="h-00017-en" level="1">Example 2</heading>
+      <p id="p-00124-en" num="0128">
+        <figref>FIG. 3</figref> shows electron micrographs (SEM) of the original bulk of ibuprofen and the pulverized particles of ibuprofen. Comparing <figref>FIG. 3(B)</figref> with <figref>FIG. 3(C)</figref>, it was found that the particles pulverized by the LN2 bead mill were regular in shape and they are smaller in particle size and elongation than the particles pulverized by the Jet mill. It should be noted that the pulverization of low melting point material such as ibuprofen (76° C.) could be improved because the attack of heat generated at the time of pulverization could be modified immediately according to the present invention.</p>
+      <heading id="h-00018-en" level="1">Example 3</heading>
+      <p id="p-00125-en" num="0129">
+        <figref>FIG. 4</figref> shows electron micrographs (SEM) of the original bulk of salbutamol sulfate and the pulverized particles of salbutamol sulfate. Comparing <figref>FIG. 4(B)</figref> with <figref>FIG. 4(C)</figref>, it was found that the particles pulverized by the LN2 bead mill were regular in shape and they are smaller in particle size and elongation than the particles pulverized by the Jet mill. It is also found that the method of the present invention is effective for the pulverization of water-soluble medicines such as salbutamol sulfate.</p>
+      <heading id="h-00019-en" level="1">Example 4</heading>
+      <p id="p-00126-en" num="0130">As an example of the present invention, the very low temperature medium grinding method according to the present invention may comprise the steps of: mixing additives such as dispersing agent with the original bulk and the like of pharmaceutical preparations; making a slurry that a mixture of the original bulk and the additives are suspended in a liquid nitrogen; and processing the slurry by a dry type very low temperature medium grinding method to pulverize the mixture of the original bulk and the additives into submicron sized particles or nano sized particles. In order to improve the solubility of low soluble medicines, the medicines have been pulverized into nano-sized particles to increase the superficial area thereof. When medicine was pulverized simply, however, the intensity of surface activity of the medicine increased just as much as the superficial area of the medicine had increased, so that it was observed that the pulverized particles of the medicine tended to agglutinate. The agglutinated particles decrease in solubility, so that the solubility of medicine might not be improved by the pulverization of medicine. In contrast, it is expected to prevent the original bulk from agglutinating by the method comprising the steps of: mixing the material such as original bulk of medicine with dispersing agent, pulverizing a mixture of the original bulk and dispersing agent by the ultra low temperature medium grinding method according to the present invention, and thereby obtaining pulverized particles between which the dispersing agent intervenes to prevent the agglutination. In addition, it is considered that the simultaneous pulverization of different materials, that is, the original bulk of medicine and the dispersing agent, further reduces particle diameters of the original bulk and the dispersing agent due to the difference between the physical property of the original bulk and that of the dispersing agent. As a result, the superficial area of the original bulk has further increased so that the original bulk is dispersed extremely rapidly in human body and the solubility of medicine can be improved drastically. Furthermore, the pulverized particles of medicine can be dispersed at an intended region of human body by selecting dispersing agent to ascertain the intended medicinal benefits. We prepared the first to third samples of fine powder and plotted the solubility of these samples against time on a graph. The first sample was prepared by pulverizing the original bulk of medicine by the ultra low temperature medium grinding method of the present invention. The second sample was prepared by pulverizing the original bulk of medicine and the dispersing agent individually by the ultra low temperature medium grinding method of the present invention and then, mixing the pulverized original bulk of medicine with the pulverized dispersing agent. The third sample was prepared by mixing the original bulk of medicine with the dispersing agent and then, pulverizing a mixture of the original bulk of medicine and the dispersing agent by the ultra low temperature medium grinding method of the present invention. Reviewing the graph, the solubility of the first sample increased gradually and in an approximately linear fashion as time advances. The solubility of the second sample increased relatively at a sharp angle in the early stages of dissolution and then, increased gradually to converge with the solubility value of approximately 1.3 times higher than the corresponding solubility value of the first sample. In contrast, the solubility of the third sample increased extremely rapidly to the solubility value of approximately 5 times higher than the corresponding solubility value of the second sample in the early stages of dissolution and then, increased in an arc to the solubility value of approximately 2 times higher than the corresponding solubility value of the second sample and then, increased gradually to the expected solubility value of 1.4 times higher the corresponding solubility value of the second sample. In the early stages of dissolution, the solubility of the first sample is approximately 1% and the solubility of the second sample is approximately 10%, however, the expected value of solubility of the third sample is 50 to 60%.</p>
+      <heading id="h-00020-en" level="1">Example 5</heading>
+      <p id="p-00127-en" num="0131">Phenytoin of a medical product chosen as a compound to be pulverized and Hypromellose-Acetate-Succinate (HPMCAS) chosen as an additive were mixed to prepare a mixture to be processed in this example, wherein the blend ratio of phenytoin to HPMCAS is 1:1 (weight ratio). 15 g of the mixture were pulverized in total amount and then, the improvement degree of solubility of the pulverized phenytoin, particularly the improvement degree of rate of dissolution of the pulverized phenytoin, was examined. The pulverization was performed under the condition that zirconium beads (the diameter of bead: 0.6 mm; the volume of beads: 150 cc) were used as pulverizing media, the rotating speed 1,600 rpm, and the pulverizing time 15 minutes. In addition, 6 liters of liquid nitrogen were used for removing the beads. The particle diameters of the pulverized phenytoin were shown in <figref>FIG. 36</figref> (by evaluation of a dry aerial dispersion laser diffraction method; hereinafter evaluated by the same method).</p>
+      <heading id="h-00021-en" level="1">Example 6</heading>
+      <p id="p-00128-en" num="0132">By virtue of substantially the same processes and conditions as described in example 5, phenytoin was pulverized together with polyvinylpyrrolidone (PVP) that was used as additive. The particle diameters of the pulverized phenytoin were shown in <figref>FIG. 36</figref>.</p>
+      <heading id="h-00022-en" level="1">Example 7</heading>
+      <p id="p-00129-en" num="0133">By virtue of substantially the same processes and conditions as described in example 5, phenytoin was pulverized together with Methacrylic Acid Polymer (Eudragit L100) that was used as additive. The particle diameters of the pulverized phenytoin were shown in <figref>FIG. 36</figref>.</p>
+      <heading id="h-00023-en" level="1">Example 8</heading>
+      <p id="p-00130-en" num="0134">By virtue of substantially the same processes and conditions as described in example 5, phenytoin was pulverized together with carboxymethylcellulose (CMC) that was used as additive. The particle diameters of the pulverized phenytoin were shown in <figref>FIG. 36</figref>.</p>
+      <heading id="h-00024-en" level="1">Example 9</heading>
+      <p id="p-00131-en" num="0135">By virtue of substantially the same processes and conditions as described in example 5, phenytoin was pulverized together with microcrystalline cellulose (MCC) that was used as additive. The particle diameters of the pulverized phenytoin were shown in <figref>FIG. 36</figref>.</p>
+      <heading id="h-00025-en" level="1">Example 10</heading>
+      <p id="p-00132-en" num="0136">By virtue of substantially the same processes and conditions as described in example 5, phenytoin was pulverized together with low substituted hydroxy-propylcellulose (L-HPC) that was used as additive. The particle diameters of the pulverized phenytoin were shown in <figref>FIG. 36</figref>.</p>
+      <heading id="h-00026-en" level="1">Example 11</heading>
+      <p id="p-00133-en" num="0137">By virtue of substantially the same processes and conditions as described in example 5, phenytoin was pulverized together with hydroxypropyl-cellulose (HPMC) that was used as additive. The particle diameters of the pulverized phenytoin were shown in <figref>FIG. 36</figref>.</p>
+      <p id="p-00134-en" num="0138">In <figref>FIG. 36</figref>, the item of nano % indicates a rate of pulverized particles having a diameter of 1 μm and below. The items of D10, D50 and D90 mean a particle diameter of 10%, 50% and 90% on an ogive curve, respectively. In addition, comparing with the result of the individual pulverization of phenytoin, a certain quantity of large particles was observed as a result of the concurrent pulverization of phenytoin and the additives except Methacrylic Acid Polymer (Eudragit L100). Those large particles may be observed for the reason that those additives are inherently hard-to-pulverized and some of the additives remain as large particles. As a consequence, the large particles magnify the entire particle size.</p>
+      <heading id="h-00027-en" level="1">Example 12</heading>
+      <p id="p-00135-en" num="0139">In order to verify the degree of improvement of solubility of the concurrently pulverized materials, which was obtained by concurrently pulverizing the test compound (phenytoin) made by example 5 and the additive (Hypromellose-Acetate-Succinate (HPMCAS)), the dissolution test was carried out as follows. A 33.3 mg sample of the pulverized materials was suspended in the water, which does not contain Tween80, to obtain a suspension. Then the suspension was put into a 900 mL test liquid (50 Mm phosphate buffer solution, pH6.8) and examined under the condition of 75 rpm in compliance with the pharmacopoeia second law (paddle method). The results of the examination are shown in <figref>FIG. 5</figref>.</p>
+      <heading id="h-00028-en" level="1">Reference Example 1</heading>
+      <p id="p-00136-en" num="0140">A sample consisting of only a compound (phenytoin) to be pulverized was individually pulverized under the conditions shown in Example 5 to obtain a pulverized material, which was used to carry out the dissolution test as follows. A 66.7 mg sample of the pulverized material was suspended in the water, which contains a 0.1%(w/v) Tween80, to obtain a suspension. Then the suspension was put into the 900 mL test liquid and examined under the condition of 75 rpm in compliance with the pharmacopoeia second law (paddle method). As a result, it was found that the compound could be pulverized into the particles having a diameter of 0.1 μm or below by the individual pulverization, however, the pulverized particles agglutinate in the test liquid, so that the solubility of the pulverized particles was not improved, or rather became worse (Refer to <figref>FIG. 6</figref>).</p>
+      <heading id="h-00029-en" level="1">Reference Example 2</heading>
+      <p id="p-00137-en" num="0141">Before the dissolution test of reference example 1 was carried out, the pulverized material prepared in reference example 1 was mixed with commercially available additives (lactose and L-HPC) in a vessel by hand. Then, the dissolution test was performed as for a mixture of the pulverized material and the additives. As a result of the dissolution test, it was found that the solubility of the compound was improved a little bit, however, the advantages of pulverization was not realized sufficiently (Refer to <figref>FIG. 7</figref>).</p>
+      <heading id="h-00030-en" level="1">Example 13</heading>
+      <p id="p-00138-en" num="0142">By virtue of substantially the same processes and conditions as described in example 12, the test compound (phenytoin) was concurrently pulverized together with polyvinylpyrrolidone (PVP) that was used as additive and then, the degree of improvement of solubility of the concurrently pulverized materials was verified. The test result is shown in <figref>FIG. 8</figref>.</p>
+      <heading id="h-00031-en" level="1">Example 14</heading>
+      <p id="p-00139-en" num="0143">By virtue of substantially the same processes and conditions as described in example 12, the test compound (phenytoin) was concurrently pulverized together with Methacrylic Acid Polymer (Eudragit L100) that was used as additive and then, the degree of improvement of solubility of the concurrently pulverized materials was verified. The test result is shown in <figref>FIG. 9</figref>.</p>
+      <heading id="h-00032-en" level="1">Example 15</heading>
+      <p id="p-00140-en" num="0144">By virtue of substantially the same processes and conditions as described in example 12, the test compound (phenytoin) was concurrently pulverized together with carboxymethylcellulose (CMC) that was used as additive and then, the degree of improvement of solubility of the concurrently pulverized materials was verified. The test result is shown in <figref>FIG. 10</figref>.</p>
+      <heading id="h-00033-en" level="1">Example 16</heading>
+      <p id="p-00141-en" num="0145">By virtue of substantially the same processes and conditions as described in example 12, the test compound (phenytoin) was concurrently pulverized together with microcrystalline cellulose (MCC) that was used as additive and then, the degree of improvement of solubility of the concurrently pulverized materials was verified. The test result is shown in <figref>FIG. 11</figref>.</p>
+      <heading id="h-00034-en" level="1">Example 17</heading>
+      <p id="p-00142-en" num="0146">By virtue of substantially the same processes and conditions as described in example 12, the test compound (phenytoin) was concurrently pulverized together with hydroxy-propylcellulose (L-HPC) that was used as additive and then, the degree of improvement of solubility of the concurrently pulverized materials was verified. The test result is shown in <figref>FIG. 12</figref>.</p>
+      <heading id="h-00035-en" level="1">Example 18</heading>
+      <p id="p-00143-en" num="0147">By virtue of substantially the same processes and conditions as described in example 12, the test compound (phenytoin) was concurrently pulverized together with hydroxypropyl-cellulose (HPMC) that was used as additive and then, the degree of improvement of solubility of the concurrently pulverized materials was verified. The test result is shown in <figref>FIG. 13</figref>.</p>
+      <p id="p-00144-en" num="0148">Judging from the test results stated above, the improvement of solubility of the concurrently pulverized materials according to the present invention is considered to depend upon the increase of effective superficial areas of the bulk material and the additives, which was caused by pulverizing the bulk material and the additives, and/or the increase of degree of wettability caused by the additives.</p>
+      <heading id="h-00036-en" level="1">Example 19</heading>
+      <p id="p-00145-en" num="0149">In this example, the solubility of the original bulk (phenytoin) to be pulverized and the solubility of a mixture of the original bulk (phenytoin) and commercially available additives (Eudragit L100, HPMC, PVP, MCC, L-HPC, CMC, HPMCAS) were measured. The solubility of the mixtures each were measured as follows: a 50 mg phenytoin and a 100 mg additive were put into a 900 mL test liquid (50 Mm, a phosphate buffer solution, pH6.8)(37° C.). After the solution was forcibly agitated at 250 rpm by a puddle, the concentration of phenytoin in the solution was measured at predetermined times. As a result, it was indicated that the solubility of the phenytoin pulverized with the additives were substantially the same as the solubility of the phenytoin pulverized without the additives. Consequently, it was found that the additives did not contribute to the improvement of solubility of the original bulk (phenytoin) (Refer to <figref>FIG. 14</figref>).</p>
+      <heading id="h-00037-en" level="1">Example 20</heading>
+      <p id="p-00146-en" num="0150">By virtue of substantially the same processes and conditions as described in example 12, the test compound (phenytoin) was concurrently pulverized together with an additive (PVP) and then, the solubility of concurrently pulverized phenytoin was verified. In this example, the test compound (phenytoin) and the additive (PVP) were also individually pulverized in a suspension and mixed with each other before vaporizing liquid nitrogen. Then the solubility of the individually pulverized phenytoin was verified. As a result, it was found that the solubility of the concurrently pulverized phenytoin was approximately the same as the solubility of the individually pulverized phenytoin (Refer to <figref>FIG. 15</figref>).</p>
+      <heading id="h-00038-en" level="1">Example 21</heading>
+      <p id="p-00147-en" num="0151">In this example, the test compound (phenytoin) was individually pulverized and mixed with commercially available additive (PVP) that was not pulverized. Then the solubility of the pulverized phenytoin was measured and compared with the solubility of the concurrently pulverized phenytoin (Example 13). As a result, it was found that the solubility of the individually pulverized phenytoin (this example) was not improved compared with the solubility of the concurrently pulverized phenytoin (example 13). It is assumed that it took time to dissolve the compound (phenytoin) because the particle size of the coexistent additive (PVP) was large (Refer to <figref>FIG. 16</figref>).</p>
+      <heading id="h-00039-en" level="1">Example 22</heading>
+      <p id="p-00148-en" num="0152">It is concerned that when a compound for medicine (phenytoin) is pulverized by the impact of zirconia beads, the zirconia beads are broken or worn away and the pulverized compound (phenytoin) is contaminated with the fragment of zirconia bead. Therefore, we measured the quantity of contamination of zirconia in the compound for medicine (phenytoin) when the compound (phenytoin) was pulverized by the impact of zirconia beads. The measurement was carried out under the basic pulverizing condition by use of zirconia beads (550 g, that is, 150 cc×3.66 g/cc). In addition, the preparation process for measurement comprises the steps of: adding phenytoin (0.1 g) as material to be pulverized to sulfuric acid; heating and dropping nitric acid to break down organic matter; verifying the complete dissolution by visual observation and then diluting by adding ultrapure water to become a given weight. The measurement was carried out by ICP-MS method (measuring mass number: Zr (90); analytical curve: 0, 1, 2, 5 ppb (A 1,000 ppm standard solution was diluted and used.). As a result of measurement, zirconium was 0.24 ppm (0.32 ppm as a quantity of zirconia). Considering that the residual quantity of common metals is 10 ppm, the quantity of zirconia is very little.</p>
+      <heading id="h-00040-en" level="1">Example 23</heading>
+      <p id="p-00149-en" num="0153">In order to verify a homogeneous mixing rate of a mixture in liquid nitrogen, phenytoin and polyvinylpyrrolidone (PVP) as an additive, both of which were not pulverized, were mixed in the weight ratio of 1:99 and in the weight ratio of 10:90, while the total weight of each of the mixtures was 15 g. The both mixtures were naturally dispersed in liquid nitrogen, respectively, and then the slurries each were stirred lightly to vaporize liquid nitrogen at room temperature. In each of the mixtures, in which phenytoin and polyvinylpyrrolidone (PVP) were mixed in the weight ratio of 1:99 and 10:90, ten samples of the mixture were taken from ten sites. Then the quantities of the compounds in each sample were measured. As a result, it was found that a highly homogeneous mixing could be realized in the mixtures and thereby, the effect of example 20 could be demonstrated. In Table 9 and 10, RSD means a relative standard deviation value, which is preferably equal to or less than 5 to 6.</p>
+      <p id="p-00150-en" num="0154">In <figref>FIG. 37</figref>, the homogeneous mixing rates of the mixture, in which phenytoin and polyvinylpyrrolidone (PVP) were mixed in the weight ratio of 1:99, are shown.</p>
+      <p id="p-00151-en" num="0155">In <figref>FIG. 38</figref>, the homogeneous mixing rates of the mixture, in which phenytoin and polyvinylpyrrolidone (PVP) were mixed in the weight ratio of 10:90, are shown.</p>
+      <heading id="h-00041-en" level="1">Summary of Examples 24-28</heading>
+      <p id="p-00152-en" num="0156">
+        <figref>FIG. 17</figref> illustrates the batch bead pulverizer Ready Mill RMB-04 (vessel volume 400 ml) manufactured by AIMEX Corporation, which was used in the following examples, and <figref>FIG. 18</figref> illustrates a vertical section view of the vessel of the ready mill. Ready mill <b>11</b> is a vertical wet method medium agitator mill that comprises an electric motor and control unit assembly <b>13</b>, which are fixed on a stand <b>12</b>, and a vessel <b>14</b> detachably mounted on the assembly <b>13</b>. As illustrated in <figref>FIG. 18</figref>, the vessel <b>14</b> is enclosed with a cooling jacket <b>15</b> and an upper opening of the vessel <b>14</b> is covered by a lid <b>16</b>. A through-hole <b>17</b> is formed at a central portion of the lid <b>16</b> and a rotating shaft <b>18</b> is put into the through-hole <b>17</b>. The rotating shaft <b>18</b> is driven by the electric motor of the assembly <b>13</b>. A standard disc <b>13</b> is fixed on the rotating shaft <b>18</b> and the standard disc <b>13</b> comprising three discs arranged with a distance between adjacent discs. <figref>FIG. 19</figref> is a photograph of the standard disc <b>13</b> taken from a side thereof. The standard disc assembly <b>13</b> is provided with a through-hole <b>19</b><i>d</i>, <b>19</b><i>e</i>, <b>19</b><i>f </i>and an agitating projection <b>19</b><i>g</i>, <b>19</b><i>h</i>, <b>19</b><i>i </i>that are formed on the disc <b>19</b><i>a</i>, <b>19</b><i>b</i>, <b>19</b><i>c</i>, respectively. The through-hole <b>19</b><i>d</i>, <b>19</b><i>e</i>, <b>19</b><i>f </i>each have openings on the upper and lower surfaces of the corresponding disc, while the agitating projection <b>19</b><i>g</i>, <b>19</b><i>h</i>, <b>19</b><i>i </i>each project downwardly from the lower surface of the corresponding disc. <figref>FIG. 20</figref> is a photograph of a disc assembly having rotating wings taken from a side thereof, which comprises rotating wings that is substituted for the lowest disc <b>19</b><i>e</i>. The rotating wings of the disc assembly carry out the function of agitating the slurry accumulated in the vicinity of the bottom of the vessel <b>14</b> and moving the slurry upwardly in the vessel <b>14</b>.</p>
+      <p id="p-00153-en" num="0157">In order to pulverize and/or disperse original bulk by use of granular dry ice in a dispersing medium of liquid nitrogen in the ready mill <b>11</b>, firstly, the vessel <b>14</b> and the standard disc assembly <b>19</b> or the aforementioned disc assembly having rotating wings are attached to the ready mill <b>11</b>. Next, liquid nitrogen is poured into the vessel <b>14</b> and cooled down. After the cooling down, liquid nitrogen is poured again and then, the granular dry ice is put into the liquid nitrogen. And the slurry that has been prepared by suspending the original bulk in liquid nitrogen is poured into the vessel <b>14</b> whereby the preparation for pulverization and/or dispersion of the original bulk is completed. Then the rotating shaft <b>18</b> of the ready mill <b>11</b> is driven to rotate the standard disc assembly <b>19</b> or the disc assembly with rotating wings and agitate the slurry in the vessel <b>14</b>. Thereby, the granular dry ice works on the particles of original bulk to pulverize the particles into a desired particle size and/or disperse agglomerated particles of original bulk that might exist in the slurry. In addition, a proportionate amount of liquid nitrogen has to be added to the vessel <b>14</b> according to the pulverization time by the end of pulverization because liquid nitrogen is vaporized during the pulverization. In order to determine the replenishment time and quantity of liquid nitrogen, the weight of the vessel <b>14</b> is continuously measured by a load cell whereby the liquid level control of liquid nitrogen is carried out. In the following examples, the pulverization was carried out by controlling the weight of the vessel <b>14</b> within the range of ±10 g on the basis of the weight of the vessel <b>14</b> at the time of immediately after commencing pulverization.</p>
+      <heading id="h-00042-en" level="1">Example 24</heading>
+      <heading id="h-00043-en" level="1">Preparation of Granular Dry Ice</heading>
+      <p id="p-00154-en" num="0158">In order to confirm as to whether granular dry ice having a desired particle diameter can be produced or not, dry ice particles were pulverized in liquid nitrogen by use of aforementioned ready mill <b>11</b>. The dry ice particles having reasonable diameters were independently pulverized in liquid nitrogen by the ready mill <b>11</b> to which the standard disc assembly <b>19</b> was attached. Table 31 represents the particle sizes of dry ice before pulverization, which were measured at <b>210</b> sites of the granular dry ice. Table 32 represents the particle sizes of dry ice after the dry ice particles were agitated in liquid nitrogen for 120 minutes, which were measured at <b>200</b> sites of the agitated dry ice.</p>
+      <p id="p-00155-en" num="0159">As shown in <figref>FIG. 39</figref>, the average diameter of the dry ice particles before they were pulverized is 375.4 μm, wherein the average value of the maximum diameters of the dry ice particles is 648.9 μm and the average value of the minimum diameters of the dry ice particles is 169.6 μm. <figref>FIG. 21</figref> shows a photograph of the particles of dry ice taken by a digital type optical microscope at <b>100</b>× magnifications before they are pulverized. In addition, as shown in <figref>FIG. 40</figref>, the average diameter of the dry ice particles after they were pulverized is 266.5 μm, wherein the average value of the maximum diameters of the dry ice particles is 452.1 μm and the average value of the minimum diameters of the dry ice particles is 114.0 μm. <figref>FIG. 22</figref> shows a photograph of the pulverized particles of dry ice taken by a digital type optical microscope at 100× magnifications. From <figref>FIG. 39</figref>, <figref>FIG. 40</figref>, <figref>FIG. 21</figref> and <figref>FIG. 22</figref>, it can be confirmed that the particle diameters of dry ice particles can be reduced by individually pulverizing dry ice particles in liquid nitrogen in the ready mill <b>11</b>. The digital type optical microscope is Digital Microscope VHX-500 manufactured by KEYENCE CORPORATION.</p>
+      <p id="p-00156-en" num="0160">As stated above, the dry ice particles can be also produced by the steps of: filling liquid nitrogen in a liquefied gas storage container, putting dry ice particles such as “Shot Dry” for shot blasting into the liquid nitrogen, and soaking the dry ice particles in the liquid nitrogen for 12 hours, wherein the liquid nitrogen and the dry ice particles are mixed so that the volume ratio of the liquid nitrogen to the dry ice particles should be 2:1. After the dry ice particles have been soaked in the liquid nitrogen for 12 hours, granular dry ice can be obtained by separating the liquid nitrogen. The granular dry ice produced can be used as dry ice beads for pulverizing materials. When cylindrical dry ice particles for shot blasting (Shot Dry), which are, for example, 3.0 mm in diameter and 5.0 to 30.0 mm in length, are soaked in liquid nitrogen for 12 hours according to the method for producing granular dry ice, the granular dry ice having the average particle diameter of 0.5 to 1.5 mm is produced.</p>
+      <heading id="h-00044-en" level="1">Example 25</heading>
+      <heading id="h-00045-en" level="1">Recovery Percentage of Pulverized Material</heading>
+      <p id="p-00157-en" num="0161">When putting liquid nitrogen into the vessel <b>4</b> of the batch bead pulverizer Ready Mill RMB-04 (vessel volume 400 ml) manufactured by AIMEX Corporation, pouring in a 150 ml dry ice having the average particle diameter of 0.5 mm and a 15 g phenytoin in the liquid nitrogen, and agitating the slurry by the standard disc assembly <b>19</b>, the recovered phenytoin was 13.18 g and the recovery percentage of phenytoin was 87%. The unrecovered phenytoin was vaporized from the vessel <b>14</b> to the atmosphere during the process for pulverization. When pulverizing phenytoin under the same conditions as mentioned above, except zirconia bead having a diameter of 0.6 mm was substituted for the dry ice, the recovered phenytoin was 5.36 g and the recovery percentage of phenytoin was 35%. The recovery percentage of phenytoin by use of dry ice should be compared with the recovery percentage of phenytoin by use of zirconia beads.</p>
+      <heading id="h-00046-en" level="1">Example 26</heading>
+      <heading id="h-00047-en" level="1">Pulverizing Phenytoin</heading>
+      <p id="p-00158-en" num="0162">In compliance with the method for producing fine powder according to the present invention, phenytoin particles were pulverized by use of the batch bead pulverizer Ready Mill RMB-04 (vessel volume 400 ml) manufactured by AIMEX Corporation, to which the standard disc assembly <b>19</b> was attached.</p>
+      <p id="p-00159-en" num="0163">The experimental conditions are as follows: <ul id="ul-00002-en" list-style="none"><li>(1) Vertical medium agitating mill: vessel volume 0.4 liter; standard disc assembly of three discs each having a diameter of 55 mm and a thickness of 5 mm</li><li>(2) Peripheral velocity of disc of the standard disc assembly: 8.05 m/s</li><li>(3) Pulverizing time: from 30 minutes to 120 minutes</li><li>(4) Volume of dry ice: 150 cc</li><li>(5) Weight of phenytoin: 15 g</li></ul></p>
+      <p id="p-00160-en" num="0169">The size of pulverized particles of phenytoin was measured by a particle size measurement apparatus SALD-2100 manufactured by SHIMADZU CORPORATION. The measured distribution of particle size is shown in <figref>FIG. 41</figref> and the average particle diameter is shown in <figref>FIG. 42</figref>.</p>
+      <p id="p-00161-en" num="0170">
+        <figref>FIG. 23</figref> is a photograph of an electron microscope (at 10000× magnifications) of the phenytoin pulverized by the method for producing fine powder according to the present invention for 30 minutes. <figref>FIG. 24</figref> is a photograph of an electron microscope (at 10000× magnifications) of the phenytoin pulverized by the method for producing fine powder according to the present invention for 60 minutes. <figref>FIG. 25</figref> a photograph of an electron microscope (at 10000× magnifications) of the phenytoin pulverized by the method for producing fine powder according to the present invention for 120 minutes. Although a coarse particle CP<b>1</b> is observed in the photograph of <figref>FIG. 23</figref>, any particles having the size equivalent to CP<b>1</b> are not found in the photographs of <figref>FIGS. 24 and 25</figref>. Thereby, the pulverization of the particles of phenytoin was progressed as the time for pulverizing advances. <figref>FIG. 26</figref> is a photograph of the mixture of phenytoin and dry ice particles, taken by a digital type optical microscope (at 100× magnifications), after pulverizing phenytoin for 30 minutes by means of granular dry ice in compliance with the method for producing fine powder according to the present invention and then vaporizing liquid nitrogen. Those electron micrographs were taken by a scanning electron microscope JSM-6060 manufactured by JEOL LTD. In addition, the aforementioned digital type optical micrographs were taken by Digital Microscope VHX-500 manufactured by KEYENCE CORPORATION.</p>
+      <p id="p-00162-en" num="0171">Judging from <figref>FIG. 41</figref>, <figref>FIG. 42</figref>, <figref>FIGS. 23-26</figref>, it is found that phenytoin is pulverized by dry ice particles in compliance with the method of the present invention.</p>
+      <heading id="h-00048-en" level="1">Example 27</heading>
+      <heading id="h-00049-en" level="1">Pulverizing Indomethacin</heading>
+      <p id="p-00163-en" num="0172">In compliance with the method for producing fine powder according to the present invention, indomethacin particles were pulverized by use of the batch bead pulverizer Ready Mill RMB-04 (vessel volume 400 ml) manufactured by AIMEX Corporation, to which the standard disc assembly <b>19</b> was attached.</p>
+      <p id="p-00164-en" num="0173">The experimental conditions are as follows: <ul id="ul-00003-en" list-style="none"><li>(1) Vertical medium agitating mill: vessel volume 0.4 liter; standard disc assembly of three discs each having a diameter of 55 mm and a thickness of 5 mm</li><li>(2) Peripheral velocity of disc of the standard disc assembly: 8.05 m/s</li><li>(3) Pulverizing time: from 30 minutes to 120 minutes</li><li>(4) Volume of dry ice: 150 cc</li><li>(5) Weight of indomethacin: 15 g</li></ul></p>
+      <p id="p-00165-en" num="0179">The size of pulverized particles of indomethacin was measured by a particle size measurement apparatus SALD-2100 manufactured by SHIMADZU CORPORATION. The measured distribution of particle size of indomethacin is shown in <figref>FIG. 43</figref> and the average particle diameter is shown in <figref>FIG. 44</figref>.</p>
+      <p id="p-00166-en" num="0180">
+        <figref>FIG. 27</figref> is an electron micrograph (at 10000× magnifications) of indomethacin pulverized for 60 minutes in compliance with the method for producing fine powder according to the present invention. <figref>FIG. 28</figref> is an electron micrograph (at 1000× magnifications) of indomethacin pulverized for 120 minutes in compliance with the method for producing fine powder according to the present invention. Although a coarse particle CP<b>1</b> is observed in the photograph of <figref>FIG. 27</figref>, any particles having the size equivalent to CP<b>1</b> are not found in the photograph of <figref>FIG. 28</figref>. Thereby, the pulverization of the particles of indomethacin was progressed as the time for pulverizing advances. Those electron micrographs were taken by a scanning electron microscope JSM-6060 manufactured by JEOL LTD.</p>
+      <heading id="h-00050-en" level="1">Example 28</heading>
+      <heading id="h-00051-en" level="1">Concurrently Pulverizing Phenytoin and Polyvinylpyrrolidone (PVP)</heading>
+      <p id="p-00167-en" num="0181">In compliance with the method for producing fine powder according to the present invention, phenytoin 7.5 g and polyvinylpyrrolidone (PVP) 7.5 g were concurrently pulverized by use of dry ice beads in the batch bead pulverizer Ready Mill RMB-04 (vessel volume 400 ml) manufactured by AIMEX Corporation, to which the standard disc assembly <b>19</b> was attached. The results of the concurrently pulverizing are shown in <figref>FIG. 45</figref>.</p>
+      <p id="p-00168-en" num="0182">The experimental conditions are as follows: <ul id="ul-00004-en" list-style="none"><li>(1) Vertical medium agitating mill: vessel volume 0.4 liter; standard disc assembly of three discs each having a diameter of 55 mm and a thickness of 5 mm</li><li>(2) Peripheral velocity of disc of the standard disc assembly: 8.05 m/s</li><li>(3) Pulverizing time: from 30 minutes to 120 minutes</li><li>(4) Volume of dry ice: 150 cc</li><li>(5) Weight of phenytoin: 7.5 g</li><li>(6) Weight of polyvinylpyrrolidone (PVP): 7.5 g</li></ul></p>
+      <p id="p-00169-en" num="0189">In <figref>FIG. 45</figref>, the item of quantitative value (%) indicates a ratio of phenytoin composition included in concurrently pulverized materials to feed composition. If the quantitative value is equal to or more than 90%, the pulverizing process is of practical use. From <figref>FIG. 45</figref>, it is found that the quantitative value (%) obtained from the samples pulverized by dry ice beads is far higher than the quantitative value (%) obtained from the sample pulverized by zirconia beads.</p>
+      <p id="p-00170-en" num="0190">The above experiment used the batch bead pulverizer Ready Mill RMB-04 (vessel volume 400 ml) manufactured by AIMEX Corporation, to which the standard disc assembly <b>19</b> was attached. In addition to the above experiment, phenytoin 7.5 g and polyvinylpyrrolidone (PVP) 7.5 g were concurrently pulverized by use of dry ice beads in the batch bead pulverizer Ready Mill RMB-04 (vessel volume 400 ml) manufactured by AIMEX Corporation, wherein the disc assembly having rotating wings as shown in <figref>FIG. 20</figref> was substituted for the standard disc assembly <b>19</b>. As a result of this concurrent pulverization, it was found that the combination of the dry ice beads and the disc assembly having rotating wings significantly contributed to the enhancement of solubility as shown in <figref>FIG. 46</figref>. Since the disc assembly with rotating wings produces such an excellent stirring effect for enhancing the pulverization of materials, it is observed from <figref>FIG. 46</figref> that the solubility of approximately 90% could be attained at the pulverization time of 60 minutes.</p>
+      <p id="p-00171-en" num="0191">As a result of concurrently pulverizing phenytoin and polyvinylpyrrolidone (PVP) by using a combination of the dry ice beads and the disc assembly with rotating wings, it was also found that the quantitative value (%) and the RSD value (relative standard deviation), which indicates dispersion of measured values, were also high as the solubility was high. As the RSD value (relative standard deviation) reduces, the degree of homogeneous mixing of phenytoin and PVP increases. In general, it is considered that the degree of homogeneous mixing may be at practical level if the RSD value would be approximately equal to or less than 5.0%. In addition, the quantitative value (%) indicates the ratio of phenytoin composition included in the concurrently pulverized materials to feed composition. It is also considered that the degree of homogeneous mixing may be at practical level if the quantitative value would be equal to or more than 90%. It is found from <figref>FIG. 47</figref> that the dry ice beads effectively stirred by the disc assembly with rotating wings enhance the mixing of phenytoin and PVP.</p>
+      <heading id="h-00052-en" level="1">INDUSTRIAL APPLICABILITY</heading>
+      <p id="p-00172-en" num="0192">The present invention is not limited to the application to pulverization of medicine and is applicable to a broad range of technology such as cosmetics, toner, water base paint, materials for LCD displays, parts of digital cameras, recording medium, materials of solar batteries, parts of cellular phones, substrates, parts of electric automobiles, thermo-sensitive enamel paper, and development of DDS (Drug Delivery System).</p>
+      <heading id="h-00053-en" level="1">INDICATION OF REFERENCE NUMERALS</heading>
+      <p id="p-00173-en" num="0000">
+        <ul id="ul-00005-en" list-style="none">
+          <li>
+            <b>1</b>: vessel</li>
+          <li>
+            <b>2</b>: rotating shaft</li>
+          <li>
+            <b>3</b>: disc</li>
+          <li>
+            <b>4</b>: beads</li>
+          <li>
+            <b>11</b>: vertical wet method medium agitating mill</li>
+          <li>
+            <b>14</b>: vessel</li>
+          <li>
+            <b>18</b>: rotating shaft</li>
+          <li>
+            <b>19</b>: standard disc assembly</li>
+          <li>
+            <b>19</b>
+            <i>a</i>, <b>19</b><i>b</i>, and <b>19</b><i>c</i>: disc</li>
+        </ul>
+      </p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for producing fine powder, comprising the steps of:
+<claim-text>suspending two or more kinds of original materials in liquefied inert gas used as disperse medium to form two or more kinds of slurries, wherein each slurry contains at least one or more different kinds of original materials;</claim-text><claim-text>putting grinding medium in said slurries, wherein the grinding medium consists essentially of granular dry ice;</claim-text><claim-text>stirring said slurries individually and pulverizing said original materials into submicron-sized and/or nano-sized particles in said liquefied inert gas;</claim-text><claim-text>mixing said slurries; and</claim-text><claim-text>vaporizing said liquefied inert gas and sublimating said granular dry ice, and recovering a mixture of the particles of said two or more kinds of original materials.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said original materials comprise bulk of medicines and additives for medicines.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method as recited in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein said additives are water-soluble additives or dispersion accelerating agents for medicines, selected from the group consisting of Hypromellose-Acetate-Succinate (HPMCAS), polyvinylpyrrolidone (PVP), Methacrylic Acid Polymer (Eudragit L100), carboxymethylcellulose (CMC), microcrystalline cellulose (MMC), low substituted hydroxy-propylcellulose (L-HPC), hydroxypropyl-cellulose (HPMC), and lactose.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said liquefied inert gas is liquid nitrogen, liquid helium, liquid neon, liquid argon, liquid krypton, or liquid xenon.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said grinding medium is zirconia, agate, quarts, titania, tungsten carbide, silicon nitride, alumina, stainless steel, soda glass, low soda glass, soda less glass, high density glass or dry ice (carbon dioxide, nitrous oxide), and the diameter of said grinding medium is within the range from 0.03 to 25 mm.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the particle diameter of said granular dry ice reduces as said original materials are pulverized.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said original materials are pulverized to the particles having desired sizes without exchanging said granular dry ice.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said disperse medium does not include dispersion agents.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said granular dry ice comprises solid particles of carbon dioxide and the particle diameters of said solid particles are in the range from 0.01 to 25.00 mm.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said granular dry ice comprises solid particles of carbon dioxide and the particle diameters of said solid particles are in the range from 0.30 to 1.00 mm.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said granular dry ice comprises solid particles of carbon dioxide and the diameters of said solid particles are in the range from 0.03 to 0.30 mm.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said liquefied inert gas is at least one liquefied gas selected from the group of liquid nitrogen, liquid helium, liquid neon, liquid argon, liquid krypton, and liquid xenon.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The fine powder made of the mixture of submicron-sized and/or nano-sized particles of said two or more kinds of original materials produced by the method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said liquefied inert gas is liquid nitrogen and said slurries are stirred individually by a ball mill.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method as recited in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said granular dry ice is produced by soaking dry ice in liquid nitrogen for a predetermined time.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method as recited in <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein said dry ice is soaked in the liquid nitrogen for approximately twelve hours.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method as recited in <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the volume ratio of said liquid nitrogen to said dry ice is 2:1.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. A method for producing granular dry ice suitable for grinding medium for a pulverizer, comprising the steps of:
+<claim-text>putting dry ice into liquid nitrogen that is preserved in a vessel;</claim-text><claim-text>soaking said dry ice in said liquid nitrogen for a predetermined time to produce granular dry ice; and</claim-text><claim-text>separating said granular dry ice from said liquid nitrogen.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method as recited in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein said dry ice is soaked in said liquid nitrogen for approximately twelve hours.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method as recited in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the volume ratio of said liquid nitrogen to said dry ice is 2:1.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method as recited in <claim-ref idref="clm-00020-en">claim 20</claim-ref>, comprising the steps of:
+<claim-text>putting adequate amount of dry ice into said liquid nitrogen, wherein the piece of dry ice forms a cylindrical solid body having 3.0 mm in diameter and 5.0-30.0 mm in length; and</claim-text><claim-text>soaking the dry ice in said liquid nitrogen for approximately twelve hours to produce granular dry ice, wherein an average diameter of the dry ice grain is in the range from 0.5 to 1.5 mm. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00016.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00017.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00018.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00019.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00020.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00021.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00022.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00023.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00024.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00024.TIF" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00025.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00025.TIF" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00026.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00026.TIF" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00027.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00027.TIF" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00028.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00028.TIF" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00029.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00029.TIF" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00030.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00030.TIF" />
+    </figure>
+    <figure num="31">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00031.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00031.TIF" />
+    </figure>
+    <figure num="32">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00032.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00032.TIF" />
+    </figure>
+    <figure num="33">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00033.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00033.TIF" />
+    </figure>
+    <figure num="34">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00034.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00034.TIF" />
+    </figure>
+    <figure num="35">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00035.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00035.TIF" />
+    </figure>
+    <figure num="36">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00036.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00036.TIF" />
+    </figure>
+    <figure num="37">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00037.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00037.TIF" />
+    </figure>
+    <figure num="38">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00038.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00038.TIF" />
+    </figure>
+    <figure num="39">
+      <img he="N/A" wi="N/A" file="US20150258066A1_00039.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258066A1-20150917-D00039.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150258066A1.PDF" type="pdf" size="4261780" pages="54" />
+</lexisnexis-patent-document>

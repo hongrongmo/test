@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150264947A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150924" time-inserted="021031" date-changed="20151226" time-changed="173136">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121423980">
+        <country>US</country>
+        <doc-number>20150264947</doc-number>
+        <kind>A1</kind>
+        <date>20150924</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14438336</doc-number>
+        <date>20131017</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20151001">
+      <unexamined-printed-without-grant>
+        <date>20150924</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151001">
+      <classification-ipcr sequence="1">
+        <text>A23B   4/03        20060101AFI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>4</main-group>
+        <subgroup>03</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A23B   4/01        20060101ALI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>4</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A23B   4/22        20060101ALI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>4</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151001">
+      <classification-cpc sequence="1">
+        <text>A23B   4/03        20130101 FI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>4</main-group>
+        <subgroup>03</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A23B   4/01        20130101 LI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>4</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A23B   4/023       20130101 LI20141017BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>4</main-group>
+        <subgroup>023</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141017</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A23B   4/22        20130101 LI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>4</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A23V2002/00        20130101 LA20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>V</subclass>
+        <main-group>2002</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">59</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150924" lang="eng" format="original">RAPID PARTIAL DRYING OF SAUSAGE LOGS</invention-title>
+    <related-documents date-changed="20150924">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61718060</doc-number>
+          <date>20121024</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150924">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>SMITHFIELD FOODS, INC.</orgname>
+            <address>
+              <city>Smithfield,</city>
+              <state>VA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kafer</last-name>
+            <first-name>Paul</first-name>
+            <address>
+              <city>Carrollton</city>
+              <state>VA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Taylor</last-name>
+            <first-name>Dave</first-name>
+            <address>
+              <city>Smithfield</city>
+              <state>VA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Roberds</last-name>
+            <first-name>James</first-name>
+            <address>
+              <city>Holt</city>
+              <state>MO</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13065435</doc-number>
+        <date>20131017</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014066133</doc-number>
+        <date>20140501</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150924">
+      <main-family family-id="173800559">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150264947</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173800558">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150264947</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150924" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A process for manufacturing dry sausage comprising rapid partial drying of sausage logs. The process includes preparing a meat mixture, stuffing the meat mixture into a casing or mould, or extruding into moulds, to form sausage logs, fermenting the sausage logs, heat treating the sausage logs, placing the sausage onto a conveyor, passing the conveyor and sausage log through a chamber, and drying the partially-dried sausage logs. The process also includes introducing a supply of conditioned air into the chamber, the air having a relative humidity below about 60% and a temperature in the range of at least about 40° F. to 130° F., and introducing a supply of microwaves into the chamber. The air supply and microwaves, as well as The drying conditions, are selected to reduce the moisture content of the meat to a predetermined moisture to protein ratio.</p>
+  </abstract>
+  <legal-data date-changed="20151226">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015264947A1</docdb-publication-number>
+      <docdb-application-id>444777600</docdb-application-id>
+      <new-owner>SMITHFIELD FOODS, INC., VIRGINIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KAFER, PAUL;TAYLOR, DAVE;ROBERDS, JAMES;REEL/FRAME:037138/0213</free-text-description>
+      <effective-date>
+        <date>20130129</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150924">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED PATENT APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This international patent application claims priority to U.S. Provisional Patent Application No. 61/718,060, filed Oct. 24, 2012, the disclosure of which is incorporated in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">The present invention relates generally to a method for preparing a dry or semi-dry sausage product comprising heat treating sausage in casings or moulds (logs), followed by partial drying using conditioned air and microwaves, and then drying in a drying chamber.</p>
+      <p id="p-00004-en" num="0004">2. Description of the Related Art</p>
+      <p id="p-00005-en" num="0005">Different processes have been used to manufacture cured, smoked, dried, and semi-dried sausages, including processes for preparing dry sausage (e.g., pepperoni, Genoa salami). In these processes, the initial meat mixture is cured and thereafter dried or heated in air, sunlight, drying rooms, or smokehouses. See FAO Corporate Document Repository (2010) “Meat Drying”. The cure and drying process may last for days or even weeks. A wide variety of final products and inconsistent qualities results from the use of well-established recipes and techniques.</p>
+      <p id="p-00006-en" num="0006">Dry sausage is typically prepared by stuffing the desired meat mixture into fibrous casings and curing the resultant product for extended periods (e.g., over 7 days). This particular sausage is most commonly served in thin slices, with or without the casing (the casing being removed after heat treating). Sliced dry sausage are used in a variety of food applications, such as toppings, sandwiches, salad bars, and are often used in making pizzas (e.g., pepperoni pizzas).</p>
+      <p id="p-00007-en" num="0007">The typical current practice is to prepare the dry sausage using conventional processes employing blending, stuffing the meat mixture into casings or moulds, or extruding into moulds, heat treating or cooking a meat mixture, and curing, following which the product is thinly sliced. The slices may then be used by consumers or by foodservice operators (e.g., toppings, sandwiches, salad bars, and pizzas). Because the drying and curing process requires from several days to several weeks, production capacity for a manufacturing facility is limited to the amount of space allocated to the drying process. This process is capital intensive, and requires a tremendous amount of product to be held in process at any given period of time. Again, the preparation process of dry sausage (e.g., pepperoni) may take days or weeks. Several patents describe methods for curing or drying dry sausage products.</p>
+      <p id="p-00008-en" num="0008">U.S. Pat. No. 2,346,232 describes the preparation of semi-dried meat for food ration purposes by exposing the meat mixture to a turbulent air flow to reduce the moisture content from an original range of 45 to 85% to a range of 20 to 55%. The air used in this process was at a temperature of 0° C. to 30° C. (32° F. to 86° F.) and the air is moved across the meat surface at a velocity of 1 to 18 feet/second. The meat products discussed in U.S. Pat. No. 2,346,232 are produced in ¼ to 1¼ inch thick layers or in ropes of ⅜-inch diameter for drying. For ⅜-inch ropes, drying reduces the moisture to 28% in 8 to 13 hours, while the 1¼-inch layers require 13 days. The benefits of turbulent flow are alleged to be increased by 40% early in the process where the air contacts a moist surface, however, the effect of the turbulent air flow of this patent is substantially reduced as the drying continues. For example, in one test reported in U.S. Pat. No. 2,346,232, drying of ⅜-inch ropes from 55% to 40% moisture took just three hours, while a further reduction to 28% required an additional five hours. U.S. Pat. No. 2,346,232 does not disclose any direct relationship between the humidity of the air used in the process and the time of drying. Further, the product is held in flat trays in the examples.</p>
+      <p id="p-00009-en" num="0009">Another process for preparing sausages is disclosed in U.S. Pat. No. 3,482,996 where the meat compositions include dehydrated, spun, edible protein fibers or dehydrated fibrous products derived from spun, edible protein fibers. The fibers allegedly take up the moisture which is removed in a drying room. U.S. Pat. No. 3,482,996, however, does not disclose the use of an air flow to dry sausage products.</p>
+      <p id="p-00010-en" num="0010">U.S. Pat. No. 4,265,918 describes a technique that includes immersion of a meat product in a curing solution, followed by vacuum dehydration. The initial hydration step is to about 105 to 125% of the product's original weight, followed by vacuum treatment to reduce the overall product weight to 70 to 95% of its original weight. U.S. Pat. No. 4,265,918 does not disclose the use of air flow to dry sausage products.</p>
+      <p id="p-00011-en" num="0011">Yet another process is described in U.S. Pat. No. 4,279,935 where bactericides and bacteriostats are first added to a meat, followed by treatment with an acidic mixture to reduce the pH to about 5.7. The sausage is then heated to 58° F. and dried to reduce the average moisture level to 35%. U.S. Pat. No. 4,279,935 discloses a drying time of 5 to 20 days and does not disclose the use of air flow to dry sausage products.</p>
+      <p id="p-00012-en" num="0012">Further a process described in WO 2005/092109 uses vacuum-drying methods for drying meat products. However, this publication does not contemplate the use of air flow to dry sausage products; in fact, it uses low air pressure.</p>
+      <p id="p-00013-en" num="0013">Additionally, these current processes require the dry sausage to be held in its casing during the curing and drying phase, thereby reducing the rate at which moisture may be removed from the product and adding to manufacturing cost. Holding the dry sausage in its casing during drying also disallows the ability to slice the product prior to drying, which would increase the surface area of the product and aid in moisture removal.</p>
+      <p id="p-00014-en" num="0014">Further, under the current process, sausage mix products are thermally treated in a chamber. This product is transferred to a drying chamber. Dry sausage products need to meet specific criteria of Moisture to Protein ratio by category (e.g., pepperoni, salami). The time it takes for product to dry is a function of the length, diameter, starting moisture, environmental conditions in the chamber and target Moisture to Protein ratio. Typically, a product will dry in about 28 days. For the longer drying time products, significant space is needed, and working capital values increase. These are detrimental to costs of production.</p>
+      <p id="p-00015-en" num="0015">Accordingly, there exists a need for a method of manufacturing dry sausage that may address or even overcome one or more of the foregoing disadvantages. Further, there exists a need for improving the quality and the manufacturing processes of dry sausages.</p>
+      <heading id="h-00003-en" level="1">BRIEF SUMMARY OF THE INVENTION</heading>
+      <p id="p-00016-en" num="0016">The present disclosure provides a number of new and useful advances that may be used together or separately. The recitation of this summary is not intended to narrow or limit the inventions described in the appended claims or any claims issuing from this or continuing applications.</p>
+      <p id="p-00017-en" num="0017">The invention provides for the use of microwave energy to rapidly partially dry sausage logs.</p>
+      <p id="p-00018-en" num="0018">In one embodiment, the method for preparing dry sausage may comprise: (a) preparing a dry sausage meat mixture; (b) stuffing the mixture into a casing or mould, or extruding into moulds, to form a sausage log; (c) fermenting the sausage log; (d) heat treating the sausage log; (e) placing the sausage log onto a conveyor; (f) passing the conveyor with the sausage log thereon through a chamber; (g) introducing into the chamber a supply of conditioned air having a relative humidity below about 60% and a temperature in the range of at least about 40° F. to 130° F.; (h) introducing a supply of microwaves into the chamber, wherein the supply of conditioned air and the supply of microwaves are selected to reduce the moisture content of the sausage log to a predetermined moisture to protein ratio; and (i) drying the sausage log, wherein the conditions are selected to reduce the moisture content of the sausage log to a predetermined moisture to protein ratio.</p>
+      <p id="p-00019-en" num="0019">In one embodiment, the method for preparing dry sausage may comprise: (a) preparing a dry sausage meat mixture; (b) stuffing the mixture into a casing or mould, or extruding into moulds, to form a sausage log; (c) fermenting the sausage log; (d) heat treating the sausage log; (e) drying the sausage log, wherein the conditions are selected to reduce the moisture content of the sausage log to a predetermined moisture to protein ratio; (f) placing the sausage log onto a conveyor; (g) passing the conveyor with the sausage log thereon through a chamber; (h) introducing into the chamber a supply of conditioned air having a relative humidity below about 60% and a temperature in the range of at least about 40° F. to 130° F.; and (i) introducing a supply of microwaves into the chamber, wherein the supply of conditioned air and the supply of microwaves are selected to reduce the moisture content of the sausage log to a predetermined moisture to protein ratio.</p>
+      <p id="p-00020-en" num="0020">In one embodiment, preparing a dry sausage meat mixture may comprise grinding and then blending the dry sausage meat mixture.</p>
+      <p id="p-00021-en" num="0021">In one embodiment, fermentation of the sausage log may be at a temperature of about 31-113° F. or about 100° F.</p>
+      <p id="p-00022-en" num="0022">In another embodiment, heat treating the sausage log may be at a temperature of about 128° F. for about 1 hour.</p>
+      <p id="p-00023-en" num="0023">In one embodiment, drying the sausage log may be under conditions of a temperature of about 55-65° F., 65-75% relative humidity, and about 0.3 feet/second air velocity, optionally performed in a drying chamber.</p>
+      <p id="p-00024-en" num="0024">In one embodiment, the method may further comprise cutting the sausage log. In another embodiment, the step of cutting the sausage log may comprise slicing the sausage log. In a further embodiment, the sausage log may be sliced into slices having a thickness of about 4 mm or less, optionally about 1-4 mm or about 3 mm. In another embodiment, the step of cutting the sausage log may comprise dicing the sausage log. In another embodiment, the step of cutting the sausage log may comprise cubing the sausage log.</p>
+      <p id="p-00025-en" num="0025">In one embodiment, the temperature of the chamber may be in the range of about 50° F. to about 120° F. In another embodiment, the temperature in the chamber may be in the range of about 40° F. to about 100° F.</p>
+      <p id="p-00026-en" num="0026">In one embodiment, the conditioned air may be passed through the chamber at a volume sufficient to cause a linear air flow velocity over the sausage log to be at least about 100 feet per minute. In another embodiment, the linear air flow velocity may be about 100 feet per minute to 2,000 feet per minute. In another embodiment, the conditioned air may be introduced into the chamber from above and below the sausage log. In another embodiment, the conditioned air may be supplied as a turbulent air flow. In another embodiment, the conditioned air may have a relative humidity of below about 50-55%. In further embodiment, the conditioned air may have a relative humidity of below about 25%.</p>
+      <p id="p-00027-en" num="0027">In one embodiment, the method may further comprise cooling the sausage log after it leaves the microwave dryer. The method of claim <b>1</b> or <b>2</b>, wherein said method further comprises cooling the sausage log, optionally to a temperature of about 0-35° F.</p>
+      <p id="p-00028-en" num="0028">In one embodiment, the method may comprise introducing the microwaves in pulses. In one embodiment, the pulses may comprise a repeating on/off cycle of about 2 to 30 seconds on, and about 2 to 30 seconds off. In another embodiment, the pulses may comprise a repeating on/off cycle of about 10 seconds on and about 7 seconds off. In another embodiment, the pulses may comprise a repeating on/off cycle of about 12 seconds on and about 12 seconds off.</p>
+      <p id="p-00029-en" num="0029">In one embodiment, the microwaves may be provided at about 2 to about 20 kilowatts. In another embodiment, the microwaves may be provided at about 8-12 kilowatts. In another embodiment, the microwaves may be provided at about 20 kilowatts.</p>
+      <p id="p-00030-en" num="0030">In one embodiment, the sausage log may remain in the chamber for less than about 30-60 minutes. In another embodiment, the sausage log may remain in the chamber for about 1-12 hours, optionally about 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, or 12 hours.</p>
+      <p id="p-00031-en" num="0031">In one embodiment, the sausage log may be pepperoni, chorizo, or salami.</p>
+      <p id="p-00032-en" num="0032">In another embodiment, the method may further comprise monitoring the sausage log using at least one of a thermal imaging device, a vision system, an inline checkweigher, near infrared (NIR) imaging system, or an infrared sensor at least one location. In another embodiment, the method may further comprise weighing the sausage log before it enters the chamber and weighing the sausage after it exits the chamber and calculating the reduction in weight of the sausage log.</p>
+      <p id="p-00033-en" num="0033">In one embodiment, the sausage log may be dried in step (i) until a moisture to protein ratio of the sausage log is reduced to about 2.3:1 or less. In one embodiment, the sausage log may be dried in step (e) until a moisture to protein ratio of the sausage is reduced to about 2.3:1 or less. In another embodiment, the sausage log may be dried until the moisture to protein ratio is reduced to about 1.6:1 or less.</p>
+      <p id="p-00034-en" num="0034">In one embodiment, the sausage log may be dried in step (h) until a moisture to protein ratio of the sausage is reduced to about 2.3:1 or less. In one embodiment, the sausage log may be dried in step (i) until a moisture to protein ratio of the sausage is reduced to about 2.3:1 or less. In one embodiment, the sausage log may be dried until the moisture to protein ratio is reduced to about 1.6:1 or less.</p>
+      <p id="p-00035-en" num="0035">In one embodiment, the air pressure in the chamber may be at least about one atmosphere.</p>
+      <p id="p-00036-en" num="0036">In another embodiment, the chamber may comprise a plurality of cavities extending along the conveyor. In another embodiment, the conditioned air and the microwaves may be provided in the same one of the plurality of cavities. In another embodiment, the conditioned air and the microwaves may be provided in different ones of the plurality of cavities. In another embodiment, the microwaves may be provided in a first one of the plurality of cavities, and the conditioned air is provided in a second one of the plurality of cavities, the second one being downstream of the first one with respect to a direction of movement of the sausage pieces or logs. In another embodiment, the no microwaves may be provided in the second one of the plurality of cavities.</p>
+      <p id="p-00037-en" num="0037">In one embodiment, the drying step (i) may be conducted for about 1-7 days, optionally about 7 days or about 6 days. In one embodiment, the drying step (i) may be conducted at about 100° F. temperature. In one embodiment, the drying step (i) may be conducted at about ≧5% humidity.</p>
+      <p id="p-00038-en" num="0038">In one embodiment, the sausage log may be about 1.5-3.5 inches (about 40-90 mm) or about 1.5-4.5 inches (about 40-115 mm) in diameter. In another embodiment, the sausage log may be about 36-72 inches (about 91-182 cm) in length.</p>
+      <p id="p-00039-en" num="0039">In another embodiment, the method may further comprise removing the outer casing after heat treatment of the sausage log. In a further embodiment, the outer casing may be removed prior to drying in the microwave oven dryer.</p>
+      <p id="p-00040-en" num="0040">One embodiment of the present invention provides a method for preparing dry sausage logs. Another aspect of the invention provides an apparatus for preparing dry sausage logs. Another embodiment may be to provide a cured dry sausage product which flows easily and which may be evenly spread on other food items (e.g., pizza.) A further aspect of the invention may be to provide a cured dry sausage product for use in sandwiches, retail dry sausage deli packaging, sliced cured dry sausage products (e.g., bags of sliced dry sausage), or inclusion in food items (e.g., soups, calzones, HOT POCKETS®).</p>
+      <p id="p-00041-en" num="0041">In another embodiment, the method may employ a microwave drying system for drying sausage logs, which may be prepared for drying by blending uncooked (and/or non-heat treated) meat products and spices and heat treating the meat mixture and stuffing it into casings or moulds or extruding into moulds. The sausage logs may then be dehydrated by using a combination conditioned air and microwaves. The temperature and humidity of the air flow within a microwave system used to dry the sausage may be controlled. For example, the microwave system may be coupled to sensors (e.g., infrared sensors), thermal imaging devices, vision systems, near infrared (NIR) imaging systems, in-line checkweighers, or feedback control system. The partially dried sausage logs may then be dried in a drying room until they reach a desired moisture-to-protein ratio.</p>
+      <p id="p-00042-en" num="0042">In another embodiment, a method for preparing heat treated and/or cooked dry sausage logs may comprise formulating a meat mixture to the desired specification and initially grinding the meat (e.g., beef and/or pork) to a size no greater than about one-half (½) inch. The meat may be then added to a blender and mixed with salt, culture, water and spices, oleoresins, and dextrose, optionally adding a cure (e.g., a source of nitrite, salt, and sugar). For example, the meat may be admixed with a cure (e.g., a source of nitrite, salt, and sugar), smoke (e.g., liquid smoke), culture, water, oleoresins, and spices. Blending may be carried out for about 5 minutes, after which a second grinding may occur, this time to a size no greater than about 3/16″. Bone may be eliminated at this stage. In another embodiment, the meat mixture may be formed by admixing the meat with salt, culture, water and spices, oleoresins, and dextrose, optionally adding a cure (e.g., a source of nitrite, salt, and sugar) and grinding the meat mixture then blending it in a blender as described herein. Also, the meat mixture may be formed by admixing the meat with salt, culture, water and spices, oleoresins, and dextrose, optionally adding a cure (e.g., a source of nitrite, salt, and sugar), blending the meat mixture, and then grinding a second time. Meat temperature may be maintained below about 40° F. in the blending and grinding process. Following the final grinding or blending step, the meat mixture may be stuffed into casing or moulds or extruded into moulds and may be transferred to ovens where it may be fermented or heat treated. For example, the meat mixture may be formulated, ground, blended and then stuffed into casings or moulds, or extruded into moulds, and then may be transferred to ovens where it may be fermented or heat treated. Also, the meat mixture may be formulated ground, blended, ground a second time, and then stuffed into casings or moulds, or extruded into moulds, and then may be transferred to ovens where it may be fermented or heat treated.</p>
+      <p id="p-00043-en" num="0043">In the present invention, the heat treated sausage may be thereafter be partially dried in a microwave dryer, a plurality of logs may be dried in a microwave dryer at a time. For example, 3, 6, 9, or 12 logs may be arranged and dried at a time. Further, 3, 6, 9, or 12 sausage logs may be arranged and dried at a time. Also, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, or 16 sausage logs may be arranged and dried together. The dry sausage may be then transferred to the conveyor of a dryer unit where it may be exposed to conditioned air maintained between about 40° F. and 100° F. and a relative humidity below about 50% for a time of about 3 to about 15 minutes, or between 40° F. and 130° F. and a relative humidity of below about 60% for a time of about 1 minute to 30 minutes. For example, the conditioned air may be maintained between about 50° F. and 120° F. The relative humidity of the conditioned air may be below about 5, 10, 15, 20, 25, 30, 40, 50, or 60%. For example, the relative humidity of the conditioned air may be about 50-55%. The relative humidity of the conditioned air may be about 25% or below. The drying time may be about 1 to 30 minutes. For example, the drying time may be about 2 to 10 minutes, 2 to 15 minutes, or 15 to 30 minutes. The drying time for the sausage logs may be 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, or 16 hours. The drying time for the sausage logs may be about 12 hours.</p>
+      <p id="p-00044-en" num="0044">Air flow through the dryer may be at least about 100 to 3,000 cubic feet per minute (cfm) at a linear air flow over the dry sausage of about 100 to 2,000 feet per minute. The air flow may be at least about 2,000 to 2.500 cfm, or at least about 2,000 cfm, and at a linear air flow over the dry sausage of about 1,000 to 1,500 feet per minute (ft/min), or at least about 180 to 900 ft/min. The linear air flow rate may be at least about 500 ft/min. Also, the linear flow rate of the air may be at a level where it is just below the point where it moves the product or blows it off the belt. Additionally, the air pressure in the dryer unit may be maintained at about atmospheric pressure (atm) (e.g., about 750 torr or 101 kPa).</p>
+      <p id="p-00045-en" num="0045">The processes and systems may comprise product quality and yield instrumentation to monitor the product quality and yield. In one embodiment, a “pre-dried” product checkweigher may check the weight of the sausage log before drying in the dryer unit. A vision/camera system may be used prior to entry of the product in the dryer unit for monitoring the product load. After the product exits the dryer unit, thermal monitoring may be used for monitoring dry sausage product quality. A “post-dried” product checkweigher may be used for yield verification prior the dry sausage product to be conveyed to the freezing unit.</p>
+      <p id="p-00046-en" num="0046">Moisture in the meat product may be reduced to ratio to meet USDA requirements and standard of identity with respect to protein. The initial moisture to protein ration may be about ≧3.0:1. The moisture to protein ratio exiting the drying chamber or microwave dryer may be about ≦3.0:1. For example, the moisture to protein ratio may be at least about 1.6:1, 1.9:1, 2.0:1, 2.03:1, 2.04:1, 2.1:1, 2.25:1, 2.3:1, or 3.1:1 after exiting the drying chamber or microwave dryer. Further, the moisture to protein ratio may be about 2.3:1 to 1.6:1 after exiting the drying chamber or microwave dryer. The moisture to protein ratio may be at least about 1.6:1-2.3:1 after exiting the drying chamber or microwave dryer. It will be understood that the moisture to protein ratio may vary depending on the particular product; for example, a Pepperoni product might have a moisture to protein ratio of 1.6, whereas a Genoa Salami product might have a moisture to protein ratio of 2.3. Also, modifications may be made to the moisture to protein ratio to obtain benefits to the physical (e.g., toughness) or chemical (e.g., taste) properties of the product. The dry sausage may be then conveyed to a chiller, where it may be chilled or frozen for packaging and subsequent transfer to the customer. Further, the moisture to protein ratio may be lower at the end of a process step than the beginning. For example, the moisture to protein ratio may be about ≧3.0:1 after the fermentation step but below about 2.3:1 after the microwave drying step.</p>
+      <p id="p-00047-en" num="0047">Yet another embodiment may be the preparation of dry sausage in a relatively small amount of manufacturing space and in a minimal amount of time as compared to prior processes.</p>
+      <p id="p-00048-en" num="0048">The foregoing and other objects and embodiments of the present invention are explained in greater detail in reference to the description set forth herein. It will be understood that the foregoing and following descriptions of objects and embodiments of the invention are provided to explain possible exemplary embodiments of the invention, and are not intended to define or limit the scope of the claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00049-en" num="0049">
+        <figref>FIGS. 1A and 1B</figref> depict an exemplary flow-charts of the processes for drying sausage logs.</p>
+      <p id="p-00050-en" num="0050">
+        <figref>FIG. 1C</figref> depicts a top schematic view of an exemplary set of equipment used to carry out microwave partial drying.</p>
+      <p id="p-00051-en" num="0051">
+        <figref>FIG. 2</figref> depicts a plan view of the line with exemplary product quality and yield instrumentation, including a “pre-dried” product checkweigher and vision/camera system for monitoring load between the loading conveyor and the dryer unit and a thermal monitoring for product quality and a “post-dried” product checkweigher for yield verification between the dryer unit and the drying chamber.</p>
+      <p id="p-00052-en" num="0052">
+        <figref>FIG. 3</figref> depicts a schematic illustration of an exemplary dryer unit showing one configuration of air flow and product flow.</p>
+      <p id="p-00053-en" num="0053">
+        <figref>FIG. 4</figref> depicts a schematic illustration of an exemplary dryer unit configuration comprising three entry points for conditioned dry air from the top of the microwave and air dryer unit, three exhaust points on the side of the dryer unit, and two supply points of microwave energy on the top of the microwave and air dryer unit.</p>
+      <p id="p-00054-en" num="0054">
+        <figref>FIG. 5</figref> is a schematic view of an exemplary dehumidifier for the supply of dry conditioned air.</p>
+      <p id="p-00055-en" num="0055">
+        <figref>FIG. 6</figref> depicts exemplary monitoring points for measuring various exemplary properties of air passing through the system.</p>
+      <p id="p-00056-en" num="0056">
+        <figref>FIG. 7</figref> depicts a top schematic view of an exemplary set of equipment used to carry out dry sausage freezing, slicing, and packaging steps.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF EXEMPLARY EMBODIMENTS</heading>
+      <p id="p-00057-en" num="0057">The invention relates to a method for preparing dry sausage comprising partial drying of logs.</p>
+      <p id="p-00058-en" num="0058">The process comprises preparing a dry sausage meat mixture; stuffing meat mixture into casing or moulds, or extruding into moulds. The meat mixture may be formed into logs. The sausage logs may be about 1.5-3.5 inches (about 40-90 mm) or about 1.5-4.5 inches (about 40-115 mm) in diameter. The sausage logs may be about 36-72 inches (about 91-182 cm) in length. The meat mixture logs may then be fermented at a temperature of at least about 100° F. for 12 hours; heat treating the meat mixture logs at a temperature at least about above 128° F. for an hour to prepare a heat treated sausage log; optionally cooling the heat treated sausage log to a temperature (e.g., about 35° F.).</p>
+      <p id="p-00059-en" num="0059">Following fermentation the outer casing is peeled away prior to entry to the microwave dryer and the partially dried sausage logs are placed into a microwave dryer system as described herein. The microwave dryer may be operated at a power level of about 8-20 kW, optionally about 8-12 kW or about 20 kW. The microwave dryer comprises several levels of belts. The microwave drying process described herein begins the drying process. The belts would move at various speeds depending on the product. The total time for completing a drying cycle of the sausage logs may be about 12-24 hours. The microwave oven may comprise several levels of belts, optionally three tiers of belts.</p>
+      <p id="p-00060-en" num="0060">The sausage logs may then be stored for drying in a drying chamber at least about 1-31 days, optionally 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, or 31 days. Drying chamber conditions about 55-65° F. and relative humidity 65-75%. The drying chamber may have an air velocity of about 0.3 feet/second for air circulation. The sausage logs may be dried for 1, 2, 3, 4, 5, 6, or 7 days. The sausage logs may be dried in the drying chamber for about 7 days. The inventors surprisingly found that this partial drying followed by drying in a drying chamber produces a dried sausage product in less than one a quarter the time than current methods.</p>
+      <p id="p-00061-en" num="0061">After exiting the drying room, logs may be packaged as whole logs, or cut into smaller pieces and packaged. For example, after exiting the drying room, the sausage logs may be sliced or diced. The dried sausage log may, optionally, be cooled to a temperature sufficiently low to permit slicing (e.g., about 35° F.).</p>
+      <p id="p-00062-en" num="0062">The method may comprise preparing a dry sausage meat mixture; stuffing meat mixture into casing or moulds, or extruding into moulds, to form a log; fermenting the sausage log at a temperature of at least about 100° F. for 12 hours; heat treating the sausage log at a temperature at least about above 128° F. for an hour to prepare a heat treated sausage log; removing the outer casing from the sausage logs; depositing the sausage logs onto the conveyor of a microwave dryer unit; passing conditioned air into and through the microwave dryer unit; and wherein the conditioned air may have a relative humidity below about 60% (e.g., about 50-55%) and a temperature in the range of at least about 40° F. to about 130° F. (e.g., about 50° F. to 120° F.) when introduced into the dryer unit; and wherein the sausage logs are processed through the dryer unit for a time sufficient to reduce the moisture to protein ratio to at least about 2.3:1. The moisture to protein ratio may be at least about 1.6:1, 1.9:1, 2.0:1, 2.03:1, 2.04:1, 2.1:1, 2.25:1, 2.3:1, or 3.1:1. For example, the moisture to protein ratio may be about 2.3:1 or 1.6:1. The microwave dryer may be operated at a power level of about 8-20 kW, optionally about 8-12 kW or about 20 kW. The relative humidity of the conditioned air may be below about 5, 10, 15, 20, 25, 30, 40, 50, or 60%. The conditioned air may have a relative humidity below about 50-55%. In another embodiment, the conditioned air may have a relative humidity below about 50% or below about 25%. The conditioned air may have a temperature of between about 40° F. and 100° F. or between about 50° F. to 120° F. The sausage logs may then be dried for about 1-7 days, optionally 7 days at drying chamber conditions 55-65° F. and relative humidity 65-75% with an about 0.3 feet/second air velocity for air circulation. The sausage logs may then be dried in a drying chamber for a time sufficient to reduce the moisture to protein ratio to at least about 2.3:1. The moisture to protein ratio may be at least about 1.6:1, 1.9:1, 2.0:1, 2.03:1, 2.04:1, 2.1:1, 2.25:1, 2.3:1, or 3.1:1. For example, the moisture to protein ratio may be about 2.3:1 or 1.6:1. See, e.g., USDA Requirements and Standard of Identity for dry sausage (MPR) in USDA Food Standards and Labeling Policy Book (2005). After exiting the drying chamber, the sausage logs may be cooled to a temperature sufficiently low to permit slicing, optionally about 0° F. to 35° F. The sausage logs may then be cut, optionally sliced or diced.</p>
+      <p id="p-00063-en" num="0063">The method comprises preparing a dry sausage meat mixture; stuffing meat mixture into casing or moulds, or extruding into moulds, to form a log; fermenting the sausage log at a temperature of at least about 100° F. for 12 hours; heat treating the sausage log at a temperature at least about above 128° F. for an hour to prepare a heat treated sausage log; depositing the sausage log onto the conveyor of a microwave dryer unit; passing conditioned air into and through the dryer unit; and wherein the conditioned air may have a relative humidity below about 60% (e.g., about 50-55%) and a temperature in the range of at least about 40° F. to about 130° F. (e.g., about 50° F. to 120° F.) when introduced into the dryer unit; and wherein the sausage log is processed through the dryer unit for a time sufficient to reduce the moisture to protein ratio to at least about 2.3:1. The sausage log may be dried in the microwave oven/dryer for about 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, or 16 hours. The microwave dryer may be operated at a power level of about 8-20 kW, optionally about 8-12 kW or about 20 kW. The sausage logs may then be dried for about 1-7 days, optionally 7 days at drying chamber conditions 55-65° F. and relative humidity 65-75% and air circulation at about 0.3 feet/second air velocity. The relative humidity of the conditioned air may be below about 5, 10, 15, 20, 25, 30, 40, 50, or 60%. The conditioned air may have a relative humidity below about 50-55%. In another embodiment, the conditioned air may have a relative humidity below about 50% or below about 25%. The conditioned air may have a temperature of between about 40° F. and 100° F. or between about 50° F. to 120° F. The moisture to protein ratio may be at least about 1.6:1, 1.9:1, 2.0:1, 2.03:1, 2.04:1, 2.1:1, 2.25:1, 2.3:1, or 3.1:1. For example, the moisture to protein ratio may be about 2.3:1 or 1.6:1. See, e.g., USDA Requirements and Standard of Identity for dry sausage (MPR) in USDA Food Standards and Labeling Policy Book (2005).</p>
+      <p id="p-00064-en" num="0064">Further, sensors for moisture content, temperature to control by time to pulse microwave energy. By the use of the microwave dryer unit and methods described herein, the overall processing time for making dry sausage may be dramatically reduced, and surprisingly the partial microwave drying was successful in driving the moisture evenly out of the sausage log, including from the center of the sausage log. The process and apparatus described herein allows for an unexpected substantial reduction in processing time and the cost associated therewith using a system which occupies relatively little plant space and is highly reliable.</p>
+      <p id="p-00065-en" num="0065">The dried sausage log may be sliced, optionally cooled to a temperature that is suitable for slicing prior to slicing. A temperature sufficiently low to permit slicing may be about 0° F. to 35° F.</p>
+      <p id="p-00066-en" num="0066">In one embodiment, the apparatus may include a Bry-Air dehumidifier system, a slicer, a tunnel chiller, and a single chamber packaging machine. The apparatus may be installed in a plant with the capability to process fermented logs, room for this equipment (e.g., near an outside wall for the Bry-Air system), and an area that is suitable for “Ready to Eat” product. Of course, multiple devices such as those described above may be operated in parallel or series at one or more stages of the process (e.g., three microwave dryers per unit arranged in series), as will be readily understood by persons of ordinary skill in the art. Also, the units described herein may be used in series (e.g., 2 or 3 microwave dryers arranged in a unit).</p>
+      <heading id="h-00006-en" level="1">DEFINITIONS</heading>
+      <p id="p-00067-en" num="0067">Unless otherwise indicated, all terms used herein have the same meaning as they would to one skilled in the art. The USDA Food Standards and Labeling Policy Book (2005) identifies ordinary understandings for many terms.</p>
+      <p id="p-00068-en" num="0068">“Dry sausage,” and “Semi-dry sausage,” as used herein, refer broadly to cured sausages that are fermented and dried. Dry sausages include but are not limited to pepperoni, chorizo, salami, Droëwors, Sucuk, Landjäger, Frizzes, Lola (Lolita), and Lyons. Semi-dry sausages are usually heated to fully heat treat and/or cook the product and partially dry it. Semi-dry sausages include, for example, semi-soft sausages and summer sausage.</p>
+      <p id="p-00069-en" num="0069">“Meat” broadly refers to red meat (e.g., beef, pork, veal, venison, buffalo, and lamb or mutton) and poultry meat (e.g., chicken, turkey, ostrich, grouse, goose, guinea, and duck). The meat used in the present invention may be “organic,” “natural,” “Kosher,” and/or “Halal”. The meat may be certified “organic” and/or “natural” by the appropriate state or Federal authorities (e.g., FDA and USDA) and/or by meeting the appropriate standards set forth by said authorities. The meat may be certified to be “Kosher” but the appropriate Rabbinical authorities (e.g., the Orthodox Union, Star-K, OK Kosher Certification) and/or by meeting the appropriate standards set forth by said authorities. The meat may be certified to be “Halal” by the appropriate authorities (e.g., Islamic Food and Nutrition Council of America).</p>
+      <p id="p-00070-en" num="0070">“Reduce,” as used herein, refers broadly to grind, dice, slice, chop up, comminute, pestle, granulate, press, cube, mince, mill, grate, grade, crush, roll, shear, divide, hew, or use any other method known in the art for changing a meat from one size to another. The resultant size of meat may be a mixture of sizes or a collection of sizes. Mixtures, collections, and assortments of sizes need not be consistent in that the mixture, collection, and assortment may contain particles of different sizes. The resultant sized meat particles may also be uniform or substantially similar in size.</p>
+      <p id="p-00071-en" num="0071">“Starter culture,” as used herein, refers broadly to an inoculum (composition) of lactic acid bacteria which converts added sugar to lactic acid producing fermented food stuffs. In particular, lactic acid bacteria are <i>Lactobacillus </i>species. In the present context, the term “lactic acid bacteria” refers broadly to a clade of Gram positive, low-GC, acid tolerant, non-sporulating, non-respiring rod or cocci that are associated by their common metabolic and physiological characteristics. In particular, lactic acid bacteria ferment sugar with the production of acids including lactic acid as well as acetic acid, formic acid, and propionic acid. Lactic acid bacteria are generally regarded as safe (“GRAS”) due to their ubiquitous appearance in food and their contribution to the healthy microflora of human mucosal surfaces. The genera of lactic acid bacteria suitable for use in this invention include but are not limited to <i>Lactobacillus, Leuconostoc, Pediococcus, Micrococcus, Lactococcus, Bifidobacterium</i>, and <i>Enterococcus</i>. Other genera of bacteria suitable for use in this invention include but are not limited to <i>Staphylococcus, Brevibacterium, Arthrobacter </i>and <i>Corynebacterium. </i></p>
+      <p id="p-00072-en" num="0072">“Poultry,” as used herein, refers broadly to category of domesticated birds kept by humans for the purpose of collecting their eggs, meat, and/or feathers, or wild birds that are harvested for similar purposes. Poultry, includes but is not limited to chickens, ducks, emu, geese, Indian peafowl, mute swan, ostrich, turkeys, guinea fowl, common pheasant, golden pheasant, and rhea.</p>
+      <p id="p-00073-en" num="0073">“USDA requirements and standard of identity,” refers broadly to the requirements and standards promulgated by the U.S. Department of Agriculture and available in the USDA Food Standards and Labeling Policy Book (2005).</p>
+      <heading id="h-00007-en" level="2">Partial Drying of Logs</heading>
+      <p id="p-00074-en" num="0074">The inventors surprisingly discovered that the combination of rapid drying using a flow of conditioned air at a low temperature in conjunction with the application of microwave energy greatly reduced the processing time and costs but maintained a desirable qualities of sausage logs, but essentially without cooking the meat or melting fat in the meat, as would be expected when applying microwave energy to sausage. Also, the partial drying of the sausage logs by subjecting them to microwave drying had the unexpected effect of rapidly drying the sausage logs to the desired meat-to-moisture ratio without cooking the sausage logs. Further, the combination of the partial microwave drying had the unexpected effect of thorough, uniform drying of the sausage logs. This was unexpected because the microwave energy would be expected to cook or render the fat, leading to an undesired uneven distribution of dried or even overcooked areas of the sausage logs. In contrast, the inventors surprisingly discovered that microwave energy in combination with conditioned dry air can facilitate rapid drying of sausage logs.</p>
+      <p id="p-00075-en" num="0075">Further the inventors surprisingly discovered that the microwave power used in partially drying sausage logs is well below the usual power range for cooking in commercial microwave ovens. For example, the method described herein may operate at a power level of about 8-12 kW or about 20 kW, in contrast with a power range of about 65-75 kW for commercial microwave ovens. This power range is well below the power range used for commercial microwave oven cooking.</p>
+      <p id="p-00076-en" num="0076">The method for rapid partial drying of sausage logs may begin with thermal processing of dry sausage logs. These logs may be formulated for pepperoni or salami, with meat ingredients (e.g., pork, beef, chicken and/or turkey in various percentages) along with non-meat ingredients such as seasonings, cure, flavorings and/or preservatives.</p>
+      <p id="p-00077-en" num="0077">The sausage logs are transferred to the microwave dryer and placed on the dryer belt. Microwave energy is introduced and controlled. The energy may be pulsed on and off for varying lengths of time (e.g., 1 second to several minutes). Conditioned air may be introduced to the dryer. The air may be dehumidified (e.g., as low as 5% relative humidity), with temperatures ranging from 70 to 120° F.</p>
+      <p id="p-00078-en" num="0078">The dryer may be a linear belt or multi-tiered dryer. For example, the microwave dryer may have 1, 2, or 3 levels of belts running through a microwave dryer. The design features periodic turning of the sausage logs to expose all surface areas equally to the conditioned air.</p>
+      <p id="p-00079-en" num="0079">This method unexpectedly reduced the drying time of logs. Currently, logs are hung in a room with conditioned air for a period of 28-35 days. This is driven by the formulation and target moisture to protein ratio (USDA defined definition for dry sausage. The ratio ranges from most dry (1.6:1 for pepperoni) to least dry (3.1 to 1). In contrast, the method described herein may reduce the drying time to a total of about 6-7 days.</p>
+      <p id="p-00080-en" num="0080">The sausage logs are placed on the belt either long edge leading (perpendicular to travel) of short edge leading (parallel to direction of travel). The sausage logs may be about 1.5-3.5 inches (about 40-90 mm) in diameter or about 1.5-4.5 inches (about 40-115 mm). The sausage logs may be about 36-72 inches (about 91-182 cm) in length. Incoming temperatures of logs may be 70 to 120° F.</p>
+      <p id="p-00081-en" num="0081">Logs may be processed in the dryer to achieve 30 to 75% of the required moisture removal (e.g., 25%, 50%, or 75%). The amount of moisture removed depends on how quickly water vapor can move from center of log to the surface without generating excessive heat that would “cook” the product. Water vapor migration is also dependent on the surface of the sausage log to be able to continue to breathe during the process, and avoid formation of crust on the skin which would hinder vapor migration.</p>
+      <p id="p-00082-en" num="0082">An uneven drying and uneven temperature profile could occur across the length of the sausage log, or from the center outward. Microwave energy may be controlled based on sensory input data from the dryer or intermediate product sensors for temperature and/or moisture. Product functionality may be impacted (e.g., taste, texture, slicing characteristics). These may be corrected by adjusting formulation or mixing and grinding parameters. The inventors surprising found that the combination of humidity control and microwave energy allows for the uniform and thorough drying of the sausage logs without formation of a crust on the skin or uneven drying.</p>
+      <p id="p-00083-en" num="0083">The residence time for the sausage logs in the microwave dryer may range from about 1-12 hours. The residence time for the sausage logs in the microwave dryer may range from about 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, or 18 hours. The residence time for the sausage logs in the microwave dryer may be about 12 hours.</p>
+      <p id="p-00084-en" num="0084">Logs would exit the microwave dryer and be transported to a drying room to finish the drying process. Drying time in this room was unexpectedly reduced from the current 28 days to about 3-18 days, optionally about 6-7 days.</p>
+      <p id="p-00085-en" num="0085">Proceeding now to a description of embodiments of the present invention, the process will be described first, and drawings will be used to illustrate an exemplary plant layout and an exemplary technique for modifying a dryer unit so that it may be used as a sausage drying apparatus and methods in the present invention.</p>
+      <heading id="h-00008-en" level="2">Formulated Meat Mixture</heading>
+      <p id="p-00086-en" num="0086">The first step of the process may be the formulation of the meat mixture (e.g., beef, pork, poultry, game) to the desired specification, including the specification for fat. These specifications may be established by the processor or the customer. Initially, the meat may be coarse ground as is well known in the dry sausage industry. The meat may be ground to a size no greater than about ⅛, ¼, ⅓, ½, ¾, or 1 inch. In one particular embodiment, the meat may be ground to a size no greater than about ½ inch.</p>
+      <p id="p-00087-en" num="0087">The formulated meat may next be placed into a blender where it is mixed with the salt, culture, water, and spices, and may further comprise oleoresins and a corn-based sweetener or sugar. The formulated meat mixture may be mixed with a cure comprising salt, a nitrite source, and sugar or corn-based sweetener (e.g., dextrose), culture, water, spices, and may further comprise oleoresins. Corn-based sweeteners include but are not limited to, corn syrup, Cerelose®, Clintose®, corn syrup solids, dextrose, fructose, high fructose corn syrup (HFCS), maltodextrins, or Staleydex®. The particular meat mixture, including spices, flavorings, salt, and cultures may be widely varied by those skilled in the art. For example, encapsulated acids (e.g., lactic, citric) may be used to lower pH in the mixture as an alternate method of preparation to possibly eliminate fermentation and thus require only thermal processing of the mixture. As another example, honey, liquid smoke, spices in liquid or powder form, seasonings in liquid or powder form may be added to the meat. Further, sugar includes but is not limited to sucrose, raw sugar, natural sugar, organic sugar, brown sugar, organic cane syrup, organic cane sugar, white sugar, natural brown sugar, muscovado sugar, refined sugar, molasses, confectioners' sugar (powdered sugar), fruit sugar, milk sugar, malt sugar, granulated guar, beet sugar, and superfine (castor) sugar. Salt includes but is not limited to natural salt, natural sea salt, natural rock salt, sea salt, sodium chloride, table salt, natural hand-harvested salt, rare artisan salt, smoked sea salt, and gourmet sea salt, and also includes salt substitutes as used in reduced sodium products, as known in the art. Nitrite sources include but are not limited to vegetable juice powder, sea salt, celery salt, celery powder, celery juice, sodium nitrate, and sodium nitrite. The culture add to the formulated meat mixture may be an inoculum (composition) of <i>Lactobacillus </i>bacteria species. The starter culture composition may be provided in any form, including but not limited to a liquid, frozen, dried, freeze-dried, lyophilized, or spray-dried. The starter culture may be mixed in water, as is conventional, before addition to the meat mixture. Further, any one, all, or a combination of these ingredients may be added to the formulated meat mixture individually, in any order, or simultaneously. The blender may operate for about 5 minutes or other length of time preferably to thoroughly mix the ingredients if desired. Additionally, the meat may be ground before it is blended with the ingredients described herein. Also, the meat mixture may be formulated, then ground, and then blended as described herein.</p>
+      <p id="p-00088-en" num="0088">Following blending, the meat mixture may be passed through a final grinder, where it is reduced to a size no greater than about 1/16, ⅛, 3/16, or ¾ inches. In one embodiment, the meat mixture is reduced to a size no greater than about 3/16 inches. A bone elimination system may be used here, if bone has not been eliminated earlier in the process. Although grind sizes may be referred to for various stages of the process described herein, these sizes may also be varied by those skilled in the art who would also appreciate the corresponding need for further process modifications, for example in connection with times and temperatures. The size may be selected according to preferences for the final product's shape, texture, flavor and so on, as known in the art. When the meat mixture exits the final grind station, it may be at least about 60° F., 50° F., 45° F., 42° F., 40° F., 39° F., 38° F., 37° F., or less. In one embodiment, the meat mixture exiting the final grind station may be about 40° F. or less.</p>
+      <p id="p-00089-en" num="0089">The inventors surprisingly discovered that the order of preparing the meat mixture had a direct effect on the quality of product produced. It was discovered that the meat mixture that was ground and then blended unexpectedly lead to a better quality product (e.g., few holes in the final sliced sausage). Without intending to be bound by any theory of operation, it is believed that this modification to conventional processes helped extract protein to encapsulate fat molecules, leading to the improved product. Regardless, in other embodiments, the meat mixture may be prepared by a blend then grinding process or an initial blend, grind, and then second blend process.</p>
+      <p id="p-00090-en" num="0000">Stuffing into Casings or Moulds (or Extruding into Moulds), Fermentation, and Heat Treating</p>
+      <p id="p-00091-en" num="0090">The next step in the process may be to mechanically stuff the meat mixture into casing or moulds, or extruding into moulds. The casing or mould size, including length, shape and diameter, may be varied, with corresponding changes in the heat treating and fermenting parameters discussed. For example, the sausage logs may be about 1.5-3.5 inches (about 40-90 mm) in diameter or about 1.5-4.5 inches (about 40-115 mm) and may be about 36-72 inches (about 91-182 cm) in length. The stuffed, extruded, or shaped logs may be transferred to ovens where fermentation takes place with the sausage temperature held about 100° F. for about 12 hours. Generally, fermentation conditions are defined by temperature, time, pH, and moisture. The end point of growth may be usually determined by time or measurement of pH. In preparing the cultured products of the present invention, the use of standard techniques for good bacteriological growth may be used.</p>
+      <p id="p-00092-en" num="0091">The fermentation may take place at a temperature of from about 31° F. to 113° F. The fermentation may take place at a temperature at about 90° F. to 110° F. about 95° to 105° F., or about 100° F. (e.g., 100.4° F.). Other fermentation temperatures may be selected in other embodiments. The fermentation of the sausage logs may take place over any suitable period to adequately prepared the sausage logs for further processing, such as for a period of about 1 to about 25 hours. Preferably the fermentation may take place over a period about 10 to about 25 hours, preferably from about 12 to about 18 hours, and most preferably about 18 hours. Fermentation may be conducted until a desired endpoint is reached, for example, until the sausage reaches a pH within the range above about 4.5 to below about 5.3. Also, fermentation may be conducted until the pH level is about 5.4. Alternatively, fermentation is conducted until the pH level drops to about 5.3 and is maintained for at least about 5 hours. See. e.g., Food Safety Regulatory Essentials Shelf-Stable Course (2005), pages 109-126, 119-120.</p>
+      <p id="p-00093-en" num="0092">The sausage may then be heat treated, such as by placing it in an oven at least about 128° F. for at least about 1 hour. It should be noted that the foregoing heat treatment specification (i.e., at least 128° F. for 1 hour) is identified in government regulations relating to processing meats (see, 9 C.F.R. §318.10), but while it may be desirable to meet such regulations using some embodiments of invention, other regulations or guidelines may be satisfied in other embodiments, or in still other embodiments no particular regulation or guideline may be followed. In a subsequent heat treating step for about 1, 2, 3, 4, 5, 1-6, 2-5, or 3-4 hours about 140° F., the internal temperature of the sausage may be raised to at least about 128° F. for at least about 1 hour.</p>
+      <heading id="h-00009-en" level="2">Drying Using a Dryer Unit</heading>
+      <p id="p-00094-en" num="0093">The sausage logs (unsliced) may be placed on the continuous conveyors of specially configured dryer unit. The dryer unit may be a microwave oven that is coupled to a conveyored air dryer, e.g., an AMTek® Microwave with Aeroglide Impingement Conveyored Dryer may be modified to be used in the present invention. The shape, size and number of linear feet of conveyor required for a given operation may be readily determined by those familiar with this technology and in view of the present disclosure, by calculating the initial moisture level, the desired final moisture level, the relative humidity of the air, the total amount of water which must be removed, the temperature, and the conveyor speed, while some routine experimentation may be desirable to confirm or supplement such calculations and to determine the effects of combinations of variables and processing equipment. Additionally, spiral conveyor equipment is known for a variety of food preparation processes and may be used. In spiral conveyor equipment, a food product may be frozen or heated as it moves along a conveyor which forms a number of tiers or levels within a spiral system. See, e.g., U.S. Pat. No. 5,942,265. Another modification expected to provide improved results is the use of a multi-belt conveyor having multiple levels of belts or side-by-side belts. In such a system, the belts may be operated in parallel (i.e., multiple processing lines in the unit), series (i.e., product passes through the unit multiple times) or both.</p>
+      <p id="p-00095-en" num="0094">The conveyor may move at speeds which may be controlled. For example a conveyor may be operated at a speed of about 50 to 300, 125 to 200, or 100 to 250 feet per minute. Also, the conveyor belt may be operated at a speed of about 5-50 feet per minute or 5 feet per minute. The microwave dryer unit may be used to reduce the amount of moisture contained in the sausage logs, from initial levels on the order of about 50% to a final moisture content where the ratio of moisture to protein is equal to or otherwise satisfies USDA Requirements and Standard of Identity. See USDA Food Standards and Labeling Policy Book (2005) and USDA Principles of Preservation of Shelf-Stable Dried Meat Products (2005). For example, the ratio of moisture to protein may be about 2.3:1, 2.2:1, 2.1:1, 2.0:1, 1.9:1, 1.8:1, 1.7:1, 1.6:1, 1.5:1, or 1.4:1. The moisture to protein ratio may be at least about 2.3:1 (e.g., Genoa salami), 2.1:1 (e.g., hard salami), or 1.6:1 (e.g., pepperoni). The ratio of moisture to protein may be about 1.9:1 or less (e.g., dry sausage).</p>
+      <p id="p-00096-en" num="0095">This reduction in moisture content may be accomplished by exposing the sausage logs for about 15-30 minutes to air flow, such as turbulent or laminar air flow, within the dryer unit with the incoming air being dried to a relative humidity of below about 60%. The sausage logs may be dried in the microwave oven for about 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, or 16 hours. The sausage logs may be dried in the microwave dryer for about 1-12 hours, optionally about 12 hours. The relative humidity of the conditioned air may be below about 5, 10, 15, 20, 25, 30, 40, 50, or 60%. For example, the relative humidity of the conditioned air may below about 50-55%. The temperature of the air entering the dryer unit may be maintained between about 50° F. to 120° F. The temperature of the air entering the dryer unit may be maintained between about 40 to 130° F., 50 to 120° F. or 60 to 110° F. The relative humidity may be below about 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%, 51%, 52%, 53%, 54%, 55%, or 60%. In one embodiment, the air may be introduced at a temperature of between 40° F. and 100° F. at a relative humidity of below 50%, and the drying time may be between 1 and 12 hours, although it is believed that even faster drying times, such as 2 hours, may be accomplished with other embodiments of the invention depending on the adjustment of the variables and the particular material being processed.</p>
+      <p id="p-00097-en" num="0096">The air flow through the dryer may be adjusted to suitably dry the product. For example, the air flow may be at least about 100 to 3,000 cubic feet per minute (cfm) at a linear air flow over the dry sausage of about 100 to 2,000 feet per minute (ft/min). The air flow may be at least about 2,000 to 2.500 cfm, or at least about 2,000 or 2,400 cfm, and/or at a linear air flow over the dry sausage of about 1,000 to 1,500 feet per minute (ft/min), or at least about 180 to 900 ft/min. Also, the air flow through the dryer may be about 1,000, 1,500, 2,000, 2,100, 2,150, 2,200, 2,300, 2,400 cubic feet per minute (ft/min) at a linear air flow over the dry sausage of about 1,000, 1.125, 1,250, 1,500, or 1,750 feet per minute (ft/min). The airflow may be turbulent, laminar, or any combination thereof. The airflow may be set at a velocity that is just below the velocity at which the sausage logs are thoroughly and evenly dried. Additionally, the air pressure in the dryer unit may be maintained at about atmospheric pressure (atm) (e.g., about 760 torr or 101 kPa) via the use of make-up air from the air flow system.</p>
+      <p id="p-00098-en" num="0097">The microwave dryer unit may also have additional scaling and monitoring equipment (e.g., vision cameras, thermal imaging devices, near infrared imaging devices (NIR)) to allow for quality and yield validation of the sausage product. For example, a “pre-dried” product checkweigher may check the weight of the sausage log (unsliced) before drying in the dryer unit. A vision/camera system may be used prior to entry of the product in the dryer unit for monitoring the product load (i.e., placement, defects, and other properties of the product). A checkweigher or other monitor also may be provided within the microwave dryer unit to confirm that processing is occurring as expected (e.g., at the expected weight and product placement on the conveyor), and such a system (or others) might be operated as part of a control feedback system. For example, if the mid-point checkweigher determines that product is still too heavy with water, later operations may be enhanced to accelerate the removal of water in the final processing steps. After the product exits the microwave dryer unit, thermal monitoring or other monitoring systems may be used for monitoring dry sausage product quality. A “post-dried” product checkweigher may be used for yield verification prior the dry sausage product to be conveyed to the freezing unit. Also, monitoring instrumentation for measuring property values of “dry” supply air and “wet” exhaust air may be included in the system.</p>
+      <p id="p-00099-en" num="0098">The conditioned air may be dried by utilizing a desiccant based system or other kinds of dehumidifier. In a desiccant based system, a wheel or other desiccant-laden part adsorbs moisture from the air, thereby providing air with very little moisture content, and then is regenerated with hot air that causes the adsorbed water to evaporate so that the desiccant material can be re-exposed to the air stream and remove moisture. Other kinds of dehumidifier might include a refrigerated coil that is used to condense moisture out of the air. Suitable dehumidifying equipment is readily available from companies such as Bry-Air, Munters, EVAPCO, and Frick. The ambient air coming off the system may be above 100° F., and the air may be cooled down to about 50° F. before re-entry. The temperature and humidity of supply air to the system at the discharge of the unit supplying the air may be measured using sensors, and the temperature and humidity of air leaving the system at the exhaust ductwork of the microwave cavity may be measured using sensors. This information may be used to control the temperature and humidity of the conditioned air. Further, multiple units may be arranged on a microwave dryer unit.</p>
+      <p id="p-00100-en" num="0099">The air flow may enter the dryer unit at several points. For example, in a dryer unit having a single microwave cavity, the cavity may have three points of entry for the air. Inside the cavity, the air may directed down onto the sausage logs, but lateral and vertical flows could be used, as could combinations of flow directions. The air flow supplying the oven may be about 1000 cubic feet per minute (cfm) to 2500 cfm. The air velocity across the surface of the sausage log may act to remove moisture and heat. The air velocity may be about 1500 feet per minute (ft/min.) Higher air flow (cfm) and air velocity (ft/min) may shorten the drying time and/or allow for higher production rates through a given system. The exhaust of the system may also be modified. For example, the system described herein may have one exhaust fan in the center of the oven and may produce about 500 cfm of exhaust. Additional exhaust fans may be added to the system with a concurrent increase in the air supply to maintain approximately neutral pressure in the oven. Additionally, the conditioned air supply may be provided from the bottom of the conveyor in the dryer unit impinging on the product from the bottom side. Impingement of the conditioned dry air may accelerate the drying process. Other modifications as described elsewhere herein may also be used.</p>
+      <p id="p-00101-en" num="0100">In units with multiple microwave cavities, each cavity may have its own separate air flow system, or the airflow may be interconnected between cavities.</p>
+      <p id="p-00102-en" num="0101">The inventors surprisingly discovered that the temperature range in which fat melts in the meat mixture is important for optimizing processing time and product quality. Fats are generally heterogeneous compositions comprising different compounds with different characteristics, and these compounds melt at different temperatures. Thus, instead of changing from a solid to a liquid quickly, certain compounds melt at a lower temperature, weakening the overall structure (e.g., the fat begins to soften). Most solid fats do not melt suddenly at a precise point, but do so gradually over a range of about 10-20° F. Eventually, all of the compounds melt and the fat becomes a liquid. Thus, the air temperature in the microwave oven and conveyor dryer may be about 40 to 130° F., or preferably 50° F. to 120° F. The upper limit of the range may be about 120° F. to 130° F. because the temperature at which fat melts depends on the fat (e.g., origin).</p>
+      <p id="p-00103-en" num="0102">Measures also may be taken to ensure the internal parts within the dryer unit do not reach excessive temperatures that would sear the meat or heat the meat by radiation. For example, the conveyor movement and airflow may be sufficient to prevent a substantial or detrimental rise in surface temperatures of the conveyor or other parts. The exact selection of the temperature may vary depending on the composition of the fat in the particular meat(s) being processed. Additionally, thermal imaging, near-infrared (NIR) imaging, or vision systems may coupled with the dryer unit to allow control of microwave power, belt speed, air flow, and air temperature. Sensors and other control systems may also be coupled with the dryer unit to allow monitoring of the production process (e.g., temperature, air flow).</p>
+      <p id="p-00104-en" num="0103">The ability to remove moisture from the core of the sausage log through to the surface without experiencing temperatures that could render the fat molecules has been a challenge in the art. Hence it was expected that microwave energy would render the fat in the sausage logs leading to an undesired uneven cooking effect, e.g., incomplete drying, an uneven distribution of cooked portions in the sausage log, large holes, poor flavor and color characteristics. The inventors surprisingly discovered that pulsing the microwave energy will be pulsed. Further, method may utilize a control system to monitor inlet and outlet moisture percentage of the air as a means of calculating moisture removal rates. The system may also feature internal infrared thermometers to monitor surface temperature of the sausage logs. Additionally, the belting may be constructed as to allow for maximum airflow but keep the sausage logs in position throughout the process.</p>
+      <p id="p-00105-en" num="0104">As will be understood from this disclosure, loading characteristics of different products (either other kinds of sausage or products in different shapes), might require variations to the processing variables, which can be readily determined with routine experimentation in view of the present disclosure.</p>
+      <p id="p-00106-en" num="0105">Another characteristic of the microwave drying process is to drive the air flow down through the center of the conveyor over the food product. Although air distribution systems are known in the art, its use for drying dry sausage, particularly in combination with applying microwave energy, is not. The air drying method described herein combines low humidity and low temperature with a dry air flow down the center of the food product that unexpectedly produced a dried sausage product in a greatly reduced period of time (e.g., minutes versus days or weeks). The inventors surprisingly discovered that the low temperature and low humidity combination coupled with the direction of an conditioned air flow down the center of the food product in the microwave oven greatly reduced the processing time (e.g., curing time) of the dried sausage. This is in contrast to traditional curing processes which are long periods of time from days to weeks.</p>
+      <p id="p-00107-en" num="0106">As will become more apparent when the plant layout is described later in this application, the appropriate characteristics for the air entering the dryer unit may be accomplished by the use of microwave energy but also using both steam coils and refrigeration coils. Any commercially available microwave oven may be used. For this application, and depending on ambient conditions existing in the plant, there may be a need to heat the air, or to cool it, and refrigeration systems are highly desirable to assist in water removal as is well known in the air-handling art. It is also possible to modify the system which will be described shortly to include chemical desiccant systems for moisture removal. Further information regarding the dryer will be provided in a subsequent section of the specification. For example, a system for the rapid preparation of dry sausage may produce at least about 1,700 lb/hour of finished product. The system also may be adapted to better meet space requirements, for example, the oven may be wider instead of longer to conserve floor space.</p>
+      <heading id="h-00010-en" level="2">Drying Chamber</heading>
+      <p id="p-00108-en" num="0107">The heat treated sausage logs may then be partially dried in a drying chamber for about 1-7 days, optionally about 6 or 7 days. The sausage logs may be dried for about 1-7 days, optionally 7 days at drying chamber conditions 55-65° F. and relative humidity 65-75% and air circulation at about 0.3 feet/second air velocity. The sausage logs may be stored for drying in a drying chamber at least about 1-31 days, optionally 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, or 31 days. The sausage logs may be dried for 1, 2, 3, 4, 5, 6, or 7 days. The sausage logs may be dried for about 7 days. The sausage logs may be dried for about 6 days. The inventors surprisingly found that this partial drying prior to microwave cooking/drying produces a dried sausage product in less than one a quarter the time than current methods.</p>
+      <heading id="h-00011-en" level="2">Freezing Tunnel</heading>
+      <p id="p-00109-en" num="0108">Returning to the overall process characteristics, the sausage logs may be conveyed from the microwave cabinet to a freezing tunnel or other system for chilling or freezing the product for packaging or transfer for use with the particular final product (e.g., pizza, sandwich meat, calzones.) While drying may be completed in about 1 to about 30 minutes (e.g., 2 to 10 minutes), the time required for freezing or chilling the product, to below about 35° F. (e.g., about 0° F. to 35° F.), may be dependent upon the length of the freezer tunnel, the temperatures maintained therein and conveyor speeds. The product may be spend about 1-30 minutes in a continuous freeze tunnel or freezing could take place in a chamber or room where freezing may take about 6-24 hours to chill down to 35° F. The heat treated sausage logs may then be cooled, such as by cooling to an internal temperature of about 35° F. or below. For example, the final temperature of the heat treated sausage may be about 0° F. to 35° F. In most embodiments, the product may be frozen after drying is complete. For example, the product may be dried in a drying chamber and then in a microwave dryer oven, followed by chilling in a continuous freeze tunnel or freezing chamber. Also, the product may be dried in a microwave dryer oven and then a dryer room, followed by chilling in a continuous freeze tunnel or freezing chamber.</p>
+      <heading id="h-00012-en" level="2">Cutting (Slicing or Dicing)</heading>
+      <p id="p-00110-en" num="0109">The sausage logs may be sliced using a slicer (e.g., a Weber Model 905 slicer) to a size of about 4 mm or less. The slices may be about 1.25 mm to 2.5 mm. For example, the slice may be about 1, 1.1, 1.2, 1.22, 1.23, 1.24, 1.25, 1.3, 2, 2.5, 3, 3.18, 3.5, 4, 4.5, or 5 mm. The slices may be 1.25 mm or 2.5 mm. In lieu of or in addition to slicing, the sausage logs may be diced or cubed to form different shape products. Conventional dicing processes may be used, as known in the art. As with sliced product, the size of the diced product might implicate the further processing steps. Conventional cubing processes may be used and are known in the art. As with the sliced product, the size of the cubed product might implicate further processing steps.</p>
+      <p id="p-00111-en" num="0110">Other types of food products may be dried at an accelerated rate in the dryer unit. The present disclosure refers generally to sausage (which takes many forms), but it could be applied to the production of other products such as jerky, dried snack sticks and others. By the use of the dryer unit described herein, the overall processing time for making dry sausage may be dramatically reduced. The process and apparatus described herein allows for a substantial reduction in processing time and the cost associated therewith using a system which occupies relatively little plant space and is highly reliable.</p>
+      <heading id="h-00013-en" level="2">Process for Making Dry Sausage</heading>
+      <p id="p-00112-en" num="0111">Proceeding now to a description of the drawings, <figref>FIG. 1C</figref> shows an exemplary plant lay-out for carrying out steps of the process of the prevent invention. The processing area is illustrated in schematic form only, as that equipment, in and of itself, may be conventional. The blending equipment—which may be provided upstream of the shown equipment—is not shown, as such equipment is well known in the art. In <figref>FIG. 1C</figref>, loading conveyor <b>200</b>, microwave dryer <b>300</b>, and dehumidifier <b>400</b>. Thus the sausage logs may be loaded intact (unsliced) onto the loading conveyor <b>200</b> and transported to the microwave dryer unit <b>300</b>. The sausage logs may be laid 1, 2, 3, 4, 5, or 6 across. The loading conveyor terminates at a transverse conveyor where product is uniformly distributed onto a continuous conveyor <b>304</b> of the dryer unit <b>300</b>. Any suitable equipment for uniformly distributing the product onto the conveyor may be used. The energy used in the dryer unit <b>300</b> may be generated by a remote microwave generator <b>301</b>. Dry conditioned air may be supplied by a dehumidifier <b>400</b>. The partially dried sausage logs may be deposited onto a conveyor. In other embodiments, the loading conveyor may terminate at a buffer, collator, shaker deck, or retractable loader. Additionally, thermal imaging, near-infrared (NIR) imaging systems, sensors, or vision systems may coupled with the dryer unit to allow control of microwave power, belt speed, air flow, and air temperature. Also, the sausage logs may be first dried in a microwave oven dryer as described herein and then dried in a drying chamber prior to final processing (e.g., chilling, slicing, and packaging).</p>
+      <p id="p-00113-en" num="0112">In <figref>FIGS. 2A and 2B</figref>, the dryer unit <b>300</b> receives the dry sausage from the fermentation process or from a drying chamber. Intact sausage logs (unsliced) may be loaded onto a loading conveyor and transported to the dryer unit <b>300</b>. The conveyor terminates at a transverse conveyor <b>201</b> where product is uniformly distributed onto the continuous conveyor <b>202</b> of the dryer unit <b>300</b>. In other embodiments, the loading conveyor may terminate at a buffer, collator, shaker deck, or retractable loader. The product within the dryer unit is exposed to a turbulent air flow where it may be dried to a relative humidity of below about 60% for about 1 to 30 minutes. The relative humidity of the conditioned air may be below about 5, 10, 15, 20, 25, 30, 40, 50, or 60%. For example, the relative humidity of the conditioned air may be below about 50-55%. Also, the relative humidity of the conditioned air may below about 25%. The drying time may also be about 2 to 10 minutes, 2 to 15 minutes, or 15 to 30 minutes. Intact sausage logs may be dried for 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, or 16 hours. The sausage logs may be dried for about 1-12 hours. The temperature of the air entering the dryer unit may be maintained between about 40° F. to 130° F. For example, the temperature of the air entering the dryer unit may be maintained between about 50° F. to 120° F. Also, the temperature of the air entering the dryer unit may be maintained between about 50° F. to 130° F. The air flow through the dryer may be at least about 100 to 3,000 cubic feet per minute (cfm) at a linear air flow over the dry sausage of about 100 to 2,000 feet per minute (ft/min). The air flow may be at least about 2,000 to 2,500 cfm, or at least about 2,400 cfm, and at a linear air flow over the dry sausage of about 1,000 to 1,500 feet per minute (ft/min), or at least about 180 to 900 ft/min. As noted above, other air properties and air flow parameters may be used.</p>
+      <p id="p-00114-en" num="0113">The microwave energy may be pre-set or actively controlled by utilizing inline checkweighers (e.g., at the entrance, middle, and discharge of oven), and/or infrared sensors to monitor the product leaving the oven and feedback to control system to adjust microwave power and/or pulse time (on/off). Additionally, thermal imaging, near-infrared (NIR) imaging systems, sensors, or vision systems may coupled with the dryer unit to allow control of microwave power, belt speed, air flow, and air temperature. For example, a “pre-dried” product checkweigher <b>312</b> may check the weight of the sausage log before drying in the dryer unit. Further, a “pre-dried” product checkweigher <b>312</b> may check the weight of the sausage log before drying in the dryer unit. A vision/camera system <b>302</b> may be used prior to entry of the product in the dryer unit for monitoring the product load. After the product exits the dryer unit, thermal monitoring system <b>303</b> may be used for monitoring dry sausage product quality. A “post-dried” product checkweigher <b>304</b> may be used for yield verification prior the dry sausage product to be conveyed to the freezing unit. Also, monitoring instrumentation for measuring property values of “dry” supply air and “wet” exhaust air may be included in the system.</p>
+      <p id="p-00115-en" num="0114">As depicted in <figref>FIG. 3</figref>, the direction of air flow <b>305</b> may be opposite the direction of the dryer unit <b>300</b>, in which case the dryer unit may maintain a gradient of dry air flowing over the sausage logs, with relatively dry air at the microwave oven's product exit, and relatively moist air <b>306</b> at the product entry end of the dryer unit <b>300</b>. The conditioned air <b>307</b> that passes over the center of the sausage logs on the conveyor may have a relative humidity of below about 50-55%, as measured when the air enters the dryer unit <b>300</b>. The conditioned air for the coupled dryer unit <b>300</b> may be introduced at the top and from the bottom, thus providing direct conditioned air over sausage logs. The conditioned air creates a “wind-chill” effect which both whisks moisture off the product surface and cools the product surface via evaporative cooling to prevent undesirable heating of the product. The inventors surprisingly discovered that this combination of the removal of the moisture and the cooling of the product surface prevented the heating of the product to the temperature at which the fat may melt (e.g., 120° F.-130° F.). This had the unexpected effect of reducing the formation of holes in the finished product which renders the finished product unusable for many applications (e.g., pizza topping or sandwich meats). A recirculating system may be used, in which dry air <b>307</b> may be supplied by a dehumidifier <b>400</b> which reduces the humidity of the exhaust air <b>306</b> received from the dryer unit <b>300</b>. In other embodiments, the system may not recirculate air. The dehumidifier may supply the dry air <b>307</b> to the dryer unit under positive pressure (e.g., about at least one atmosphere pressure, i.e., 101 kPa or 760 torr). Additionally, sensors may coupled with recirculating system to allow control of air flow, air temperature, or air pressure.</p>
+      <p id="p-00116-en" num="0115">In one configuration as depicted in <figref>FIG. 3</figref>, the conditioned air enters from one end of the drying unit and exhausts at a distant end producing a parallel-flow or cross-flow drying. See <figref>FIG. 3</figref>. For example, the microwave energy may travel through “waveguides” (depicted on the left side of the dryer unit <b>300</b>), and the dry air <b>307</b> may enter from the opposite side.</p>
+      <p id="p-00117-en" num="0116">Although <figref>FIG. 3</figref> depicts one dryer unit section, the dryer unit may be a chamber that has multiple connected or spaced apart modules that operate in series or parallel with respect to the processing path of the product. Such a dryer unit chamber may be provided, for example, by using separate microwave or/air flow cavities located within a single continuous chamber, or forming the chamber as a series of spaced microwave and/or air flow cavities. The separate cavities may be separated by microwave chokes that inhibit or block microwaves from passing between cavities. Such chokes are known in the art. Separate cavities also may be separated by restricted passages (e.g., passages that are the full width of the belt, but relatively low, such as being only 4 inches high for a 48 inch wide belt), to help isolate air flow from one microwave cavity from the next. The use of multiple cavities may be particularly beneficial to provide different processing parameters in the different cavities. For example, one cavity may have different microwave intensities and/or pulse patterns as compared to one or more other cavities. Or, one cavity may have different air flow rates, temperatures or pressures than another one of the cavities. Of course, both the microwave properties and the air properties may vary from cavity to cavity. It is expected, for example, that a process may successfully operate having microwaves provided in a first cavity (with or without a conditioned air flow), and only a conditioned air flow provided in a second, downstream, cavity.</p>
+      <p id="p-00118-en" num="0117">In <figref>FIG. 4</figref>, the conditioned dry air may be introduced into the dryer unit from the top at one, two, three, or more locations. The dryer unit <b>300</b> configuration may comprise three entry points for conditioned air <b>307</b> from the top <b>309</b> of the dryer unit <b>300</b>, three exhaust points <b>308</b> on the side of the dryer unit, and two supply points of microwave energy <b>311</b> on the top <b>310</b> of the dryer unit. The microwave supplies <b>310</b> may be simple microwave guide outlets, or they may include features to help distribute the microwave energy, such as a rotary microwave feed (e.g., a rotating disc that deflects the microwave energy emitted from the microwave guide.) The exhaust blowers <b>308</b> (or simply outlets not having blowers on them) may be connected to a common header and located below the belt line. The microwave energy may be from a generator and supplied in top of the oven <b>311</b>. In other embodiments, different arrangements of outlets may be used. For example, three outlets may be located along the bottom of the oven and dryer. Also, different airflow arrangements may be used in other embodiments. For example, in a system having three air openings on the top of the unit arranged along the product processing direction, and three air openings on the bottom of the unit arranged along the product processing direction, two upper and two lower openings may be inlets, and one upper and one lower opening may be outlets. The inlets may be the openings furthest downstream so that the air flows generally against the direction of product movement, but other arrangements may be useful.</p>
+      <p id="p-00119-en" num="0118">Air may be exhausted from one side (e.g., center and from the bottom). Air may also be exhausted on the opposite side, closer to the discharge and from the bottom. In another embodiment, the conditioned air may be supplied “up” from the bottom impinging the product from the bottom side which may further accelerate the drying process.</p>
+      <p id="p-00120-en" num="0119">In <figref>FIG. 5</figref>, the dehumidifier <b>400</b> dries the air taken from the dryer unit, preferably maintains a constant air flow rate and pressure in the dry air <b>307</b> supplied to the dryer unit. Of course, such pressure and flow rate may vary once the air passes through the dryer unit <b>300</b>. The dehumidifier <b>400</b> takes in air from the microwave oven in a return air inlet <b>401</b>, removes moisture from the air, and returns dry air to the dryer unit via a process air outlet <b>402</b>. The dehumidifier <b>400</b> may maintain air pressure via make-up air <b>403</b>, taking in air to compensate for any air leaks that occur within the dryer unit or elsewhere in the air circuit. Any suitable dehumidification system may be used. For example, the dehumidifier <b>400</b> may comprise an adsorption-type dehumidifier that uses a desiccant material that is alternately exposed to the working airstream (i.e., the airstream passing through the dryer unit) to adsorb moisture from the air, and then to a reactivation airstream that dries the desiccant. Such a system would include the shown reactivation air inlet <b>405</b> and outlet <b>404</b> for the airflow that reactivates the desiccant by drying it. For example, the desiccant may be provided on a rotating wheel that passes through the working and reactivation airflows, or in stationary beds over which the airflows are alternated. Additionally, thermal imaging, near infrared (NIR) imaging systems, sensors, or vision systems may coupled with the dehumidifier to allow control of the air humidity and air temperature. Other dehumidifiers <b>400</b> may use refrigeration coils to condense water out of the air, which may be used in conjunction with a heater to reheat the air. These and other dehumidifier systems are known in the art.</p>
+      <p id="p-00121-en" num="0120">In <figref>FIG. 6</figref>, monitoring points for evaluation and control of the conditioned air flow are shown including an end view of the dryer unit <b>300</b> and the dehumidifier <b>400</b> (e.g., desiccant wheel style). In the end view of the dryer unit <b>300</b>, the dry supply air <b>307</b> enters the dryer unit <b>300</b>, passes over the product, and then exits as relatively humid exhaust air <b>306</b>. Near the inlet of the dry supply air <b>307</b>, the relative humidity, airstream temperature, or velocity (or CFM) of the air may be monitored using probes. Near the outlet of the “wet” exhaust air <b>306</b>, the relative humidity, airstream temperature, or velocity (or CFM) of the air may be monitored using probes. Multiple locations for inlets of dry supply air <b>307</b> and outlets of wet exhaust air <b>306</b> may be included. In the dehumidifier <b>400</b>, near the process air outlet <b>402</b>, the airstream temperature, or velocity (or CFM) of the air may be monitored using probes.</p>
+      <p id="p-00122-en" num="0121">In <figref>FIG. 7</figref>, the system may comprise a conveyor that transports the sliced sausages or sausage logs to a freezer <b>500</b>. The freezer (e.g., freezing tunnel) <b>500</b> cools the dry sausage for packaging or transfer for use with the particular final product (e.g., pizza, calzones, sandwiches, packages of sliced dry sausage, dried sausage logs.) The time required for freezing or chilling the product, to below about 35° F., may be dependent upon the length of the freezer tunnel, the temperatures maintained therein and conveyor speeds. Further, the temperature of the dry sausage may be about 0° F. to 35° F. Freezers are known in the art and need not be described in detail herein. Additionally, thermal imaging, sensors, near infrared (NIR) imaging systems, or vision systems may coupled with the freezer to allow control of temperature or belt speed. The product may be chilled in a freezer for about 1-10 minutes. Also, the product may be chilled in a freezing chamber for about 6-24 hours to a temperature of about 0° F. to 35° F. The system may include one or more slicing machines <b>100</b>, each of which deposits sliced dry sausage onto a conveyor. A single slicing machine <b>100</b> is shown, but other slicing machines may deposit meat onto the conveyor. As noted herein, dicers may be used instead of slicers. Further, the product may be cubed. The cooled product is deposited on a batching conveyor <b>600</b> for transport to a packaging machine <b>700</b> then to a metal detector <b>800</b> and post-packaging. The packaging machine may be a vertical or horizontal packaging machine including but not limited to a vertical Form/Fill/Seal (VFFS) packaging machine, horizontal Form/Fill/Seal (HFFS) packaging machine, or a premade pouch packaging machine. Further, the packaging may be modified atmosphere (MAP) or vacuum packed.</p>
+      <p id="p-00123-en" num="0122">Also, the process may begin with microwave oven drying and then be followed by drying in a drying chamber prior to further processing, optionally chilling, slicing, and packaging. For example, the sausage may be fermented and heat treated then dried in an microwave oven dyer and then dried in a drying chamber or the sausage may be dried in a drying chamber and then dried in a microwave oven dryer.</p>
+      <p id="p-00124-en" num="0123">Now that the equipment and the processes have been described in sufficient detail to enable one skilled in the art to practice the preferred form of the invention, it will be even more apparent how variations of time, temperature and humidity may be made by those skilled in the art to take into account a particular processing environment. For example, relatively more heat must be added to the air flow in colder climates, while if processing were to take place in humid, warm environments, such as the southern part of the United States, especially during the summer, additional refrigeration capacity might be needed to lower humidity to a level of below about 60%. The relative humidity of the conditioned air may be below about 30, 40, 50, or 60%. For example, the relative humidity of the conditioned air may be about 50-55%. Additionally, the relative humidity of the conditioned air may be about 25%. It may also be necessary to maintain the air in a cooled condition downstream of the refrigeration coils if ambient temperatures are in excess of about 90° F., the upper end of the preferred processing range.</p>
+      <p id="p-00125-en" num="0124">Moreover, in the present invention, air flow not only dries the meat (e.g., reduces the moisture) but maintains the temperature of the sausage product below the temperature at which the fat in the meat product would melt (e.g., 120° F. to 130° F.). This avoids the problem of rendering the sausage product which occurs when the fat in the sausage product melts. For example, the use of a microwave oven alone to dry meat products may lead to melting the fat in the sausage product and this ruins the product by changing the moisture, consistency, and flavor of the sausage product. Further, the use of a microwave oven alone to dry meat products, especially sliced sausage product may leave large holes in the meat product rendering it unusable for end uses (e.g., pizza topping, sandwich meat). This is also a problem with sausage logs where microwave ovens used to dry sausage logs may leave similar large holes in the meat product making it unsuitable for slicing into sausage slices.</p>
+      <p id="p-00126-en" num="0125">Accordingly, the inventor surprisingly discovered that the combination of the use of conditioned air flow and microwave heating allows for the rapid drying of sausage logs without rendering the product. For example, the use of conditioned air flow and microwave heating allows for the rapid drying of sausage logs while achieving the desired moisture (e.g., 1.6:1 moisture-to-protein ratio or 2.3:1 moisture-to-protein ratio), consistency, and flavor. Each alone, has the problem of being limited to permeable casings and slow drying time in air flow alone; or damaging the sausage product to make it undesirable in using microwave drying alone. In the present invention, the combination of the conditioned air flow and microwave drying, it is believed that the conditioned air flow removes the moisture from the surface of the sausage product and the microwave evacuates moisture from the center of the meat product. This combination results in a synergy that allows for a more uniform and consistent drying of the meat product while maintaining the sausage product below the temperature at which the fat inside the sausage product would melt, thus avoiding problems with air flow or microwave drying alone.</p>
+      <p id="p-00127-en" num="0126">In addition to providing improved product feel and greatly reduced processing times, processes as described herein also may provide benefits to other parts of the manufacturing process. For example, the product may be in its final form and ready for packaging and shipment immediately after leaving the drying chamber (of course, it may still be chilled, sliced, stacked, or otherwise processed after leaving the drying chamber to preserve and package the meat). In this sense, it can be said that the meat is processed into its final commercial shape before it even enters the drying chamber. Despite this advantage, it may be desirable to conduct further shape processing, such as further slicing or dicing, after the product leaves the drying chamber. Indeed, such further operations may even be facilitated by the reduced moisture to protein ratio of the meat after it exits the drying chamber.</p>
+      <p id="p-00128-en" num="0127">Although certain manufacturers, model names and numbers are given for machinery used in the invention, other machinery may be substituted, as would be appreciated by those skilled in the art.</p>
+      <p id="p-00129-en" num="0128">Although certain ranges are provided for the humidity, temperature, conveyor speed, and air flow characteristics, these can be varied based on the particular volumes desired, space requirements and other needs. After reading this specification, one skilled in the art will understand that the selection of working or optimum numbers for these variables may be made once the plant and overall process parameters of a particular processing installation are known.</p>
+      <p id="p-00130-en" num="0129">Additionally, although preferred systems are disclosed for controlling the temperature and the humidity of the air conveyed to and removed from the housing for the microwave oven and conveyor, these may be varied. These may be varied by substituting, for example, chemical for mechanical systems or direct for recycle heating of the air, depending on normal plant considerations of energy cost, plant lay-out and the like, and generally the temperature and humidity values used in the process tolerate some ongoing variability due to, for instance, changes in ambient plant temperatures and humidity and other related factors.</p>
+      <p id="p-00131-en" num="0130">Although the invention has been described in some detail by way of illustration and example for purposes of clarity of understanding, it should be understood that certain changes and modifications may be practiced within the scope of the appended claims. Modifications of the above-described modes for carrying out the invention that would be understood in view of the foregoing disclosure or made apparent with routine practice or implementation of the invention to persons of skill in food chemistry, food processing, mechanical engineering, and/or related fields are intended to be within the scope of the following claims. As just one example, energy sources other than microwaves (e.g., infrared, direct or indirect heating or other radiation having radio frequencies other than microwave frequencies) may be used in conjunction with forced air to provide unexpectedly efficient product drying.</p>
+      <p id="p-00132-en" num="0131">All publications (e.g., Non-Patent Literature), patents, patent application publications, and patent applications mentioned in this specification are indicative of the level of skill of those skilled in the art to which this invention pertains. All such publications (e.g., Non-Patent Literature), patents, patent application publications, and patent applications are herein incorporated by reference to the same extent as if each individual publication, patent, patent application publication, or patent application was specifically and individually indicated to be incorporated by reference.</p>
+      <p id="p-00133-en" num="0132">Further, U.S. Provisional Application No. 61/482,821, filed May 5, 2011, and U.S. patent application Ser. No. 13/180,206, filed Jul. 11, 2011 are both incorporated herein by reference in their entirety.</p>
+      <p id="p-00134-en" num="0133">While the foregoing invention has been described in connection with this preferred embodiment, it is not to be limited thereby but is to be limited solely by the scope of the claims which follow.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>We claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150924">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for preparing dry sausage comprising:
+<claim-text>(a) preparing a dry sausage meat mixture;</claim-text><claim-text>(b) stuffing the mixture into a casing or mould, or extruding into moulds, to form a sausage log;</claim-text><claim-text>(c) fermenting the sausage log;</claim-text><claim-text>(d) heat treating the sausage log;</claim-text><claim-text>(e) placing the sausage log onto a conveyor;</claim-text><claim-text>(f) passing the conveyor with the sausage log thereon through a chamber,</claim-text><claim-text>(g) introducing into the chamber a supply of conditioned air having a relative humidity below about 60% and a temperature in the range of at least about 40° F. to 130° F.;</claim-text><claim-text>(h) introducing a supply of microwaves into the chamber,
+<claim-text>wherein the supply of conditioned air and the supply of microwaves are selected to reduce the moisture content of the sausage log to a predetermined moisture to protein ratio; and</claim-text></claim-text><claim-text>(i) drying the sausage log,
+<claim-text>wherein the conditions are selected to reduce the moisture content of the sausage log to a predetermined moisture to protein ratio.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en" independent="true">
+      <claim-text>
+        <b>2</b>. A method for preparing dry sausage comprising:
+<claim-text>(a) preparing a dry sausage meat mixture;</claim-text><claim-text>(b) stuffing the mixture into a casing or mould, or extruding into moulds, to form a sausage log;</claim-text><claim-text>(c) fermenting the sausage log;</claim-text><claim-text>(d) heat treating the sausage log;</claim-text><claim-text>(e) drying the sausage log,
+<claim-text>wherein the conditions are selected to reduce the moisture content of the sausage log to a predetermined moisture to protein ratio</claim-text></claim-text><claim-text>(f) placing the sausage log onto a conveyor;</claim-text><claim-text>(g) passing the conveyor with the sausage log thereon through a chamber;</claim-text><claim-text>(h) introducing into the chamber a supply of conditioned air having a relative humidity below about 60% and a temperature in the range of at least about 40° F. to 130° F.; and</claim-text><claim-text>(i) introducing a supply of microwaves into the chamber,
+<claim-text>wherein the supply of conditioned air and the supply of microwaves are selected to reduce the moisture content of the sausage log to a predetermined moisture to protein ratio.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein step (a) comprises grinding and then blending the dry sausage meat mixture.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein fermentation of the sausage log in step (c) is at a temperature of about 31-113° F. or about 100° F.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein heat treating of the sausage log in step (d) is at a temperature of about 128° F. for about 1 hour.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein drying the sausage log in step (i) is under conditions of a temperature of about 55-65° F., 65-75% relative humidity, and about 0.3 feet/second air velocity, optionally performed in a drying chamber.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein drying the sausage log in step (e) is under conditions of a temperature of about 55-65° F., 65-75% relative humidity, and about 0.3 feet/second air velocity, optionally performed in a drying chamber.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein said method further comprises cutting the sausage log.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the step of cutting the sausage log comprises slicing the sausage log.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the sausage log is sliced into slices having a thickness of about 4 mm or less, optionally about 1-4 mm or about 3 mm.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the step of cutting the sausage log comprises dicing the sausage log.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the step of cutting the sausage log comprises cubing the sausage log.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the temperature in step (g) is in the range of about 50° F. to about 120° F.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the temperature is in the range of about 40° F. to about 100° F.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the temperature in step (h) is in the range of about 50° F. to about 120° F.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the temperature is in the range of about 40° F. to about 100° F.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the conditioned air is passed through the chamber at a volume sufficient to cause a linear air flow velocity over the sausage log to be at least about 100 feet per minute.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the linear air flow velocity is about 100 feet per minute to 2,000 feet per minute.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the conditioned air is introduced into the chamber from above and below the sausage log.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the conditioned air is supplied as a turbulent air flow.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the conditioned air has a relative humidity of below about 50-55%.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the conditioned air has a relative humidity of below about 25%.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein said method further comprises cooling the sausage log after it leaves the microwave dryer.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein step (h) comprises introducing the microwaves in pulses.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein step (i) comprises introducing the microwaves in pulses.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The method of <claim-ref idref="clm-00024-en">claim 24 </claim-ref> or <claim-ref idref="clm-00025-en">25</claim-ref>, wherein the pulses comprise a repeating on/off cycle of about 2 to 30 seconds on, and about 2 to 30 seconds off.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The method of <claim-ref idref="clm-00024-en">claim 24 </claim-ref> or <claim-ref idref="clm-00025-en">25</claim-ref>, wherein the pulses comprise a repeating on/off cycle of about 10 seconds on and about 7 seconds off.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. The method of <claim-ref idref="clm-00024-en">claim 24 </claim-ref> or <claim-ref idref="clm-00025-en">25</claim-ref>, wherein the pulses comprise a repeating on/off cycle of about 12 seconds on and about 12 seconds off.</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the microwaves are provided at about 2 to about 20 kilowatts.</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>30</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the microwaves are provided at about 8-12 kilowatts.</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the microwaves are provided at about 20 kilowatts.</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>32</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the sausage log remains in the chamber for less than about 30-60 minutes.</claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en">
+      <claim-text>
+        <b>33</b>. The method of <claim-ref idref="clm-00032-en">claim 32</claim-ref>, wherein the sausage log remains in the chamber for about 1-12 hours, optionally about 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, or 12 hours.</claim-text>
+    </claim>
+    <claim num="34" id="clm-00034-en">
+      <claim-text>
+        <b>34</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the sausage log is pepperoni, chorizo, or salami.</claim-text>
+    </claim>
+    <claim num="35" id="clm-00035-en">
+      <claim-text>
+        <b>35</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein said method further comprises monitoring the sausage log using at least one of a thermal imaging device, a vision system, an inline checkweigher, near infrared (NIR) imaging system, or an infrared sensor at least one location.</claim-text>
+    </claim>
+    <claim num="36" id="clm-00036-en">
+      <claim-text>
+        <b>36</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein said method further comprises weighing the sausage log before it enters the chamber and weighing the sausage log after it exits the chamber and calculating the reduction in weight of the sausage log.</claim-text>
+    </claim>
+    <claim num="37" id="clm-00037-en">
+      <claim-text>
+        <b>37</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sausage log is dried in step (i) until a moisture to protein ratio is reduced to about 2.3:1 or less.</claim-text>
+    </claim>
+    <claim num="38" id="clm-00038-en">
+      <claim-text>
+        <b>38</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the sausage log is dried in step (e) until a moisture to protein ratio is reduced to about 2.3:1 or less.</claim-text>
+    </claim>
+    <claim num="39" id="clm-00039-en">
+      <claim-text>
+        <b>39</b>. The method of <claim-ref idref="clm-00037-en">claim 37 </claim-ref> or <claim-ref idref="clm-00038-en">38</claim-ref>, wherein the sausage log is dried until the moisture to protein ratio is reduced to about 1.6:1 or less.</claim-text>
+    </claim>
+    <claim num="40" id="clm-00040-en">
+      <claim-text>
+        <b>40</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sausage log is dried in step (h) until a moisture to protein ratio is reduced to about 2.3:1 or less.</claim-text>
+    </claim>
+    <claim num="41" id="clm-00041-en">
+      <claim-text>
+        <b>41</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the sausage log is dried in step (i) until a moisture to protein ratio of the sausage is reduced to about 2.3:1 or less.</claim-text>
+    </claim>
+    <claim num="42" id="clm-00042-en">
+      <claim-text>
+        <b>42</b>. The method of <claim-ref idref="clm-00040-en">claim 40 </claim-ref> or <claim-ref idref="clm-00041-en">41</claim-ref>, wherein the sausage log is dried until the moisture to protein ratio is reduced to about 1.6:1 or less.</claim-text>
+    </claim>
+    <claim num="43" id="clm-00043-en">
+      <claim-text>
+        <b>43</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the air pressure in the chamber is at least about one atmosphere.</claim-text>
+    </claim>
+    <claim num="44" id="clm-00044-en">
+      <claim-text>
+        <b>44</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the chamber comprises a plurality of cavities extending along the conveyor.</claim-text>
+    </claim>
+    <claim num="45" id="clm-00045-en">
+      <claim-text>
+        <b>45</b>. The method of <claim-ref idref="clm-00044-en">claim 44</claim-ref>, wherein the conditioned air and the microwaves are provided in the same one of the plurality of cavities.</claim-text>
+    </claim>
+    <claim num="46" id="clm-00046-en">
+      <claim-text>
+        <b>46</b>. The method of <claim-ref idref="clm-00044-en">claim 44</claim-ref>, wherein the conditioned air and the microwaves are provided in different ones of the plurality of cavities.</claim-text>
+    </claim>
+    <claim num="47" id="clm-00047-en">
+      <claim-text>
+        <b>47</b>. The method of <claim-ref idref="clm-00044-en">claim 44</claim-ref>, wherein the microwaves are provided in a first one of the plurality of cavities, and the conditioned air is provided in a second one of the plurality of cavities, the second one being downstream of the first one with respect to a direction of movement of the sausage log.</claim-text>
+    </claim>
+    <claim num="48" id="clm-00048-en">
+      <claim-text>
+        <b>48</b>. The method of <claim-ref idref="clm-00044-en">claim 44</claim-ref>, wherein no microwaves are provided in the second one of the plurality of cavities.</claim-text>
+    </claim>
+    <claim num="49" id="clm-00049-en">
+      <claim-text>
+        <b>49</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the drying step (i) is conducted for about 1-7 days, optionally about 7 days or about 6 days.</claim-text>
+    </claim>
+    <claim num="50" id="clm-00050-en">
+      <claim-text>
+        <b>50</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the drying step (e) is conducted for about 1-7 days, optionally about 7 days or about 6 days.</claim-text>
+    </claim>
+    <claim num="51" id="clm-00051-en">
+      <claim-text>
+        <b>51</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the drying step (i) is conducted at about 100° F. temperature.</claim-text>
+    </claim>
+    <claim num="52" id="clm-00052-en">
+      <claim-text>
+        <b>52</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the drying step (e) is conducted at about 100° F. temperature.</claim-text>
+    </claim>
+    <claim num="53" id="clm-00053-en">
+      <claim-text>
+        <b>53</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the drying step (i) is conducted at about ≦5% humidity.</claim-text>
+    </claim>
+    <claim num="54" id="clm-00054-en" independent="true">
+      <claim-text>
+        <b>54</b>. The method of claim e, wherein the drying step (e) is conducted at about ≦5% humidity.</claim-text>
+    </claim>
+    <claim num="55" id="clm-00055-en">
+      <claim-text>
+        <b>55</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the sausage log is about 1.5-3.5 inches (about 40-90 mm) or about 1.5-4.5 inches (about 40-115 mm) in diameter.</claim-text>
+    </claim>
+    <claim num="56" id="clm-00056-en">
+      <claim-text>
+        <b>56</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the sausage log is about 36-72 inches (about 91-182 cm) in length.</claim-text>
+    </claim>
+    <claim num="57" id="clm-00057-en">
+      <claim-text>
+        <b>57</b>. The method of <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein said method further comprises cooling the sausage log, optionally to a temperature of about 0-35° F.</claim-text>
+    </claim>
+    <claim num="58" id="clm-00058-en">
+      <claim-text>
+        <b>58</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said method further comprises removing the outer casing after step (d).</claim-text>
+    </claim>
+    <claim num="59" id="clm-00059-en">
+      <claim-text>
+        <b>59</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein said method further comprises removing the outer casing after step (e). </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150264947A1_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150264947A1-20150924-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150264947A1.PDF" type="pdf" size="974612" pages="25" />
+</lexisnexis-patent-document>

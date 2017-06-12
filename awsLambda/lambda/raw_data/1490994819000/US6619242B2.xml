@@ -1,0 +1,2097 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170321" file="US6619242B2.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170321" time-changed="132447">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Patent with a pre-grant publication">
+      <document-id id="39307445">
+        <country>US</country>
+        <doc-number>6619242</doc-number>
+        <kind>B2</kind>
+        <date>20030916</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>6619242</doc-number>
+        <kind>B2</kind>
+      </document-id>
+      <document-id data-format="docdb">
+        <doc-number>6619242</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US6619242</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="24767857">
+        <country>US</country>
+        <doc-number>10075773</doc-number>
+        <date>20020213</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>10075773</doc-number>
+        <date>20020213</date>
+      </document-id>
+      <document-id data-format="docdb" id="46856748">
+        <doc-number>7577302</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US20020075773</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20100419">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2001048873</doc-number>
+        <date>20010223</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090405">
+      <unexamined-printed-without-grant>
+        <date>20030916</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>20030916</date>
+      </printed-with-grant>
+    </dates-of-public-availability>
+    <classification-ipc date-changed="20130405">
+      <main-classification>
+        <text> 7F 02B  69/06   A</text>
+        <edition>7</edition>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>69</main-group>
+        <subgroup>06</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20130405">
+      <classification-ipcr sequence="1">
+        <text>F01L   9/04        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>9</main-group>
+        <subgroup>04</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>F02B   1/04        20060101A N20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>F02B   1/12        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>F02B   3/06        20060101A N20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>06</subgroup>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>F02B  11/00        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>F02B  23/10        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>23</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>F02B  69/06        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>69</main-group>
+        <subgroup>06</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>F02B  75/02        20060101A N20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>75</main-group>
+        <subgroup>02</subgroup>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="9">
+        <text>F02D  13/02        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>02</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="10">
+        <text>F02D  15/00        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>15</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="11">
+        <text>F02D  41/02        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>41</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="12">
+        <text>F02D  41/30        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>41</main-group>
+        <subgroup>30</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="13">
+        <text>F02D  43/00        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>43</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="14">
+        <text>F02F   1/24        20060101A N20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>24</subgroup>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="15">
+        <text>F02M  25/07        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>02</class>
+        <subclass>M</subclass>
+        <main-group>25</main-group>
+        <subgroup>07</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20130405">
+      <classification-cpc sequence="1">
+        <text>F02D  13/0215      20130101 FI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>0215</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>F01L   9/04        20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>9</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>F02B   1/04        20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>F02B   1/12        20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>F02B   3/06        20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>F02B  69/06        20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>69</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>F02B2075/025       20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>2075</main-group>
+        <subgroup>025</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>F02B2075/027       20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>2075</main-group>
+        <subgroup>027</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>F02B2275/32        20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>2275</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>F02D  13/0265      20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>0265</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>F02D  13/0269      20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>0269</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>F02D  13/028       20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>028</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>F02D  41/3035      20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>41</main-group>
+        <subgroup>3035</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>F02D  41/3058      20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>41</main-group>
+        <subgroup>3058</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>F02F2001/245       20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2001</main-group>
+        <subgroup>245</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>Y02T  10/142       20130101 LA20130123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>T</subclass>
+        <main-group>10</main-group>
+        <subgroup>142</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20130405">
+      <country>US</country>
+      <main-classification>
+        <text>123/21</text>
+        <class>123</class>
+        <subclass>21</subclass>
+      </main-classification>
+      <further-classification sequence="1">
+        <text>123/27.R</text>
+        <class>123</class>
+        <subclass>27.R</subclass>
+      </further-classification>
+      <further-classification sequence="2">
+        <text>123/90.15</text>
+        <class>123</class>
+        <subclass>90.15</subclass>
+      </further-classification>
+    </classification-national>
+    <classifications-ecla date-changed="20130405">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>F02D 13/02A4</text>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>02</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">A  </additional-subgroup>
+          <additional-subgroup sequence="2">4  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>F01L  9/04</text>
+        <section>F</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>9</main-group>
+        <subgroup>04</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="EC" country="EP">
+        <text>F02B 69/06</text>
+        <section>F</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>69</main-group>
+        <subgroup>06</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="4" classification-scheme="EC" country="EP">
+        <text>F02D 13/02L2</text>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>02</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">L  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="5" classification-scheme="EC" country="EP">
+        <text>F02D 13/02M</text>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>02</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">M  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="6" classification-scheme="EC" country="EP">
+        <text>F02D 13/02R</text>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>02</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">R  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="7" classification-scheme="EC" country="EP">
+        <text>F02D 41/30C2H</text>
+        <section>F</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>41</main-group>
+        <subgroup>30</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">C  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+          <additional-subgroup sequence="3">H  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="1" classification-scheme="ICO" country="EP">
+        <text>R02B  1:04</text>
+        <section>R</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="ICO" country="EP">
+        <text>R02B  1:12</text>
+        <section>R</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>12</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="ICO" country="EP">
+        <text>R02B  3:06</text>
+        <section>R</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>06</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="4" classification-scheme="ICO" country="EP">
+        <text>R02B 75:02S2</text>
+        <section>R</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>75</main-group>
+        <subgroup>02</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">S  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="5" classification-scheme="ICO" country="EP">
+        <text>R02B 75:02S4</text>
+        <section>R</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>75</main-group>
+        <subgroup>02</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">S  </additional-subgroup>
+          <additional-subgroup sequence="2">4  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="6" classification-scheme="ICO" country="EP">
+        <text>R02B275:32</text>
+        <section>R</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>275</main-group>
+        <subgroup>32</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="7" classification-scheme="ICO" country="EP">
+        <text>R02D 41:30C2D</text>
+        <section>R</section>
+        <class>02</class>
+        <subclass>D</subclass>
+        <main-group>41</main-group>
+        <subgroup>30</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">C  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+          <additional-subgroup sequence="3">D  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="8" classification-scheme="ICO" country="EP">
+        <text>R02F  1:24D2</text>
+        <section>R</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>24</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">D  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+    </classifications-ecla>
+    <field-of-search date-changed="20070517">
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>123/21</text>
+          <class>123</class>
+          <subclass>21</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>123/90.15</text>
+          <class>123</class>
+          <subclass>90.15</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>123/27.R</text>
+          <class>123</class>
+          <subclass>27.R</subclass>
+        </main-classification>
+      </classification-national>
+    </field-of-search>
+    <number-of-claims>5</number-of-claims>
+    <exemplary-claim>1</exemplary-claim>
+    <invention-title id="title_eng" date-changed="20100419" lang="eng" format="original">Combustion control apparatus for engine</invention-title>
+    <references-cited date-changed="20151215">
+      <patent-citations name="patcit" date-changed="20100410" />
+      <forward-citations name="fwdcit" date-changed="20151215" />
+      <citation srep-phase="e">
+        <patcit num="1" dnum="3125079">
+          <document-id>
+            <country>US</country>
+            <doc-number>3125079</doc-number>
+            <kind>A</kind>
+            <name>Hoffmann</name>
+            <date>19640317</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>3125079</doc-number>
+          </document-id>
+          <application-date>
+            <date>19610320</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="2" dnum="4037412">
+          <document-id>
+            <country>US</country>
+            <doc-number>4037412</doc-number>
+            <kind>A</kind>
+            <name>Jones</name>
+            <date>19770726</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>4037412</doc-number>
+          </document-id>
+          <application-date>
+            <date>19751009</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="3" dnum="6213086">
+          <document-id>
+            <country>US</country>
+            <doc-number>6213086</doc-number>
+            <kind>B1</kind>
+            <name>Chmela et al.</name>
+            <date>20010410</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>6213086</doc-number>
+          </document-id>
+          <application-date>
+            <date>19990617</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="4" dnum="9-287528">
+          <document-id>
+            <country>JP</country>
+            <doc-number>9-287528</doc-number>
+            <date>19971100</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>9-287528</doc-number>
+          </document-id>
+        </patcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>7156072</doc-number>
+            <kind>B2</kind>
+            <date>20070102</date>
+          </document-id>
+          <application-date>
+            <date>20050829</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>US</country>
+            <doc-number>7533651</doc-number>
+            <kind>B2</kind>
+            <date>20090519</date>
+          </document-id>
+          <application-date>
+            <date>20060317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="3">
+          <document-id>
+            <country>US</country>
+            <doc-number>7578281</doc-number>
+            <kind>B2</kind>
+            <date>20090825</date>
+          </document-id>
+          <application-date>
+            <date>20060317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="4">
+          <document-id>
+            <country>US</country>
+            <doc-number>7584740</doc-number>
+            <kind>B2</kind>
+            <date>20090908</date>
+          </document-id>
+          <application-date>
+            <date>20080314</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="5">
+          <document-id>
+            <country>US</country>
+            <doc-number>7640914</doc-number>
+            <kind>B2</kind>
+            <date>20100105</date>
+          </document-id>
+          <application-date>
+            <date>20080521</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="6">
+          <document-id>
+            <country>US</country>
+            <doc-number>7665452</doc-number>
+            <kind>B2</kind>
+            <date>20100223</date>
+          </document-id>
+          <application-date>
+            <date>20060317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="7">
+          <document-id>
+            <country>US</country>
+            <doc-number>7681554</doc-number>
+            <kind>B2</kind>
+            <date>20100323</date>
+          </document-id>
+          <application-date>
+            <date>20070711</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="8">
+          <document-id>
+            <country>US</country>
+            <doc-number>7481185</doc-number>
+            <kind>B1</kind>
+            <date>20090127</date>
+          </document-id>
+          <application-date>
+            <date>20070814</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="9">
+          <document-id>
+            <country>US</country>
+            <doc-number>7461628</doc-number>
+            <kind>B2</kind>
+            <date>20081209</date>
+          </document-id>
+          <application-date>
+            <date>20061201</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="10">
+          <document-id>
+            <country>US</country>
+            <doc-number>7431024</doc-number>
+            <kind>B2</kind>
+            <date>20081007</date>
+          </document-id>
+          <application-date>
+            <date>20060602</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="11">
+          <document-id>
+            <country>US</country>
+            <doc-number>7389751</doc-number>
+            <kind>B2</kind>
+            <date>20080624</date>
+          </document-id>
+          <application-date>
+            <date>20060317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="12">
+          <document-id>
+            <country>US</country>
+            <doc-number>7398744</doc-number>
+            <kind>B2</kind>
+            <date>20080715</date>
+          </document-id>
+          <application-date>
+            <date>20060615</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="13">
+          <document-id>
+            <country>US</country>
+            <doc-number>7347170</doc-number>
+            <kind>B2</kind>
+            <date>20080325</date>
+          </document-id>
+          <application-date>
+            <date>20050504</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="14">
+          <document-id>
+            <country>US</country>
+            <doc-number>7093568</doc-number>
+            <kind>B2</kind>
+            <date>20060822</date>
+          </document-id>
+          <application-date>
+            <date>20030113</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="15">
+          <document-id>
+            <country>US</country>
+            <doc-number>7066158</doc-number>
+            <kind>B2</kind>
+            <date>20060627</date>
+          </document-id>
+          <application-date>
+            <date>20040922</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="16">
+          <document-id>
+            <country>US</country>
+            <doc-number>6966309</doc-number>
+            <kind>B1</kind>
+            <date>20051122</date>
+          </document-id>
+          <application-date>
+            <date>20040809</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="17">
+          <document-id>
+            <country>US</country>
+            <doc-number>7694666</doc-number>
+            <kind>B2</kind>
+            <date>20100413</date>
+          </document-id>
+          <application-date>
+            <date>20080721</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="18">
+          <document-id>
+            <country>US</country>
+            <doc-number>7721710</doc-number>
+            <kind>B2</kind>
+            <date>20100525</date>
+          </document-id>
+          <application-date>
+            <date>20080915</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="19">
+          <document-id>
+            <country>US</country>
+            <doc-number>7845315</doc-number>
+            <kind>B2</kind>
+            <date>20101207</date>
+          </document-id>
+          <application-date>
+            <date>20080508</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="20">
+          <document-id>
+            <country>US</country>
+            <doc-number>7909019</doc-number>
+            <kind>B2</kind>
+            <date>20110322</date>
+          </document-id>
+          <application-date>
+            <date>20060811</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="21">
+          <document-id>
+            <country>US</country>
+            <doc-number>7933713</doc-number>
+            <kind>B2</kind>
+            <date>20110426</date>
+          </document-id>
+          <application-date>
+            <date>20060317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="22">
+          <document-id>
+            <country>US</country>
+            <doc-number>7971567</doc-number>
+            <kind>B2</kind>
+            <date>20110705</date>
+          </document-id>
+          <application-date>
+            <date>20071012</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="23">
+          <document-id>
+            <country>US</country>
+            <doc-number>8118009</doc-number>
+            <kind>B2</kind>
+            <date>20120221</date>
+          </document-id>
+          <application-date>
+            <date>20071212</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="24">
+          <document-id>
+            <country>US</country>
+            <doc-number>8141356</doc-number>
+            <kind>B2</kind>
+            <date>20120327</date>
+          </document-id>
+          <application-date>
+            <date>20080116</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="25">
+          <document-id>
+            <country>US</country>
+            <doc-number>8235024</doc-number>
+            <kind>B2</kind>
+            <date>20120807</date>
+          </document-id>
+          <application-date>
+            <date>20110624</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="26">
+          <document-id>
+            <country>US</country>
+            <doc-number>8245690</doc-number>
+            <kind>B2</kind>
+            <date>20120821</date>
+          </document-id>
+          <application-date>
+            <date>20111004</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="27">
+          <document-id>
+            <country>US</country>
+            <doc-number>8267074</doc-number>
+            <kind>B2</kind>
+            <date>20120918</date>
+          </document-id>
+          <application-date>
+            <date>20080624</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="28">
+          <document-id>
+            <country>US</country>
+            <doc-number>8312867</doc-number>
+            <kind>B2</kind>
+            <date>20121120</date>
+          </document-id>
+          <application-date>
+            <date>20120216</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="29">
+          <document-id>
+            <country>US</country>
+            <doc-number>8375899</doc-number>
+            <kind>B2</kind>
+            <date>20130219</date>
+          </document-id>
+          <application-date>
+            <date>20111122</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="30">
+          <document-id>
+            <country>US</country>
+            <doc-number>8393312</doc-number>
+            <kind>B2</kind>
+            <date>20130312</date>
+          </document-id>
+          <application-date>
+            <date>20120308</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="31">
+          <document-id>
+            <country>US</country>
+            <doc-number>8430067</doc-number>
+            <kind>B2</kind>
+            <date>20130430</date>
+          </document-id>
+          <application-date>
+            <date>20050512</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="32">
+          <document-id>
+            <country>US</country>
+            <doc-number>8434431</doc-number>
+            <kind>B2</kind>
+            <date>20130507</date>
+          </document-id>
+          <application-date>
+            <date>20060317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="33">
+          <document-id>
+            <country>US</country>
+            <doc-number>8459238</doc-number>
+            <kind>B2</kind>
+            <date>20130611</date>
+          </document-id>
+          <application-date>
+            <date>20120914</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="34">
+          <document-id>
+            <country>US</country>
+            <doc-number>8495983</doc-number>
+            <kind>B2</kind>
+            <date>20130730</date>
+          </document-id>
+          <application-date>
+            <date>20120807</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="35">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2006020551</doc-number>
+            <kind>A1</kind>
+            <date>20060223</date>
+          </document-id>
+          <application-date>
+            <date>20050804</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="36">
+          <document-id>
+            <country>US</country>
+            <doc-number>8548717</doc-number>
+            <kind>B2</kind>
+            <date>20131001</date>
+          </document-id>
+          <application-date>
+            <date>20100622</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="37">
+          <document-id>
+            <country>US</country>
+            <doc-number>8550058</doc-number>
+            <kind>B2</kind>
+            <date>20131008</date>
+          </document-id>
+          <application-date>
+            <date>20071221</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="38">
+          <document-id>
+            <country>US</country>
+            <doc-number>8656869</doc-number>
+            <kind>B2</kind>
+            <date>20140225</date>
+          </document-id>
+          <application-date>
+            <date>20130219</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="39">
+          <document-id>
+            <country>US</country>
+            <doc-number>9038613</doc-number>
+            <kind>B2</kind>
+            <date>20150526</date>
+          </document-id>
+          <application-date>
+            <date>20131008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="40">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040221820</doc-number>
+            <kind>A1</kind>
+            <date>20041111</date>
+          </document-id>
+          <application-date>
+            <date>20030506</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="41">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050061303</doc-number>
+            <kind>A1</kind>
+            <date>20050324</date>
+          </document-id>
+          <application-date>
+            <date>20040922</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="42">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060009902</doc-number>
+            <kind>A1</kind>
+            <date>20060112</date>
+          </document-id>
+          <application-date>
+            <date>20050829</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="43">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060107911</doc-number>
+            <kind>A1</kind>
+            <date>20060525</date>
+          </document-id>
+          <application-date>
+            <date>20050504</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="44">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060254537</doc-number>
+            <kind>A1</kind>
+            <date>20061116</date>
+          </document-id>
+          <application-date>
+            <date>20050512</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="45">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060278185</doc-number>
+            <kind>A1</kind>
+            <date>20061214</date>
+          </document-id>
+          <application-date>
+            <date>20060615</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="46">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080035106</doc-number>
+            <kind>A1</kind>
+            <date>20080214</date>
+          </document-id>
+          <application-date>
+            <date>20060811</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="47">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080127933</doc-number>
+            <kind>A1</kind>
+            <date>20080605</date>
+          </document-id>
+          <application-date>
+            <date>20061201</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="48">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090048756</doc-number>
+            <kind>A1</kind>
+            <date>20090219</date>
+          </document-id>
+          <application-date>
+            <date>20070814</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="49">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090070021</doc-number>
+            <kind>A1</kind>
+            <date>20090312</date>
+          </document-id>
+          <application-date>
+            <date>20080915</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="50">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090157277</doc-number>
+            <kind>A1</kind>
+            <date>20090618</date>
+          </document-id>
+          <application-date>
+            <date>20071212</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="51">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110041806</doc-number>
+            <kind>A1</kind>
+            <date>20110224</date>
+          </document-id>
+          <application-date>
+            <date>20100622</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="52">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070215101</doc-number>
+            <kind>A1</kind>
+            <date>20070920</date>
+          </document-id>
+          <application-date>
+            <date>20060317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="53">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070215102</doc-number>
+            <kind>A1</kind>
+            <date>20070920</date>
+          </document-id>
+          <application-date>
+            <date>20060317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="54">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080041335</doc-number>
+            <kind>A1</kind>
+            <date>20080221</date>
+          </document-id>
+          <application-date>
+            <date>20060602</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20100410">
+      <related-publication>
+        <document-id>
+          <country>US</country>
+          <doc-number>20020117126</doc-number>
+          <date>20020829</date>
+        </document-id>
+      </related-publication>
+    </related-documents>
+    <parties date-changed="20100410">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Fuji Jukogyo Kabushiki Kaisha</orgname>
+            <role>03</role>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Kaneko, Makoto</name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Darby &amp; Darby</name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <primary-examiner>
+        <last-name>Argenbright</last-name>
+        <first-name>Tony M.</first-name>
+        <department>3747</department>
+      </primary-examiner>
+      <assistant-examiner>
+        <last-name>Harris</last-name>
+        <first-name>Katrina</first-name>
+      </assistant-examiner>
+    </examiners>
+    <patent-family date-changed="20100419">
+      <main-family family-id="1298108">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>60226365</doc-number>
+            <kind>D1</kind>
+            <date>20080619</date>
+          </document-id>
+          <application-date>
+            <date>20020222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2002256911</doc-number>
+            <kind>A</kind>
+            <date>20020911</date>
+          </document-id>
+          <application-date>
+            <date>20010223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1234960</doc-number>
+            <kind>A2</kind>
+            <date>20020828</date>
+          </document-id>
+          <application-date>
+            <date>20020222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1234960</doc-number>
+            <kind>B1</kind>
+            <date>20080507</date>
+          </document-id>
+          <application-date>
+            <date>20020222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20020117126</doc-number>
+            <kind>A1</kind>
+            <date>20020829</date>
+          </document-id>
+          <application-date>
+            <date>20020213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6619242</doc-number>
+            <kind>B2</kind>
+            <date>20030916</date>
+          </document-id>
+          <application-date>
+            <date>20020213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1234960</doc-number>
+            <kind>A3</kind>
+            <date>20040526</date>
+          </document-id>
+          <application-date>
+            <date>20020222</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="963506">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>60226365</doc-number>
+            <kind>D1</kind>
+            <date>20080619</date>
+          </document-id>
+          <application-date>
+            <date>20020222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2002256911</doc-number>
+            <kind>A</kind>
+            <date>20020911</date>
+          </document-id>
+          <application-date>
+            <date>20010223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1234960</doc-number>
+            <kind>A2</kind>
+            <date>20020828</date>
+          </document-id>
+          <application-date>
+            <date>20020222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1234960</doc-number>
+            <kind>B1</kind>
+            <date>20080507</date>
+          </document-id>
+          <application-date>
+            <date>20020222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20020117126</doc-number>
+            <kind>A1</kind>
+            <date>20020829</date>
+          </document-id>
+          <application-date>
+            <date>20020213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6619242</doc-number>
+            <kind>B2</kind>
+            <date>20030916</date>
+          </document-id>
+          <application-date>
+            <date>20020213</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1234960</doc-number>
+            <kind>A3</kind>
+            <date>20040526</date>
+          </document-id>
+          <application-date>
+            <date>20020222</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20100410" lang="eng" format="original">
+    <p id="p-a-00001-en">A combustion control apparatus for an engine having a variable valve timing mechanism capable of varying valve timings of an exhaust valve and an intake valve establishes a combustion mode to either of following three modes, a four-cycle compression ignition combustion mode at a low and medium load area, a two-cycle spark ignition combustion mode at a high load area, and a four-cycle spark ignition combustion mode at a high speed area. When the combustion mode is established to the compression ignition combustion mode, the apparatus establishes the valve timings of the exhaust and intake valves so as to form a negative overlap period in which both exhaust and intake valves concurrently close in the neighborhood of the exhaust top dead center (TDC).</p>
+  </abstract>
+  <legal-data date-changed="20170304">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20020213</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US  2002117126A1</docdb-publication-number>
+      <docdb-application-id>46856748</docdb-application-id>
+      <new-owner>FUJI JUKOGYO KABUSHIKI KAISHA, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:KANEKO, MAKOTO;REEL/FRAME:012597/0427</free-text-description>
+      <effective-date>
+        <date>20020128</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20070216</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US  2002117126A1</docdb-publication-number>
+      <docdb-application-id>46856748</docdb-application-id>
+      <fee-payment-year>4</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20110425</date>
+      </publication-date>
+      <event-code-1>REMI</event-code-1>
+      <legal-description>MAINTENANCE FEE REMINDER MAILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US  2002117126A1</docdb-publication-number>
+      <docdb-application-id>46856748</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20110916</date>
+      </publication-date>
+      <event-code-1>LAPS</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSE FOR FAILURE TO PAY MAINTENANCE FEES</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US  2002117126A1</docdb-publication-number>
+      <docdb-application-id>46856748</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20111108</date>
+      </publication-date>
+      <event-code-1>FP</event-code-1>
+      <effect>-</effect>
+      <legal-description>EXPIRED DUE TO FAILURE TO PAY MAINTENANCE FEE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US  2002117126A1</docdb-publication-number>
+      <docdb-application-id>46856748</docdb-application-id>
+      <effective-date>
+        <date>20110916</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20100410">
+    <summary>
+      <heading level="2">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00001-en">1. Field of the Invention</p>
+      <p id="p-00002-en">The present invention relates to a combustion control apparatus and more particularly to a control apparatus for varying a combustion mode according to engine operating conditions.</p>
+      <p id="p-00003-en">2. Description of Background Arts</p>
+      <p id="p-00004-en">It is well known that lean air-fuel mixture combustion is an effective means for raising thermal efficiency of four cycle engines. The reason why lean mixture raises thermal efficiency is that it increases a ratio of specific heat capacities of working gas and provides an improved theoretical thermal efficiency. Also it is known that lean air-fuel mixture can reduce a pumping loss of an engine due to an increased intake air.</p>
+      <p id="p-00005-en">However, lean air-fuel mixture combustion provides an elongated combustion period of time and instable combustion and therefore lean air-fuel mixture has a lean limit. A stratified charge combustion strategy, in which a rich air-fuel mixture is concentrated about a spark plug by stratifying the air-fuel mixture gas in a cylinder by means of an in-cylinder fuel injection method, is effective for raising this lean limit. However, the stratified charge combustion strategy has an disadvantage that since the rich air-fuel mixture is concentrated about the spark plug, nitrogen oxides (NOx) emissions increase.</p>
+      <p id="p-00006-en">On the other hand, diesel engines have a high thermal efficiency due to the combustion by compression ignition and have a high lean limit. However, the diesel engines have low outputs and sometimes emit a large amount of smokes due to an inferior rate of air utilization at high loads.</p>
+      <p id="p-00007-en">To solve these problems, compression ignition gasoline engines in which air-gasoline mixture is ignited at multi-spots (multi-spots ignition) by an adiabatic compression, are proposed. The compression ignition gasoline engines have an advantage that since theses engines have short flame propagations due to multi-spots ignition, a fast burn is realized. As a result, local high temperature spots are difficult to be produced in a combustion chamber and therefore emissions of nitrogen oxides can be largely reduced.</p>
+      <p id="p-00008-en">In order to accomplish the compression ignition, the compression ratio must be established at a value as high as 15:1 to 18:1 of compression ratio. When an engine operates at high loads, the combustion pressure rapidly increases due to an increased amount of fuel injected and as a result knocking is apt to occur.</p>
+      <p id="p-00009-en">To solve this problem, Japanese Patent Application Laid-open No. Toku-Kai-Hei 9-287528 discloses a technique wherein the temperature of the combustion chamber is reduced by an external EGR effect or a technique wherein the temperature of intake air is regulated by a cooling device provided in an EGR passage.</p>
+      <p id="p-00010-en">The combustion control by the external EGR effect or the temperature of intake air has a dull response and therefore it is difficult to obtain a good follow-up ability to changing torques of the engine during traveling of the vehicle.</p>
+      <p id="p-00011-en">Further, in order to avoid a knocking phenomena of the engine, there is an idea of introducing a so-called “miller cycle” in which an actual compression ratio is established to be smaller than an actual expansion ratio, however when the engine operates according to the miller cycle under a low speed and high load condition, an insufficient amount of air is supplied to the combustion chamber, this leading to a decrease in torque.</p>
+      <heading level="2">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00012-en">In an engine having a high compression ratio to realize a compression ignition, it is an object of the present invention to provide a combustion control apparatus for an engine capable of avoiding an occurrence of knocking and a decrease of torque in a high load area and reducing exhaust emissions in an overall operating area.</p>
+      <p id="p-00013-en">To achieve the object, a combustion control apparatus for an engine having a variable valve timing mechanism capable of varying valve timings of an exhaust valve and an intake valve, comprises a combustion mode establishing means for establishing a combustion mode to either of at least following two modes, a compression ignition combustion mode and a two-cycle spark ignition combustion mode according to an operational area of the engine and a valve timing establishing means for establishing said valve timings of the exhaust and intake valves so as to form a negative overlap period in which both exhaust and intake valves concurrently close in the neighborhood of the exhaust top dead center, when the combustion mode is established to the compression ignition combustion mode and for establishing the valve timings of the exhaust and intake valves so as to carry out a gas exchange once per one revolution of the engine, when the combustion mode is established to the two-cycle spark ignition combustion mode.</p>
+    </summary>
+    <description-of-drawings>
+      <heading level="2">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00014-en">
+        <figref>FIG. 1</figref>is a schematic diagram showing an engine according to an embodiment of the present invention;</p>
+      <p id="p-00015-en">
+        <figref>FIG. 2</figref>is a flowchart showing a combustion control routine;</p>
+      <p id="p-00016-en">
+        <figref>FIG. 3</figref>is an explanatory diagram showing an operational map of an engine;</p>
+      <p id="p-00017-en">
+        <figref>FIG. 4</figref>
+        <i>a</i>is an explanatory diagram of an engine in a four cycle compression ignition combustion mode;</p>
+      <p id="p-00018-en">
+        <figref>FIG. 4</figref>
+        <i>b</i>is an explanatory diagram of an engine in a two cycle spark ignition combustion mode; and</p>
+      <p id="p-00019-en">
+        <figref>FIG. 4</figref>
+        <i>c</i>is an explanatory diagram of an engine in a four cycle spark ignition combustion mode.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading level="2">DESCRIPTION OF THE PREFERRED EMBODIMENT</heading>
+      <p id="p-00020-en">Referring now to<figref>FIG. 1</figref>, reference numeral<b>1</b>denotes an engine, reference numeral<b>2</b>denotes a piston, reference numeral<b>3</b>denotes a combustion chamber, reference numeral<b>4</b>denotes an intake port, reference numeral<b>5</b>denotes an exhaust port, reference numeral<b>6</b>denotes an intake valve, reference numeral<b>7</b>denotes an exhaust valve, and reference numeral<b>8</b>denotes an intake passage. A mechanical type supercharger<b>30</b>is disposed in the intake passage<b>8</b>of the intake port<b>4</b>. Further, there is provided a throttle valve (not shown) upstream of the supercharger<b>30</b>. The throttle valve is interlocked with an electronic throttle control apparatus (not shown). Further, an injection nozzle of a fuel injector<b>11</b>is provided in the center of a ceiling surface of the combustion chamber<b>3</b>. Further, a piston cavity<b>2</b><i>a</i>which is inwardly concave is formed on the top surface of the piston<b>2</b>. Further, an electrode of a spark plug<b>12</b>is provided on one side (squish area according to this embodiment). In<figref>FIG. 1</figref>, reference numeral<b>16</b>denotes a knock sensor and reference numeral<b>17</b>denotes a coolant temperature sensor.</p>
+      <p id="p-00021-en">Further, an oxygen sensor<b>18</b>is disposed in an exhaust passage<b>28</b>connecting to the exhaust port<b>5</b>and a three-way catalyst<b>29</b>is installed downstream of the oxygen sensor<b>18</b>. The oxygen sensor<b>18</b>is a means for detecting air-fuel ratio and the three-way catalyst<b>29</b>is for purifying carbon mono-oxide (CO) hydrocarbons (HC) and nitrogen oxides (NOx).</p>
+      <p id="p-00022-en">As will be described hereinafter, in case of the engine<b>1</b>, when the engine operates at low or medium speeds and operates at low and medium loads, the combustion mode can be established to a four-cycle compression ignition combustion with ultra-lean air-fuel ratio. In this case, according to the four-cycle compression ignition combustion, since the combustion temperature can be retained below the temperature of NOx formation, NOx emissions are very small. Furthermore, since excess air ratio is high, the three-way catalyst<b>29</b>purifies CO and HC in exhaust gas by oxidization. That is, in this case, the three-way catalyst<b>29</b>acts as an oxidization catalyst.</p>
+      <p id="p-00023-en">Further, the engine<b>1</b>is established to a compression ratio as high as around 15:1 to 18:1.</p>
+      <p id="p-00024-en">Further, the intake vale<b>6</b>and exhaust valve<b>7</b>are driven by variable valve timing mechanisms<b>13</b><i>a</i>,<b>13</b><i>b</i>respectively. These variable valve timing mechanisms<b>13</b><i>a</i>,<b>13</b><i>b</i>are constituted by known electromagnetically operated valves capable of arbitrarily controlling valve opening and closing timings.</p>
+      <p id="p-00025-en">Referring to<figref>FIG. 3</figref>, according to the embodiment, the engine operational map is divided into three zones, a four-cycle compression ignition combustion zone covering low and medium speeds areas and low and medium loads areas, a two cycle spark ignition combustion zone covering low and medium speeds areas and high loads areas, and a four cycle spark ignition combustion zone covering high speeds areas. The intake and exhaust valves operate at different timings for each driving zone. Since this engine is established to have a characteristic giving priority to compression ignition combustion, knocking easily occurs. To avoid this, when the engine operates at low and medium speeds and high loads areas, it is established to a two-cycle operation mode in which an actual compression ratio (ratio of stroke volume since intake valve closes until piston reaches the top dead center to a volume of combustion chamber when piston is at the top dead center) is reduced. The two-cycle operation brings about not only a prevention of knocking but also a stabilization of combustion.</p>
+      <p id="p-00026-en">That is, in the four-cycle compression ignition zone as shown in<figref>FIG. 4</figref><i>a</i>, when the exhaust valve<b>7</b>closes at an crank angle advanced over the exhaust top dead center (TDC) and the intake valve<b>6</b>opens at an crank angle retarded over the exhaust top dead center (TDC), a negative valve overlap period wherein both valve<b>6</b>,<b>7</b>close at the neighborhood of the exhaust top dead center (TDC) is formed. The timing of closing of the exhaust valve<b>7</b>is established to be almost symmetric to the timing of opening of the intake valve<b>6</b>with the exhaust top dead center (TDC) between.</p>
+      <p id="p-00027-en">Further, in the two-cycle spark ignition combustion zone as shown in<figref>FIG. 4</figref><i>b</i>, when the exhaust valve<b>7</b>and intake valve<b>6</b>open every one revolution of the engine and one gas change is performed every one revolution of the engine, the supercharged charge enters into the combustion chamber<b>3</b>through the intake valve opening in the latter part of the expansion exhaust stroke and the burned gas is scavenged by the chrge.</p>
+      <p id="p-00028-en">Further, in the four-cycle spark ignition combustion zone as shown in<figref>FIG. 4</figref><i>c</i>, when the exhaust valve<b>7</b>and intake valve<b>6</b>open once respectively every two revolutions of the engine, a positive valve overlap period in which both valves<b>6</b>,<b>7</b>open in the neighborhood of the exhaust top dead center (TDC) is formed. Then, a miller cycle operation is available by retarding the closing timing of the intake valve<b>6</b>.</p>
+      <p id="p-00029-en">Signals sensed by the respective sensors are inputted to an electronic control unit (ECU)<b>20</b>. The ECU<b>20</b>is a micro-computer constituted by CPU<b>21</b>, ROM<b>22</b>, RAM<b>23</b>, an input port<b>24</b>, an output port<b>25</b>, a bus line<b>26</b>and the like.</p>
+      <p id="p-00030-en">Besides those sensors, the input port<b>24</b>is connected with a crank angle sensor<b>31</b>that generates crank pulses every specified crank angle and is also connected with a load sensor<b>33</b>that generates an output voltage corresponding to the amount of depression of an accelerator pedal<b>32</b>through an A/D converter<b>34</b>. Further, the output port<b>25</b>is connected with the variable valve train mechanisms<b>13</b><i>a</i>,<b>13</b><i>b</i>through an intake valve actuating circuit<b>36</b><i>a</i>, an exhaust valve actuating circuit<b>36</b><i>d</i>, respectively. Further, the output<b>25</b>is connected with the spark plug<b>12</b>through an ignition drive circuit<b>36</b><i>c</i>and is connected with the fuel injector<b>11</b>through an injector drive circuit<b>36</b><i>d.</i></p>
+      <p id="p-00031-en">A bypass passage (not shown) bypassing the mechanical supercharger<b>30</b>is provided in the intake passage<b>8</b>and a boost pressure control valve (not shown) for controlling a boost pressure is provided in the bypass passage. Further, an actuator for actuating the boost pressure control valve is connected with the output port<b>25</b>through a drive circuit. The boost pressure control valve is designed so as to open when the engine operates at high speeds and at high loads. When the boost pressure control valve opens, the boost pressure goes down and as a result abnormal combustion such as knocking can be prevented.</p>
+      <p id="p-00032-en">The ECU<b>20</b>investigates an operation zone map based on an engine speed Ne calculated from a signal of the load sensor<b>33</b>and an engine load Lo detected from a signal of the load sensor<b>33</b>to judge whether the current operation of the engine is either in a four-cycle compression ignition combustion zone, in a two-cycle spark ignition combustion zone or in a four-cycle spark ignition combustion zone. When the operation of the engine is in the four-cycle compression ignition combustion zone, the throttle valve fully openes and the valve timing is changed. As a result, the intake air is heated by residual gas shut in the combustion chamber<b>3</b>during the negative overlap period and the temperature of the intake air rises. Thus, an optimum compression ignition combustion is obtained by adiabatic compression.</p>
+      <p id="p-00033-en">Further, when the operation of the engine is in a two-cycle spark ignition combustion zone, the intake valve<b>6</b>and exhaust valve<b>7</b>are designed so as to open in the neighborhood of the bottom dead center (BDC). As a result, air intake and scavenging are performed by boost pressure of the mechanical supercharger<b>30</b>and the two-cycle spark ignition combustion is available. Even when the compression ratio is relatively high (for example, 15:1 to 18:0), a good combustion can be obtained, while knocking is prevented from occurring and the reduction of torque is avoided.</p>
+      <p id="p-00034-en">Further, when the operation of the engine<b>1</b>is in a four-cycle spark ignition zone, the boost pressure is adjusted by controlling the aforesaid boost pressure control valve. As a result, abnormal combustion such as knocking can be prevented and high output is obtained by the normal spark ignition combustion control.</p>
+      <p id="p-00035-en">The fuel injection control, the ignition timing control and the valve timing control, which are processed in the ECU<b>20</b>, are executed according to the combustion control routine shown in FIG.<b>2</b>.</p>
+      <p id="p-00036-en">According to the routine, first at a step S<b>1</b>, it is investigated whether the engine<b>1</b>operates in either of the four-cycle compression ignition combustion zone, two-cycle spark ignition zone or four-cycle spark ignition combustion zone by referring to an operation zone map shown in<figref>FIG. 3</figref>based on engine speed Ne and engine load Lo. When the engine<b>1</b>operates in a four-cycle compression ignition combustion zone, the program goes to a step S<b>2</b>. When the engine<b>1</b>operates in a two-cycle spark ignition combustion zone, the program goes to a step S<b>5</b>. When the engine<b>1</b>operates in a four-cycle spark ignition combustion zone, the program goes to a step S<b>7</b>. According to the embodiment, as shown in<figref>FIG. 3</figref>, the four-cycle compression ignition combustion zone is established at an area of low and medium speed and low and medium load, the two-cycle spark ignition combustion zone is established at an area of low and medium speed and high load, and the four-cycle spark ignition combustion zone is established at an overall area of high speed.</p>
+      <p id="p-00037-en">When the program goes to the step S<b>2</b>, the throttle valve<b>9</b>fully opens. Then, at a step S<b>3</b>, an drive signal of valve timing is outputted to the variable valve timing mechanisms<b>13</b><i>a</i>,<b>13</b><i>b</i>such that the intake and exhaust valves<b>6</b>,<b>7</b>form a negative overlap period covering the neighborhood of the exhaust top dead center (TDC).</p>
+      <p id="p-00038-en">As a result, as shown in<figref>FIG. 4</figref><i>a</i>, a residual gas is shut in the combustion chamber<b>3</b>during the negative overlap period. The thermal energy of the residual gas heats up a fresh air sucked into the combustion chamber<b>3</b>during intake stroke and raises the temperature of the fresh air. As a result, since the mixture gas temperature at the start of compression stroke already becomes high, the mixture gas in the combustion chamber<b>3</b>can easily reaches the ignitable temperature through an adiabatic compression.</p>
+      <p id="p-00039-en">Next, the program goes to a step S<b>4</b>where the combustion based on compression ignition is performed and leaves the routine. In the compression ignition combustion control, since the throttle valve fully opens and the engine operates at low load, the air-fuel ratio is in a lean condition. Fuel is injected at a specified timing. Since the mixture gas easily reaches the ignitable temperature, the compression combustion is performed according to a multi-spots ignition combustion (homogeneous compression ignition combustion) wherein an overall mixture gas is simultaneously ignited without flame propagation, like by an infinite number of spark plugs.</p>
+      <p id="p-00040-en">Further, when it is Judged that the engine operation is in a two-cycle spark ignition combustion zone and the program goes to the step<b>5</b>, a drive signal for opening the intake and exhaust vales<b>6</b>,<b>7</b>in the neighborhood of the bottom dead center (BDC) is outputted to the variable valve timing mechanisms<b>13</b><i>a</i>,<b>13</b><i>b</i>, respectively. As a result, as shown in<figref>FIG. 4</figref><i>b</i>, first the combustion gas is discharged through the exhaust valve<b>7</b>in the latter half of the expansion and exhaust stroke. Next, the intake valve<b>6</b>opens to supply fresh gas boosted by the supercharger<b>30</b>to the combustion chamber<b>3</b>and at the same time the residual combustion gas in the combustion chamber<b>3</b>is scavenged by the fresh air. When the piston passes the bottom dead center (BDC) fist the exhaust valve<b>7</b>closes and then the intake valve<b>6</b>closes. Thus, the engine enters into a compression stroke to start a two-cycle operation.</p>
+      <p id="p-00041-en">Next, the program goes to a step S<b>6</b>wherein the two-cycle spark ignition combustion control is executed and leaves the routine. In this two-cycle spark ignition combustion control, the throttle valve (not shown) is returned to an interlocking operation with the accelerator pedal<b>32</b>and the engine operates with a specified air-fuel ratio established by engine speed Ne and engine load. When the engine operates at low and medium speed area and at high load area, although the compression ratio is as high as 15:1 to 18:1, knocking is prevented from occurring due to a reduced actual compression ratio. As a result, a stable combustion can be obtained without experiencing a reduced torque.</p>
+      <p id="p-00042-en">When it is judged that the engine operation is in a four-cycle spark ignition combustion zone and the program goes to the step S<b>7</b>, a drive signal of valve timing for forming a positive overlap period during which both exhaust and intake valves<b>7</b>,<b>6</b>open in the neighborhood of the top dead center (TDC) and at the same time for retarding the valve closing timing of the intake valve<b>6</b>such that the actual compression ratio becomes smaller than the actual expansion ratio, is outputted to the variable valve timing mechanisms<b>13</b><i>a</i>,<b>13</b><i>b</i>. As a result, in this four-cycle spark ignition combustion zone, a miller cycle operation is performed.</p>
+      <p id="p-00043-en">Next, the program goes to a step S<b>8</b>wherein a four-cycle spark ignition combustion control is executed, leaving the routine. In this four-cycle spark ignition combustion control, first the throttle valve (not shown) is returned to an interlocking operation with the accelerator pedal<b>32</b>and the fuel injection amount, the fuel injection timing, the ignition timing and the like are returned to values of normal spark ignition combustion control (see<figref>FIG. 4</figref><i>c</i>). Further, the boost pressure is regulated by controlling the boost pressure control valve provided in the bypass passage. Detailed description of the control is omitted because of known arts.</p>
+      <p id="p-00044-en">Thus, according to the present invention, in an engine whose compression ratio is established to a value as high as 15:1 to 18:1, the four-cycle compression ignition combustion is carried out at a low and medium load area, the two-cycle spark ignition combustion is carried out at a high load area, and the four-cycle spark ignition combustion is carried out at a high speed area. Further, at a high speed area, a miller cycle is realized by changing the valve timings. As a result, the engine can obtain a high thermal efficiency, a high knocking resistance, and a good emissions performance.</p>
+      <p id="p-00045-en">While the present invention has been disclosed in terms of the preferred embodiment in order to facilitate better understanding of the invention, it should be appreciated that the invention can be embodied in various ways without departing from the principle of the invention. Therefore, the invention should be understood to include all possible embodiments which can be embodied without departing from the principle of the invention set out in the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20100410">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>1. A combustion control apparatus for an engine having a spark plug, a fuel injector for supplying fuel to a combustion chamber and a variable valve timing mechanism capable of varying valve timings of an exhaust valve and an intake valve, comprising:<claim-text>a combustion mode establishing means for establishing a combustion mode to either of at least following two modes, a four-cycle compression ignition combustion mode and a two-cycle spark ignition combustion mode according to an operational area of said engine; and</claim-text><claim-text>a valve timing establishing means for establishing said valve timings of said exhaust and intake valves so as to form a negative overlap period in which said both exhaust and intake valves concurrently close in the neighborhood of the exhaust top dead center, when said combustion mode is established to said four-cycle compression ignition combustion mode and for establishing said valve timings of said exhaust and intake valves so as to carry out a gas exchange once per one revolution of said engine, when said combustion mode is established to said two-cycle spark ignition combustion mode.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>2. The combustion control apparatus according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein<claim-text>said combustion mode is established to said four-cycle compression ignition combustion mode when said operational area of said engine is a low and medium load area and said combustion mode is established to said two-cycle spark ignition combustion mode when said operational area of said engine is a high load area.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>3. The combustion control apparatus according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein<claim-text>said combustion mode is established to a four-cycle spark ignition combustion mode when said operational area of said engine is a high speed area.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>4. The combustion control apparatus according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein<claim-text>said valve timing establishing means includes a means for retarding a valve closing timing of said intake valve such that an actual compression ratio is smaller than an actual expansion ratio when said combustion mode is established to said four-cycle spark ignition combustion mode.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>5. The combustion control apparatus according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein an injection nozzle of said fuel injector is provided in said combustion chamber.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US6619242B2_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US06619242-20030916-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US6619242B2_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06619242-20030916-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US6619242B2_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06619242-20030916-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US6619242B2_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06619242-20030916-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US6619242B2_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06619242-20030916-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US6619242B2_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06619242-20030916-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US6619242B2_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06619242-20030916-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US6619242B2_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US06619242-20030916-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US6619242B2.PDF" type="pdf" size="189810" pages="11" />
+</lexisnexis-patent-document>

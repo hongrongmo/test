@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2939513A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091135" date-changed="20151110" time-changed="083713">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939798">
+        <country>EP</country>
+        <doc-number>2939513</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>14177615</doc-number>
+        <date>20140718</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020140052427</doc-number>
+        <date>20140430</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>KR</country>
+        <doc-number>20140052427</doc-number>
+        <kind>A</kind>
+        <date>20140430</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>20140052427</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>KR20140052427</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20140813</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151105">
+      <classification-ipcr sequence="1">
+        <text>A01D  34/00        20060101AFI20150928BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>34</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150928</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A01D  75/18        20060101ALI20150928BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>75</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150928</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151105">
+      <classification-cpc sequence="1">
+        <text>A01D  34/008       20130101 FI20140915BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>34</main-group>
+        <subgroup>008</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A01D  75/185       20130101 LI20140915BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>75</main-group>
+        <subgroup>185</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">25</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">Rasenmäherroboter und Steuerungsverfahren dafür</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">Lawn mower robot and control method thereof</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">Robot pour tondre le gazon et son procédé de commande</invention-title>
+    <references-cited date-changed="20151110">
+      <patent-citations name="patcit" date-changed="20151110" />
+      <citation>
+        <patcit num="1" dnum="EP2390741A2" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>2390741</doc-number>
+            <kind>A2</kind>
+            <name>DEERE &amp; CO [US]</name>
+            <date>20111130</date>
+          </document-id>
+          <application-date>
+            <date>20110504</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+        <category>I</category>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO2004072750A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2004072750</doc-number>
+            <kind>A1</kind>
+            <name>DYSON LTD [GB], et al</name>
+            <date>20040826</date>
+          </document-id>
+          <application-date>
+            <date>20040213</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="EP2689650A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>2689650</doc-number>
+            <kind>A1</kind>
+            <name>HONDA RES INST EUROPE GMBH [DE]</name>
+            <date>20140129</date>
+          </document-id>
+          <application-date>
+            <date>20120727</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+        <category>I</category>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>LG Electronics Inc.</orgname>
+            <registered-number>101443087</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>128, Yeoui-daero Yeongdeungpo-gu</address-1>
+              <city>Seoul 150-721</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Song, Hyunsup</name>
+            <address>
+              <address-1>51, Gasan digital 1-ro, Geumcheon-gu,</address-1>
+              <city>153-802 Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Lee, Jaehoon</name>
+            <address>
+              <address-1>51, Gasan digital 1-ro, Geumcheon-gu,</address-1>
+              <city>153-802 Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Sun, Changhwa</name>
+            <address>
+              <address-1>51, Gasan digital 1-ro, Geumcheon-gu,</address-1>
+              <city>153-802 Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Vossius &amp; Partner Patentanwälte Rechtsanwälte mbB</name>
+            <registered-number>100751388</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Siebertstrasse 3</address-1>
+              <city>81675 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151221">
+      <main-family family-id="174442156">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150125305</doc-number>
+            <kind>A</kind>
+            <date>20151109</date>
+          </document-id>
+          <application-date>
+            <date>20140430</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939513</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20140718</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174442155">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150125305</doc-number>
+            <kind>A</kind>
+            <date>20151109</date>
+          </document-id>
+          <application-date>
+            <date>20140430</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939513</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20140718</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed are a lawn mower robot and a control method thereof. The control method includes sensing whether or not an obstacle is present during driving at a normal velocity, decelerating the lawn mower robot, when the obstacle is sensed, sensing whether or not the lawn mower robot collides with the obstacle in the decelerated state, and differently driving the lawn mower robot if a collision of the lawn mower robot with the obstacle is sensed and if a collision of the lawn mower robot with the obstacle is not sensed. <img id="imga-00001-en" wi="63" he="134" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <p id="p-00001-en" num="0001">This application claims the benefit of Korean Patent Application No. <patcit id="pcit-00001" dnum="KR1020140052427"><text>10-2014-0052427, filed on April 30, 2014</text></patcit>, which is hereby incorporated by reference as if fully set forth herein.</p>
+    <p id="p-00002-en" num="0002">The present invention relates to a lawn mower robot and a control method thereof, and more particularly, to a lawn mower robot, which may sense an obstacle within a work area and then decelerate, and a control method thereof.</p>
+    <p id="p-00003-en" num="0003">In general, lawn mowers are apparatuses to mow a lawn planted in a yard of a home or on a playground. Such lawn mowers may be divided into lawn mowers for homes and lawn mowers for tractors used on farms.</p>
+    <p id="p-00004-en" num="0004">Further, there are a walk behind type lawn mower pushed by a user behind the lawn mower to mow a lawn and a hand type lawn mower portable by a user.</p>
+    <p id="p-00005-en" num="0005">However, both types of lawn mowers are operated directly by users and thus cause inconvenience.</p>
+    <p id="p-00006-en" num="0006">Particularly, since it is difficult for modem people themselves to mow a lawn in a yard using lawn mowers, people generally hire a worker to mow the lawn and thus labor costs are inevitably generated.</p>
+    <p id="p-00007-en" num="0007">Therefore, automatic robot type lawn mowers to prevent such additional costs and reduce labor have been developed. Various research into mobility control of automatic robot type lawn mowers has been performed.</p>
+    <p id="p-00008-en" num="0008">Accordingly, the present invention is directed to a lawn mower robot and a control method thereof that substantially obviate one or more problems due to limitations and disadvantages of the related art.</p>
+    <p id="p-00009-en" num="0009">An object of the present invention is to provide a lawn mower robot and a method of controlling the same.</p>
+    <p id="p-00010-en" num="0010">This object is achieved with the features of the independent claims. The dependent claims relate to aspect of the invention.</p>
+    <p id="p-00011-en" num="0011">Another object of the present invention is to provide a lawn mower robot, which decelerates upon collision with an obstacle and may thus reduce the degree of impact applied to the lawn mower robot, and a control method thereof.</p>
+    <p id="p-00012-en" num="0012">Another object of the present invention is to provide a lawn mower robot ,which may improve obstacle sensing efficiency, and a control method thereof.</p>
+    <p id="p-00013-en" num="0013">Additional advantages, objects, and features of the invention will be set forth in part in the description which follows and in part will become apparent to those having ordinary skill in the art upon examination of the following or may be learned from practice of the invention. The objectives and other advantages of the invention may be realized and attained by the structure particularly pointed out in the written description and claims hereof as well as the appended drawings.</p>
+    <p id="p-00014-en" num="0014">To achieve these objects and other advantages and in accordance with the purpose of the invention, as embodied and broadly described herein, a control method of a lawn mower robot includes sensing whether or not an obstacle is present during driving at a normal velocity, decelerating the lawn mower robot when the obstacle is sensed, sensing whether or not the lawn mower robot collides with the obstacle in the decelerated state, and differently driving the lawn mower robot if a collision of the lawn mower robot with the obstacle is sensed and if a collision of the lawn mower robot with the obstacle is not sensed.</p>
+    <p id="p-00015-en" num="0015">In the sensing as to whether or not an obstacle is present, a distance from the obstacle may be sensed.</p>
+    <p id="p-00016-en" num="0016">In the deceleration of the lawn mower robot, the lawn mower robot may be decelerated to different velocities according to distances from the obstacle.</p>
+    <p id="p-00017-en" num="0017">In the deceleration of the lawn mower robot, a deceleration time may vary according to distances from the obstacle.</p>
+    <p id="p-00018-en" num="0018">In the deceleration of the lawn mower robot, a distance during which the lawn mower robot is decelerated may be longer than the distance from the obstacle.</p>
+    <p id="p-00019-en" num="0019">In the driving of the lawn mower robot, if the collision is sensed, the lawn mower robot may be stopped and change direction.</p>
+    <p id="p-00020-en" num="0020">In the driving of the lawn mower robot, the lawn mower robot may be accelerated to the normal velocity after change of direction.</p>
+    <p id="p-00021-en" num="0021">In the driving of the lawn mower robot, if the collision is not sensed, the lawn mower robot may be accelerated to the normal velocity under the condition that the direction of the lawn mower robot is maintained.</p>
+    <p id="p-00022-en" num="0022">The obstacle may include a fixed obstacle or a movable obstacle.</p>
+    <p id="p-00023-en" num="0023">A cutter cutting a lawn may be operated during each of the sensing as to whether or not an obstacle is present, the deceleration of the lawn mower robot, the sensing as to whether or not the lawn mower robot collides with the obstacle in the decelerated state, and the driving of the lawn mower robot. Of course, if the lawn mower robot collides with the obstacle, operation of the cutter may be stopped, the lawn mower robot may move backward, the cutter may be operated again, and then the direction of the lawn mower robot may be changed.</p>
+    <p id="p-00024-en" num="0024">In another aspect of the present invention, a control method of a lawn mower robot includes sensing whether or not an obstacle is present during driving at a normal velocity, decelerating the lawn mower robot when the obstacle is sensed, and<br /> changing direction of the lawn mower robot and then drive the lawn mower robot when the lawn mower robot collides with the obstacle, wherein a cutter is operated during each of the sensing as to whether or not an obstacle is present, the deceleration of the lawn mower robot, and the change of the direction of the lawn mower robot and driving of the lawn mower robot.</p>
+    <p id="p-00025-en" num="0025">In the deceleration of the lawn mower robot, a distance during which deceleration of the lawn mower robot is carried out may be longer than a distance from the obstacle.</p>
+    <p id="p-00026-en" num="0026">In the deceleration of the lawn mower robot, the lawn mower robot may be decelerated to different velocities according to distances from the obstacle.</p>
+    <p id="p-00027-en" num="0027">In yet another aspect of the present invention, a lawn mower robot includes a boundary indication unit including a boundary wire defining a work area and a main body moving within the work area defined by the boundary wire, wherein the main body includes a first sensing unit sensing an obstacle located within the work area, a second sensing unit sensing whether or not the main body collides with the obstacle, and a controller controlling movement of the main body according to signals sensed by the first sensing unit and the second sensing unit.</p>
+    <p id="p-00028-en" num="0028">The first sensing unit may sense a distance from the obstacle to the main body.</p>
+    <p id="p-00029-en" num="0029">The controller may decelerate the main body to different velocities according to distances from the obstacle.</p>
+    <p id="p-00030-en" num="0030">The controller may decelerate the main body during a distance longer than the distance from the obstacle.</p>
+    <p id="p-00031-en" num="0031">The controller may stop the main body and then change the direction of the main body, if the main body collides with the obstacle.</p>
+    <p id="p-00032-en" num="0032">The controller may accelerate the main body to the normal velocity under the condition that the direction of the main body is maintained, if the main body does not collide with the obstacle at a position of the obstacle, judged by the first sensing unit.</p>
+    <p id="p-00033-en" num="0033">The main body may further include a cutter cutting a lawn, and the controller may operate the cutter during driving of the first sensing unit or the second sensing unit.</p>
+    <p id="p-00034-en" num="0034">The first sensing unit may includes ultrasonic sensors installed on the front surface of the main body and a guide surface guiding ultrasonic waves transmitted from the ultrasonic sensors and extending in parallel with the ground surface.</p>
+    <p id="p-00035-en" num="0035">The guide surface may block a part of ultrasonic waves traveling downward among the ultrasonic waves transmitted from the ultrasonic sensors and guide the ultrasonic waves in the horizontal direction so that an object not exceeding a designated height is not sensed as an obstacle.</p>
+    <p id="p-00036-en" num="0036">The first sensing unit may include a plurality of ultrasonic sensors and the guide surface may form one flat surface so as to guide ultrasonic waves transmitted from the plurality of ultrasonic sensors.</p>
+    <p id="p-00037-en" num="0037">The width of the guide surface may be greater than the overall width of the plurality of ultrasonic sensors.</p>
+    <p id="p-00038-en" num="0038">It is to be understood that both the foregoing general description and the following detailed description of the present invention are exemplary and explanatory and are intended to provide further explanation of the invention as claimed.</p>
+    <p id="p-00039-en" num="0039">The accompanying drawings, which are included to provide a further understanding of the invention and are incorporated in and constitute a part of this application, illustrate embodiment(s) of the invention and together with the description serve to explain the principle of the invention. In the drawings: <ul id="ul-00001-en" list-style="none" compact="compact"><li><figref>FIGs. 1A and 1B</figref> are views illustrating a main body of a lawn mower robot in accordance with one embodiment of the present invention;</li><li><figref>FIG. 2</figref> is a block diagram of <figref>FIGs. 1A and 1B</figref>;</li><li><figref>FIG. 3</figref> is a control flowchart of the lawn mower robot in accordance with the embodiment of the present invention;</li><li><figref>FIGs. 4A</figref> and <figref>4B</figref> are views illustrating driving of the lawn mower robot in accordance with the embodiment of the present invention; and</li><li><figref>FIG. 5</figref> is a view illustrating a sensing method of the lawn mower robot in accordance with the embodiment of the present invention.</li></ul></p>
+    <p id="p-00040-en" num="0040">Reference will now be made in detail to the preferred embodiments of the present invention, examples of which are illustrated in the accompanying drawings.</p>
+    <p id="p-00041-en" num="0041">In the drawings, the sizes or shapes of elements may be exaggerated for clarity and convenience of description. Further, terms specially defined in the following description in consideration of the configuration and functions of the present invention may be changed according to the intention of a user or an operator or a usual practice. The definitions of these terms should be determined based on the whole content of this specification.</p>
+    <p id="p-00042-en" num="0042">
+      <figref>FIGs. 1A and 1B</figref> are views illustrating a main body of a lawn mower robot in accordance with one embodiment of the present invention and <figref>FIG. 2</figref> is a block diagram of <figref>FIGs. 1A and 1B</figref>. Hereinafter, with reference to <figref>FIGs. 1A and 1B</figref> and <figref>FIG. 2</figref>, the lawn mower robot will be described.</p>
+    <p id="p-00043-en" num="0043">Particularly, <figref>FIG. 1A</figref> is a cross-sectional view of the main body of the lawn mower robot and <figref>FIG. 1B</figref> is an elevation view of the main body of the lawn mower robot.</p>
+    <p id="p-00044-en" num="0044">The lawn mower robot may include a main body 10 movably provided so as to cut a lawn and a boundary indication unit 100 defining a work area in which the main body 10 moves to conduct operation.</p>
+    <p id="p-00045-en" num="0045">The boundary indication unit 100 may include a boundary wire 110 forming the boundary of the work area and a station 120 supplying current to the boundary wire 110. That is, the boundary wire 110 may be connected to the station 120 and generate electromagnetic waves due to current supplied from the station 120. Further, the main body 10 may be connected to the station 120 and thus, the main body 10 may be charged.</p>
+    <p id="p-00046-en" num="0046">A cutter 50 cutting a lawn may be provided in the main body 10 of the lawn mower robot. The cutter 50 may be configured such that a sharp blade is rotatable.</p>
+    <p id="p-00047-en" num="0047">A drive unit 40 which may move and rotate the main body 10 in a desired direction is provided in the main body 10. The drive unit 40 may include a plurality of rotatable wheels and the respective wheels may be individually rotated and thus, the main body 10 may be rotated in a desired direction.</p>
+    <p id="p-00048-en" num="0048">The main body 10 may include a sensing unit assembly 30 sensing the boundary wire 110. The sensing unit assembly 30 may sense electromagnetic waves generated by current flowing in the boundary wire 110 and thus, acquire information regarding whether or not the main body 10 reaches the boundary wire 110, information regarding whether or not the main body 10 is present within a closed loop formed by the boundary wire 110, and information regarding whether or not the main body 10 drives along the boundary wire 110.</p>
+    <p id="p-00049-en" num="0049">Further, the sensing unit assembly 30 may sense various pieces of information regarding the moving distance and moving velocity of the main body 10 and relative position change of the main body 10 according to movement.</p>
+    <p id="p-00050-en" num="0050">The sensing unit assembly 30 may include a first sensing unit 32 sensing an obstacle located within the work area and a second sensing unit 36 sensing whether or not the main body 10 collides with an obstacle.</p>
+    <p id="p-00051-en" num="0051">The first sensing unit 32 may detect presence of an obstacle even if the first sensing unit 32 does not contact the obstacle and sense a distance between the obstacle and the main body 10 at the current position of the main body 10. The first sensing unit 32 may include a plurality of ultrasonic sensors and sense an obstacle separated from the main body.</p>
+    <p id="p-00052-en" num="0052">Therefore, a signal sensed by the first sensing unit 32, i.e., information regarding whether or not an obstacle is present or information regarding the distance from the obstacle, may be transmitted to a controller 20.</p>
+    <p id="p-00053-en" num="0053">The second sensing unit 36 may sense whether or not the main body 10 collides with an obstacle, i.e., contacts the obstacle. When the main body 10 contacts the obstacle, pressure of a designated intensity or more is applied to the second sensing unit 36 and thus, the second sensing unit 36 may sense collision.</p>
+    <p id="p-00054-en" num="0054">A signal sensed by the second sensing unit 36, i.e., information regarding whether or not the main body 10 collides with an obstacle, may be transmitted to the controller 20.</p>
+    <p id="p-00055-en" num="0055">The main body 10 may drive the drive unit 40 using information sensed by the sensing unit assembly 30. That is, the controller 20 may control driving of the main body 10 using information measured by the sensing unit assembly 30 and thus, drive the drive unit 40 so that the main body 10 may be located within the work area.</p>
+    <p id="p-00056-en" num="0056">The first sensing unit 32 may include ultrasonic sensors 33 installed on the front surface of the main body 10 and a guide surface 34 guiding ultrasonic waves transmitted from the ultrasonic sensors 33 and extending in parallel with the ground surface. The guide surface 34 may be formed of a material effectively reflecting ultrasonic waves. That is, the guide surface 34 may be formed of plastic.</p>
+    <p id="p-00057-en" num="0057">The ultrasonic sensors 33 are disposed such that ultrasonic waves transmitted from the ultrasonic sensors 33 travel in the forward direction of the main body 10, and the guide surface 34 may shield ultrasonic waves transmitted to a specific position.</p>
+    <p id="p-00058-en" num="0058">In the present invention, the ultrasonic sensors 33 do not face upward but face forward and thus, lowering of sensing ability of an obstacle located in front of the main body 10 may be prevented.</p>
+    <p id="p-00059-en" num="0059">The guide surface 34 may block a part of ultrasonic waves traveling downward among ultrasonic waves transmitted from the ultrasonic sensors 33. That is, the guide surface 34 may guide ultrasonic waves in the horizontal direction so that an object not exceeding a designated height is not sensed as an obstacle.</p>
+    <p id="p-00060-en" num="0060">As exemplarily shown in <figref>FIG. 5</figref>, the ultrasonic sensors 10 may not sense an obstacle having a height of about 10 cm located within the range of 30 cm from the main body 10. The reason for this is that, if a lawn within the work area is not mowed for a long time, the lawn may grow to a height of about 10 cm from the ground surface. If the lawn of a height of 10 cm is sensed as an obstacle of the lawn mower robot, many problems as to movement of the main body 10 may occur. Therefore, in the present invention, the lawn mower robot is adjusted such that, if the height of an object does not exceed a specific value, the object is not recognized as an obstacle.</p>
+    <p id="p-00061-en" num="0061">The ultrasonic sensors 33 may generate ultrasonic waves within the range of an angle of about 50 degrees in the vertical direction. Particularly, the ultrasonic sensors 33 may generate ultrasonic waves in the range of an angle of ±25°.</p>
+    <p id="p-00062-en" num="0062">As exemplarily shown in <figref>FIG. 1B</figref>, the first sensing unit 32 may include the plurality of ultrasonic sensors 33.</p>
+    <p id="p-00063-en" num="0063">The guide surface 34 may form one flat surface so as to guide ultrasonic waves transmitted from the plurality of ultrasonic sensors 33. That is, the plurality of ultrasonic sensors 33 is installed at the same height, as exemplarily shown in <figref>FIG. 1A</figref>, and particularly, may be disposed on the front surface of the main body 10 in the width direction, as exemplarily shown in <figref>FIG. 1B</figref>.</p>
+    <p id="p-00064-en" num="0064">Therefore, the guide surface 34 may be formed to guide ultrasonic waves transmitted from all the ultrasonic sensors 33. The guide surface 34 may be disposed on the front surface of the main body 10, extend to a designated length (L) on the front surface of the main body 10, and be provided in parallel with the ground surface.</p>
+    <p id="p-00065-en" num="0065">Since the guide surface 34 has a designated width (W) or more, the front portions of the ultrasonic sensors 33, having a smaller width (w), provide a sufficient coverage. Therefore, foreign substances do not block the front portions of the ultrasonic sensors 33 so as not to disturb progress of ultrasonic waves transmitted from the ultrasonic sensors 33.</p>
+    <p id="p-00066-en" num="0066">The ultrasonic sensors 33 may transmit ultrasonic waves forward at an angle of about 100 degrees (particularly, about ±50°) in the horizontal direction. Therefore, about three ultrasonic sensors 33 may be installed on the main body 10 such that the central direction of each of the ultrasonic sensors 33 faces the front surface of the main body 10 and thus, sense an obstacle located in front of the main body 10.</p>
+    <p id="p-00067-en" num="0067">The first sensing unit 32 may be installed on a cover 12 forming the external appearance of the main body 10. That is, the ultrasonic sensors 33 may be disposed on the front surface of the cover 12, and the guide surface 34 may be disposed on the front surface of the cover 12 in front of the ultrasonic sensors 33.</p>
+    <p id="p-00068-en" num="0068">That is, the ultrasonic sensors 33 may be installed at a higher position than the guide surface 34 so that the guide surface 34 may guide the moving direction of ultrasonic waves transmitted from the ultrasonic sensors 33.</p>
+    <p id="p-00069-en" num="0069">The main body 10 may include the cover 12 colliding with an obstacle and a body 14 installed within the cover 12. Electronic parts, such as a PCB, motors to rotating the wheels, and a rechargeable battery, may be installed in the body 14.</p>
+    <p id="p-00070-en" num="0070">The cover 12 may be combined with the body 14 so as to move relative to the body 14. That is, although impact is applied to the cover 12, the cover 12 may move relative to the body 14 and thus, the degree of impact applied to the cover 12 is not transmitted to the body 14 as it is. Therefore, although the main body 10 collides with an obstacle, the degree of impact applied to the main body 10 is not transmitted to the body 14 as it is, and damage to the controller 20 installed in the main body 10 may be prevented.</p>
+    <p id="p-00071-en" num="0071">Here, the second sensing unit 36 may be installed at a connection region between the cover 12 and the body 14. Therefore, the second sensing unit 36 may transmit a signal, generated by relative moment of the cover 12 to the body 14 due to collision of the main body 10 with an obstacle, to the controller 20.</p>
+    <p id="p-00072-en" num="0072">Of course, the second sensing unit 36 may include various types of sensors which may sense collision of the main body 10 with an obstacle.</p>
+    <p id="p-00073-en" num="0073">The controller 20 may control movement of the main body 10 by the signals sensed by the first sensing unit 32 and the second sensing unit 36. That is, the controller 30 controls operation of the drive unit 40 according to corresponding information, thus moving the main body 10.</p>
+    <p id="p-00074-en" num="0074">That is, the controller 20 may adjust the velocity of the main body 10 according to information transmitted from the first sensing unit 32, i.e., a distance between the main body 10 and an obstacle. That is, the controller 20 may decelerate the main body 10 to different velocities according to the distance between the main body 10 and the obstacle.</p>
+    <p id="p-00075-en" num="0075">Further, the controller 20 may differently control movement of the main body 10 according to information transmitted from the second sensing unit 36, i.e., whether or not the main body 10 collides with an obstacle.</p>
+    <p id="p-00076-en" num="0076">An obstacle may be an immovable object, such as a tree, or a movable object, such as a person. When the main body 10 senses an obstacle, such as a tree, the obstacle is present at a corresponding position at all times. On the other hand, when the main body 10 senses an obstacle, such as a person, the person may avoid the main body 10 or the person may stay at a current position even if the person recognizes the main body 10. Further, the person may suddenly appear at a position close to the main body 10.</p>
+    <p id="p-00077-en" num="0077">That is, when the main body 10 collides with an obstacle, the main body 10 may be stopped and change direction. When the main body 10 collides with the obstacle, it is impossible for the main body 10 to move in the same direction any more. Therefore, the controller 20 may control the drive unit 40 so that the moving direction of the main body 10 is changed.</p>
+    <p id="p-00078-en" num="0078">On the other hand, although the main body 10 senses an obstacle and moves to a corresponding position, when the main body 10 does not collide with the obstacle, the decelerated velocity may be increased again to the normal velocity. In this case, the main body 10 may not change direction.</p>
+    <p id="p-00079-en" num="0079">
+      <figref>FIG. 3</figref> is a control flowchart of the lawn mower robot in accordance with the embodiment of the present invention. Hereinafter, a control method of the lawn mower robot will be described with reference to <figref>FIG. 3</figref>.</p>
+    <p id="p-00080-en" num="0080">In order to define the work area of the lawn mower robot, a user may install the boundary wire 110 at the boundary of the work area. Due to the boundary wire 110, the lawn mower robot may mow a lawn located within the work area without deviation of the main body 10 from the work area.</p>
+    <p id="p-00081-en" num="0081">The lawn mower robot may mow a lawn located within the work area while the main body 10 drives within the work area at the normal velocity, for example, 500mm/sec.</p>
+    <p id="p-00082-en" num="0082">The main body 10 may sense whether or not an obstacle is present in front of the main body 10 through the first sensing unit 32 while driving within the work area (Operation S10). When the first sensing unit 32 senses an obstacle, the first sensing unit 32 may detect a distance between the obstacle and the main body 10.</p>
+    <p id="p-00083-en" num="0083">When the obstacle in front of the main body 10 is sensed, the controller 20 may control the drive unit 40 to decelerate the main body 10 (Operation S20). Since the velocity of the main body 10 is reduced, even if the main body 10 collides with the obstacle, impact applied to the main body 10 may be reduced.</p>
+    <p id="p-00084-en" num="0084">Here, the controller 20 may decelerate the main body 10 to different velocities according to distances between the obstacle and the main body 10. Further, the controller 20 may vary a deceleration time, for which the main body 10 is decelerated from the normal velocity, according to distances between the obstacle and the main body 10.</p>
+    <p id="p-00085-en" num="0085">For example, if an obstacle located within 30 cm from the main body 10 is sensed, the main body 10 may be decelerated to 340 mm/sec. Further, if the obstacle located within 30 cm from the main body 10 is sensed, the main body 10 may be decelerated for 3 seconds.</p>
+    <p id="p-00086-en" num="0086">If an obstacle located within 25 cm from the main body 10 is sensed, the main body 10 may be decelerated to 240 mm/sec. Further, if the obstacle located within 25 cm from the main body 10 is sensed, the main body 10 may be decelerated for 2.5 seconds.</p>
+    <p id="p-00087-en" num="0087">If an obstacle located within 22 cm from the main body 10 is sensed, the main body 10 may be decelerated to 150 mm/sec. Further, if the obstacle located within 22 cm from the main body 10 is sensed, the main body 10 may be decelerated for 2.5 seconds.</p>
+    <p id="p-00088-en" num="0088">That is, if an obstacle having a small distance from the main body 10 is sensed, the deceleration degree of the main body 10 may increase and the deceleration time of the main body 10 may increase. As a distance of the main body 10 from an obstacle is small, the impact degree of the main body 10 during collision with the obstacle may be reduced by rapidly decelerating the main body 10.</p>
+    <p id="p-00089-en" num="0089">The main body 10 may move to the position of the obstacle sensed by the first sensing unit 32. Here, the main body 10 may move to the corresponding position in a state decelerated from the normal velocity.</p>
+    <p id="p-00090-en" num="0090">When the main body 10 reaches the obstacle, the main body 10 may collide with the obstacle (Operation S40).</p>
+    <p id="p-00091-en" num="0091">If the obstacle is a fixed object, such as a tree, as exemplarily shown in <figref>FIG. 4A</figref>, the main body 10 may collide with the obstacle at a moment when the main body 10 reaches the position sensed by the first sensing unit 32.</p>
+    <p id="p-00092-en" num="0092">At this time, the controller 20 may judge whether or not the main body 10 collides with the obstacle through the second sensing unit 36.</p>
+    <p id="p-00093-en" num="0093">When the main body 10 collides with the obstacle, the main body 10 does not move in the same direction any more and is stopped (Operation S50).</p>
+    <p id="p-00094-en" num="0094">Then, the controller 20 may control the main body 10 to change direction so that the main body 10 may avoid the obstacle and move to another position within the work area (Operation S60). In this case, unless the main body 10 senses another obstacle, the controller 20 may control the main body 10 to move at the normal velocity.</p>
+    <p id="p-00095-en" num="0095">At this time, the main body 10 may move backward and then change direction.</p>
+    <p id="p-00096-en" num="0096">If the obstacle is a movable object, such as a person, as exemplarily shown in <figref>FIG. 4B</figref>, the main body 10 may not collide with the obstacle even when the main body 10 reaches the position sensed by the first sensing unit 32. The reason for this is that the person may move from the position sensed by the first sensing unit 32 and the obstacle may disappear at the corresponding position after time goes by.</p>
+    <p id="p-00097-en" num="0097">Although the main body 10 moves to the position of the obstacle sensed by the first sensing unit 32, when the main body 10 does not collide with the obstacle, the controller 20 may accelerate the main body 10 to the normal velocity under the condition that the moving direction of the main body 10 is maintained.</p>
+    <p id="p-00098-en" num="0098">When the main body 10 does not collide with the obstacle, a distance during which the main body 10 drives at a lower velocity than the normal velocity, i.e., a deceleration section, may be longer than a section where the first sensing unit 32 senses that the obstacle is located. That is, the main body 10 may move at the normal velocity after it is judged that the main body 10 sufficiently passes by the obstacle, in consideration of a measurement error of the first sensing unit 32.</p>
+    <p id="p-00099-en" num="0099">While the main body 10 drives within the work area, i.e., while the first sensing unit 32 and the second sensing unit 36 are operated, the cutter 50 may be operated. Since the main body 10 drives within the work area, the cutter 50 is operated to mow a lawn within the work area.</p>
+    <p id="p-00100-en" num="0100">That is, in the present invention, driving of the main body 10 may be differently controlled according to whether or not the main body 10 collides with an obstacle, i.e., whether or not the second sensing unit 36 senses collision between the main body and the obstacle.</p>
+    <p id="p-00101-en" num="0101">As apparent from the above description, a lawn mower robot in accordance with one embodiment of the present invention may be decelerated when an obstacle is sensed and thus prevent damage to the obstacle or the lawn mower robot. Particularly, if the obstacle is a movable person, impact applied to the person may be reduced and time to avoid the lawn mower robot may be provided to the person.</p>
+    <p id="p-00102-en" num="0102">Further, the lawn mower robot in accordance with the embodiment of the present invention may be decelerated around an obstacle and thus provide a perception to a user that the lawn mower robot recognizes the obstacle.</p>
+    <p id="p-00103-en" num="0103">Further, since, although an obstacle is recognized, the lawn mower robot in accordance with the embodiment of the present invention moves until the lawn mower robot collides with the obstacle, the range of a lawn mowed by the lawn mower robot may be extended to a region adjacent to the obstacle.</p>
+    <p id="p-00104-en" num="0104">It will be apparent to those skilled in the art that various modifications and variations can be made in the present invention without departing from the spirit or scope of the invention. Thus, it is intended that the present invention covers the modifications and variations of this invention provided they come within the scope of the appended claims and their equivalents.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A control method of a lawn mower robot being configured to be operated in a work area defined by a boundary indication unit, comprising:
+<claim-text>sensing whether or not an obstacle is present during driving at a normal velocity;</claim-text><claim-text>decelerating the lawn mower robot when the obstacle is sensed;</claim-text><claim-text>sensing whether or not the lawn mower robot collides with the obstacle in the decelerated state; and</claim-text><claim-text>driving differently the lawn mower robot between if a collision of the lawn mower robot with the obstacle is sensed and if a collision of the lawn mower robot with the obstacle is not sensed.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The control method according to claim 1, wherein, in the sensing as to whether or not an obstacle is present, a distance from the obstacle is sensed.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The control method according to claim 2, wherein, in the deceleration of the lawn mower robot, the lawn mower robot is decelerated to different velocities according to distances from the obstacle.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The control method according to claim 2 or 3, wherein, in the deceleration of the lawn mower robot, a deceleration time varies according to distances from the obstacle.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The control method according to any of claims 2 to 4, wherein, in the deceleration of the lawn mower robot, a distance during which the lawn mower robot is decelerated is longer than the distance from the obstacle.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The control method according to any of claims 1 to 5, wherein, in the driving of the lawn mower robot, if the collision is sensed, the lawn mower robot is stopped and changes direction.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The control method according to claim 6, wherein, in the driving of the lawn mower robot, the lawn mower robot is accelerated to the normal velocity after change of direction.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The control method according to any of claims 1 to 7, wherein, in the driving of the lawn mower robot, if the collision is not sensed, the lawn mower robot is accelerated to the normal velocity under the condition that the direction of the lawn mower robot is maintained.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The control method according to any of claims 1 to 8, wherein the obstacle includes a fixed obstacle or a movable obstacle.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The control method according to any of claims 1 to 9, wherein a cutter cutting a lawn is operated during each of the sensing as to whether or not an obstacle is present, the deceleration of the lawn mower robot, the sensing as to whether or not the lawn mower robot collides with the obstacle in the decelerated state, and the driving of the lawn mower robot.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The control method according to any of claims 1 to 10, comprising:
+<claim-text>changing direction of the lawn mower robot and then driving the lawn mower robot when the lawn mower robot collides with the obstacle,</claim-text><claim-text>wherein a cutter is operated during each of the sensing as to whether or not an obstacle is present, the deceleration of the lawn mower robot, and the change of the direction of the lawn mower robot and driving of the lawn mower robot.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The control method according to claim 1 l, wherein, in the deceleration of the lawn mower robot, a distance during which deceleration of the lawn mower robot is carried out is longer than a distance from the obstacle.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The control method according to claim 11 or 12, wherein, in the deceleration of the lawn mower robot, the lawn mower robot is decelerated to different velocities according to distances from the obstacle.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>A lawn mower robot being configured to be operated in a work area defined by a boundary indication unit; and comprising:
+<claim-text>a main body moving within the work area defined by the boundary wire,</claim-text><claim-text>wherein the main body includes:
+<claim-text>a first sensing unit sensing an obstacle located within the work area;</claim-text><claim-text>a second sensing unit sensing whether or not the main body collides with the obstacle; and</claim-text><claim-text>a controller controlling movement of the main body according to signals sensed by the first sensing unit and the second sensing unit.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>The lawn mower robot according to claim 14, wherein the first sensing unit senses a distance from the obstacle to the main body.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>The lawn mower robot according to claim 15, wherein the controller decelerates the main body to different velocities according to distances from the obstacle.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>The lawn mower robot according to claim 16, wherein the controller decelerates the main body during a distance longer than the distance from the obstacle.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>The lawn mower robot according to any of claims 14 to 17, wherein the controller stops the main body and changes the direction of the main body, if the main body collides with the obstacle.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>The lawn mower robot according to any of claims 14 to 18, wherein the controller accelerates the main body to the normal velocity under the condition that the direction of the main body is maintained, if the main body does not collide with the obstacle at a position of the obstacle, judged by the first sensing unit.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>The lawn mower robot according to any of claims 14 to 19, wherein the main body further includes a cutter cutting a lawn,<br />
+wherein the controller operates the cutter during driving of the first sensing unit or the second sensing unit.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>The lawn mower robot according to any of claims 14 to 20, wherein the first sensing unit includes:
+<claim-text>an ultrasonic sensor installed on the front surface of the main body; and</claim-text><claim-text>a guide surface guiding ultrasonic waves transmitted from the ultrasonic sensors and extending in parallel with the ground surface.</claim-text></claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>The lawn mower robot according to claim 21, wherein the guide surface blocks a part of ultrasonic waves traveling downward among the ultrasonic waves transmitted from the ultrasonic sensors and guides the ultrasonic waves in the horizontal direction so that an object not exceeding a designated height is not sensed as an obstacle.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>The lawn mower robot according to claim 21, wherein:
+<claim-text>the first sensing unit includes a plurality of ultrasonic sensors; and</claim-text><claim-text>the guide surface forms one flat surface so as to guide ultrasonic waves transmitted from the plurality of ultrasonic sensors.</claim-text></claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>The lawn mower robot according to claim 23, wherein the width of the guide surface is greater than the overall width of the plurality of ultrasonic sensors.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>A system comprising a lawn mower robot according to any of claims 14 to 24 and a boundary indication unit defining a work area.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2939513A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2939513A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2939513A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2939513A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2939513A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2939513A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2939513A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2939513A1_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2939513A1.PDF" type="pdf" size="299914" pages="17" />
+</lexisnexis-patent-document>

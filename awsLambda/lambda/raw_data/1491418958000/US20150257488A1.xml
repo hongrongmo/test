@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257488A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030210" date-changed="20151103" time-changed="063342">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315693">
+        <country>US</country>
+        <doc-number>20150257488</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14210499</doc-number>
+        <date>20140314</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>A43C   7/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>43</class>
+        <subclass>C</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A43C   9/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>43</class>
+        <subclass>C</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>A43C   7/005       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>C</subclass>
+        <main-group>7</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A43C   9/00        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>C</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>Y10T  24/3726      20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>24</main-group>
+        <subgroup>3726</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Modified Shoelaces and Associated Methods</invention-title>
+    <references-cited date-changed="20151103">
+      <patent-citations name="patcit" date-changed="20151103" />
+      <citation>
+        <patcit num="1" dnum="US2141801A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2141801</doc-number>
+            <kind>A</kind>
+            <name>SEYMOUR TAFT</name>
+            <date>19381227</date>
+          </document-id>
+          <application-date>
+            <date>19370504</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2306515A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2306515</doc-number>
+            <kind>A</kind>
+            <name>ARTHUR WRIGHT</name>
+            <date>19421229</date>
+          </document-id>
+          <application-date>
+            <date>19410801</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2344963A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2344963</doc-number>
+            <kind>A</kind>
+            <name>AARON BENOWITZ</name>
+            <date>19440328</date>
+          </document-id>
+          <application-date>
+            <date>19420612</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2477151A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2477151</doc-number>
+            <kind>A</kind>
+            <name>STAPLETON HERBERT J</name>
+            <date>19490726</date>
+          </document-id>
+          <application-date>
+            <date>19440603</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US2639481A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2639481</doc-number>
+            <kind>A</kind>
+            <name>LESTER GEORGE C</name>
+            <date>19530526</date>
+          </document-id>
+          <application-date>
+            <date>19510718</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US5613283A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5613283</doc-number>
+            <kind>A</kind>
+            <name>YUSFAN SHAY [IL]</name>
+            <date>19970325</date>
+          </document-id>
+          <application-date>
+            <date>19951002</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="US5920970A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5920970</doc-number>
+            <kind>A</kind>
+            <name>COBLENTZ THOMAS L [US]</name>
+            <date>19990713</date>
+          </document-id>
+          <application-date>
+            <date>19971105</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="8" dnum="US6968602B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6968602</doc-number>
+            <kind>B2</kind>
+            <name>LEE JAMES JONG [US], et al</name>
+            <date>20051129</date>
+          </document-id>
+          <application-date>
+            <date>20031214</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="9" dnum="US2008016661A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080016661</doc-number>
+            <kind>A1</kind>
+            <name>NG MUNJEN [US]</name>
+            <date>20080124</date>
+          </document-id>
+          <application-date>
+            <date>20060821</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="10" dnum="US2013205553A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20130205553</doc-number>
+            <kind>A1</kind>
+            <name>LIN PING-KUN [US]</name>
+            <date>20130815</date>
+          </document-id>
+          <application-date>
+            <date>20120215</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="11" dnum="US2013255045A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20130255045</doc-number>
+            <kind>A1</kind>
+            <name>GONZALEZ MIGUEL A [US]</name>
+            <date>20131003</date>
+          </document-id>
+          <application-date>
+            <date>20130401</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="12" dnum="US2014007457A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20140007457</doc-number>
+            <kind>A1</kind>
+            <name>JONES ANTON WARREN [US]</name>
+            <date>20140109</date>
+          </document-id>
+          <application-date>
+            <date>20120418</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="13" dnum="US2014215777A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20140215777</doc-number>
+            <kind>A1</kind>
+            <name>LEE CHENG-YUNG [TW]</name>
+            <date>20140807</date>
+          </document-id>
+          <application-date>
+            <date>20130307</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="14" dnum="US2015128389A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20150128389</doc-number>
+            <kind>A1</kind>
+            <name>CARNEY GREGORY [US]</name>
+            <date>20150514</date>
+          </document-id>
+          <application-date>
+            <date>20131108</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="15" dnum="US2015237951A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20150237951</doc-number>
+            <kind>A1</kind>
+            <name>HILDERBRAND IV HENRY LUCIUS [US]</name>
+            <date>20150827</date>
+          </document-id>
+          <application-date>
+            <date>20150204</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Flores</last-name>
+            <first-name>Alexis</first-name>
+            <address>
+              <city>Melbourne</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Flores</last-name>
+            <first-name>Lauren Brooke</first-name>
+            <address>
+              <city>Melbourne</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Flores</last-name>
+            <first-name>Alexis</first-name>
+            <address>
+              <city>Melbourne</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Flores</last-name>
+            <first-name>Lauren Brooke</first-name>
+            <address>
+              <city>Melbourne</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173669224">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257488</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140314</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173669217">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257488</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140314</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A modified shoelace comprising a first fastener and a second fastener; wherein the shoelace has an active area disposed on the shoelace between an uppermost first eyelet and an uppermost second eyelet when the shoelace is in a laced configuration, wherein the first fastener is secured to the shoelace outside the active area; wherein the second fastener is secured to the shoelace a loop distance from the first fastener and distal from the active area.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to the field of shoelaces. More specifically, the present invention relates to shoelaces that include connectors located on the shoelaces, which allow the shoelaces to be more easily tied. The location of the connectors is determined to allow the modified shoelaces to work with a wide range of shoes.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Children are often taught to tie their shoes at a young age. To successfully complete this common activity, children, and adults, require coordination and dexterity. Children attempting to tie their own shoelaces within the developmental norms as well as with children learning this skill at a delayed pace often encounter problems when they attempt to stabilize one or both loops in shoelaces while trying to manipulate them in order to pull one loop through a circle formed by the other to complete the process of tying the shoelaces. This difficulty can cause frustration in a child as one or both of the loops may lose their shape. Children, and adults, may not have the fine motor skills necessary for the successful completion of the task. Due to this frustration, individuals learning the skill of tying shoelaces may abandon the endeavor with the hope to achieve it at a later date.</p>
+      <p id="p-00003-en" num="0003">U.S. Pat. No. 5,778,499 discloses a shoelace that comprises a woven material and hook fasteners disposed upon it, which are capable of adhering to the woven material. However, the hook fasteners may adhere to at any point to the woven material. Therefore, the person tying the shoelaces disclosed in U.S. Pat. No. 5,778,499 may inadvertently attach the hook fastener to the woven material in a way that forms a loop size or shape that is not conducive to completing the shoelace tying process.</p>
+      <p id="p-00004-en" num="0004">U.S. Pat. No. 5,778,499 also discloses a shoelace that has a hook fastener and a loop fastener disposed upon it. In the disclosure of U.S. Pat. No. 5,778,499, the hook and loop fasteners may be disposed anywhere in a broad region of the shoelace. When placing such a shoelace in different pairs of shoes, which may utilize different lengths of shoelace to completely lace up the shoes, the hook and loop fasteners may not be positioned in a way that allows them to be utilized to properly tie the shoelace. This makes the shoelaces disclosed in U.S. Pat. No. 5,778,499 inappropriate for use on different pairs of shoes that may utilize different lengths of shoelace to completely lace them up.</p>
+      <p id="p-00005-en" num="0005">As a result, there exists a need for a shoelace which can be utilized to teach children and adults how to tie shoelaces, or aid children and adults in completing the tying process, which can also be placed in a variety of shoes and still provide the necessary teaching features.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00006-en" num="0006">With the foregoing in mind, embodiments of the present invention are related to shoelaces with fasteners disposed upon them at specific locations which allow the shoelaces to be used with a variety of shoes in different sizes and styles.</p>
+      <p id="p-00007-en" num="0007">These and other features and advantages according to an embodiment of the present invention are provided by identifying a sample of various shoes in which it is desirable for the shoelaces to properly function. The length of shoelace required to lace up the eyelets in each of the sample shoes is determined. An arithmetic mean of the length of shoelace required to lace up each of the shoes is calculated and utilized to determine where the fasteners should be placed on the shoelace.</p>
+      <p id="p-00008-en" num="0008">The vertical distance from the bottom eyelet of each shoe to the top eyelet of each shoe may be measured and the horizontal distance from the left eyelet to the right eyelet may be measured. These measurements may be utilized to determine the average length of shoelace necessary to lace of shoes in the representative sample of shoes in which the shoelaces are expected to function appropriately. Inner fasteners may be permanently disposed on the shoelace at positions proximate to the area of shoelace that is utilized to lace up the shoe. Additional mating fasteners may be permanently disposed on the shoelace a loop distance from the inner fasteners and distal from the center of the shoelace.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 1</figref> is an image illustrating the modified shoelace.</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 2</figref> is an image illustrating the modified shoelace in the laced up configuration.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 3</figref> is a flowchart depicting an embodiment of the inventive method.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 4</figref> is a flowchart depicting an embodiment of the inventive method.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENT</heading>
+      <p id="p-00013-en" num="0013">The present invention will now be described more fully hereinafter with reference to the accompanying drawings, in which preferred embodiments of the invention are shown. This invention may, however, be embodied in many different forms and should not be construed as limited to the embodiments set forth herein. Rather, these embodiments are provided so that this disclosure will be thorough and complete, and will fully convey the scope of the invention to those skilled in the art. Those of ordinary skill in the art realize that the following descriptions of the embodiments of the present invention are illustrative and are not intended to be limiting in any way. Other embodiments of the present invention will readily suggest themselves to such skilled persons having the benefit of this disclosure. Like numbers refer to like elements throughout.</p>
+      <p id="p-00014-en" num="0014">In this detailed description of the present invention, a person skilled in the art should note that directional terms, such as “above,” “below,” “upper,” “lower,” and other like terms are used for the convenience of the reader in reference to the drawings. Also, a person skilled in the art should notice this description may contain other terminology to convey position, orientation, and direction without departing from the principles of the present invention.</p>
+      <p id="p-00015-en" num="0015">Referring to <figref>FIG. 1</figref>, a modified shoelace <b>100</b> is shown. The shoelace has a length that extends from the distal end of a first aglet <b>101</b> to the distal end of a second aglet <b>102</b>. A first fastener <b>103</b> and a second fastener <b>104</b> are disposed on the modified shoelace <b>100</b>.</p>
+      <p id="p-00016-en" num="0016">The first fastener <b>103</b> and the second fastener <b>104</b> may be secured to one another. The first fastener <b>103</b> and second fastener <b>104</b> may be any fasteners known in the art, for example and not by way of limitation, the fasteners <b>103</b>,<b>104</b> may be snaps, buttons, hooks and loops, or the like.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 2</figref> depicts the modified shoelace <b>200</b> in a laced configuration. The active area may be disposed on a mid-portion of the modified shoelace <b>200</b>. The active area may begin at a first edge <b>207</b> that is above the topmost right, or left, eyelet <b>205</b> and extend distally from the first aglet <b>201</b> toward the second aglet <b>202</b>. The active area may end at a second edge <b>208</b> above the topmost left, or right, eyelet <b>206</b>. The active area may encompass the area of the modified shoelace <b>200</b> that is engaged with the eyelets when in a laced configuration. The active area may extend beyond the top eyelets to encompass the area of the modified shoelace <b>200</b> that may be used to create a knot when in a laced configuration.</p>
+      <p id="p-00018-en" num="0018">Returning to <figref>FIG. 1</figref>, the first fastener <b>103</b> may be secured to the modified shoelace <b>100</b> outside the active area <b>109</b> and proximate to the first edge <b>107</b>. The first fastener <b>103</b>, and any other fastener, may be secured to the modified shoelace by stitching, heat activated adhesive, or the like. The first edge <b>107</b> may or may not be represented on the modified shoelace <b>100</b> with a visible indicator. A second fastener <b>104</b> may be disposed on the modified shoelace <b>100</b> a loop distance from the first fastener <b>103</b>. The second fastener <b>104</b> may be disposed on the modified shoelace between the first aglet <b>101</b> and the first fastener <b>103</b>. The loop distance may be determined by locating a position on the modified shoelace <b>100</b> that is sufficiently far from the first fastener <b>103</b> to allow the two points to be brought in contact with one another to create a loop the size of which is desirable in a shoe tying configuration. By way of example and not as a limitation, the loop distance may be 4.0″, 3.5″, 3.0″, or any similar length.</p>
+      <p id="p-00019-en" num="0019">The active area <b>109</b> may extend from the first edge <b>107</b> to the second edge <b>108</b>. The distance between the first edge <b>107</b> and the second edge <b>108</b> may be the active length. The active length may be determined by surveying a representative group of shoes in which the modified shoelaces <b>100</b> may be utilized and determining a mean of the length of shoelace required to lace the modified shoelaces <b>100</b> through the eyelets disposed on the representative shoes.</p>
+      <p id="p-00020-en" num="0020">The modified shoelace may have a third fastener <b>110</b> that is disposed on the shoelace proximate to the active area <b>109</b> and distal from the first fastener <b>103</b>. A fourth fastener <b>111</b> may be disposed a loop distance from the third fastener <b>110</b>. The third fastener <b>110</b> may be separated from the second edge <b>108</b> by a grip distance. The third and fourth fasteners <b>110</b>, <b>111</b> may secure to one another similarly to the first and second fasteners <b>103</b>, <b>104</b>.</p>
+      <p id="p-00021-en" num="0021">To determine the active length, the distance from the middle of the bottommost eyelet to the middle of the topmost eyelet may be measured on a plurality of shoes. For convenience, all shoes may have the same number of eyelets. Alternatively, shoes with differing numbers of eyelets may be measured. The distance from the bottommost eyelet to the topmost eyelet may be called the vertical distance. The sum of all measured vertical distances may be divided by the number of shoes measured to determine a mean vertical distance.</p>
+      <p id="p-00022-en" num="0022">The horizontal distance on a plurality of shoes may also be measured to determine the active length. The horizontal distance may be the distance between the middle of an eyelet on the left-side of a shoe and the middle of an eyelet directly opposing it on the right-side of the shoe. The sum of all measured horizontal distances may be divided by the number of shoes measured to determine a mean horizontal distance.</p>
+      <p id="p-00023-en" num="0023">The active length may be determined by constructing a “perfect shoe” which has a horizontal distance equal to the mean horizontal distance and a vertical distance equal to the mean vertical distance. A shoelace may be laced through the eyelets of the “perfect shoe” and the active length may be determined empirically from this configuration.</p>
+      <p id="p-00024-en" num="0024">The active length may be calculated by applying the following formula:</p>
+      <p id="p-00025-en" num="0000">[in-line-formulae]Active length=8*sqrt(<i>ĥ</i>2+(<i>v/</i>(<i>e/</i>2−1))̂2)<i>+h+k </i>[/in-line-formulae]</p>
+      <p id="p-00026-en" num="0000">Where h is the horizontal mean, v is the vertical mean, e is the total number of eyelets on the shoe, and k is the length of shoelace required to form a knot. Applying this formula to an exemplary set of shoes with 5 sets of eyelets, a horizontal mean of 2.0″, a vertical mean of 2.7″, and a knot length of 1.5″ results in</p>
+      <p id="p-00027-en" num="0000">[in-line-formulae]8*sqrt(2.0″̂ 2+(2.7″/(10/2−1))̂2)+2.0″+1.5″=19.4″[/in-line-formulae]</p>
+      <p id="p-00028-en" num="0025">The vertical distance between two adjacent eyelets may be called the eyelet distance and may be calculated as follows:</p>
+      <p id="p-00029-en" num="0000">[in-line-formulae]Eyelet distance=<i>v/</i>(<i>e/</i>2−1)[/in-line-formulae]</p>
+      <p id="p-00030-en" num="0000">Where v is the vertical mean and e is the total number of eyelets on the shoe.</p>
+      <p id="p-00031-en" num="0026">It is not necessary to measure from the middle of an eyelet to the middle of another eyelet. Vertical distances may be measured from the bottom of an eyelet to the top of another eyelet or from any combination of top, middle, and bottom sides of eyelets. Horizontal distances may be measured from the right side of an eyelet to the left side of another eyelet or from any combination of left, right, and middle sides of eyelets.</p>
+      <p id="p-00032-en" num="0027">The active area may also include extra length in it to extend beyond the topmost eyelets. The extra length added to the active area, to allow it to extend beyond the top of the average eyelets, may be the grip distance. This length may cause the fasteners to be positioned sufficiently far from the uppermost eyelets to allow the user of the modified shoelaces to handle or manipulate the modified shoelaces to complete the task of tying the shoelaces.</p>
+      <p id="p-00033-en" num="0028">It is important to note that shoelaces known in the art often have significant deviations in their overall length. Shoelaces that are purported to be a specific length may actually have lengths that differ by up to one or even two inches from the specified length. The disclosed invention takes the length variations of known shoelaces into account and accommodates these variations in the way that the locations of the fasteners are determined. To appropriately locate fasteners on the inventive device, it may be necessary to find the midpoint of the shoelace.</p>
+      <p id="p-00034-en" num="0029">The modified shoelace <b>100</b> may be utilized by securing the first fastener <b>103</b> to the second fastener <b>104</b> to create a first loop. The wearer may then form a second loop with the opposing end of the modified shoelace. The first and second loops may be crossed with the first loop being brought behind the second loop and then pulled to the front, beneath the location at which the two loops cross to complete the process of tying the shoelaces. In embodiments of the modified shoelace <b>100</b> in which there are a third and fourth fastener <b>110</b>, <b>111</b>, the second loop may be formed by securing the third fastener <b>110</b> to the fourth fastener <b>111</b>. The modified shoelace <b>100</b> may also be utilized with any known method of shoelace tying.</p>
+      <p id="p-00035-en" num="0030">
+        <figref>FIG. 3</figref> depicts an embodiment of an inventive process for forming the modified shoelace. As depicted in <figref>FIG. 3</figref>, the steps for creating the modified shoelaces may include obtaining a plurality of shoes <b>312</b>. Each of the plurality of shoes may have a set of eyelets, through which the shoelaces may be laced. The set of eyelets may contain pairs of eyelets. In each eyelet pair, one eyelet may be disposed on the right side of the shoe and the other may be disposed on the left side of the shoe. Each shoe in the plurality of shoes may have the same number of eyelets. The size range of the shoes included in the plurality of shoes may be limited or expanded to control the deviation in the average length of the shoelace required to lace up the shoes.</p>
+      <p id="p-00036-en" num="0031">The vertical distance of each of the plurality of shoes may be measured <b>313</b>. The vertical distance may be determined by measuring the distance between a point on a bottommost eyelet and a point on an uppermost eyelet.</p>
+      <p id="p-00037-en" num="0032">The horizontal distance between the left set of eyelets and the right set of eyelets may be determined for each of the plurality of shoes <b>314</b>. The horizontal distance may be measured by determining the distance between a point on an eyelet on the left side and a point on a corresponding eyelet on the right side.</p>
+      <p id="p-00038-en" num="0033">The mean vertical distance may be calculated <b>315</b>. The mean vertical distance may be calculated by adding each vertical distance for each of the plurality of shoes and dividing the result by the number shoes measured.</p>
+      <p id="p-00039-en" num="0034">The mean horizontal distance may be calculated <b>316</b>. The mean horizontal distance may be calculated by adding each horizontal distance for each of the plurality of shoes and dividing the result by the number shoes measured.</p>
+      <p id="p-00040-en" num="0035">As discussed in more detail above, the active length may be determined <b>317</b>. The active length may be calculated by applying the following formula:</p>
+      <p id="p-00041-en" num="0000">[in-line-formulae]Active length=8*sqrt(<i>ĥ</i>2+(<i>v/</i>(<i>e/</i>2−1))̂ 2)<i>+h+k </i>[/in-line-formulae]</p>
+      <p id="p-00042-en" num="0000">Where h is the horizontal mean, v is the vertical mean, e is the total number of eyelets on the shoe, and k is the knot length.</p>
+      <p id="p-00043-en" num="0036">The knot length may be the length of shoelace that is required to tie a knot.</p>
+      <p id="p-00044-en" num="0037">The center point of the shoelace may be determined <b>318</b>. The first attachment point may be located on the shoelace <b>319</b> relative to the center point. The first attachment point may be a distance of active length divided by two away from the center point.</p>
+      <p id="p-00045-en" num="0038">A loop distance <b>320</b> may be determined. The loop distance may be large enough to allow the shoelace to be formed into a loop without being so large as to create a tied configuration in which the laces may drag on the ground. The second attachment may be located <b>321</b> a loop distance from the first attachment point and distal from the center point.</p>
+      <p id="p-00046-en" num="0039">The first fastener may be secured to the shoe lace <b>322</b> at the first attachment point and the second fastener may be secured to the shoelace <b>323</b> at the second attachment point.</p>
+      <p id="p-00047-en" num="0040">Turning to <figref>FIG. 4</figref>, an embodiment of the inventive method is depicted in which two additional attachment points are located on the shoelace. In such an embodiment, a third attachment point may be located <b>424</b>. The third attachment point may be an active length divided by two distance from the center point and distal from the first and second attachment points.</p>
+      <p id="p-00048-en" num="0041">The fourth attachment point may be located <b>425</b> a loop distance from the third attachment point and distal from the center point.</p>
+      <p id="p-00049-en" num="0042">A third fastener may be secured <b>426</b> to the third attachment point and a fourth fastener may be secured <b>427</b> to the fourth attachment point.</p>
+      <p id="p-00050-en" num="0043">A person of skill in the art will appreciate that one or more of the above provided embodiments may be included in the operation of the modified shoelace of the present invention. Additionally, a person of skill in the art will appreciate additional embodiments that would be included within the scope and spirit of the present invention, after having the benefit of this disclosure. Furthermore, a skilled artisan will appreciate that the operations described above, along with additional operations that would be apparent to those in the art, may be performed exclusively, incrementally, sequentially, simultaneously, or any other operative configuration.</p>
+      <p id="p-00051-en" num="0044">Many modifications and other embodiments of the invention will come to the mind of one skilled in the art having the benefit of the teachings presented in the foregoing descriptions and the associated drawings. Therefore, it is understood that the invention is not to be limited to the specific embodiments disclosed, and that modifications and embodiments are intended to be included within the scope of the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A modified shoelace comprising:
+<claim-text>a shoelace having a shoelace length;</claim-text><claim-text>a first fastener; and</claim-text><claim-text>a second fastener;</claim-text><claim-text>wherein the shoelace has an active area disposed on the shoelace;</claim-text><claim-text>wherein the active area has a first edge above an uppermost first eyelet when the shoelace is in a laced configuration and extends to a second edge above a second uppermost eyelet when the shoelace is in the laced configuration;</claim-text><claim-text>wherein the first fastener is secured to the shoelace outside the active area and proximate to the first edge;</claim-text><claim-text>wherein the second fastener is secured to the shoelace a loop distance from the first fastener and distal from the active area.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The modified shoelace according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the active area has an active length; wherein the active length is determined by calculating a mean of the portion of the shoelace length required to lace and tie the shoelace through each of a plurality of eyelets disposed on a shoe.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The modified shoelace according to <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein the mean is calculated by determining a mean vertical distance between an uppermost eyelet and a bottommost eyelet disposed on each of a plurality of shoes.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The modified shoelace according to <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein the mean is calculated by determining a mean horizontal distance between a left eyelet and a right eyelet disposed on each of a plurality of shoes.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The modified shoelace according to <claim-ref idref="clm-00004-en">claim 4</claim-ref> wherein the mean is further calculated by determining a mean vertical distance between an uppermost eyelet and a lowermost eyelet disposed on each of a plurality of shoes.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The modified shoelace according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the active area extends a grip distance beyond the uppermost set of eyelets.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The modified shoelace according to <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein the active area extends a grip distance beyond the uppermost set of eyelets.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The modified shoelace according to <claim-ref idref="clm-00005-en">claim 5</claim-ref> wherein the active area has an active length; wherein the active length is equal to a horizontal mean plus eight times the square root of the sum of an eyelet distance squared plus the horizontal mean squared plus a knot length.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The modified shoelace according to <claim-ref idref="clm-00008-en">claim 8</claim-ref> wherein the active area extends a grip distance beyond the uppermost set of eyelets.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The modified shoelace according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising a third fastener; and a fourth fastener; wherein the third fastener is secured to the shoelace proximate to the active area and distal from the first fastener;
+<claim-text>wherein the fourth fastener is secured to the shoelace the loop distance from the third fastener and distal from the active area; and wherein the third fastener may secure to the fourth fastener.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A method for creating a universal modified shoelace, the method comprising:
+<claim-text>obtaining a plurality of shoes wherein each of the plurality of shoes comprises an uppermost set of eyelets, a lowermost set of eyelets, a left set of eyelets, and a right set of eyelets, wherein each of the eyelets in the left set of eyelets has a corresponding eyelet in the right set of eyelets, wherein each eyelet has a left, a right, a bottom and a top, wherein the uppermost set of eyelets comprises an uppermost left eyelet and an uppermost right eyelet, wherein the lowermost set of eyelets comprises a lowermost left eyelet and a lowermost right eyelet, wherein a shoelace may be laced through each of the eyelets;</claim-text><claim-text>measuring, on each of the plurality of shoes, a vertical distance between the uppermost set of eyelets and the lowermost set of eyelets disposed on one of the plurality of shoes;</claim-text><claim-text>measuring, on each of the plurality of shoes, a horizontal distance between any of the plurality eyelets in the left set of eyelets and the corresponding eyelet in the right set of eyelets;</claim-text><claim-text>determining a mean vertical distance from each of the vertical distances;</claim-text><claim-text>determining a mean horizontal distance from each of the horizontal distances;</claim-text><claim-text>determining an active length of the shoelace that is necessary to lace up and tie an ideal shoe having a vertical distance equal to the mean vertical distance and a horizontal distance equal to the mean horizontal distance;</claim-text><claim-text>locating a center point of the shoelace;</claim-text><claim-text>locating a first attachment point an active length divided by two distance to the right from the center point of the shoelace;</claim-text><claim-text>determining a loop distance;</claim-text><claim-text>locating a second attachment point a loop distance to the right of the first attachment point;</claim-text><claim-text>securing a first fastener to the first attachment point;</claim-text><claim-text>securing a second fastener to the second attachment point, wherein the first fastener may be secured to the second fastener.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method according to <claim-ref idref="clm-00011-en">claim 11</claim-ref> further comprising the steps of:
+<claim-text>locating a third attachment point an active length distance to the left of the first attachment point;</claim-text><claim-text>locating a fourth attachment point a loop distance to the left of the third attachment point;</claim-text><claim-text>securing a third fastener to the third attachment point;</claim-text><claim-text>securing a fourth fastener to the fourth attachment point, wherein the third fastener may be secured to the fourth fastener.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257488A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257488A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257488A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257488A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257488A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257488A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257488A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257488A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257488A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257488A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257488A1.PDF" type="pdf" size="327925" pages="8" />
+</lexisnexis-patent-document>

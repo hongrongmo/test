@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150250307A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="022150" date-changed="20151027" time-changed="110523">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121232664">
+        <country>US</country>
+        <doc-number>20150250307</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14200090</doc-number>
+        <date>20140307</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151027">
+      <classification-ipcr sequence="1">
+        <text>A47B  47/00        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151027">
+      <classification-cpc sequence="1">
+        <text>F16B  12/44        20130101 FI20151021BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>16</class>
+        <subclass>B</subclass>
+        <main-group>12</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151021</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47B  47/0033      20130101 LI20151019BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>0033</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151019</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">14</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">Compartment Storage Device</invention-title>
+    <references-cited date-changed="20150922">
+      <patent-citations name="patcit" date-changed="20150922" />
+      <citation>
+        <patcit num="1" dnum="US3362739A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3362739</doc-number>
+            <kind>A</kind>
+            <name>HANS STAEGER, et al</name>
+            <date>19680109</date>
+          </document-id>
+          <application-date>
+            <date>19641021</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US3913289A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3913289</doc-number>
+            <kind>A</kind>
+            <name>RECKER BODO</name>
+            <date>19751021</date>
+          </document-id>
+          <application-date>
+            <date>19730511</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US4124958A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4124958</doc-number>
+            <kind>A</kind>
+            <name>CHICHE RENE</name>
+            <date>19781114</date>
+          </document-id>
+          <application-date>
+            <date>19770712</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US4515280A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4515280</doc-number>
+            <kind>A</kind>
+            <name>SHEU ROUNG-HWANG [TW]</name>
+            <date>19850507</date>
+          </document-id>
+          <application-date>
+            <date>19840531</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US8051535B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8051535</doc-number>
+            <kind>B2</kind>
+            <name>CHENG KUN-LUNG [TW]</name>
+            <date>20111108</date>
+          </document-id>
+          <application-date>
+            <date>20090824</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US8753162B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8753162</doc-number>
+            <kind>B2</kind>
+            <name>JENSEN ANDERS BUUS [DK]</name>
+            <date>20140617</date>
+          </document-id>
+          <application-date>
+            <date>20100706</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chen</last-name>
+            <first-name>Kun-Tang</first-name>
+            <address>
+              <city>Taichung City</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>TW</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chen</last-name>
+            <first-name>Kun-Tang</first-name>
+            <address>
+              <city>Taichung City</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173569837">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250307</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20140307</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173569835">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250307</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20140307</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A compartment storage device contains a plurality of plates and plural connectors which are connected together to form a single cabinet or a multi-cabinet assembly. The plurality of plates are located at an upper surface, a lower surface, a left surface, a right surface, and a rear surface of the single cabinet or the multi-cabinet assembly. The plural connectors are fitted on eight connection corners of the plurality of plates so as to form at least one accommodating space. The plural connectors include at least one of first connecting part, second connecting part, third connecting part, fourth connecting part, fifth connecting part and sixth connecting part, and each connector has at least two fitting slots so as to retain with at least two of the plurality of plates, hence the plural connectors are connected with the plurality of plates so as to form the single cabinet or the multi-cabinet assembly.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">1. Field of the Invention</p>
+      <p id="p-00002-en" num="0002">The present invention relates to a compartment storage device which contains plural connectors securely connected with a plurality of plates so as to form a single cabinet or a multi-cabinet assembly.</p>
+      <p id="p-00003-en" num="0003">2. Description of the Prior Art</p>
+      <p id="p-00004-en" num="0004">A conventional single cabinet or multi-cabinet assembly is employed to store objects and is assembled or dissembled by a user by ways of hand tool(s). However, such an assembly or disassembly is troublesome, for example, it is inconvenient for the user to remove related parts of the single cabinet or the multi-cabinet assembly before discarding the single cabinet or the multi-cabinet assembly, so the user will discard single cabinet or the multi-cabinet assembly directly without removing the related parts, thus damaging environment and increasing the space of garbage.</p>
+      <p id="p-00005-en" num="0005">The present invention has arisen to mitigate and/or obviate the afore-described disadvantages.</p>
+      <heading id="h-00002-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00006-en" num="0006">The primary objective of the present invention is to provide a compartment storage device which is capable of overcoming the shortcomings of the conventional compartment storage device.</p>
+      <p id="p-00007-en" num="0007">Further objective of the present invention is to provide a compartment storage device in which a plurality of plates is connected together quickly and easily by using plural connectors so as to form a single cabinet or a multi-cabinet assembly.</p>
+      <p id="p-00008-en" num="0008">Another objective of the present invention is to provide a compartment storage device in which each connector has at least two fitting slots, and each fitting slot has a plurality of ribs arranged on two walls thereof so as to retain with each plate, thereby positioning the single cabinet or the multi-cabinet assembly securely.</p>
+      <p id="p-00009-en" num="0009">To obtain the above objectives, a compartment storage device provided by the present invention contains: a plurality of plates and plural connectors which are connected together to form a single cabinet or a multi-cabinet assembly, wherein the plurality of plates are located at an upper surface, a lower surface, a left surface, a right surface, and a rear surface of the single cabinet or the multi-cabinet assembly, and the plural connectors are fitted on eight connection corners of the plurality of plates so as to form at least one accommodating space.</p>
+      <p id="p-00010-en" num="0010">The plural connectors include at least one of first connecting part, second connecting part, third connecting part, fourth connecting part, fifth connecting part and sixth connecting part, and each connector has at least two fitting slots so as to retain with at least two of the plurality of plates, such that the plural connectors are connected with the plurality of plates so as to form the single cabinet or the multi-cabinet assembly.</p>
+      <p id="p-00011-en" num="0011">Each first connecting part is in an L shape and has two fitting slots defined on two ends thereof.</p>
+      <p id="p-00012-en" num="0012">Each second connecting part is in a T shape and has three fitting slots defined on three ends thereof.</p>
+      <p id="p-00013-en" num="0013">Each third connecting part is in a cross shape and has four slots defined on four ends thereof.</p>
+      <p id="p-00014-en" num="0014">Each fourth connecting part is in an L shape and has two fitting slots defined on two ends thereof, each fourth connecting part also has a rectangular extension formed on a bottom end thereof, and the rectangular extension has a fitting slot arranged on a peripheral side thereof.</p>
+      <p id="p-00015-en" num="0015">Each fifth connecting part is in a T shape and has three fitting slots defined on three ends thereof, each fifth connecting part also has a rectangular extension formed on one side thereof, and the rectangular extension has two fitting slots arranged on two sides thereof.</p>
+      <p id="p-00016-en" num="0016">Each sixth connecting part is in a cross shape and has four fitting slots defined on four ends thereof, each sixth connecting part also has a rectangular extension formed on one side thereof, and the rectangular extension has four fitting slots arranged on four corners thereof.</p>
+      <p id="p-00017-en" num="0017">Each fitting slot has a plurality of ribs arranged on two walls thereof.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 1</figref> is a perspective view of plural connectors of various configurations of a compartment storage device according to a first embodiment of the present invention.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 2</figref> is a perspective view showing the assembly of a single cabinet of the first embodiment of the present invention.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 3</figref> is a perspective view showing the exploded components of the single cabinet of the first embodiment of the present invention.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 4</figref> is a perspective view showing the exploded components of a multi-cabinet assembly of a second embodiment of the present invention.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 5</figref> is a perspective view showing the assembly of the multi-cabinet assembly of the second embodiment of the present invention.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 6</figref> is a perspective view showing the exploded components of a fourth connecting part and a plate of the present invention.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 7</figref> is a perspective view showing the exploded components of another fourth connecting part and the plate of the present invention.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 8</figref> is a perspective view showing the exploded components of a fifth connecting part and two plates of the present invention.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 9</figref> is another perspective view showing the exploded components of the fifth connecting part and the two plates of the present invention.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 10</figref> is also another perspective view showing the exploded components of the fifth connecting part and the two plates of the present invention.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 11</figref> is a perspective view showing the exploded components of a sixth connecting part and two plates of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+      <p id="p-00029-en" num="0029">The present invention will be clearer from the following description when viewed together with the accompanying drawings, which show, for purpose of illustrations only, a first embodiment in accordance with the present invention.</p>
+      <p id="p-00030-en" num="0030">With reference to <figref>FIGS. 1-2</figref>, a compartment storage device according to a first embodiment of the present invention comprises: five plates <b>1</b> and a plurality of connectors <b>2</b> which are connected together to form a single cabinet <b>3</b>, wherein the five plates <b>1</b> are located at an upper surface, a lower surface, a left surface, a right surface, and a rear surface of the single cabinet <b>3</b>, and the a plurality of connectors <b>2</b> are fitted on eight connection corners of the five plates <b>1</b> so as to form an accommodating space <b>4</b>.</p>
+      <p id="p-00031-en" num="0031">The a plurality of connectors <b>2</b> include at least one of first connecting part <b>21</b>, second connecting part <b>22</b>, third connecting part <b>23</b>, fourth connecting part <b>24</b>, fifth connecting part <b>25</b> and sixth connecting part <b>26</b> of six configurations, and each connector <b>2</b> has at least two fitting slots <b>27</b> so as to retain with at least two of the five plates <b>1</b>, such that the a plurality of connectors <b>2</b> of six configurations are connected with the five plates <b>1</b> so as to form the single cabinet <b>3</b>.</p>
+      <p id="p-00032-en" num="0032">Each first connecting part <b>21</b> is in an L shape and has two fitting slots <b>27</b> defined on two ends thereof.</p>
+      <p id="p-00033-en" num="0033">Each second connecting part <b>22</b> is in a T shape and has three fitting slots <b>27</b> defined on three ends thereof.</p>
+      <p id="p-00034-en" num="0034">Each third connecting part <b>23</b> is in a cross shape and has four slots <b>27</b> defined on four ends thereof.</p>
+      <p id="p-00035-en" num="0035">Each fourth connecting part <b>24</b> is in an L shape and has two fitting slots <b>27</b> defined on two ends thereof, each fourth connecting part <b>24</b> also has a rectangular extension formed on a bottom end thereof, and the rectangular extension has a fitting slot <b>27</b> arranged on a peripheral side thereof.</p>
+      <p id="p-00036-en" num="0036">Each fifth connecting part <b>25</b> is in a T shape and has three fitting slots <b>27</b> defined on three ends thereof, each fifth connecting part <b>25</b> also has a rectangular extension formed on one side thereof, and the rectangular extension has two fitting slots <b>27</b> arranged on two sides thereof.</p>
+      <p id="p-00037-en" num="0037">Each sixth connecting part <b>26</b> is in a cross shape and has four fitting slots <b>27</b> defined on four ends thereof, each sixth connecting part <b>26</b> also has a rectangular extension formed on one side thereof, and the rectangular extension has four fitting slots <b>27</b> arranged on four corners thereof.</p>
+      <p id="p-00038-en" num="0038">It is to be noted that each fitting slot <b>27</b> has a plurality of ribs <b>271</b> arranged on two walls thereof.</p>
+      <p id="p-00039-en" num="0039">As shown in <figref>FIG. 3</figref>, the five plates <b>1</b>, four first connecting parts <b>21</b> and four connecting parts <b>24</b> are connected together to form the single cabinet <b>3</b>. For example, the five plates <b>1</b> are located at the upper surface, the lower surface, the left surface, the right surface, and the rear surface of the single cabinet <b>3</b>, and the four first connecting parts <b>21</b> are fixed on four corners of a front surface of the single cabinet <b>3</b>, two fitting slots <b>27</b> of each first connecting part <b>21</b> is applied to connect two of the five plates <b>1</b> which are perpendicular to each other. Also, the four connecting parts <b>24</b> are fixed on four corners of the rear surface of the single cabinet <b>3</b>, and each of the four connecting parts <b>24</b> on the rear surface of the single cabinet <b>3</b> is served to connect two of the five plates <b>1</b> which are perpendicular to each other and one of the five plates <b>1</b> which is located on the rear surface of the single cabinet <b>3</b> (as illustrated in <figref>FIG. 6</figref>), and the plurality of ribs <b>271</b> of each fitting slot <b>27</b> retain with each plate <b>1</b> so as to position the single cabinet <b>3</b> securely.</p>
+      <p id="p-00040-en" num="0040">Referring to <figref>FIGS. 4 to 5</figref>, four single cabinets <b>3</b> of a second embodiment of the present invention are connected together to form a multi-cabinet assembly. For example, sixteen plates <b>1</b>, four first connecting parts <b>21</b>, four second connecting parts <b>22</b>, a third connecting part <b>23</b>, four connecting parts <b>24</b>, four fifth connecting parts <b>25</b>, and a sixth connecting part <b>26</b> are coupled together, wherein the four first connecting parts <b>21</b> are mounted on four corners of a front surface of the multi-cabinet assembly, the four second connecting parts <b>22</b> are arranged on four central positions of four peripheral sides of the front surface of the multi-cabinet assembly so as to connect two perpendicular of the sixteen plates <b>1</b> and two adjacent of the sixteen plates <b>1</b>, the third connecting part <b>23</b> is arranged on a central position of the front surface of the multi-cabinet assembly so as to connect two of the sixteen plates <b>1</b> which are coupled horizontally and two of the sixteen plates <b>1</b> which are joined vertically. The four first connecting parts <b>21</b> correspond to the four connecting parts <b>24</b> located on four corners of a rear surface of the multi-cabinet assembly, and the four second connecting parts <b>22</b> correspond to the four fifth connecting parts <b>25</b> arranged on four central positions of four peripheral sides of the rear surface of the multi-cabinet assembly, the third connecting part <b>23</b> corresponds to the sixth connecting part <b>26</b> arranged on a central position of the rear surface of the multi-cabinet assembly. The four connecting parts <b>24</b>, the four fifth connecting parts <b>25</b> and the sixth connecting part <b>26</b> are used to connect eight of the sixteen plates <b>1</b> on two sides and the rear surface of the multi-cabinet assembly (as shown in <figref>FIGS. 6-11</figref>), thus assembling the multi-cabinet assembly having four single cabinets <b>3</b> fixedly. Thereby, a number of a plurality of plates <b>1</b> and plural connectors <b>2</b> is increased to form the multi-cabinet assembly of various configurations.</p>
+      <p id="p-00041-en" num="0041">While we have shown and described various embodiments in accordance with the present invention, it is clear to those skilled in the art that further embodiments may be made without departing from the scope of the present invention.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A compartment storage device comprising:
+<claim-text>a plurality of plates and plural connectors which are connected together to form a single cabinet or a multi-cabinet assembly, wherein the plurality of plates are located at an upper surface, a lower surface, a left surface, a right surface, and a rear surface of the single cabinet or the multi-cabinet assembly, and the plural connectors are fitted on eight connection corners of the plurality of plates so as to form at least one accommodating space;</claim-text><claim-text>wherein the plural connectors include at least one of first connecting part, second connecting part, third connecting part, fourth connecting part, fifth connecting part and sixth connecting part, and each connector has at least two fitting slots so as to retain with at least two of the plurality of plates, such that the plural connectors are connected with the plurality of plates so as to form the single cabinet or the multi-cabinet assembly.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The compartment storage device as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each first connecting part is in an L shape and has two fitting slots defined on two ends thereof.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The compartment storage device as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each second connecting part is in a T shape and has three fitting slots defined on three ends thereof.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The compartment storage device as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each third connecting part is in a cross shape and has four slots defined on four ends thereof.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The compartment storage device as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each fourth connecting part is in an L shape and has two fitting slots defined on two ends thereof, each fourth connecting part also has a rectangular extension formed on a bottom end thereof, and the rectangular extension has a fitting slot arranged on a peripheral side thereof.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The compartment storage device as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each fifth connecting part is in a T shape and has three fitting slots defined on three ends thereof, each fifth connecting part also has a rectangular extension formed on one side thereof, and the rectangular extension has two fitting slots arranged on two sides thereof.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The compartment storage device as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each sixth connecting part is in a cross shape and has four fitting slots defined on four ends thereof, each sixth connecting part also has a rectangular extension formed on one side thereof, and the rectangular extension has four fitting slots arranged on four corners thereof.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The compartment storage device as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each fitting slot has a plurality of ribs arranged on two walls thereof.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The compartment storage device as claimed in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein each fitting slot has a plurality of ribs arranged on two walls thereof.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The compartment storage device as claimed in <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein each fitting slot has a plurality of ribs arranged on two walls thereof.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The compartment storage device as claimed in <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein each fitting slot has a plurality of ribs arranged on two walls thereof.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The compartment storage device as claimed in <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein each fitting slot has a plurality of ribs arranged on two walls thereof.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The compartment storage device as claimed in <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein each fitting slot has a plurality of ribs arranged on two walls thereof.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The compartment storage device as claimed in <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein each fitting slot has a plurality of ribs arranged on two walls thereof.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150250307A1_00013.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150250307A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150250307A1.PDF" type="pdf" size="412719" pages="15" />
+</lexisnexis-patent-document>

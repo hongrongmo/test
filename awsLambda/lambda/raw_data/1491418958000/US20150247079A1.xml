@@ -1,0 +1,1959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247079A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021457" date-changed="20151027" time-changed="110529">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140215">
+        <country>US</country>
+        <doc-number>20150247079</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14237534</doc-number>
+        <date>20130607</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012227541</doc-number>
+        <date>20121013</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>C09K   3/18        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C09C   3/10        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C09D 133/16        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>133</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>C09K   3/18        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C01P2004/03        20130101 LA20141021BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2004</main-group>
+        <subgroup>03</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141021</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C01P2006/12        20130101 LA20141021BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2006</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141021</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C01P2006/80        20130101 LA20141021BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2006</main-group>
+        <subgroup>80</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141021</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C09C   1/28        20130101 LI20140514BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140514</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C09C   1/3072      20130101 LI20141021BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>3072</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141021</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C09C   1/36        20130101 LA20140514BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140514</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C09C   1/3676      20130101 LI20141021BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>3676</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141021</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C09C   1/40        20130101 LI20140514BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140514</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C09C   3/10        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C09D   7/12        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C09D 133/16        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>133</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>Y10T 428/2438      20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>2438</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>Y10T 428/249986    20150401 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20150401</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>249986</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>Y10T 428/254       20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>254</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">WATER- AND OIL-REPELLENT COATING FILM AND ARTICLES HAVING THIS COATING FILM</invention-title>
+    <references-cited date-changed="20151027">
+      <patent-citations name="patcit" date-changed="20151027" />
+      <non-patent-citations name="nplcit" date-changed="20151027" />
+      <citation>
+        <patcit num="1" dnum="US2803615A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2803615</doc-number>
+            <kind>A</kind>
+            <name>AHLBRECHT ARTHUR H, et al</name>
+            <date>19570820</date>
+          </document-id>
+          <application-date>
+            <date>19560123</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Hikita et al. "Super-Liquid-Repellent Surfaces Prepared by Colloidal Silica Nanoparticles Covered with Fluoroalkyl Groups", 2005, 21, 7299-7302.</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-23844493167&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>Evonic Industries, Technical Information, Safety Summary-Tetraethylorthosilicate, 2010, 1, 1-6.</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>NIPPON AEROSIL CO., LTD.</orgname>
+            <role>03</role>
+            <address>
+              <city>Shinjuku-ku</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>TOYO ALUMINIUM KABUSHIKI KAISHA</orgname>
+            <role>03</role>
+            <address>
+              <city>Osaka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nishikawa</last-name>
+            <first-name>Hiroyuki</first-name>
+            <address>
+              <city>Osaka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Yamada</last-name>
+            <first-name>Kazunori</first-name>
+            <address>
+              <city>Osaka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sekiguchi</last-name>
+            <first-name>Tomonobu</first-name>
+            <address>
+              <city>Osaka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Oe</last-name>
+            <first-name>Hiroshi</first-name>
+            <address>
+              <city>Osaka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Terasawa</last-name>
+            <first-name>Yuya</first-name>
+            <address>
+              <city>Osaka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kamada</last-name>
+            <first-name>Masahiko</first-name>
+            <address>
+              <city>Yokkaichi-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Tosaki</last-name>
+            <first-name>Yusuke</first-name>
+            <address>
+              <city>Yokkaichi-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Yamashita</last-name>
+            <first-name>Yukiya</first-name>
+            <address>
+              <city>Yokkaishi-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="9" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Morii</last-name>
+            <first-name>Toshio</first-name>
+            <address>
+              <city>Yokkaichi-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13065864</doc-number>
+        <date>20130607</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014057712</doc-number>
+        <date>20140417</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151001">
+      <main-family family-id="160403875">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014057712</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2762537</doc-number>
+            <kind>A4</kind>
+            <date>20150930</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103946322</doc-number>
+            <kind>A</kind>
+            <date>20140723</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2762537</doc-number>
+            <kind>A1</kind>
+            <date>20140806</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>2880DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20150408</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014080465</doc-number>
+            <kind>A</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20121013</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013328136</doc-number>
+            <kind>A1</kind>
+            <date>20150319</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2887585</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5242841</doc-number>
+            <kind>B1</kind>
+            <date>20130724</date>
+          </document-id>
+          <application-date>
+            <date>20121013</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101499766</doc-number>
+            <kind>B1</kind>
+            <date>20150302</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140065401</doc-number>
+            <kind>A</kind>
+            <date>20140529</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201414822</doc-number>
+            <kind>A</kind>
+            <date>20140416</date>
+          </document-id>
+          <application-date>
+            <date>20130614</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247079</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="160403874">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014057712</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2762537</doc-number>
+            <kind>A4</kind>
+            <date>20150930</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103946322</doc-number>
+            <kind>A</kind>
+            <date>20140723</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2762537</doc-number>
+            <kind>A1</kind>
+            <date>20140806</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>2880DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20150408</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014080465</doc-number>
+            <kind>A</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20121013</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013328136</doc-number>
+            <kind>A1</kind>
+            <date>20150319</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2887585</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5242841</doc-number>
+            <kind>B1</kind>
+            <date>20130724</date>
+          </document-id>
+          <application-date>
+            <date>20121013</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101499766</doc-number>
+            <kind>B1</kind>
+            <date>20150302</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140065401</doc-number>
+            <kind>A</kind>
+            <date>20140529</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201414822</doc-number>
+            <kind>A</kind>
+            <date>20140416</date>
+          </document-id>
+          <application-date>
+            <date>20130614</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247079</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130607</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided is a coating film that can more reliably exhibit an excellent water repellency and an excellent oil repellency. This water- and oil-repellent coating film is a coating film formed on a surface of a material in order to impart water repellency and oil repellency, wherein (1) the coating film contains a metal oxide-containing composite particle; (2) the composite particle contains a) a metal oxide particle and b) a covering layer that contains a polyfluoroalkyl methacrylate resin and is formed on the surface of the metal oxide particle; and (3) a value obtained by dividing the fluorine content (weight %) of the composite particle by a surface area (m<sup>2</sup>/g) of the metal oxide particle is 0.025 to 0.180.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140508</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247079A1</docdb-publication-number>
+      <docdb-application-id>444210059</docdb-application-id>
+      <new-owner>NIPPON AEROSIL CO., LTD., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:YAMADA, KAZUNORI;SEKIGUCHI, TOMONOBU;NISHIKAWA, HIROYUKI;AND OTHERS;SIGNING DATES FROM 20140324 TO 20140404;REEL/FRAME:032852/0524</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20140508</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247079A1</docdb-publication-number>
+      <docdb-application-id>444210059</docdb-application-id>
+      <new-owner>TOYO ALUMINIUM KABUSHIKI KAISHA, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:YAMADA, KAZUNORI;SEKIGUCHI, TOMONOBU;NISHIKAWA, HIROYUKI;AND OTHERS;SIGNING DATES FROM 20140324 TO 20140404;REEL/FRAME:032852/0524</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a water- and oil-repellent coating film and to articles that have this coating film.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">A variety of articles, for example, packaging materials (for example, containers, wrapping paper, trays, tubes, bags, and pouches) as well as structures, textiles, and toys, are known as articles whose surface has been endowed with water repellency and oil repellency. The packaging materials are used with, for example, foods, beverages, medicines, cosmetics, and chemicals, such as jelly confections, puddings, yogurts, liquid cleansers and detergents, toothpastes, curry roux, syrups, petroleum jellies, facial cleansing creams, and facial cleansing mousse. In addition, the content can have various forms, such as solid, semisolid, liquid, viscous material and gel. Water repellency or oil repellency is imparted, in conformity with the nature of the content, to the surface in contact with the content in order to prevent attachment of the content to the greatest extent possible.</p>
+      <p id="p-00003-en" num="0003">For example, methods in which coating is carried out with, e.g., a fluorinated compound, are used as a means for imparting water repellency and oil repellency.</p>
+      <p id="p-00004-en" num="0004">For example, the oilproof packaging material disclosed in Patent Document 1 is made by laminating at least the following three layers in the indicated sequence: (A) a thermoplastic resin layer in which upper surface pores (x) having a pore diameter of 0.2 to 0.6 mm have been executed in advance; (B) an oilproof paper that incorporates an oilproofing agent in which the number of carbons in the perfluoroalkyl group is less than 8; and (C) a heat-sealable thermoplastic resin layer in which back surface pores (y) having a pore diameter of 0.2 to 0.6 mm have been executed in advance.</p>
+      <p id="p-00005-en" num="0005">Patent Document 2 provides a water- and oil-repellent base material that characteristically comprises the following first layer formed on a surface of a base material and the following second layer formed on the surface of the first layer: for the first layer, a silica fine particle-containing layer of the cured product from a curable paint; for the second layer, a layer formed from a composition in which the essential components are a fluorosilicone compound and a solvent, or a layer formed from the cured product of such a composition.</p>
+      <p id="p-00006-en" num="0006">Patent Document 3 discloses a packaging material for a deoxygenating agent, an ethanol pervaporation agent, or a desiccant for preserving the freshness of food. This packaging material is characterized by a two-layer coating provided by first coating the surface on at least one side of an air-permeable paper base material with a urethane-type or vinyl chloride acetate-type transparent ink that uses an isocyanate-type curing agent and then applying a fluorine-type water- and oil-repellent agent on this urethane-type or vinyl chloride acetate-type transparent ink layer.</p>
+      <p id="p-00007-en" num="0007">With regard to the art of coating with such fluorinated compounds, methods have also been introduced in which coating is carried out with a liquid dispersion that contains fine particles and an oil-repellent agent.</p>
+      <p id="p-00008-en" num="0008">For example, a method of producing an oil-repellent coated article is disclosed in Patent Document 4, wherein this method characteristically comprises (1) a first step in which fine particles having a particle diameter of at least 100 nm are produced by the sol-gel method and (i) an article to be coated is immersed in a liquid dispersion in which the fine particles are dispersed and is withdrawn and dried or (ii) a liquid dispersion in which the fine particles are dispersed is sprayed on the article to be coated and drying is carried out; and (2) a second step in which (i) the article to be coated is then immersed in a liquid dispersion that contains fine particles with a particle diameter of 7 to 90 nm and a perfluoroalkylsilane as an oil-repellent agent and is withdrawn and dried or (ii) the article to be coated is sprayed with a liquid dispersion containing fine particles with a particle diameter of 7 to 90 nm and an oil-repellent agent and drying is carried out.</p>
+      <p id="p-00009-en" num="0009">There is disclosed in Patent Document 5 a water- and oil-repellent coated article that is a coated article obtained by the application of a coating composition that contains alcohol, an alkoxysilane, a perfluoroalkylsilane, silica fine particles, a catalyst that promotes the hydrolysis reaction of alkoxysilanes, and water, wherein the root-mean-square roughness (RMS) value for the surface of this coated article is at least 100 nm.</p>
+      <p id="p-00010-en" num="0010">Patent Document 1: Japanese Patent Application Publication No. 2011-73744</p>
+      <p id="p-00011-en" num="0011">Patent Document 2: Japanese Patent Application Publication No. 2000-169835</p>
+      <p id="p-00012-en" num="0012">Patent Document 3: Japanese Patent Application Publication No. 2009-191407</p>
+      <p id="p-00013-en" num="0013">Patent Document 4: Japanese Patent Application Publication No. 2011-140625</p>
+      <p id="p-00014-en" num="0014">Patent Document 5: Japanese Patent Application Publication No. 2010-89373</p>
+      <p id="p-00015-en" num="0015">However, while the art described in these patent documents does achieve a certain degree of water repellency or oil repellency, in order to promote a more practical implementation the adoption is still necessary of a method than can more reliably realize a satisfactory water repellency and oil repellency.</p>
+      <heading id="h-00003-en" level="1">DISCLOSURE OF THE INVENTION</heading>
+      <p id="p-00016-en" num="0016">Accordingly, the main object of the present invention is to provide a coating film that can more reliably exhibit an excellent water repellency and an excellent oil repellency.</p>
+      <p id="p-00017-en" num="0017">As a result of extensive and intensive investigations in view of the problems with the prior art, the inventor discovered that this object could be achieved by using a coating film that contains specific particles. The present invention was completed based on this discovery.</p>
+      <p id="p-00018-en" num="0018">That is, the present invention relates to the water- and oil-repellent coating film described in the following.</p>
+      <p id="p-00019-en" num="0019">1. A water- and oil-repellent coating film that is a coating film formed on a surface of a substance in order to impart water repellency and oil repellency, wherein</p>
+      <p id="p-00020-en" num="0020">(1) the coating film contains a metal oxide-containing composite particle;</p>
+      <p id="p-00021-en" num="0021">(2) the metal oxide-containing composite particle contains a) a metal oxide particle and b) a covering layer that contains a polyfluoroalkyl methacrylate resin and is formed on the surface of the metal oxide particle; and</p>
+      <p id="p-00022-en" num="0022">(3) a value yielded by dividing the fluorine content (weight %) of the metal oxide-containing composite particle by a surface area (m<sup>2</sup>/g) of the metal oxide particle is 0.025 to 0.180.</p>
+      <p id="p-00023-en" num="0023">2. The water- and oil-repellent coating film according to item 1, wherein a value yielded by dividing the carbon content (weight %) of the metal oxide-containing composite particle by the surface area (m<sup>2</sup>/g) of the metal oxide particle is 0.05 to 0.400.</p>
+      <p id="p-00024-en" num="0024">3. The water- and oil-repellent coating film according to item 1 or 2, wherein an average primary particle diameter of the metal oxide particle is 5 to 50 nm.</p>
+      <p id="p-00025-en" num="0025">4. The water- and oil-repellent coating film according to any of items 1 to 3, wherein the metal oxide particle is at least one selection from silicon oxide particles, aluminum oxide particles, and titanium oxide particles.</p>
+      <p id="p-00026-en" num="0026">5. The water- and oil-repellent coating film according to any of items 1 to 4, wherein the covering layer does not contain a silicon component.</p>
+      <p id="p-00027-en" num="0027">6. The water- and oil-repellent coating film according to any of items 1 to 5, wherein the coating film is porous.</p>
+      <p id="p-00028-en" num="0028">7. The water- and oil-repellent coating film according to any of items 1 to 6, wherein the coating film surface that forms the outermost surface has an uneven structure that is produced by the metal oxide-containing composite particle.</p>
+      <p id="p-00029-en" num="0029">8. The water- and oil-repellent coating film according to any of items 1 to 7, wherein the metal oxide-containing composite particle content in the coating film is 10 to 100 weight %.</p>
+      <p id="p-00030-en" num="0030">9. The water- and oil-repellent coating film according to any of items 1 to 8, wherein the coating film additionally contains an adhesive component.</p>
+      <p id="p-00031-en" num="0031">10. A packaging material comprising the water- and oil-repellent coating film according to any of items 1 to 9.</p>
+      <p id="p-00032-en" num="0032">11. The packaging material according to item 10, comprising the water- and oil-repellent coating film according to any of items 1 to 9, a heat seal layer, and a base material layer in the indicated sequence.</p>
+      <p id="p-00033-en" num="0033">12. The packaging material according to item 11, wherein all or a portion of the water- and oil-repellent coating film present on a region that undergoes heat sealing is embedded in the heat seal layer when heat sealing is performed.</p>
+      <p id="p-00034-en" num="0034">13. The water- and oil-repellent coating film according to any of items 1 to 9, wherein the coating film is obtained by a method comprising a step of coating a surface of the substance with a dispersion in which the metal oxide-containing composite particle is dispersed.</p>
+      <p id="p-00035-en" num="0035">14. A method of producing a packaged product in which a content is filled in a container, the method of producing the packaged product comprising:</p>
+      <p id="p-00036-en" num="0036">(1) a step of filling the content into the container; and</p>
+      <p id="p-00037-en" num="0037">(2) a step of sealing the content by using the packaging material according to item 11 as a closure and heat sealing it while abutting the water- and oil-repellent coating film of the packaging material to the opening in the container.</p>
+      <p id="p-00038-en" num="0038">15. The production method according to item 14, wherein all or a portion of the water- and oil-repellent coating film present on the region where the packaging material will be heat sealed is embedded in the heat seal layer when heat sealing is performed.</p>
+      <p id="p-00039-en" num="0039">16. The production method according to item 14, wherein the water- and oil-repellent coating film is not formed and the heat seal layer is exposed in the region where the packaging material will be heat sealed.</p>
+      <p id="p-00040-en" num="0040">17. The production method according to any of items 14 to 16, wherein the content exhibits fluidity.</p>
+      <p id="p-00041-en" num="0041">18. The production method according to any of items 14 to 17, wherein the content is a liquid.</p>
+      <p id="p-00042-en" num="0042">19. The production method according to any of items 14 to 18, wherein the content contains a water fraction and/or an oil component.</p>
+      <p id="p-00043-en" num="0043">20. The production method according to any of items 14 to 19, wherein the viscosity of the content at 20° C. is 0.01 to 500 dPa·s.</p>
+      <heading id="h-00004-en" level="1">Advantages of the Invention</heading>
+      <p id="p-00044-en" num="0044">Through the use of a special, covering layer-bearing metal oxide-containing composite particle, the present invention can provide a coating film that more reliably produces an excellent water repellency and an excellent oil repellency. In particular, when a microscopic and complex uneven structure is formed at the surface of the coating film by a plurality of the metal oxide-containing composite particles in succession, an even better water repellency and oil repellency can be achieved through a synergistic action between this uneven structure and the covering layer.</p>
+      <p id="p-00045-en" num="0045">The coating film having these characteristic features can be favorably used with, for example, packaging materials, tableware, cookware, kitchenware, household goods, clothing, building products, structures, and transportation equipment. It can be particularly favorably used with packaging materials, starting with closures but also including, for example, molded containers, wrapping paper, trays, tubes, and bags such as sacks and pouches. In the case of use with packaging materials, the content can be a content that contains an aqueous liquid and/or an oily liquid. That is, a content that exhibits fluidity can be used. More specifically, the coating film having these characteristic features is useful for packaging materials for holding various types of contents, e.g., foods such as curry, stew, yogurt, jelly confections, pudding, and seasonings (for example, sauces for grilled meats and dressings), and also, for example, liquid cleansers and detergents, toothpastes, cosmetics such as facial cleansing creams and facial cleansing mousse, and medicines.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00046-en" num="0046">
+        <figref>FIG. 1</figref> is a schematic diagram of a metal oxide-containing composite particle of the present invention;</p>
+      <p id="p-00047-en" num="0047">
+        <figref>FIG. 2</figref> is a schematic diagram of a coating film of the present invention;</p>
+      <p id="p-00048-en" num="0048">
+        <figref>FIG. 3</figref> is a diagram that shows the layer structure of a packaging material that includes a coating film of the present invention; and</p>
+      <p id="p-00049-en" num="0049">
+        <figref>FIG. 4</figref> shows the results of observation of the surface of the coating film according to Example 2-4.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">EXPLANATION OF REFERENCE NUMBERS</heading>
+      <p id="p-00050-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>
+            <b>11</b> metal oxide-containing composite particle</li>
+          <li>
+            <b>12</b> covering layer</li>
+          <li>
+            <b>13</b> metal oxide particle (aggregate)</li>
+          <li>
+            <b>21</b> coating film</li>
+          <li>
+            <b>22</b> substance</li>
+          <li>
+            <b>23</b> pore</li>
+          <li>
+            <b>24</b> surface of the coating film</li>
+          <li>
+            <b>31</b> packaging material</li>
+          <li>
+            <b>32</b> heat seal layer</li>
+          <li>
+            <b>33</b> sheet-form base material</li>
+          <li>
+            <b>34</b> laminate</li>
+        </ul>
+      </p>
+      <heading id="h-00007-en" level="1">BEST MODE FOR CARRYING OUT THE INVENTION</heading>
+      <p id="p-00051-en" num="0061">The water- and oil-repellent coating film of the present invention is a coating film formed on a surface of a substance (an article) in order to impart water repellency and oil repellency, wherein</p>
+      <p id="p-00052-en" num="0062">(1) the coating film comprises a metal oxide-containing composite particle;</p>
+      <p id="p-00053-en" num="0063">(2) the metal oxide-containing composite particle contains a) a metal oxide particle and b) a covering layer that contains a polyfluoroalkyl methacrylate resin and is formed on the surface of the metal oxide particle; and</p>
+      <p id="p-00054-en" num="0064">(3) the value yielded by dividing the fluorine content (weight %) of the metal oxide-containing composite particle by the surface area (m<sup>2</sup>/g) of the metal oxide particle is 0.025 to 0.180.</p>
+      <p id="p-00055-en" num="0065">A schematic diagram of the metal oxide-containing composite particle is shown in <figref>FIG. 1</figref>. As shown in <figref>FIG. 1</figref>, the metal oxide-containing composite particle <b>11</b> comprises a metal oxide particle <b>13</b> as a core and a covering layer <b>12</b> formed on the surface of the metal oxide particle <b>13</b>. The core metal oxide particle <b>13</b> as a core forms an aggregate structure (porous aggregate structure) in which a plurality of metal oxide particles (primary particles) are connected three dimensionally. The covering layer <b>12</b> is formed in the interior and at the outer shell of this aggregate structure. In <figref>FIG. 1</figref>, this aggregate structure is shown schematically in a spherical form and the covering layer <b>12</b> is indicated only at the outer shell. A coating film <b>21</b> containing the metal oxide-containing composite particle <b>11</b> is shown schematically in <figref>FIG. 2</figref>. The coating film <b>21</b> is formed at the surface of a substance <b>22</b> and includes the metal oxide-containing composite particles <b>11</b> and the voids <b>23</b> formed between these particles. The surface <b>24</b> (outermost surface) of the coating film <b>21</b> desirably forms an uneven structure (uneven surface) due to the plurality of metal oxide-containing composite particles <b>11</b>. That is, in order to obtain an even greater water repellency and oil repellency, the coating film of the present invention preferably has an uneven structure formed by the metal oxide particles at the surface of the coating film.</p>
+      <p id="p-00056-en" num="0066">Thus, a high water repellency and a high oil repellency are exhibited due to an interaction between the uneven surface <b>24</b> described above and the covering layer <b>12</b> containing a polyfluoroalkyl methacrylate resin and formed on the surface of the metal oxide-containing composite particle <b>11</b>. In addition, the coating film of the present invention can provide a uniform water repellency and oil repellency over the entire coating film surface because all of the metal oxide-containing composite particles present in the coating film of the present invention are covered by a prescribed amount of the polyfluoroalkyl methacrylate resin-containing covering layer <b>12</b>. In other words, because the individual metal oxide-containing composite particles have the covering layer <b>12</b> in an amount sufficient for the development of a high water repellency and a high oil repellency, a high water repellency and a high oil repellency are exhibited over the entire coating film uniformly, and as a result a uniform water repellency and uniform oil repellency are imparted to the substance <b>22</b>.</p>
+      <p id="p-00057-en" num="0067">Even in the case of a material (particularly an aqueous or oily liquid) that would stick to the outermost surface of a coating film, such a material is repelled by the water repellency and oil repellency of the coating film of the present invention, and as a result the sticking of such a material to the coating film <b>21</b> can be prevented.</p>
+      <p id="p-00058-en" num="0068">1. The Substance</p>
+      <p id="p-00059-en" num="0069">There are no particular limitations on the substance that is the target for the formation of the coating film of the present invention (i.e., the target of water repellency and oil repellency). The substance may be, for example, a metal, plastic, ceramic, rubber, fibrous material (paper, nonwoven fabric, woven fabric, and so forth), or a composite material thereof. It may be a finished product, semifinished product, or a starting material therefor.</p>
+      <p id="p-00060-en" num="0070">More specifically, this substance (finished product and so forth) can be a broad range of materials as used for, e.g., packaging materials, household products (for example, eyeglasses, rain gear, luggage or briefcases), building materials (for example, roofing materials, wallpaper, flooring, ceiling materials, tile, and glazing), tableware, cooking utensil (for example, pans or pots, drip trays for gas stove tops, oil guard panels, and top plates for induction stove tops), kitchenware, sporting goods, clothing (for example, caps or hats, shoes, gloves, and coats), structures (for example, building walls, bridges, and towers), transportation equipment (outer body surfaces for, for example, vehicles, motorcycles, rail cars, and ships), cosmetics, medicines, toys, and identification tools.</p>
+      <p id="p-00061-en" num="0071">Packaging materials are particularly suitable as the substance in the present invention. These packaging materials encompass both packaging as a finished product (completed product) and the starting materials for packaging. The finished product (completed product) can be exemplified first of all by lids or closures for containers but also by packaging such as molded containers, wrapping paper, trays, tubes, and bags (pouches and so forth). The starting material for packaging can be exemplified by the base material and a laminate containing a heat seal layer. That is, it can be exemplified by a packaging material comprising the water- and oil-repellent coating film of the present invention, a heat seal layer, and a base material in the indicated sequence (this is a packaging material according to the present invention). Embodiments are given below of representative examples of packaging materials according to the present invention.</p>
+      <p id="p-00062-en" num="0072">2. The Coating Film</p>
+      <p id="p-00063-en" num="0073">The coating film according to the present invention contains metal oxide-containing composite particles. The content of the metal oxide-containing composite particles in the coating film can be set as appropriate in conformity with, for the example, the desired water repellency and oil repellency, but is generally preferably 10 to 100 weight % and particularly preferably is 30 to 100 weight %. That is, a proportionally higher water repellency and oil repellency can be obtained in the present invention as the content of the metal oxide-containing composite particles increases to 100 weight %.</p>
+      <p id="p-00064-en" num="0074">The amount of application of the coating film (weight after drying) to the substance is not limited and may be established as appropriate in conformity to, for example, the desired water- and oil-repellency, the content of the metal oxide-containing composite particles, and so forth, but can generally be set in the range from 0.01 to 30 g/m<sup>2 </sup>and in particular can be set in the range from 0.1 to 30 g/m<sup>2</sup>. Accordingly, for example, it can be favorably set in the range from about 1 to 30 g/m<sup>2 </sup>and particularly the range from 2 to 8 g/m<sup>2</sup>.</p>
+      <p id="p-00065-en" num="0075">1) The Metal Oxide-Containing Composite Particle and its Preparation</p>
+      <p id="p-00066-en" num="0076">1-1) The Metal Oxide-Containing Composite Particle</p>
+      <p id="p-00067-en" num="0077">The metal oxide-containing composite particle contains a) a metal oxide particle and b) a covering layer that contains a polyfluoroalkyl methacrylate resin and is formed on the surface of the metal oxide particle.</p>
+      <p id="p-00068-en" num="0078">The metal oxide particle according to above a) should be able to form the core of the metal oxide-containing composite particle but is not otherwise limited, and, for example, at least one particle (powder) selected from silicon oxide, titanium oxide, aluminum oxide, zinc oxide, and so forth, can be used. At least one selection from silicon oxide particles, titanium oxide particles, and aluminum oxide particles is particularly preferred for the present invention. Known or commercially available metal oxide particles can be used for these metal oxide particles as such. The average primary particle diameter of the metal oxide particle is not limited, but is generally 5 to 50 nm while 7 to 30 nm is particularly desirable. An even better water repellency and oil repellency can be obtained by operating within this particle diameter range.</p>
+      <p id="p-00069-en" num="0079">The average primary particle diameter of the metal oxide particle for the present invention can be measured using a transmission electron microscope or a scanning electron microscope. More specifically, the average primary particle diameter can be determined by taking a photograph using a transmission electron microscope or a scanning electron microscope; measuring the diameter of at least 200 particles on this photograph; and calculating an arithmetic average value therefrom.</p>
+      <p id="p-00070-en" num="0080">Known or commercially available products may be used for these nanolevel metal oxide particles. Examples for the silicon oxide are AEROSIL 200 (product names, “AEROSIL” is a registered trademark, products from Nippon Aerosil Co., Ltd. The same applies hereinafter.), AEROSIL 130, AEROSIL 300, AEROSIL 50, AEROSIL 200FAD, and AEROSIL 380. An example for the titanium oxide is AEROXIDE TiO<sub>2 </sub>T805 (product name, product from Evonik-Degussa GmbH). An example for the aluminum oxide is AEROXIDE Alu C 805 (product name, product from Evonik-Degussa GmbH).</p>
+      <p id="p-00071-en" num="0081">The covering layer according to above b) contains a polyfluozoalkyl methacrylate resin. The use of this resin results in the formation on the particle surface of a strong covering layer that has a relatively high adhesiveness due to an excellent affinity with, the metal oxide particle (particularly the silicon oxide particle), and can also exhibit a high water- and oil-repellency. Known or commercially available resins can be used for this resin. Commercially available products can be exemplified by CHEMINOX FAMAC-6 (product name, product from UNIMATEC Co., Ltd. (Japan)), Zonyl TH Fluoromonomer code 421480 (product name, product from Sigma-Aldrich (USA)), SCFC-65530-66-7 (product name, product from Maya High Purity Chemi(China)), FC07-04 to -10 (product names, products from Fluory, Inc. (USA)), CB INDEX:58 (product name, product from Wilshire Chemical Co., Inc. (USA)), AsahiGuard AG-E530 and AsahiGuard AG-E060 (product names, products from Asahi Glass Co., Ltd.), TEMAc-N (product name, product from Top Fluorochem Co., Ltd. (China)), Zonyl 7950 (product name, product from SIGMA-RBI (Switzerland)), 6100840 to 6100842 (product names, products from Weibo Chemical Co., Ltd. (China)), and CB INDEX:75 (product name, product from ABCR GmbH &amp; Co. KG (Germany)).</p>
+      <p id="p-00072-en" num="0082">Among the preceding, for example, a copolymer obtained by the copolymerization of a) polyfluorooctyl methacrylate, b) 2-N,N-diethylaminoethyl methacrylate, c) 2-hydroxyethyl methacrylate, and d) 2,2′-ethylenedioxydiethyl dimethacrylate can be favorably used as this resin in order to achieve an even better water- and oil-repellency. A commercially available resin as referenced above can also be used here.</p>
+      <p id="p-00073-en" num="0083">In the present invention, the value (value A) obtained by dividing the fluorine content (weight %) of the metal oxide-containing composite particle by the surface area (m<sup>2</sup>/g) of the metal, oxide particle is 0.025 to 0.180 and is preferably 0.030 to 0.175. In addition, the value (value B) obtained by dividing the carbon content (weight %) for the metal oxide-containing composite particle by the surface area (m<sup>2</sup>/g) of the metal oxide particle is desirably 0.05 to 0.400 and particularly 0.06 to 0.390. This carbon content and fluorine content are indexes in the present invention that indicate the degree of coverage, and larger numerical values for these indicate a greater amount of coverage. An excellent adhesiveness to the metal oxide particle surface and an excellent water repellency and oil repellency can be achieved in the present invention by obeying the prescribed amounts of coverage (the carbon content and the fluorine content and particularly the fluorine content). The desired water repellency and oil repellency are not obtained when the value yielded by dividing the fluorine content (weight %) by the surface area (m<sup>2</sup>/g) of the metal oxide particle is less than 0.025. It is difficult to obtain the desired water repellency and oil repellency when the value yielded by dividing the carbon content (weight %) by the surface area (m<sup>2</sup>/g) of the metal oxide particle is less than 0.05. On the other hand, production of the metal oxide-containing composite particle itself is quite problematic when the value yielded by dividing the fluorine content (weight %) by the surface area (m<sup>2</sup>/g) of the metal oxide particle exceeds 0.180. In addition, it is difficult to produce the metal oxide-containing composite particle when the value yielded by dividing the carbon content (weight %) by the surface area (m<sup>2</sup>/g) of the metal oxide particle exceeds 0.400. Thus, the value A desirably obeys the prescribed range in order to achieve an excellent water repellency and oil repellency, and the value B desirably also obeys the prescribed range in order to obtain an even better water repellency and oil repellency.</p>
+      <p id="p-00074-en" num="0084">The carbon content in the metal oxide-containing composite particle is measured in the present invention by the following method: a (sample) is heated to at least 300° C. in an oxygen atmosphere to convert the carbon contained in the surface hydrophobic groups to CO and the carbon content present at the surface of the (sample) is determined with a microquantitative carbon analyzer. For the fluorine content in the metal oxide-containing composite particle in the present invention, the sample is baked in a ring furnace at 1000° C.; the produced gas is recovered by steam distillation; and detection and quantitation as the fluoride ion are performed on the recovered solution by ion chromatography. The surface area (m<sup>2</sup>/g) (specific surface area) was determined by the BET one-point method using a Macsorb (from Mountech Co., Ltd.). 30 volume % nitrogen/70 volume helium was used as the adsorption gas. Sample pretreatment was carried out by ventilating with the adsorption gas for 10 minutes at 100° C. The cell holding the sample was then cooled with liquid nitrogen; the temperature was raised to room temperature after the completion of adsorption; and the surface area of the sample was determined from the amount of desorbed nitrogen gas. The specific surface was determined by dividing by the mass of the sample.</p>
+      <p id="p-00075-en" num="0085">1-2) Preparation of the Metal Oxide-Containing Composite Particle</p>
+      <p id="p-00076-en" num="0086">The method of producing the metal oxide-containing composite particle is not particularly limited, and the covering layer may be formed on the metal oxide particle (powder) by, for example, a known coating method or granulation method, using a polyfluoroalkyl methacrylate resin as the coating material. For example, the metal oxide-containing composite particle can be favorably produced by a production method comprising a step (the coating step) of coating the metal oxide particle with a coating liquid in which a liquid polyfluoroalkyl methacrylate resin is dissolved or dispersed in a solvent.</p>
+      <p id="p-00077-en" num="0087">This production method can advantageously use a polyfluoroalkyl methacrylate resin that is a liquid at normal temperature (25° C.) and normal pressure for the polyfluoroalkyl methacrylate resin. The commercially available products provided above as examples can also be used as this polyfluoroalkyl methacrylate resin.</p>
+      <p id="p-00078-en" num="0088">The solvent used in the coating liquid is not particularly limited, and, while water or an organic solvent such as alcohol or toluene can be used, the use of water is preferred for the present invention. That is, the coating liquid is preferably a coating liquid in which the polyfluoroalkyl methacrylate resin is dissolved and/or dispersed in water.</p>
+      <p id="p-00079-en" num="0089">The content of the polyfluoroalkyl methacrylate resin in this coating liquid is not particularly limited, but preferably generally ranges from 10 to 80 weight %, particularly from 15 to 70 weight %, and more particularly from 20 to 60 weight %.</p>
+      <p id="p-00080-en" num="0090">The method used to coat the coating liquid on the surface of the metal oxide particle may be a known method, and, for example, a spray method, immersion method, stirred granulation method, and so forth, may be used. In particular, coating by a spray method is particularly preferred in the present invention from the standpoint of obtaining an excellent uniformity.</p>
+      <p id="p-00081-en" num="0091">After the coating liquid has been applied, the metal oxide-containing composite particle can be obtained by removing the solvent using a heat treatment. The heat treatment temperature is preferably generally about 150 to 250° C. and particularly preferably is 180 to 200° C. There are no limitations on the atmosphere for the heat treatment, but an inert gas (nonoxidizing) atmosphere such as, for example, nitrogen gas, argon gas, and so forth, is desirable. For example, as necessary a sequence of steps comprising an additional coating step and heat treatment step can be performed one or more times. This can be used to implement a favorable control of the amount of coverage.</p>
+      <p id="p-00082-en" num="0092">2) Other Components in the Coating Film</p>
+      <p id="p-00083-en" num="0093">In addition to the metal oxide-containing composite particle described above, the coating film of the present invention may contain other components within a range in which the effects of the present invention are not impaired. Examples here are adhesives (for example, heat seal agents), colorants, dispersing agents, anti-settling agents, viscosity modifiers, printing protectants, and so forth.</p>
+      <p id="p-00084-en" num="0094">In particular, in conformity to, for example, the type of article with which the coating film of the present invention is used, the incorporation of an adhesive (adhesive component) is effective for further raising the adhesive strength of the coating film to the article and the adhesive strength among the metal oxide-containing composite particles. There are no particular limitations on the adhesive that can be used in this case, and the known and commercially available adhesives can be used. Examples here adhesives (particularly heat seal agents) such as polyolefin resins, polyester resins, polyurethane resins, epoxy resins, acrylic resins, and vinyl resins. More specifically, the following can be used as the heat seal agent: low-density polyethylene; medium-density polyethylene; high-density polyethylene; straight-chain (linear) low-density polyethylene; polypropylene; ethylene-vinyl acetate copolymers; ionomer resins; ethylene-acrylic acid copolymers; ethylene-ethyl acrylate copolymers; ethylene-methacrylic acid copolymers; ethylene-methyl methacrylate copolymers; ethylene-propylene copolymers; methylpentene polymers; polybutene polymers; acid-modified polyolefin resins provided by the modification of a polyolefin resin, e.g., polyethylene or polypropylene, with an unsaturated carboxylic acid such as acrylic acid, methacrylic acid, maleic acid, maleic anhydride, fumaric acid, or itaconic acid; polyvinyl acetate resins; poly(meth)acrylic resins; polyacrylonitrile resins; polyvinyl chloride resins; other thermal adhesive resins; blended resins from the preceding; copolymers containing combinations of the monomers that constitute the above polymers; and modified resins.</p>
+      <p id="p-00085-en" num="0095">When a heat seal agent is used, a coating film that exhibits an even better adhesiveness for the surface of the substance can be formed by, for example, carrying out coating in the “3. Method of forming the coating film” described below using a liquid dispersion in which particles (powder) of the heat seal agent are dispersed with the metal oxide-containing composite particles and thereafter melting the heat seal agent in the heat treatment step in the “3. Method of forming the coating film” described below. The content of the adhesive agent in the coating film when an adhesive agent is used may generally be set as appropriate within the range of 20 to 80 weight, in the coating film.</p>
+      <p id="p-00086-en" num="0096">3. Method of Forming the Coating Film</p>
+      <p id="p-00087-en" num="0097">The method of forming the coating film of the present invention is not particularly limited and, inter alia, known methods can be used. In particular, the coating film is favorably formed in the present invention by a method comprising a step of coating a surface of the substance with a liquid dispersion that contains the metal oxide-containing composite particles. That is, a water- and oil-repellent coating film can be obtained by coating by a wet method and thereafter removing the solvent. When a perfluoroalkylsilane, which is a fluorinated water- and oil-repellent agent according to the prior art, is used, a catalyst must be added or the pH of the water- and oil-repellent agent must be adjusted in order to control the hydrolysis reaction of the alkoxysilane group therein; in contrast to this, such a step may be not present in the present invention and a desired coating film can be formed relatively simply. Moreover, the use of water or the like for the solvent makes it possible to also keep the load on the environment to a minimum.</p>
+      <p id="p-00088-en" num="0098">The solvent used in the liquid dispersion is not particularly limited and can be exemplified by water, alcohol (ethanol), cyclohexane, toluene, acetone, IPA, propylene glycol, hezylene glycol, butyl diglycol, pentamethylene glycol, normal-pentane, normal-hexane, hexyl alcohol, and so forth.</p>
+      <p id="p-00089-en" num="0099">The amount of the metal oxide-containing composite particles dispersed in the organic solvent is generally established as appropriate in the range from about 20 to 50 g/L (liter) in conformity to, for example, the type of substance, the degree of water repellency and oil repellency, and so forth.</p>
+      <p id="p-00090-en" num="0100">As indicated above in “2) Other components in the coating film”, an adhesive (and particularly a heat seal agent) may also be contained in the liquid dispersion. More specifically, particles of an adhesive component can be dispersed in the liquid dispersion. The adhesive components given above in “2) Other components in the coating film” can be used as this adhesive component. In addition, the other components given above in “2) Other components in the coating film” may also be contained in the liquid dispersion.</p>
+      <p id="p-00091-en" num="0101">The method for coating the liquid dispersion on the surface of the material is not limited and known methods may be used. For example, any known method, such as roll coating, gravure coating, bar coating, doctor blade coating, comma coating, partial coating, brush application, and so forth, can be used.</p>
+      <p id="p-00092-en" num="0102">The amount of application during coating with the liquid dispersion is not limited, and the metal oxide-containing composite particle weight after the coating has been dried can be set as appropriate, for example, within the range from 0.01 to 30 g/m<sup>2 </sup>and preferably 0.1 to 30 g/m<sup>2</sup>. Accordingly, it can also be adjusted so as to provide, for example, about 50 to 600 mg/m<sup>2 </sup>and particularly 200 to 500 mg/m<sup>2</sup>.</p>
+      <p id="p-00093-en" num="0103">A drying step may be carried out after the liquid dispersion has been coated on the surface of the substance. This drying may be a spontaneous drying or drying with the application of heat. In the case of drying with the application of heat, heating may generally be carried out at not more than 200° C. and preferably at not more than 100° C.</p>
+      <p id="p-00094-en" num="0104">After the liquid dispersion has been coated on the surface of the substance, a heat treatment step may also be performed in the present invention, either after the drying step or instead of the drying step. In particular, when a heat seal agent is contained in the liquid dispersion as an adhesive component, the coating film can be strongly anchored to the surface of the substance by melting the heat seal agent by subjecting the coating film on the surface of the substance to a heat treatment. By doing this, a coating film can be formed for which there is a better inhibition of exfoliation and flaking. The heat treatment temperature may be set as appropriate in conformity with, for example, the nature of the heat seal agent being used, and may generally be within the range of about 150 to 250° C. There are no limitations on the heat treatment atmosphere, but the operation may generally be done in the atmosphere or in an oxidizing atmosphere.</p>
+      <p id="p-00095-en" num="0105">4. The Properties of the Coating Film</p>
+      <p id="p-00096-en" num="0106">The water- and oil-repellent coating film of the present invention contains the metal oxide-containing composite particles, and in particular the surface of the coating film preferably has an uneven structure (an approximately fractal structure) formed by the metal oxide-containing composite particles. More specifically, it desirably has a surface formed by voids and the particles themselves, and that is formed by the connection of a plurality of the metal oxide-containing composite particles. By this structure together with the metal oxide-containing composite particle having the prescribed covering layer, an even better water repellency and oil repellency can be performed. That is, an even better water repellency and oil repellency can be obtained as a result of the surface with its uneven structure being substantially composed of this covering layer. In this case, particles other than the metal oxide-containing composite particle may be included, within a range in which the profitable effects of the present invention are not impaired, as particles that contribute to the formation of the uneven structure. The uneven structure of the surface of the coating film can be observed using a scanning electron microscope. Example 2-4, infra, is shown in <figref>FIG. 4</figref> as a representative example.</p>
+      <p id="p-00097-en" num="0107">The thickness of the coating film is not particularly limited, but generally can be set as appropriate within the range from 0.5 to 30 μm. In particular, about 1 to 8 μm is preferred when the packaging material has a structure in which the coating film is embedded in the heat seal layer during heat sealing.</p>
+      <p id="p-00098-en" num="0108">With regard to the water repellency possessed by the coating film, the contact angle versus pure water (25° C.) is generally preferably at least 140° and is particularly preferably at least 150°. With regard to the oil repellency, the contact angle versus the edible oil:olive oil (25° C.) is preferably at least 130° and is particularly preferably at least 140°. Moreover, while there are no limitations on the roll off angle (olive oil) for the coating film, it is generally preferably 5 to 200.</p>
+      <p id="p-00099-en" num="0109">&lt;Embodiments of the Present Invention for Packaging Materials&gt;</p>
+      <p id="p-00100-en" num="0110">Embodiments are given below for the production of packaging materials using a laminate containing a heat seal layer and a sheet-form base material as the substance in above 1. As shown in <figref>FIG. 3</figref>, in the packaging material <b>31</b>, a coating film <b>21</b> is formed as the outermost layer on a laminate <b>34</b> in which a heat seal layer <b>32</b> is laminated so as to be in contact with a sheet-form base material <b>33</b>.</p>
+      <p id="p-00101-en" num="0111">a) Structure of the Laminate</p>
+      <p id="p-00102-en" num="0112">Known materials can be used for the sheet-form base material <b>33</b>. For example, paper, synthetic paper, a resin film, a resin film bearing a vapor-deposited layer, an aluminum foil, or another metal foil can be favorably used by itself, or a composite material comprising the above layer or a laminate comprising the above layer can be favorably used.</p>
+      <p id="p-00103-en" num="0113">There are also no limitations on the lamination method for the sheet-form base material or the method for laminating the sheet-form base material with the heat seal layer, and, for example, known methods can be used, e.g., dry lamination methods, extrusion lamination methods, wet lamination methods, heat lamination methods, and the like.</p>
+      <p id="p-00104-en" num="0114">The thickness of the sheet-form base material is not particularly limited, and the range used for known packaging materials can be used. For example, this is generally preferably about 1 to 500 μm.</p>
+      <p id="p-00105-en" num="0115">The heat seal layer <b>32</b> is disposed as the outermost layer (surfacemost) of the laminate <b>34</b>. Known heat seal layers can be used for the heat seal layer <b>32</b>. For example, besides a known sealant film, a layer formed by an adhesive, e.g., a lacquer-type adhesive, an easy-peel adhesive, or a hot-melt adhesive, can be used.</p>
+      <p id="p-00106-en" num="0116">There are no limitations on the main component of the heat seal layer, and the same main components as for the previously described heat seal agents can be used. More specifically, the following can be used: low-density polyethylene; medium-density polyethylene; high-density polyethylene; straight-chain (linear) low-density polyethylene; polypropylene; ethylene-vinyl acetate copolymers; ionomer resins; ethylene-acrylic acid copolymers; ethylene-ethyl acrylate copolymers; ethylene-methacrylic acid copolymers; ethylene-methyl methacrylate copolymers; ethylene-propylene copolymers; methylpentene polymers; polybutene polymers; acid-modified polyolefin resins provided by the modification of a polyolefin resin, e.g., polyethylene or polypropylene, with an unsaturated carboxylic acid such as acrylic acid, methacrylic acid, maleic acid, maleic anhydride, fumaric acid, or itaconic acid; polyvinyl acetate resins; poly(meth)acrylic resins; polyacrylonitrile resins; polyvinyl chloride resins; other thermal adhesive resins; blended resins thereof; copolymers containing combinations of the monomers that constitute the above polymer; and modified resins. With regard to the structure of the heat seal layer, a single layer of a sealant film can be used or a sealant film composed of two or more layers as provided by co-extrusion or extrusion lamination can also be used.</p>
+      <p id="p-00107-en" num="0117">The thickness of the heat seal layer is not particularly limited, but, considered in terms of productivity and cost, is preferably about 1 to 100 μm and is more preferably about 3 to 50 μm. When heat sealing is carried out, all or a portion of the coating film present on the region undergoing heat sealing is embedded in the heat seal layer in the packaging material of the present invention and heat sealing can then be performed due to the heat seal layer becoming surfacemost. Due to this, the thickness is desirably set to a thickness, within the thickness range indicated above, at which the coating film can be embedded in the heat seal layer as much as possible.</p>
+      <p id="p-00108-en" num="0118">Insofar as the effects of the present invention are not impaired, the various layers employed in known packaging materials may as necessary be laminated in a freely selected position to the sheet-form base material in the laminate <b>34</b> for the purpose of providing various properties (for example, resistance to moisture permeability, resistance to oxygen permeability, opacity, heat insulation, impact resistance, and so forth). Examples in this regard are a print layer, print protection layer (i.e., OP layer), colored layer, adhesive layer, adhesion-reinforcing layer, primer coat layer, anchor coat layer, anti-skid agent layer, lubricant layer, and anti-fogging agent layer.</p>
+      <p id="p-00109-en" num="0119">b) Formation of the Coating Film on the Surface of the Laminate</p>
+      <p id="p-00110-en" num="0120">An excellent water repellency and an excellent oil repellency can be exhibited by the packaging material of the present invention when the coating film of the present invention is formed on the surface of the heat seal layer of the aforementioned laminate. That is, the coating film of the present invention is in particular preferably formed adjacent to the heat seal layer.</p>
+      <p id="p-00111-en" num="0121">The amount (weight after drying) of the coating film formed on the surface of the laminate is not limited, but generally can be established as appropriate within the range from 0.01 to 30 g/m<sup>2 </sup>and preferably within the range from 0.1 to 30 g/m<sup>2</sup>. Setting the amount of attachment in this range makes it possible to obtain an even better water repellency and oil repellency for a long time and is also more advantageous in terms of cost and inhibiting exfoliation of the coating film. Accordingly, for example, the amount of attachment can be in the range from 0.01 to 10 g/m<sup>2</sup>, particularly 0.2 to 1.5 g/m<sup>2</sup>, and even more particularly 0.2 to 1 g/m<sup>2</sup>.</p>
+      <p id="p-00112-en" num="0122">The coating film preferably forms a porous layer in the present invention, and its thickness is preferably about 0.1 to 5 μm and is more preferably about 0.2 to 2.5 μm. Since a large amount of air can be contained in this layer by the attachment of the coating film in the form of such a porous layer, an even better water repellency and oil repellency can then be exhibited.</p>
+      <p id="p-00113-en" num="0123">The surface of the coating film in the packaging material of the present invention also desirably has an uneven structure formed by the connection of the metal oxide-containing composite particles. This can achieve an even better water repellency and oil repellency.</p>
+      <p id="p-00114-en" num="0124">The coating film may be formed over the entire surface on the heat seal layer side (the entire surface on the opposite side from the sheet-form base material side) or may be formed in a region that excludes the region in which the heat seal layer undergoes heat sealing (i.e., the bonding margin).</p>
+      <p id="p-00115-en" num="0125">Even in the case of the attachment of the coating layer over the entire surface on the heat seal layer side, heat sealing is substantially not impaired in the present invention because all or a portion of the coating film present in the region that undergoes heat sealing is buried in this heat seal layer, and thus from the standpoint of industrial production, it is preferred that the coating layer attaches over the entire surface of the heat seal layer.</p>
+      <p id="p-00116-en" num="0126">The packaging material <b>31</b>, for example, can be favorably produced by the following method. That is, the packaging material can be produced by a method of producing a packaging material that contains a sheet-form base material and a heat seal layer, wherein the method comprises a step (the coating film formation step) in which the coating film is formed by coating a liquid dispersion containing the metal oxide-containing composite particles in a solvent on all or a portion of the outermost surface of the heat seal layer in a laminate that contains a sheet-form base material and a heat seal layer wherein the heat seal layer is disposed as the outermost layer.</p>
+      <p id="p-00117-en" num="0127">In the coating film formation step, the coating film is formed by coating a liquid dispersion containing the metal oxide-containing composite particles in a solvent on all or a portion of the outermost surface of the heat seal layer in a laminate that comprises a sheet-form base material and a heat seal layer wherein the heat seal layer is disposed as the outermost layer.</p>
+      <p id="p-00118-en" num="0128">The laminate described in above a) can be used as the laminate. Thus, the same sheet-form base material, heat seal layer, and other layers as described above can be used.</p>
+      <p id="p-00119-en" num="0129">A liquid dispersion prepared by the dispersion of at least the metal oxide-containing composite particles(powder) in a solvent is used as the liquid dispersion. The metal oxide-containing composite particle described above in “1-1) The metal oxide-containing composite particle” can be used as the metal oxide-containing composite particle here.</p>
+      <p id="p-00120-en" num="0130">The solvent should in particular not degrade the metal oxide-containing composite particles that are used, but is not otherwise limited and, for example, can be selected as appropriate from among organic solvents, e.g., alcohol (ethanol), cyclohexane, toluene, acetone, IPA, propylene glycol, hexylene glycol, butyl diglycol, pentamethylene glycol, normal-pentane, normal-hexane, and hexyl alcohol. There are no limitations on the amount of metal oxide-containing composite particles dispersed in the solvent, and, for example, this can be set at about 10 to 200 g/L. Accordingly, it may also be adjusted, for example, within the range of 10 to 100 g/L.</p>
+      <p id="p-00121-en" num="0131">Within a range in which the advantages of the present invention are not impaired, the liquid dispersion in the present invention may as appropriate incorporate other additives as necessary. For example, a dispersing agent, colorant, anti-settling agent, viscosity modifier, and so forth, may be added. Moreover, as has been indicated above, the powder of an adhesive (particularly a heat seal agent) may also be dispersed in this liquid dispersion in order to further raise the adhesive strength of the coating film.</p>
+      <p id="p-00122-en" num="0132">Any known method, for example, roll coating, gravure coating, bar coating, doctor blade coating, comma coating, partial coating, brush application, and so forth, can be employed as the coating method for applying the liquid dispersion. When, for example, roll coating or the like is used, a coating step can be performed by forming the coating film is formed on the heat seal layer using a liquid dispersion prepared by dispersing at least the metal oxide-containing composite particles in a solvent.</p>
+      <p id="p-00123-en" num="0133">After the coating film formation step, a step of drying the coating film may be performed prior to a heating step. This drying method may be a spontaneous drying or forced (application of heat) drying. In the case of drying with the application of heat, a temperature generally of not more than 200° C. and preferably not more than 100° C. may be used.</p>
+      <p id="p-00124-en" num="0134">After the liquid dispersion has been coated on the surface of the substance, a heat treatment step may also be performed in the present invention, either after the drying step or instead of the drying step. In particular, when a heat seal agent is contained in the liquid dispersion as an adhesive component, the coating film can be firmly anchored to the surface of the substance by melting the heat seal agent by subjecting the coating film on the surface of the substance to a heat treatment. By doing this, a coating film can be formed for which there is a better inhibition of exfoliation and flaking. The heat treatment temperature may be set as appropriate in conformity with, for example, the nature of the heat seal agent being used, and may generally be within the range of about 150 to 250° C. There are no limitations on the heat treatment atmosphere, but the operation may generally be done in the atmosphere or in an oxidizing atmosphere.</p>
+      <p id="p-00125-en" num="0135">The obtained packaging material can be used as such or can be used after it has been subjected to processing. The same methods as used with known packaging materials can be used for the processing method. For example, an embossing process, a half-cutting process, a notching process, and so forth may be carried out. The packaging material of the present invention can be favorably used most prominently for lids or closures, but also for, for example, molded containers, wrapping paper, trays, tubes, and bags such as sacks and pouches.</p>
+      <heading id="h-00008-en" level="1">EXAMPLES</heading>
+      <p id="p-00126-en" num="0136">The characteristic features of the present invention are more specifically described through the examples and comparative examples provided below. However, the scope of the present invention is not limited to or by the examples.</p>
+      <heading id="h-00009-en" level="1">Example 1-1</heading>
+      <heading id="h-00010-en" level="1">(1) Production of the Metal Oxide-Containing Composite Particle</heading>
+      <p id="p-00127-en" num="0137">100 g of a fumed silica powder having an average primary particle diameter of 12 nm and a BET specific surface area of 200 m<sup>2</sup>/g (product name: AEROSIL 200, from Nippon Aerosil Co., Ltd.) was introduced into a reactor and was sprayed with 500 g of a commercially available surface-treatment agent while stirring under a nitrogen gas atmosphere. This was followed by stirring for 30 minutes at 200° C. and then cooling. A powder of surface-modified silica fine particles (fine metal oxide-containing composite particles) was thus obtained. A water-based dispersion (solid content: 20 weight %) of a copolymer of polyfluorooctyl methacrylate, 2-N,N-diethylaminoethyl methacrylate, 2-hydroxyethyl methacrylate, and 2,2′-ethylenedioxydiethyl dimethacrylate was used as the treatment agent here. The carbon content and fluorine content of the obtained surface-modified silica fine particles (powder) are shown in Table 1.</p>
+      <p id="p-00128-en" num="0138">(2) Production of the Liquid Dispersion</p>
+      <p id="p-00129-en" num="0139">30 weight parts of the surface-modified silica fine particles obtained in above (1) was added to 200 weight parts ethanol with mixing to prepare a liquid dispersion.</p>
+      <p id="p-00130-en" num="0140">(3) Formation of the Coating Film</p>
+      <p id="p-00131-en" num="0141">Using a co-extruded film composed of polyethylene terephthalate (thickness=12 μm)/polyurethane-type dry laminate adhesive/aluminum foil (20 μm)/polyurethane-type dry laminate adhesive/(polyethylene/polypropylene) as a laminate, the liquid dispersion prepared in above (2) was coated with a bar coater on the polypropylene surface so as to provide a coating rate after drying of 3 g/m<sup>2</sup>. This was followed by heating for 15 seconds in a 180° C. oven to obtain a sample (packaging material) according to Example 1-1.</p>
+      <heading id="h-00011-en" level="1">Example 1-2</heading>
+      <p id="p-00132-en" num="0142">A sample (packaging material) was prepared proceeding as in Example 1-1, but changing the 500 g of the surface-treatment agent to 300 g. The carbon content and fluorine content of the obtained surface-modified silica fine particles (powder) are shown in Table 1.</p>
+      <heading id="h-00012-en" level="1">Example 1-3</heading>
+      <p id="p-00133-en" num="0143">A sample was prepared proceeding as in Example 1-1, but changing the 500 g of the surface-treatment agent to 800 g. The carbon content and fluorine content of the obtained surface-modified silica fine particles (powder) are shown in Table 1.</p>
+      <heading id="h-00013-en" level="1">Example 1-4</heading>
+      <p id="p-00134-en" num="0144">A sample (packaging material) was prepared proceeding as in Example 1-1, but changing the 500 g of the surface-treatment agent to 25 g and using a fumed silica powder having an average primary particle diameter of 30 nm and a BET specific surface area of 50 m<sup>2</sup>/g (product name: AEROSIL 50, from Nippon Aerosil Co., Ltd.) as the metal oxide particles. The carbon content and fluorine content of the obtained surface-modified silica fine particles (powder) are shown in Table 1.</p>
+      <heading id="h-00014-en" level="1">Example 1-5</heading>
+      <p id="p-00135-en" num="0145">A sample (packaging material) was prepared proceeding as in Example 1-1, but using a fumed silica powder having an average primary particle diameter of 30 nm and a BET specific surface area of 50 m<sup>2</sup>/g (product name: AEROSIL 50, from Nippon Aerosil Co., Ltd.) as the metal oxide particles. The carbon content and fluorine content of the obtained surface-modified silica fine particles (powder) are shown in Table 1.</p>
+      <heading id="h-00015-en" level="1">Example 1-6</heading>
+      <p id="p-00136-en" num="0146">A sample (packaging material) was prepared proceeding as in Example 1-1, but changing the 500 g of the surface-treatment agent to 750 g and using a fumed silica powder having an average primary particle diameter of 7 nm and a BET specific surface area of 300 m<sup>2</sup>/g (product name: AEROSIL 300, from Nippon Aerosil Co., Ltd.) as the metal oxide particles. The carbon content and fluorine content of the obtained surface-modified silica fine particles (powder) are shown in Table 1.</p>
+      <heading id="h-00016-en" level="1">Comparative Example 1-1</heading>
+      <p id="p-00137-en" num="0147">A sample was prepared proceeding as in Example 1-1, but changing the 500 g of the surface-treatment agent to 20 g. The carbon content and fluorine content of the obtained surface-modified silica fine particles (powder) are shown in Table 1.</p>
+      <heading id="h-00017-en" level="1">Comparative Example 1-2</heading>
+      <p id="p-00138-en" num="0148">A sample (packaging material) was prepared proceeding as in Example 1-1, but using 100 g trifluoropropyltrimethoxysilane as the treatment agent. The carbon content and fluorine content of the obtained surface-modified silica fine particles (powder) are shown in Table 1.</p>
+      <heading id="h-00018-en" level="1">Example 2-3</heading>
+      <p id="p-00139-en" num="0149">A liquid dispersion was prepared according to “(2) Production of the liquid dispersion” of Example 1-1 by adding 30 weight parts of the surface-modified silica fine particles and a commercially available heat seal agent (100 weight parts of a polypropylene-type heat seal agent liquid dispersion (solid content=18 weight %, the same applies hereinafter.)) to 200 weight parts of an organic solvent (toluene) with mixing. A sample (packaging material) was prepared proceeding as in Example 1-1, but using the obtained liquid dispersion.</p>
+      <heading id="h-00019-en" level="1">Example 2-2</heading>
+      <p id="p-00140-en" num="0150">A liquid dispersion was prepared according to “(2) Production of the liquid dispersion” of Example 1-2 by adding 30 weight parts of the surface-modified silica fine particles and a commercially available heat seal agent (100 weight parts of a polypropylene-type heat seal agent liquid dispersion) to 200 weight parts of an organic solvent (toluene) with mixing. A sample (packaging material) was prepared proceeding as in Example 1-2, but using the obtained liquid dispersion.</p>
+      <heading id="h-00020-en" level="1">Example 2-3</heading>
+      <p id="p-00141-en" num="0151">A liquid dispersion was prepared according to “(2) Production of the liquid dispersion” of Example 1-3 by adding 30 weight parts of the surface-modified silica fine particles and a commercially available heat seal agent (100 weight parts of a polypropylene-type heat seal agent liquid dispersion) to 200 weight parts of an organic solvent (toluene) with mixing. A sample (packaging material) was prepared proceeding as in Example 1-3, but using the obtained liquid dispersion.</p>
+      <heading id="h-00021-en" level="1">Example 2-4</heading>
+      <p id="p-00142-en" num="0152">A liquid dispersion was prepared according to “(2) Production of the liquid dispersion” of Example 1-4 by adding 30 weight parts of the surface-modified silica fine particles and a commercially available heat seal agent (100 weight parts of a polypropylene-type heat seal agent liquid dispersion) to 200 weight parts of an organic solvent (toluene) with mixing. A sample (packaging material) was prepared proceeding as in Example 1-4, but using the obtained liquid dispersion.</p>
+      <heading id="h-00022-en" level="1">Example 2-5</heading>
+      <p id="p-00143-en" num="0153">A liquid dispersion was prepared according to “(2) Production of the liquid dispersion” of Example 1-5 by adding 30 weight parts of the surface-modified silica fine particles and a commercially available heat seal agent (100 weight parts of a polypropylene-type heat seal agent liquid dispersion) to 200 weight parts of an organic solvent (toluene) with mixing. A sample (packaging material) was prepared proceeding as in Example 1-5, but using the obtained liquid dispersion.</p>
+      <heading id="h-00023-en" level="1">Example 2-6</heading>
+      <p id="p-00144-en" num="0154">A liquid dispersion was prepared according to “(2) Production of the liquid dispersion” of Example 1-6 by adding 30 weight parts of the surface-modified silica fine particles and a commercially available heat seal agent (100 weight parts of a polypropylene-type heat seal agent liquid dispersion) to 200 weight parts of an organic solvent (toluene) with mixing. A sample (packaging material) was prepared proceeding as in Example 1-6, but using the obtained liquid dispersion.</p>
+      <heading id="h-00024-en" level="1">Comparative Example 2-1</heading>
+      <p id="p-00145-en" num="0155">A liquid dispersion was prepared according to “(2) Production of the liquid dispersion” of Comparative Example 1-1 by adding 30 weight parts of the surface-modified silica fine particles and a commercially available heat seal agent (100 weight parts of a polypropylene-type heat seal agent liquid dispersion) to 200 weight parts of an organic solvent (toluene) with mixing. A sample (packaging material) was prepared proceeding as in Comparative Example 1-1, but using the obtained liquid dispersion.</p>
+      <heading id="h-00025-en" level="1">Comparative Example 2-2</heading>
+      <p id="p-00146-en" num="0156">A liquid dispersion was prepared according to “(2) Production of the liquid dispersion” of Comparative Example 1-2 by adding 30 weight parts of the surface-modified silica fine particles and a commercially available heat seal agent (100 weight parts of a polypropylene-type heat seal agent liquid dispersion) to 200 weight parts of an organic solvent (toluene) with mixing. A sample (packaging material) was prepared proceeding as in Comparative Example 1-2, but using the obtained liquid dispersion.</p>
+      <heading id="h-00026-en" level="1">Test Example 1</heading>
+      <heading id="h-00027-en" level="1">Oil Repellency</heading>
+      <p id="p-00147-en" num="0157">The oil repellency (25° C.) was checked for the samples prepared in the examples and comparative examples. Specifically, for each sample the surface that had been treated for water repellency and oil repellency was used as the test surface, and several drops of olive oil were dripped thereon and the status of the drops was observed. The commercial product “AJINOMOTO Olive Oil” (edible olive oil, viscosity=0.9 dPa·s (20° C.), from Ajinomoto Co., Inc.) was used as the olive oil. For the evaluation, a “◯” was assigned when oil repellency was exhibited (rolled in a ball shape), while an “X” was assigned when oil repellency was not seen (did not roll and wetting occurred). These results are given in Tables 1 and 2.</p>
+      <heading id="h-00028-en" level="1">Test Example 2</heading>
+      <heading id="h-00029-en" level="1">Contact Angle</heading>
+      <p id="p-00148-en" num="0158">The contact angle (25° C.) was measured for the samples obtained in the examples and comparative examples. Specifically, for each sample the surface that had been treated for water repellency and oil repellency was used as the test surface, and the contact angles for pure water and olive oil (approximately 2 to 4 μL) were measured using a contact angle meter (the “DropMaster 300” solid-liquid interface analyzer from Kyowa Interface Science Co., Ltd.). For the measurement results, N=5 and the average value of these contact angles is given for the result. The commercial product “AJINOMOTO Olive Oil” (edible olive oil, from Ajinomoto Co., Inc.) was used as the olive oil. The results are given in Tables 1 and 2.</p>
+      <heading id="h-00030-en" level="1">Test Example 3</heading>
+      <heading id="h-00031-en" level="1">Roll Off Angle</heading>
+      <p id="p-00149-en" num="0159">The roll off angle (25° C.) was measured for the samples obtained in the examples and comparative examples. Specifically, for each sample the surface that had been treated for water repellency and oil repellency was used as the test surface; this surface was fixed facing up on a horizontal flat bed using a clip; olive oil was dripped thereon from close range; the horizontal flat bed was tilted; and the angle at which the olive oil began to flow was observed. The commercial product “AJINOMOTO Olive Oil” (edible olive oil, from Ajinomoto Co., Inc.) was used as the olive oil. The results are given in Tables 1 and 2.</p>
+      <heading id="h-00032-en" level="1">Test Example 4</heading>
+      <heading id="h-00033-en" level="1">Wear Resistance</heading>
+      <p id="p-00150-en" num="0160">The durability (wear resistance) was examined for the samples obtained in the examples and comparative examples. The test method here was based on the JIS standard, “JIS L 0849”. Specifically, for each sample the surface that had been treated for with water repellency and oil repellency was used as the test surface; the wear test was performed using a wear tester (Showa Juki Co., Ltd.); and the extent of retention of the oil repellency versus olive oil was then evaluated. The following conditions were used: a dry cloth was fixed at the tip of the friction element and 100 back-and-forth rubbing excursions were run on the test surface under a 2 N load at a rate of 30 back-and-forth excursions per minute. The commercial product “AJINOMOTO Olive Oil” (edible olive oil, from Ajinomoto Co., Inc.) was used as the olive oil. For the evaluation, a “◯” was assigned when the oil repellency was maintained at the same level as in Test Example 1, while an “x” was assigned when a loss of oil repellency occurred. These results are given in Tables 1 and 2.</p>
+      <heading id="h-00034-en" level="1">Test Example 5</heading>
+      <heading id="h-00035-en" level="1">Heat Sealability Test</heading>
+      <p id="p-00151-en" num="0161">The heat sealability was examined for the samples obtained in Examples 2-1 to 2-6 and Comparative Examples 2-1 and 2-2. Specifically, a lid was prepared by cutting a lid shape (90 mm×90 mm square shape) from the particular packaging material sample, and a package was fabricated by heat sealing this lid onto a flanged polypropylene container (molded to provide a flange width of 3.5 mm, a flange outer diameter of 75 mm×inner diameter of 68 mm, a height of approximately 68 mm, and an internal volume of approximately 155 cm<sup>3</sup>). The heat sealing conditions were flat-type sealing for 1.0 second at a temperature of 200° C. and a pressure of 3 kgf/cm<sup>2</sup>. A tab in the lid on the sealed package was pulled at a rate of 100 mm/minute in the direction of a 45° angle of elevation as seen from the starting point for opening, and the maximum load (N) at the beginning of opening was measured. The results are given in Table 2.</p>
+      <p id="p-00152-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="147pt" align="center" />
+              <colspec colname="2" colwidth="252pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>blending ratios in the production of the metal</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="147pt" align="center" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="70pt" align="center" />
+              <colspec colname="4" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>oxide-containing composite particle</entry>
+                  <entry>amount of carbon</entry>
+                  <entry>amount of fluorine</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="133pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>treatment agent</entry>
+                  <entry />
+                  <entry>value yielded</entry>
+                  <entry />
+                  <entry>Value yielded</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>(water-based</entry>
+                  <entry />
+                  <entry>by dividing the</entry>
+                  <entry />
+                  <entry>by dividing the</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="49pt" align="center" />
+              <colspec colname="7" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>metal oxide particles</entry>
+                  <entry>dispersion,</entry>
+                  <entry />
+                  <entry>amount of</entry>
+                  <entry />
+                  <entry>amount of</entry>
+                  <entry>test data results</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="13" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="49pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="49pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="42pt" align="center" />
+              <colspec colname="12" colwidth="28pt" align="center" />
+              <colspec colname="13" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>specific</entry>
+                  <entry />
+                  <entry>20 wt % resin)</entry>
+                  <entry />
+                  <entry>carbon (wt %)</entry>
+                  <entry />
+                  <entry>fluorine (wt %)</entry>
+                  <entry />
+                  <entry>contact</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>example or</entry>
+                  <entry />
+                  <entry>surface</entry>
+                  <entry />
+                  <entry>(polyfluoroalkyl</entry>
+                  <entry />
+                  <entry>by the surface</entry>
+                  <entry />
+                  <entry>by the surface</entry>
+                  <entry>oil</entry>
+                  <entry>angle/°</entry>
+                  <entry>roll</entry>
+                  <entry>wear</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="14" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="49pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="49pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="21pt" align="center" />
+              <colspec colname="12" colwidth="21pt" align="center" />
+              <colspec colname="13" colwidth="28pt" align="center" />
+              <colspec colname="14" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>comparative</entry>
+                  <entry />
+                  <entry>area</entry>
+                  <entry />
+                  <entry>methacrylate</entry>
+                  <entry>(wt</entry>
+                  <entry>area of the</entry>
+                  <entry>(wt</entry>
+                  <entry>area of the</entry>
+                  <entry>repel-</entry>
+                  <entry>pure</entry>
+                  <entry>olive</entry>
+                  <entry>off</entry>
+                  <entry>resis-</entry>
+                </row>
+                <row>
+                  <entry>example</entry>
+                  <entry>AEROSIL ®</entry>
+                  <entry>m<sup>2</sup>/g</entry>
+                  <entry />
+                  <entry>resin)</entry>
+                  <entry>%)</entry>
+                  <entry>starting silica</entry>
+                  <entry>%)</entry>
+                  <entry>starting silica</entry>
+                  <entry>lency</entry>
+                  <entry>water</entry>
+                  <entry>oil</entry>
+                  <entry>angle/°</entry>
+                  <entry>tance</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="14" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="14" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="char" char="." />
+              <colspec colname="7" colwidth="49pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="char" char="." />
+              <colspec colname="9" colwidth="49pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="21pt" align="char" char="." />
+              <colspec colname="12" colwidth="21pt" align="char" char="." />
+              <colspec colname="13" colwidth="28pt" align="center" />
+              <colspec colname="14" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Example 1-1</entry>
+                  <entry>200</entry>
+                  <entry>200</entry>
+                  <entry>100 g</entry>
+                  <entry>500 g</entry>
+                  <entry>20.0</entry>
+                  <entry>0.100</entry>
+                  <entry>7.6</entry>
+                  <entry>0.038</entry>
+                  <entry>◯</entry>
+                  <entry>153.0</entry>
+                  <entry>145.2</entry>
+                  <entry>14</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Example 1-2</entry>
+                  <entry>200</entry>
+                  <entry>200</entry>
+                  <entry>100 g</entry>
+                  <entry>300 g</entry>
+                  <entry>13.8</entry>
+                  <entry>0.069</entry>
+                  <entry>6.6</entry>
+                  <entry>0.033</entry>
+                  <entry>◯</entry>
+                  <entry>151.0</entry>
+                  <entry>143.7</entry>
+                  <entry>16</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Example 1-3</entry>
+                  <entry>200</entry>
+                  <entry>200</entry>
+                  <entry>100 g</entry>
+                  <entry>800 g</entry>
+                  <entry>24.4</entry>
+                  <entry>0.122</entry>
+                  <entry>12.2</entry>
+                  <entry>0.061</entry>
+                  <entry>◯</entry>
+                  <entry>153.2</entry>
+                  <entry>147.4</entry>
+                  <entry>13</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Example 1-4</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>100 g</entry>
+                  <entry> 25 g</entry>
+                  <entry>8.3</entry>
+                  <entry>0.166</entry>
+                  <entry>3.0</entry>
+                  <entry>0.060</entry>
+                  <entry>◯</entry>
+                  <entry>156.5</entry>
+                  <entry>146.6</entry>
+                  <entry>12</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Example 1-5</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>100 g</entry>
+                  <entry>500 g</entry>
+                  <entry>19.3</entry>
+                  <entry>0.386</entry>
+                  <entry>8.7</entry>
+                  <entry>0.174</entry>
+                  <entry>◯</entry>
+                  <entry>148.4</entry>
+                  <entry>140.7</entry>
+                  <entry>13</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Example 1-6</entry>
+                  <entry>300</entry>
+                  <entry>300</entry>
+                  <entry>100 g</entry>
+                  <entry>750 g</entry>
+                  <entry>19.7</entry>
+                  <entry>0.066</entry>
+                  <entry>11.2</entry>
+                  <entry>0.037</entry>
+                  <entry>◯</entry>
+                  <entry>149.0</entry>
+                  <entry>143.7</entry>
+                  <entry>14</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>200</entry>
+                  <entry>200</entry>
+                  <entry>100 g</entry>
+                  <entry> 20 g</entry>
+                  <entry>4.9</entry>
+                  <entry>0.025</entry>
+                  <entry>1.3</entry>
+                  <entry>0.007</entry>
+                  <entry>X</entry>
+                  <entry>78.2</entry>
+                  <entry>22.8</entry>
+                  <entry>31</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Example 1-1</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>200</entry>
+                  <entry>200</entry>
+                  <entry>100 g</entry>
+                  <entry>*100 g</entry>
+                  <entry>5.5</entry>
+                  <entry>0.028</entry>
+                  <entry>4.4</entry>
+                  <entry>0.022</entry>
+                  <entry>X</entry>
+                  <entry>90.4</entry>
+                  <entry>27.8</entry>
+                  <entry>29</entry>
+                  <entry>X</entry>
+                </row>
+                <row>
+                  <entry>Example 1-2</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>trifluoropropyl</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>trimethoxysilane</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>is used</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="14" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00153-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="196pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>amount of carbon</entry>
+                  <entry>amount of fluorine</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="154pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>blending ratios in the production of the</entry>
+                  <entry />
+                  <entry>value yielded</entry>
+                  <entry />
+                  <entry>value yielded</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>liquid dispersion</entry>
+                  <entry />
+                  <entry>by dividing</entry>
+                  <entry />
+                  <entry>by dividing</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="49pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>surface-modified</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>the amount of</entry>
+                  <entry />
+                  <entry>the amount of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silica fine</entry>
+                  <entry>polypropylene-</entry>
+                  <entry />
+                  <entry />
+                  <entry>carbon (wt %)</entry>
+                  <entry />
+                  <entry>fluorine (wt %)</entry>
+                </row>
+                <row>
+                  <entry>example or</entry>
+                  <entry>particles</entry>
+                  <entry>type heat seal</entry>
+                  <entry>toluene</entry>
+                  <entry />
+                  <entry>by the surface</entry>
+                  <entry />
+                  <entry>by the surface</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="49pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>comparative</entry>
+                  <entry>starting</entry>
+                  <entry />
+                  <entry>agent, 18 wt %</entry>
+                  <entry>dilution</entry>
+                  <entry />
+                  <entry>area of the</entry>
+                  <entry />
+                  <entry>area of the</entry>
+                </row>
+                <row>
+                  <entry>example</entry>
+                  <entry>material</entry>
+                  <entry>quantity</entry>
+                  <entry>solids fraction</entry>
+                  <entry>solvent</entry>
+                  <entry>(wt %)</entry>
+                  <entry>starting silica</entry>
+                  <entry>(wt %)</entry>
+                  <entry>starting silica</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Example 2-1</entry>
+                  <entry>AEROSIL 200</entry>
+                  <entry>30 g</entry>
+                  <entry>100 g</entry>
+                  <entry>200 g</entry>
+                  <entry>20.0</entry>
+                  <entry>0.100</entry>
+                  <entry>7.6</entry>
+                  <entry>0.038</entry>
+                </row>
+                <row>
+                  <entry>Example 2-2</entry>
+                  <entry>AEROSIL 200</entry>
+                  <entry>30 g</entry>
+                  <entry>100 g</entry>
+                  <entry>200 g</entry>
+                  <entry>13.8</entry>
+                  <entry>0.069</entry>
+                  <entry>6.6</entry>
+                  <entry>0.033</entry>
+                </row>
+                <row>
+                  <entry>Example 2-3</entry>
+                  <entry>AEROSIL 200</entry>
+                  <entry>30 g</entry>
+                  <entry>100 g</entry>
+                  <entry>200 g</entry>
+                  <entry>24.4</entry>
+                  <entry>0.122</entry>
+                  <entry>12.2</entry>
+                  <entry>0.061</entry>
+                </row>
+                <row>
+                  <entry>Example 2-4</entry>
+                  <entry>AEROSIL 50</entry>
+                  <entry>30 g</entry>
+                  <entry>100 g</entry>
+                  <entry>200 g</entry>
+                  <entry>8.3</entry>
+                  <entry>0.166</entry>
+                  <entry>3.0</entry>
+                  <entry>0.060</entry>
+                </row>
+                <row>
+                  <entry>Example 2-5</entry>
+                  <entry>AEROSIL 50</entry>
+                  <entry>30 g</entry>
+                  <entry>100 g</entry>
+                  <entry>200 g</entry>
+                  <entry>19.3</entry>
+                  <entry>0.386</entry>
+                  <entry>8.7</entry>
+                  <entry>0.174</entry>
+                </row>
+                <row>
+                  <entry>Example 2-6</entry>
+                  <entry>AEROSIL 300</entry>
+                  <entry>30 g</entry>
+                  <entry>100 g</entry>
+                  <entry>200 g</entry>
+                  <entry>19.7</entry>
+                  <entry>0.066</entry>
+                  <entry>11.2</entry>
+                  <entry>0.037</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>AEROSIL 200</entry>
+                  <entry>30 g</entry>
+                  <entry>100 g</entry>
+                  <entry>200 g</entry>
+                  <entry>4.9</entry>
+                  <entry>0.025</entry>
+                  <entry>1.3</entry>
+                  <entry>0.007</entry>
+                </row>
+                <row>
+                  <entry>Example 2-1</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>AEROSIL 200</entry>
+                  <entry>30 g</entry>
+                  <entry>100 g</entry>
+                  <entry>200 g</entry>
+                  <entry>5.5</entry>
+                  <entry>0.028</entry>
+                  <entry>4.4</entry>
+                  <entry>0.022</entry>
+                </row>
+                <row>
+                  <entry>Example 2-2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="175pt" align="left" />
+              <colspec colname="1" colwidth="175pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>test data results</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="133pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>contact</entry>
+                  <entry />
+                  <entry />
+                  <entry>heat</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>example or</entry>
+                  <entry />
+                  <entry>angle/°</entry>
+                  <entry>roll</entry>
+                  <entry />
+                  <entry>sealability,</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="133pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>comparative</entry>
+                  <entry>oil</entry>
+                  <entry>pure</entry>
+                  <entry>olive</entry>
+                  <entry>off</entry>
+                  <entry>wear</entry>
+                  <entry>opening</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>example</entry>
+                  <entry>repellency</entry>
+                  <entry>water</entry>
+                  <entry>oil</entry>
+                  <entry>angle/°</entry>
+                  <entry>resistance</entry>
+                  <entry>strength/N</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 2-1</entry>
+                  <entry>◯</entry>
+                  <entry>147.5</entry>
+                  <entry>140.1</entry>
+                  <entry>19</entry>
+                  <entry>◯</entry>
+                  <entry>15.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 2-2</entry>
+                  <entry>◯</entry>
+                  <entry>145.0</entry>
+                  <entry>139.7</entry>
+                  <entry>21</entry>
+                  <entry>◯</entry>
+                  <entry>16.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 2-3</entry>
+                  <entry>◯</entry>
+                  <entry>146.2</entry>
+                  <entry>139.2</entry>
+                  <entry>17</entry>
+                  <entry>◯</entry>
+                  <entry>15.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 2-4</entry>
+                  <entry>◯</entry>
+                  <entry>148.2</entry>
+                  <entry>143.0</entry>
+                  <entry>17</entry>
+                  <entry>◯</entry>
+                  <entry>15.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 2-5</entry>
+                  <entry>◯</entry>
+                  <entry>142.7</entry>
+                  <entry>138.8</entry>
+                  <entry>22</entry>
+                  <entry>◯</entry>
+                  <entry>16</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 2-6</entry>
+                  <entry>◯</entry>
+                  <entry>146.4</entry>
+                  <entry>138.1</entry>
+                  <entry>18</entry>
+                  <entry>◯</entry>
+                  <entry>16.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>X</entry>
+                  <entry>84.4</entry>
+                  <entry>19.7</entry>
+                  <entry>34</entry>
+                  <entry>◯</entry>
+                  <entry>17.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 2-1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>X</entry>
+                  <entry>90.1</entry>
+                  <entry>22.8</entry>
+                  <entry>32</entry>
+                  <entry>◯</entry>
+                  <entry>17.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 2-2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00154-en" num="0162">As is also clear from these results, the coating films of the examples, which contain metal oxide-containing composite particles (surface-modified silica fine particles) covered at a prescribed coverage amount by a covering layer comprising a polyfluoroalkyl methacrylate resin, can exhibit a better water repellency and a better oil repellency than the comparative examples.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A water- and oil-repellent coating film that is a coating film formed on a surface of a substance in order to impart water repellency and oil repellency, wherein
+<claim-text>(1) the coating film comprises a metal oxide-containing composite particle;</claim-text><claim-text>(2) the composite particle comprises a) a metal oxide particle and b) a covering layer that contains a polyfluoroalkyl methacrylate resin and is formed on the surface of the metal oxide particle; and</claim-text><claim-text>(3) a value yielded by dividing the fluorine content (weight %) of the composite particle by a surface area (m<sup>2</sup>/g) of the metal oxide particle is 0.025 to 0.180.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The water- and oil-repellent coating film according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a value yielded by dividing the carbon content (weight %) of the composite particle by the surface area (m<sup>2</sup>/g) of the metal oxide particle is 0.05 to 0.400.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The water- and oil-repellent coating film according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein an average primary particle diameter of the metal oxide particle is 5 to 50 nm.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The water- and oil-repellent coating film according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the metal oxide particle is at least one selection from silicon oxide particles, aluminum oxide particles, and titanium oxide particles.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The water- and oil-repellent coating film according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the covering layer does not contain a silicon component.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The water- and oil-repellent coating film according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the coating film is porous.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The water- and oil-repellent coating film according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the coating film surface that forms the outermost surface has an uneven surface structure that is formed by the composite particle.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The water- and oil-repellent coating film according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the metal oxide-containing composite particle content in the coating film is 10 to 100 weight %.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The water- and oil-repellent coating film according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the coating film further contains an adhesive component.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A packaging material comprising the water- and oil-repellent coating film according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The packaging material, comprising the water- and oil-repellent coating film according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, a heat seal layer, and a base material layer in the indicated sequence.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The packaging material according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein all or a portion of the water- and oil-repellent coating film present on a region that undergoes heat sealing is embedded in the heat seal layer when heat sealing is performed. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247079A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150247079A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247079A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247079A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247079A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247079A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247079A1_00004.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150247079A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247079A1.PDF" type="pdf" size="1056868" pages="14" />
+</lexisnexis-patent-document>

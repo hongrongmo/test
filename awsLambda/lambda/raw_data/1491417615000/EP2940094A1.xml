@@ -1,0 +1,2727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940094A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091040" date-changed="20151117" time-changed="051015">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939184">
+        <country>EP</country>
+        <doc-number>2940094</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13867003</doc-number>
+        <date>20131204</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012283937</doc-number>
+        <date>20121227</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012283937</doc-number>
+        <kind>A</kind>
+        <date>20121227</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013082559</doc-number>
+        <kind>W</kind>
+        <date>20131204</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012283937</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013082559</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120283937</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP82559</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150511</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151117">
+      <classification-ipcr sequence="1">
+        <text>C09J 179/08        20060101AFI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>179</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C09J   7/00        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C09J  11/04        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>11</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C09J 163/00        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>163</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C09J 193/04        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>193</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>H01L  21/60        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>H05K   1/14        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>H05K   3/32        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151117">
+      <classification-cpc sequence="1">
+        <text>H05K   3/323       20130101 FI20141025BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>323</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141025</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C09J 163/00        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>163</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09J 179/08        20130101 LI20151107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>179</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C09J 193/04        20130101 LI20141025BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>193</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141025</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C09J2479/083       20130101 LA20151106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>2479</main-group>
+        <subgroup>083</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>H01L  21/6836      20130101 LI20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>6836</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>H01L  24/13        20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>24</main-group>
+        <subgroup>13</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>H01L  24/27        20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>24</main-group>
+        <subgroup>27</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>H01L  24/29        20130101 LI20151107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>24</main-group>
+        <subgroup>29</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>H01L  24/32        20130101 LI20151107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>24</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>H01L  24/81        20130101 LI20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>24</main-group>
+        <subgroup>81</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>H01L  24/83        20130101 LI20151107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>24</main-group>
+        <subgroup>83</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>H01L  24/92        20130101 LI20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>24</main-group>
+        <subgroup>92</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>H01L  24/94        20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>24</main-group>
+        <subgroup>94</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>H01L2221/68327     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2221</main-group>
+        <subgroup>68327</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>H01L2224/131       20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>131</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>H01L2224/13144     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>13144</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>H01L2224/13147     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>13147</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>H01L2224/27003     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>27003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="20">
+        <text>H01L2224/27334     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>27334</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="21">
+        <text>H01L2224/27436     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>27436</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="22">
+        <text>H01L2224/2919      20130101 LA20151107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>2919</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="23">
+        <text>H01L2224/2929      20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>2929</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="24">
+        <text>H01L2224/29387     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>29387</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="25">
+        <text>H01L2224/32145     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>32145</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="26">
+        <text>H01L2224/32225     20130101 LA20151107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>32225</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="27">
+        <text>H01L2224/73104     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>73104</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="28">
+        <text>H01L2224/81203     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>81203</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="29">
+        <text>H01L2224/83132     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>83132</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="30">
+        <text>H01L2224/83191     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>83191</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="31">
+        <text>H01L2224/83192     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>83192</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="32">
+        <text>H01L2224/83193     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>83193</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="33">
+        <text>H01L2224/83203     20130101 LA20151107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>83203</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="34">
+        <text>H01L2224/8385      20130101 LA20151106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>8385</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="35">
+        <text>H01L2224/83862     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>83862</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="36">
+        <text>H01L2224/83907     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>83907</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="37">
+        <text>H01L2224/83948     20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>83948</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="38">
+        <text>H01L2224/9211      20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>9211</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="39">
+        <text>H01L2224/94        20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2224</main-group>
+        <subgroup>94</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="40">
+        <text>H01L2924/01008     20130101 LA20151106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2924</main-group>
+        <subgroup>01008</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="41">
+        <text>H01L2924/01014     20130101 LA20151106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2924</main-group>
+        <subgroup>01014</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="42">
+        <text>H01L2924/0665      20130101 LA20151106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2924</main-group>
+        <subgroup>0665</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="43">
+        <text>H01L2924/07025     20130101 LA20151106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2924</main-group>
+        <subgroup>07025</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="44">
+        <text>H01L2924/15787     20130101 LA20150617BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2924</main-group>
+        <subgroup>15787</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150617</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="45">
+        <text>H01L2924/15788     20130101 LA20150617BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2924</main-group>
+        <subgroup>15788</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150617</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="46">
+        <text>H05K   1/0306      20130101 LA20141017BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>0306</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141017</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="47">
+        <text>H05K2201/10106     20130101 LA20141017BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>05</class>
+        <subclass>K</subclass>
+        <main-group>2201</main-group>
+        <subgroup>10106</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141017</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C09J 193/04        20130101 LI20140728BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>09</class>
+            <subclass>J</subclass>
+            <main-group>193</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140728</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  63/00        20130101 LI20140728BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>63</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140728</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08L  79/08        20130101 LI20140728BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>79</main-group>
+            <subgroup>08</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140728</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C09J 193/04        20130101 LI20140728BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>09</class>
+            <subclass>J</subclass>
+            <main-group>193</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140728</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08K   3/0033      20130101 LI20140728BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>3</main-group>
+            <subgroup>0033</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140728</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08L  63/00        20130101 LI20140728BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>63</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140728</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>4</rank-number>
+          <classification-cpc>
+            <text>C08L  79/08        20130101 LI20140728BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>79</main-group>
+            <subgroup>08</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140728</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>3</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2224/2919      20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>2919</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2924/0665      20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>0665</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>4</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2224/2919      20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>2919</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2924/07025     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>07025</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>5</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2224/29387     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>29387</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2924/05432     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>05432</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>6</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2224/29387     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>29387</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2924/05442     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>05442</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>7</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2224/13147     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>13147</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2924/00014     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>00014</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>8</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2224/13144     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>13144</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2924/00014     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>00014</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>9</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2224/131       20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>131</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2924/014       20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>014</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>10</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2224/94        20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>94</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2224/27        20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>27</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>11</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2224/27003     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>27003</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2924/00014     20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>00014</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>12</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2224/9211      20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>9211</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2224/81        20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>81</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>H01L2224/83        20130101 LA20150226BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2224</main-group>
+            <subgroup>83</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150226</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>13</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2924/15787     20130101 LA20150617BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>15787</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150617</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2924/00        20130101 LA20150617BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150617</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>14</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>H01L2924/15788     20130101 LA20150617BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>15788</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150617</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>H01L2924/00        20130101 LA20150617BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>H</section>
+            <class>01</class>
+            <subclass>L</subclass>
+            <main-group>2924</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150617</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>15</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C09J 179/08        20130101 LI20151110BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>09</class>
+            <subclass>J</subclass>
+            <main-group>179</main-group>
+            <subgroup>08</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151110</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  63/00        20130101 LI20151110BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>63</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151110</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08L  93/04        20130101 LI20151110BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>93</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151110</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>16</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C09J 179/08        20130101 LI20151110BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>09</class>
+            <subclass>J</subclass>
+            <main-group>179</main-group>
+            <subgroup>08</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151110</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08K   3/0033      20130101 LI20151110BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>3</main-group>
+            <subgroup>0033</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151110</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08L  63/00        20130101 LI20151110BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>63</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151110</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>4</rank-number>
+          <classification-cpc>
+            <text>C08L  93/04        20130101 LI20151110BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>93</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151110</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">8</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">KLEBEMITTEL, KLEBEFOLIE UND HALBLEITERBAUELEMENT SOWIE VERFAHREN ZUR HERSTELLUNG DAVON</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">ADHESIVE AGENT, ADHESIVE FILM, AND SEMICONDUCTOR DEVICE AND METHOD FOR MANUFACTURING SAME</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">ADHÉSIF, FILM ADHÉSIF, DISPOSITIF À SEMI-CONDUCTEURS, ET PROCÉDÉ DE FABRICATION DE CELUI-CI</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Toray Industries, Inc.</orgname>
+            <registered-number>101022419</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>1-1, Nihonbashi-Muromachi 2-chome Chuo-ku</address-1>
+              <city>Tokyo 103-8666</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>FUJIMARU, Koichi</name>
+            <address>
+              <address-1>c/o Shiga Plant Toray Industries Inc. 1-1 Sonoyama 1-chome</address-1>
+              <city>Otsu-shi Shiga 520-8558</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>NONAKA, Toshihisa</name>
+            <address>
+              <address-1>c/o Shiga Plant Toray Industries Inc. 1-1 Sonoyama 1-chome</address-1>
+              <city>Otsu-shi Shiga 520-8558</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Hoefer &amp; Partner Patentanwälte mbB</name>
+            <registered-number>101307873</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Pilgersheimer Straße 20</address-1>
+              <city>81543 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13082559</doc-number>
+        <date>20131204</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014103637</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151105">
+      <main-family family-id="166470387">
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201430087</doc-number>
+            <kind>A</kind>
+            <date>20140801</date>
+          </document-id>
+          <application-date>
+            <date>20131217</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103637</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104870595</doc-number>
+            <kind>A</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940094</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150100727</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>SG</country>
+            <doc-number>11201505053X</doc-number>
+            <kind>A</kind>
+            <date>20150730</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150315436</doc-number>
+            <kind>A1</kind>
+            <date>20151105</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166470386">
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201430087</doc-number>
+            <kind>A</kind>
+            <date>20140801</date>
+          </document-id>
+          <application-date>
+            <date>20131217</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103637</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104870595</doc-number>
+            <kind>A</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940094</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150100727</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>SG</country>
+            <doc-number>11201505053X</doc-number>
+            <kind>A</kind>
+            <date>20150730</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150315436</doc-number>
+            <kind>A1</kind>
+            <date>20151105</date>
+          </document-id>
+          <application-date>
+            <date>20131204</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to an adhesive agent which can be used in the mounting of a semiconductor chip on a circuit board or the like. The present invention addresses the problem of providing an adhesive agent having both excellent storage stability and excellent connection reliability. A means for solving the problem is an adhesive agent comprising (a)a polyamide, (b) an epoxy compound and (c) an acid-modified rosin.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">TECHNICAL FIELD</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to an adhesive agent which is used in bonding or direct electrical connection of a semiconductor chip such as LSI, LED or laser diode to a circuit board such as a flexible substrate, a glass epoxy substrate, a glass substrate, a ceramic substrate or a silicon interposer, or in bonding or lamination between semiconductor chips.</p>
+    <heading id="h-00002-en">BACKGROUND ART</heading>
+    <p id="p-00002-en" num="0002">In recent years, flip chip assembly has received attention and has been rapidly spreading as a technique for mounting a semiconductor chip on a circuit board associated with downsizing and density growth of semiconductor devices. In flip chip assembly, an epoxy resin-based adhesive agent is generally interposed between a semiconductor chip and a circuit board to ensure the connection reliability of joints between bump electrodes formed on the semiconductor chip and pad electrodes of the circuit board. Particularly, adhesive agents containing a polyimide resin, an epoxy resin, and inorganic particles are being frequently used for various applications such as electrical and electronic applications, architecture, automobiles, and airplanes by virtue of the heat resistance and insulation properties of the polyimide resin, the adhesiveness and water resistance of the epoxy resin, and the low water absorbency and low thermal expansibility of the inorganic particles (for example, Patent Documents 1 to 3).</p>
+    <p id="p-00003-en" num="0003">Further, when metal electrodes of the semiconductor chip and the circuit board are solder welded, a flux material is used. A main function of the flux material is to make a solder joint clean, to prevent oxidation of a metal, and to enhance solder wettability. As the flux material, rosin-based materials are known (e.g., Patent Documents 4 and 5).</p>
+    <heading id="h-00003-en">PRIOR ART DOCUMENTS</heading>
+    <heading id="h-00004-en">PATENT DOCUMENTS</heading>
+    <p id="p-00004-en" num="0004">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>Patent Document 1: Japanese Patent Laid-open Publication No. <patcit id="pcit-00001" dnum="JP2004319823A"><text>2004-319823</text></patcit></li>
+        <li>Patent Document 2: <patcit id="pcit-00002" dnum="JP3995022B"><text>JP 3995022 B1</text></patcit></li>
+        <li>Patent Document 3: Japanese Patent Laid-open Publication No. <patcit id="pcit-00003" dnum="JP2009277818A"><text>2009-277818</text></patcit></li>
+        <li>Patent Document 4: Japanese Patent Laid-open Publication No. <patcit id="pcit-00004" dnum="JP2001219294A"><text>2001-219294</text></patcit></li>
+        <li>Patent Document 5: Japanese Patent Laid-open Publication No.<patcit id="pcit-00005" dnum="JP2005059028A"><text>2005-059028</text></patcit></li>
+      </ul>
+    </p>
+    <heading id="h-00005-en">SUMMARY OF THE INVENTION</heading>
+    <heading id="h-00006-en">PROBLEMS TO BE SOLVED BY THE INVENTION</heading>
+    <p id="p-00005-en" num="0005">In the case of a conventional adhesive agent, in flip chip assembly, a hardening reaction proceeds gradually due to heating for removing a water content by moisture absorption or heating in a semiconductor chip assembly process, and therefore there is a case where unstable electrical connection is caused because bump electrodes of a semiconductor chip are less likely to penetrate the adhesive agent or there is a case where connection reliability is poor because air bubbles are trapped in the adhesive agent. Further, there is a case where the adhesive agent is fluidized due to the aforementioned heating and becomes irregular in its thickness to cause poor connection reliability. Moreover, a semiconductor device produced using such a conventional adhesive agent also has a problem in that it may be difficult to maintain sufficient connection reliability when the semiconductor device is subjected to a process where higher durability is required such as a moisture absorption-reflow process or a thermal cycle process.</p>
+    <p id="p-00006-en" num="0006">In order to solve these problems, it is an object of the present invention to provide an adhesive agent which has excellent storage life in heating conditions of a heat-drying process and an assembly process.</p>
+    <heading id="h-00007-en">SOLUTIONS TO THE PROBLEMS</heading>
+    <p id="p-00007-en" num="0007">The present invention pertains to an adhesive agent comprising a polyimide (a), an epoxy compound (b), and an acid-modified rosin (c).</p>
+    <heading id="h-00008-en">EFFECTS OF THE INVENTION</heading>
+    <p id="p-00008-en" num="0008">According to the present invention, an adhesive agent is provided which has excellent stability against heating treatment during a heat-drying process and an assembly process.</p>
+    <heading id="h-00009-en">EMBODIMENTS OF THE INVENTION</heading>
+    <p id="p-00009-en" num="0009">The adhesive agent of the present invention is an adhesive agent comprising a polyimide (a), an epoxy compound (b), and an acid-modified rosin (c).</p>
+    <p id="p-00010-en" num="0010">The adhesive agent of the present invention contains the polyimide (a), and is therefore excellent in heat resistance and chemical resistance. Particularly, a hardened article having a higher-density network structure can be obtained by using a polyimide having, in its side chain, at least one highly polar functional group selected from the group consisting of a phenolic hydroxyl group, a sulfonic acid group, and a thiol group since the solubility in an organic solvent and the compatibility with an epoxy resin of polyimide are improved and a ring-opening reaction of the epoxy compound and an addition reaction to another organic-solvent-soluble polyimide are accelerated during heat treatment. A method for synthesizing such a polyimide is not limited to the following examples, and an example thereof is a method in which a diamine having a highly polar functional group such as a phenolic hydroxyl group, a sulfonic acid group, and a thiol group is first reacted with an acid dianhydride to synthesize a polyimide precursor, and then the polyimide precursor is subjected to end modification using a primary monoamine as a terminal blocking agent, and is then subjected to heat treatment at 150°C or higher to perform polyimide cyclization. Alternatively, the following method may be used. An acid dianhydride is reacted with a primary monoamine as a terminal blocking agent in advance, and then a diamine having a functional group is added to synthesize an end-modified polyimide precursor, and the polyimide precursor is subjected to heat treatment at a high temperature of 150°C or higher to perform polyimide cyclization.</p>
+    <p id="p-00011-en" num="0011">It is to be noted that the polyimide (a) used in the present invention is desirably an organic-solvent-soluble polyimide which is dissolved in at least one solvent selected from the following solvents in an amount of 20 mass% or more at 23°C since the coating properties of the resulting adhesive agent varnish are enhanced. Examples of the solvents include ketone-based solvents such as acetone, methyl ethyl ketone, methyl isobutyl ketone, cyclopentanone, and cyclohexanone; ether-based solvents such as 1,4-dioxane, tetrahydrofuran, and diglyme; glycol ether-based solvents such as methyl cellosolve, ethyl cellosolve, propylene glycol monomethyl ether, propylene glycol monoethyl ether, propylene glycol monobutyl ether, and diethylene glycol methyl ethyl ether; and other solvents such as benzyl alcohol, N-methylpyrrolidone, γ-butyrolactone, ethyl acetate, and N,N-dimethylformamide.</p>
+    <p id="p-00012-en" num="0012">A preferred example of the polyimide (a) is a polymer having a structure represented by a general formula (2) or a general formula (3) and containing a structure represented by a general formula (1) in an amount of 5 to 15% by mass with respect to the total amount of the polymer as R<sup>4</sup> in the general formula (2) or the general formula (3). By setting the content of a structure represented by the general formula (1) contained in the polymer to 5% by mass or more, it is possible to impart solubility in an organic solvent and appropriate flexibility to a polyimide. By setting the content to 15% by mass or less, it is possible to maintain the rigidity of a polyimide and secure heat resistance and insulation properties.</p>
+    <p id="p-00013-en" num="0013">It is to be noted that the total amount of the polymer (polyimide) obtained by synthesis of the polyimide refers to the weight of a polymer obtained by polymerization using a diamine, an acid dianhydride, and a terminal blocking agent as its constituents. The total amount of the polyimide does not include the weights of an excess of the diamine, an excess of the acid dianhydride, and an excess of the terminal blocking agent which have been fed during synthesis but not polymerized to a polymer. <chemistry id="chem-00001-en" num="0001"><img id="img-00001-en" wi="103" he="38" img-content="chem" file="EP2940094A1_00001.PNG" img-format="png" original="imgb0001.tif" /></chemistry></p>
+    <p id="p-00014-en" num="0014">In the above formula, R<sup>1</sup>s represent a divalent hydrocarbon group, and may be the same or different in one molecule and may be the same or different in different molecules. In the above formula, R<sup>2</sup>s represent a monovalent hydrocarbon group, and may be the same or different in one molecule and may be the same or different in different molecules. n is an integer of 1 to 10.</p>
+    <p id="p-00015-en" num="0015">R<sup>1</sup> is preferably an alkylene group or a phenylene group having 1 to 5 carbon atoms. R<sup>2</sup> is preferably an alkyl group or a phenyl group having 1 to 5 carbon atoms. Further, n is preferably 1 to 2. By setting n to 1 or more, it is possible to suppress the shrinkage of the adhesive agent during hardening. By setting n to 10 or less, it is possible to improve the insulation properties and heat resistance of the adhesive agent without reducing the imide group content of the polyimide skeleton. <chemistry id="chem-00002-en" num="0002"><img id="img-00002-en" wi="140" he="86" img-content="chem" file="EP2940094A1_00002.PNG" img-format="png" original="imgb0002.tif" /></chemistry></p>
+    <p id="p-00016-en" num="0016">In the above formula, R<sup>3</sup>s are a 4- to 14-valent organic group, and may be the same or different in one molecule and may be the same or different in different molecules. R<sup>4</sup>s are a 2-to 12-valent organic group, and may be the same or different in one molecule and may be the same or different in different molecules. At least one of R<sup>3</sup> and R<sup>4</sup> is an aromatic group containing at least one of one or more groups selected from the group consisting of a 1,1,1,3,3,3-hexafluoropropyl group, an isopropyl group, an ether group, a thioether group, and a SO<sub>2</sub> group. R<sup>5</sup>s and R<sup>6</sup>s represent one or more groups selected from the group consisting of a phenolic hydroxyl group, a sulfonic acid group, and a thiol group, and may be the same or different in one molecule and may be the same or different in different molecules. X represents a monovalent organic group. m is an integer of 8 to 200. α and β each represent an integer of 0 to 10 and α + β is within the range of 0 to 10. However, in a repeating unit in the formula, α + β is 1 to 10 in 20 to 90 mol% of repeating units whose number is denoted by m.</p>
+    <p id="p-00017-en" num="0017">In addition, hereinafter, the group selected from the group consisting of a 1,1,1,3,3,3-hexafluoropropyl group, an isopropyl group, an ether group, a thioether group, and a SO<sub>2</sub> group is referred to as "specific group".</p>
+    <p id="p-00018-en" num="0018">In the general formulas (2) and (3), R<sup>3</sup> represents a structural component of an acid dianhydride and is preferably a 4- to 14-valent organic group having 5 to 40 carbon atoms, R<sup>4</sup> represents a structural component of a diamine and is preferably a 2- to 12-valent organic group having 5 to 40 carbon atoms, and each of R<sup>3</sup> and R<sup>4</sup> preferably contains at least one of the specific groups.</p>
+    <p id="p-00019-en" num="0019">R<sup>5</sup> is a substituent of R<sup>3</sup>, and is selected from the group consisting of a phenolic hydroxyl group, a sulfonic acid group, and a thiol group. R<sup>5</sup> is derived from a substituent of the acid dianhydride serving as a raw material. R<sup>6</sup> is a substituent of R<sup>4</sup>, and is selected from the group consisting of a phenolic hydroxyl group, a sulfonic acid group, and a thiol group. R<sup>6</sup> is derived from a substituent of the diamine serving as a raw material.</p>
+    <p id="p-00020-en" num="0020">An acid dianhydride to be used will be described. Specific examples of the acid dianhydride having at least one of the specific groups include 2,2-bis(3,4-dicarboxyphenyl)propane dianhydride, 2,2-bis(2,3-dicarboxyphenyl)propane dianhydride, bis(3,4-dicarboxyphenyl)sulfonic dianhydride, bis(3,4-dicarboxyphenyl)ether dianhydride, 2,2-bis(3,4-dicarboxyphenyl)hexafluoropropane dianhydride, and compounds obtained by substituting hydrogen atoms on the aromatic rings of the above-mentioned compounds with alkyl groups or halogen atoms.</p>
+    <p id="p-00021-en" num="0021">A specific example of the acid dianhydride having at least one of the specific groups and at least one group selected from the group consisting of a phenolic hydroxyl group, a sulfonic acid group, and a thiol group is an aromatic acid dianhydride having the following structure: <chemistry id="chem-00003-en" num="0003"><img id="img-00003-en" wi="96" he="44" img-content="chem" file="EP2940094A1_00003.PNG" img-format="png" original="imgb0003.tif" /></chemistry></p>
+    <p id="p-00022-en" num="0022">wherein R<sup>9</sup> represents C(CF<sub>3</sub>)<sub>2</sub>, C(CH<sub>3</sub>)<sub>2</sub>, SO<sub>2</sub>, S or O, and R<sup>10</sup> and R<sup>11</sup> are each a hydrogen atom, a hydroxyl group, a thiol group, or a sulfonic acid group, provided that R<sup>10</sup> and R<sup>11</sup> are not hydrogen atom at the same time.</p>
+    <p id="p-00023-en" num="0023">A specific example of the acid dianhydride having no specific group but having at least one group selected from the group consisting of a phenolic hydroxyl group, a sulfonic acid group, and a thiol group is an aromatic acid dianhydride having the following structure: <chemistry id="chem-00004-en" num="0004"><img id="img-00004-en" wi="111" he="48" img-content="chem" file="EP2940094A1_00004.PNG" img-format="png" original="imgb0004.tif" /></chemistry></p>
+    <p id="p-00024-en" num="0024">wherein R<sup>7</sup> and R<sup>8</sup> are each a hydrogen atom, a hydroxyl group, a thiol group, or a sulfonic acid group, provided that R<sup>7</sup> and R<sup>8</sup> are not hydrogen atom at the same time.</p>
+    <p id="p-00025-en" num="0025">Specific examples of the acid dianhydride having neither a specific group nor a group selected from among a phenolic hydroxyl group, a sulfonic acid group, and a thiol group include aromatic tetracarboxylic dianhydrides such as pyromellitic dianhydride, 3,3',4,4'-biphenyltetracarboxylic dianhydride, 2,3,3',4'-biphenyltetracarboxylic dianhydride, 2,2',3,3'-biphenyltetracarboxylic dianhydride, 3,3',4,4'-benzophenonetetracarboxylic dianhydride, 2,2',3,3'-benzophenonetetracarboxylic dianhydride, 1,1-bis(3,4-dicarboxyphenyl)ethane dianhydride, 1,1-bis(2,3-dicarboxyphenyl)ethane dianhydride, bis(3,4-dicarboxyphenyl)methane dianhydride, bis(2,3-dicarboxyphenyl)methane dianhydride, 1,2,5,6-naphthalenetetracarboxylic dianhydride, 2,3,6,7-naphthalenetetracarboxylic dianhydride, 2,3,5,6-pyridinetetracarboxylic dianhydride, and 3,4,9,10-perylenetetracarboxylic dianhydride, and compounds obtained by substituting hydrogen atoms on the aromatic rings of the above-mentioned compounds with alkyl groups or halogen atoms.</p>
+    <p id="p-00026-en" num="0026">In the present invention, these acid dianhydrides may be used singly or in combination of two or more thereof.</p>
+    <p id="p-00027-en" num="0027">Next, a diamine will be described. Specific examples of the diamine having at least one of the specific groups include 3,4'-diaminodiphenyl sulfide, 4,4'-diaminodiphenyl sulfide, 3,4'-diaminodiphenyl ether, 4,4'-diaminodiphenyl ether, 3,4'-diaminodiphenyl sulfone, 4,4'-diaminodiphenyl sulfone, bis(4-aminophenoxyphenyl)sulfone, bis(3-aminophenoxyphenyl)sulfone, bis(4-aminophenoxy)biphenyl, bis{4-(4-aminophenoxy)phenyl}ether, 1,4-bis(4-aminophenoxy)benzene, 1,3-bis(4-aminophenoxy)benzene, 2,2-bis[4-(4-aminophenoxy)phenyl]hexafluoropropane, and 2,2-bis[4-(4-aminophenoxy)phenyl]propane, and compounds obtained by substituting hydrogen atoms on the aromatic rings of the above-mentioned compounds with alkyl groups or halogen atoms.</p>
+    <p id="p-00028-en" num="0028">Specific examples of the diamine having at least one of the specific groups and at least one group selected from the group consisting of a phenolic hydroxyl group, a sulfonic acid group, and a thiol group include: <ul id="ul-00002-en" list-style="none" compact="compact"><li>2,2-bis(3-amino-4-hydroxyphenyl)hexafluoropropane,</li><li>2,2-bis(3-hydroxy-4-aminophenyl)hexafluoropropane,</li><li>2,2-bis(3-amino-4-hydroxyphenyl)propane,</li><li>2,2-bis(3-hydroxy-4-aminophenyl)propane,</li><li>3,3'-diamino-4,4'-dihydroxydiphenyl ether,</li><li>3,3'-diamino-4,4'-dihydroxydiphenylsulfone,<br /> 3,3'-diamino-4,4'-dihydroxydiphenylsulfide, compounds obtained by substituting hydrogen atoms on the aromatic rings of the above-mentioned compounds with alkyl groups or halogen atoms, and diamines having the following structures:</li></ul><chemistry id="chem-00005-en" num="0005"><img id="img-00005-en" wi="148" he="37" img-content="chem" file="EP2940094A1_00005.PNG" img-format="png" original="imgb0005.tif" /></chemistry></p>
+    <p id="p-00029-en" num="0029">wherein R<sup>16</sup> represents C(CF<sub>3</sub>)<sub>2</sub>, C(CH<sub>3</sub>)<sub>2</sub>, SO<sub>2</sub>, S or O, R<sup>17</sup> and R<sup>18</sup> are each a hydrogen atom, a hydroxyl group, a thiol group, or a sulfonic acid group, provided that R<sup>17</sup> and R<sup>18</sup> are not hydrogen atom at the same time.</p>
+    <p id="p-00030-en" num="0030">Specific examples of the diamine having no specific group but having at least one group selected from the group consisting of a phenolic hydroxyl group, a sulfonic acid group, and a thiol group include 3,3'-diamino-4,4'-dihydroxybiphenyl, 2,4-diamino-phenol, 2,5-diaminophenol, 1,4-diamino-2,5-dihydroxybenzene, diaminodihydroxypyrimidine, diaminodihydroxypyridine, hydroxydiaminopyrimidine, 9,9-bis(3-amino-4-hydroxyphenyl)fluorene, compounds obtained by substituting hydrogen atoms on the aromatic rings of the above-mentioned compounds with alkyl groups or halogen atoms, and diamines having the following structures: <chemistry id="chem-00006-en" num="0006"><img id="img-00006-en" wi="137" he="68" img-content="chem" file="EP2940094A1_00006.PNG" img-format="png" original="imgb0006.tif" /></chemistry></p>
+    <p id="p-00031-en" num="0031">wherein R<sup>12</sup> to R<sup>15</sup> are each a hydrogen atom, a hydroxyl group, a thiol group, or a sulfonic acid group, provided that R<sup>12</sup> and R<sup>13</sup> are not hydrogen atom at the same time.</p>
+    <p id="p-00032-en" num="0032">Specific examples of the diamine having neither a specific group nor a group selected from among a phenolic hydroxyl group, a sulfonic acid group, and a thiol group include 3,4'-diaminodiphenylmethane, 4,4'-diaminodiphenylmethane, benzidine, m-phenylenediamine, p-phenylenediamine, 1,5-naphthalenediamine, 2,6-naphthalenediamine, 2,2'-dimethyl-4,4'-diaminobiphenyl, 2,2'-diethyl-4,4'-diaminobiphenyl, 3,3'-dimethyl-4,4'-diaminobiphenyl, 3,3'-diethyl-4,4'-diaminobiphenyl, 2,2'3,3'-tetramethyl-4,4'-diaminobiphenyl, 3,3',4,4'-tetramethyl-4,4'-diaminobiphenyl, 2,2'-di(trifluoromethyl)-4,4'-diaminobiphenyl, compounds obtained by substituting hydrogen atoms on the aromatic rings of the above-mentioned compounds with alkyl groups or halogen atoms, terephthalic hydrazide, isophthalic hydrazide, phthalic hydrazide, 2,6-naphthalenedicarboxylic dihydrazide, 4,4'-bisphenyl dicarbonohydrazine, 4,4'-cyclohexane dicarbonohydrazine, and hydrazide compounds obtained by substituting hydrogen atoms on the aromatic rings of the above-mentioned compounds with alkyl groups or halogen atoms. These diamines may be used singly or in combination of two or more thereof.</p>
+    <p id="p-00033-en" num="0033">Further, a structure represented by the general formula (1) is included as R<sup>4</sup> in the general formulas (2) and (3), and is therefore a constituent of a diamine. Examples of the diamine containing a structure represented by the general formula (1) include bis(3-aminopropyl)tetramethyldisiloxane, bis(p-amino-phenyl)octamethylpentasiloxane and the like.</p>
+    <p id="p-00034-en" num="0034">The rate of the reaction between the polyimide and the epoxy compound during heat treatment of the adhesive agent can be controlled by selecting R<sup>5</sup> and R<sup>6</sup> in the general formulas (2) and (3), and thereby, the cross-linking density of a hardened article of the adhesive agent can be adjusted. This makes it possible to impart necessary heat resistance and chemical resistance to the hardened article of the adhesive agent. α and P each represent an integer of 0 to 10 and α + β is within the range of 0 to 10. However, in a repeating unit in the formula, α + β is 1 to 10 in 20 to 90 mol% of repeating units whose number is denoted by m. Further, 20 to 90 mol% of the total of R<sup>5</sup>s and R<sup>6</sup>s are preferably groups selected from the group consisting of phenolic hydroxyl groups, sulfonic acid groups, and thiol groups. By setting the ratio of these groups to the total of R<sup>5</sup>s and R<sup>6</sup>s to 20 mol% or more, it is possible to improve the solubility of the adhesive agent before hardening in an organic solvent, and the chemical resistance and heat resistance of the hardened article of the adhesive agent, and by setting the ratio to 90 mol% or less, it is possible to suppress the cross-linking density of the hardened article of the adhesive agent within an appropriate range to maintain the elongation and toughness of an adhesive agent film after hardening.</p>
+    <p id="p-00035-en" num="0035">In the general formulas (2) and (3), X represents a monovalent organic group and is a residue of a primary monoamine which is a terminal blocking agent. Herein, examples of the primary monoamine include an aliphatic monoamine, an alicyclic monoamine, and an aromatic monoamine. Among them, an aromatic monoamine is preferred in point of enhancing heat resistance of the polyimide. These monoamines may be used singly or in a combination of two or more thereof. Specific examples of the primary monoamine include 5-aminoquinoline, 4-aminoquinoline, 3-aminonaphthalene, 2-aminonaphthalene, 1-aminonaphthalene, and aniline. Among them, aniline is preferably used.</p>
+    <p id="p-00036-en" num="0036">As the primary monoamine, one not having another substituent which reacts with the epoxy compound is preferably used. This makes it possible to obtain an organic-solvent-soluble polyimide not having a substituent, which reacts with the epoxy compound, at the end of the polyimide having high molecular mobility. The use of such an organic-solvent-soluble polyimide makes it possible to suppress the progress of the reaction between the organic-solvent-soluble polyimide and the epoxy compound at room temperature to enhance the storage life of the adhesive agent.</p>
+    <p id="p-00037-en" num="0037">The ratio of the X component shown in the general formulas (2) and (3) to be introduced is preferably 0.1 to 60 mol, and particularly preferably 5 to 50 mol with respect to 100 mol of the total diamine residue contained in the polyimide on the primary monoamine equivalent basis, the primary monoamine being an X's original component and the terminal blocking agent.</p>
+    <p id="p-00038-en" num="0038">In the general formulas (2) and (3), m represents the repeating number of the polymer, and is an integer of 8 or more and 200 or less. m is preferably an integer of 10 to 150. With respect to a molecular weight, the polystyrene equivalent weight average molecular weight of the polyimide as measured by gel filtration chromatography is preferably 4, 000 to 80, 000, particularly preferably 8,000 to 60,000. By setting m to 8 or more, it is possible to increase the viscosity of the resulting adhesive agent varnish to enable a thick coating, and by setting m to 200 or less, it is possible to improve the solubility of the polyimide in a solvent. Here, a measurement method of the weight average molecular weight of the polyimide will be exemplified below. A polyimide solution having a solid concentration of 0.1% by mass is prepared by dissolving the polyimide in N-methylpyrrolidone (NMP), and the polystyrene equivalent weight average molecular weight is calculated using the polyimide solution and a GPC apparatus Waters 2690 (manufactured by Waters Corporation). GPC measurement is performed using NMP containing 0.05 mol/L of LiCl and 0.05 mol/L of phosphoric acid dissolved therein as a mobile phase at a developing speed of 0.4 mL/min. A GPC measurement system used includes, for example, the following.<br /> Detector: Waters 996<br /> System controller: Waters 2690<br /> Column oven: Waters HTR-B<br /> Thermo controller: Waters TCM<br /> Columns: TOSOH guard column<br /> Columns: TOSOH TSK-GEL α-4000<br /> Columns: TOSOH TSK-GEL α-2500</p>
+    <p id="p-00039-en" num="0039">The polyimide (a) to be used for the present invention may be a polyimide composed of only structures represented by the general formulas (2) and (3), a copolymer having another structure as a copolymerization component in addition to structures represented by the general formulas (2) and (3), or a mixture thereof. Further, a polyimide having another structure may be additionally mixed in addition to these polyimides. In this case, the polyimide having structures represented by the general formulas (2) and (3) is preferably contained in an amount of 50 mol% or more with respect to the total polyimide. The type and amount of the structure used for copolymerization or mixing are preferably selected to an extent not impairing the heat resistance of a heat resistant resin obtained by heat treatment.</p>
+    <p id="p-00040-en" num="0040">The polyimide (a) is synthesized by a publicly known method by substituting part of a diamine with a terminal blocking agent which is a monoamine or by substituting part of an acid dianhydride with a terminal blocking agent which is a monocarboxylic acid, an acid anhydride, a monoacid chloride compound, or a monoactive ester compound. For example, a polyimide precursor is obtained by a method in which a tetracarboxylic dianhydride is reacted with a diamine compound (part of which is substituted with a terminal blocking agent that is a monoamine) at a low temperature, a method in which a tetracarboxylic dianhydride (part of which is substituted with a terminal blocking agent that is an acid anhydride, a monoacid chloride compound, or a monoactive ester compound) is reacted with a diamine compound at a low temperature, a method in which a diester is obtained by the reaction between a tetracarboxylic dianhydride and an alcohol and is then reacted with a diamine (part of which is substituted with a terminal blocking agent that is a monoamine) in the presence of a condensing agent, or a method in which a diester is obtained by the reaction between a tetracarboxylic dianhydride and an alcohol and then the residual dicarboxylic acid is acid-chlorinated and reacted with a diamine (part of which is substituted with a terminal blocking agent that is a monoamine) . Subsequently, the polyimide precursor is subjected to imide ring closure by a publicly known method and thereby, a polyimide can be synthesized.</p>
+    <p id="p-00041-en" num="0041">A structure represented by the general formula (1) introduced into the polymer and a structure derived from a terminal blocking agent can be easily detected and quantitatively analyzed in the following manner. For example, a polymer into which a structure represented by the general formula (1) and a terminal blocking agent have been introduced is dissolved in an acidic solution or a basic solution to decompose it into a diamine component and an acid anhydride component which are constituent units of the polymer, and the resulting decomposed product was measured by using gas chromatography (GC) or NMR, and thereby, the structure represented by the general formula (1) and the terminal blocking agent used can be easily detected and quantitatively analyzed. Alternatively, also when a polyimide into which a terminal blocking agent has been introduced is directly subjected to pyrolysis gas chromatography (PGC) or infrared spectral measurement and <sup>13</sup>CNMR spectral measurement, the structure represented by the general formula (1) and the terminal blocking agent used can be easily detected and quantitatively analyzed.</p>
+    <p id="p-00042-en" num="0042">The content of the polyimide (a) in the adhesive agent is preferably 15 to 90 parts by mass with respect to 100 parts by mass of the epoxy compound (b), and is more preferably 30 to 70 parts by mass from the viewpoint of the reaction with the epoxy compound to form a high-density network structure. When the content of the polyimide (a) is 15 parts by mass or more, heat resistance is more improved. On the other hand, when the content of the polyimide (a) is 90 parts by mass or less, the adhesive agent becomes lower in water absorption, and therefore foaming in hardening the adhesive agent by heating can be more suppressed, and for example, a reduction of the adhesive force between a circuit board and a semiconductor chip is more reduced, and connection reliability is more improved.</p>
+    <p id="p-00043-en" num="0043">The adhesive agent of the present invention contains the epoxy compound (b). The epoxy compound (b) reacts with a phenolic hydroxyl group, a sulfonic acid group, or a thiol group in the acid-modified rosin (c) or the polyimide side chain to form a hardened article having a high-density network structure, and therefore the resulting hardened adhesive agent exhibits resistance to various chemicals. Thereby, the resistance of the adhesive agent to various solvents, especially to N-methylpyrrolidone can be increased. Further, since the epoxy compound is generally hardened by a ring-opening reaction accompanied by no shrinkage, it becomes possible to reduce the shrinkage of the adhesive agent during hardening. As the epoxy compound (b), an epoxy compound having two or more epoxy groups or an epoxy compound having an epoxy equivalent of 100 to 500 is preferably used. By setting the epoxy equivalent to 100 or more, the toughness of the hardened adhesive agent can be increased. By setting the epoxy equivalent to 500 or less, it is possible to allow the hardened adhesive agent to have a high-density network structure and excellent electrical insulation properties.</p>
+    <p id="p-00044-en" num="0044">The epoxy compound (b) contains both of a liquid epoxy compound and a solid epoxy compound, and the liquid epoxy compound content is preferably 20% by mass or more and 70% by mass or less, and more preferably 30% by mass or more and 60% by mass or less with respect to the total amount of the epoxy compound. When the adhesive agent contains the liquid epoxy compound in an amount of a value within the above range, the adhesive agent can have appropriate plasticity and flexibility as an adhesive agent for semiconductors.</p>
+    <p id="p-00045-en" num="0045">Herein, the liquid epoxy compound refers to one having a viscosity of 150 Pa•s or less at a temperature of 25°C and a pressure of 1.013 × 10<sup>5</sup> N/m<sup>2</sup>, and the solid epoxy compound refers to one having a viscosity exceeding 150 Pa•s at a temperature of 25°C. Examples of the liquid epoxy compound include, but are not limited to, JER (registered trademark) 828, JER (registered trademark) 1750, JER (registered trademark) 152, JER (registered trademark) 630, and YL 980 (trade names, manufactured by Mitsubishi Chemical Corporation) and EPICLON (registered trademark) HP-4032 (trade name, manufactured by DIC CORPORATION). These liquid epoxy compounds may be used in combination of two or more thereof. Examples of the solid epoxy compound include, but are not limited to, JER (registered trademark) 1002, JER (registered trademark) 1001, YX4000H, JER (registered trademark) 4004P, JER (registered trademark) 5050, JER (registered trademark) 154, JER (registered trademark) 157S70, JER 180S70 (trade names, manufactured by Mitsubishi Chemical Corporation), TEPIC (registered trademark) S, TEPIC (registered trademark) G, and TEPIC (registered trademark) P (trade names, manufactured by NISSAN CHEMICAL INDUSTRIES, LTD.), EPOTOTE (registered trademark) YH-434L (trade name, manufactured by Nippon Steel Chemical Co. , Ltd.), EPPN 502H and NC3000 (trade names, manufactured by Nippon Kayaku Co. , Ltd.), and EPICLON (registered trademark) N695, EPICLON (registered trademark) N865 and EPICLON (registered trademark) HP-7200 (trade names, manufactured by DIC CORPORATION). These solid epoxy compounds may be used in combination of two or more thereof.</p>
+    <p id="p-00046-en" num="0046"> The adhesive agent of the present invention contains an acid-modified rosin (c). The acid-modified rosin is obtained by subjecting raw material rosins such as a gum rosin, a wood rosin and a tall oil rosin, and unsaturated carboxylic acids such as (meth)acrylic acid, (anhydrous) maleic acid, fumaric acid, (anhydrous) citraconic acid and (anhydrous) itaconic acid to a diels-alder reaction (addition reaction). The raw material rosin is preferably refined by distillation, recrystallization or extraction for use in order to remove impurities such as metals and improve a resin color. The acid-modified rosin can be modified to an acid-modified rosin having a transparent color by hydrogenation. Examples of such acid-modified rosins include PINECRYSTAL (registered trademark) KE-604, PINECRYSTAL (registered trademark) KR-120, and MALKYD (registered trademark) No. 33 (trade names, produced by ARAKAWA CHEMICAL INDUSTRIES, LTD.).</p>
+    <p id="p-00047-en" num="0047">These acid-modified rosins have two or more carboxyl groups. Therefore, the acid-modified rosin has excellent compatibility with the organic-solvent-soluble polyimide (a) and the epoxy compound (b). The acid-modified rosin can react with the epoxy compound to form a high-density network structure. It is thought that since the acid-modified rosin has a bulky cyclohexane ring produced by a bulky structure of the rosin itself and acid-modification, this sterically hinders the epoxy group from reacting with the carboxyl group to enhance stability in heating conditions of a heat-drying process of the adhesive agent and an assembly process. On the other hand, for example, at temperatures of 200°C to 250°C which are a hardening temperature of the adhesive agent, molecular mobility of the acid-modified rosin is enhanced and a reaction with the epoxy compound quickly proceeds to enable the completion of hardening of the adhesive agent in a short time.</p>
+    <p id="p-00048-en" num="0048">The content of the acid-modified rosin (c) in the adhesive agent is preferably 5 parts by mass or more and 30 parts by mass or less with respect to 100 parts by mass of the epoxy compound (b). By setting the content of the acid-modified rosin to a value within the above range, it is possible to be excellent in storage life and to harden the adhesive agent in a short time. The content of the acid-modified rosin (c) is more preferably 20 parts by mass or less with respect to 100 parts by mass of the epoxy compound (b). Further, the content is more preferably 10 parts by mass or more.</p>
+    <p id="p-00049-en" num="0049">Further, when the acid-modified rosin is used, there is also an effect of improving adhesiveness of the adhesive agent to metal materials such as an electrode and imparting a flux function to the adhesive agent. That is, by electrically connecting the circuit members by use of the adhesive agent of the present invention, it is possible to keep a joint clean, prevent resins or inorganic particles which are components of the adhesive agent from immixing between the circuit members of the joint, and enhance solder wettability. As described above, the acid-modified rosin (c) has an effect on both of an improvement of adhesiveness and an improvement of reliability of an electric connection. In addition to this, as described above, since an acidic group of the acid-modified rosin is consumed by the reaction with the epoxy compound during a hardening reaction and since the acid-modified rosin has a bulky structure, it is possible to prevent a metal portion such as an electrode from being corroded after bonding.</p>
+    <p id="p-00050-en" num="0050">In addition to this, another publicly known latent hardener other than the acid-modified rosin may be used in conjunction with the acid-modified rosin. Particularly, a basic latent hardener exerts an interactive force with the acid-modified rosin, and therefore it can further enhance a latent property. As the basic latent hardener, imidazole-based latent hardeners can be preferably used. Specific examples of the imidazole-based latent hardeners to be preferably used include CUREZOL (registered trademark) 2PZCNS, CUREZOL (registered trademark) 2PZCNS-PW, CUREZOL (registered trademark) C11Z-CNS, CUREZOL (registered trademark) 2MZ-A, CUREZOL (registered trademark) C11-A, CUREZOL (registered trademark) 2E4MZ-A, CUREZOL (registered trademark) 2MZA-PW, CUREZOL (registered trademark) 2MAOK-PW, and CUREZOL (registered trademark) 2PHZ-PW (trade names, produced by SHIKOKU CHEMICALS CORPORATION); and NOVACURE (registered trademark) HX-3941HP, NOVACURE (registered trademark) HXA3922HP, NOVACURE (registered trademark) HXA3932HP, and NOVACURE (registered trademark) HXA3042HP (trade names, manufactured by ASAHI KASEI E-MATERIALS CORPORATION) that are microcapsule-type hardeners obtained by treating imidazole-based latent hardeners with isocyanates.</p>
+    <p id="p-00051-en" num="0051">The adhesive agent of the present invention may further contain the inorganic particles (d). Examples of the material of the inorganic particles (d) include silica, alumina, titania, silicon nitride, boron nitride, aluminum nitride, iron oxide, glass, other metal oxides, metal nitrides, metal carbonates, and metal sulfates such as barium sulfate. These materials may be used singly or in combination of two or more of them. Among them, silica and alumina are preferably used from the viewpoint of low thermal expansibility, thermal dissipation performance, low moisture absorptivity, and dispersion stability in the adhesive agent.</p>
+    <p id="p-00052-en" num="0052">The content of the inorganic particles (d) in the adhesive agent is preferably 30 to 80% by mass and more preferably 50 to 70% by mass with respect to the total amount of the aforementioned components (a) to (d). When the content of the inorganic particles (d) is 30 to 80% by mass, irregular thickness due to flow deformation hardly occurs during heat-drying the adhesive agent, and in association with this, connection reliability of a semiconductor device prepared by using this adhesive agent is more improved. It is more possible to maintain sufficient connection reliability particularly when the semiconductor device is subjected to a process where higher durability is required such as a moisture absorption-reflow process and a thermal cycle process. Further, dispersibility of inorganic particles in the adhesive agent is more sufficient, and the agglomeration of the inorganic particles less occurs. Further, when the adhesive agent is applied onto a release plastic film to form an adhesive film and the adhesive film is wound into a roll shape, problems that cracks are produced in the adhesive sheet or the adhesive sheet is separated from the release plastic film hardly occur.</p>
+    <p id="p-00053-en" num="0053">The inorganic particles (d) may have either a spherical form or a nonspherical form such as a crushed form or a flake form; however, they preferably have a spherical form from the viewpoint of easy uniform dispersibility in the adhesive agent. Further, the average particle size of the spherical inorganic particles is preferably 3 µm or less. The average particle size is more preferably 10 nm or more and 1 µm or less. When the average particle size is 10 nm or more, dispersibility of the inorganic particles is more improved, which allows the inorganic particles to be contained in the adhesive agent in a higher concentration. When the average particle size is 3 µm or less, since a surface area of the inorganic particles is adequately large, an interactive force of the inorganic particles (d) with the above components (a) to (c) and a component mixed as required is adequately large, and the adhesive agent is more hardly fluidized and deformed during heat-drying.</p>
+    <p id="p-00054-en" num="0054">When the adhesive agent needs to have transparency, the particle size of the inorganic particles is preferably 100 nm or less, more preferably 60 nm or less. For example, the adhesive agent needs to have transparency when, after a film of the adhesive agent is formed on a substrate, it is necessary to visually identify marks on the surface of the substrate through the adhesive agent for the purpose of alignment and the like.</p>
+    <p id="p-00055-en" num="0055">It is to be noted that the average particle size of the inorganic particles refers to the most frequently observed size of the individual inorganic particles. When the inorganic particles have a spherical form, the particle size of the inorganic particles refers to its diameter, and when the inorganic particles have an oval or flat form, the particle size refers to its maximum length in such a shape. Further, when the inorganic particles have a rod or fibrous form, the particle size refers to its maximum longitudinal length. As a method for measuring the average particle size of the inorganic particles contained in the adhesive agent, a SEM (scanning electron microscope) is used for directly observing the particles and measuring particle sizes of 100 particles. The maximum likelihood particle size on the number basis is selected from a distribution of the particle sizes obtained by measurement and defined as an average particle size.</p>
+    <p id="p-00056-en" num="0056">For the purpose of reducing the stress of a film obtained by hardening the adhesive agent, the adhesive agent of the present invention may further contain a thermoplastic resin. Examples of the thermoplastic resin include, but not limited to, phenoxy resins, polyesters, polyurethanes, polyamides, polypropylene, acrylonitrile-butadiene copolymer (NBR), styrene-butadiene copolymer, (SBR), acrylonitrile-butadiene-methacrylic acid copolymer, and acrylonitrile-butadiene-acrylic acid copolymer. Moreover, the adhesive agent of the present invention may contain an ion scavenger, a surfactant, a silane coupling agent, an organic dye or an inorganic pigment.</p>
+    <p id="p-00057-en" num="0057">The adhesive agent of the present invention may be used as a varnish obtained by mixing its constituents materials in a solvent. The adhesive agent of the present invention may be used as an adhesive agent film obtained by forming the adhesive agent into a sheet-shape. Examples of the method of forming the adhesive agent into a sheet shape include a method of applying the adhesive agent varnish onto a release base material and then removing a solvent.</p>
+    <p id="p-00058-en" num="0058">Examples of the solvent include, but not limited to: ketone-based solvents such as acetone, methyl ethyl ketone, methyl isobutyl ketone, cyclopentanone, and cyclohexanone; ether-based solvents such as 1,4-dioxane, tetrahydrofurane, and diglyme; glycol ether-based solvents such as methyl cellosolve, ethyl cellosolve, propylene glycol monomethyl ether, propylene glycol monoethyl ether, propylene glycol monobutyl ether, and diethylene glycol methyl ethyl ether; and other solvents such as benzyl alcohol, N-methylpyrrolidone, γ-butyrolactone, ethyl acetate, and N,N-dimethylformamide. These solvents may be used singly or in combination of two or more thereof.</p>
+    <p id="p-00059-en" num="0059">Examples of the release base material include, but not limited to, polypropylene film, polyethylene terephthalate film, polyethylene naphthalate film, polyester film, polyvinyl chloride film, polycarbonate film, polyimide film, fluoropolymer film such as polytetrafluoroethylene film, polyphenylene sulfide film, polypropylene film, and polyethylene film. The release base material may be subjected to release treatment using a releasing agent such as a silicone-based releasing agent, a long-chain alkyl-based releasing agent, a fluorine-based releasing agent, or an aliphatic amide-based releasing agent. The thickness of the release base material is not particularly limited; however, the thickness is usually preferably 5 to 75 µm. The thickness of the release base material is preferably equal to or larger than that of the adhesive agent from the viewpoint of reducing residual stress in the adhesive agent. Further, another release base material is preferably laminated on the surface of the adhesive agent opposite to the surface having the release base material of the adhesive agent film, that is, the adhesive agent film is preferably sandwiched between two release base materials. As the another release base material, one made of the above-mentioned material and having a thickness within the above-mentioned range may be used. The two release base materials may be the same.</p>
+    <p id="p-00060-en" num="0060">When the release base material is laminated on both sides of the adhesive agent film, it is preferred that there is a difference between the adhesive force between one of the release base materials and the adhesive agent film and the adhesive force between the other release base material and the adhesive agent film. Particularly, the difference in adhesive force is preferably 5 N/m or more, more preferably 47 N/m or less. By setting the difference in adhesive force to 5 N/m or more, it is possible, when one of the release base materials whose adhesive force to the adhesive agent film is smaller is peeled off, to prevent the adhesive agent film from being totally or partially separated from the other release base material. Further, by setting the difference in adhesive force to 47 N/m or less, the adhesive agent is less likely to remain on the surface of each of the release base materials when the release base material is peeled off.</p>
+    <p id="p-00061-en" num="0061">The varnish-like adhesive agent obtained by mixing its constituent materials in a solvent may be used for a semiconductor wafer or a circuit board by applying it onto a release base material and removing the solvent.</p>
+    <p id="p-00062-en" num="0062">The minimum melt viscosity of the adhesive agent of the present invention is preferably 100 Pa•s or more and 10,000 Pa•s or less. The minimum melt viscosity is more preferably 600 Pa•s or more and 5,000 Pa•s or less. By setting the minimum melt viscosity to a value within the above range, in the case of using the adhesive agent as an adhesive agent film, it is possible to laminate the adhesive agent film on a semiconductor wafer or a circuit board without causing the film to be wrinkled or trapping air bubbles between the film and the semiconductor wafer or the circuit board. In addition, it is also possible to reduce the amount of the adhesive agent squeezing out from the edges of a semiconductor chip during semiconductor chip bonding. It is to be noted that the minimum melt viscosity of the adhesive agent can be measured using, for example, a dynamic viscoelasticity measurement apparatus and a sample having a diameter of 15 mm and a thickness of 0.8 mm at a temperature rise rate of 2°C/min, a measuring frequency of 1 Hz and a measuring distortion of 9% within a measurement temperature range of 0 to 150°C. The viscosity of the adhesive agent decreases as the measurement temperature increases from 0°C, but it turns to an increase due to a hardening reaction when the temperature exceeds a certain value. A minimal value of the viscosity at this time is taken as a minimum melt viscosity.</p>
+    <p id="p-00063-en" num="0063">The adhesive agent of the present invention preferably has a minimum melt viscosity of 100 to 10000 Pa•s after stored for one month under the circumstance of 23°C and 55% in relative humidity (RH). Thereby, even when the adhesive agent film made of the adhesive agent of the present invention is laminated on a semiconductor wafer or a circuit board after storage for an extended period of time, it is possible to laminate the adhesive agent film without causing the film to be wrinkled or trapping air bubbles between the film and the semiconductor wafer or the circuit board. In addition, it is also possible to reduce the amount of the adhesive agent squeezing out from the edges of a semiconductor chip during semiconductor chip bonding.</p>
+    <p id="p-00064-en" num="0064">In the present invention, the acid-modified rosin is used as a hardening agent for an adhesive agent. The acid-modified rosin has a bulky cyclohexane ring produced by acid-modification in addition the fact that the rosin itself has a bulky structure, and therefore this sterically hinders the epoxy group from reacting with the carboxyl group to enable controlling the minimum melt viscosity after storing under the aforementioned conditions so as to be in a range of 100 to 10000 Pa•s.</p>
+    <p id="p-00065-en" num="0065">The adhesive agent of the present invention can be suitably used as an adhesive agent for a semiconductor for use in bonding or fixing between circuit members such as a semiconductor element, a circuit board and a metal wiring material which are used for a semiconductor device, or in sealing of a semiconductor element.</p>
+    <p id="p-00066-en" num="0066">A semiconductor device of the present invention includes a hardened article of the adhesive agent or a hardened article of the adhesive agent film. The semiconductor device referred to herein refers to overall devices capable of functioning by use of characteristics of a semiconductor element. The semiconductor device includes all of one obtained by connecting a semiconductor element to a substrate or one obtained by connecting the semiconductor elements to each other or substrates to each other, electrooptic devices, semiconductor circuit boards, and electronic parts.</p>
+    <p id="p-00067-en" num="0067">A method for producing a semiconductor device of the present invention is characterized in that the adhesive agent or the adhesive agent film is interposed between a first circuit member and a second circuit member; and the first circuit member and the second circuit member are electrically connected to each other through application of heat and pressure.</p>
+    <p id="p-00068-en" num="0068">Hereinafter, a method for producing a semiconductor device using the adhesive agent of the present invention will be described with reference to one example. First, a first circuit member having a first connection terminal and a second circuit member having a second connection terminal are prepared. Herein, examples of the circuit member include chip components such as a semiconductor chip, a resistor chip and a capacitor chip; and substrates such as a semiconductor chip or a silicon interposer having TSV (through-silicon via) electrodes, a glass epoxy circuit board, a film circuit board, a glass substrate and a glass interposer with a through electrode. Examples of the connection terminals include plated bumps made of gold or copper, a copper pillar bump with a solder cap in which a semispherical solder is formed at a tip of a copper pillar, bump electrodes such as stud bumps, solder balls, and pad electrodes. A through-electrode may be formed in one or both of the first circuit member and the second circuit member, and a connection terminal may be formed on one or both of the surfaces of the member.</p>
+    <p id="p-00069-en" num="0069">The first circuit member and the second circuit member are placed so that the first connection terminal and the second connection terminal are opposed to each other. Then, the adhesive agent of the present invention is interposed between the first connection terminal and the second connection terminal opposed to each other. The first and second connection terminals opposed to each other are electrically connected to each other through the application of heat and pressure to the first and second circuit members. By this process step, the first circuit member and the second circuit member are securely electrically connected to each other, and the adhesive agent is hardened to physically fix the first circuit member and the second circuit member to each other.</p>
+    <p id="p-00070-en" num="0070">Herein, the adhesive agent may be provided for only the connection terminal-side surface of any of the circuit members in advance or may be provided for both the connection terminal-side surface of the first circuit member and the connection terminal-side surface of the second circuit member.</p>
+    <p id="p-00071-en" num="0071">As an example of a more detail embodiment, a method for producing a semiconductor device will be described in which a semiconductor chip having a first circuit member and bumps are connected to a circuit board or a semiconductor chip having a wiring pattern as a second circuit member with the adhesive agent film of the present invention interposed therebetween so that the gap between the first circuit member and the second circuit member is sealed with the adhesive agent.</p>
+    <p id="p-00072-en" num="0072">First, the adhesive agent film is attached to the circuit board or the semiconductor chip having a wiring pattern formed as a second circuit member. At this time, the adhesive agent film may be cut to have a predetermined size and then attached to the wiring pattern surface of the circuit board having a wiring pattern or the bump-forming surface of the semiconductor chip. Alternatively, the adhesive agent film may be attached to the bump-forming surface of a semiconductor wafer and then the semiconductor wafer may be singulated by dicing the semiconductor wafer to prepare semiconductor chips having the adhesive agent film attached thereto.</p>
+    <p id="p-00073-en" num="0073">Next, the semiconductor chip as the first circuit member is placed so that the bumps of the first circuit member and the wiring patterns of the second circuit member are opposed to each other, and heat and pressure are applied to both of the bumps and the wiring patterns using a bonding apparatus. Conditions of application of heat and pressure are not particularly limited as long as good electrical connection can be achieved, but application of heat and pressure needs to be performed at a temperature of 100°C or higher and a pressure of 1 mN/bump or larger for 0.1 second or longer in order to harden the adhesive agent. The bonding temperature is preferably 120°C or higher and 300°C or lower, more preferably 150°C or higher and 250°C or lower, the bonding pressure is preferably 5 mN/bump or larger and 50,000 mN/bump or less, more preferably 10 mN/bump or larger and 10,000 mN/bump or less, and the bonding time is preferably 1 second or longer and 60 seconds or shorter, more preferably 2 seconds or longer and 30 seconds or shorter. During bonding, the bumps on the semiconductor chip and the wiring pattern on the circuit board may be brought into contact with each other and temporarily pressure-bonded together by applying heat and pressure for 0.1 second or longer at a temperature of 50°C or higher and a pressure of 1 mN/bump or larger, and then finally bonded together under the above-mentioned conditions. If necessary, after the completion of bonding, the circuit board with the semiconductor chip may be heated at a temperature of 50°C or higher and 200°C or lower for 10 seconds or longer and 24 hours or shorter.</p>
+    <p id="p-00074-en" num="0074">The adhesive agent of the present invention can also be used as an adhesive resin material for producing a die attach film, a dicing die attach film, a lead frame fixing tape, adhesive agents of radiator plates, reinforcing plates, and shielding materials, solder resist and the like.</p>
+    <p id="p-00075-en" num="0075">Due to recent significant progress of automation of processes for producing a semiconductor device, adhesive agents for semiconductor and circuit boards or semiconductor chips having an adhesive agent for semiconductor applied thereonto are required to be able to be stored at room temperature for preferably 30 days or longer, more preferably 60 days or longer before hardening. The use of the adhesive agent of the present invention makes it possible to obtain a semiconductor device that can be stored for 60 days or longer even at room temperature, causes no foaming during bonding, provides initial electrical continuity even by a brief application of heat and pressure, and has excellent connection reliability such that electrical continuity can be maintained even after a heat shock test performed between -40°C to 125°C after moisture absorption-reflow.</p>
+    <heading id="h-00010-en">EXAMPLES</heading>
+    <p id="p-00076-en" num="0076">Hereinafter, the present invention will be described with reference to the following examples, but is not limited to these examples.</p>
+    <heading id="h-00011-en">Synthesis Example 1 Synthesis of Polyimide A</heading>
+    <p id="p-00077-en" num="0077">Under a dry nitrogen flow, 4.82 g (0.0165 mol) of 1,3-bis(3-aminophenoxy)benzene (hereinafter, referred to as "APB-N"), 3.08 g (0.011 mol) of 3,3'-diamino-4,4'-dihydroxydiphenylsulfone (hereinafter, referred to as "ABPS"), 4.97 g (0.02 mol) of 1,3-bis(3-aminopropyl)tetramethyldisiloxane) (hereinafter, referred to as "SiDA"), and 0.55 g (0.005 mol) of 3-aminophenol as a terminal blocking agent were dissolved in 130 g of N-methylpyrrolidone (hereinafter, referred to as "NMP"). To this, 26.02 g (0.05 mol) of 2,2-bis{4-(3,4-dicarboxyphenoxy)phenyl}propane dianhydride (hereinafter, referred to as "BSAA") was added together with 20 g of NMP, and the resulting mixture was reacted at 25°C for 1 hour and then stirred at 50°C for 4 hours. Thereafter, the mixture was stirred at 180°C for 5 hours. After the completion of stirring, the resulting solution was charged into 3 L of water and filtered, and a precipitate was collected, washed with water three times and dried at 80°C for 20 hours using a vacuum drier. The infrared absorption spectrum of the resulting polymer solid was measured, and consequently, absorption peaks of an imide structure derived from a polyimide were detected at about 1780 cm<sup>-1</sup> and 1377 cm<sup>-1</sup>. In this manner, a polyimide A having a phenolic hydroxyl group at its terminal and in its side chain and containing 11.5% by mass of a structure represented by the general formula (1) was obtained. When 6 g of tetrahydrofuran was added to 4 g of the polyimide A and stirred at 23°C, the polyimide A was dissolved.</p>
+    <heading id="h-00012-en">Synthesis Example 2 Synthesis of Polyimide B</heading>
+    <p id="p-00078-en" num="0078">Under a dry nitrogen flow, 4.82 g (0.0165 mol) of APB-N, 3.08 g (0.011 mol) of ABPS, 4.97 g (0.02 mol) of SiDA, and 0.47 g (0.005 mol) of aniline as a terminal blocking agent were dissolved in 130 g of NMP. To this, 26.02 g (0.05 mol) of BSAA was added together with 20 g of NMP, and the resulting mixture was reacted at 25°C for 1 hour and then stirred at 50°C for 4 hours. Thereafter, the mixture was stirred at 180°C for 5 hours. After the completion of stirring, the resulting solution was charged into 3 L of water and filtered, and a precipitate was collected, washed with water three times and dried at 80°C for 20 hours using a vacuum drier. The infrared absorption spectrum of the resulting polymer solid was measured, and consequently, absorption peaks of an imide structure derived from a polyimide were detected at about 1780 cm<sup>-1</sup> and 1377 cm<sup>-1</sup>. In this manner, a polyimide B having a phenolic hydroxyl group in its side chain and containing 11.6% by mass of a structure represented by the general formula (1) was obtained. When 6 g of tetrahydrofuran was added to 4 g of the polyimide B and stirred at 23°C, the polyimide B was dissolved.</p>
+    <heading id="h-00013-en">Synthesis Example 3 Synthesis of Polyimide C</heading>
+    <p id="p-00079-en" num="0079">Under a dry nitrogen flow, 24.54 g (0.067 mol) of 2,2-bis(3-amino-4-hydroxyphenyl)hexafluoropropane (hereinafter, referred to as "BAHF"), 4.97 g (0.02 mol) of SiDA, and 1.86 g (0.02 mol) of aniline as a terminal blocking agent were dissolved in 80 g of NMP. To this, 31.02 g (0.1 mol) of bis(3,4-dicarboxyphenyl)ether dianhydride (hereinafter, referred to as "ODPA") was added together with 20 g of NMP, and the resulting mixture was reacted at 20°C for 1 hour and then stirred at 50°C for 4 hours. Thereafter, 15 g of xylene was added, and the resulting mixture was stirred at 180°C for 5 hours while boiling water together with xylene. After the completion of stirring, the resulting solution was charged into 3 L of water to obtain a white precipitate of a polymer. The precipitate was collected through filtration, washed with water three times and dried at 80°C for 20 hours using a vacuum drier. The infrared absorption spectrum of the resulting polymer solid was measured, and consequently, absorption peaks of an imide structure derived from a polyimide were detected at about 1780 cm<sup>-1</sup> and 1377 cm<sup>-1</sup>. In this manner, a polyimide C having a phenolic hydroxyl group in its side chain and containing 7.5% by mass of a structure represented by the general formula (1) was obtained. When 6 g of tetrahydrofuran was added to 4 g of the polyimide C and stirred at 23°C, the polyimide C was dissolved.</p>
+    <heading id="h-00014-en">Synthesis Example 4 Synthesis of Polyimide D</heading>
+    <p id="p-00080-en" num="0080">Under a dry nitrogen flow, 8.03 g (0.0275 mol) of APB-N, 4.97 g (0.02 mol) of SiDA, and 0.47 g (0.005 mol) of aniline as a terminal blocking agent were dissolved in 130 g of NMP. To this, 26.02 g (0.05 mol) of BSAA was added together with 20 g of NMP, and the resulting mixture was reacted at 25°C for 1 hour and then stirred at 50°C for 4 hours. Thereafter, the mixture was stirred at 180°C for 5 hours. After the completion of stirring, the resulting solution was charged into 3 L of water and filtered, and a precipitate was collected, washed with water three times and dried at 80°C for 20 hours using a vacuum drier. The infrared absorption spectrum of the resulting polymer solid was measured, and consequently, absorption peaks of an imide structure derived from a polyimide were detected at about 1780 cm<sup>-1</sup> and 1377 cm<sup>-1</sup>. In this manner, a polyimide D containing 11. 6% by mass of a structure represented by the general formula (1) was obtained. When 6 g of tetrahydrofuran was added to 4 g of the polyimide D and stirred at 23°C, the polyimide D was dissolved.</p>
+    <p id="p-00081-en" num="0081">Other materials used in Examples and Comparative Examples are as follows.</p>
+    <heading id="h-00015-en">(b) Epoxy Compound</heading>
+    <p id="p-00082-en" num="0082">
+      <ul id="ul-00003-en" list-style="none" compact="compact">
+        <li>Solid Epoxy Compound</li>
+        <li>N865 (trade name, epoxy equivalent: 200 g/eq, produced by DIC CORPORATION)</li>
+        <li>Liquid Epoxy Compound</li>
+        <li>YL980 (trade name, epoxy equivalent: 185 g/eq, produced by Mitsubishi Chemical Corporation)</li>
+      </ul>
+    </p>
+    <heading id="h-00016-en">(c) Acid-Modified Rosin</heading>
+    <p id="p-00083-en" num="0083">KE-604 (trade name, acid number 240 (KOHmg/g), softening point 130°C, color 150 Hazen, acryl-modified rosin, produced by ARAKAWA CHEMICAL INDUSTRIES, LTD.)</p>
+    <p id="p-00084-en" num="0084">KR-120 (trade name, acid number 320 (KOHmg/g), softening point 120°C, color 150 Hazen, produced by ARAKAWA CHEMICAL INDUSTRIES, LTD.)</p>
+    <heading id="h-00017-en">(c') Other Latent Hardener</heading>
+    <p id="p-00085-en" num="0085">Liquid epoxy compound contained in NOVACURE (registered trademark) HXA-3941HP (trade name, produced by ASAHI KASEI E-MATERIALS CORPORATION). NOVACURE (registered trademark) HXA-3941HP contains a microcapsule-type hardener and a liquid epoxy compound at a ratio of 1 : 2, and the liquid epoxy compound contained in NOVACURE (registered trademark) HXA-3941HP is a 1 : 4 mixture of a bisphenol A-type epoxy compound and a bisphenol F-type epoxy compound. In rows labeled "HXA-3941HP" in Tables, values in parentheses represent the amount (parts by mass) of microcapsules.</p>
+    <heading id="h-00018-en">(d) Inorganic particle</heading>
+    <p id="p-00086-en" num="0086">
+      <ul id="ul-00004-en" list-style="none" compact="compact">
+        <li>SO-E2 (trade name, manufactured by Admatechs Co., Ltd., spherical silica particles, average particle size: 0.5 µm)</li>
+      </ul>
+    </p>
+    <heading id="h-00019-en">(f) Solvent: methyl isobutyl ketone (hereinafter, referred to as MIBK)</heading>
+    <heading id="h-00020-en">(g) Rosin</heading>
+    <p id="p-00087-en" num="0087">KR-85 (trade name, acid number 175 (KOHmg/g), softening point 85°C, color 60 Hazen, produced by ARAKAWA CHEMICAL INDUSTRIES, LTD.)</p>
+    <heading id="h-00021-en">Examples 1 to 30 and Comparative Examples 1 to 8</heading>
+    <heading id="h-00022-en">(1) Method for Preparing Adhesive agent Film</heading>
+    <p id="p-00088-en" num="0088">Adhesive agent varnishs were prepared by mixing the components (a) to (f) shown in Tables 1 to 4 in compounding ratios shown in Tables 1 to 4. Each of the adhesive agent varnishes thus prepared was applied onto the treated surface of a 50 µm-thick polyester terephthalate film (trade name, Cerapeel (registered trademark) HP2(U) as a release base material by using a slit die coater (coating machine), and was then dried at 80°C for 10 minutes to obtain an adhesive agent film. Onto the obtained adhesive agent film having a dried thickness of 50 µm, an untreated surface of a 10 µm-thick polypropylene film (trade name, TORAYFAN (registered trademark) BOYK57, one-side corona discharge treated film) was laminated as another release base material, and the adhesive agent film was wound around a paper core having an outer diameter of 9.6 cm into a roll shape in such a manner that the release base material HP2(U) was located outside to obtain a master roll of a sheet in which the adhesive agent film has the release base materials on both surfaces thereof. Then, the master roll of the sheet was slit into a width of 7.5 mm by using a film slitter and wound around reels having an outer diameter of 5.0 cm into a roll shape in such a manner that the release base material HP2 (U) was located outside to obtain a tape roll of the adhesive agent film whose both surfaces were covered with the release base materials. The obtained tape roll was divided into two groups depending on their storage conditions and evaluated. One was subjected to the following processes (2) to (5) just after preparation and the other was stored for one month or three months under the circumstance of 23°C and 55% in RH and then was subjected to the following processes (2) to (5).</p>
+    <heading id="h-00023-en">(2) Tape Attachment Process</heading>
+    <p id="p-00089-en" num="0089">Using a tape bonding machine (DA 2000 manufactured by Toray Engineering Co. , Ltd.), the adhesive agent film was bonded to the circuit board. First, the release base material YK57 was removed from the tape roll of the adhesive agent film whose both surfaces were covered with the release base materials prepared in the above (1) to expose the surface of the adhesive agent film. Then, the surface of the adhesive agent film, from which the release base material YK57 had been removed, was bonded at 80°C for 1 second to a circuit board (solid copper pad electrodes, a glass epoxy substrate with a circuit on which 300 semiconductor chips of 7.5 mm square can be mounted) fixed on a stage, and then the release base material HP2 (U) was removed. This tape attachment process was repeatedly performed to obtain a circuit board having 300 areas to which the adhesive agent film of 7.5 mm square was bonded.</p>
+    <heading id="h-00024-en">(3) Flip Chip Bonding and Display Test of Prepared Liquid Crystal Panels</heading>
+    <p id="p-00090-en" num="0090">The circuit board with the adhesive agent prepared in the above (2) was dried at 80°C for 1 hour. Next, semiconductor chips were flip-chip bonded to the circuit board with the adhesive agent using a flip chip bonding machine (model FC-2000 manufactured by Toray Engineering Co., Ltd.). Semiconductor chip (with bump electrodes made of copper of 30 µm and lead-free solder of 15 µm, 448 bumps/chip, pitch: 60 µm, peripheral arrangement, 7.5 mm-square chip) was fixed to a bonding stage heated to 80°C, and the semiconductor chip was temporarily pressure-bonded to the circuit board with the adhesive agent under conditions of a temperature of 80°C, a pressure of 15 N/chip, and a time of 5 seconds, and then the semiconductor chip was finally pressure-bonded under conditions of a temperature of 250°C, a pressure of 200 N/chip, and a time of 10 seconds. The bonding was performed per chip and repeated until 300 semiconductor chips were bonded to all the 300 areas. It is to be noted that the time from the beginning to end of bonding was 60 minutes. After the completion of bonding, the circuit board was divided by a substrate cutting machine into 300 circuit boards with a semiconductor. It is noted that in the obtained circuit boards with a semiconductor, a daisy chain was configured by connection between the semiconductor chip and the circuit board. Each of the prepared circuit boards with a semiconductor was incorporated into a liquid crystal substrate to prepare a liquid crystal panel (semiconductor device), and the liquid crystal panel was subjected to a display test. When displaying images, the liquid crystal panel was evaluated as "acceptable", and when displaying no images due to defective connection between the chip and the circuit board, the liquid crystal panel was evaluated as "unacceptable". The display test was performed on all the 300 liquid crystal panels, and the case where a ratio of acceptable liquid crystal panels was 99.5% or more was rated as "A", the case of being 95.0% or more and less than 99.5% was rated as "B", and the case of being less than 95.0% was rated as "C". These results are shown in Tables 1 to 4 (Before Reliability Test).</p>
+    <heading id="h-00025-en">(4) Display Test of Liquid Crystal Panels after Connection Reliability Test</heading>
+    <p id="p-00091-en" num="0091">Twenty circuit boards with a semiconductor were selected from the circuit boards with a semiconductor evaluated as "acceptable" in the display test in the above (3), and were then left standing in a constant temperature and humidity chamber under conditions of 85°C and 60% in RH for 168 hours for moisture absorption. Thereafter, solder reflow was performed under reflow conditions of 260°C and 5 seconds (moisture absorption-reflow process). Subsequently, 10 of the 20 samples (circuit boards with a semiconductor) were subjected to 1000 cycles each consisting of storage at -40°C for 5 minutes and storage at 125°C for 5 minutes, and the remaining 10 samples (circuit boards with a semiconductor) were subjected to 2000 cycles. After these treatment, each of the circuit boards with a semiconductor was incorporated into a liquid crystal substrate to prepare a liquid crystal panel, and all liquid crystal panels using the circuit boards with a semiconductor subjected to 1000 or 2000 cycles were subjected to a display test. The case where all the 10 liquid crystal panels using the circuit boards after 1000 cycles or 2000 cycles displayed images was rated as "A", and the case where not all the 10 liquid crystal panels displayed images due to the occurrence of defective connection was rated as "C". The evaluation results are shown in Tables 1 to 4 (After Reliability Test/1000 cycles, 2000 cycles).</p>
+    <heading id="h-00026-en">(5) Melt Viscosity Measurement of Adhesive Agent after Left Standing for 1 Month and 3 Months under Circumstance of 23°C and 55% in RH</heading>
+    <p id="p-00092-en" num="0092">The melt viscosity of each of the adhesive agent films, which had been stored for one month or three months under the circumstance of 23°C and 55% in RH in the above (1), was measured in the following conditions. The case where the minimum melt viscosity was 100 Pa·s or more and 10000 Pa·s or less was rated as "A", and the other cases were rated as "C". Dynamic viscoelasticity measurement apparatus: MCR-302 (manufactured by Anton Paar Japan K.K.)<br /> Sample dimension: diameter 15 mm, thickness 0.8 mm<br /> Temperature rise rate: 2°C/min<br /> Measuring frequency: 1 Hz<br /> Measuring distortion: 9%<br /> Measuring temperature range: 0 to 150°C <tables id="tables-00001-en" num="0001"><img id="img-00007-en" wi="130" he="233" img-content="table" file="EP2940094A1_00007.PNG" img-format="png" original="imgb0007.tif" /></tables><tables id="tables-00002-en" num="0002"><img id="img-00008-en" wi="129" he="233" img-content="table" file="EP2940094A1_00008.PNG" img-format="png" original="imgb0008.tif" /></tables><tables id="tables-00003-en" num="0003"><img id="img-00009-en" wi="135" he="233" img-content="table" file="EP2940094A1_00009.PNG" img-format="png" original="imgb0009.tif" /></tables><tables id="tables-00004-en" num="0004"><img id="img-00010-en" wi="140" he="233" img-content="table" file="EP2940094A1_00010.PNG" img-format="png" original="imgb0010.tif" /></tables></p>
+    <p id="p-00093-en" num="0093">From the result of comparison between Examples 1 to 30 and Comparative Examples 1 to 8, it is found that the adhesive agent not containing acid-modified rosin has low storage life, and therefore connection reliability cannot be obtained at all when the adhesive agent films, the tape rolls of which were stored for 1 month or 3 months under the circumstance of 23°C and 55% in RH, were used. Further, it is found that when the adhesive agent contains inorganic particle, connection reliability is maintained even when the adhesive agent is subjected to a moisture absorption-reflow process and a thermal cycle process.</p>
+    <heading id="h-00027-en">Examples 31 to 46 and Comparative Examples 9 to 12</heading>
+    <p id="p-00094-en" num="0094">Adhesive agents were prepared and evaluated in the same manner as in Examples 8 to 14, 22 to 30 and Comparative Examples 3, 4, 7 and 8 except that the organic-solvent-soluble polyimide B was changed to the organic-solvent-soluble polyimide C, and consequently, evaluation results similar to those of the display test of liquid crystal panels of Examples 8 to 14, 22 to 30 and Comparative Examples 3, 4, 7 and 8 were obtained.</p>
+    <heading id="h-00028-en">Examples 47 to 76</heading>
+    <p id="p-00095-en" num="0095">Adhesive agents for semiconductor were prepared and evaluated in the same manner as in Examples 1 to 30 except that the acid-modified rosin KE-604 of a latent hardener was changed to the acid-modified rosin KR-120, and consequently, evaluation results similar to those of the display test of liquid crystal panels of Examples 1 to 30 were obtained.</p>
+    <heading id="h-00029-en">Examples 77 to 83 and Comparative Examples 13 and 14</heading>
+    <p id="p-00096-en" num="0096">Adhesive agents were prepared in the same manner as in Example 1 by mixing the components (a) to (f) shown in Table 5 so as to be in compounding ratios shown in Table 5 and evaluated, and consequently, evaluation results of the display test of liquid crystal panels shown in Table 5 were obtained. <tables id="tables-00005-en" num="0005"><img id="img-00011-en" wi="137" he="233" img-content="table" file="EP2940094A1_00011.PNG" img-format="png" original="imgb0011.tif" /></tables></p>
+    <heading id="h-00030-en">INDUSTRIAL APPLICABILITY</heading>
+    <p id="p-00097-en" num="0097">The adhesive agent of the present invention can be used as an adhesive agent for use in bonding between electronic parts for use in personal computers or personal digital assistance, or a radiator plate and a printed substrate or a flexible substrate, or in bonding between substrates. Further, the adhesive agent of the present invention can be suitably used as an adhesive agent for semiconductor in bonding or direct electrical connection of a semiconductor chip such as LSI, LED or laser diode to a circuit board such as a flexible substrate, a glass epoxy substrate, a glass substrate, or a ceramic substrate.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>An adhesive agent comprising a polyimide (a), an epoxy compound (b), and an acid-modified rosin (c).</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The adhesive agent according to claim 1, wherein the polyimide (a) is a polymer having a structure represented by a general formula (2) or a general formula (3) and containing a structure represented by a general formula (1) as R<sup>4</sup> in the general formula (2) or the general formula (3) in an amount of 5 to 15% by mass with respect to the total amount of the polymer:
+<chemistry id="chemc-00001-en" num="0007"><img id="imgc-00001-en" wi="97" he="47" img-content="chem" file="EP2940094A1_00007.PNG" img-format="png" original="imgb0012.tif" /></chemistry>
+in which R<sup>1</sup>s represent a divalent hydrocarbon group, and may be the same or different in one molecule and may be the same or different in different molecules , R<sup>2</sup>s represent a monovalent hydrocarbon group, and may be the same or different in one molecule and may be the same or different in different molecules, and n is an integer of 1 to 10;
+<chemistry id="chemc-00002-en" num="0008"><img id="imgc-00002-en" wi="36" he="15" img-content="chem" file="EP2940094A1_00008.PNG" img-format="png" original="imgb0013.tif" /></chemistry><chemistry id="chemc-00003-en" num="0009"><img id="imgc-00003-en" wi="137" he="79" img-content="chem" file="EP2940094A1_00009.PNG" img-format="png" original="imgb0014.tif" /></chemistry>
+in which R<sup>3</sup>s are a 4- to 14-valent organic group, and may be the same or different in one molecule and may be the same or different in different molecules; R<sup>4</sup>s are a 2- to 12-valent organic group, and may be the same or different in one molecule and may be the same or different in different molecules; at least one of R<sup>3</sup> and R<sup>4</sup> is an aromatic group containing at least one of one or more groups selected from the group consisting of a 1,1,1,3,3,3-hexafluoropropyl group, an isopropyl group, an ether group, a thioether group, and a SO<sub>2</sub> group; R<sup>5</sup>s and R<sup>6</sup>s represent one or more groups selected from the group consisting of a phenolic hydroxyl group, a sulfonic acid group, and a thiol group, and may be the same or different in one molecule and may be the same or different in different molecules; X represents a monovalent organic group; m represents an integer of 8 to 200; α and β are each an integer of 0 to 10, and α + β is an integer of 0 to 10; and in which α + β is 1 to 10 in 20 to 90% of repeating units whose number is represented by m.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The adhesive agent according to claim 1 or 2, wherein the content of the acid-modified rosin (c) in the adhesive agent is 5 parts by mass or more and 30 parts by mass or less with respect to 100 parts by mass of the epoxy compound (b).</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The adhesive agent according to any one of claims 1 to 3 further containing inorganic particles (d), wherein the content of the inorganic particles (d) is 30 to 80% by mass with respect to the total amount of the components (a) to (d).</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>An adhesive agent film comprising the adhesive agent according to any one of claims 1 to 4.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The adhesive agent film according to claim 5, wherein a minimum melt viscosity after stored for one month under the circumstance of 23°C and 55% in relative humidity (RH) is 100 to 10000 Pa·s.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>A semiconductor device including a hardened article of the adhesive agent according to any one of claims 1 to 4 or a hardened article of the adhesive agent film according to claim 5 or 6.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>A method for producing a semiconductor device, wherein the adhesive agent according to any one of claims 1 to 4 or the adhesive agent film according to claim 5 or 6 is interposed between a first circuit member and a second circuit member; and the first circuit member and the second circuit member are electrically connected to each other through application of heat and pressure.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0005.tif" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0006.tif" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00007.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0007.tif" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00008.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0008.tif" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00009.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0009.tif" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00010.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0010.tif" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00011.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0011.tif" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0012.tif" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0013.tif" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="EP2940094A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0014.tif" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="EP2940094A1.PDF" type="pdf" size="643238" pages="26" />
+</lexisnexis-patent-document>
