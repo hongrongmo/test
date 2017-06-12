@@ -167,7 +167,7 @@ public class DownloadPatentFromFile {
 
 				//Zip downloaded files (each in it's corresponding dir)
 
-				archivePatent.zipDownloads(loadNumber, Long.toString(epoch));
+				archivePatent.zipDownloads(loadNumber, Long.toString(epoch));  // temp comment out for downloading backword records generation>10, uncomment Back after finish
 
 
 				midTime = endTime;
@@ -201,12 +201,22 @@ public class DownloadPatentFromFile {
 					{
 						patentID = fields[0];
 						signedAssetUrl = fields[1];
-						generation = fields[3].substring(fields[3].lastIndexOf("/")+1, fields[3].length());
+						
+						if(fields[3] !=null && fields[3].contains("content/pat"))
+							generation = fields[3].substring(fields[3].lastIndexOf("/")+1, fields[3].length());
+						else if(fields[4] !=null && fields[4].contains("content/pat"))
+						generation = fields[4].substring(fields[4].lastIndexOf("/")+1, fields[4].length());
+						else
+							System.out.println("something wrong!!!");
 					}
+					
+					// 06/07/2017 NYC team confirmed to download all patents with generation >10, after Bart recent email to check with EV to confirm this
 					
 					if(patentID !=null &&
 							(patentID.substring(0, 2).equalsIgnoreCase("US") ||	patentID.substring(0, 2).equalsIgnoreCase("EP"))
-							&& generation.equals("10"))
+							&& Integer.parseInt(generation) >10)
+					
+						
 					{
 						patentIds.put(patentID, signedAssetUrl);
 						
