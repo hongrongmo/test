@@ -68,6 +68,13 @@ public class AuAfCombinedRec {
 		public static final String CURRENT_DEPT_AFFILIATION_DISPLAY_NAME = "49";
 		public static final String CURRENT_DEPT_AFFILIATIOIN_CITY = "50";
 		public static final String CURRENT_DEPT_AFFILIATION_COUNTRY = "51";
+		//added 05/24/2017 for both profiles as a place holder for future use (filled as "" now) as this holds SQS epoch not the one in profile
+		public static final String UPDATEEPOCH = "52";
+		//added 05/24/2017 only for Affiliation profile, but it not be indexed to ES bc it is already parent (only used fro chile which is not indexed in ES), parafid is set to "0"
+		public static final String PARAFID = "53";
+		public static final String PARENT_PREFERED_NAME = "54";
+		// aftype will always set to "parent" because all indexed Affiliations are only parent ones
+		public static final String AFTYPE = "55";
 		
 
 		

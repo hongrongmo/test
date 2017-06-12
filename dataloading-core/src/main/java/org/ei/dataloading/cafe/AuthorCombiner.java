@@ -252,7 +252,8 @@ public class AuthorCombiner {
 
 			if(!(action.isEmpty()) && (action.equalsIgnoreCase("new") || action.equalsIgnoreCase("update")))
 			{
-				query = "select * from " +  tableName + " where authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='merged' and dbase='cpx')";
 				System.out.println("query");
 
 				rs = stmt.executeQuery(query);
@@ -351,7 +352,8 @@ public class AuthorCombiner {
 			System.out.println("Running the query...");
 			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
-				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='merged' and dbase='cpx')";
 
 
 				System.out.println(query);
@@ -383,7 +385,8 @@ public class AuthorCombiner {
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
-				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='merged' and dbase='cpx')";
 
 
 				// for testing
@@ -417,6 +420,12 @@ public class AuthorCombiner {
 				/*query =  "select * from " +  tableName + "  where AUTHORID in (select author_id from ap_correction1.Cafe_au_lookup where pui "
 						+ " in (select pui from ap_correction1.AUTHOR_MID)) and rownum<2";*/
 
+				//06/08/2017 re-index AU profile to include new extra fields (i.e. updateepoch, ..)
+				
+				//query = "select * from " +  tableName + " where authorid in (select AUID from db_cafe.HH_APR_ES_IDS)" ;
+				
+						
+						
 
 				System.out.println(query);
 
@@ -535,6 +544,9 @@ public class AuthorCombiner {
 					//M_ID
 					rec.put(AuAfCombinedRec.DOCID, rs.getString("M_ID"));
 
+					// UPDATEEPOCH (place holder for future filling with SQS epoch)
+					rec.put(AuAfCombinedRec.UPDATEEPOCH, "");
+					
 					//LOADNUMBER
 					if(rs.getString("LOADNUMBER") !=null)
 					{
