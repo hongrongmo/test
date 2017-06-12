@@ -54,11 +54,10 @@ public class GetANIFileFromCafeS3Bucket {
 	//HH 05/02/2016 to download Cafe Keys from S3 bucket to filesystem
 	File s3Dir = null;
 	File file = null;
-	PrintWriter out = null;
+	//PrintWriter out = null;  // 06/01/2017 temp comment out in multithreading env, return it back when no multithreading
 	
 	
-	static BufferedReader reader = null;
-
+	static BufferedReader reader = null; 
 	BufferedReader S3Filecontents = null;
 
 
@@ -176,13 +175,18 @@ public class GetANIFileFromCafeS3Bucket {
 	}
 	
 
-	public String getFile(String bucketName, String key) throws AmazonClientException,AmazonServiceException, InterruptedException{
+	public synchronized String getFile(String bucketName, String key) throws AmazonClientException,AmazonServiceException, InterruptedException{
 
 		this.bucketName = bucketName;
 		this.key = key;
 		
 		//HH 05/24/2016 to write only keys that were downloaded successfully (exist in S3)
 		String errorCode = null;
+		
+		S3Object s3object = null;
+		InputStream s3objectData = null;
+		
+		
 		try
 		{
 			//temp comment for now, as i moved them to DBCollectionCheck
@@ -199,13 +203,13 @@ public class GetANIFileFromCafeS3Bucket {
 			objectFromS3.parseS3File (objectData);  // parse based on content of s3*/	
 
 			
-			object = s3Client.getObject(new GetObjectRequest (bucketName, key));
-			objectData = object.getObjectContent();
+			s3object = s3Client.getObject(new GetObjectRequest (bucketName, key));
+			s3objectData = s3object.getObjectContent();
 			//parseS3File(objectData);  // for single file testing
 			
-			if(objectData !=null)
+			if(s3objectData !=null)
 			{
-				saveContentToFile();
+				saveContentToFile(s3objectData);
 			}
 					
 			//objectData.close();
@@ -246,11 +250,11 @@ public class GetANIFileFromCafeS3Bucket {
 
 		finally
 		{
-			if(objectData !=null)
+			if(s3objectData !=null)
 			{
 				try
 				{
-					objectData.close();
+					s3objectData.close();
 				}
 				catch(IOException ioex)
 				{
@@ -260,9 +264,9 @@ public class GetANIFileFromCafeS3Bucket {
 			
 			try
 			{
-				if(object !=null)
+				if(s3object !=null)
 				{
-					object.close();
+					s3object.close();
 				}
 			}
 			catch(Exception e)
@@ -434,7 +438,8 @@ public class GetANIFileFromCafeS3Bucket {
 
 
 
-	public void saveContentToFile (InputStream s3FileContent) throws IOException
+	// temp comment out on 05/19/2017, need to uncomment when needed
+/*	public void saveContentToFile (InputStream s3FileContent) throws IOException
 	{
 
 		reader = new BufferedReader(new InputStreamReader(s3FileContent));
@@ -487,19 +492,21 @@ public class GetANIFileFromCafeS3Bucket {
 		}
 
 
-	}
+	}*/
 	
 	
 	//HH 05/02/2016 as per NYC meeting, download each 20k from S3 bucket, zip them for Converting process
 	
-	public void saveContentToFile () throws IOException
+	public void saveContentToFile (InputStream objectData) throws IOException
 	{
+		 BufferedReader breader = null;
+		 PrintWriter out = null;
 		try
 		{
-		reader = new BufferedReader(new InputStreamReader(objectData));
-		reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
+			breader = new BufferedReader(new InputStreamReader(objectData));
+			breader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(breader.readLine().replaceAll("><", ">\n<").getBytes())));
 		
-		file = new File(s3Dir.getName()+"/"+key+".xml");
+		File file = new File(s3Dir.getName()+"/"+key+".xml");
 		if (!file.exists()) 
 		{
 			System.out.println("Downloaded: "+file.getName());
@@ -512,7 +519,7 @@ public class GetANIFileFromCafeS3Bucket {
 
 		String line = null;
 		out = new PrintWriter(new BufferedWriter(new FileWriter(file.getAbsolutePath(),true)));
-		while ((line = reader.readLine()) !=null)
+		while ((line = breader.readLine()) !=null)
 		{
 			out.println(line);
 
@@ -532,9 +539,9 @@ public class GetANIFileFromCafeS3Bucket {
 		{
 			try
 			{
-				if(reader !=null)
+				if(breader !=null)
 				{
-					reader.close();
+					breader.close();
 				}
 			}
 			catch(Exception e)

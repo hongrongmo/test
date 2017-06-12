@@ -1,5 +1,6 @@
 package org.ei.dataloading.cafe;
 
+import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -213,7 +214,8 @@ public class InstitutionCombiner{
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			String query = "select * from " +  tableName + " where affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
+			String query = "select * from " +  tableName + " where affid in (select INSTITUTE_ID from " + metadataTableName + 
+					" where STATUS='merged' and dbase='cpx') and PARENTID is null";
 			System.out.println("query");
 
 			rs = stmt.executeQuery(query);
@@ -295,7 +297,8 @@ public class InstitutionCombiner{
 			System.out.println("Running the query...");
 			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
-				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
+						" where STATUS='merged' and dbase='cpx') and PARENTID is null";
 
 				System.out.println(query);
 
@@ -325,7 +328,9 @@ public class InstitutionCombiner{
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
-				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
+				
+				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
+						" where STATUS='merged' and dbase='cpx') and PARENTID is null";
 
 				
 				//for testing
@@ -335,6 +340,8 @@ public class InstitutionCombiner{
 				
 			/*	query =  "select * from " +  tableName + "  where AFFID in (select INSTITUTE_ID from ap_correction1.Cafe_af_lookup where pui "
 						+ " in (select pui from ap_correction1.AUTHOR_MID))";*/
+				
+				
 				
 				System.out.println(query);
 
@@ -447,6 +454,9 @@ public class InstitutionCombiner{
 					//M_ID
 					rec.put(AuAfCombinedRec.DOCID, rs.getString("M_ID"));
 
+					// UPDATEEPOCH (place holder for future filling with SQS epoch)
+					rec.put(AuAfCombinedRec.UPDATEEPOCH, "");
+					
 					//LOADNUMBER
 					if(rs.getString("LOADNUMBER") !=null)
 					{
@@ -504,11 +514,29 @@ public class InstitutionCombiner{
 						rec.put(AuAfCombinedRec.AFID, rs.getString("AFFID"));
 						//System.out.println("AFFID from AuAfCombinedRec: " + rec.getString(AuAfCombinedRec.AFFILIATION_ID));
 					}
+					
+					//PARENTID (always set to "0") bc only Parent Institutions indexed to ES, set to non-Zero for child/departments
+					if(rs.getString("PARENTID") !=null)
+					{
+						rec.put(AuAfCombinedRec.PARAFID, rs.getString("PARENTID"));
+						rec.put(AuAfCombinedRec.AFTYPE, "dept");
+					}
+					else
+					{
+						rec.put(AuAfCombinedRec.PARAFID, "0");
+						rec.put(AuAfCombinedRec.AFTYPE, "parent");
+					}
 
 					//PREFEREDNAME
 					if(rs.getString("PREFERED_NAME") !=null)
 					{
 						rec.put(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME, DataLoadDictionary.mapEntity(rs.getString("PREFERED_NAME")));
+					}
+					
+					//PREFPARNAME
+					if(rs.getString("PARENT_PREFERED_NAME") !=null)
+					{
+						rec.put(AuAfCombinedRec.PARENT_PREFERED_NAME, rs.getString("PARENT_PREFERED_NAME"));
 					}
 
 					//SORTNAME
@@ -520,7 +548,7 @@ public class InstitutionCombiner{
 					//NAMEVARIANT
 					if(rs.getString("NAME_VARIANT") !=null)
 					{
-						rec.put(AuAfCombinedRec.AFFILIATION_VARIANT_NAME, DataLoadDictionary.mapEntity(rs.getString("NAME_VARIANT")));
+						rec.put(AuAfCombinedRec.AFFILIATION_VARIANT_NAME, DataLoadDictionary.mapEntity(getStringFromClob(rs.getClob("NAME_VARIANT"))));
 					}
 
 					//ADDRESSPART
@@ -671,6 +699,22 @@ public class InstitutionCombiner{
 	}
 	
 	
+	private String getStringFromClob(Clob clob)
+	{
+		String str = null;
+		try
+		{
+			if(clob !=null)
+			{
+				str = clob.getSubString(1, (int) clob.length());
+			}
+		}
+		catch(SQLException ex)
+		{
+			ex.printStackTrace();
+		}
+		return str;
+	}
 	
 	private Connection getConnection(String connectionURL,
 			String driver,
