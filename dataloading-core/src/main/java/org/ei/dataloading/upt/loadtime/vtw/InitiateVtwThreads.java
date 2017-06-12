@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 import java.util.regex.Pattern;
 
 import org.apache.commons.httpclient.HttpClient;
@@ -137,6 +138,8 @@ public class InitiateVtwThreads {
 			Date date;
 			long epoch;
 
+			CountDownLatch latch = new CountDownLatch(numOfThreads);
+
 
 			/*
 			 * added on Wed 04/05/2017 to fix issue of zipfile check, by zipping downloaded files after all threads finish downloadiong instead of
@@ -159,7 +162,7 @@ public class InitiateVtwThreads {
 				
 				ArchiveVTWPatentAsset thread = new ArchiveVTWPatentAsset(numberOfRuns,queueName,sqlldrFileName,
 						loadNumber,recsPerZipFile,recsPerSingleConnection,type,
-						epoch,"Thread" + i);
+						epoch,"Thread" + i, latch);
 				thread.start();
 
 				// to get unique epoch timestamp which used for naming raw_dir
@@ -168,6 +171,23 @@ public class InitiateVtwThreads {
 				obj = thread;
 
 			}
+			
+			
+			// wait after all threads finish downloading
+			latch.await();
+			System.out.println("In Main thread after completion of " + numOfThreads + " threads");
+			System.out.println("FINISHED................." + new Date().getTime());
+			
+			
+			//Zip downloaded files (each in it's corresponding dir)
+			
+			System.out.println("all " + numOfThreads + " complete, start to zip downloaded files");
+			
+			for(int j=0;j<raw_Dir_Names.size();j++)
+			{
+				obj.zipDownloads(loadNumber, raw_Dir_Names.get(j));
+			}
+			
 
 		}
 

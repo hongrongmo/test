@@ -19,6 +19,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Pattern;
@@ -95,6 +96,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	long epoch;
 	String threadName;
 
+	private CountDownLatch latch;
+	
 	Thread th = null;
 
 
@@ -132,7 +135,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	}
 
 	public ArchiveVTWPatentAsset(int numOfRuns, String qName, String sqlldr_fileName, int loadnum, int numOfRecsPerZip, int numOfRecsPerCon, String msgType, 
-			long rawDir, String thread_name)
+			long rawDir, String thread_name, CountDownLatch latch)
 	{
 		
 		numberOfRuns = numOfRuns;
@@ -146,6 +149,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		threadName = thread_name;
 		System.out.println("Creating Thread: " + threadName);
 
+		this.latch = latch;
+		
 		raw_Dir_Names.put(thread_name, rawDir);
 	}
 
@@ -222,7 +227,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 
 
-				//Zip downloaded files (each in it's corresponding dir)
+				/*//Zip downloaded files (each in it's corresponding dir)
 
 				synchronized(this.th)
 				{
@@ -234,11 +239,14 @@ public class ArchiveVTWPatentAsset implements Runnable{
 				}
 				
 
-
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println(threadName + " :time after zip downloaded files "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println(threadName + " :total time used "+(endTime-startTime)/1000.0+" seconds");
+				
+				*/
+				latch.countDown();
+				
 
 			}
 			else
@@ -440,8 +448,9 @@ public class ArchiveVTWPatentAsset implements Runnable{
 											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("WO")))   */
 
 									
-									if(Integer.parseInt(obj.getMessageField("generation")) == 10 && 
-											(obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
+									// 06/07/2017 NYC team confirmed to download all patents with generation >10, after Bart recent email to check with EV to confirm this
+									//PROD US & EP
+									if((obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
 											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP")))   
 										
 										
@@ -483,6 +492,12 @@ public class ArchiveVTWPatentAsset implements Runnable{
 											System.out.println("Pre-signed URL " + signedUrlExpiration + " expired, download Patent with Asset API");
 										}
 
+									}
+									else
+									{
+										// for empty url expiration add blank tab
+										recordBuf.append(FIELDDELIM);
+										recordBuf.append(FIELDDELIM);
 									}
 
 									//message To
